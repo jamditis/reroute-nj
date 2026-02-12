@@ -7,11 +7,14 @@ Guidelines for AI coding assistants (Claude Code, Copilot, Cursor, etc.) working
 This is a **zero-build static site**. No npm, no bundler, no framework. Do not add a build step.
 
 ```
-index.html    — Line guide tool
-compare.html  — Commute comparison tool
-app.js        — Line guide logic (~1400 lines, IIFE)
-compare.js    — Comparison tool logic (~900 lines, IIFE)
-styles.css    — All styles, CSS custom properties
+index.html          — Line guide tool
+compare.html        — Commute comparison tool
+js/shared.js        — Shared globals: esc(), countdown, date constants
+js/app.js           — Line guide logic (~1000 lines, IIFE)
+js/compare.js       — Comparison tool logic (~700 lines, IIFE)
+css/styles.css      — All styles, CSS custom properties
+img/                — Favicon, OG image, screenshot
+data/               — Static data files (JSON)
 ```
 
 ## Rules
@@ -27,7 +30,7 @@ styles.css    — All styles, CSS custom properties
 
 ## Data model
 
-The `LINE_DATA` object in `app.js` drives all content. Each line has an `impactType` that determines which templates render:
+The `LINE_DATA` object in `js/app.js` drives all content. Each line has an `impactType` that determines which templates render:
 
 - `hoboken-diversion` — Trains rerouted to Hoboken (Montclair-Boonton, Morris & Essex)
 - `reduced-service` — Fewer trains, same route (Northeast Corridor, North Jersey Coast)

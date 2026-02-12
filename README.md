@@ -14,7 +14,7 @@
 
 <br>
 
-<img src="screenshot.png" alt="Reroute NJ showing Bloomfield station impact during the Portal Bridge cutover" width="720">
+<img src="img/screenshot.png" alt="Reroute NJ showing Bloomfield station impact during the Portal Bridge cutover" width="720">
 
 </div>
 
@@ -43,17 +43,24 @@ Reroute NJ is a zero-build static site. No npm, no webpack, no framework — jus
 
 ```
 reroute-nj/
-├── index.html       # Line guide tool
-├── compare.html     # Commute comparison tool
-├── app.js           # Line guide logic (IIFE pattern, ~1400 lines)
-├── compare.js       # Comparison tool logic (IIFE pattern, ~900 lines)
-├── styles.css       # All styles, CSS custom properties for theming
-└── favicon.svg      # SVG favicon
+├── index.html          # Line guide tool
+├── compare.html        # Commute comparison tool
+├── js/
+│   ├── shared.js       # Shared globals: esc(), countdown, date constants
+│   ├── app.js          # Line guide logic (IIFE, ~1000 lines)
+│   └── compare.js      # Comparison tool logic (IIFE, ~700 lines)
+├── css/
+│   └── styles.css      # All styles, CSS custom properties for theming
+├── img/
+│   ├── favicon.svg     # SVG favicon
+│   ├── og-image.png    # Social preview image
+│   └── screenshot.png  # README screenshot
+└── data/               # Static data files
 ```
 
 **Why no build step?** This site serves transit riders during a stressful infrastructure change. A simple architecture means anyone can contribute — including journalists and civic tech volunteers who may not have Node.js installed. Open `index.html` in a browser and you're running the full app.
 
-**Data model:** All transit data lives in the `LINE_DATA` object in `app.js`. Each line has an `impactType` (`hoboken-diversion`, `reduced-service`, or `newark-termination`) that drives which content templates render. See [AGENTS.md](AGENTS.md) for details.
+**Data model:** All transit data lives in the `LINE_DATA` object in `js/app.js`. Each line has an `impactType` (`hoboken-diversion`, `reduced-service`, or `newark-termination`) that drives which content templates render. See [AGENTS.md](AGENTS.md) for details.
 
 ## Timeline
 

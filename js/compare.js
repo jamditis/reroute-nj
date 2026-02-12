@@ -4,11 +4,8 @@
 (function () {
   "use strict";
 
-  // =========================================================================
-  // DATES
-  // =========================================================================
-  var CUTOVER_START = new Date("2026-02-15T00:00:00");
-  var CUTOVER_END = new Date("2026-03-15T00:00:00");
+  // Date constants (CUTOVER_START, CUTOVER_END, PHASE2_APPROX) and
+  // shared helpers (esc, updateCountdown) are in shared.js.
 
   // =========================================================================
   // MANHATTAN DESTINATIONS
@@ -306,7 +303,6 @@
   // =========================================================================
   // DOM
   // =========================================================================
-  var $countdown = document.getElementById("countdown");
   var $lineNav = document.getElementById("line-nav");
   var $stationSelect = document.getElementById("station-select");
   var $destGrid = document.getElementById("dest-grid");
@@ -315,32 +311,6 @@
   var $resultsNormal = document.getElementById("results-normal");
   var $resultsList = document.getElementById("results-list");
   var $resultsShare = document.getElementById("results-share");
-
-  // =========================================================================
-  // HELPERS
-  // =========================================================================
-  function esc(str) {
-    var d = document.createElement("div");
-    d.textContent = str;
-    return d.innerHTML;
-  }
-
-  // =========================================================================
-  // COUNTDOWN (shared logic)
-  // =========================================================================
-  function updateCountdown() {
-    var now = new Date();
-    var ms = 86400000;
-    if (now < CUTOVER_START) {
-      var d = Math.ceil((CUTOVER_START - now) / ms);
-      $countdown.innerHTML = 'Cutover begins in <span class="num">' + d + "</span> day" + (d !== 1 ? "s" : "");
-    } else if (now < CUTOVER_END) {
-      var d2 = Math.ceil((CUTOVER_END - now) / ms);
-      $countdown.innerHTML = '<span class="num">' + d2 + "</span> day" + (d2 !== 1 ? "s" : "") + " remaining in Phase 1";
-    } else {
-      $countdown.innerHTML = "Phase 1 complete &middot; Phase 2 expected Fall 2026";
-    }
-  }
 
   // =========================================================================
   // LINE NAV

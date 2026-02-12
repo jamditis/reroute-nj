@@ -32,12 +32,16 @@ This is a zero-build static site. No npm, no webpack, no framework.
 
 ```
 reroute-nj/
-├── index.html       # Line guide tool
-├── compare.html     # Commute comparison tool
-├── app.js           # Line guide logic (IIFE, ~1400 lines)
-├── compare.js       # Comparison tool logic (IIFE, ~900 lines)
-├── styles.css       # All styles, CSS custom properties for theming
-└── favicon.svg      # SVG favicon
+├── index.html          # Line guide tool
+├── compare.html        # Commute comparison tool
+├── js/
+│   ├── shared.js       # Shared globals: esc(), countdown, date constants
+│   ├── app.js          # Line guide logic (IIFE, ~1000 lines)
+│   └── compare.js      # Comparison tool logic (IIFE, ~700 lines)
+├── css/
+│   └── styles.css      # All styles, CSS custom properties for theming
+├── img/                # Favicon, OG image, screenshot
+└── data/               # Static data files (JSON)
 ```
 
 ### Code conventions
@@ -50,7 +54,7 @@ reroute-nj/
 
 ### Data model
 
-Transit data lives in the `LINE_DATA` object at the top of `app.js`. Each line entry has:
+Transit data lives in the `LINE_DATA` object at the top of `js/app.js`. Each line entry has:
 
 ```
 {

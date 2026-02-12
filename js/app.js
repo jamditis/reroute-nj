@@ -4,12 +4,8 @@
 (function () {
   "use strict";
 
-  // =========================================================================
-  // DATES
-  // =========================================================================
-  var CUTOVER_START = new Date("2026-02-15T00:00:00");
-  var CUTOVER_END = new Date("2026-03-15T00:00:00");
-  var PHASE2_APPROX = "Fall 2026";
+  // Date constants (CUTOVER_START, CUTOVER_END, PHASE2_APPROX) and
+  // shared helpers (esc, updateCountdown) are in shared.js.
 
   // =========================================================================
   // LINE DATA
@@ -257,7 +253,6 @@
   // =========================================================================
   // DOM REFERENCES
   // =========================================================================
-  var $countdown = document.getElementById("countdown");
   var $lineBadge = document.getElementById("line-badge");
   var $lineNav = document.getElementById("line-nav");
   var $stationSelect = document.getElementById("station-select");
@@ -273,12 +268,6 @@
   // =========================================================================
   // HELPERS
   // =========================================================================
-  function esc(str) {
-    var div = document.createElement("div");
-    div.textContent = str;
-    return div.innerHTML;
-  }
-
   function getCurrentLine() {
     return LINE_DATA[currentLineId];
   }
@@ -290,33 +279,6 @@
       if (line.stations[i].id === stationId) return line.stations[i];
     }
     return null;
-  }
-
-  // =========================================================================
-  // COUNTDOWN
-  // =========================================================================
-  function updateCountdown() {
-    var now = new Date();
-    var msPerDay = 86400000;
-    if (now < CUTOVER_START) {
-      var days = Math.ceil((CUTOVER_START - now) / msPerDay);
-      $countdown.innerHTML =
-        'Cutover begins in <span class="num">' +
-        days +
-        "</span> day" +
-        (days !== 1 ? "s" : "");
-    } else if (now < CUTOVER_END) {
-      var days2 = Math.ceil((CUTOVER_END - now) / msPerDay);
-      $countdown.innerHTML =
-        '<span class="num">' +
-        days2 +
-        "</span> day" +
-        (days2 !== 1 ? "s" : "") +
-        " remaining in Phase 1";
-    } else {
-      $countdown.innerHTML =
-        "Phase 1 complete &middot; Phase 2 expected " + PHASE2_APPROX;
-    }
   }
 
   // =========================================================================
