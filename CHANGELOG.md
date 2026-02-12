@@ -7,6 +7,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.2] - 2026-02-12
+
+### Added
+- Map link in navigation bar across all pages (was previously unreachable)
+- Rail line polylines connecting stations along each route
+- 10 new station markers: East Orange, Brick Church, Newark Broad Street, Hamilton, Point Pleasant Beach, Little Silver, Middletown, Hazlet, Stirling, Roselle Park
+
+### Changed
+- Switched map tiles from default OpenStreetMap to CartoDB Positron (muted gray basemap) so transit lines stand out
+- Fixed rail line routing with accurate station ordering and terminal connections
+- Montclair-Boonton and Morris & Essex lines now connect through Newark Broad Street to Hoboken Terminal
+- Northeast Corridor and North Jersey Coast lines now connect through Secaucus to Penn Station New York
+- North Jersey Coast Line properly joins NEC shared track at Rahway
+- Raritan Valley Line connects to Newark Penn Station (its cutover terminal)
+- Morris & Essex Gladstone Branch renders as a separate fork converging at Summit
+- Separated polyline routes from station markers for accurate branch and shared-track rendering
+
 ## [1.0.1] - 2026-02-12
 
 ### Added
@@ -46,6 +63,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - GitHub Pages deployment workflow
 - MIT license
 
-[Unreleased]: https://github.com/jamditis/reroute-nj/compare/v1.0.1...HEAD
+[Unreleased]: https://github.com/jamditis/reroute-nj/compare/v1.0.2...HEAD
+[1.0.2]: https://github.com/jamditis/reroute-nj/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/jamditis/reroute-nj/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/jamditis/reroute-nj/releases/tag/v1.0.0
