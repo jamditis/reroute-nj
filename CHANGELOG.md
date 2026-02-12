@@ -10,12 +10,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.1] - 2026-02-12
 
 ### Added
-- CHANGELOG.md, CONTRIBUTING.md, CODE_OF_CONDUCT.md, SECURITY.md
+- **News coverage feed** (`coverage.html`) — Filterable feed of 31 curated articles from 14+ sources covering the Portal Bridge cutover
+- **Interactive map** (`map.html`) — Leaflet.js map showing affected lines, stations, and key infrastructure
+- **Embed tools** (`embed.html`) — Widget generator for newsrooms and publishers to embed reroute tools on their sites
+- **Blog** (`blog.html`) — "Why we built this" post explaining the project's origin and goals
+- **Bidirectional travel** — NYC-to-NJ commute support added to the line guide (previously NJ-to-NYC only)
+- Shared utility module (`js/shared.js`) with `esc()` XSS helper, countdown timer, and date constants
+- News coverage data feed (`data/coverage.json`) with article metadata, source attribution, and line/category tags
 - Issue templates for bug reports, data corrections, feature requests, and content suggestions
 - Pull request template
-- AGENTS.md for AI-assisted contributions
-- .editorconfig for consistent formatting
-- GitHub Discussions enabled
+
+### Changed
+- Reorganized project into `js/`, `css/`, `img/`, `data/` folders (previously flat structure)
+- Expanded line guide with additional route alternatives and station data
+- Updated navigation across all pages to link new tools
+- Updated AGENTS.md and CONTRIBUTING.md with project conventions
 
 ## [1.0.0] - 2026-02-11
 
