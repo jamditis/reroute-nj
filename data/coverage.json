@@ -1,0 +1,65 @@
+{
+  "lastUpdated": "2026-02-12T00:00:00Z",
+  "articles": [
+    {
+      "id": "amtrak-press-release-2026-01-15",
+      "title": "Portal North Bridge Enters Final Phase of Construction as Work Begins to Put First Track into Service",
+      "url": "https://media.amtrak.com/2026/01/portal-north-bridge-enters-final-phase-of-construction-as-work-begins-to-put-first-track-into-service/",
+      "source": "Amtrak Media",
+      "author": null,
+      "date": "2026-01-15",
+      "category": "official",
+      "excerpt": "Beginning February 13, 2026, Amtrak will transfer one track of rail service from the 115-year-old Portal Bridge in Kearny, NJ to the new Portal North Bridge over the Hackensack River. This Gateway Program milestone requires a multi-week reduction in Amtrak and NJ Transit service in New Jersey and the Northeast Corridor. Amtrak President Roger Harris called the cutover 'a whole new level of reliability on the Northeast Corridor.'",
+      "lines": ["all"],
+      "direction": "both"
+    },
+    {
+      "id": "abc7-portal-cutover-2026-02-12",
+      "title": "What the Portal Bridge cutover means for NJ Transit, Amtrak commuters",
+      "url": "https://abc7ny.com/post/commuter-alert-portal-bridge-construction-will-cause-nj-transit-amtrak-service-changes-4-weeks/18588218/",
+      "source": "ABC7 New York",
+      "author": null,
+      "date": "2026-02-12",
+      "category": "news",
+      "excerpt": "Starting February 13, Amtrak will initiate the first phase of transferring rail service from the century-old Portal Bridge to the newly constructed Portal North Bridge. All rail lines except the Atlantic City Rail Line will face temporary service adjustments beginning Sunday, February 15, lasting approximately four weeks. NJ Transit CEO Kris Kolluri noted that when the existing bridge gets stuck opening for marine traffic, manual intervention is sometimes required.",
+      "lines": ["montclair-boonton", "morris-essex", "northeast-corridor", "north-jersey-coast"],
+      "direction": "both"
+    },
+    {
+      "id": "nj1015-service-reduction-2026-02-10",
+      "title": "4 weeks of hell start Sunday: What to know as NJ Transit cuts 50% of trains",
+      "url": "https://nj1015.com/nj-transit-service-reduction/",
+      "source": "New Jersey 101.5",
+      "author": "Dan Alexander",
+      "date": "2026-02-10",
+      "category": "news",
+      "excerpt": "NJ Transit will implement a significant service cut beginning February 15 for four weeks, affecting roughly half of all rail service into New York as crews transition signals and overhead wires to the new Portal North Bridge. Engineering teams will require 40,000 man-hours to complete the switchover, operating across two shifts daily with 70-90 workers per shift. The disruption is necessary for the final phase of the $1.5 billion Portal North Bridge replacement project.",
+      "lines": ["montclair-boonton", "morris-essex", "northeast-corridor", "north-jersey-coast", "raritan-valley"],
+      "direction": "both"
+    },
+    {
+      "id": "news12-portal-cutover-2026-02-12",
+      "title": "Portal Bridge 'cutover' project to impact NJ Transit services. Here's what it means for you.",
+      "url": "https://newjersey.news12.com/portal-bridge-cutover-project-to-impact-nj-transit-services-heres-what-it-means-for-you",
+      "source": "News 12 New Jersey",
+      "author": "Matt Trapani and Lauren Due",
+      "date": "2026-02-12",
+      "category": "news",
+      "excerpt": "Amtrak will commence operations on February 15 to shift train traffic from the current Portal Bridge to the newly constructed Portal North Bridge spanning the Hackensack River. Single-track train operations will be the only option available between Newark and Secaucus during the roughly one-month transfer period. All Midtown Direct service will be redirected to Hoboken, with PATH cross-honoring and enhanced ferry service through New York Waterway during peak commute periods.",
+      "lines": ["montclair-boonton", "morris-essex"],
+      "direction": "nj-to-nyc"
+    },
+    {
+      "id": "nj-spotlight-portal-north-2026-01-16",
+      "title": "NJ Transit to cut some service to NY for repairs",
+      "url": "https://www.pbs.org/video/headline-c-portal-north-1768590364/",
+      "source": "NJ Spotlight News",
+      "author": null,
+      "date": "2026-01-16",
+      "category": "news",
+      "excerpt": "Commuters should brace for major disruptions on rail lines serving New York. Starting February 15, NJ Transit and Amtrak will reduce train service by over 50 percent for a four-week period to connect the new $2.3 billion Portal North Bridge to the Northeast Corridor. More than 600 daily trains will be affected in the Newark-to-Secaucus corridor that feeds into Penn Station.",
+      "lines": ["northeast-corridor", "north-jersey-coast", "montclair-boonton", "morris-essex"],
+      "direction": "both"
+    }
+  ]
+}

@@ -34,14 +34,17 @@ This is a zero-build static site. No npm, no webpack, no framework.
 reroute-nj/
 ├── index.html          # Line guide tool
 ├── compare.html        # Commute comparison tool
+├── coverage.html       # News coverage feed
 ├── js/
 │   ├── shared.js       # Shared globals: esc(), countdown, date constants
 │   ├── app.js          # Line guide logic (IIFE, ~1000 lines)
-│   └── compare.js      # Comparison tool logic (IIFE, ~700 lines)
+│   ├── compare.js      # Comparison tool logic (IIFE, ~700 lines)
+│   └── coverage.js     # Coverage feed logic (IIFE)
 ├── css/
 │   └── styles.css      # All styles, CSS custom properties for theming
 ├── img/                # Favicon, OG image, screenshot
-└── data/               # Static data files (JSON)
+└── data/
+    └── coverage.json   # Curated article data
 ```
 
 ### Code conventions
@@ -72,7 +75,7 @@ The `impactType` field drives which content templates render for each line.
 
 1. Fork the repo and create a branch from `main`
 2. Make your changes
-3. Test by opening both `index.html` and `compare.html` in a browser
+3. Test by opening `index.html`, `compare.html`, and `coverage.html` in a browser
 4. Check mobile layout (responsive breakpoints at 768px and 480px)
 5. Submit a PR using the template
 

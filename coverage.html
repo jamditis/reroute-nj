@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News coverage — Reroute NJ</title>
+  <meta name="description" content="Curated news coverage of the NJ Transit Portal North Bridge cutover. Articles from NJ.com, Gothamist, NorthJersey.com, and more.">
+  <meta property="og:title" content="News coverage — Reroute NJ">
+  <meta property="og:description" content="Curated news coverage of the Portal Bridge cutover. Stay informed with reporting from local and regional news sources.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jamditis.github.io/reroute-nj/coverage.html">
+  <meta property="og:image" content="https://jamditis.github.io/reroute-nj/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="News coverage — Reroute NJ">
+  <meta name="twitter:description" content="Curated news coverage of the Portal Bridge cutover. Stay informed with reporting from local and regional news sources.">
+  <meta name="twitter:image" content="https://jamditis.github.io/reroute-nj/img/og-image.png">
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-link"><div class="brand">Reroute<span>NJ</span></div></a>
+      <p class="tagline">Portal Bridge in the news</p>
+      <div class="countdown" id="countdown"></div>
+    </div>
+  </header>
+
+  <nav class="tool-nav">
+    <div class="container">
+      <a href="index.html" class="tool-nav-link">Line guide</a>
+      <a href="compare.html" class="tool-nav-link">Commute comparison</a>
+      <a href="coverage.html" class="tool-nav-link active">News coverage</a>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <section class="coverage-hero">
+      <h1>Portal Bridge in the news</h1>
+      <p>Curated coverage of the cutover from local and regional news sources.</p>
+      <p class="coverage-updated" id="coverage-updated"></p>
+    </section>
+
+    <section class="coverage-filters" id="coverage-filters">
+      <div class="filter-group">
+        <label for="filter-source">Source</label>
+        <select id="filter-source">
+          <option value="">All sources</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="filter-category">Category</label>
+        <select id="filter-category">
+          <option value="">All categories</option>
+          <option value="news">News</option>
+          <option value="opinion">Opinion</option>
+          <option value="analysis">Analysis</option>
+          <option value="official">Official</option>
+          <option value="community">Community</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="filter-line">Line</label>
+        <select id="filter-line">
+          <option value="">All lines</option>
+          <option value="montclair-boonton">Montclair-Boonton</option>
+          <option value="morris-essex">Morris &amp; Essex</option>
+          <option value="northeast-corridor">Northeast Corridor</option>
+          <option value="north-jersey-coast">North Jersey Coast</option>
+          <option value="raritan-valley">Raritan Valley</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="filter-direction">Direction</label>
+        <select id="filter-direction">
+          <option value="">All directions</option>
+          <option value="nj-to-nyc">NJ to NYC</option>
+          <option value="nyc-to-nj">NYC to NJ</option>
+          <option value="both">Both directions</option>
+        </select>
+      </div>
+      <div class="filter-group filter-search">
+        <label for="filter-search">Search</label>
+        <input type="text" id="filter-search" placeholder="Search articles&hellip;">
+      </div>
+    </section>
+
+    <section class="coverage-feed" id="coverage-feed"></section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="disclaimer"><strong>Reroute NJ</strong> is an independent community tool. Not affiliated with or endorsed by NJ Transit, Amtrak, or any government agency. News links go to their original sources. Always verify with <a href="https://www.njtransit.com/portalcutover" target="_blank" rel="noopener">njtransit.com</a> before traveling.</p>
+      <p class="credit">Built by <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">Joe Amditis</a></p>
+    </div>
+  </footer>
+
+  <script src="js/shared.js"></script>
+  <script src="js/coverage.js"></script>
+</body>
+</html>

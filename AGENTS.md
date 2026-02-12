@@ -9,12 +9,14 @@ This is a **zero-build static site**. No npm, no bundler, no framework. Do not a
 ```
 index.html          — Line guide tool
 compare.html        — Commute comparison tool
+coverage.html       — News coverage feed
 js/shared.js        — Shared globals: esc(), countdown, date constants
 js/app.js           — Line guide logic (~1000 lines, IIFE)
 js/compare.js       — Comparison tool logic (~700 lines, IIFE)
+js/coverage.js      — Coverage feed logic (IIFE)
 css/styles.css      — All styles, CSS custom properties
 img/                — Favicon, OG image, screenshot
-data/               — Static data files (JSON)
+data/coverage.json  — Curated article data
 ```
 
 ## Rules
@@ -41,8 +43,9 @@ To add or modify line data, edit the `LINE_DATA` object directly. The UI generat
 ## Testing
 
 No test suite. Verify changes by:
-1. Opening both `index.html` and `compare.html` in a browser
+1. Opening `index.html`, `compare.html`, and `coverage.html` in a browser
 2. Selecting each line and at least one station per line
 3. Checking the comparison tool with different station/destination pairs
-4. Resizing the browser to mobile width
-5. Checking the browser console for errors
+4. Testing coverage page filters (source, category, line, direction, search)
+5. Resizing the browser to mobile width
+6. Checking the browser console for errors

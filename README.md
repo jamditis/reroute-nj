@@ -24,6 +24,7 @@
 
 - **[Line guide](https://jamditis.github.io/reroute-nj/)** — Select your NJ Transit line and station to see how the cutover affects your commute, get route alternatives, and figure out what ticket to buy
 - **[Commute comparison](https://jamditis.github.io/reroute-nj/compare.html)** — Pick your station and Manhattan destination, see every route option side by side with visual time breakdowns
+- **[News coverage](https://jamditis.github.io/reroute-nj/coverage.html)** — Curated feed of Portal Bridge cutover coverage from local and regional news sources, filterable by source, category, line, and direction
 
 ## Lines covered
 
@@ -45,17 +46,20 @@ Reroute NJ is a zero-build static site. No npm, no webpack, no framework — jus
 reroute-nj/
 ├── index.html          # Line guide tool
 ├── compare.html        # Commute comparison tool
+├── coverage.html       # News coverage feed
 ├── js/
 │   ├── shared.js       # Shared globals: esc(), countdown, date constants
 │   ├── app.js          # Line guide logic (IIFE, ~1000 lines)
-│   └── compare.js      # Comparison tool logic (IIFE, ~700 lines)
+│   ├── compare.js      # Comparison tool logic (IIFE, ~700 lines)
+│   └── coverage.js     # Coverage feed logic (IIFE)
 ├── css/
 │   └── styles.css      # All styles, CSS custom properties for theming
 ├── img/
 │   ├── favicon.svg     # SVG favicon
 │   ├── og-image.png    # Social preview image
 │   └── screenshot.png  # README screenshot
-└── data/               # Static data files
+└── data/
+    └── coverage.json   # Curated article data for the coverage feed
 ```
 
 **Why no build step?** This site serves transit riders during a stressful infrastructure change. A simple architecture means anyone can contribute — including journalists and civic tech volunteers who may not have Node.js installed. Open `index.html` in a browser and you're running the full app.
