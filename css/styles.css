@@ -228,6 +228,66 @@ main.container {
   box-shadow: 0 0 0 3px rgba(44, 95, 138, 0.15);
 }
 
+/* Direction picker */
+
+.direction-picker {
+  margin-bottom: 1.25rem;
+}
+
+.direction-picker label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-light);
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.direction-toggle {
+  display: flex;
+  gap: 0;
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  max-width: 440px;
+}
+
+.direction-btn {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border: none;
+  background: var(--card-bg);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: var(--transition);
+  text-align: center;
+}
+
+.direction-btn + .direction-btn {
+  border-left: 2px solid var(--border);
+}
+
+.direction-btn:hover:not(.active) {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.direction-btn.active {
+  background: var(--primary);
+  color: #fff;
+}
+
+.dir-sub {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 400;
+  opacity: 0.75;
+  margin-top: 0.1rem;
+}
+
 /* Tool tabs */
 
 .tool-tabs {
@@ -1605,6 +1665,144 @@ main.container {
 .coverage-empty .empty-icon {
   font-size: 3rem;
   margin-bottom: 0.5rem;
+}
+
+/* =======================================================================
+   BLOG POST
+   ======================================================================= */
+
+.blog-post {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.blog-header {
+  margin-bottom: 2rem;
+}
+
+.blog-header h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+
+.blog-meta {
+  display: flex;
+  gap: 1rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.blog-author {
+  font-weight: 600;
+  color: var(--text-light);
+}
+
+.blog-body h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: var(--primary);
+}
+
+.blog-body p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin-bottom: 1.25rem;
+  color: var(--text);
+}
+
+.blog-body ul {
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+}
+
+.blog-body li {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin-bottom: 0.5rem;
+}
+
+.blog-body code {
+  font-family: "SF Mono", "Fira Code", "Fira Mono", Menlo, Consolas, monospace;
+  font-size: 0.9em;
+  background: var(--bg);
+  padding: 0.15rem 0.4rem;
+  border-radius: 3px;
+  border: 1px solid var(--border-light);
+}
+
+.blog-cta {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+/* =======================================================================
+   EMBED & SHARE PAGE
+   ======================================================================= */
+
+.embed-hero {
+  padding: 1.5rem 0 0.5rem;
+}
+
+.embed-hero h1 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 0.3rem;
+}
+
+.embed-hero p {
+  color: var(--text-light);
+  font-size: 1.05rem;
+}
+
+.embed-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  padding: 1rem;
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+
+.embed-preview {
+  margin-top: 1rem;
+}
+
+.embed-code-label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.embed-code-box {
+  background: var(--primary-dark);
+  color: #a8d8ea;
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius);
+  font-family: "SF Mono", "Fira Code", "Fira Mono", Menlo, Consolas, monospace;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  word-break: break-all;
+  white-space: pre-wrap;
+  overflow-x: auto;
+  user-select: all;
+}
+
+.embed-url {
+  font-family: "SF Mono", "Fira Code", "Fira Mono", Menlo, Consolas, monospace;
+  font-size: 0.8rem;
+  color: var(--text-light);
+  word-break: break-all;
 }
 
 /* Footer */

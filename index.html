@@ -40,6 +40,7 @@
       <a href="index.html" class="tool-nav-link active">Line guide</a>
       <a href="compare.html" class="tool-nav-link">Commute comparison</a>
       <a href="coverage.html" class="tool-nav-link">News coverage</a>
+      <a href="embed.html" class="tool-nav-link">Embed &amp; share</a>
     </div>
   </nav>
 
@@ -55,6 +56,14 @@
       <select id="station-select">
         <option value="">Choose your station&hellip;</option>
       </select>
+    </section>
+
+    <section class="direction-picker">
+      <label for="direction-select">Direction of travel</label>
+      <div class="direction-toggle" id="direction-toggle">
+        <button class="direction-btn active" data-dir="nj-to-nyc">NJ &rarr; NYC <span class="dir-sub">morning commute</span></button>
+        <button class="direction-btn" data-dir="nyc-to-nj">NYC &rarr; NJ <span class="dir-sub">evening commute</span></button>
+      </div>
     </section>
 
     <nav class="tool-tabs" role="tablist">

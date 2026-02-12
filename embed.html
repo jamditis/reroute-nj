@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Embed &amp; republish — Reroute NJ</title>
+  <meta name="description" content="Embed Reroute NJ tools on your website. Free for newsrooms, publishers, and community organizations.">
+  <meta property="og:title" content="Embed &amp; republish — Reroute NJ">
+  <meta property="og:description" content="Embed Reroute NJ transit tools on your website. Free for newsrooms, publishers, and community organizations.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jamditis.github.io/reroute-nj/embed.html">
+  <meta property="og:image" content="https://jamditis.github.io/reroute-nj/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Embed &amp; republish — Reroute NJ">
+  <meta name="twitter:description" content="Embed Reroute NJ transit tools on your website. Free for newsrooms, publishers, and community organizations.">
+  <meta name="twitter:image" content="https://jamditis.github.io/reroute-nj/img/og-image.png">
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-link"><div class="brand">Reroute<span>NJ</span></div></a>
+      <p class="tagline">Embed, share &amp; republish</p>
+      <div class="countdown" id="countdown"></div>
+    </div>
+  </header>
+
+  <nav class="tool-nav">
+    <div class="container">
+      <a href="index.html" class="tool-nav-link">Line guide</a>
+      <a href="compare.html" class="tool-nav-link">Commute comparison</a>
+      <a href="coverage.html" class="tool-nav-link">News coverage</a>
+      <a href="embed.html" class="tool-nav-link active">Embed &amp; share</a>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <section class="embed-hero">
+      <h1>Put Reroute NJ on your website</h1>
+      <p>Reroute NJ is free, open source, and built for the community. Newsrooms, publishers, community organizations, and anyone else can embed our tools, link to them, or republish them on their own sites.</p>
+    </section>
+
+    <!-- Embed code generator -->
+    <section class="info-section" id="embed-generator" style="margin-top: 1rem; border-top: none;">
+      <h2>Embed code generator</h2>
+      <p class="section-intro">Copy and paste an iframe embed code to put any Reroute NJ tool on your website. The tool is fully interactive and responsive inside the iframe.</p>
+
+      <div class="embed-options">
+        <div class="filter-group">
+          <label for="embed-tool">Which tool?</label>
+          <select id="embed-tool">
+            <option value="index.html">Line guide</option>
+            <option value="compare.html">Commute comparison</option>
+            <option value="coverage.html">News coverage</option>
+            <option value="map.html">Interactive map</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="embed-width">Width</label>
+          <select id="embed-width">
+            <option value="100%">Full width (100%)</option>
+            <option value="600px">600px</option>
+            <option value="800px">800px</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="embed-height">Height</label>
+          <select id="embed-height">
+            <option value="700px">700px</option>
+            <option value="500px">500px</option>
+            <option value="900px">900px</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="embed-preview">
+        <label class="embed-code-label">Your embed code</label>
+        <div class="embed-code-box" id="embed-code-box"></div>
+        <button class="share-btn" id="copy-embed-btn" style="margin-top: 0.75rem;">Copy embed code</button>
+        <span class="share-confirm hidden" id="copy-embed-confirm">Copied!</span>
+      </div>
+    </section>
+
+    <!-- Direct link sharing -->
+    <section class="info-section" id="direct-links">
+      <h2>Direct links</h2>
+      <p class="section-intro">Link directly to any tool. These URLs are permanent and shareable.</p>
+
+      <div class="resources-grid">
+        <div class="resource-link">
+          <strong>Line guide</strong>
+          <span id="link-guide" class="embed-url">https://jamditis.github.io/reroute-nj/</span>
+        </div>
+        <div class="resource-link">
+          <strong>Commute comparison</strong>
+          <span id="link-compare" class="embed-url">https://jamditis.github.io/reroute-nj/compare.html</span>
+        </div>
+        <div class="resource-link">
+          <strong>News coverage</strong>
+          <span id="link-coverage" class="embed-url">https://jamditis.github.io/reroute-nj/coverage.html</span>
+        </div>
+        <div class="resource-link">
+          <strong>Interactive map</strong>
+          <span id="link-map" class="embed-url">https://jamditis.github.io/reroute-nj/map.html</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- For publishers -->
+    <section class="info-section" id="for-publishers">
+      <h2>For newsrooms &amp; publishers</h2>
+      <p class="section-intro">Reroute NJ is designed to be used by journalists, newsrooms, and community publishers. Here's how you can use it.</p>
+
+      <div class="secaucus-grid">
+        <div class="secaucus-card">
+          <h4>Embed in your articles</h4>
+          <ul>
+            <li>Use the embed code generator above to get an iframe snippet.</li>
+            <li>Paste it into your CMS (WordPress, Ghost, Squarespace, etc.) — most support raw HTML blocks.</li>
+            <li>The embed is responsive and works on mobile.</li>
+            <li>No API key or account needed. It just works.</li>
+          </ul>
+        </div>
+        <div class="secaucus-card">
+          <h4>Link from your coverage</h4>
+          <ul>
+            <li>Add a "Plan your commute" link box to your Portal Bridge stories.</li>
+            <li>Link to specific tools based on what the article covers.</li>
+            <li>We have OG images and social cards already set up for clean social media previews.</li>
+            <li>Suggested anchor text: "Use the free Reroute NJ tool to plan your commute."</li>
+          </ul>
+        </div>
+        <div class="secaucus-card">
+          <h4>Contribute coverage</h4>
+          <ul>
+            <li>We curate Portal Bridge coverage on our <a href="coverage.html">news coverage page</a>.</li>
+            <li>To suggest an article, <a href="https://github.com/jamditis/reroute-nj/issues/new?template=article-suggestion.md" target="_blank" rel="noopener">open a GitHub issue</a> with the URL and details.</li>
+            <li>Or email <strong>joe@amditis.com</strong> with "Reroute NJ coverage" in the subject line.</li>
+            <li>We include all relevant coverage — opinion, analysis, community reporting, and more.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Custom branding -->
+    <section class="info-section" id="custom-branding">
+      <h2>Co-branding &amp; customization</h2>
+      <p class="section-intro">Want to run Reroute NJ with your own branding? Since it's open source, you can.</p>
+
+      <div class="ticket-scenarios">
+        <div class="scenario-card">
+          <h3>Option 1: Fork the project</h3>
+          <div class="scenario-body">
+            <div class="step">
+              <span class="step-num">1</span>
+              <div><p>Fork the <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">GitHub repository</a> to your organization's account.</p></div>
+            </div>
+            <div class="step">
+              <span class="step-num">2</span>
+              <div><p>Edit <code>css/styles.css</code> to change colors, fonts, and branding. All theme values are CSS custom properties in the <code>:root</code> block.</p></div>
+            </div>
+            <div class="step">
+              <span class="step-num">3</span>
+              <div><p>Replace the brand name, logo, and footer credit with your own. Add your newsroom's header/nav if you want.</p></div>
+            </div>
+            <div class="step">
+              <span class="step-num">4</span>
+              <div><p>Deploy to GitHub Pages, Netlify, Vercel, or your own server. No build step required — it's just static HTML.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="scenario-card">
+          <h3>Option 2: Embed with your own intro</h3>
+          <div class="scenario-body">
+            <div class="step">
+              <span class="step-num">1</span>
+              <div><p>Embed the tool using the iframe code above.</p></div>
+            </div>
+            <div class="step">
+              <span class="step-num">2</span>
+              <div><p>Add your own header, intro text, and branding around the iframe.</p></div>
+            </div>
+            <div class="step">
+              <span class="step-num">3</span>
+              <div><p>Style the surrounding page to match your publication's design.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to contribute -->
+    <section class="info-section" id="contribute">
+      <h2>How to contribute</h2>
+      <p class="section-intro">Reroute NJ is a community project. Here's how you can help, regardless of your technical skill level.</p>
+
+      <div class="secaucus-grid">
+        <div class="secaucus-card">
+          <h4>Non-technical contributions</h4>
+          <ul>
+            <li><strong>Submit article suggestions:</strong> Know of a Portal Bridge article we missed? <a href="https://github.com/jamditis/reroute-nj/issues/new?template=article-suggestion.md" target="_blank" rel="noopener">Open an issue</a> or email joe@amditis.com.</li>
+            <li><strong>Report inaccuracies:</strong> If schedule data or transfer times are wrong, let us know.</li>
+            <li><strong>Share the tool:</strong> Tell your commuter friends, share on social media, post in your neighborhood group.</li>
+            <li><strong>Translate:</strong> Help us translate the tool into Spanish or other languages spoken by NJ Transit riders.</li>
+          </ul>
+        </div>
+        <div class="secaucus-card">
+          <h4>Technical contributions</h4>
+          <ul>
+            <li><strong>File bugs:</strong> Found a bug? <a href="https://github.com/jamditis/reroute-nj/issues" target="_blank" rel="noopener">Open an issue on GitHub</a>.</li>
+            <li><strong>Submit a pull request:</strong> The codebase is vanilla HTML/CSS/JS with no build step. Fork, change, PR.</li>
+            <li><strong>Add data:</strong> Help us keep <code>data/coverage.json</code> up to date with new articles.</li>
+            <li><strong>Improve accessibility:</strong> Screen reader testing, WCAG compliance, keyboard navigation.</li>
+          </ul>
+        </div>
+        <div class="secaucus-card">
+          <h4>License</h4>
+          <ul>
+            <li>Reroute NJ is released under the <strong>MIT License</strong>.</li>
+            <li>You can use, copy, modify, and distribute it freely.</li>
+            <li>Attribution is appreciated but not required.</li>
+            <li>The project is maintained by <a href="https://github.com/jamditis" target="_blank" rel="noopener">Joe Amditis</a>.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="disclaimer"><strong>Reroute NJ</strong> is an independent community tool. Not affiliated with or endorsed by NJ Transit, Amtrak, or any government agency. <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">View source on GitHub</a>.</p>
+      <p class="credit">Built by <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">Joe Amditis</a></p>
+    </div>
+  </footer>
+
+  <script src="js/shared.js"></script>
+  <script src="js/embed.js"></script>
+</body>
+</html>

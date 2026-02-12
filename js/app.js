@@ -249,6 +249,7 @@
   // =========================================================================
   var currentLineId = "montclair-boonton";
   var currentStationId = null;
+  var currentDirection = "nj-to-nyc";
 
   // =========================================================================
   // DOM REFERENCES
@@ -262,6 +263,7 @@
   var $routesContent = document.getElementById("routes-content");
   var $ticketsIntro = document.getElementById("tickets-intro");
   var $ticketsContent = document.getElementById("tickets-content");
+  var $directionToggle = document.getElementById("direction-toggle");
   var tabs = document.querySelectorAll(".tab");
   var panels = document.querySelectorAll(".tool-panel");
 
@@ -447,14 +449,64 @@
   // --- Impact: Hoboken diversion ---
   function renderHobokenImpact(line, station) {
     var branchLabel = line.branches[station.branch] || station.branch;
-    var changes = [
-      "Your weekday train to Penn Station New York is suspended. All weekday " + esc(line.name) + " trains now terminate at Hoboken.",
-      "At Hoboken, transfer to PATH (33rd St), NY Waterway ferry (W. 39th St), or Bus 126 (Port Authority). All are cross-honored with your NJ Transit ticket.",
-      "Weekend service to Penn Station continues normally. No changes on Saturdays and Sundays.",
-      "Buy tickets to/from Hoboken (not Penn Station) for weekday travel during Feb 15 – Mar 15.",
-      "Travel before 7am or after 9am to avoid the worst crowding at Hoboken and on PATH.",
-    ];
+    var isReverse = currentDirection === "nyc-to-nj";
+
+    var changes;
+    if (isReverse) {
+      changes = [
+        "Your weekday evening train from Penn Station New York is suspended. To reach " + esc(station.name) + ", you must first get to Hoboken Terminal.",
+        "Take PATH from 33rd St to Hoboken, NY Waterway ferry from W. 39th St, or Bus 126 from Port Authority. All cross-honored with your NJ Transit ticket.",
+        "At Hoboken Terminal, board your " + esc(line.name) + " train home to " + esc(station.name) + ".",
+        "Weekend service from Penn Station to " + esc(station.name) + " continues normally.",
+        "Check the temporary evening schedule — your usual train may be retimed or eliminated.",
+      ];
+    } else {
+      changes = [
+        "Your weekday train to Penn Station New York is suspended. All weekday " + esc(line.name) + " trains now terminate at Hoboken.",
+        "At Hoboken, transfer to PATH (33rd St), NY Waterway ferry (W. 39th St), or Bus 126 (Port Authority). All are cross-honored with your NJ Transit ticket.",
+        "Weekend service to Penn Station continues normally. No changes on Saturdays and Sundays.",
+        "Buy tickets to/from Hoboken (not Penn Station) for weekday travel during Feb 15 – Mar 15.",
+        "Travel before 7am or after 9am to avoid the worst crowding at Hoboken and on PATH.",
+      ];
+    }
     var savingsHtml = getSavingsHtml(station);
+
+    var beforeFlow, beforeNote, afterFlow, afterNote;
+    if (isReverse) {
+      beforeFlow =
+        '<span class="station-tag highlight">Penn Station NY</span>' +
+        '<span class="arrow">&rarr;</span>' +
+        '<span class="station-tag">' + esc(line.hub) + "</span>" +
+        '<span class="arrow">&rarr;</span>' +
+        '<span class="station-tag">' + esc(station.name) + "</span>";
+      beforeNote = "Midtown Direct evening service from Penn Station NY through " + esc(line.hub) + " to " + esc(station.name) + " (" + esc(branchLabel) + ").";
+      afterFlow =
+        '<span class="station-tag highlight">Manhattan</span>' +
+        '<span class="arrow">&rarr;</span>' +
+        '<span class="station-tag accent">Hoboken</span>' +
+        '<span class="arrow">&rarr;</span>' +
+        '<span class="station-tag">' + esc(line.hub) + "</span>" +
+        '<span class="arrow">&rarr;</span>' +
+        '<span class="station-tag">' + esc(station.name) + "</span>";
+      afterNote = "Take PATH, ferry, or bus to Hoboken first, then board your NJ Transit train. <strong>All cross-honored with your NJ Transit pass.</strong>";
+    } else {
+      beforeFlow =
+        '<span class="station-tag">' + esc(station.name) + "</span>" +
+        '<span class="arrow">&rarr;</span>' +
+        '<span class="station-tag">' + esc(line.hub) + "</span>" +
+        '<span class="arrow">&rarr;</span>' +
+        '<span class="station-tag highlight">Penn Station NY</span>';
+      beforeNote = "Midtown Direct service from " + esc(station.name) + " (" + esc(branchLabel) + ") through " + esc(line.hub) + " to Penn Station NY.";
+      afterFlow =
+        '<span class="station-tag">' + esc(station.name) + "</span>" +
+        '<span class="arrow">&rarr;</span>' +
+        '<span class="station-tag">' + esc(line.hub) + "</span>" +
+        '<span class="arrow">&rarr;</span>' +
+        '<span class="station-tag accent">Hoboken</span>' +
+        '<span class="arrow">&rarr;</span>' +
+        '<span class="station-tag highlight">Manhattan</span>';
+      afterNote = "Then transfer to PATH, ferry, or bus to reach Manhattan. <strong>All cross-honored with your NJ Transit pass.</strong>";
+    }
 
     return (
       '<div class="impact-card severe">' +
@@ -466,50 +518,70 @@
       '<div class="before-after">' +
       '<div class="before">' +
       "<h4>Before (normal service)</h4>" +
-      '<div class="route-flow">' +
-      '<span class="station-tag">' + esc(station.name) + "</span>" +
-      '<span class="arrow">&rarr;</span>' +
-      '<span class="station-tag">' + esc(line.hub) + "</span>" +
-      '<span class="arrow">&rarr;</span>' +
-      '<span class="station-tag highlight">Penn Station NY</span>' +
-      "</div>" +
-      '<p class="route-note">Midtown Direct service from ' + esc(station.name) + " (" + esc(branchLabel) + ") through " + esc(line.hub) + " to Penn Station NY.</p>" +
+      '<div class="route-flow">' + beforeFlow + "</div>" +
+      '<p class="route-note">' + beforeNote + "</p>" +
       "</div>" +
       '<div class="after">' +
       "<h4>During cutover (weekdays, Feb 15 – Mar 15)</h4>" +
-      '<div class="route-flow">' +
-      '<span class="station-tag">' + esc(station.name) + "</span>" +
-      '<span class="arrow">&rarr;</span>' +
-      '<span class="station-tag">' + esc(line.hub) + "</span>" +
-      '<span class="arrow">&rarr;</span>' +
-      '<span class="station-tag accent">Hoboken</span>' +
-      '<span class="arrow">&rarr;</span>' +
-      '<span class="station-tag highlight">Manhattan</span>' +
-      "</div>" +
-      '<p class="route-note">Then transfer to PATH, ferry, or bus to reach Manhattan. <strong>All cross-honored with your NJ Transit pass.</strong></p>' +
+      '<div class="route-flow">' + afterFlow + "</div>" +
+      '<p class="route-note">' + afterNote + "</p>" +
       "</div>" +
       "</div>" +
       '<div class="key-changes"><h4>What you need to know</h4><ul>' +
       changes.map(function (c) { return "<li>" + esc(c) + "</li>"; }).join("") +
       "</ul></div>" +
       savingsHtml +
-      '<div class="weekend-note"><strong>Weekends are different:</strong> Midtown Direct service to Penn Station NY continues on Saturday and Sunday. Buy regular Penn Station tickets for weekend travel.</div>' +
+      '<div class="weekend-note"><strong>Weekends are different:</strong> Midtown Direct service ' + (isReverse ? "from" : "to") + ' Penn Station NY continues on Saturday and Sunday. Buy regular Penn Station tickets for weekend travel.</div>' +
       "</div></div>"
     );
   }
 
   // --- Impact: Reduced service ---
   function renderReducedServiceImpact(line, station) {
+    var isReverse = currentDirection === "nyc-to-nj";
     var changes = [
-      "Your train still goes to Penn Station New York — but there are fewer of them. " + esc(line.name) + " is reduced from " + line.trainsBefore + " to " + line.trainsAfter + " daily trains.",
+      isReverse
+        ? "Your evening train from Penn Station New York to " + esc(station.name) + " still runs — but there are fewer of them. " + esc(line.name) + " is reduced from " + line.trainsBefore + " to " + line.trainsAfter + " daily trains."
+        : "Your train still goes to Penn Station New York — but there are fewer of them. " + esc(line.name) + " is reduced from " + line.trainsBefore + " to " + line.trainsAfter + " daily trains.",
       "Single-track operation between Newark and Secaucus means delays of 15–30+ minutes are common, especially during peak hours.",
       "Check the temporary schedule carefully. Your specific train may be eliminated or retimed.",
       "No ticket changes needed — buy your normal Penn Station tickets.",
-      "Travel before 7am or after 9am in the morning, and before 4pm or after 7pm in the evening, to reduce crowding.",
+      isReverse
+        ? "Leave Manhattan before 4pm or after 7pm to avoid the worst evening crowding."
+        : "Travel before 7am or after 9am in the morning, and before 4pm or after 7pm in the evening, to reduce crowding.",
     ];
 
     if (currentLineId === "north-jersey-coast" && (station.id === "perth-amboy" || station.id === "woodbridge")) {
       changes.push("Perth Amboy and Woodbridge riders: your rail pass or ticket is cross-honored on NJ Transit buses from Perth Amboy or Woodbridge to the Port Authority Bus Terminal.");
+    }
+
+    var beforeFlow, afterFlow;
+    if (isReverse) {
+      beforeFlow =
+        '<span class="station-tag highlight">Penn Station NY</span>' +
+        '<span class="arrow">&rarr;</span>' +
+        '<span class="station-tag">...</span>' +
+        '<span class="arrow">&rarr;</span>' +
+        '<span class="station-tag">' + esc(station.name) + "</span>";
+      afterFlow =
+        '<span class="station-tag highlight">Penn Station NY</span>' +
+        '<span class="arrow">&rarr;</span>' +
+        '<span class="station-tag warning">Single track</span>' +
+        '<span class="arrow">&rarr;</span>' +
+        '<span class="station-tag">' + esc(station.name) + "</span>";
+    } else {
+      beforeFlow =
+        '<span class="station-tag">' + esc(station.name) + "</span>" +
+        '<span class="arrow">&rarr;</span>' +
+        '<span class="station-tag">...</span>' +
+        '<span class="arrow">&rarr;</span>' +
+        '<span class="station-tag highlight">Penn Station NY</span>';
+      afterFlow =
+        '<span class="station-tag">' + esc(station.name) + "</span>" +
+        '<span class="arrow">&rarr;</span>' +
+        '<span class="station-tag warning">Single track</span>' +
+        '<span class="arrow">&rarr;</span>' +
+        '<span class="station-tag highlight">Penn Station NY</span>';
     }
 
     return (
@@ -522,25 +594,13 @@
       '<div class="before-after">' +
       '<div class="before">' +
       "<h4>Before (normal service)</h4>" +
-      '<div class="route-flow">' +
-      '<span class="station-tag">' + esc(station.name) + "</span>" +
-      '<span class="arrow">&rarr;</span>' +
-      '<span class="station-tag">...</span>' +
-      '<span class="arrow">&rarr;</span>' +
-      '<span class="station-tag highlight">Penn Station NY</span>' +
-      "</div>" +
+      '<div class="route-flow">' + beforeFlow + "</div>" +
       '<p class="route-note">' + line.trainsBefore + " daily trains on " + esc(line.name) + ".</p>" +
       "</div>" +
       '<div class="after">' +
       "<h4>During cutover (Feb 15 – Mar 15)</h4>" +
-      '<div class="route-flow">' +
-      '<span class="station-tag">' + esc(station.name) + "</span>" +
-      '<span class="arrow">&rarr;</span>' +
-      '<span class="station-tag warning">Single track</span>' +
-      '<span class="arrow">&rarr;</span>' +
-      '<span class="station-tag highlight">Penn Station NY</span>' +
-      "</div>" +
-      '<p class="route-note">Same destination, fewer trains (' + line.trainsAfter + " daily). Expect delays from single-track operations at the Portal Bridge.</p>" +
+      '<div class="route-flow">' + afterFlow + "</div>" +
+      '<p class="route-note">Same ' + (isReverse ? "origin" : "destination") + ", fewer trains (" + line.trainsAfter + " daily). Expect delays from single-track operations at the Portal Bridge.</p>" +
       "</div>" +
       "</div>" +
       '<div class="key-changes"><h4>What you need to know</h4><ul>' +
@@ -553,13 +613,62 @@
 
   // --- Impact: Newark termination ---
   function renderNewarkTerminationImpact(line, station) {
-    var changes = [
-      "Your one-seat ride to Penn Station New York is suspended for the duration of the cutover.",
-      "All Raritan Valley Line trains now originate and terminate at Newark Penn Station.",
-      "To reach Penn Station NY, transfer at Newark Penn to a Northeast Corridor train (reduced service, ~20 min to PSNY).",
-      "The transfer at Newark Penn adds 15–30 minutes to your commute depending on connection timing.",
-      "Consider shifting your schedule to off-peak hours to get better NEC connections at Newark Penn.",
-    ];
+    var isReverse = currentDirection === "nyc-to-nj";
+    var changes;
+    if (isReverse) {
+      changes = [
+        "Your one-seat ride from Penn Station New York to " + esc(station.name) + " is suspended for the duration of the cutover.",
+        "All Raritan Valley Line trains now originate and terminate at Newark Penn Station.",
+        "To reach " + esc(station.name) + ", take a Northeast Corridor train from Penn Station NY to Newark Penn (~20 min), then transfer to a Raritan Valley Line train.",
+        "The transfer at Newark Penn adds 15–30 minutes to your commute depending on connection timing.",
+        "Check the temporary NEC evening schedule to find the best connection with RVL departures from Newark Penn.",
+      ];
+    } else {
+      changes = [
+        "Your one-seat ride to Penn Station New York is suspended for the duration of the cutover.",
+        "All Raritan Valley Line trains now originate and terminate at Newark Penn Station.",
+        "To reach Penn Station NY, transfer at Newark Penn to a Northeast Corridor train (reduced service, ~20 min to PSNY).",
+        "The transfer at Newark Penn adds 15–30 minutes to your commute depending on connection timing.",
+        "Consider shifting your schedule to off-peak hours to get better NEC connections at Newark Penn.",
+      ];
+    }
+
+    var beforeFlow, beforeNote, afterFlow, afterNote;
+    if (isReverse) {
+      beforeFlow =
+        '<span class="station-tag highlight">Penn Station NY</span>' +
+        '<span class="arrow">&rarr;</span>' +
+        '<span class="station-tag">...</span>' +
+        '<span class="arrow">&rarr;</span>' +
+        '<span class="station-tag">' + esc(station.name) + "</span>";
+      beforeNote = "Direct one-seat ride from Penn Station New York to " + esc(station.name) + " (select trains).";
+      afterFlow =
+        '<span class="station-tag highlight">Penn Station NY</span>' +
+        '<span class="arrow">&rarr;</span>' +
+        '<span class="station-tag warning">NEC</span>' +
+        '<span class="arrow">transfer &rarr;</span>' +
+        '<span class="station-tag accent">Newark Penn</span>' +
+        '<span class="arrow">&rarr;</span>' +
+        '<span class="station-tag">' + esc(station.name) + "</span>";
+      afterNote = "Take NEC to Newark Penn, then transfer to Raritan Valley Line. <strong>Allow extra time for the connection.</strong>";
+    } else {
+      beforeFlow =
+        '<span class="station-tag">' + esc(station.name) + "</span>" +
+        '<span class="arrow">&rarr;</span>' +
+        '<span class="station-tag">...</span>' +
+        '<span class="arrow">&rarr;</span>' +
+        '<span class="station-tag highlight">Penn Station NY</span>';
+      beforeNote = "Direct one-seat ride from " + esc(station.name) + " to Penn Station New York (select trains).";
+      afterFlow =
+        '<span class="station-tag">' + esc(station.name) + "</span>" +
+        '<span class="arrow">&rarr;</span>' +
+        '<span class="station-tag accent">Newark Penn</span>' +
+        '<span class="arrow">transfer &rarr;</span>' +
+        '<span class="station-tag warning">NEC</span>' +
+        '<span class="arrow">&rarr;</span>' +
+        '<span class="station-tag highlight">Penn Station NY</span>';
+      afterNote = "Train terminates at Newark Penn. Transfer to a Northeast Corridor train for Penn Station NY. <strong>Allow extra time for the connection.</strong>";
+    }
 
     return (
       '<div class="impact-card severe">' +
@@ -571,27 +680,13 @@
       '<div class="before-after">' +
       '<div class="before">' +
       "<h4>Before (normal one-seat ride)</h4>" +
-      '<div class="route-flow">' +
-      '<span class="station-tag">' + esc(station.name) + "</span>" +
-      '<span class="arrow">&rarr;</span>' +
-      '<span class="station-tag">...</span>' +
-      '<span class="arrow">&rarr;</span>' +
-      '<span class="station-tag highlight">Penn Station NY</span>' +
-      "</div>" +
-      '<p class="route-note">Direct one-seat ride from ' + esc(station.name) + " to Penn Station New York (select trains).</p>" +
+      '<div class="route-flow">' + beforeFlow + "</div>" +
+      '<p class="route-note">' + beforeNote + "</p>" +
       "</div>" +
       '<div class="after">' +
       "<h4>During cutover (Feb 15 – Mar 15)</h4>" +
-      '<div class="route-flow">' +
-      '<span class="station-tag">' + esc(station.name) + "</span>" +
-      '<span class="arrow">&rarr;</span>' +
-      '<span class="station-tag accent">Newark Penn</span>' +
-      '<span class="arrow">transfer &rarr;</span>' +
-      '<span class="station-tag warning">NEC</span>' +
-      '<span class="arrow">&rarr;</span>' +
-      '<span class="station-tag highlight">Penn Station NY</span>' +
-      "</div>" +
-      '<p class="route-note">Train terminates at Newark Penn. Transfer to a Northeast Corridor train for Penn Station NY. <strong>Allow extra time for the connection.</strong></p>' +
+      '<div class="route-flow">' + afterFlow + "</div>" +
+      '<p class="route-note">' + afterNote + "</p>" +
       "</div>" +
       "</div>" +
       '<div class="key-changes"><h4>What you need to know</h4><ul>' +
@@ -624,22 +719,43 @@
   // =========================================================================
   function renderRoutes() {
     var line = getCurrentLine();
+    var isReverse = currentDirection === "nyc-to-nj";
 
     if (line.impactType === "hoboken-diversion") {
-      $routesIntro.innerHTML =
-        "<h2>How do I get to Manhattan?</h2>" +
-        "<p>Your weekday " + esc(line.name) + " train now ends at Hoboken. Here are your options to get the rest of the way, all cross-honored with your NJ Transit ticket or pass.</p>";
-      $routesContent.innerHTML = renderHobokenRoutes();
+      if (isReverse) {
+        $routesIntro.innerHTML =
+          "<h2>How do I get home from Manhattan?</h2>" +
+          "<p>Your evening " + esc(line.name) + " train now departs from Hoboken. Here are your options to get to Hoboken from Manhattan, all cross-honored with your NJ Transit ticket or pass.</p>";
+        $routesContent.innerHTML = renderHobokenRoutesReverse();
+      } else {
+        $routesIntro.innerHTML =
+          "<h2>How do I get to Manhattan?</h2>" +
+          "<p>Your weekday " + esc(line.name) + " train now ends at Hoboken. Here are your options to get the rest of the way, all cross-honored with your NJ Transit ticket or pass.</p>";
+        $routesContent.innerHTML = renderHobokenRoutes();
+      }
     } else if (line.impactType === "reduced-service") {
-      $routesIntro.innerHTML =
-        "<h2>Planning your commute</h2>" +
-        "<p>Your " + esc(line.name) + " train still goes to Penn Station NY, but with fewer trains and more delays. Here's how to adapt.</p>";
+      if (isReverse) {
+        $routesIntro.innerHTML =
+          "<h2>Getting home in the evening</h2>" +
+          "<p>Your " + esc(line.name) + " evening train from Penn Station NY still runs, but with fewer trains and more delays. Here's how to adapt.</p>";
+      } else {
+        $routesIntro.innerHTML =
+          "<h2>Planning your commute</h2>" +
+          "<p>Your " + esc(line.name) + " train still goes to Penn Station NY, but with fewer trains and more delays. Here's how to adapt.</p>";
+      }
       $routesContent.innerHTML = renderReducedServiceRoutes(line);
     } else if (line.impactType === "newark-termination") {
-      $routesIntro.innerHTML =
-        "<h2>Getting past Newark Penn</h2>" +
-        "<p>Your " + esc(line.name) + " train now terminates at Newark Penn Station. Here's how to get the rest of the way to Manhattan.</p>";
-      $routesContent.innerHTML = renderNewarkRoutes();
+      if (isReverse) {
+        $routesIntro.innerHTML =
+          "<h2>Getting home from Manhattan</h2>" +
+          "<p>Your " + esc(line.name) + " evening train now departs from Newark Penn Station. Here's how to get from Manhattan to Newark Penn to catch your train.</p>";
+        $routesContent.innerHTML = renderNewarkRoutesReverse();
+      } else {
+        $routesIntro.innerHTML =
+          "<h2>Getting past Newark Penn</h2>" +
+          "<p>Your " + esc(line.name) + " train now terminates at Newark Penn Station. Here's how to get the rest of the way to Manhattan.</p>";
+        $routesContent.innerHTML = renderNewarkRoutes();
+      }
     }
   }
 
@@ -799,6 +915,106 @@
         "<strong>Drive to Secaucus:</strong> Another option is driving to Secaucus Junction to catch a train that's already past the bottleneck.",
         "<strong>Work from home:</strong> NJ Transit is asking employers to support remote work during the cutover.",
         "<strong>Shift your schedule:</strong> Off-peak NEC connections at Newark Penn will be much less crowded.",
+      ])
+    );
+  }
+
+  function renderHobokenRoutesReverse() {
+    return (
+      makeRouteCard(
+        "&#x1F687;",
+        "PATH to Hoboken",
+        "Best for most riders",
+        true,
+        [
+          { label: "From", value: "33rd Street, Manhattan" },
+          { label: "To", value: "Hoboken Terminal" },
+          { label: "Travel time", value: "12–15 min" },
+          { label: "Frequency", value: "Every 3–5 min (peak), 10–15 min (off-peak)" },
+          { label: "Cost", value: "Cross-honored (free with NJ Transit pass/ticket)" },
+        ],
+        "Fastest option. Direct ride from 33rd St & 6th Ave to Hoboken Terminal.",
+        "Expect heavy crowding during evening peak (5–7pm). Trains fill up quickly at 33rd St.",
+        "Board at the front of the PATH train for the closest exit to NJ Transit platforms at Hoboken."
+      ) +
+      makeRouteCard(
+        "&#x26F4;&#xFE0F;",
+        "NY Waterway ferry to Hoboken",
+        "Scenic & less crowded",
+        false,
+        [
+          { label: "From", value: "W. 39th St, Midtown Manhattan" },
+          { label: "To", value: "Hoboken Terminal ferry dock" },
+          { label: "Travel time", value: "10–12 min" },
+          { label: "Frequency", value: "Enhanced service during commute hours" },
+          { label: "Cost", value: "Cross-honored (free with NJ Transit pass/ticket)" },
+        ],
+        "Usually less crowded than PATH. Free connecting buses from Penn Station, Grand Central, and Wall St to the ferry terminal.",
+        "Can be affected by weather. Limited evening frequency. Only departs from W. 39th St.",
+        "Check the NY Waterway app for evening departure times. Free connecting buses depart from multiple Manhattan locations."
+      ) +
+      makeRouteCard(
+        "&#x1F68C;",
+        "NJ Transit Bus 126 to Hoboken",
+        "Best from Port Authority area",
+        false,
+        [
+          { label: "From", value: "Port Authority Bus Terminal (42nd St & 8th Ave)" },
+          { label: "To", value: "Hoboken Terminal bus area" },
+          { label: "Travel time", value: "20–40 min (traffic dependent)" },
+          { label: "Frequency", value: "Regular service throughout the day" },
+          { label: "Cost", value: "Cross-honored (free with NJ Transit pass/ticket)" },
+        ],
+        "Convenient if you're already near Times Square / west Midtown. No additional fare.",
+        "Lincoln Tunnel traffic can double the travel time, especially during evening rush.",
+        "Leave Port Authority by 5pm or after 7pm to avoid the worst tunnel traffic."
+      ) +
+      makeOtherOptionsCard([
+        "<strong>Time your connection:</strong> Check the temporary evening schedule for your " + esc(getCurrentLine().name) + " departure time from Hoboken, and plan your PATH/ferry arrival accordingly.",
+        "<strong>Work from home:</strong> NJ Transit is asking employers to allow remote work. Even 1–2 days helps.",
+        "<strong>Leave early or late:</strong> The 5–7pm window will be the most crowded. Leaving before 5pm or after 7pm is much easier.",
+      ])
+    );
+  }
+
+  function renderNewarkRoutesReverse() {
+    return (
+      makeRouteCard(
+        "&#x1F686;",
+        "NEC from Penn Station NY to Newark Penn",
+        "Primary option",
+        true,
+        [
+          { label: "From", value: "Penn Station New York" },
+          { label: "To", value: "Newark Penn Station" },
+          { label: "NEC travel time", value: "~20 min" },
+          { label: "Then", value: "Transfer to Raritan Valley Line train home" },
+          { label: "Tickets", value: "Your existing ticket/pass should cover the transfer" },
+        ],
+        "Most direct option. Take an NEC train to Newark Penn, then transfer to your RVL train.",
+        "NEC evening trains are reduced, so plan around the temporary schedule. Allow 15–30 min for transfer + wait.",
+        "Check both the NEC and Raritan Valley temporary schedules to find the best evening connection pairs."
+      ) +
+      makeRouteCard(
+        "&#x1F687;",
+        "PATH to Newark Penn",
+        "Alternative from Lower Manhattan",
+        false,
+        [
+          { label: "From", value: "World Trade Center, Manhattan" },
+          { label: "To", value: "Newark Penn Station" },
+          { label: "Travel time", value: "~25 min" },
+          { label: "Then", value: "Transfer to Raritan Valley Line train" },
+          { label: "Cost", value: "$2.75 PATH fare (separate)" },
+        ],
+        "Good option if you work in Lower Manhattan / Financial District. Avoids Penn Station entirely.",
+        "Separate fare required. Rush-hour crowding is significant on the WTC–Newark PATH line.",
+        "Best for riders whose office is downtown. Takes you directly to Newark Penn for RVL transfer."
+      ) +
+      makeOtherOptionsCard([
+        "<strong>Time your NEC connection:</strong> Find an NEC departure from Penn Station that connects well with your RVL departure from Newark Penn.",
+        "<strong>Consider bus alternatives:</strong> NJ Transit buses from Port Authority serve some Raritan Valley corridor towns.",
+        "<strong>Leave early:</strong> Evening peak NEC trains from Penn Station will be crowded. Leaving before 5pm gives you better options.",
       ])
     );
   }
@@ -983,6 +1199,28 @@
   }
 
   // =========================================================================
+  // DIRECTION TOGGLE
+  // =========================================================================
+  function initDirectionToggle() {
+    if (!$directionToggle) return;
+    var btns = $directionToggle.querySelectorAll(".direction-btn");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function () {
+        var dir = this.getAttribute("data-dir");
+        if (dir === currentDirection) return;
+        currentDirection = dir;
+        for (var j = 0; j < btns.length; j++) {
+          btns[j].classList.toggle("active", btns[j].getAttribute("data-dir") === dir);
+        }
+        // Refresh content for new direction
+        if (currentStationId) onStationChange();
+        renderRoutes();
+        renderTickets();
+      });
+    }
+  }
+
+  // =========================================================================
   // INIT
   // =========================================================================
   function init() {
@@ -991,6 +1229,7 @@
     buildLineNav();
     selectLine(currentLineId);
     initTabs();
+    initDirectionToggle();
 
     $stationSelect.addEventListener("change", onStationChange);
     setInterval(updateCountdown, 3600000);
