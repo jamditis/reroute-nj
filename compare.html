@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compare commute options — Reroute NJ</title>
+  <meta name="description" content="Compare your commute options during the NJ Transit Portal Bridge cutover. See visual side-by-side breakdowns of every route to Manhattan.">
+  <meta property="og:title" content="Compare commute options — Reroute NJ">
+  <meta property="og:description" content="Visual side-by-side commute comparison during the Portal Bridge cutover. Pick your station and destination, see all options ranked.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-link"><div class="brand">Reroute<span>NJ</span></div></a>
+      <p class="tagline">Compare your commute options</p>
+      <div class="countdown" id="countdown"></div>
+    </div>
+  </header>
+
+  <nav class="tool-nav">
+    <div class="container">
+      <a href="index.html" class="tool-nav-link">Line guide</a>
+      <a href="compare.html" class="tool-nav-link active">Commute comparison</a>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <section class="compare-hero">
+      <h1>How does your commute change?</h1>
+      <p>Pick your station and Manhattan destination. We'll show you every option side by side with visual time breakdowns.</p>
+    </section>
+
+    <!-- Step 1: Line -->
+    <section class="input-step">
+      <div class="step-label"><span class="step-circle">1</span> Your line</div>
+      <nav class="line-nav" id="line-nav"></nav>
+    </section>
+
+    <!-- Step 2: Station -->
+    <section class="input-step">
+      <div class="step-label"><span class="step-circle">2</span> Your station</div>
+      <select id="station-select">
+        <option value="">Choose your station&hellip;</option>
+      </select>
+    </section>
+
+    <!-- Step 3: Destination -->
+    <section class="input-step">
+      <div class="step-label"><span class="step-circle">3</span> Where in Manhattan?</div>
+      <div class="dest-grid" id="dest-grid"></div>
+    </section>
+
+    <!-- Results -->
+    <section id="results" class="compare-results hidden">
+      <div id="results-header" class="results-header"></div>
+      <div id="results-normal" class="results-normal"></div>
+      <div id="results-list"></div>
+      <div id="results-share" class="results-share"></div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="disclaimer"><strong>Reroute NJ</strong> is an independent community tool. Not affiliated with or endorsed by NJ Transit. Travel times are estimates based on published schedules and typical conditions — actual times will vary. Always verify with <a href="https://www.njtransit.com/portalcutover" target="_blank" rel="noopener">njtransit.com</a> before traveling.</p>
+      <p class="credit">Built by <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">Joe Amditis</a></p>
+    </div>
+  </footer>
+
+  <script src="compare.js"></script>
+</body>
+</html>
