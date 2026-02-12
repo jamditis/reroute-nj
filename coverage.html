@@ -21,7 +21,9 @@
 </head>
 <body>
 
-  <header class="header">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="header" role="banner">
     <div class="header-inner">
       <a href="index.html" class="brand-link"><div class="brand">Reroute<span>NJ</span></div></a>
       <p class="tagline">Portal Bridge in the news</p>
@@ -29,17 +31,17 @@
     </div>
   </header>
 
-  <nav class="tool-nav">
+  <nav class="tool-nav" aria-label="Site tools">
     <div class="container">
       <a href="index.html" class="tool-nav-link">Line guide</a>
       <a href="compare.html" class="tool-nav-link">Commute comparison</a>
-      <a href="coverage.html" class="tool-nav-link active">News coverage</a>
+      <a href="coverage.html" class="tool-nav-link active" aria-current="page">News coverage</a>
       <a href="map.html" class="tool-nav-link">Map</a>
       <a href="embed.html" class="tool-nav-link">Embed &amp; share</a>
     </div>
   </nav>
 
-  <main class="container">
+  <main class="container" id="main-content">
 
     <section class="coverage-hero">
       <h1>Portal Bridge in the news</h1>
@@ -47,7 +49,7 @@
       <p class="coverage-updated" id="coverage-updated"></p>
     </section>
 
-    <section class="coverage-filters" id="coverage-filters">
+    <section class="coverage-filters" id="coverage-filters" role="search" aria-label="Filter news articles">
       <div class="filter-group">
         <label for="filter-source">Source</label>
         <select id="filter-source">
@@ -91,11 +93,11 @@
       </div>
     </section>
 
-    <section class="coverage-feed" id="coverage-feed"></section>
+    <section class="coverage-feed" id="coverage-feed" aria-live="polite" aria-label="News articles"></section>
 
   </main>
 
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="container">
       <p class="disclaimer"><strong>Reroute NJ</strong> is an independent community tool. Not affiliated with or endorsed by NJ Transit, Amtrak, or any government agency. News links go to their original sources. Always verify with <a href="https://www.njtransit.com/portalcutover" target="_blank" rel="noopener">njtransit.com</a> before traveling.</p>
       <p class="credit">Built by <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">Joe Amditis</a></p>

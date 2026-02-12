@@ -21,7 +21,9 @@
 </head>
 <body>
 
-  <header class="header">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="header" role="banner">
     <div class="header-inner">
       <a href="index.html" class="brand-link"><div class="brand">Reroute<span>NJ</span></div></a>
       <p class="tagline">Compare your commute options</p>
@@ -29,17 +31,17 @@
     </div>
   </header>
 
-  <nav class="tool-nav">
+  <nav class="tool-nav" aria-label="Site tools">
     <div class="container">
       <a href="index.html" class="tool-nav-link">Line guide</a>
-      <a href="compare.html" class="tool-nav-link active">Commute comparison</a>
+      <a href="compare.html" class="tool-nav-link active" aria-current="page">Commute comparison</a>
       <a href="coverage.html" class="tool-nav-link">News coverage</a>
       <a href="map.html" class="tool-nav-link">Map</a>
       <a href="embed.html" class="tool-nav-link">Embed &amp; share</a>
     </div>
   </nav>
 
-  <main class="container">
+  <main class="container" id="main-content">
 
     <section class="compare-hero">
       <h1>How does your commute change?</h1>
@@ -49,12 +51,12 @@
     <!-- Step 1: Line -->
     <section class="input-step">
       <div class="step-label"><span class="step-circle">1</span> Your line</div>
-      <nav class="line-nav" id="line-nav"></nav>
+      <nav class="line-nav" id="line-nav" aria-label="Select train line"></nav>
     </section>
 
     <!-- Step 2: Station -->
     <section class="input-step">
-      <div class="step-label"><span class="step-circle">2</span> Your station</div>
+      <label class="step-label" for="station-select"><span class="step-circle">2</span> Your station</label>
       <select id="station-select">
         <option value="">Choose your station&hellip;</option>
       </select>
@@ -63,11 +65,11 @@
     <!-- Step 3: Destination -->
     <section class="input-step">
       <div class="step-label"><span class="step-circle">3</span> Where in Manhattan?</div>
-      <div class="dest-grid" id="dest-grid"></div>
+      <div class="dest-grid" id="dest-grid" role="group" aria-label="Manhattan destinations"></div>
     </section>
 
     <!-- Results -->
-    <section id="results" class="compare-results hidden">
+    <section id="results" class="compare-results hidden" aria-live="polite">
       <div id="results-header" class="results-header"></div>
       <div id="results-normal" class="results-normal"></div>
       <div id="results-list"></div>
@@ -76,7 +78,7 @@
 
   </main>
 
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="container">
       <p class="disclaimer"><strong>Reroute NJ</strong> is an independent community tool. Not affiliated with or endorsed by NJ Transit. Travel times are estimates based on published schedules and typical conditions — actual times will vary. Always verify with <a href="https://www.njtransit.com/portalcutover" target="_blank" rel="noopener">njtransit.com</a> before traveling.</p>
       <p class="credit">Built by <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">Joe Amditis</a></p>

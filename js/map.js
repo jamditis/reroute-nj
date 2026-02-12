@@ -369,7 +369,9 @@
 
       // Update active state
       for (var j = 0; j < filterBtns.length; j++) {
-        filterBtns[j].classList.toggle("active", filterBtns[j] === this);
+        var isActive = filterBtns[j] === this;
+        filterBtns[j].classList.toggle("active", isActive);
+        filterBtns[j].setAttribute("aria-pressed", isActive ? "true" : "false");
       }
 
       // Show/hide layers
