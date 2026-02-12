@@ -108,9 +108,10 @@
   // =========================================================================
   var map = L.map("map").setView([40.74, -74.15], 10);
 
-  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-    maxZoom: 18,
+  L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/">CARTO</a>',
+    subdomains: "abcd",
+    maxZoom: 19,
   }).addTo(map);
 
   // =========================================================================
@@ -177,6 +178,25 @@
     );
 
     icon.addTo(layers[s.line]);
+  });
+
+  // =========================================================================
+  // ADD LINE POLYLINES (connecting stations along each route)
+  // =========================================================================
+  Object.keys(LINE_COLORS).forEach(function (lineId) {
+    var coords = [];
+    STATIONS.forEach(function (s) {
+      if (s.line === lineId) {
+        coords.push([s.lat, s.lng]);
+      }
+    });
+    if (coords.length > 1) {
+      L.polyline(coords, {
+        color: LINE_COLORS[lineId],
+        weight: 3,
+        opacity: 0.7,
+      }).addTo(layers[lineId]);
+    }
   });
 
   // =========================================================================
