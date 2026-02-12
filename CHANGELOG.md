@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.1] - 2026-02-12
+
 ### Added
 - CHANGELOG.md, CONTRIBUTING.md, CODE_OF_CONDUCT.md, SECURITY.md
 - Issue templates for bug reports, data corrections, feature requests, and content suggestions
@@ -35,5 +37,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - GitHub Pages deployment workflow
 - MIT license
 
-[Unreleased]: https://github.com/jamditis/reroute-nj/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/jamditis/reroute-nj/compare/v1.0.1...HEAD
+[1.0.1]: https://github.com/jamditis/reroute-nj/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/jamditis/reroute-nj/releases/tag/v1.0.0
