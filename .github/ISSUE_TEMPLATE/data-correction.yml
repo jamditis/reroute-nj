@@ -1,0 +1,45 @@
+name: Data correction
+description: Incorrect transit information that needs fixing
+labels: ["data-accuracy"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping keep Reroute NJ accurate. Please include a source link if you have one — official NJ Transit announcements are ideal.
+  - type: dropdown
+    id: line
+    attributes:
+      label: Which line?
+      options:
+        - Montclair-Boonton
+        - Morris & Essex / Gladstone
+        - Northeast Corridor
+        - North Jersey Coast
+        - Raritan Valley
+        - Multiple lines
+        - Not sure
+    validations:
+      required: true
+  - type: input
+    id: station
+    attributes:
+      label: Which station (if applicable)?
+      placeholder: "Bloomfield"
+    validations:
+      required: false
+  - type: textarea
+    id: incorrect
+    attributes:
+      label: What's incorrect?
+      description: Describe what the site currently says and what it should say.
+      placeholder: "The site says trains to Hoboken run every 30 minutes, but the updated schedule shows every 20 minutes."
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source
+      description: Link to official NJ Transit page or announcement, if available.
+      placeholder: "https://www.njtransit.com/..."
+    validations:
+      required: false

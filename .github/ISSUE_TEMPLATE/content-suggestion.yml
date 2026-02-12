@@ -1,0 +1,26 @@
+name: Content suggestion
+description: Missing or unclear information on the site
+labels: ["content"]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Which page?
+      placeholder: "Line guide / Commute comparison / Both"
+    validations:
+      required: true
+  - type: textarea
+    id: whats-missing
+    attributes:
+      label: What's missing or unclear?
+      description: Describe what information is missing or hard to understand.
+      placeholder: "The Hoboken transfer instructions don't mention which exit to use for the ferry."
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested improvement
+      description: How would you improve it?
+    validations:
+      required: false

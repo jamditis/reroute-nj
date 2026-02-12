@@ -1,0 +1,61 @@
+name: Bug report
+description: Something isn't working correctly
+labels: ["bug"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe what you expected to happen and what actually happened.
+      placeholder: "When I select the Montclair-Boonton line and click on Bloomfield station..."
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Page URL
+      description: Which page were you on?
+      placeholder: "https://jamditis.github.io/reroute-nj/"
+    validations:
+      required: false
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Browser
+      options:
+        - Chrome
+        - Firefox
+        - Safari
+        - Edge
+        - Other
+    validations:
+      required: false
+  - type: dropdown
+    id: device
+    attributes:
+      label: Device
+      options:
+        - Desktop
+        - Phone
+        - Tablet
+    validations:
+      required: false
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: How can we see the bug?
+      placeholder: |
+        1. Go to the line guide
+        2. Select Montclair-Boonton
+        3. Click on Bloomfield
+        4. Scroll to the route alternatives section
+    validations:
+      required: false
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot
+      description: If applicable, add a screenshot to help explain the problem.
+    validations:
+      required: false

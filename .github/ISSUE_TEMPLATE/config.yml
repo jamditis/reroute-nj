@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: NJ Transit Portal cutover info
+    url: https://www.njtransit.com/portalcutover
+    about: For official schedule and service information, check NJ Transit directly
+  - name: Questions and discussion
+    url: https://github.com/jamditis/reroute-nj/discussions
+    about: Ask a question, share an idea, or tell us how you're using Reroute NJ
