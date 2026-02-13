@@ -104,7 +104,9 @@ All five tools are available in 11 languages, chosen based on [NJ Transit riders
 | Arabic | `ar` | RTL |
 | Polish | `pl` | LTR |
 
-Translations use a hybrid approach: static HTML text is replaced at build time by `tools/generate-pages.py`, while interactive JS strings load at runtime through `js/i18n.js`. Station names remain in English across all languages since they're proper nouns on physical signage.
+All page content is fully translated — navigation, section headings, body text, form labels, filter options, map labels, transfer directions, and informational cards. Station names and line names remain in English across all languages since they're proper nouns on physical signage.
+
+Translations use a hybrid approach: static HTML text is replaced at build time by `tools/generate-pages.py` (~175 translation keys per language), while interactive JS strings load at runtime through `js/i18n.js`.
 
 To add a new language, create `translations/{code}.json` following the structure in `translations/en.json`, then run `python3 tools/generate-pages.py`.
 
@@ -159,6 +161,7 @@ This is an independent community tool. Not affiliated with or endorsed by NJ Tra
 
 ## Roadmap
 
+- [x] Full translation of all page content into 10 languages
 - [ ] Phase 2 coverage when NJ Transit announces fall 2026 service changes
 - [ ] Bus bridge and shuttle information
 - [ ] Expanded ferry and PATH connection details
