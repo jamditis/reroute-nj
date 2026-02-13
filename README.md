@@ -27,7 +27,8 @@
 - **[Commute comparison](https://reroutenj.org/compare.html)** — Pick your station and Manhattan destination, see every route option side by side with visual time breakdowns
 - **[News coverage](https://reroutenj.org/coverage.html)** — Curated feed of Portal Bridge cutover coverage from local and regional news sources, filterable by source, category, line, and direction
 - **[Interactive map](https://reroutenj.org/map.html)** — Visualize the Portal Bridge location, affected stations, transfer hubs, and alternative routes
-- **[Embed & share](https://reroutenj.org/embed.html)** — Embed widgets, link, or republish any of these tools on your own site
+- **[Embed & share](https://reroutenj.org/embed.html)** — Visual configurator with four embed formats: iframe, script tag, PNG image, and self-contained HTML download. Free for newsrooms and publishers
+- **[Blog](https://reroutenj.org/blog.html)** — Project updates and feature announcements
 
 ## Lines covered
 
@@ -51,16 +52,25 @@ reroute-nj/
 ├── compare.html            # Commute comparison tool
 ├── coverage.html           # News coverage feed
 ├── map.html                # Interactive cutover map
-├── embed.html              # Embed & share page
-├── blog.html               # Blog / updates
+├── embed.html              # Embed & share configurator
+├── blog.html               # Blog index (lists posts)
+├── blog/                   # Blog posts
+│   ├── why-we-built-reroute-nj.html
+│   └── new-embed-system.html
+├── card.html               # Info card renderer (URL params → card)
+├── widget.html             # Mini-widget renderer (URL params → tool)
 ├── robots.txt              # Crawler guidance + AI bot allowances
-├── sitemap.xml             # All 56 pages with hreflang cross-references
+├── sitemap.xml             # All 90 pages with hreflang cross-references
 ├── llms.txt                # AI search engine discoverability
 ├── js/
 │   ├── shared.js           # Shared globals: esc(), countdown, date constants
-│   ├── app.js              # Line guide logic (IIFE, ~1000 lines)
-│   ├── compare.js          # Comparison tool logic (IIFE, ~700 lines)
+│   ├── app.js              # Line guide logic (IIFE)
+│   ├── compare.js          # Comparison tool logic (IIFE)
 │   ├── coverage.js         # Coverage feed logic (IIFE)
+│   ├── embed.js            # Embed configurator (IIFE)
+│   ├── cards.js            # Card rendering + Canvas PNG export (IIFE)
+│   ├── line-data.js        # LINE_DATA and LINE_ORDER globals
+│   ├── widget.js           # Standalone script-tag embed library (IIFE)
 │   └── i18n.js             # Translation loader with t() function
 ├── css/
 │   └── styles.css          # All styles, CSS custom properties for theming
@@ -71,27 +81,31 @@ reroute-nj/
 ├── data/
 │   └── coverage.json       # Curated article data for the coverage feed
 ├── translations/           # Translation JSON files
-│   ├── en.json             # English (base)
+│   ├── en.json             # English (base, ~300 keys)
 │   ├── es.json             # Spanish
 │   ├── zh.json             # Chinese (Simplified)
 │   └── ...                 # + 8 more languages
 ├── tools/
 │   └── generate-pages.py   # Generates translated HTML pages from templates
-└── {lang}/                 # Generated translated pages (es/, zh/, ko/, etc.)
+└── {lang}/                 # Generated translated pages (80 total, 8 pages × 10 languages)
     ├── index.html
     ├── compare.html
     ├── coverage.html
     ├── map.html
-    └── embed.html
+    ├── embed.html
+    ├── blog.html
+    └── blog/
+        ├── why-we-built-reroute-nj.html
+        └── new-embed-system.html
 ```
 
 **Why no build step?** This site serves transit riders during a stressful infrastructure change. A simple architecture means anyone can contribute — including journalists and civic tech volunteers who may not have Node.js installed. Open `index.html` in a browser and you're running the full app.
 
-**Data model:** All transit data lives in the `LINE_DATA` object in `js/app.js`. Each line has an `impactType` (`hoboken-diversion`, `reduced-service`, or `newark-termination`) that drives which content templates render. See [AGENTS.md](AGENTS.md) for details.
+**Data model:** All transit data lives in the `LINE_DATA` object in `js/line-data.js`. Each line has an `impactType` (`hoboken-diversion`, `reduced-service`, or `newark-termination`) that drives which content templates render. See [AGENTS.md](AGENTS.md) for details.
 
 ## Translations
 
-All five tools are available in 11 languages, chosen based on [NJ Transit ridership demographics](https://www.njtransit.com/):
+All eight pages are available in 11 languages, chosen based on [NJ Transit ridership demographics](https://www.njtransit.com/):
 
 | Language | Code | Direction |
 |----------|------|-----------|
@@ -109,7 +123,7 @@ All five tools are available in 11 languages, chosen based on [NJ Transit riders
 
 All page content is fully translated — navigation, section headings, body text, form labels, filter options, map labels, transfer directions, and informational cards. Station names and line names remain in English across all languages since they're proper nouns on physical signage.
 
-Translations use a hybrid approach: static HTML text is replaced at build time by `tools/generate-pages.py` (~175 translation keys per language), while interactive JS strings load at runtime through `js/i18n.js`.
+Translations use a hybrid approach: static HTML text is replaced at build time by `tools/generate-pages.py` (~300 translation keys per language), while interactive JS strings load at runtime through `js/i18n.js`.
 
 To add a new language, create `translations/{code}.json` following the structure in `translations/en.json`, then run `python3 tools/generate-pages.py`.
 
@@ -167,7 +181,7 @@ This is an independent community tool. Not affiliated with or endorsed by NJ Tra
 The site is optimized for Google search, newsroom adoption, and AI search tools (ChatGPT, Gemini, Perplexity, Claude):
 
 - **`robots.txt`** — Allows all crawlers with explicit AI bot allowances (GPTBot, ClaudeBot, PerplexityBot, Google-Extended)
-- **`sitemap.xml`** — All 56 pages with `xhtml:link` hreflang cross-references for all 11 languages
+- **`sitemap.xml`** — All 90 pages with `xhtml:link` hreflang cross-references for all 11 languages
 - **`llms.txt`** — Structured overview for AI search tools following the [llms.txt standard](https://llmstxt.org)
 - **JSON-LD structured data** — WebSite, FAQPage (7 questions), Article, and BreadcrumbList schemas on all pages
 - **Canonical tags** — Self-referencing canonical on every page (English and translated)
@@ -179,6 +193,8 @@ The site is optimized for Google search, newsroom adoption, and AI search tools 
 - [x] Full translation of all page content into 10 languages
 - [x] SEO foundations (robots.txt, sitemap.xml, canonical tags, structured data)
 - [x] AI search optimization (llms.txt, citation-ready content)
+- [x] Embed system v2: four output formats, visual configurator, info cards, PNG export
+- [x] Blog with proper index + slugged post architecture
 - [ ] Phase 2 coverage when NJ Transit announces fall 2026 service changes
 - [ ] Bus bridge and shuttle information
 - [ ] Expanded ferry and PATH connection details
