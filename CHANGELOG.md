@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+- Language dropdown contrast: option text now uses dark color on white background instead of white-on-white
+
 ## [1.1.0] - 2026-02-12
 
 ### Added
