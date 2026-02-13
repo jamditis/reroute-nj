@@ -110,6 +110,20 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- Embed utility pages (no translations, loaded inside iframes) -->
+  <url>
+    <loc>https://reroutenj.org/card.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://reroutenj.org/widget.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
   <!-- Spanish (es) -->
   <url>
     <loc>https://reroutenj.org/es/index.html</loc>

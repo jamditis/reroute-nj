@@ -22,11 +22,17 @@ blog.html               — Blog (English only, not translated)
 robots.txt              — Crawler guidance + AI bot allowances
 sitemap.xml             — All 56 pages with hreflang cross-refs
 llms.txt                — AI search engine discoverability
+card.html               — Info card renderer (URL params → card)
+widget.html             — Mini-widget renderer (URL params → tool)
 js/app.js               — Line guide logic (IIFE, ~1000 lines)
 js/compare.js           — Comparison tool (IIFE, ~700 lines)
 js/coverage.js          — Coverage feed (IIFE)
 js/i18n.js              — Runtime translation loader
-js/shared.js            — Shared globals: esc(), countdown, dates
+js/shared.js            — Shared globals: esc(), countdown, dates, initEmbedMode()
+js/line-data.js         — LINE_DATA and LINE_ORDER globals (shared by app, cards, widgets)
+js/cards.js             — Card rendering + Canvas PNG export (IIFE)
+js/embed.js             — Embed configurator logic (IIFE)
+js/widget.js            — Standalone script-tag embed library (IIFE)
 css/styles.css          — All styles, CSS custom properties in :root
 data/coverage.json      — Curated article metadata
 translations/en.json    — English source strings (~175 keys)
