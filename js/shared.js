@@ -164,3 +164,21 @@ function initLangSelector() {
     }
   });
 }
+
+// =========================================================================
+// EMBED MODE
+// When ?embed=true is in the URL, hides site chrome and shows attribution.
+// =========================================================================
+function initEmbedMode() {
+  if (window.location.search.indexOf("embed=true") === -1) return;
+  document.body.classList.add("embed-mode");
+  var hide = document.querySelectorAll(".header, .tool-nav, .seo-summary, .footer");
+  for (var i = 0; i < hide.length; i++) {
+    hide[i].style.display = "none";
+  }
+  var bar = document.createElement("div");
+  bar.className = "embed-attribution";
+  // Safe: static string with no user input
+  bar.innerHTML = 'Powered by <a href="https://reroutenj.org" target="_blank" rel="noopener">Reroute NJ</a>';
+  document.body.appendChild(bar);
+}

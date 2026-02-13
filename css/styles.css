@@ -2633,3 +2633,12 @@ body[data-view="simplified"] .brand {
   margin-bottom: 1.5rem;
   max-width: 680px;
 }
+
+/* =========================================================================
+   EMBED MODE — strips chrome when ?embed=true
+   ========================================================================= */
+body.embed-mode { padding-top: 0; }
+body.embed-mode .container { padding: 0.5rem; }
+.embed-attribution { text-align: center; padding: 6px 0; font-size: 0.75rem; color: #73849a; border-top: 1px solid #e8ecf1; margin-top: 1rem; }
+.embed-attribution a { color: #73849a; text-decoration: none; }
+.embed-attribution a:hover { color: #e87722; }
