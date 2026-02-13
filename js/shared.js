@@ -19,6 +19,32 @@ function esc(str) {
 }
 
 // =========================================================================
+// HAMBURGER MENU
+// Toggles the mobile nav open/closed. No-ops on desktop where button is hidden.
+// =========================================================================
+(function () {
+  document.addEventListener("DOMContentLoaded", function () {
+    var btn = document.querySelector(".hamburger-btn");
+    var nav = document.querySelector(".tool-nav");
+    if (!btn || !nav) return;
+
+    btn.addEventListener("click", function () {
+      var isOpen = nav.classList.toggle("open");
+      btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    });
+
+    // Close menu when clicking a nav link (for same-page scenarios)
+    var links = nav.querySelectorAll(".tool-nav-link");
+    for (var i = 0; i < links.length; i++) {
+      links[i].addEventListener("click", function () {
+        nav.classList.remove("open");
+        btn.setAttribute("aria-expanded", "false");
+      });
+    }
+  });
+})();
+
+// =========================================================================
 // COUNTDOWN
 // Looks up #countdown internally so each page just calls updateCountdown().
 // Uses only safe, pre-defined HTML fragments (no user input in innerHTML).
