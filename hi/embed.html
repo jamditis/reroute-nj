@@ -111,75 +111,179 @@
 
   <main class="container" id="main-content">
 
-    <p class="seo-summary">Embed Reroute NJ tools on your website for free. Newsrooms, publishers, and community organizations can iframe any tool, link directly, or fork the open-source code to create a branded version.</p>
+    <p class="seo-summary">अपनी वेबसाइट पर Reroute NJ टूल्स मुफ्त में एम्बेड करें। न्यूज़रूम, प्रकाशक और सामुदायिक संगठन किसी भी टूल को iframe कर सकते हैं, सीधे लिंक कर सकते हैं, या ब्रांडेड संस्करण बनाने के लिए ओपन-सोर्स कोड फोर्क कर सकते हैं।</p>
 
     <section class="embed-hero">
       <h1>अपनी वेबसाइट पर Reroute NJ लगाएं</h1>
-      <p>Reroute NJ मुफ्त, ओपन सोर्स और समुदाय के लिए बना है। समाचार कक्ष, प्रकाशक, सामुदायिक संगठन और कोई भी हमारे उपकरणों को एम्बेड, लिंक या रिपब्लिश कर सकता है।</p>
+      <p>Reroute NJ मुफ्त, ओपन सोर्स और समुदाय के लिए बना है। एम्बेड प्रकार चुनें, कॉन्फ़िगर करें और कोड लें।</p>
     </section>
 
-    <!-- Embed code generator -->
-    <section class="info-section" id="embed-generator" style="margin-top: 1rem; border-top: none;">
-      <h2>एम्बेड कोड जनरेटर</h2>
-      <p class="section-intro">अपनी वेबसाइट पर कोई भी Reroute NJ उपकरण लगाने के लिए iframe एम्बेड कोड कॉपी और पेस्ट करें। उपकरण iframe के अंदर पूरी तरह इंटरैक्टिव और रिस्पॉन्सिव है।</p>
-
-      <div class="embed-options">
-        <div class="filter-group">
-          <label for="embed-tool">कौन सा उपकरण?</label>
-          <select id="embed-tool">
-            <option value="index.html">लाइन गाइड</option>
-            <option value="compare.html">यात्रा तुलना</option>
-            <option value="coverage.html">समाचार कवरेज</option>
-            <option value="map.html">इंटरैक्टिव नक्शा</option>
-          </select>
-        </div>
-        <div class="filter-group">
-          <label for="embed-width">चौड़ाई</label>
-          <select id="embed-width">
-            <option value="100%">पूरी चौड़ाई (100%)</option>
-            <option value="600px">600px</option>
-            <option value="800px">800px</option>
-          </select>
-        </div>
-        <div class="filter-group">
-          <label for="embed-height">ऊंचाई</label>
-          <select id="embed-height">
-            <option value="700px">700px</option>
-            <option value="500px">500px</option>
-            <option value="900px">900px</option>
-          </select>
-        </div>
+    <!-- Step 1: Pick embed type -->
+    <section class="configurator-step" id="cfg-step-1">
+      <div class="cfg-step-header">
+        <span class="cfg-step-num">1</span>
+        <h2>एम्बेड प्रकार चुनें</h2>
       </div>
-
-      <div class="embed-preview">
-        <label class="embed-code-label">आपका एम्बेड कोड</label>
-        <div class="embed-code-box" id="embed-code-box"></div>
-        <button class="share-btn" id="copy-embed-btn" style="margin-top: 0.75rem;">एम्बेड कोड कॉपी करें</button>
-        <span class="share-confirm hidden" id="copy-embed-confirm">कॉपी हो गया!</span>
+      <div class="cfg-type-cards">
+        <button class="cfg-type-card" data-type="card" type="button">
+          <span class="cfg-type-icon" aria-hidden="true">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><rect x="4" y="6" width="28" height="24" rx="4" stroke="currentColor" stroke-width="2"/><line x1="10" y1="14" x2="26" y2="14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="10" y1="19" x2="22" y2="19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/><line x1="10" y1="23" x2="18" y2="23" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/></svg>
+          </span>
+          <strong class="cfg-type-name">जानकारी कार्ड</strong>
+          <span class="cfg-type-desc">किसी लाइन या स्टेशन के बारे में मुख्य तथ्यों वाला एक संक्षिप्त कार्ड। न्यूज़लेटर, सोशल मीडिया और लेख साइडबार के लिए बढ़िया।</span>
+        </button>
+        <button class="cfg-type-card" data-type="widget" type="button">
+          <span class="cfg-type-icon" aria-hidden="true">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><rect x="3" y="4" width="30" height="28" rx="4" stroke="currentColor" stroke-width="2"/><rect x="7" y="9" width="10" height="6" rx="2" fill="currentColor" opacity="0.15" stroke="currentColor" stroke-width="1.5"/><rect x="19" y="9" width="10" height="6" rx="2" fill="currentColor" opacity="0.15" stroke="currentColor" stroke-width="1.5"/><rect x="7" y="19" width="22" height="3" rx="1.5" fill="currentColor" opacity="0.2"/><rect x="7" y="25" width="16" height="3" rx="1.5" fill="currentColor" opacity="0.2"/></svg>
+          </span>
+          <strong class="cfg-type-name">इंटरैक्टिव विजेट</strong>
+          <span class="cfg-type-desc">हमारे टूल्स का एक मिनी संस्करण जो आपके पाठक इनलाइन उपयोग कर सकते हैं। HTML ब्लॉक सपोर्ट करने वाले किसी भी CMS में काम करता है।</span>
+        </button>
+        <button class="cfg-type-card" data-type="tool" type="button">
+          <span class="cfg-type-icon" aria-hidden="true">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><rect x="2" y="3" width="32" height="30" rx="4" stroke="currentColor" stroke-width="2"/><line x1="2" y1="10" x2="34" y2="10" stroke="currentColor" stroke-width="2"/><circle cx="7" cy="6.5" r="1.5" fill="currentColor" opacity="0.4"/><circle cx="12" cy="6.5" r="1.5" fill="currentColor" opacity="0.4"/><circle cx="17" cy="6.5" r="1.5" fill="currentColor" opacity="0.4"/><rect x="6" y="14" width="24" height="4" rx="2" fill="currentColor" opacity="0.12"/><rect x="6" y="21" width="24" height="8" rx="2" fill="currentColor" opacity="0.08"/></svg>
+          </span>
+          <strong class="cfg-type-name">पूर्ण टूल</strong>
+          <span class="cfg-type-desc">आपके पेज पर एम्बेड किया गया पूर्ण टूल अनुभव। सभी सुविधाएँ, पूरी तरह इंटरैक्टिव।</span>
+        </button>
       </div>
     </section>
 
-    <!-- Direct link sharing -->
+    <!-- Step 2: Configure -->
+    <section class="configurator-step hidden" id="cfg-step-2">
+      <div class="cfg-step-header">
+        <span class="cfg-step-num">2</span>
+        <h2>अपना एम्बेड कॉन्फ़िगर करें</h2>
+      </div>
+      <div class="cfg-form" id="cfg-form">
+        <!-- Card-specific fields -->
+        <div class="cfg-field" id="cfg-field-card-type">
+          <label for="cfg-card-type">कार्ड प्रकार</label>
+          <select id="cfg-card-type">
+            <option value="line">लाइन अवलोकन</option>
+            <option value="station">स्टेशन जानकारी</option>
+            <option value="summary">कटओवर सारांश</option>
+          </select>
+        </div>
+        <!-- Tool/widget-specific field -->
+        <div class="cfg-field hidden" id="cfg-field-tool-type">
+          <label for="cfg-tool-type">टूल</label>
+          <select id="cfg-tool-type">
+            <option value="line-guide">लाइन गाइड</option>
+            <option value="compare">यात्रा तुलना</option>
+            <option value="coverage">समाचार</option>
+            <option value="map">इंटरैक्टिव मानचित्र</option>
+          </select>
+        </div>
+        <!-- Line picker -->
+        <div class="cfg-field" id="cfg-field-line">
+          <label for="cfg-line">लाइन</label>
+          <select id="cfg-line">
+            <option value="">एक लाइन चुनें…</option>
+          </select>
+        </div>
+        <!-- Station picker (card type=station only) -->
+        <div class="cfg-field hidden" id="cfg-field-station">
+          <label for="cfg-station">स्टेशन</label>
+          <select id="cfg-station">
+            <option value="">एक स्टेशन चुनें…</option>
+          </select>
+        </div>
+        <!-- Theme toggle -->
+        <div class="cfg-field" id="cfg-field-theme">
+          <label for="cfg-theme">थीम</label>
+          <select id="cfg-theme">
+            <option value="light">लाइट</option>
+            <option value="dark">डार्क</option>
+          </select>
+        </div>
+        <!-- Accent color -->
+        <div class="cfg-field" id="cfg-field-accent">
+          <label for="cfg-accent">एक्सेंट रंग</label>
+          <div class="cfg-color-input">
+            <input type="color" id="cfg-accent" value="#e87722">
+            <span class="cfg-color-value" id="cfg-accent-value">#e87722</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Step 3: Preview + Output -->
+    <section class="configurator-step hidden" id="cfg-step-3">
+      <div class="cfg-step-header">
+        <span class="cfg-step-num">3</span>
+        <h2>प्रीव्यू करें और कोड लें</h2>
+      </div>
+      <div class="cfg-output-layout">
+        <!-- Preview -->
+        <div class="cfg-preview" id="cfg-preview">
+          <div class="cfg-preview-label">लाइव प्रीव्यू</div>
+          <div class="cfg-preview-frame" id="cfg-preview-frame">
+            <iframe id="cfg-iframe" title="Embed preview" sandbox="allow-scripts allow-same-origin" loading="lazy"></iframe>
+          </div>
+        </div>
+        <!-- Output -->
+        <div class="cfg-output">
+          <div class="cfg-output-tabs" role="tablist" aria-label="Output format">
+            <button class="cfg-tab active" role="tab" aria-selected="true" aria-controls="cfg-panel-iframe" id="cfg-tab-iframe" data-tab="iframe" type="button">Iframe</button>
+            <button class="cfg-tab" role="tab" aria-selected="false" aria-controls="cfg-panel-script" id="cfg-tab-script" data-tab="script" type="button">Script टैग</button>
+            <button class="cfg-tab" role="tab" aria-selected="false" aria-controls="cfg-panel-png" id="cfg-tab-png" data-tab="png" type="button">PNG डाउनलोड</button>
+            <button class="cfg-tab" role="tab" aria-selected="false" aria-controls="cfg-panel-html" id="cfg-tab-html" data-tab="html" type="button">HTML डाउनलोड</button>
+          </div>
+          <!-- Iframe panel -->
+          <div class="cfg-panel active" role="tabpanel" id="cfg-panel-iframe" aria-labelledby="cfg-tab-iframe">
+            <div class="embed-code-box" id="cfg-code-iframe"></div>
+            <div class="cfg-copy-row">
+              <button class="share-btn cfg-copy-btn" id="cfg-copy-iframe" type="button">कोड कॉपी करें</button>
+              <span class="share-confirm hidden" id="cfg-copied-iframe">कॉपी हो गया!</span>
+            </div>
+          </div>
+          <!-- Script tag panel -->
+          <div class="cfg-panel hidden" role="tabpanel" id="cfg-panel-script" aria-labelledby="cfg-tab-script">
+            <div class="embed-code-box" id="cfg-code-script"></div>
+            <div class="cfg-copy-row">
+              <button class="share-btn cfg-copy-btn" id="cfg-copy-script" type="button">कोड कॉपी करें</button>
+              <span class="share-confirm hidden" id="cfg-copied-script">कॉपी हो गया!</span>
+            </div>
+          </div>
+          <!-- PNG panel -->
+          <div class="cfg-panel hidden" role="tabpanel" id="cfg-panel-png" aria-labelledby="cfg-tab-png">
+            <div class="cfg-download-area" id="cfg-png-area">
+              <p class="cfg-download-msg" id="cfg-png-msg">जानकारी कार्ड को PNG छवि के रूप में निर्यात करने के लिए नीचे बटन क्लिक करें।</p>
+              <button class="share-btn cfg-download-btn" id="cfg-download-png" type="button">PNG डाउनलोड</button>
+            </div>
+          </div>
+          <!-- HTML download panel -->
+          <div class="cfg-panel hidden" role="tabpanel" id="cfg-panel-html" aria-labelledby="cfg-tab-html">
+            <div class="cfg-download-area" id="cfg-html-area">
+              <p class="cfg-download-msg" id="cfg-html-msg">जानकारी कार्ड की स्वतंत्र HTML फ़ाइल डाउनलोड करने के लिए नीचे बटन क्लिक करें।</p>
+              <button class="share-btn cfg-download-btn" id="cfg-download-html" type="button">HTML डाउनलोड</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Direct links -->
     <section class="info-section" id="direct-links">
       <h2>सीधे लिंक</h2>
       <p class="section-intro">किसी भी उपकरण को सीधे लिंक करें। ये URL स्थायी और शेयर करने योग्य हैं।</p>
-
       <div class="resources-grid">
         <div class="resource-link">
           <strong>लाइन गाइड</strong>
-          <span id="link-guide" class="embed-url">https://reroutenj.org/</span>
+          <span class="embed-url">https://reroutenj.org/</span>
         </div>
         <div class="resource-link">
           <strong>यात्रा तुलना</strong>
-          <span id="link-compare" class="embed-url">https://reroutenj.org/compare.html</span>
+          <span class="embed-url">https://reroutenj.org/compare.html</span>
         </div>
         <div class="resource-link">
           <strong>समाचार कवरेज</strong>
-          <span id="link-coverage" class="embed-url">https://reroutenj.org/coverage.html</span>
+          <span class="embed-url">https://reroutenj.org/coverage.html</span>
         </div>
         <div class="resource-link">
           <strong>इंटरैक्टिव नक्शा</strong>
-          <span id="link-map" class="embed-url">https://reroutenj.org/map.html</span>
+          <span class="embed-url">https://reroutenj.org/map.html</span>
         </div>
       </div>
     </section>
@@ -187,16 +291,15 @@
     <!-- For publishers -->
     <section class="info-section" id="for-publishers">
       <h2>समाचार कक्षों और प्रकाशकों के लिए</h2>
-      <p class="section-intro">Reroute NJ पत्रकारों, समाचार कक्षों और सामुदायिक प्रकाशकों के उपयोग के लिए बनाया गया है। इसे कैसे उपयोग करें।</p>
-
+      <p class="section-intro">Reroute NJ पत्रकारों, न्यूज़रूम और सामुदायिक प्रकाशकों के लिए डिज़ाइन किया गया है।</p>
       <div class="secaucus-grid">
         <div class="secaucus-card">
           <h4>अपने लेखों में एम्बेड करें</h4>
           <ul>
-            <li>ऊपर एम्बेड कोड जनरेटर से iframe स्निपेट प्राप्त करें।</li>
-            <li>अपने CMS (WordPress, Ghost, Squarespace, आदि) में पेस्ट करें — अधिकतर raw HTML ब्लॉक सपोर्ट करते हैं।</li>
-            <li>एम्बेड रिस्पॉन्सिव है और मोबाइल पर काम करता है।</li>
-            <li>कोई API कुंजी या अकाउंट की ज़रूरत नहीं। बस काम करता है।</li>
+            <li>किसी भी प्रारूप के लिए एम्बेड कोड जनरेट करने के लिए ऊपर कॉन्फ़िगरेटर का उपयोग करें।</li>
+            <li>अपने CMS (WordPress, Ghost, Squarespace, आदि) में पेस्ट करें — अधिकांश raw HTML ब्लॉक सपोर्ट करते हैं।</li>
+            <li>एम्बेड रिस्पॉन्सिव हैं और मोबाइल पर काम करते हैं।</li>
+            <li>API कुंजी या खाते की आवश्यकता नहीं।</li>
           </ul>
         </div>
         <div class="secaucus-card">
@@ -204,7 +307,7 @@
           <ul>
             <li>अपनी Portal Bridge कहानियों में "अपनी यात्रा की योजना बनाएं" लिंक बॉक्स जोड़ें।</li>
             <li>लेख किस बारे में है उसके आधार पर विशिष्ट उपकरणों से लिंक करें।</li>
-            <li>सोशल मीडिया प्रीव्यू के लिए हमारे पास OG इमेज और सोशल कार्ड पहले से सेट हैं।</li>
+            <li>OG छवियाँ और सोशल कार्ड स्वच्छ प्रीव्यू के लिए पहले से सेट अप हैं।</li>
             <li>सुझाया गया एंकर टेक्स्ट: "अपनी यात्रा की योजना बनाने के लिए मुफ्त Reroute NJ उपकरण उपयोग करें।"</li>
           </ul>
         </div>
@@ -212,26 +315,25 @@
           <h4>कवरेज में योगदान करें</h4>
           <ul>
             <li>हम अपने <a href="coverage.html">समाचार कवरेज पेज</a> पर Portal Bridge कवरेज एकत्रित करते हैं।</li>
-            <li>कोई लेख सुझाने के लिए, URL और विवरण के साथ <a href="https://github.com/jamditis/reroute-nj/issues/new?template=article-suggestion.md" target="_blank" rel="noopener">GitHub पर issue खोलें</a>।</li>
-            <li>या विषय पंक्ति में "Reroute NJ coverage" के साथ <strong><a href="mailto:amditisj@montclair.edu">amditisj@montclair.edu</a></strong> पर ईमेल करें।</li>
+            <li>लेख सुझाने के लिए, <a href="https://github.com/jamditis/reroute-nj/issues/new?template=article-suggestion.md" target="_blank" rel="noopener">GitHub पर issue खोलें</a>।</li>
+            <li>या <strong><a href="mailto:amditisj@montclair.edu">amditisj@montclair.edu</a></strong> पर "Reroute NJ coverage" विषय के साथ ईमेल करें।</li>
             <li>हम सभी प्रासंगिक कवरेज शामिल करते हैं — राय, विश्लेषण, सामुदायिक रिपोर्टिंग और अधिक।</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- Custom branding -->
+    <!-- Co-branding -->
     <section class="info-section" id="custom-branding">
       <h2>सह-ब्रांडिंग और अनुकूलन</h2>
       <p class="section-intro">अपनी ब्रांडिंग के साथ Reroute NJ चलाना चाहते हैं? चूंकि यह ओपन सोर्स है, आप ऐसा कर सकते हैं।</p>
-
       <div class="ticket-scenarios">
         <div class="scenario-card">
-          <h3>विकल्प 1: प्रोजेक्ट फोर्क करें</h3>
+          <h3>प्रोजेक्ट फोर्क करें</h3>
           <div class="scenario-body">
             <div class="step">
               <span class="step-num">1</span>
-              <div><p>अपने संगठन के अकाउंट में <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">GitHub रिपॉजिटरी</a> फोर्क करें।</p></div>
+              <div><p><a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">GitHub रिपॉजिटरी</a> को अपनी संस्था के खाते में फोर्क करें।</p></div>
             </div>
             <div class="step">
               <span class="step-num">2</span>
@@ -239,29 +341,11 @@
             </div>
             <div class="step">
               <span class="step-num">3</span>
-              <div><p>ब्रांड नाम, लोगो और फुटर क्रेडिट अपना लगाएं। चाहें तो अपने समाचार कक्ष का हेडर/नेव जोड़ें।</p></div>
+              <div><p>ब्रांड नाम, लोगो और फुटर क्रेडिट अपने से बदलें।</p></div>
             </div>
             <div class="step">
               <span class="step-num">4</span>
-              <div><p>GitHub Pages, Netlify, Vercel या अपने सर्वर पर डिप्लॉय करें। कोई बिल्ड स्टेप नहीं — यह सिर्फ स्टैटिक HTML है।</p></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="scenario-card">
-          <h3>विकल्प 2: अपने परिचय के साथ एम्बेड करें</h3>
-          <div class="scenario-body">
-            <div class="step">
-              <span class="step-num">1</span>
-              <div><p>ऊपर दिए गए iframe कोड से उपकरण एम्बेड करें।</p></div>
-            </div>
-            <div class="step">
-              <span class="step-num">2</span>
-              <div><p>iframe के चारों ओर अपना हेडर, परिचय टेक्स्ट और ब्रांडिंग जोड़ें।</p></div>
-            </div>
-            <div class="step">
-              <span class="step-num">3</span>
-              <div><p>आसपास के पेज को अपने प्रकाशन के डिज़ाइन से मिलाएं।</p></div>
+              <div><p>GitHub Pages, Netlify, Vercel या अपने सर्वर पर डिप्लॉय करें। बिल्ड स्टेप की जरूरत नहीं।</p></div>
             </div>
           </div>
         </div>
@@ -271,8 +355,7 @@
     <!-- How to contribute -->
     <section class="info-section" id="contribute">
       <h2>योगदान कैसे करें</h2>
-      <p class="section-intro">Reroute NJ एक सामुदायिक प्रोजेक्ट है। आपके तकनीकी कौशल स्तर की परवाह किए बिना, आप इस तरह मदद कर सकते हैं।</p>
-
+      <p class="section-intro">Reroute NJ एक सामुदायिक प्रोजेक्ट है। यहाँ बताया गया है कि आप कैसे मदद कर सकते हैं।</p>
       <div class="secaucus-grid">
         <div class="secaucus-card">
           <h4>गैर-तकनीकी योगदान</h4>
@@ -280,7 +363,6 @@
             <li><strong>लेख सुझाव भेजें:</strong> कोई Portal Bridge लेख जो हमसे छूट गया? <a href="https://github.com/jamditis/reroute-nj/issues/new?template=article-suggestion.md" target="_blank" rel="noopener">Issue खोलें</a> या joe@amditis.com पर ईमेल करें।</li>
             <li><strong>गलतियां रिपोर्ट करें:</strong> अगर शेड्यूल डेटा या ट्रांसफर समय गलत है, तो हमें बताएं।</li>
             <li><strong>उपकरण शेयर करें:</strong> अपने यात्री मित्रों को बताएं, सोशल मीडिया पर शेयर करें, अपने पड़ोस के ग्रुप में पोस्ट करें।</li>
-            <li><strong>अनुवाद करें:</strong> NJ Transit यात्रियों द्वारा बोली जाने वाली स्पेनिश या अन्य भाषाओं में उपकरण का अनुवाद करने में मदद करें।</li>
           </ul>
         </div>
         <div class="secaucus-card">
@@ -316,7 +398,8 @@
   <script>window.BASE_PATH="../";window._T={"common":{"skip_to_main":"मुख्य सामग्री पर जाएं","high_contrast":"उच्च कंट्रास्ट","simplified_view":"सरलीकृत दृश्य","nav_line_guide":"लाइन गाइड","nav_commute_comparison":"यात्रा तुलना","nav_news_coverage":"समाचार","nav_map":"नक्शा","nav_embed":"एम्बेड और शेयर","footer_disclaimer":"एक स्वतंत्र सामुदायिक उपकरण है। NJ Transit, Amtrak या किसी सरकारी एजेंसी से संबद्ध या समर्थित नहीं है।","footer_disclaimer_index":"जानकारी आधिकारिक घोषणाओं पर आधारित है और बदल सकती है। यात्रा से पहले हमेशा","footer_disclaimer_index_after":"पर जांच करें।","footer_disclaimer_coverage":"समाचार लिंक मूल स्रोतों पर जाते हैं। यात्रा से पहले हमेशा","footer_disclaimer_coverage_after":"पर जांच करें।","footer_disclaimer_map":"मानचित्र डेटा &copy;","footer_disclaimer_map_tiles":"टाइल्स &copy;","footer_disclaimer_embed":"GitHub पर सोर्स कोड देखें","footer_built_by":"निर्माता","cutover_begins_in":"कटओवर शुरू होने में","days":"दिन","day":"दिन","remaining_phase1":"चरण 1 में शेष","phase1_complete":"चरण 1 पूर्ण","phase2_expected":"चरण 2 अपेक्षित"},"js":{"major_changes":"बड़े बदलाव","schedule_changes":"समय सारणी बदलाव","before_normal":"पहले (सामान्य सेवा)","during_cutover":"कटओवर के दौरान (कार्यदिवस, 15 फ़र – 15 मार्च)","during_cutover_short":"कटओवर के दौरान (15 फ़र – 15 मार्च)","what_you_need_to_know":"आपको क्या जानना चाहिए","weekends_different":"सप्ताहांत अलग हैं:","weekend_service_continues":"Midtown Direct Penn Station NY सेवा शनिवार और रविवार को जारी रहती है। सप्ताहांत यात्रा के लिए सामान्य Penn Station टिकट खरीदें।","estimated_savings":"अनुमानित बचत","zone":"ज़ोन","monthly_pass_penn":"Penn Station मासिक पास:","monthly_pass_hoboken":"Hoboken मासिक पास:","you_save":"आप बचाते हैं","per_month":"/माह","cross_honored_free":"और Hoboken से PATH/फेरी बिना अतिरिक्त लागत के स्वीकार किया जाता है।","fare_disclaimer":"किराये अनुमानित हैं। खरीदने से पहले njtransit.com पर जांचें।","how_get_manhattan":"Manhattan कैसे पहुंचें?","how_get_home":"Manhattan से घर कैसे जाएं?","planning_commute":"अपनी यात्रा की योजना","getting_home":"शाम को घर जाना","getting_past_newark":"Newark Penn से गुजरना","getting_home_manhattan":"Manhattan से घर","what_ticket":"मुझे कौन सा टिकट खरीदना चाहिए?","recommended":"अधिकांश यात्रियों के लिए सर्वश्रेष्ठ","scenic_less_crowded":"सुंदर और कम भीड़","port_authority_area":"Port Authority क्षेत्र के लिए सर्वश्रेष्ठ","other_options":"अन्य विकल्प","pro_tip":"सुझाव:","monthly_pass_holders":"मासिक पास धारक","one_way_buyers":"एकतरफा टिकट खरीदने वाले","weekend_riders":"सप्ताहांत यात्री","occasional_riders":"कभी-कभार यात्री / अनिश्चित","no_change":"कोई बदलाव नहीं","cross_honored":"स्वीकृत","transfer":"ट्रांसफर","walk_subway":"पैदल/सबवे","arrive":"आगमन","choose_station":"अपना स्टेशन चुनें…"},"compare":{"title":"यात्रा विकल्प तुलना — Reroute NJ","tagline":"अपने यात्रा विकल्प तुलना करें","hero_title":"आपकी यात्रा कैसे बदलती है?","hero_desc":"अपना स्टेशन और Manhattan गंतव्य चुनें। हम हर विकल्प विजुअल समय विश्लेषण के साथ दिखाएंगे।","step1":"आपकी लाइन","step2":"आपका स्टेशन","step3":"Manhattan में कहां?","your_normal_commute":"आपकी सामान्य यात्रा","min_total":"मिनट कुल","vs_normal":"vs सामान्य","fastest":"सबसे तेज़","copy_summary":"यात्रा सारांश कॉपी करें","copied":"कॉपी हो गया!"},"coverage":{"title":"समाचार — Reroute NJ","tagline":"समाचार में Portal Bridge","hero_title":"समाचार में Portal Bridge","hero_desc":"स्थानीय और क्षेत्रीय समाचार स्रोतों से कटओवर कवरेज।","last_updated":"अंतिम अपडेट:","all_sources":"सभी स्रोत","all_categories":"सभी श्रेणियां","all_lines":"सभी लाइनें","all_directions":"सभी दिशाएं","search_placeholder":"लेख खोजें…","no_articles":"आपके फ़िल्टर से कोई लेख मेल नहीं खाता।","source_label":"स्रोत","category_label":"श्रेणी","line_label":"लाइन","direction_label":"दिशा","search_label":"खोजें","cat_news":"समाचार","cat_opinion":"राय","cat_analysis":"विश्लेषण","cat_official":"आधिकारिक","cat_community":"सामुदायिक","dir_nj_nyc":"NJ से NYC","dir_nyc_nj":"NYC से NJ","dir_both":"दोनों दिशाएं"}};</script>
   <script src="../js/i18n.js"></script>
   <script src="../js/shared.js"></script>
+  <script src="../js/line-data.js"></script>
   <script src="../js/embed.js"></script>
-  <script>initA11yToggles(); initLangSelector();</script>
+  <script>initEmbedMode(); initA11yToggles(); initLangSelector();</script>
 </body>
 </html>

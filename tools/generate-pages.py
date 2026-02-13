@@ -792,6 +792,15 @@ def replace_page_specific_content(html, translations, page_key):
                 html = html.replace(f"<li>{eng_text}</li>", f"<li>{trans_html}</li>")
 
     elif page_key == "embed":
+        # SEO summary
+        seo_summary = get_translation(translations, "embed.seo_summary")
+        if seo_summary:
+            html = html.replace(
+                "Embed Reroute NJ tools on your website for free. Newsrooms, publishers, and community organizations can iframe any tool, link directly, or fork the open-source code to create a branded version.",
+                seo_summary
+            )
+
+        # Hero
         for key, eng_text in [
             ("embed.hero_title", "Put Reroute NJ on your website"),
         ]:
@@ -801,13 +810,15 @@ def replace_page_specific_content(html, translations, page_key):
         hero_desc = get_translation(translations, "embed.hero_desc")
         if hero_desc:
             html = html.replace(
-                "Reroute NJ is free, open source, and built for the community. Newsrooms, publishers, community organizations, and anyone else can embed our tools, link to them, or republish them on their own sites.",
+                "Reroute NJ is free, open source, and built for the community. Pick an embed type, configure it, and grab the code.",
                 hero_desc
             )
 
-        # Embed generator section
+        # Section titles (h2 headings)
         for key, eng_text in [
-            ("embed.generator_title", "Embed code generator"),
+            ("embed.cfg_step1_title", "Pick an embed type"),
+            ("embed.cfg_step2_title", "Configure your embed"),
+            ("embed.cfg_step3_title", "Preview &amp; grab the code"),
             ("embed.direct_links_title", "Direct links"),
             ("embed.publishers_title", "For newsrooms &amp; publishers"),
             ("embed.branding_title", "Co-branding &amp; customization"),
@@ -818,54 +829,115 @@ def replace_page_specific_content(html, translations, page_key):
                 escaped = translated.replace("&", "&amp;")
                 html = html.replace(f">{eng_text}<", f">{escaped}<")
 
-        # Generator intro
-        gen_intro = get_translation(translations, "embed.generator_intro")
-        if gen_intro:
-            html = html.replace(
-                "Copy and paste an iframe embed code to put any Reroute NJ tool on your website. The tool is fully interactive and responsive inside the iframe.",
-                gen_intro
-            )
-
-        # Generator form labels
+        # Configurator type cards
         for key, eng_text in [
-            ("embed.which_tool", "Which tool?"),
-            ("embed.width_label", "Width"),
-            ("embed.height_label", "Height"),
+            ("embed.cfg_type_card", "Info card"),
+            ("embed.cfg_type_widget", "Interactive widget"),
+            ("embed.cfg_type_tool", "Full tool"),
+        ]:
+            translated = get_translation(translations, key)
+            if translated:
+                html = html.replace(
+                    f'<strong class="cfg-type-name">{eng_text}</strong>',
+                    f'<strong class="cfg-type-name">{translated}</strong>'
+                )
+        for key, eng_text in [
+            ("embed.cfg_type_card_desc", "A compact card with key facts about a line or station. Great for newsletters, social media, and article sidebars."),
+            ("embed.cfg_type_widget_desc", "A mini version of our tools your readers can use inline. Works in any CMS that supports HTML blocks."),
+            ("embed.cfg_type_tool_desc", "The complete tool experience, embedded on your page. All features, fully interactive."),
+        ]:
+            translated = get_translation(translations, key)
+            if translated:
+                html = html.replace(
+                    f'<span class="cfg-type-desc">{eng_text}</span>',
+                    f'<span class="cfg-type-desc">{translated}</span>'
+                )
+
+        # Step 2: Configure form labels
+        for key, eng_text in [
+            ("embed.cfg_card_type_label", "Card type"),
+            ("embed.cfg_tool_label", "Tool"),
+            ("embed.cfg_line_label", "Line"),
+            ("embed.cfg_station_label", "Station"),
+            ("embed.cfg_theme_label", "Theme"),
+            ("embed.cfg_accent_label", "Accent color"),
         ]:
             translated = get_translation(translations, key)
             if translated:
                 html = html.replace(f">{eng_text}</label>", f">{translated}</label>")
 
-        # Generator select options
+        # Step 2: Select options
         for key, eng_text in [
-            ("embed.tool_line_guide", "Line guide"),
-            ("embed.tool_compare", "Commute comparison"),
-            ("embed.tool_coverage", "News coverage"),
-            ("embed.tool_map", "Interactive map"),
+            ("embed.cfg_card_type_line", "Line overview"),
+            ("embed.cfg_card_type_station", "Station info"),
+            ("embed.cfg_card_type_summary", "Cutover summary"),
+            ("embed.cfg_tool_line_guide", "Line guide"),
+            ("embed.cfg_tool_compare", "Commute comparison"),
+            ("embed.cfg_tool_coverage", "News coverage"),
+            ("embed.cfg_tool_map", "Interactive map"),
+            ("embed.cfg_theme_light", "Light"),
+            ("embed.cfg_theme_dark", "Dark"),
         ]:
             translated = get_translation(translations, key)
             if translated:
                 html = html.replace(f">{eng_text}</option>", f">{translated}</option>")
 
-        full_width = get_translation(translations, "embed.full_width")
-        if full_width:
-            html = html.replace(">Full width (100%)</option>", f">{full_width}</option>")
+        # Select placeholders with HTML entities
+        line_ph = get_translation(translations, "embed.cfg_line_placeholder")
+        if line_ph:
+            html = html.replace('Select a line&hellip;', line_ph)
+        station_ph = get_translation(translations, "embed.cfg_station_placeholder")
+        if station_ph:
+            html = html.replace('Select a station&hellip;', station_ph)
 
-        # Embed code output
-        embed_code_label = get_translation(translations, "embed.your_embed_code")
-        if embed_code_label:
+        # Step 3: Preview and output
+        preview_label = get_translation(translations, "embed.cfg_preview_label")
+        if preview_label:
             html = html.replace(
-                '>Your embed code</label>',
-                f'>{embed_code_label}</label>'
+                '<div class="cfg-preview-label">Live preview</div>',
+                f'<div class="cfg-preview-label">{preview_label}</div>'
             )
-        copy_btn = get_translation(translations, "embed.copy_btn")
+
+        # Output tabs
+        for key, eng_text in [
+            ("embed.cfg_tab_iframe", "Iframe"),
+            ("embed.cfg_tab_script", "Script tag"),
+            ("embed.cfg_tab_png", "Download PNG"),
+            ("embed.cfg_tab_html", "Download HTML"),
+        ]:
+            translated = get_translation(translations, key)
+            if translated:
+                html = html.replace(f">{eng_text}</button>", f">{translated}</button>")
+
+        # Copy/download buttons and messages
+        copy_btn = get_translation(translations, "embed.cfg_copy_btn")
         if copy_btn:
-            html = html.replace('>Copy embed code</button>', f'>{copy_btn}</button>')
-        copied = get_translation(translations, "embed.copied")
+            html = html.replace('>Copy code</button>', f'>{copy_btn}</button>')
+        copied = get_translation(translations, "embed.cfg_copied")
         if copied:
             html = html.replace('>Copied!</span>', f'>{copied}</span>')
 
-        # Direct links intro
+        png_msg = get_translation(translations, "embed.cfg_png_msg")
+        if png_msg:
+            html = html.replace(
+                "Click the button below to export the info card as a PNG image.",
+                png_msg
+            )
+        dl_png = get_translation(translations, "embed.cfg_download_png")
+        if dl_png:
+            html = html.replace('>Download PNG</button>', f'>{dl_png}</button>')
+
+        html_msg = get_translation(translations, "embed.cfg_html_msg")
+        if html_msg:
+            html = html.replace(
+                "Click the button below to download a self-contained HTML file of the info card.",
+                html_msg
+            )
+        dl_html = get_translation(translations, "embed.cfg_download_html")
+        if dl_html:
+            html = html.replace('>Download HTML</button>', f'>{dl_html}</button>')
+
+        # Section intro texts
         dl_intro = get_translation(translations, "embed.direct_links_intro")
         if dl_intro:
             html = html.replace(
@@ -873,7 +945,7 @@ def replace_page_specific_content(html, translations, page_key):
                 dl_intro
             )
 
-        # Direct link labels (these are in <strong> tags within resource-link divs)
+        # Direct link labels in <strong> within resource-link divs
         for key, eng_text in [
             ("embed.link_line_guide", "Line guide"),
             ("embed.link_compare", "Commute comparison"),
@@ -882,23 +954,16 @@ def replace_page_specific_content(html, translations, page_key):
         ]:
             translated = get_translation(translations, key)
             if translated:
-                # These are in the direct-links section, wrapped in <strong>
-                # Since "Line guide" etc. also appear in select options and nav,
-                # target the <strong> wrapper specifically
                 html = html.replace(
-                    f'<strong>{eng_text}</strong>\n          <span id="link-',
-                    f'<strong>{translated}</strong>\n          <span id="link-'
+                    f'<strong>{eng_text}</strong>\n          <span class="embed-url">',
+                    f'<strong>{translated}</strong>\n          <span class="embed-url">'
                 )
 
-        # Publishers intro
+        # Publishers section
         pub_intro = get_translation(translations, "embed.publishers_intro")
         if pub_intro:
             html = html.replace(
-                "Reroute NJ is designed to be used by journalists, newsrooms, and community publishers. Here&#x27;s how you can use it.",
-                pub_intro
-            )
-            html = html.replace(
-                "Reroute NJ is designed to be used by journalists, newsrooms, and community publishers. Here's how you can use it.",
+                "Reroute NJ is designed for journalists, newsrooms, and community publishers.",
                 pub_intro
             )
 
@@ -914,25 +979,25 @@ def replace_page_specific_content(html, translations, page_key):
 
         # Publisher card items
         pub_items = {
-            "embed.pub_embed_item1": "Use the embed code generator above to get an iframe snippet.",
-            "embed.pub_embed_item2": 'Paste it into your CMS (WordPress, Ghost, Squarespace, etc.) — most support raw HTML blocks.',
-            "embed.pub_embed_item3": "The embed is responsive and works on mobile.",
-            "embed.pub_embed_item4": "No API key or account needed. It just works.",
+            "embed.pub_embed_item1": "Use the configurator above to generate embed code for any format.",
+            "embed.pub_embed_item2": 'Paste into your CMS (WordPress, Ghost, Squarespace, etc.) &mdash; most support raw HTML blocks.',
+            "embed.pub_embed_item3": "The embeds are responsive and work on mobile.",
+            "embed.pub_embed_item4": "No API key or account needed.",
             "embed.pub_link_item1": 'Add a "Plan your commute" link box to your Portal Bridge stories.',
             "embed.pub_link_item2": "Link to specific tools based on what the article covers.",
-            "embed.pub_link_item3": "We have OG images and social cards already set up for clean social media previews.",
+            "embed.pub_link_item3": "OG images and social cards are already set up for clean previews.",
             "embed.pub_link_item4": 'Suggested anchor text: "Use the free Reroute NJ tool to plan your commute."',
             "embed.pub_contribute_item1": 'We curate Portal Bridge coverage on our <a href="coverage.html">news coverage page</a>.',
-            "embed.pub_contribute_item2": 'To suggest an article, <a href="https://github.com/jamditis/reroute-nj/issues/new?template=article-suggestion.md" target="_blank" rel="noopener">open a GitHub issue</a> with the URL and details.',
-            "embed.pub_contribute_item3": 'Or email <strong><a href="mailto:amditisj@montclair.edu">amditisj@montclair.edu</a></strong> with "Reroute NJ coverage" in the subject line.',
-            "embed.pub_contribute_item4": "We include all relevant coverage — opinion, analysis, community reporting, and more.",
+            "embed.pub_contribute_item2": 'To suggest an article, <a href="https://github.com/jamditis/reroute-nj/issues/new?template=article-suggestion.md" target="_blank" rel="noopener">open a GitHub issue</a>.',
+            "embed.pub_contribute_item3": 'Or email <strong><a href="mailto:amditisj@montclair.edu">amditisj@montclair.edu</a></strong> with "Reroute NJ coverage" in the subject.',
+            "embed.pub_contribute_item4": "We include all relevant coverage &mdash; opinion, analysis, community reporting, and more.",
         }
         for key, eng_text in pub_items.items():
             translated = get_translation(translations, key)
             if translated:
                 html = html.replace(f"<li>{eng_text}</li>", f"<li>{translated}</li>")
 
-        # Co-branding intro
+        # Co-branding section
         brand_intro = get_translation(translations, "embed.branding_intro")
         if brand_intro:
             html = html.replace(
@@ -944,36 +1009,19 @@ def replace_page_specific_content(html, translations, page_key):
                 brand_intro
             )
 
-        # Fork/embed option headings
+        # Fork section heading
         fork_title = get_translation(translations, "embed.fork_title")
         if fork_title:
-            html = html.replace("<h3>Option 1: Fork the project</h3>", f"<h3>{fork_title}</h3>")
-        embed_opt_title = get_translation(translations, "embed.embed_option_title")
-        if embed_opt_title:
-            html = html.replace("<h3>Option 2: Embed with your own intro</h3>", f"<h3>{embed_opt_title}</h3>")
+            html = html.replace("<h3>Fork the project</h3>", f"<h3>{fork_title}</h3>")
 
         # Fork steps
         fork_steps = {
             "embed.fork_step1": 'Fork the <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">GitHub repository</a> to your organization\'s account.',
             "embed.fork_step2": 'Edit <code>css/styles.css</code> to change colors, fonts, and branding. All theme values are CSS custom properties in the <code>:root</code> block.',
-            "embed.fork_step3": 'Replace the brand name, logo, and footer credit with your own. Add your newsroom\'s header/nav if you want.',
-            "embed.fork_step4": 'Deploy to GitHub Pages, Netlify, Vercel, or your own server. No build step required — it\'s just static HTML.',
+            "embed.fork_step3": 'Replace the brand name, logo, and footer credit with your own.',
+            "embed.fork_step4": 'Deploy to GitHub Pages, Netlify, Vercel, or your own server. No build step required.',
         }
         for key, eng_text in fork_steps.items():
-            translated = get_translation(translations, key)
-            if translated:
-                html = html.replace(f"<p>{eng_text}</p>", f"<p>{translated}</p>")
-                # Also handle HTML entity versions of apostrophes
-                eng_entity = eng_text.replace("'", "&#x27;")
-                html = html.replace(f"<p>{eng_entity}</p>", f"<p>{translated}</p>")
-
-        # Embed option steps
-        embed_steps = {
-            "embed.embed_option_step1": "Embed the tool using the iframe code above.",
-            "embed.embed_option_step2": "Add your own header, intro text, and branding around the iframe.",
-            "embed.embed_option_step3": "Style the surrounding page to match your publication's design.",
-        }
-        for key, eng_text in embed_steps.items():
             translated = get_translation(translations, key)
             if translated:
                 html = html.replace(f"<p>{eng_text}</p>", f"<p>{translated}</p>")
@@ -984,11 +1032,11 @@ def replace_page_specific_content(html, translations, page_key):
         contribute_intro = get_translation(translations, "embed.contribute_intro")
         if contribute_intro:
             html = html.replace(
-                "Reroute NJ is a community project. Here's how you can help, regardless of your technical skill level.",
+                "Reroute NJ is a community project. Here's how you can help.",
                 contribute_intro
             )
             html = html.replace(
-                "Reroute NJ is a community project. Here&#x27;s how you can help, regardless of your technical skill level.",
+                "Reroute NJ is a community project. Here&#x27;s how you can help.",
                 contribute_intro
             )
 
@@ -1007,7 +1055,6 @@ def replace_page_specific_content(html, translations, page_key):
             "embed.nontechnical_item1": '<strong>Submit article suggestions:</strong> Know of a Portal Bridge article we missed? <a href="https://github.com/jamditis/reroute-nj/issues/new?template=article-suggestion.md" target="_blank" rel="noopener">Open an issue</a> or email joe@amditis.com.',
             "embed.nontechnical_item2": '<strong>Report inaccuracies:</strong> If schedule data or transfer times are wrong, let us know.',
             "embed.nontechnical_item3": '<strong>Share the tool:</strong> Tell your commuter friends, share on social media, post in your neighborhood group.',
-            "embed.nontechnical_item4": '<strong>Translate:</strong> Help us translate the tool into Spanish or other languages spoken by NJ Transit riders.',
             "embed.technical_item1": '<strong>File bugs:</strong> Found a bug? <a href="https://github.com/jamditis/reroute-nj/issues" target="_blank" rel="noopener">Open an issue on GitHub</a>.',
             "embed.technical_item2": '<strong>Submit a pull request:</strong> The codebase is vanilla HTML/CSS/JS with no build step. Fork, change, PR.',
             "embed.technical_item3": '<strong>Add data:</strong> Help us keep <code>data/coverage.json</code> up to date with new articles.',
