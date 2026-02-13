@@ -30,27 +30,13 @@
   <link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/embed.html">
   <link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/embed.html">
   <link rel="alternate" hreflang="x-default" href="https://reroutenj.org/embed.html">
-  <link rel="alternate" hreflang="en" href="https://reroutenj.org/embed.html">
-  <link rel="alternate" hreflang="es" href="https://reroutenj.org/es/embed.html">
-  <link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/embed.html">
-  <link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/embed.html">
-  <link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/embed.html">
-  <link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/embed.html">
-  <link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/embed.html">
-  <link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/embed.html">
-  <link rel="alternate" hreflang="it" href="https://reroutenj.org/it/embed.html">
-  <link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/embed.html">
-  <link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/embed.html">
-  <link rel="alternate" hreflang="x-default" href="https://reroutenj.org/embed.html">
 </head>
 <body>
   <a href="#main-content" class="skip-link">Przejdź do głównej treści</a>
 
-  <a href="#main-content" class="skip-link">Przejdź do głównej treści</a>
-
   <header class="header" role="banner">
     <div class="header-inner">
-      <a href="../index.html" class="brand-link"><div class="brand">Reroute<span>NJ</span></div></a>
+      <a href="index.html" class="brand-link"><div class="brand">Reroute<span>NJ</span></div></a>
       <p class="tagline">Osadź, udostępnij i opublikuj ponownie</p>
       <div class="a11y-toggles">
         <button class="a11y-btn" id="toggle-contrast" type="button" aria-pressed="false" aria-label="Toggle high contrast">Wysoki kontrast</button>
@@ -76,16 +62,16 @@
   </header>
 
   <nav class="tool-nav" aria-label="Site tools">
-    <span class="hamburger-label">Embed &amp; share</span>
+    <span class="hamburger-label">Osadź i udostępnij</span>
     <button class="hamburger-btn" aria-expanded="false" aria-label="Toggle navigation menu">
       <span></span>
     </button>
     <div class="container">
-      <a href="../index.html" class="tool-nav-link">Przewodnik po liniach</a>
-      <a href="../compare.html" class="tool-nav-link">Porównanie dojazdów</a>
-      <a href="../coverage.html" class="tool-nav-link">Wiadomości</a>
-      <a href="../map.html" class="tool-nav-link">Mapa</a>
-      <a href="../embed.html" class="tool-nav-link active" aria-current="page">Embed &amp; share</a>
+      <a href="index.html" class="tool-nav-link">Przewodnik po liniach</a>
+      <a href="compare.html" class="tool-nav-link">Porównanie dojazdów</a>
+      <a href="coverage.html" class="tool-nav-link">Wiadomości</a>
+      <a href="map.html" class="tool-nav-link">Mapa</a>
+      <a href="embed.html" class="tool-nav-link active" aria-current="page">Osadź i udostępnij</a>
     </div>
   </nav>
 
@@ -98,29 +84,29 @@
 
     <!-- Embed code generator -->
     <section class="info-section" id="embed-generator" style="margin-top: 1rem; border-top: none;">
-      <h2>Embed code generator</h2>
-      <p class="section-intro">Copy and paste an iframe embed code to put any Reroute NJ tool on your website. The tool is fully interactive and responsive inside the iframe.</p>
+      <h2>Generator kodu do osadzenia</h2>
+      <p class="section-intro">Skopiuj i wklej kod iframe, aby umieścić dowolne narzędzie Reroute NJ na swojej stronie. Narzędzie jest w pełni interaktywne i responsywne wewnątrz iframe.</p>
 
       <div class="embed-options">
         <div class="filter-group">
-          <label for="embed-tool">Which tool?</label>
+          <label for="embed-tool">Które narzędzie?</label>
           <select id="embed-tool">
-            <option value="index.html">Line guide</option>
-            <option value="compare.html">Commute comparison</option>
-            <option value="coverage.html">News coverage</option>
-            <option value="map.html">Interactive map</option>
+            <option value="index.html">Przewodnik po liniach</option>
+            <option value="compare.html">Porównanie dojazdów</option>
+            <option value="coverage.html">Wiadomości</option>
+            <option value="map.html">Mapa interaktywna</option>
           </select>
         </div>
         <div class="filter-group">
-          <label for="embed-width">Width</label>
+          <label for="embed-width">Szerokość</label>
           <select id="embed-width">
-            <option value="100%">Full width (100%)</option>
+            <option value="100%">Pełna szerokość (100%)</option>
             <option value="600px">600px</option>
             <option value="800px">800px</option>
           </select>
         </div>
         <div class="filter-group">
-          <label for="embed-height">Height</label>
+          <label for="embed-height">Wysokość</label>
           <select id="embed-height">
             <option value="700px">700px</option>
             <option value="500px">500px</option>
@@ -130,33 +116,33 @@
       </div>
 
       <div class="embed-preview">
-        <label class="embed-code-label">Your embed code</label>
+        <label class="embed-code-label">Twój kod do osadzenia</label>
         <div class="embed-code-box" id="embed-code-box"></div>
-        <button class="share-btn" id="copy-embed-btn" style="margin-top: 0.75rem;">Copy embed code</button>
-        <span class="share-confirm hidden" id="copy-embed-confirm">Copied!</span>
+        <button class="share-btn" id="copy-embed-btn" style="margin-top: 0.75rem;">Kopiuj kod do osadzenia</button>
+        <span class="share-confirm hidden" id="copy-embed-confirm">Skopiowano!</span>
       </div>
     </section>
 
     <!-- Direct link sharing -->
     <section class="info-section" id="direct-links">
-      <h2>Direct links</h2>
-      <p class="section-intro">Link directly to any tool. These URLs are permanent and shareable.</p>
+      <h2>Bezpośrednie linki</h2>
+      <p class="section-intro">Linkuj bezpośrednio do dowolnego narzędzia. Te adresy URL są stałe i można je udostępniać.</p>
 
       <div class="resources-grid">
         <div class="resource-link">
-          <strong>Line guide</strong>
+          <strong>Przewodnik po liniach</strong>
           <span id="link-guide" class="embed-url">https://reroutenj.org/</span>
         </div>
         <div class="resource-link">
-          <strong>Commute comparison</strong>
+          <strong>Porównanie dojazdów</strong>
           <span id="link-compare" class="embed-url">https://reroutenj.org/compare.html</span>
         </div>
         <div class="resource-link">
-          <strong>News coverage</strong>
+          <strong>Wiadomości</strong>
           <span id="link-coverage" class="embed-url">https://reroutenj.org/coverage.html</span>
         </div>
         <div class="resource-link">
-          <strong>Interactive map</strong>
+          <strong>Mapa interaktywna</strong>
           <span id="link-map" class="embed-url">https://reroutenj.org/map.html</span>
         </div>
       </div>
@@ -164,35 +150,35 @@
 
     <!-- For publishers -->
     <section class="info-section" id="for-publishers">
-      <h2>For newsrooms &amp; publishers</h2>
-      <p class="section-intro">Reroute NJ is designed to be used by journalists, newsrooms, and community publishers. Here's how you can use it.</p>
+      <h2>Dla redakcji i wydawców</h2>
+      <p class="section-intro">Reroute NJ jest przeznaczone do użytku przez dziennikarzy, redakcje i wydawców społecznościowych. Oto jak możesz z niego korzystać.</p>
 
       <div class="secaucus-grid">
         <div class="secaucus-card">
-          <h4>Embed in your articles</h4>
+          <h4>Osadź w swoich artykułach</h4>
           <ul>
-            <li>Use the embed code generator above to get an iframe snippet.</li>
-            <li>Paste it into your CMS (WordPress, Ghost, Squarespace, etc.) — most support raw HTML blocks.</li>
-            <li>The embed is responsive and works on mobile.</li>
-            <li>No API key or account needed. It just works.</li>
+            <li>Użyj generatora kodu powyżej, aby uzyskać fragment iframe.</li>
+            <li>Wklej go do swojego CMS (WordPress, Ghost, Squarespace itp.) — większość obsługuje bloki surowego HTML.</li>
+            <li>Osadzony element jest responsywny i działa na urządzeniach mobilnych.</li>
+            <li>Nie potrzeba klucza API ani konta. Po prostu działa.</li>
           </ul>
         </div>
         <div class="secaucus-card">
-          <h4>Link from your coverage</h4>
+          <h4>Linkuj ze swoich artykułów</h4>
           <ul>
-            <li>Add a "Plan your commute" link box to your Portal Bridge stories.</li>
-            <li>Link to specific tools based on what the article covers.</li>
-            <li>We have OG images and social cards already set up for clean social media previews.</li>
-            <li>Suggested anchor text: "Use the free Reroute NJ tool to plan your commute."</li>
+            <li>Dodaj pole z linkiem „Zaplanuj dojazd” do swoich artykułów o Portal Bridge.</li>
+            <li>Linkuj do konkretnych narzędzi w zależności od tematu artykułu.</li>
+            <li>Mamy już przygotowane obrazy OG i karty społecznościowe dla czytelnych podglądów w mediach społecznościowych.</li>
+            <li>Sugerowany tekst linku: „Użyj darmowego narzędzia Reroute NJ, aby zaplanować dojazd.”</li>
           </ul>
         </div>
         <div class="secaucus-card">
-          <h4>Contribute coverage</h4>
+          <h4>Zgłoś artykuł</h4>
           <ul>
-            <li>We curate Portal Bridge coverage on our <a href="../coverage.html">news coverage page</a>.</li>
-            <li>To suggest an article, <a href="https://github.com/jamditis/reroute-nj/issues/new?template=article-suggestion.md" target="_blank" rel="noopener">open a GitHub issue</a> with the URL and details.</li>
-            <li>Or email <strong><a href="mailto:amditisj@montclair.edu">amditisj@montclair.edu</a></strong> with "Reroute NJ coverage" in the subject line.</li>
-            <li>We include all relevant coverage — opinion, analysis, community reporting, and more.</li>
+            <li>Zbieramy artykuły o Portal Bridge na naszej <a href="coverage.html">stronie z wiadomościami</a>.</li>
+            <li>Aby zasugerować artykuł, <a href="https://github.com/jamditis/reroute-nj/issues/new?template=article-suggestion.md" target="_blank" rel="noopener">otwórz zgłoszenie na GitHubie</a> z adresem URL i szczegółami.</li>
+            <li>Lub napisz na <strong><a href="mailto:amditisj@montclair.edu">amditisj@montclair.edu</a></strong> z tematem „Reroute NJ coverage”.</li>
+            <li>Zamieszczamy wszystkie istotne artykuły — opinie, analizy, materiały społecznościowe i więcej.</li>
           </ul>
         </div>
       </div>
@@ -200,46 +186,46 @@
 
     <!-- Custom branding -->
     <section class="info-section" id="custom-branding">
-      <h2>Co-branding &amp; customization</h2>
-      <p class="section-intro">Want to run Reroute NJ with your own branding? Since it's open source, you can.</p>
+      <h2>Współbranding i personalizacja</h2>
+      <p class="section-intro">Chcesz uruchomić Reroute NJ z własną marką? Skoro jest open source, możesz to zrobić.</p>
 
       <div class="ticket-scenarios">
         <div class="scenario-card">
-          <h3>Option 1: Fork the project</h3>
+          <h3>Opcja 1: Sforkuj projekt</h3>
           <div class="scenario-body">
             <div class="step">
               <span class="step-num">1</span>
-              <div><p>Fork the <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">GitHub repository</a> to your organization's account.</p></div>
+              <div><p>Sforkuj <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">repozytorium GitHub</a> na konto swojej organizacji.</p></div>
             </div>
             <div class="step">
               <span class="step-num">2</span>
-              <div><p>Edit <code>css/styles.css</code> to change colors, fonts, and branding. All theme values are CSS custom properties in the <code>:root</code> block.</p></div>
+              <div><p>Edytuj <code>css/styles.css</code>, aby zmienić kolory, czcionki i branding. Wszystkie wartości motywu to właściwości CSS w bloku <code>:root</code>.</p></div>
             </div>
             <div class="step">
               <span class="step-num">3</span>
-              <div><p>Replace the brand name, logo, and footer credit with your own. Add your newsroom's header/nav if you want.</p></div>
+              <div><p>Zamień nazwę marki, logo i stopkę na własne. Możesz dodać nagłówek/nawigację swojej redakcji.</p></div>
             </div>
             <div class="step">
               <span class="step-num">4</span>
-              <div><p>Deploy to GitHub Pages, Netlify, Vercel, or your own server. No build step required — it's just static HTML.</p></div>
+              <div><p>Wdróż na GitHub Pages, Netlify, Vercel lub własny serwer. Nie wymaga kroku budowania — to zwykły statyczny HTML.</p></div>
             </div>
           </div>
         </div>
 
         <div class="scenario-card">
-          <h3>Option 2: Embed with your own intro</h3>
+          <h3>Opcja 2: Osadź z własnym wstępem</h3>
           <div class="scenario-body">
             <div class="step">
               <span class="step-num">1</span>
-              <div><p>Embed the tool using the iframe code above.</p></div>
+              <div><p>Osadź narzędzie przy użyciu kodu iframe powyżej.</p></div>
             </div>
             <div class="step">
               <span class="step-num">2</span>
-              <div><p>Add your own header, intro text, and branding around the iframe.</p></div>
+              <div><p>Dodaj własny nagłówek, tekst wstępny i branding wokół iframe.</p></div>
             </div>
             <div class="step">
               <span class="step-num">3</span>
-              <div><p>Style the surrounding page to match your publication's design.</p></div>
+              <div><p>Ostyluj otaczającą stronę tak, aby pasowała do wyglądu Twojej publikacji.</p></div>
             </div>
           </div>
         </div>
@@ -248,35 +234,35 @@
 
     <!-- How to contribute -->
     <section class="info-section" id="contribute">
-      <h2>How to contribute</h2>
-      <p class="section-intro">Reroute NJ is a community project. Here's how you can help, regardless of your technical skill level.</p>
+      <h2>Jak pomóc</h2>
+      <p class="section-intro">Reroute NJ to projekt społecznościowy. Oto jak możesz pomóc, niezależnie od poziomu technicznego.</p>
 
       <div class="secaucus-grid">
         <div class="secaucus-card">
-          <h4>Non-technical contributions</h4>
+          <h4>Wkład nietechniczny</h4>
           <ul>
-            <li><strong>Submit article suggestions:</strong> Know of a Portal Bridge article we missed? <a href="https://github.com/jamditis/reroute-nj/issues/new?template=article-suggestion.md" target="_blank" rel="noopener">Open an issue</a> or email joe@amditis.com.</li>
-            <li><strong>Report inaccuracies:</strong> If schedule data or transfer times are wrong, let us know.</li>
-            <li><strong>Share the tool:</strong> Tell your commuter friends, share on social media, post in your neighborhood group.</li>
-            <li><strong>Translate:</strong> Help us translate the tool into Spanish or other languages spoken by NJ Transit riders.</li>
+            <li><strong>Zasugeruj artykuł:</strong> Znasz artykuł o Portal Bridge, który przegapiliśmy? <a href="https://github.com/jamditis/reroute-nj/issues/new?template=article-suggestion.md" target="_blank" rel="noopener">Otwórz zgłoszenie</a> lub napisz na joe@amditis.com.</li>
+            <li><strong>Zgłoś nieścisłości:</strong> Jeśli dane rozkładowe lub czasy przesiadek są błędne, daj nam znać.</li>
+            <li><strong>Udostępnij narzędzie:</strong> Powiedz o nim znajomym dojeżdżającym do pracy, udostępnij w mediach społecznościowych, zamieść w grupie sąsiedzkiej.</li>
+            <li><strong>Tłumacz:</strong> Pomóż nam przetłumaczyć narzędzie na hiszpański lub inne języki używane przez pasażerów NJ Transit.</li>
           </ul>
         </div>
         <div class="secaucus-card">
-          <h4>Technical contributions</h4>
+          <h4>Wkład techniczny</h4>
           <ul>
-            <li><strong>File bugs:</strong> Found a bug? <a href="https://github.com/jamditis/reroute-nj/issues" target="_blank" rel="noopener">Open an issue on GitHub</a>.</li>
-            <li><strong>Submit a pull request:</strong> The codebase is vanilla HTML/CSS/JS with no build step. Fork, change, PR.</li>
-            <li><strong>Add data:</strong> Help us keep <code>data/coverage.json</code> up to date with new articles.</li>
-            <li><strong>Improve accessibility:</strong> Screen reader testing, WCAG compliance, keyboard navigation.</li>
+            <li><strong>Zgłoś błędy:</strong> Znalazłeś/aś błąd? <a href="https://github.com/jamditis/reroute-nj/issues" target="_blank" rel="noopener">Otwórz zgłoszenie na GitHubie</a>.</li>
+            <li><strong>Wyślij pull request:</strong> Kod to czysty HTML/CSS/JS bez kroku budowania. Sforkuj, zmień, wyślij PR.</li>
+            <li><strong>Dodaj dane:</strong> Pomóż nam aktualizować <code>data/coverage.json</code> o nowe artykuły.</li>
+            <li><strong>Popraw dostępność:</strong> Testy czytników ekranu, zgodność z WCAG, nawigacja klawiaturą.</li>
           </ul>
         </div>
         <div class="secaucus-card">
-          <h4>License</h4>
+          <h4>Licencja</h4>
           <ul>
-            <li>Reroute NJ is released under the <strong>MIT License</strong>.</li>
-            <li>You can use, copy, modify, and distribute it freely.</li>
-            <li>Attribution is appreciated but not required.</li>
-            <li>The project is maintained by <a href="https://github.com/jamditis" target="_blank" rel="noopener">Joe Amditis</a>.</li>
+            <li>Reroute NJ jest wydane na licencji <strong>MIT</strong>.</li>
+            <li>Możesz je używać, kopiować, modyfikować i rozpowszechniać bez ograniczeń.</li>
+            <li>Przypisanie autorstwa jest mile widziane, ale niewymagane.</li>
+            <li>Projekt jest prowadzony przez <a href="https://github.com/jamditis" target="_blank" rel="noopener">Joe Amditis</a>.</li>
           </ul>
         </div>
       </div>
@@ -291,7 +277,7 @@
     </div>
   </footer>
 
-  <script>window.BASE_PATH="../";window._T={"common":{"skip_to_main":"Przejdź do głównej treści","high_contrast":"Wysoki kontrast","simplified_view":"Widok uproszczony","nav_line_guide":"Przewodnik po liniach","nav_commute_comparison":"Porównanie dojazdów","nav_news_coverage":"Wiadomości","nav_map":"Mapa","nav_embed":"Osadź i udostępnij","footer_disclaimer":"jest niezależnym narzędziem społecznościowym. Nie jest powiązane ani wspierane przez NJ Transit, Amtrak ani żadną agencję rządową.","footer_disclaimer_index":"Informacje oparte są na oficjalnych ogłoszeniach i mogą ulec zmianie. Przed podróżą zawsze sprawdź na","footer_disclaimer_index_after":".","footer_disclaimer_coverage":"Linki do wiadomości prowadzą do oryginalnych źródeł. Przed podróżą zawsze sprawdź na","footer_disclaimer_coverage_after":".","footer_disclaimer_map":"Dane mapy &copy; współtwórcy","footer_disclaimer_map_tiles":"Kafelki &copy;","footer_disclaimer_embed":"Zobacz kod źródłowy na GitHub","footer_built_by":"Stworzone przez","cutover_begins_in":"Zmiana rozpocznie się za","days":"dni","day":"dzień","remaining_phase1":"pozostało w Fazie 1","phase1_complete":"Faza 1 zakończona","phase2_expected":"Faza 2 planowana"},"js":{"major_changes":"Główne zmiany","schedule_changes":"Zmiany rozkładu","before_normal":"Przed (normalna usługa)","during_cutover":"Podczas zmiany (dni robocze, 15 lut – 15 mar)","during_cutover_short":"Podczas zmiany (15 lut – 15 mar)","what_you_need_to_know":"Co musisz wiedzieć","weekends_different":"Weekendy są inne:","weekend_service_continues":"Usługa Midtown Direct do Penn Station NY jest kontynuowana w soboty i niedziele. Na weekendowe podróże kup normalne bilety Penn Station.","estimated_savings":"Szacowane oszczędności dla","zone":"strefa","monthly_pass_penn":"Miesięczny bilet Penn Station:","monthly_pass_hoboken":"Miesięczny bilet Hoboken:","you_save":"Oszczędzasz","per_month":"/mies.","cross_honored_free":"a PATH/prom z Hoboken jest akceptowany bez dodatkowych kosztów.","fare_disclaimer":"Ceny są szacunkowe. Sprawdź na njtransit.com przed zakupem.","how_get_manhattan":"Jak dojechać na Manhattan?","how_get_home":"Jak wrócić z Manhattanu?","planning_commute":"Planowanie dojazdu","getting_home":"Powrót wieczorem","getting_past_newark":"Przejazd przez Newark Penn","getting_home_manhattan":"Powrót z Manhattanu","what_ticket":"Jaki bilet powinienem kupić?","recommended":"Najlepszy dla większości","scenic_less_crowded":"Widokowy i mniej zatłoczony","port_authority_area":"Najlepszy dla rejonu Port Authority","other_options":"Inne opcje","pro_tip":"Wskazówka:","monthly_pass_holders":"Posiadacze biletu miesięcznego","one_way_buyers":"Kupujący bilet jednorazowy","weekend_riders":"Podróżujący w weekendy","occasional_riders":"Okazjonalni podróżni / niepewni","no_change":"Bez zmian","cross_honored":"Akceptowany","transfer":"Przesiadka","walk_subway":"Pieszo/metro","arrive":"Przyjazd","choose_station":"Wybierz swoją stację…"},"compare":{"title":"Porównaj opcje dojazdu — Reroute NJ","tagline":"Porównaj swoje opcje dojazdu","hero_title":"Jak zmienia się Twój dojazd?","hero_desc":"Wybierz swoją stację i cel na Manhattanie. Pokażemy każdą opcję z wizualną analizą czasu.","step1":"Twoja linia","step2":"Twoja stacja","step3":"Gdzie na Manhattanie?","your_normal_commute":"Twój zwykły dojazd","min_total":"min łącznie","vs_normal":"vs zwykły","fastest":"Najszybszy","copy_summary":"Kopiuj podsumowanie","copied":"Skopiowano!"},"coverage":{"title":"Wiadomości — Reroute NJ","tagline":"Portal Bridge w wiadomościach","hero_title":"Portal Bridge w wiadomościach","hero_desc":"Wybrane artykuły o zmianie ze źródeł lokalnych i regionalnych.","last_updated":"Ostatnia aktualizacja:","all_sources":"Wszystkie źródła","all_categories":"Wszystkie kategorie","all_lines":"Wszystkie linie","all_directions":"Wszystkie kierunki","search_placeholder":"Szukaj artykułów…","no_articles":"Brak artykułów pasujących do Twoich filtrów.","source_label":"Źródło","category_label":"Kategoria","line_label":"Linia","direction_label":"Kierunek","search_label":"Szukaj"}};</script>
+  <script>window.BASE_PATH="../";window._T={"common":{"skip_to_main":"Przejdź do głównej treści","high_contrast":"Wysoki kontrast","simplified_view":"Widok uproszczony","nav_line_guide":"Przewodnik po liniach","nav_commute_comparison":"Porównanie dojazdów","nav_news_coverage":"Wiadomości","nav_map":"Mapa","nav_embed":"Osadź i udostępnij","footer_disclaimer":"jest niezależnym narzędziem społecznościowym. Nie jest powiązane ani wspierane przez NJ Transit, Amtrak ani żadną agencję rządową.","footer_disclaimer_index":"Informacje oparte są na oficjalnych ogłoszeniach i mogą ulec zmianie. Przed podróżą zawsze sprawdź na","footer_disclaimer_index_after":".","footer_disclaimer_coverage":"Linki do wiadomości prowadzą do oryginalnych źródeł. Przed podróżą zawsze sprawdź na","footer_disclaimer_coverage_after":".","footer_disclaimer_map":"Dane mapy &copy; współtwórcy","footer_disclaimer_map_tiles":"Kafelki &copy;","footer_disclaimer_embed":"Zobacz kod źródłowy na GitHub","footer_built_by":"Stworzone przez","cutover_begins_in":"Zmiana rozpocznie się za","days":"dni","day":"dzień","remaining_phase1":"pozostało w Fazie 1","phase1_complete":"Faza 1 zakończona","phase2_expected":"Faza 2 planowana"},"js":{"major_changes":"Główne zmiany","schedule_changes":"Zmiany rozkładu","before_normal":"Przed (normalna usługa)","during_cutover":"Podczas zmiany (dni robocze, 15 lut – 15 mar)","during_cutover_short":"Podczas zmiany (15 lut – 15 mar)","what_you_need_to_know":"Co musisz wiedzieć","weekends_different":"Weekendy są inne:","weekend_service_continues":"Usługa Midtown Direct do Penn Station NY jest kontynuowana w soboty i niedziele. Na weekendowe podróże kup normalne bilety Penn Station.","estimated_savings":"Szacowane oszczędności dla","zone":"strefa","monthly_pass_penn":"Miesięczny bilet Penn Station:","monthly_pass_hoboken":"Miesięczny bilet Hoboken:","you_save":"Oszczędzasz","per_month":"/mies.","cross_honored_free":"a PATH/prom z Hoboken jest akceptowany bez dodatkowych kosztów.","fare_disclaimer":"Ceny są szacunkowe. Sprawdź na njtransit.com przed zakupem.","how_get_manhattan":"Jak dojechać na Manhattan?","how_get_home":"Jak wrócić z Manhattanu?","planning_commute":"Planowanie dojazdu","getting_home":"Powrót wieczorem","getting_past_newark":"Przejazd przez Newark Penn","getting_home_manhattan":"Powrót z Manhattanu","what_ticket":"Jaki bilet powinienem kupić?","recommended":"Najlepszy dla większości","scenic_less_crowded":"Widokowy i mniej zatłoczony","port_authority_area":"Najlepszy dla rejonu Port Authority","other_options":"Inne opcje","pro_tip":"Wskazówka:","monthly_pass_holders":"Posiadacze biletu miesięcznego","one_way_buyers":"Kupujący bilet jednorazowy","weekend_riders":"Podróżujący w weekendy","occasional_riders":"Okazjonalni podróżni / niepewni","no_change":"Bez zmian","cross_honored":"Akceptowany","transfer":"Przesiadka","walk_subway":"Pieszo/metro","arrive":"Przyjazd","choose_station":"Wybierz swoją stację…"},"compare":{"title":"Porównaj opcje dojazdu — Reroute NJ","tagline":"Porównaj swoje opcje dojazdu","hero_title":"Jak zmienia się Twój dojazd?","hero_desc":"Wybierz swoją stację i cel na Manhattanie. Pokażemy każdą opcję z wizualną analizą czasu.","step1":"Twoja linia","step2":"Twoja stacja","step3":"Gdzie na Manhattanie?","your_normal_commute":"Twój zwykły dojazd","min_total":"min łącznie","vs_normal":"vs zwykły","fastest":"Najszybszy","copy_summary":"Kopiuj podsumowanie","copied":"Skopiowano!"},"coverage":{"title":"Wiadomości — Reroute NJ","tagline":"Portal Bridge w wiadomościach","hero_title":"Portal Bridge w wiadomościach","hero_desc":"Wybrane artykuły o zmianie ze źródeł lokalnych i regionalnych.","last_updated":"Ostatnia aktualizacja:","all_sources":"Wszystkie źródła","all_categories":"Wszystkie kategorie","all_lines":"Wszystkie linie","all_directions":"Wszystkie kierunki","search_placeholder":"Szukaj artykułów…","no_articles":"Brak artykułów pasujących do Twoich filtrów.","source_label":"Źródło","category_label":"Kategoria","line_label":"Linia","direction_label":"Kierunek","search_label":"Szukaj","cat_news":"Wiadomości","cat_opinion":"Opinia","cat_analysis":"Analiza","cat_official":"Oficjalne","cat_community":"Społeczność","dir_nj_nyc":"NJ do NYC","dir_nyc_nj":"NYC do NJ","dir_both":"Oba kierunki"}};</script>
   <script src="../js/i18n.js"></script>
   <script src="../js/shared.js"></script>
   <script src="../js/embed.js"></script>
