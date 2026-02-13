@@ -124,7 +124,9 @@
 <body>
   <a href="#main-content" class="skip-link">跳到主要内容</a>
 
-  <header class="header">
+  <a href="#main-content" class="skip-link">跳到主要内容</a>
+
+  <header class="header" role="banner">
     <div class="header-inner">
       <a href="../index.html" class="brand-link"><div class="brand">Reroute<span>NJ</span></div></a>
       <p class="tagline">互动转换地图</p>
@@ -152,12 +154,16 @@
     </div>
   </header>
 
-  <nav class="tool-nav">
+  <nav class="tool-nav" aria-label="Site tools">
+    <span class="hamburger-label">Map</span>
+    <button class="hamburger-btn" aria-expanded="false" aria-label="Toggle navigation menu">
+      <span></span>
+    </button>
     <div class="container">
       <a href="../index.html" class="tool-nav-link">线路指南</a>
       <a href="../compare.html" class="tool-nav-link">通勤比较</a>
       <a href="../coverage.html" class="tool-nav-link">新闻报道</a>
-      <a href="../map.html" class="tool-nav-link active">地图</a>
+      <a href="../map.html" class="tool-nav-link active" aria-current="page">Map</a>
       <a href="../embed.html" class="tool-nav-link">嵌入和分享</a>
     </div>
   </nav>
@@ -169,17 +175,17 @@
       <p>查看转换的地理信息：Portal Bridge位置、受影响车站、主要换乘枢纽和替代路线。</p>
     </section>
 
-    <div class="map-filter-bar" id="map-filters">
-      <button class="map-filter-btn active" data-filter="all">全部</button>
-      <button class="map-filter-btn" data-filter="montclair-boonton">Montclair-Boonton</button>
-      <button class="map-filter-btn" data-filter="morris-essex">Morris &amp; Essex</button>
-      <button class="map-filter-btn" data-filter="northeast-corridor">Northeast Corridor</button>
-      <button class="map-filter-btn" data-filter="north-jersey-coast">North Jersey Coast</button>
-      <button class="map-filter-btn" data-filter="raritan-valley">Raritan Valley</button>
-      <button class="map-filter-btn" data-filter="transfer-hubs">换乘枢纽</button>
+    <div class="map-filter-bar" id="map-filters" role="group" aria-label="Filter map by line">
+      <button class="map-filter-btn active" data-filter="all" aria-pressed="true">全部</button>
+      <button class="map-filter-btn" data-filter="montclair-boonton" aria-pressed="false">Montclair-Boonton</button>
+      <button class="map-filter-btn" data-filter="morris-essex" aria-pressed="false">Morris &amp; Essex</button>
+      <button class="map-filter-btn" data-filter="northeast-corridor" aria-pressed="false">Northeast Corridor</button>
+      <button class="map-filter-btn" data-filter="north-jersey-coast" aria-pressed="false">North Jersey Coast</button>
+      <button class="map-filter-btn" data-filter="raritan-valley" aria-pressed="false">Raritan Valley</button>
+      <button class="map-filter-btn" data-filter="transfer-hubs" aria-pressed="false">换乘枢纽</button>
     </div>
 
-    <div id="map"></div>
+    <div id="map" role="application" aria-label="Interactive map showing Portal Bridge cutover stations and routes"></div>
 
     <div class="map-legend">
       <div class="legend-title">图例</div>
@@ -232,7 +238,7 @@
 
   </main>
 
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="container">
       <p class="disclaimer"><strong>Reroute NJ</strong> 是一个独立的社区工具。与NJ Transit、Amtrak或任何政府机构无关，也未获其认可。 地图数据 &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>. 地图图块 &copy; <a href="https://carto.com/" target="_blank" rel="noopener">CARTO</a>.</p>
       <p class="credit">开发者 <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">Joe Amditis</a></p>

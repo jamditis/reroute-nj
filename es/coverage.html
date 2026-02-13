@@ -46,7 +46,7 @@
 <body>
   <a href="#main-content" class="skip-link">Ir al contenido principal</a>
 
-  <header class="header">
+  <header class="header" role="banner">
     <div class="header-inner">
       <a href="../index.html" class="brand-link"><div class="brand">Reroute<span>NJ</span></div></a>
       <p class="tagline">Portal Bridge en las noticias</p>
@@ -74,11 +74,15 @@
     </div>
   </header>
 
-  <nav class="tool-nav">
+  <nav class="tool-nav" aria-label="Site tools">
+    <span class="hamburger-label">News coverage</span>
+    <button class="hamburger-btn" aria-expanded="false" aria-label="Toggle navigation menu">
+      <span></span>
+    </button>
     <div class="container">
       <a href="../index.html" class="tool-nav-link">Guía de líneas</a>
       <a href="../compare.html" class="tool-nav-link">Comparar viajes</a>
-      <a href="../coverage.html" class="tool-nav-link active">Noticias</a>
+      <a href="../coverage.html" class="tool-nav-link active" aria-current="page">News coverage</a>
       <a href="../map.html" class="tool-nav-link">Mapa</a>
       <a href="../embed.html" class="tool-nav-link">Insertar y compartir</a>
     </div>
@@ -92,7 +96,7 @@
       <p class="coverage-updated" id="coverage-updated"></p>
     </section>
 
-    <section class="coverage-filters" id="coverage-filters">
+    <section class="coverage-filters" id="coverage-filters" role="search" aria-label="Filter news articles">
       <div class="filter-group">
         <label for="filter-source">Fuente</label>
         <select id="filter-source">
@@ -136,11 +140,11 @@
       </div>
     </section>
 
-    <section class="coverage-feed" id="coverage-feed" aria-live="polite" tabindex="-1"></section>
+    <section class="coverage-feed" id="coverage-feed" aria-live="polite" aria-label="News articles" tabindex="-1"></section>
 
   </main>
 
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="container">
       <p class="disclaimer"><strong>Reroute NJ</strong> es una herramienta comunitaria independiente. No está afiliada ni respaldada por NJ Transit, Amtrak ni ninguna agencia gubernamental. Los enlaces de noticias van a sus fuentes originales. Verifica siempre en <a href="https://www.njtransit.com/portalcutover" target="_blank" rel="noopener">njtransit.com</a> antes de viajar.</p>
       <p class="credit">Creado por <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">Joe Amditis</a></p>

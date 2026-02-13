@@ -46,7 +46,7 @@
 <body>
   <a href="#main-content" class="skip-link">跳到主要内容</a>
 
-  <header class="header">
+  <header class="header" role="banner">
     <div class="header-inner">
       <div class="brand">Reroute<span>NJ</span></div>
       <p class="tagline">Portal Bridge转换指南</p>
@@ -74,15 +74,19 @@
     </div>
   </header>
 
-  <div class="alert-banner" id="alert-banner">
+  <div class="alert-banner" id="alert-banner" role="alert">
     <div class="container">
       <strong>第一阶段：</strong> 2026年2月15日至3月15日 &middot; 除Atlantic City外所有线路受影响 &middot; Newark和Secaucus之间服务减少50%
     </div>
   </div>
 
-  <nav class="tool-nav">
+  <nav class="tool-nav" aria-label="Site tools">
+    <span class="hamburger-label">Line guide</span>
+    <button class="hamburger-btn" aria-expanded="false" aria-label="Toggle navigation menu">
+      <span></span>
+    </button>
     <div class="container">
-      <a href="../index.html" class="tool-nav-link active">线路指南</a>
+      <a href="../index.html" class="tool-nav-link active" aria-current="page">Line guide</a>
       <a href="../compare.html" class="tool-nav-link">通勤比较</a>
       <a href="../coverage.html" class="tool-nav-link">新闻报道</a>
       <a href="../map.html" class="tool-nav-link">地图</a>
@@ -95,7 +99,7 @@
     <div class="control-panel">
       <section class="line-header">
         <div class="line-badge" id="line-badge">Select a line</div>
-        <nav class="line-nav" id="line-nav"></nav>
+        <nav class="line-nav" id="line-nav" aria-label="Select train line"></nav>
       </section>
 
       <section class="station-picker">
@@ -107,21 +111,22 @@
 
       <section class="direction-picker">
         <label for="direction-select">出行方向</label>
-        <div class="direction-toggle" id="direction-toggle">
-          <button class="direction-btn active" data-dir="nj-to-nyc">NJ &rarr; NYC <span class="dir-sub">早通勤</span></button>
-          <button class="direction-btn" data-dir="nyc-to-nj">NYC &rarr; NJ <span class="dir-sub">晚通勤</span></button>
+        <div class="direction-toggle" id="direction-toggle" role="group" aria-labelledby="direction-label">
+          <span id="direction-label" class="sr-only">Direction of travel</span>
+          <button class="direction-btn active" data-dir="nj-to-nyc" aria-pressed="true">NJ &rarr; NYC <span class="dir-sub">早通勤</span></button>
+          <button class="direction-btn" data-dir="nyc-to-nj" aria-pressed="false">NYC &rarr; NJ <span class="dir-sub">晚通勤</span></button>
         </div>
       </section>
     </div>
 
-    <nav class="tool-tabs" role="tablist">
-      <button class="tab active" role="tab" aria-selected="true" data-tab="affected">我受影响吗？</button>
-      <button class="tab" role="tab" aria-selected="false" data-tab="routes">路线规划</button>
-      <button class="tab" role="tab" aria-selected="false" data-tab="tickets">购票指南</button>
+    <nav class="tool-tabs" role="tablist" aria-label="Tool options">
+      <button class="tab active" role="tab" aria-selected="true" aria-controls="panel-affected" id="tab-affected" data-tab="affected">我受影响吗？</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="panel-routes" id="tab-routes" data-tab="routes" tabindex="-1">路线规划</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="panel-tickets" id="tab-tickets" data-tab="tickets" tabindex="-1">购票指南</button>
     </nav>
 
     <!-- Tool 1: Am I affected? -->
-    <section id="panel-affected" class="tool-panel active" role="tabpanel">
+    <section id="panel-affected" class="tool-panel active" role="tabpanel" aria-labelledby="tab-affected">
       <div class="panel-intro">
         <h2>我受影响吗？</h2>
         <p>在上方选择你的线路和车站，查看转换对你通勤的具体影响。</p>
@@ -152,7 +157,7 @@
     </section>
 
     <!-- Tool 2: Route planner -->
-    <section id="panel-routes" class="tool-panel" role="tabpanel">
+    <section id="panel-routes" class="tool-panel" role="tabpanel" aria-labelledby="tab-routes">
       <div class="panel-intro" id="routes-intro">
         <h2>Route planner</h2>
         <p>Select a line above to see your options during the cutover.</p>
@@ -161,7 +166,7 @@
     </section>
 
     <!-- Tool 3: Ticket guide -->
-    <section id="panel-tickets" class="tool-panel" role="tabpanel">
+    <section id="panel-tickets" class="tool-panel" role="tabpanel" aria-labelledby="tab-tickets">
       <div class="panel-intro" id="tickets-intro">
         <h2>What ticket should I buy?</h2>
         <p>Select a line above to see ticket guidance for the cutover period.</p>
@@ -207,7 +212,7 @@
       <div class="transfer-cards">
         <div class="transfer-card path-card">
           <div class="transfer-header">
-            <span class="transfer-icon">&#x1F687;</span>
+            <span class="transfer-icon" role="img" aria-label="Train">&#x1F687;</span>
             <div>
               <h4>To PATH (33rd Street)</h4>
               <span class="transfer-time">~5 min from train</span>
@@ -225,7 +230,7 @@
 
         <div class="transfer-card ferry-card">
           <div class="transfer-header">
-            <span class="transfer-icon">&#x26F4;&#xFE0F;</span>
+            <span class="transfer-icon" role="img" aria-label="Ferry">&#x26F4;&#xFE0F;</span>
             <div>
               <h4>To NY Waterway ferry</h4>
               <span class="transfer-time">~8 min from train</span>
@@ -243,7 +248,7 @@
 
         <div class="transfer-card bus-card">
           <div class="transfer-header">
-            <span class="transfer-icon">&#x1F68C;</span>
+            <span class="transfer-icon" role="img" aria-label="Bus">&#x1F68C;</span>
             <div>
               <h4>To Bus 126 (Port Authority)</h4>
               <span class="transfer-time">~5 min from train</span>
@@ -382,7 +387,7 @@
 
   </main>
 
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="container">
       <p class="disclaimer"><strong>Reroute NJ</strong> 是一个独立的社区工具。与NJ Transit、Amtrak或任何政府机构无关，也未获其认可。 信息基于官方公告，可能会有变化。出行前请务必在 <a href="https://www.njtransit.com/portalcutover" target="_blank" rel="noopener">njtransit.com</a> 上核实。</p>
       <p class="credit">开发者 <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">Joe Amditis</a></p>

@@ -46,7 +46,7 @@
 <body>
   <a href="#main-content" class="skip-link">Przejdź do głównej treści</a>
 
-  <header class="header">
+  <header class="header" role="banner">
     <div class="header-inner">
       <a href="../index.html" class="brand-link"><div class="brand">Reroute<span>NJ</span></div></a>
       <p class="tagline">Porównaj swoje opcje dojazdu</p>
@@ -74,10 +74,14 @@
     </div>
   </header>
 
-  <nav class="tool-nav">
+  <nav class="tool-nav" aria-label="Site tools">
+    <span class="hamburger-label">Commute comparison</span>
+    <button class="hamburger-btn" aria-expanded="false" aria-label="Toggle navigation menu">
+      <span></span>
+    </button>
     <div class="container">
       <a href="../index.html" class="tool-nav-link">Przewodnik po liniach</a>
-      <a href="../compare.html" class="tool-nav-link active">Porównanie dojazdów</a>
+      <a href="../compare.html" class="tool-nav-link active" aria-current="page">Commute comparison</a>
       <a href="../coverage.html" class="tool-nav-link">Wiadomości</a>
       <a href="../map.html" class="tool-nav-link">Mapa</a>
       <a href="../embed.html" class="tool-nav-link">Osadź i udostępnij</a>
@@ -94,12 +98,12 @@
     <!-- Step 1: Line -->
     <section class="input-step">
       <div class="step-label"><span class="step-circle">1</span> Twoja linia</div>
-      <nav class="line-nav" id="line-nav"></nav>
+      <nav class="line-nav" id="line-nav" aria-label="Select train line"></nav>
     </section>
 
     <!-- Step 2: Station -->
     <section class="input-step">
-      <div class="step-label"><span class="step-circle">2</span> Twoja stacja</div>
+      <label class="step-label" for="station-select"><span class="step-circle">2</span> Your station</label>
       <select id="station-select">
         <option value="">Wybierz swoją stację…</option>
       </select>
@@ -108,7 +112,7 @@
     <!-- Step 3: Destination -->
     <section class="input-step">
       <div class="step-label"><span class="step-circle">3</span> Gdzie na Manhattanie?</div>
-      <div class="dest-grid" id="dest-grid"></div>
+      <div class="dest-grid" id="dest-grid" role="group" aria-label="Manhattan destinations"></div>
     </section>
 
     <!-- Results -->
@@ -121,7 +125,7 @@
 
   </main>
 
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="container">
       <p class="disclaimer"><strong>Reroute NJ</strong> jest niezależnym narzędziem społecznościowym. Nie jest powiązane ani wspierane przez NJ Transit, Amtrak ani żadną agencję rządową. Informacje oparte są na oficjalnych ogłoszeniach i mogą ulec zmianie. Przed podróżą zawsze sprawdź na <a href="https://www.njtransit.com/portalcutover" target="_blank" rel="noopener">njtransit.com</a> .</p>
       <p class="credit">Stworzone przez <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">Joe Amditis</a></p>

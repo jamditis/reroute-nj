@@ -46,7 +46,7 @@
 <body>
   <a href="#main-content" class="skip-link">मुख्य सामग्री पर जाएं</a>
 
-  <header class="header">
+  <header class="header" role="banner">
     <div class="header-inner">
       <a href="../index.html" class="brand-link"><div class="brand">Reroute<span>NJ</span></div></a>
       <p class="tagline">समाचार में Portal Bridge</p>
@@ -74,11 +74,15 @@
     </div>
   </header>
 
-  <nav class="tool-nav">
+  <nav class="tool-nav" aria-label="Site tools">
+    <span class="hamburger-label">News coverage</span>
+    <button class="hamburger-btn" aria-expanded="false" aria-label="Toggle navigation menu">
+      <span></span>
+    </button>
     <div class="container">
       <a href="../index.html" class="tool-nav-link">लाइन गाइड</a>
       <a href="../compare.html" class="tool-nav-link">यात्रा तुलना</a>
-      <a href="../coverage.html" class="tool-nav-link active">समाचार</a>
+      <a href="../coverage.html" class="tool-nav-link active" aria-current="page">News coverage</a>
       <a href="../map.html" class="tool-nav-link">नक्शा</a>
       <a href="../embed.html" class="tool-nav-link">एम्बेड और शेयर</a>
     </div>
@@ -92,7 +96,7 @@
       <p class="coverage-updated" id="coverage-updated"></p>
     </section>
 
-    <section class="coverage-filters" id="coverage-filters">
+    <section class="coverage-filters" id="coverage-filters" role="search" aria-label="Filter news articles">
       <div class="filter-group">
         <label for="filter-source">स्रोत</label>
         <select id="filter-source">
@@ -136,11 +140,11 @@
       </div>
     </section>
 
-    <section class="coverage-feed" id="coverage-feed" aria-live="polite" tabindex="-1"></section>
+    <section class="coverage-feed" id="coverage-feed" aria-live="polite" aria-label="News articles" tabindex="-1"></section>
 
   </main>
 
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="container">
       <p class="disclaimer"><strong>Reroute NJ</strong> एक स्वतंत्र सामुदायिक उपकरण है। NJ Transit, Amtrak या किसी सरकारी एजेंसी से संबद्ध या समर्थित नहीं है। समाचार लिंक मूल स्रोतों पर जाते हैं। यात्रा से पहले हमेशा <a href="https://www.njtransit.com/portalcutover" target="_blank" rel="noopener">njtransit.com</a> पर जांच करें।</p>
       <p class="credit">निर्माता <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">Joe Amditis</a></p>

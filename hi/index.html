@@ -46,7 +46,7 @@
 <body>
   <a href="#main-content" class="skip-link">मुख्य सामग्री पर जाएं</a>
 
-  <header class="header">
+  <header class="header" role="banner">
     <div class="header-inner">
       <div class="brand">Reroute<span>NJ</span></div>
       <p class="tagline">Portal Bridge कटओवर गाइड</p>
@@ -74,15 +74,19 @@
     </div>
   </header>
 
-  <div class="alert-banner" id="alert-banner">
+  <div class="alert-banner" id="alert-banner" role="alert">
     <div class="container">
       <strong>चरण 1:</strong> 15 फ़र – 15 मार्च 2026 &middot; Atlantic City को छोड़कर सभी लाइनें प्रभावित &middot; Newark और Secaucus के बीच 50% सेवा कटौती
     </div>
   </div>
 
-  <nav class="tool-nav">
+  <nav class="tool-nav" aria-label="Site tools">
+    <span class="hamburger-label">Line guide</span>
+    <button class="hamburger-btn" aria-expanded="false" aria-label="Toggle navigation menu">
+      <span></span>
+    </button>
     <div class="container">
-      <a href="../index.html" class="tool-nav-link active">लाइन गाइड</a>
+      <a href="../index.html" class="tool-nav-link active" aria-current="page">Line guide</a>
       <a href="../compare.html" class="tool-nav-link">यात्रा तुलना</a>
       <a href="../coverage.html" class="tool-nav-link">समाचार</a>
       <a href="../map.html" class="tool-nav-link">नक्शा</a>
@@ -95,7 +99,7 @@
     <div class="control-panel">
       <section class="line-header">
         <div class="line-badge" id="line-badge">Select a line</div>
-        <nav class="line-nav" id="line-nav"></nav>
+        <nav class="line-nav" id="line-nav" aria-label="Select train line"></nav>
       </section>
 
       <section class="station-picker">
@@ -107,21 +111,22 @@
 
       <section class="direction-picker">
         <label for="direction-select">यात्रा की दिशा</label>
-        <div class="direction-toggle" id="direction-toggle">
-          <button class="direction-btn active" data-dir="nj-to-nyc">NJ &rarr; NYC <span class="dir-sub">सुबह की यात्रा</span></button>
-          <button class="direction-btn" data-dir="nyc-to-nj">NYC &rarr; NJ <span class="dir-sub">शाम की यात्रा</span></button>
+        <div class="direction-toggle" id="direction-toggle" role="group" aria-labelledby="direction-label">
+          <span id="direction-label" class="sr-only">Direction of travel</span>
+          <button class="direction-btn active" data-dir="nj-to-nyc" aria-pressed="true">NJ &rarr; NYC <span class="dir-sub">सुबह की यात्रा</span></button>
+          <button class="direction-btn" data-dir="nyc-to-nj" aria-pressed="false">NYC &rarr; NJ <span class="dir-sub">शाम की यात्रा</span></button>
         </div>
       </section>
     </div>
 
-    <nav class="tool-tabs" role="tablist">
-      <button class="tab active" role="tab" aria-selected="true" data-tab="affected">क्या मैं प्रभावित हूं?</button>
-      <button class="tab" role="tab" aria-selected="false" data-tab="routes">रूट प्लानर</button>
-      <button class="tab" role="tab" aria-selected="false" data-tab="tickets">टिकट गाइड</button>
+    <nav class="tool-tabs" role="tablist" aria-label="Tool options">
+      <button class="tab active" role="tab" aria-selected="true" aria-controls="panel-affected" id="tab-affected" data-tab="affected">क्या मैं प्रभावित हूं?</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="panel-routes" id="tab-routes" data-tab="routes" tabindex="-1">रूट प्लानर</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="panel-tickets" id="tab-tickets" data-tab="tickets" tabindex="-1">टिकट गाइड</button>
     </nav>
 
     <!-- Tool 1: Am I affected? -->
-    <section id="panel-affected" class="tool-panel active" role="tabpanel">
+    <section id="panel-affected" class="tool-panel active" role="tabpanel" aria-labelledby="tab-affected">
       <div class="panel-intro">
         <h2>क्या मैं प्रभावित हूं?</h2>
         <p>कटओवर आपकी यात्रा को कैसे प्रभावित करता है यह देखने के लिए ऊपर अपनी लाइन और स्टेशन चुनें।</p>
@@ -152,7 +157,7 @@
     </section>
 
     <!-- Tool 2: Route planner -->
-    <section id="panel-routes" class="tool-panel" role="tabpanel">
+    <section id="panel-routes" class="tool-panel" role="tabpanel" aria-labelledby="tab-routes">
       <div class="panel-intro" id="routes-intro">
         <h2>Route planner</h2>
         <p>Select a line above to see your options during the cutover.</p>
@@ -161,7 +166,7 @@
     </section>
 
     <!-- Tool 3: Ticket guide -->
-    <section id="panel-tickets" class="tool-panel" role="tabpanel">
+    <section id="panel-tickets" class="tool-panel" role="tabpanel" aria-labelledby="tab-tickets">
       <div class="panel-intro" id="tickets-intro">
         <h2>What ticket should I buy?</h2>
         <p>Select a line above to see ticket guidance for the cutover period.</p>
@@ -207,7 +212,7 @@
       <div class="transfer-cards">
         <div class="transfer-card path-card">
           <div class="transfer-header">
-            <span class="transfer-icon">&#x1F687;</span>
+            <span class="transfer-icon" role="img" aria-label="Train">&#x1F687;</span>
             <div>
               <h4>To PATH (33rd Street)</h4>
               <span class="transfer-time">~5 min from train</span>
@@ -225,7 +230,7 @@
 
         <div class="transfer-card ferry-card">
           <div class="transfer-header">
-            <span class="transfer-icon">&#x26F4;&#xFE0F;</span>
+            <span class="transfer-icon" role="img" aria-label="Ferry">&#x26F4;&#xFE0F;</span>
             <div>
               <h4>To NY Waterway ferry</h4>
               <span class="transfer-time">~8 min from train</span>
@@ -243,7 +248,7 @@
 
         <div class="transfer-card bus-card">
           <div class="transfer-header">
-            <span class="transfer-icon">&#x1F68C;</span>
+            <span class="transfer-icon" role="img" aria-label="Bus">&#x1F68C;</span>
             <div>
               <h4>To Bus 126 (Port Authority)</h4>
               <span class="transfer-time">~5 min from train</span>
@@ -382,7 +387,7 @@
 
   </main>
 
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="container">
       <p class="disclaimer"><strong>Reroute NJ</strong> एक स्वतंत्र सामुदायिक उपकरण है। NJ Transit, Amtrak या किसी सरकारी एजेंसी से संबद्ध या समर्थित नहीं है। जानकारी आधिकारिक घोषणाओं पर आधारित है और बदल सकती है। यात्रा से पहले हमेशा <a href="https://www.njtransit.com/portalcutover" target="_blank" rel="noopener">njtransit.com</a> पर जांच करें।</p>
       <p class="credit">निर्माता <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">Joe Amditis</a></p>

@@ -124,7 +124,9 @@
 <body>
   <a href="#main-content" class="skip-link">મુખ્ય સામગ્રી પર જાઓ</a>
 
-  <header class="header">
+  <a href="#main-content" class="skip-link">મુખ્ય સામગ્રી પર જાઓ</a>
+
+  <header class="header" role="banner">
     <div class="header-inner">
       <a href="../index.html" class="brand-link"><div class="brand">Reroute<span>NJ</span></div></a>
       <p class="tagline">ઇન્ટરેક્ટિવ કટઓવર નકશો</p>
@@ -152,12 +154,16 @@
     </div>
   </header>
 
-  <nav class="tool-nav">
+  <nav class="tool-nav" aria-label="Site tools">
+    <span class="hamburger-label">Map</span>
+    <button class="hamburger-btn" aria-expanded="false" aria-label="Toggle navigation menu">
+      <span></span>
+    </button>
     <div class="container">
       <a href="../index.html" class="tool-nav-link">લાઇન માર્ગદર્શિકા</a>
       <a href="../compare.html" class="tool-nav-link">મુસાફરી સરખામણી</a>
       <a href="../coverage.html" class="tool-nav-link">સમાચાર</a>
-      <a href="../map.html" class="tool-nav-link active">નકશો</a>
+      <a href="../map.html" class="tool-nav-link active" aria-current="page">Map</a>
       <a href="../embed.html" class="tool-nav-link">એમ્બેડ અને શેર</a>
     </div>
   </nav>
@@ -169,17 +175,17 @@
       <p>કટઓવરનો ભૂગોળ જુઓ: Portal Bridge સ્થાન, પ્રભાવિત સ્ટેશનો, મુખ્ય ટ્રાન્સફર હબ અને વૈકલ્પિક રૂટ.</p>
     </section>
 
-    <div class="map-filter-bar" id="map-filters">
-      <button class="map-filter-btn active" data-filter="all">બધું</button>
-      <button class="map-filter-btn" data-filter="montclair-boonton">Montclair-Boonton</button>
-      <button class="map-filter-btn" data-filter="morris-essex">Morris &amp; Essex</button>
-      <button class="map-filter-btn" data-filter="northeast-corridor">Northeast Corridor</button>
-      <button class="map-filter-btn" data-filter="north-jersey-coast">North Jersey Coast</button>
-      <button class="map-filter-btn" data-filter="raritan-valley">Raritan Valley</button>
-      <button class="map-filter-btn" data-filter="transfer-hubs">ટ્રાન્સફર હબ</button>
+    <div class="map-filter-bar" id="map-filters" role="group" aria-label="Filter map by line">
+      <button class="map-filter-btn active" data-filter="all" aria-pressed="true">બધું</button>
+      <button class="map-filter-btn" data-filter="montclair-boonton" aria-pressed="false">Montclair-Boonton</button>
+      <button class="map-filter-btn" data-filter="morris-essex" aria-pressed="false">Morris &amp; Essex</button>
+      <button class="map-filter-btn" data-filter="northeast-corridor" aria-pressed="false">Northeast Corridor</button>
+      <button class="map-filter-btn" data-filter="north-jersey-coast" aria-pressed="false">North Jersey Coast</button>
+      <button class="map-filter-btn" data-filter="raritan-valley" aria-pressed="false">Raritan Valley</button>
+      <button class="map-filter-btn" data-filter="transfer-hubs" aria-pressed="false">ટ્રાન્સફર હબ</button>
     </div>
 
-    <div id="map"></div>
+    <div id="map" role="application" aria-label="Interactive map showing Portal Bridge cutover stations and routes"></div>
 
     <div class="map-legend">
       <div class="legend-title">સૂચિ</div>
@@ -232,7 +238,7 @@
 
   </main>
 
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="container">
       <p class="disclaimer"><strong>Reroute NJ</strong> એક સ્વતંત્ર સામુદાયિક સાધન છે. NJ Transit, Amtrak અથવા કોઈ સરકારી એજન્સી સાથે સંબંધિત કે સમર્થિત નથી. નકશા ડેટા &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>. ટાઇલ્સ &copy; <a href="https://carto.com/" target="_blank" rel="noopener">CARTO</a>.</p>
       <p class="credit">બનાવનાર <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">Joe Amditis</a></p>

@@ -46,7 +46,9 @@
 <body>
   <a href="#main-content" class="skip-link">Vai al contenuto principale</a>
 
-  <header class="header">
+  <a href="#main-content" class="skip-link">Vai al contenuto principale</a>
+
+  <header class="header" role="banner">
     <div class="header-inner">
       <a href="../index.html" class="brand-link"><div class="brand">Reroute<span>NJ</span></div></a>
       <p class="tagline">Incorpora, condividi e ripubblica</p>
@@ -74,13 +76,17 @@
     </div>
   </header>
 
-  <nav class="tool-nav">
+  <nav class="tool-nav" aria-label="Site tools">
+    <span class="hamburger-label">Embed &amp; share</span>
+    <button class="hamburger-btn" aria-expanded="false" aria-label="Toggle navigation menu">
+      <span></span>
+    </button>
     <div class="container">
       <a href="../index.html" class="tool-nav-link">Guida alle linee</a>
       <a href="../compare.html" class="tool-nav-link">Confronto tragitti</a>
       <a href="../coverage.html" class="tool-nav-link">Notizie</a>
       <a href="../map.html" class="tool-nav-link">Mappa</a>
-      <a href="../embed.html" class="tool-nav-link active">Incorpora e condividi</a>
+      <a href="../embed.html" class="tool-nav-link active" aria-current="page">Embed &amp; share</a>
     </div>
   </nav>
 
@@ -279,7 +285,7 @@
 
   </main>
 
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="container">
       <p class="disclaimer"><strong>Reroute NJ</strong> è uno strumento comunitario indipendente. Non è affiliato né approvato da NJ Transit, Amtrak o alcun ente governativo. <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">Vedi il codice sorgente su GitHub</a>.</p>
       <p class="credit">Creato da <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">Joe Amditis</a></p>

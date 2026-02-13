@@ -124,7 +124,9 @@
 <body>
   <a href="#main-content" class="skip-link">본문으로 건너뛰기</a>
 
-  <header class="header">
+  <a href="#main-content" class="skip-link">본문으로 건너뛰기</a>
+
+  <header class="header" role="banner">
     <div class="header-inner">
       <a href="../index.html" class="brand-link"><div class="brand">Reroute<span>NJ</span></div></a>
       <p class="tagline">인터랙티브 전환 지도</p>
@@ -152,12 +154,16 @@
     </div>
   </header>
 
-  <nav class="tool-nav">
+  <nav class="tool-nav" aria-label="Site tools">
+    <span class="hamburger-label">Map</span>
+    <button class="hamburger-btn" aria-expanded="false" aria-label="Toggle navigation menu">
+      <span></span>
+    </button>
     <div class="container">
       <a href="../index.html" class="tool-nav-link">노선 안내</a>
       <a href="../compare.html" class="tool-nav-link">통근 비교</a>
       <a href="../coverage.html" class="tool-nav-link">뉴스</a>
-      <a href="../map.html" class="tool-nav-link active">지도</a>
+      <a href="../map.html" class="tool-nav-link active" aria-current="page">Map</a>
       <a href="../embed.html" class="tool-nav-link">임베드 및 공유</a>
     </div>
   </nav>
@@ -169,17 +175,17 @@
       <p>전환의 지리적 정보를 확인하세요: Portal Bridge 위치, 영향받는 역, 주요 환승 허브, 대체 경로.</p>
     </section>
 
-    <div class="map-filter-bar" id="map-filters">
-      <button class="map-filter-btn active" data-filter="all">전체</button>
-      <button class="map-filter-btn" data-filter="montclair-boonton">Montclair-Boonton</button>
-      <button class="map-filter-btn" data-filter="morris-essex">Morris &amp; Essex</button>
-      <button class="map-filter-btn" data-filter="northeast-corridor">Northeast Corridor</button>
-      <button class="map-filter-btn" data-filter="north-jersey-coast">North Jersey Coast</button>
-      <button class="map-filter-btn" data-filter="raritan-valley">Raritan Valley</button>
-      <button class="map-filter-btn" data-filter="transfer-hubs">환승 허브</button>
+    <div class="map-filter-bar" id="map-filters" role="group" aria-label="Filter map by line">
+      <button class="map-filter-btn active" data-filter="all" aria-pressed="true">전체</button>
+      <button class="map-filter-btn" data-filter="montclair-boonton" aria-pressed="false">Montclair-Boonton</button>
+      <button class="map-filter-btn" data-filter="morris-essex" aria-pressed="false">Morris &amp; Essex</button>
+      <button class="map-filter-btn" data-filter="northeast-corridor" aria-pressed="false">Northeast Corridor</button>
+      <button class="map-filter-btn" data-filter="north-jersey-coast" aria-pressed="false">North Jersey Coast</button>
+      <button class="map-filter-btn" data-filter="raritan-valley" aria-pressed="false">Raritan Valley</button>
+      <button class="map-filter-btn" data-filter="transfer-hubs" aria-pressed="false">환승 허브</button>
     </div>
 
-    <div id="map"></div>
+    <div id="map" role="application" aria-label="Interactive map showing Portal Bridge cutover stations and routes"></div>
 
     <div class="map-legend">
       <div class="legend-title">범례</div>
@@ -232,7 +238,7 @@
 
   </main>
 
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="container">
       <p class="disclaimer"><strong>Reroute NJ</strong> 는 독립적인 커뮤니티 도구입니다. NJ Transit, Amtrak 또는 정부 기관과 관련이 없으며 승인을 받지 않았습니다. 지도 데이터 &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>. 타일 &copy; <a href="https://carto.com/" target="_blank" rel="noopener">CARTO</a>.</p>
       <p class="credit">제작자 <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">Joe Amditis</a></p>
