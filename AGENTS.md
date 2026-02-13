@@ -7,16 +7,23 @@ Guidelines for AI coding assistants (Claude Code, Copilot, Cursor, etc.) working
 This is a **zero-build static site**. No npm, no bundler, no framework. Do not add a build step.
 
 ```
-index.html          — Line guide tool
-compare.html        — Commute comparison tool
-coverage.html       — News coverage feed
-js/shared.js        — Shared globals: esc(), countdown, date constants
-js/app.js           — Line guide logic (~1000 lines, IIFE)
-js/compare.js       — Comparison tool logic (~700 lines, IIFE)
-js/coverage.js      — Coverage feed logic (IIFE)
-css/styles.css      — All styles, CSS custom properties
-img/                — Favicon, OG image, screenshot
-data/coverage.json  — Curated article data
+index.html              — Line guide tool
+compare.html            — Commute comparison tool
+coverage.html           — News coverage feed
+map.html                — Interactive cutover map
+embed.html              — Embed & share page
+js/shared.js            — Shared globals: esc(), countdown, date constants
+js/app.js               — Line guide logic (~1000 lines, IIFE)
+js/compare.js           — Comparison tool logic (~700 lines, IIFE)
+js/coverage.js          — Coverage feed logic (IIFE)
+js/i18n.js              — Runtime translation loader with t() function
+css/styles.css          — All styles, CSS custom properties
+img/                    — Favicon, OG image, screenshot
+data/coverage.json      — Curated article data
+translations/en.json    — English source strings (~175 keys)
+translations/{lang}.json — 10 language files (es, zh, tl, ko, pt, gu, hi, it, ar, pl)
+tools/generate-pages.py — Generates translated HTML from templates + JSON
+{lang}/                 — Generated translated pages (50 total, 5 per language)
 ```
 
 ## Rules
@@ -40,12 +47,36 @@ The `LINE_DATA` object in `js/app.js` drives all content. Each line has an `impa
 
 To add or modify line data, edit the `LINE_DATA` object directly. The UI generates from this data automatically.
 
+## Translation system
+
+All 5 pages are translated into 10 languages using a hybrid approach:
+
+- **Build time:** `tools/generate-pages.py` reads English HTML templates and swaps static text with translated strings from `translations/{lang}.json`. Output goes to `{lang}/` directories (e.g., `es/index.html`).
+- **Runtime:** `js/i18n.js` loads `window._T` (injected by the generator) for JS-driven UI strings like station impacts, route cards, and comparison results.
+
+### Translation keys
+
+Keys use dot notation organized by page: `index.hoboken_terminal_title`, `coverage.cat_news`, `embed.generator_intro`, etc. The `common.*` namespace covers shared elements (nav, footer, accessibility toggles).
+
+### Adding content to translated pages
+
+When adding new visible text to any HTML page:
+1. Add a key to `translations/en.json`
+2. Add the corresponding replacement logic in `generate-pages.py`
+3. Add translated values to all 10 language files
+4. Run `python3 tools/generate-pages.py` to regenerate
+
+### What stays in English
+
+Station names, line names (PATH, NJ Transit, Amtrak), and place names are proper nouns and stay in English across all languages. URLs stay unchanged.
+
 ## Testing
 
 No test suite. Verify changes by:
-1. Opening `index.html`, `compare.html`, and `coverage.html` in a browser
+1. Opening `index.html`, `compare.html`, `coverage.html`, `map.html`, and `embed.html` in a browser
 2. Selecting each line and at least one station per line
 3. Checking the comparison tool with different station/destination pairs
 4. Testing coverage page filters (source, category, line, direction, search)
 5. Resizing the browser to mobile width
 6. Checking the browser console for errors
+7. After translation changes, check at least 2 translated pages (e.g., `es/index.html`, `zh/embed.html`) for untranslated English text

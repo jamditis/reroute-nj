@@ -1,0 +1,103 @@
+# CLAUDE.md
+
+Project-specific instructions for Claude Code sessions working on Reroute NJ.
+
+## Project overview
+
+Reroute NJ is a zero-build static site helping NJ Transit riders navigate the Portal North Bridge cutover (Feb 15 – Mar 15, 2026). Five tools, 11 languages, no framework.
+
+**Live site:** https://reroutenj.org
+
+## Architecture
+
+No npm, no bundler, no framework. Do not add a build step.
+
+```
+index.html              — Line guide (main tool)
+compare.html            — Commute comparison
+coverage.html           — News coverage feed
+map.html                — Interactive Leaflet map
+embed.html              — Embed & share for publishers
+blog.html               — Blog (English only, not translated)
+js/app.js               — Line guide logic (IIFE, ~1000 lines)
+js/compare.js           — Comparison tool (IIFE, ~700 lines)
+js/coverage.js          — Coverage feed (IIFE)
+js/i18n.js              — Runtime translation loader
+js/shared.js            — Shared globals: esc(), countdown, dates
+css/styles.css          — All styles, CSS custom properties in :root
+data/coverage.json      — Curated article metadata
+translations/en.json    — English source strings (~175 keys)
+translations/{lang}.json — 10 translated language files
+tools/generate-pages.py — Static page generator for translations
+{lang}/                 — Generated translated pages (50 total)
+```
+
+## Code conventions
+
+- **IIFE pattern** — All JS wrapped in `(function() { "use strict"; ... })()`
+- **`var` declarations** — ES5-style for browser compatibility, do not convert to `let`/`const`
+- **`esc()` for HTML** — Always sanitize with `esc()` before DOM insertion
+- **CSS custom properties** — Use existing `--var-name` tokens from `:root`
+- **No external dependencies** — No CDN libraries, no npm packages
+
+## Translation system
+
+Hybrid approach: build-time HTML replacement + runtime JS translations.
+
+### How it works
+
+1. `tools/generate-pages.py` reads each English HTML template
+2. For each of 10 languages, it loads `translations/{lang}.json`
+3. String replacement swaps English text with translated text
+4. `window._T` is injected as an inline script for runtime JS translations
+5. Output goes to `{lang}/` directories (e.g., `es/index.html`)
+
+### Key rules for translations
+
+- **Keys use dot notation** organized by page: `index.*`, `compare.*`, `coverage.*`, `map.*`, `embed.*`, `common.*`
+- **Station names, line names, and place names stay in English** — they're proper nouns on physical signage
+- **HTML markup in translations** — Translation values can contain `<strong>`, `<a>`, `<code>` tags
+- **HTML entities must match exactly** — The generator uses `str.replace()`, so `&hellip;` and `…` are different strings. Match what's in the source HTML.
+- **`blog.html` is not translated** — English-only content, excluded from the generator
+
+### Adding new translatable content
+
+1. Add key to `translations/en.json`
+2. Add replacement logic in `tools/generate-pages.py` (in `replace_page_specific_content()` under the correct page's `if/elif` block)
+3. Add translated values to all 10 language files: es, zh, tl, ko, pt, gu, hi, it, ar, pl
+4. Run `python3 tools/generate-pages.py` to regenerate all 50 pages
+5. Spot-check at least 2 languages for correct output
+
+### Regenerating pages
+
+```bash
+python3 tools/generate-pages.py           # All languages
+python3 tools/generate-pages.py es zh     # Specific languages only
+```
+
+## Data model
+
+`LINE_DATA` in `js/app.js` drives all content. Each line has an `impactType`:
+
+- `hoboken-diversion` — Trains rerouted to Hoboken (Montclair-Boonton, Morris & Essex)
+- `reduced-service` — Fewer trains, same route (NEC, North Jersey Coast)
+- `newark-termination` — Trains stop at Newark Penn (Raritan Valley)
+
+## Testing
+
+No test suite. Verify by:
+1. Open all 5 HTML pages in a browser
+2. Select each line and at least one station per line
+3. Test coverage filters and comparison tool
+4. Resize to mobile (breakpoints at 768px, 480px)
+5. Check browser console for errors
+6. After translation changes, check 2+ translated pages for untranslated English
+
+## Common tasks
+
+| Task | Command |
+|------|---------|
+| Serve locally | `python3 -m http.server 8000` |
+| Regenerate translations | `python3 tools/generate-pages.py` |
+| Regenerate one language | `python3 tools/generate-pages.py es` |
+| Deploy | Push to `main` (GitHub Pages auto-deploys) |

@@ -32,19 +32,28 @@ This is a zero-build static site. No npm, no webpack, no framework.
 
 ```
 reroute-nj/
-├── index.html          # Line guide tool
-├── compare.html        # Commute comparison tool
-├── coverage.html       # News coverage feed
+├── index.html              # Line guide tool
+├── compare.html            # Commute comparison tool
+├── coverage.html           # News coverage feed
+├── map.html                # Interactive cutover map
+├── embed.html              # Embed & share page
 ├── js/
-│   ├── shared.js       # Shared globals: esc(), countdown, date constants
-│   ├── app.js          # Line guide logic (IIFE, ~1000 lines)
-│   ├── compare.js      # Comparison tool logic (IIFE, ~700 lines)
-│   └── coverage.js     # Coverage feed logic (IIFE)
+│   ├── shared.js           # Shared globals: esc(), countdown, date constants
+│   ├── app.js              # Line guide logic (IIFE, ~1000 lines)
+│   ├── compare.js          # Comparison tool logic (IIFE, ~700 lines)
+│   ├── coverage.js         # Coverage feed logic (IIFE)
+│   └── i18n.js             # Runtime translation loader with t() function
 ├── css/
-│   └── styles.css      # All styles, CSS custom properties for theming
-├── img/                # Favicon, OG image, screenshot
-└── data/
-    └── coverage.json   # Curated article data
+│   └── styles.css          # All styles, CSS custom properties for theming
+├── img/                    # Favicon, OG image, screenshot
+├── data/
+│   └── coverage.json       # Curated article data
+├── translations/           # Translation JSON files (en + 10 languages)
+│   ├── en.json             # English source strings
+│   └── {lang}.json         # es, zh, tl, ko, pt, gu, hi, it, ar, pl
+├── tools/
+│   └── generate-pages.py   # Generates translated HTML pages
+└── {lang}/                 # Generated translated pages (5 per language)
 ```
 
 ### Code conventions
@@ -71,13 +80,24 @@ Transit data lives in the `LINE_DATA` object at the top of `js/app.js`. Each lin
 
 The `impactType` field drives which content templates render for each line.
 
+### Translations
+
+All 5 pages are fully translated into 10 languages. To improve or fix a translation:
+
+1. Edit the relevant `translations/{lang}.json` file
+2. Run `python3 tools/generate-pages.py {lang}` to regenerate that language's pages
+3. Check the output in `{lang}/` to verify
+
+To add a new language, create `translations/{code}.json` following the key structure in `translations/en.json`, then run the generator.
+
 ### Pull request process
 
 1. Fork the repo and create a branch from `main`
 2. Make your changes
-3. Test by opening `index.html`, `compare.html`, and `coverage.html` in a browser
+3. Test by opening `index.html`, `compare.html`, `coverage.html`, `map.html`, and `embed.html` in a browser
 4. Check mobile layout (responsive breakpoints at 768px and 480px)
-5. Submit a PR using the template
+5. If you changed translations, run `python3 tools/generate-pages.py` and include generated pages in your PR
+6. Submit a PR using the template
 
 ## Getting help
 

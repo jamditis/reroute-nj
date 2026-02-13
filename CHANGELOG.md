@@ -7,6 +7,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-02-12
+
+### Added
+- Complete translation coverage for all 5 pages across all 10 non-English languages
+- ~175 new translation keys: Hoboken Terminal map labels, transfer direction cards (PATH, ferry, Bus 126), Secaucus Junction guidance, timeline events, official resources, coverage page filter options, map bridge info cards, and the entire embed/share page
+- Hamburger menu label translation per page
+- Screen reader "Direction of travel" label translation
+
+### Fixed
+- Language persistence: navigating between pages now stays in the selected language instead of reverting to English
+- Active nav link translation: regex now matches links with `aria-current="page"` attribute
+- Compare step 2 label: replacement handles both `<div>` and `<label>` wrapper elements
+- Coverage search placeholder: entity mismatch (`&hellip;` vs `…`) prevented translation
+- Duplicate skip links removed from embed.html and map.html source HTML
+- Duplicate hreflang tags: generator now skips when tags already exist in source
+
 ## [1.0.2] - 2026-02-12
 
 ### Added
@@ -63,7 +79,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - GitHub Pages deployment workflow
 - MIT license
 
-[Unreleased]: https://github.com/jamditis/reroute-nj/compare/v1.0.2...HEAD
+[Unreleased]: https://github.com/jamditis/reroute-nj/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/jamditis/reroute-nj/compare/v1.0.2...v1.1.0
 [1.0.2]: https://github.com/jamditis/reroute-nj/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/jamditis/reroute-nj/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/jamditis/reroute-nj/releases/tag/v1.0.0
