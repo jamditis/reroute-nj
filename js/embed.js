@@ -4,7 +4,7 @@
 (function () {
   "use strict";
 
-  var BASE_URL = "https://jamditis.github.io/reroute-nj/";
+  var BASE_URL = "https://reroutenj.org/";
 
   var $tool = document.getElementById("embed-tool");
   var $width = document.getElementById("embed-width");
