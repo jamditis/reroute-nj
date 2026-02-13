@@ -340,7 +340,12 @@
     "summary_desc": "Limang linya ng NJ Transit ang apektado mula Peb 15 – Mar 15, 2026. Binawasan ang serbisyo habang kino-connect ang bagong Portal North Bridge.",
     "suspended": "Suspendido",
     "zone": "Zone",
-    "powered_by": "Powered by Reroute NJ · reroutenj.org"
+    "powered_by": "Powered by Reroute NJ · reroutenj.org",
+    "line_summary_montclair-boonton": "Lahat ng Midtown Direct na tren tuwing weekday ay na-divert sa Hoboken. Patuloy ang serbisyo tuwing weekend papuntang Penn Station NY.",
+    "line_summary_morris-essex": "Lahat ng Midtown Direct na tren sa Morristown Line at Gladstone Branch tuwing weekday ay na-divert sa Hoboken. Patuloy ang serbisyo tuwing weekend papuntang Penn Station NY.",
+    "line_summary_northeast-corridor": "Ang mga tren ay patuloy na dumadating sa Penn Station NY, ngunit nabawasan ang serbisyo mula 133 sa 112 tren araw-araw dahil sa single-track na operasyon sa pagitan ng Newark at Secaucus.",
+    "line_summary_north-jersey-coast": "Ang mga tren ay patuloy na dumadating sa Penn Station NY, ngunit nabawasan mula 109 sa 92 tren araw-araw. Malaking pagbabago sa iskedyul. Ang mga pasahero ng Perth Amboy/Woodbridge ay makakakuha ng bus cross-honoring papuntang Port Authority.",
+    "line_summary_raritan-valley": "Lahat ng one-seat ride papuntang Penn Station New York ay suspendido. Lahat ng tren ay nagsisimula at nagtatapos sa Newark Penn Station. Lumipat sa NEC sa Newark Penn para makarating sa PSNY."
   },
   "js": {
     "major_changes": "MALALAKING PAGBABAGO",

@@ -340,7 +340,12 @@
     "summary_desc": "2026년 2월 15일 – 3월 15일, NJ Transit 5개 노선이 영향을 받습니다. 새로운 Portal North Bridge 연결 중 운행이 감소합니다.",
     "suspended": "운행 중단",
     "zone": "구역",
-    "powered_by": "Powered by Reroute NJ · reroutenj.org"
+    "powered_by": "Powered by Reroute NJ · reroutenj.org",
+    "line_summary_montclair-boonton": "모든 평일 Midtown Direct 열차가 Hoboken으로 우회됩니다. 주말 Penn Station NY행 서비스는 계속 운행됩니다.",
+    "line_summary_morris-essex": "Morristown Line과 Gladstone Branch의 모든 평일 Midtown Direct 열차가 Hoboken으로 우회됩니다. 주말 Penn Station NY행 서비스는 계속 운행됩니다.",
+    "line_summary_northeast-corridor": "Penn Station NY행 열차는 계속 운행되지만, Newark와 Secaucus 사이 단선 운행으로 인해 일일 열차가 133편에서 112편으로 감소합니다.",
+    "line_summary_north-jersey-coast": "Penn Station NY행 열차는 계속 운행되지만 109편에서 92편으로 감소합니다. 시간표 대폭 변경. Perth Amboy/Woodbridge 승객은 Port Authority행 버스 교차 환승이 가능합니다.",
+    "line_summary_raritan-valley": "Penn Station New York행 직행 열차가 모두 중단됩니다. 모든 열차는 Newark Penn Station에서 시작하고 종료됩니다. PSNY 도착을 위해 Newark Penn에서 NEC로 환승하세요."
   },
   "js": {
     "major_changes": "주요 변경",

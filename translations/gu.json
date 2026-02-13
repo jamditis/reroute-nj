@@ -340,7 +340,12 @@
     "summary_desc": "15 ફેબ – 15 માર્ચ, 2026 દરમિયાન પાંચ NJ Transit લાઇનો પ્રભાવિત. નવા Portal North Bridge ને કનેક્ટ કરતી વખતે સેવા ઘટાડવામાં આવી.",
     "suspended": "સ્થગિત",
     "zone": "ઝોન",
-    "powered_by": "Powered by Reroute NJ · reroutenj.org"
+    "powered_by": "Powered by Reroute NJ · reroutenj.org",
+    "line_summary_montclair-boonton": "બધી કાર્યદિવસની Midtown Direct ટ્રેનો Hoboken તરફ વાળી. Penn Station NY માટે શનિ-રવિ સેવા ચાલુ રહે છે.",
+    "line_summary_morris-essex": "Morristown Line અને Gladstone Branch પર બધી કાર્યદિવસની Midtown Direct ટ્રેનો Hoboken તરફ વાળી. Penn Station NY માટે શનિ-રવિ સેવા ચાલુ રહે છે.",
+    "line_summary_northeast-corridor": "ટ્રેનો હજુ Penn Station NY જાય છે, પરંતુ Newark અને Secaucus વચ્ચે સિંગલ-ટ્રેક ઓપરેશનને કારણે સેવા 133 થી 112 દૈનિક ટ્રેનો સુધી ઘટાડી છે.",
+    "line_summary_north-jersey-coast": "ટ્રેનો હજુ Penn Station NY જાય છે, પરંતુ 109 થી 92 દૈનિક ટ્રેનો સુધી ઘટાડી. મહત્વપૂર્ણ સમયપત્રક ફેરફારો. Perth Amboy/Woodbridge મુસાફરોને Port Authority માટે બસ ક્રોસ-સન્માન મળે છે.",
+    "line_summary_raritan-valley": "Penn Station New York માટે બધી એક-સીટ સવારી સ્થગિત. બધી ટ્રેનો હવે Newark Penn Station પર શરૂ અને સમાપ્ત થાય છે. PSNY પહોંચવા માટે Newark Penn પર NEC માં ટ્રાન્સફર કરો."
   },
   "js": {
     "major_changes": "મોટા ફેરફારો",

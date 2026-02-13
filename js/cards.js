@@ -48,12 +48,22 @@
     summary_desc: "Five NJ Transit lines affected from Feb 15 \u2013 Mar 15, 2026. Service reduced while the new Portal North Bridge is connected.",
     suspended: "Suspended",
     zone: "Zone",
-    powered_by: "Powered by Reroute NJ \u00B7 reroutenj.org"
+    powered_by: "Powered by Reroute NJ \u00B7 reroutenj.org",
+    "line_summary_montclair-boonton": "All weekday Midtown Direct trains diverted to Hoboken. Weekend service to Penn Station NY continues.",
+    "line_summary_morris-essex": "All weekday Midtown Direct trains on the Morristown Line and Gladstone Branch diverted to Hoboken. Weekend service to Penn Station NY continues.",
+    "line_summary_northeast-corridor": "Trains still run to Penn Station NY, but service is reduced from 133 to 112 daily trains due to single-track operation between Newark and Secaucus.",
+    "line_summary_north-jersey-coast": "Trains still run to Penn Station NY, but reduced from 109 to 92 daily trains. Significant schedule changes. Perth Amboy/Woodbridge riders get bus cross-honoring to Port Authority.",
+    "line_summary_raritan-valley": "All one-seat rides to Penn Station New York are suspended. All trains now originate and terminate at Newark Penn Station. Transfer to NEC at Newark Penn to reach PSNY."
   };
 
   // =========================================================================
   // TRANSLATION HELPERS
   // =========================================================================
+  function getLineSummary(lineId, line) {
+    var key = "line_summary_" + lineId;
+    return CT[key] || line.summary;
+  }
+
   function getImpactLabel(impactType) {
     var map = {
       "hoboken-diversion": CT.impact_hoboken_diversion,
@@ -143,7 +153,7 @@
       '<div class="card-body">' +
         '<div class="card-line-name">' + esc(line.name) + "</div>" +
         '<span class="card-badge ' + badgeClass + '">' + esc(getImpactLabel(line.impactType)) + "</span>" +
-        '<div class="card-summary">' + esc(line.summary) + "</div>" +
+        '<div class="card-summary">' + esc(getLineSummary(lineId, line)) + "</div>" +
         statsHtml +
         '<div class="card-alternatives"><h4>' + esc(CT.your_alternatives) + '</h4>' + altHtml + "</div>" +
         '<div class="card-dates">' + esc(CT.date_range) + '</div>' +
@@ -180,7 +190,7 @@
         '<div class="card-station-name">' + esc(station.name) + "</div>" +
         '<div class="card-line-context">' + esc(line.name) + " \u00B7 " + esc(CT.zone) + " " + esc(String(station.zone)) + "</div>" +
         '<span class="card-badge ' + badgeClass + '">' + esc(getImpactLabel(line.impactType)) + "</span>" +
-        '<div class="card-summary">' + esc(line.summary) + "</div>" +
+        '<div class="card-summary">' + esc(getLineSummary(lineId, line)) + "</div>" +
         '<div class="card-alternatives"><h4>' + esc(CT.your_alternatives) + '</h4>' + altHtml + "</div>" +
         '<div class="card-dates">' + esc(CT.date_range) + '</div>' +
         '<a class="card-cta" href="https://reroutenj.org/?line=' + esc(lineId) + '&station=' + esc(stationId) + '" target="_blank" rel="noopener">' + esc(CT.full_details) + '</a>' +
@@ -336,7 +346,7 @@
     // Summary text
     ctx.fillStyle = bodyColor;
     ctx.font = "14px " + FONT_FAMILY;
-    var summaryLines = wrapText(ctx, line.summary, pad, curY + 12, width - pad * 2, 20);
+    var summaryLines = wrapText(ctx, getLineSummary(lineId, line), pad, curY + 12, width - pad * 2, 20);
     curY += summaryLines * 20 + 18;
 
     // Train stats

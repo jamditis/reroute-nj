@@ -390,7 +390,12 @@
     "summary_desc": "Five NJ Transit lines affected from Feb 15 – Mar 15, 2026. Service reduced while the new Portal North Bridge is connected.",
     "suspended": "Suspended",
     "zone": "Zone",
-    "powered_by": "Powered by Reroute NJ · reroutenj.org"
+    "powered_by": "Powered by Reroute NJ · reroutenj.org",
+    "line_summary_montclair-boonton": "All weekday Midtown Direct trains diverted to Hoboken. Weekend service to Penn Station NY continues.",
+    "line_summary_morris-essex": "All weekday Midtown Direct trains on the Morristown Line and Gladstone Branch diverted to Hoboken. Weekend service to Penn Station NY continues.",
+    "line_summary_northeast-corridor": "Trains still run to Penn Station NY, but service is reduced from 133 to 112 daily trains due to single-track operation between Newark and Secaucus.",
+    "line_summary_north-jersey-coast": "Trains still run to Penn Station NY, but reduced from 109 to 92 daily trains. Significant schedule changes. Perth Amboy/Woodbridge riders get bus cross-honoring to Port Authority.",
+    "line_summary_raritan-valley": "All one-seat rides to Penn Station New York are suspended. All trains now originate and terminate at Newark Penn Station. Transfer to NEC at Newark Penn to reach PSNY."
   },
   "js": {
     "major_changes": "MAJOR CHANGES",

@@ -340,7 +340,12 @@
     "summary_desc": "خمسة خطوط NJ Transit متأثرة من 15 فبراير – 15 مارس 2026. خدمة مخفضة أثناء ربط جسر Portal North الجديد.",
     "suspended": "معلّق",
     "zone": "منطقة",
-    "powered_by": "مدعوم من Reroute NJ · reroutenj.org"
+    "powered_by": "مدعوم من Reroute NJ · reroutenj.org",
+    "line_summary_montclair-boonton": "جميع قطارات Midtown Direct في أيام العمل محولة إلى Hoboken. خدمة نهاية الأسبوع إلى Penn Station NY مستمرة.",
+    "line_summary_morris-essex": "جميع قطارات Midtown Direct في أيام العمل على Morristown Line و Gladstone Branch محولة إلى Hoboken. خدمة نهاية الأسبوع إلى Penn Station NY مستمرة.",
+    "line_summary_northeast-corridor": "القطارات لا تزال تعمل إلى Penn Station NY، لكن الخدمة مخفضة من 133 إلى 112 قطاراً يومياً بسبب التشغيل على مسار واحد بين Newark و Secaucus.",
+    "line_summary_north-jersey-coast": "القطارات لا تزال تعمل إلى Penn Station NY، لكنها مخفضة من 109 إلى 92 قطاراً يومياً. تغييرات كبيرة في الجدول. ركاب Perth Amboy/Woodbridge يحصلون على قبول متبادل للباص إلى Port Authority.",
+    "line_summary_raritan-valley": "جميع الرحلات المباشرة إلى Penn Station New York معلقة. جميع القطارات الآن تبدأ وتنتهي في Newark Penn Station. انتقل إلى NEC في Newark Penn للوصول إلى PSNY."
   },
   "js": {
     "major_changes": "تغييرات رئيسية",

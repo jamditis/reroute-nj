@@ -340,7 +340,12 @@
     "summary_desc": "2026年2月15日至3月15日期间，五条NJ Transit线路受影响。新Portal North Bridge连接期间服务减少。",
     "suspended": "暂停",
     "zone": "区域",
-    "powered_by": "技术支持 Reroute NJ · reroutenj.org"
+    "powered_by": "技术支持 Reroute NJ · reroutenj.org",
+    "line_summary_montclair-boonton": "所有工作日Midtown Direct列车改道至Hoboken。周末前往Penn Station NY的服务继续。",
+    "line_summary_morris-essex": "Morristown Line和Gladstone Branch上所有工作日Midtown Direct列车改道至Hoboken。周末前往Penn Station NY的服务继续。",
+    "line_summary_northeast-corridor": "列车仍前往Penn Station NY，但由于Newark和Secaucus之间的单线运营，服务从每天133班减少到112班。",
+    "line_summary_north-jersey-coast": "列车仍前往Penn Station NY，但从每天109班减少到92班。时刻表有重大变化。Perth Amboy/Woodbridge乘客获得前往Port Authority的公交通用票。",
+    "line_summary_raritan-valley": "所有直达Penn Station New York的列车均已暂停。所有列车现在始发和终到Newark Penn Station。在Newark Penn换乘NEC前往PSNY。"
   },
   "js": {
     "major_changes": "重大变更",

@@ -569,6 +569,10 @@
       '      var m = {"hoboken-diversion":[CT.alt_hoboken_1,CT.alt_hoboken_2,CT.alt_hoboken_3],"reduced-service":[CT.alt_reduced_1,CT.alt_reduced_2,CT.alt_reduced_3],"newark-termination":[CT.alt_newark_1,CT.alt_newark_2,CT.alt_newark_3]};\n' +
       '      return m[t]||[];\n' +
       '    }\n' +
+      '    function getLineSummary(id, line) {\n' +
+      '      var k = "line_summary_" + id;\n' +
+      '      return CT[k] || line.summary;\n' +
+      '    }\n' +
       '\n' +
       '    function renderLineCard(lineId) {\n' +
       '      var line = LINE_DATA[lineId];\n' +
@@ -597,7 +601,7 @@
       '        \'<div class="card-body">\' +\n' +
       '          \'<div class="card-line-name">\' + esc(line.name) + "<\\/div>" +\n' +
       '          \'<span class="card-badge \' + badgeClass + \'">\' + esc(getImpactLabel(line.impactType)) + "<\\/span>" +\n' +
-      '          \'<div class="card-summary">\' + esc(line.summary) + "<\\/div>" +\n' +
+      '          \'<div class="card-summary">\' + esc(getLineSummary(lineId, line)) + "<\\/div>" +\n' +
       '          statsHtml +\n' +
       '          \'<div class="card-alternatives"><h4>\' + esc(CT.your_alternatives) + \'<\\/h4>\' + altHtml + "<\\/div>" +\n' +
       '          \'<div class="card-dates">\' + esc(CT.date_range) + \'<\\/div>\' +\n' +
@@ -629,7 +633,7 @@
       '          \'<div class="card-station-name">\' + esc(station.name) + "<\\/div>" +\n' +
       '          \'<div class="card-line-context">\' + esc(line.name) + " \\u00B7 " + esc(CT.zone) + " " + esc(String(station.zone)) + "<\\/div>" +\n' +
       '          \'<span class="card-badge \' + badgeClass + \'">\' + esc(getImpactLabel(line.impactType)) + "<\\/span>" +\n' +
-      '          \'<div class="card-summary">\' + esc(line.summary) + "<\\/div>" +\n' +
+      '          \'<div class="card-summary">\' + esc(getLineSummary(lineId, line)) + "<\\/div>" +\n' +
       '          \'<div class="card-alternatives"><h4>\' + esc(CT.your_alternatives) + \'<\\/h4>\' + altHtml + "<\\/div>" +\n' +
       '          \'<div class="card-dates">\' + esc(CT.date_range) + \'<\\/div>\' +\n' +
       '          \'<a class="card-cta" href="https://reroutenj.org/?line=\' + esc(lineId) + \'&station=\' + esc(stationId) + \'" target="_blank" rel="noopener">\' + esc(CT.full_details) + \'<\\/a>\' +\n' +
