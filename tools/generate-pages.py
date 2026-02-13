@@ -1149,7 +1149,7 @@ def replace_page_specific_content(html, translations, page_key):
         # Post 2 card (embed system post)
         post2_title = get_translation(translations, "blog.post2_title")
         if post2_title:
-            html = html.replace(">New: embed Reroute NJ on your website</h2>", f">{post2_title}</h2>")
+            html = html.replace(">New: Embed Reroute NJ on your website</h2>", f">{post2_title}</h2>")
 
         post2_date = get_translation(translations, "blog.post2_date")
         if post2_date:
@@ -1399,7 +1399,7 @@ def replace_page_specific_content(html, translations, page_key):
 
         heading = get_translation(translations, "blog_post_embed.heading")
         if heading:
-            html = html.replace(">New: embed Reroute NJ on your website</h1>", f">{heading}</h1>")
+            html = html.replace(">New: Embed Reroute NJ on your website</h1>", f">{heading}</h1>")
 
         by_prefix = get_translation(translations, "blog_post_embed.by_prefix")
         if by_prefix:
