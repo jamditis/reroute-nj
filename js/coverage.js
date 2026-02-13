@@ -54,7 +54,8 @@
   // =========================================================================
   function loadData() {
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "data/coverage.json", true);
+    var dataUrl = (window.BASE_PATH || "") + "data/coverage.json";
+    xhr.open("GET", dataUrl, true);
     xhr.onreadystatechange = function () {
       if (xhr.readyState !== 4) return;
       if (xhr.status === 200) {
@@ -62,7 +63,7 @@
           var data = JSON.parse(xhr.responseText);
           articles = data.articles || [];
           if (data.lastUpdated) {
-            $updated.textContent = "Last updated: " + formatDate(data.lastUpdated);
+            $updated.textContent = t("coverage.last_updated") + " " + formatDate(data.lastUpdated);
           }
           populateSourceFilter();
           renderFeed();
@@ -140,7 +141,7 @@
       $feed.innerHTML =
         '<div class="coverage-empty">' +
         '<div class="empty-icon">&#x1F4F0;</div>' +
-        "<p>No articles match your filters.</p>" +
+        "<p>" + t("coverage.no_articles") + "</p>" +
         "</div>";
       return;
     }

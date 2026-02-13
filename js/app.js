@@ -370,7 +370,7 @@
   function populateStations() {
     // Clear existing options except placeholder
     $stationSelect.innerHTML =
-      '<option value="">Choose your station&hellip;</option>';
+      '<option value="">' + esc(t("js.choose_station")) + '</option>';
 
     var line = getCurrentLine();
     var branches = {};
@@ -471,6 +471,7 @@
     }
 
     $impactResult.innerHTML = html;
+    $impactResult.focus();
   }
 
   // --- Impact: Hoboken diversion ---
@@ -538,27 +539,27 @@
     return (
       '<div class="impact-card severe">' +
       '<div class="impact-header" style="background:' + line.color + '">' +
-      '<span class="impact-level">MAJOR CHANGES</span>' +
+      '<span class="impact-level">' + t("js.major_changes") + '</span>' +
       '<span class="impact-station">' + esc(station.name) + "</span>" +
       "</div>" +
       '<div class="impact-body">' +
       '<div class="before-after">' +
       '<div class="before">' +
-      "<h4>Before (normal service)</h4>" +
+      "<h4>" + t("js.before_normal") + "</h4>" +
       '<div class="route-flow">' + beforeFlow + "</div>" +
       '<p class="route-note">' + beforeNote + "</p>" +
       "</div>" +
       '<div class="after">' +
-      "<h4>During cutover (weekdays, Feb 15 – Mar 15)</h4>" +
+      "<h4>" + t("js.during_cutover") + "</h4>" +
       '<div class="route-flow">' + afterFlow + "</div>" +
       '<p class="route-note">' + afterNote + "</p>" +
       "</div>" +
       "</div>" +
-      '<div class="key-changes"><h4>What you need to know</h4><ul>' +
+      '<div class="key-changes"><h4>' + t("js.what_you_need_to_know") + '</h4><ul>' +
       changes.map(function (c) { return "<li>" + esc(c) + "</li>"; }).join("") +
       "</ul></div>" +
       savingsHtml +
-      '<div class="weekend-note"><strong>Weekends are different:</strong> Midtown Direct service ' + (isReverse ? "from" : "to") + ' Penn Station NY continues on Saturday and Sunday. Buy regular Penn Station tickets for weekend travel.</div>' +
+      '<div class="weekend-note"><strong>' + t("js.weekends_different") + '</strong> ' + t("js.weekend_service_continues") + '</div>' +
       "</div></div>"
     );
   }
@@ -614,23 +615,23 @@
     return (
       '<div class="impact-card moderate">' +
       '<div class="impact-header" style="background:' + line.color + '">' +
-      '<span class="impact-level">SCHEDULE CHANGES</span>' +
+      '<span class="impact-level">' + t("js.schedule_changes") + '</span>' +
       '<span class="impact-station">' + esc(station.name) + "</span>" +
       "</div>" +
       '<div class="impact-body">' +
       '<div class="before-after">' +
       '<div class="before">' +
-      "<h4>Before (normal service)</h4>" +
+      "<h4>" + t("js.before_normal") + "</h4>" +
       '<div class="route-flow">' + beforeFlow + "</div>" +
       '<p class="route-note">' + line.trainsBefore + " daily trains on " + esc(line.name) + ".</p>" +
       "</div>" +
       '<div class="after">' +
-      "<h4>During cutover (Feb 15 – Mar 15)</h4>" +
+      "<h4>" + t("js.during_cutover_short") + "</h4>" +
       '<div class="route-flow">' + afterFlow + "</div>" +
       '<p class="route-note">Same ' + (isReverse ? "origin" : "destination") + ", fewer trains (" + line.trainsAfter + " daily). Expect delays from single-track operations at the Portal Bridge.</p>" +
       "</div>" +
       "</div>" +
-      '<div class="key-changes"><h4>What you need to know</h4><ul>' +
+      '<div class="key-changes"><h4>' + t("js.what_you_need_to_know") + '</h4><ul>' +
       changes.map(function (c) { return "<li>" + c + "</li>"; }).join("") +
       "</ul></div>" +
       '<div class="weekend-note"><strong>Tip:</strong> Your route doesn\'t change, but your schedule does. Download the temporary schedule PDF from <a href="https://www.njtransit.com/portalcutover" target="_blank" rel="noopener">njtransit.com/portalcutover</a> and find your specific trains.</div>' +
@@ -700,7 +701,7 @@
     return (
       '<div class="impact-card severe">' +
       '<div class="impact-header" style="background:' + line.color + '">' +
-      '<span class="impact-level">MAJOR CHANGES</span>' +
+      '<span class="impact-level">' + t("js.major_changes") + '</span>' +
       '<span class="impact-station">' + esc(station.name) + "</span>" +
       "</div>" +
       '<div class="impact-body">' +
@@ -711,12 +712,12 @@
       '<p class="route-note">' + beforeNote + "</p>" +
       "</div>" +
       '<div class="after">' +
-      "<h4>During cutover (Feb 15 – Mar 15)</h4>" +
+      "<h4>" + t("js.during_cutover_short") + "</h4>" +
       '<div class="route-flow">' + afterFlow + "</div>" +
       '<p class="route-note">' + afterNote + "</p>" +
       "</div>" +
       "</div>" +
-      '<div class="key-changes"><h4>What you need to know</h4><ul>' +
+      '<div class="key-changes"><h4>' + t("js.what_you_need_to_know") + '</h4><ul>' +
       changes.map(function (c) { return "<li>" + esc(c) + "</li>"; }).join("") +
       "</ul></div>" +
       '<div class="weekend-note"><strong>Alternative:</strong> If you can drive to Newark Penn Station, you can skip the Raritan Valley Line entirely and take an NEC train directly (reduced but still running). Or consider NJ Transit bus service as a backup — some routes serve the Raritan Valley corridor.</div>' +
@@ -732,11 +733,11 @@
     var pctSavings = Math.round((savings / fares.toPenn) * 100);
     return (
       '<div class="savings-callout">' +
-      "<p><strong>Estimated savings for " + esc(station.name) + " (zone " + station.zone + "):</strong></p>" +
-      "<p>Monthly pass to Penn Station: ~$" + fares.toPenn + "</p>" +
-      "<p>Monthly pass to Hoboken: ~$" + fares.toHoboken + "</p>" +
-      "<p><strong>You save ~$" + savings + "/month (" + pctSavings + '% less)</strong>, and PATH/ferry from Hoboken is cross-honored at no extra cost.</p>' +
-      '<p class="fare-disclaimer"><em>Fares are approximate estimates. Verify at <a href="https://www.njtransit.com" target="_blank" rel="noopener">njtransit.com</a> before purchasing.</em></p>' +
+      "<p><strong>" + t("js.estimated_savings") + " " + esc(station.name) + " (" + t("js.zone") + " " + station.zone + "):</strong></p>" +
+      "<p>" + t("js.monthly_pass_penn") + " ~$" + fares.toPenn + "</p>" +
+      "<p>" + t("js.monthly_pass_hoboken") + " ~$" + fares.toHoboken + "</p>" +
+      "<p><strong>" + t("js.you_save") + " ~$" + savings + t("js.per_month") + " (" + pctSavings + '% less)</strong>, ' + t("js.cross_honored_free") + '</p>' +
+      '<p class="fare-disclaimer"><em>' + t("js.fare_disclaimer") + '</em></p>' +
       "</div>"
     );
   }
@@ -751,35 +752,35 @@
     if (line.impactType === "hoboken-diversion") {
       if (isReverse) {
         $routesIntro.innerHTML =
-          "<h2>How do I get home from Manhattan?</h2>" +
+          "<h2>" + t("js.how_get_home") + "</h2>" +
           "<p>Your evening " + esc(line.name) + " train now departs from Hoboken. Here are your options to get to Hoboken from Manhattan, all cross-honored with your NJ Transit ticket or pass.</p>";
         $routesContent.innerHTML = renderHobokenRoutesReverse();
       } else {
         $routesIntro.innerHTML =
-          "<h2>How do I get to Manhattan?</h2>" +
+          "<h2>" + t("js.how_get_manhattan") + "</h2>" +
           "<p>Your weekday " + esc(line.name) + " train now ends at Hoboken. Here are your options to get the rest of the way, all cross-honored with your NJ Transit ticket or pass.</p>";
         $routesContent.innerHTML = renderHobokenRoutes();
       }
     } else if (line.impactType === "reduced-service") {
       if (isReverse) {
         $routesIntro.innerHTML =
-          "<h2>Getting home in the evening</h2>" +
+          "<h2>" + t("js.getting_home") + "</h2>" +
           "<p>Your " + esc(line.name) + " evening train from Penn Station NY still runs, but with fewer trains and more delays. Here's how to adapt.</p>";
       } else {
         $routesIntro.innerHTML =
-          "<h2>Planning your commute</h2>" +
+          "<h2>" + t("js.planning_commute") + "</h2>" +
           "<p>Your " + esc(line.name) + " train still goes to Penn Station NY, but with fewer trains and more delays. Here's how to adapt.</p>";
       }
       $routesContent.innerHTML = renderReducedServiceRoutes(line);
     } else if (line.impactType === "newark-termination") {
       if (isReverse) {
         $routesIntro.innerHTML =
-          "<h2>Getting home from Manhattan</h2>" +
+          "<h2>" + t("js.getting_home_manhattan") + "</h2>" +
           "<p>Your " + esc(line.name) + " evening train now departs from Newark Penn Station. Here's how to get from Manhattan to Newark Penn to catch your train.</p>";
         $routesContent.innerHTML = renderNewarkRoutesReverse();
       } else {
         $routesIntro.innerHTML =
-          "<h2>Getting past Newark Penn</h2>" +
+          "<h2>" + t("js.getting_past_newark") + "</h2>" +
           "<p>Your " + esc(line.name) + " train now terminates at Newark Penn Station. Here's how to get the rest of the way to Manhattan.</p>";
         $routesContent.innerHTML = renderNewarkRoutes();
       }
@@ -791,7 +792,7 @@
       makeRouteCard(
         "&#x1F687;",
         "PATH train",
-        "Best for most riders",
+        t("js.recommended"),
         true,
         [
           { label: "From", value: "Hoboken Terminal" },
@@ -807,7 +808,7 @@
       makeRouteCard(
         "&#x26F4;&#xFE0F;",
         "NY Waterway ferry",
-        "Scenic & less crowded",
+        t("js.scenic_less_crowded"),
         false,
         [
           { label: "From", value: "Hoboken Terminal ferry dock" },
@@ -823,7 +824,7 @@
       makeRouteCard(
         "&#x1F68C;",
         "NJ Transit Bus 126",
-        "Best for Port Authority area",
+        t("js.port_authority_area"),
         false,
         [
           { label: "From", value: "Hoboken Terminal bus area" },
@@ -951,7 +952,7 @@
       makeRouteCard(
         "&#x1F687;",
         "PATH to Hoboken",
-        "Best for most riders",
+        t("js.recommended"),
         true,
         [
           { label: "From", value: "33rd Street, Manhattan" },
@@ -967,7 +968,7 @@
       makeRouteCard(
         "&#x26F4;&#xFE0F;",
         "NY Waterway ferry to Hoboken",
-        "Scenic & less crowded",
+        t("js.scenic_less_crowded"),
         false,
         [
           { label: "From", value: "W. 39th St, Midtown Manhattan" },
@@ -983,7 +984,7 @@
       makeRouteCard(
         "&#x1F68C;",
         "NJ Transit Bus 126 to Hoboken",
-        "Best from Port Authority area",
+        t("js.port_authority_area"),
         false,
         [
           { label: "From", value: "Port Authority Bus Terminal (42nd St & 8th Ave)" },
@@ -1073,7 +1074,7 @@
       '<div class="route-tips">' +
       '<p class="pro">' + esc(pro) + "</p>" +
       '<p class="con">' + esc(con) + "</p>" +
-      '<p class="tip"><strong>Pro tip:</strong> ' + esc(tip) + "</p>" +
+      '<p class="tip"><strong>' + t("js.pro_tip") + '</strong> ' + esc(tip) + "</p>" +
       "</div></div></div>"
     );
   }
@@ -1083,7 +1084,7 @@
       '<div class="route-card other">' +
       '<div class="route-card-header">' +
       '<span class="mode-icon" aria-hidden="true">&#x1F6B6;</span>' +
-      "<div><h3>Other options to consider</h3></div>" +
+      "<div><h3>" + t("js.other_options") + "</h3></div>" +
       "</div>" +
       '<div class="route-card-body"><div class="route-tips">' +
       items.map(function (item) { return "<p>" + item + "</p>"; }).join("") +
@@ -1099,17 +1100,17 @@
 
     if (line.impactType === "hoboken-diversion") {
       $ticketsIntro.innerHTML =
-        "<h2>What ticket should I buy?</h2>" +
+        "<h2>" + t("js.what_ticket") + "</h2>" +
         "<p>The cutover changes what you should buy for the " + esc(line.name) + ". Here's a guide based on how you ride.</p>";
       $ticketsContent.innerHTML = renderHobokenTickets(line);
     } else if (line.impactType === "reduced-service") {
       $ticketsIntro.innerHTML =
-        "<h2>What ticket should I buy?</h2>" +
+        "<h2>" + t("js.what_ticket") + "</h2>" +
         "<p>Good news for " + esc(line.name) + " riders: your tickets mostly stay the same.</p>";
       $ticketsContent.innerHTML = renderReducedServiceTickets(line);
     } else if (line.impactType === "newark-termination") {
       $ticketsIntro.innerHTML =
-        "<h2>What ticket should I buy?</h2>" +
+        "<h2>" + t("js.what_ticket") + "</h2>" +
         "<p>Ticketing for " + esc(line.name) + " riders gets a bit more complicated during the cutover.</p>";
       $ticketsContent.innerHTML = renderNewarkTickets(line);
     }
@@ -1118,21 +1119,21 @@
   function renderHobokenTickets(line) {
     return (
       '<div class="ticket-scenarios">' +
-      makeScenarioCard("Monthly pass holders", [
+      makeScenarioCard(t("js.monthly_pass_holders"), [
         "<strong>Buy a monthly pass to/from Hoboken</strong> (via Newark Broad St) for February and March.",
         "This pass works for Penn Station travel during <strong>Feb 1–15</strong> and <strong>Mar 15–31</strong> (the normal-service portions of each month).",
         "During <strong>Feb 15 – Mar 15</strong>, your Hoboken pass is <strong>cross-honored</strong> on PATH (Hoboken \u2194 33rd St), NY Waterway ferry (Hoboken \u2194 W. 39th St), and NJ Transit Bus 126.",
       ], '<p><strong>You save money.</strong> Hoboken passes cost less than Penn Station passes because Hoboken is closer. The PATH/ferry ride is included free. NJ Transit says riders can save up to 25% per trip.</p>') +
-      makeScenarioCard("One-way ticket buyers (weekdays)", [
+      makeScenarioCard(t("js.one_way_buyers"), [
         "<strong>Feb 15 – Mar 15:</strong> Buy one-way tickets to/from <strong>Hoboken</strong> (not Penn Station).",
         "Your Hoboken ticket is cross-honored on PATH, ferry, and Bus 126 to reach Manhattan.",
         "<strong>Before Feb 15 and after Mar 15:</strong> Buy regular tickets to/from Penn Station New York.",
       ], '<p><strong>You save money.</strong> Hoboken tickets cost less than Penn Station tickets. The PATH/ferry ride is included free.</p>') +
-      makeScenarioCard("Weekend riders", [
+      makeScenarioCard(t("js.weekend_riders"), [
         "<strong>No change.</strong> Weekend Midtown Direct trains continue to Penn Station New York.",
         "Buy regular one-way tickets to/from <strong>Penn Station New York</strong> for Saturday and Sunday travel.",
       ]) +
-      makeScenarioCard("Occasional riders / not sure what to do", [
+      makeScenarioCard(t("js.occasional_riders"), [
         "If you ride <strong>weekdays between Feb 15 and Mar 15</strong>: buy a ticket to <strong>Hoboken</strong>. Transfer to PATH/ferry/bus at Hoboken for free.",
         "If you ride <strong>weekends</strong> or <strong>outside the cutover dates</strong>: buy a regular ticket to <strong>Penn Station New York</strong>.",
         'When in doubt, check <a href="https://www.njtransit.com/portalcutover" target="_blank" rel="noopener">njtransit.com/portalcutover</a> or ask a conductor.',
@@ -1153,12 +1154,12 @@
 
     return (
       '<div class="ticket-scenarios">' +
-      makeScenarioCard("Monthly pass holders", [
+      makeScenarioCard(t("js.monthly_pass_holders"), [
         "<strong>No change.</strong> Buy your regular monthly pass to/from Penn Station New York.",
         "Your pass works the same as always — there are just fewer trains running.",
         "Check the temporary schedule to make sure your specific trains are still running.",
       ]) +
-      makeScenarioCard("One-way ticket buyers", [
+      makeScenarioCard(t("js.one_way_buyers"), [
         "<strong>No change.</strong> Buy regular one-way tickets to/from Penn Station New York.",
         "Same tickets, same prices — just fewer trains and potentially longer travel times.",
       ]) +
@@ -1180,12 +1181,12 @@
         "You will need to transfer to a <strong>Northeast Corridor</strong> train at Newark Penn to reach Penn Station NY.",
         'Check <a href="https://www.njtransit.com/portalcutover" target="_blank" rel="noopener">njtransit.com/portalcutover</a> for specific ticket guidance — your existing pass or ticket should cover the transfer in most cases.',
       ]) +
-      makeScenarioCard("Monthly pass holders", [
+      makeScenarioCard(t("js.monthly_pass_holders"), [
         "If your pass was for travel to Penn Station NY, it should still be valid for the Newark Penn transfer + NEC connection.",
         "Verify with NJ Transit that your specific pass covers the transfer. Rules may vary by zone.",
         "Consider whether a different pass configuration saves you money during the cutover period.",
       ]) +
-      makeScenarioCard("One-way ticket buyers", [
+      makeScenarioCard(t("js.one_way_buyers"), [
         "Buy a ticket to your final destination (Penn Station New York) as usual.",
         "The transfer at Newark Penn should be covered by your through ticket.",
         "If in doubt, ask a conductor or check the NJ Transit app.",

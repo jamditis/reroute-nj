@@ -8,19 +8,30 @@
   <meta property="og:title" content="Compare commute options — Reroute NJ">
   <meta property="og:description" content="Visual side-by-side commute comparison during the Portal Bridge cutover. Pick your station and destination, see all options ranked.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://jamditis.github.io/reroute-nj/compare.html">
-  <meta property="og:image" content="https://jamditis.github.io/reroute-nj/img/og-image.png">
+  <meta property="og:url" content="https://reroutenj.org/compare.html">
+  <meta property="og:image" content="https://reroutenj.org/img/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Compare commute options — Reroute NJ">
   <meta name="twitter:description" content="Visual side-by-side commute comparison during the Portal Bridge cutover. Pick your station and destination, see all options ranked.">
-  <meta name="twitter:image" content="https://jamditis.github.io/reroute-nj/img/og-image.png">
+  <meta name="twitter:image" content="https://reroutenj.org/img/og-image.png">
   <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="alternate" hreflang="en" href="https://reroutenj.org/compare.html">
+  <link rel="alternate" hreflang="es" href="https://reroutenj.org/es/compare.html">
+  <link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/compare.html">
+  <link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/compare.html">
+  <link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/compare.html">
+  <link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/compare.html">
+  <link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/compare.html">
+  <link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/compare.html">
+  <link rel="alternate" hreflang="it" href="https://reroutenj.org/it/compare.html">
+  <link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/compare.html">
+  <link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/compare.html">
+  <link rel="alternate" hreflang="x-default" href="https://reroutenj.org/compare.html">
 </head>
 <body>
-
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <header class="header" role="banner">
@@ -28,6 +39,26 @@
       <a href="index.html" class="brand-link"><div class="brand">Reroute<span>NJ</span></div></a>
       <p class="tagline">Compare your commute options</p>
       <div class="countdown" id="countdown"></div>
+      <div class="a11y-toggles">
+        <button class="a11y-btn" id="toggle-contrast" type="button" aria-pressed="false" aria-label="Toggle high contrast">High contrast</button>
+        <button class="a11y-btn" id="toggle-simplified" type="button" aria-pressed="false" aria-label="Toggle simplified view">Simplified view</button>
+      </div>
+      <div class="lang-selector">
+        <label for="lang-select" class="lang-selector-label sr-only">Language</label>
+        <select id="lang-select">
+          <option value="en">English</option>
+          <option value="es">Espa&#241;ol</option>
+          <option value="zh">&#20013;&#25991;</option>
+          <option value="tl">Tagalog</option>
+          <option value="ko">&#54620;&#44397;&#50612;</option>
+          <option value="pt">Portugu&#234;s</option>
+          <option value="gu">&#2711;&#2753;&#2716;&#2736;&#2750;&#2724;&#2752;</option>
+          <option value="hi">&#2361;&#2367;&#2306;&#2342;&#2368;</option>
+          <option value="it">Italiano</option>
+          <option value="ar">&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;</option>
+          <option value="pl">Polski</option>
+        </select>
+      </div>
     </div>
   </header>
 
@@ -73,7 +104,7 @@
     </section>
 
     <!-- Results -->
-    <section id="results" class="compare-results hidden" aria-live="polite">
+    <section id="results" class="compare-results hidden" aria-live="polite" tabindex="-1">
       <div id="results-header" class="results-header"></div>
       <div id="results-normal" class="results-normal"></div>
       <div id="results-list"></div>
@@ -89,7 +120,9 @@
     </div>
   </footer>
 
+  <script src="js/i18n.js"></script>
   <script src="js/shared.js"></script>
   <script src="js/compare.js"></script>
+  <script>initA11yToggles(); initLangSelector();</script>
 </body>
 </html>

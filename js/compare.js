@@ -349,7 +349,7 @@
   // STATION DROPDOWN
   // =========================================================================
   function populateStations() {
-    $stationSelect.innerHTML = '<option value="">Choose your station&hellip;</option>';
+    $stationSelect.innerHTML = '<option value="">' + esc(t("js.choose_station")) + '</option>';
     if (!currentLineId) return;
 
     var line = LINES[currentLineId];
@@ -590,7 +590,7 @@
     var normalTotal = currentStation.normalTimeToPenn + currentDest.fromPennNY;
     $resultsNormal.innerHTML =
       '<div class="normal-ref">' +
-      '<div class="normal-ref-label">Your normal commute</div>' +
+      '<div class="normal-ref-label">' + t("compare.your_normal_commute") + '</div>' +
       '<div class="normal-ref-time">~' + normalTotal + " min</div>" +
       '<div class="normal-ref-route">' + esc(currentStation.name) + " \u2192 Penn Station NY \u2192 " + esc(currentDest.name) + "</div>" +
       "</div>";
@@ -609,7 +609,7 @@
       html += '<div class="result-card' + (opt.recommended ? " recommended" : "") + '">';
       html += '<div class="result-rank">' + (idx + 1) + "</div>";
       html += '<div class="result-info">';
-      html += "<h3>" + opt.name + (opt.recommended ? ' <span class="rec-badge">Fastest</span>' : "") + "</h3>";
+      html += "<h3>" + opt.name + (opt.recommended ? ' <span class="rec-badge">' + t("compare.fastest") + '</span>' : "") + "</h3>";
       html += '<p class="result-summary">' + opt.summary + "</p>";
 
       // Timeline bar
@@ -626,8 +626,8 @@
 
       // Meta
       html += '<div class="result-meta">';
-      html += '<span class="result-total">~' + opt.totalTime + " min total</span>";
-      html += '<span class="result-delta ' + deltaClass + '">' + deltaStr + " vs normal</span>";
+      html += '<span class="result-total">~' + opt.totalTime + " " + t("compare.min_total") + "</span>";
+      html += '<span class="result-delta ' + deltaClass + '">' + deltaStr + " " + t("compare.vs_normal") + "</span>";
       html += '<span class="result-cost">' + esc(opt.cost) + "</span>";
       html += "</div>";
 
@@ -643,8 +643,8 @@
     // Share button
     var shareText = buildShareText(line, options, normalTotal);
     $resultsShare.innerHTML =
-      '<button class="share-btn" id="share-btn">Copy commute summary to clipboard</button>' +
-      '<span class="share-confirm hidden" id="share-confirm">Copied!</span>';
+      '<button class="share-btn" id="share-btn">' + t("compare.copy_summary") + '</button>' +
+      '<span class="share-confirm hidden" id="share-confirm">' + t("compare.copied") + '</span>';
 
     document.getElementById("share-btn").addEventListener("click", function () {
       if (navigator.clipboard) {
@@ -657,8 +657,9 @@
       }
     });
 
-    // Scroll to results
+    // Scroll to results and focus for screen readers
     $results.scrollIntoView({ behavior: "smooth", block: "start" });
+    $results.focus();
   }
 
   function buildShareText(line, options, normalTotal) {

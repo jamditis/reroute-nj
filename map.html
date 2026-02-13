@@ -8,17 +8,29 @@
   <meta property="og:title" content="Interactive map — Reroute NJ">
   <meta property="og:description" content="Interactive map of the Portal Bridge cutover showing affected stations, transfer points, and alternative routes.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://jamditis.github.io/reroute-nj/map.html">
-  <meta property="og:image" content="https://jamditis.github.io/reroute-nj/img/og-image.png">
+  <meta property="og:url" content="https://reroutenj.org/map.html">
+  <meta property="og:image" content="https://reroutenj.org/img/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Interactive map — Reroute NJ">
   <meta name="twitter:description" content="Interactive map of the Portal Bridge cutover showing affected stations, transfer points, and alternative routes.">
-  <meta name="twitter:image" content="https://jamditis.github.io/reroute-nj/img/og-image.png">
+  <meta name="twitter:image" content="https://reroutenj.org/img/og-image.png">
   <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="alternate" hreflang="en" href="https://reroutenj.org/map.html">
+  <link rel="alternate" hreflang="es" href="https://reroutenj.org/es/map.html">
+  <link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/map.html">
+  <link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/map.html">
+  <link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/map.html">
+  <link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/map.html">
+  <link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/map.html">
+  <link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/map.html">
+  <link rel="alternate" hreflang="it" href="https://reroutenj.org/it/map.html">
+  <link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/map.html">
+  <link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/map.html">
+  <link rel="alternate" hreflang="x-default" href="https://reroutenj.org/map.html">
   <style>
     #map {
       width: 100%;
@@ -98,6 +110,7 @@
   </style>
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
@@ -106,6 +119,26 @@
       <a href="index.html" class="brand-link"><div class="brand">Reroute<span>NJ</span></div></a>
       <p class="tagline">Interactive cutover map</p>
       <div class="countdown" id="countdown"></div>
+      <div class="a11y-toggles">
+        <button class="a11y-btn" id="toggle-contrast" type="button" aria-pressed="false" aria-label="Toggle high contrast">High contrast</button>
+        <button class="a11y-btn" id="toggle-simplified" type="button" aria-pressed="false" aria-label="Toggle simplified view">Simplified view</button>
+      </div>
+      <div class="lang-selector">
+        <label for="lang-select" class="lang-selector-label sr-only">Language</label>
+        <select id="lang-select">
+          <option value="en">English</option>
+          <option value="es">Espa&#241;ol</option>
+          <option value="zh">&#20013;&#25991;</option>
+          <option value="tl">Tagalog</option>
+          <option value="ko">&#54620;&#44397;&#50612;</option>
+          <option value="pt">Portugu&#234;s</option>
+          <option value="gu">&#2711;&#2753;&#2716;&#2736;&#2750;&#2724;&#2752;</option>
+          <option value="hi">&#2361;&#2367;&#2306;&#2342;&#2368;</option>
+          <option value="it">Italiano</option>
+          <option value="ar">&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;</option>
+          <option value="pl">Polski</option>
+        </select>
+      </div>
     </div>
   </header>
 
@@ -201,7 +234,9 @@
   </footer>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="js/i18n.js"></script>
   <script src="js/shared.js"></script>
   <script src="js/map.js"></script>
+  <script>initA11yToggles(); initLangSelector();</script>
 </body>
 </html>

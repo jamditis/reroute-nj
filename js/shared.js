@@ -3,6 +3,21 @@
 // intentional globals consumed by app.js, compare.js, and coverage.js.
 
 // =========================================================================
+// ACCESSIBILITY TOGGLES
+// Restore saved state immediately to prevent flash of unstyled content.
+// =========================================================================
+(function restoreA11yState() {
+  try {
+    if (localStorage.getItem("rnj-contrast") === "high") {
+      document.body.setAttribute("data-contrast", "high");
+    }
+    if (localStorage.getItem("rnj-view") === "simplified") {
+      document.body.setAttribute("data-view", "simplified");
+    }
+  } catch (e) { /* localStorage unavailable */ }
+})();
+
+// =========================================================================
 // DATES
 // =========================================================================
 var CUTOVER_START = new Date("2026-02-15T00:00:00");
@@ -57,20 +72,95 @@ function updateCountdown() {
   if (now < CUTOVER_START) {
     var days = Math.ceil((CUTOVER_START - now) / msPerDay);
     el.innerHTML =
-      'Cutover begins in <span class="num">' +
+      t("common.cutover_begins_in") + ' <span class="num">' +
       days +
-      "</span> day" +
-      (days !== 1 ? "s" : "");
+      "</span> " +
+      (days !== 1 ? t("common.days") : t("common.day"));
   } else if (now < CUTOVER_END) {
     var days2 = Math.ceil((CUTOVER_END - now) / msPerDay);
     el.innerHTML =
       '<span class="num">' +
       days2 +
-      "</span> day" +
-      (days2 !== 1 ? "s" : "") +
-      " remaining in Phase 1";
+      "</span> " +
+      (days2 !== 1 ? t("common.days") : t("common.day")) +
+      " " + t("common.remaining_phase1");
   } else {
     el.innerHTML =
-      "Phase 1 complete &middot; Phase 2 expected " + PHASE2_APPROX;
+      t("common.phase1_complete") + " &middot; " + t("common.phase2_expected") + " " + PHASE2_APPROX;
   }
+}
+
+// =========================================================================
+// ACCESSIBILITY TOGGLE INITIALIZATION
+// Call after DOM is ready. Wires up the high-contrast and simplified-view
+// toggle buttons, syncs aria-pressed state with body data attributes,
+// and persists choices to localStorage.
+// =========================================================================
+function initA11yToggles() {
+  var contrastBtn = document.getElementById("toggle-contrast");
+  var simplifiedBtn = document.getElementById("toggle-simplified");
+
+  if (contrastBtn) {
+    var isHigh = document.body.getAttribute("data-contrast") === "high";
+    contrastBtn.setAttribute("aria-pressed", isHigh ? "true" : "false");
+
+    contrastBtn.addEventListener("click", function () {
+      var active = document.body.getAttribute("data-contrast") === "high";
+      if (active) {
+        document.body.removeAttribute("data-contrast");
+        contrastBtn.setAttribute("aria-pressed", "false");
+        try { localStorage.removeItem("rnj-contrast"); } catch (e) {}
+      } else {
+        document.body.setAttribute("data-contrast", "high");
+        contrastBtn.setAttribute("aria-pressed", "true");
+        try { localStorage.setItem("rnj-contrast", "high"); } catch (e) {}
+      }
+    });
+  }
+
+  if (simplifiedBtn) {
+    var isSimplified = document.body.getAttribute("data-view") === "simplified";
+    simplifiedBtn.setAttribute("aria-pressed", isSimplified ? "true" : "false");
+
+    simplifiedBtn.addEventListener("click", function () {
+      var active = document.body.getAttribute("data-view") === "simplified";
+      if (active) {
+        document.body.removeAttribute("data-view");
+        simplifiedBtn.setAttribute("aria-pressed", "false");
+        try { localStorage.removeItem("rnj-view"); } catch (e) {}
+      } else {
+        document.body.setAttribute("data-view", "simplified");
+        simplifiedBtn.setAttribute("aria-pressed", "true");
+        try { localStorage.setItem("rnj-view", "simplified"); } catch (e) {}
+      }
+    });
+  }
+}
+
+// =========================================================================
+// LANGUAGE SELECTOR
+// =========================================================================
+function initLangSelector() {
+  var sel = document.getElementById("lang-select");
+  if (!sel) return;
+
+  var path = window.location.pathname;
+  var page = path.substring(path.lastIndexOf("/") + 1) || "index.html";
+  var htmlLang = document.documentElement.lang || "en";
+
+  for (var i = 0; i < sel.options.length; i++) {
+    if (sel.options[i].value === htmlLang) {
+      sel.selectedIndex = i;
+      break;
+    }
+  }
+
+  sel.addEventListener("change", function () {
+    var lang = this.value;
+    if (lang === "en") {
+      window.location.href = "/" + page;
+    } else {
+      window.location.href = "/" + lang + "/" + page;
+    }
+  });
 }

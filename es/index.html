@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reroute NJ — Navigate the Portal Bridge cutover</title>
+  <title>Reroute NJ — Navega el cambio del Portal Bridge</title>
   <meta name="description" content="Free tools to help NJ Transit riders navigate the Portal North Bridge cutover. Find alternative routes, figure out what ticket to buy, and understand how your commute changes.">
-  <meta property="og:title" content="Reroute NJ — Navigate the Portal Bridge cutover">
+  <meta property="og:title" content="Reroute NJ — Navega el cambio del Portal Bridge">
   <meta property="og:description" content="Free tools for NJ Transit riders affected by the Portal North Bridge cutover (Feb 15 – Mar 15, 2026).">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://reroutenj.org/">
@@ -13,11 +13,23 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Reroute NJ — Navigate the Portal Bridge cutover">
+  <meta name="twitter:title" content="Reroute NJ — Navega el cambio del Portal Bridge">
   <meta name="twitter:description" content="Free tools for NJ Transit riders affected by the Portal North Bridge cutover (Feb 15 – Mar 15, 2026).">
   <meta name="twitter:image" content="https://reroutenj.org/img/og-image.png">
-  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="alternate" hreflang="en" href="https://reroutenj.org/index.html">
+  <link rel="alternate" hreflang="es" href="https://reroutenj.org/es/index.html">
+  <link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/index.html">
+  <link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/index.html">
+  <link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/index.html">
+  <link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/index.html">
+  <link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/index.html">
+  <link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/index.html">
+  <link rel="alternate" hreflang="it" href="https://reroutenj.org/it/index.html">
+  <link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/index.html">
+  <link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/index.html">
+  <link rel="alternate" hreflang="x-default" href="https://reroutenj.org/index.html">
   <link rel="alternate" hreflang="en" href="https://reroutenj.org/index.html">
   <link rel="alternate" hreflang="es" href="https://reroutenj.org/es/index.html">
   <link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/index.html">
@@ -32,16 +44,16 @@
   <link rel="alternate" hreflang="x-default" href="https://reroutenj.org/index.html">
 </head>
 <body>
-  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <a href="#main-content" class="skip-link">Ir al contenido principal</a>
 
-  <header class="header" role="banner">
+  <header class="header">
     <div class="header-inner">
       <div class="brand">Reroute<span>NJ</span></div>
-      <p class="tagline">Navigate the Portal Bridge cutover</p>
+      <p class="tagline">Navega el cambio del Portal Bridge</p>
       <div class="countdown" id="countdown"></div>
       <div class="a11y-toggles">
-        <button class="a11y-btn" id="toggle-contrast" type="button" aria-pressed="false" aria-label="Toggle high contrast">High contrast</button>
-        <button class="a11y-btn" id="toggle-simplified" type="button" aria-pressed="false" aria-label="Toggle simplified view">Simplified view</button>
+        <button class="a11y-btn" id="toggle-contrast" type="button" aria-pressed="false" aria-label="Toggle high contrast">Alto contraste</button>
+        <button class="a11y-btn" id="toggle-simplified" type="button" aria-pressed="false" aria-label="Toggle simplified view">Vista simplificada</button>
       </div>
       <div class="lang-selector">
         <label for="lang-select" class="lang-selector-label sr-only">Language</label>
@@ -62,23 +74,19 @@
     </div>
   </header>
 
-  <div class="alert-banner" id="alert-banner" role="alert">
+  <div class="alert-banner" id="alert-banner">
     <div class="container">
-      <strong>Phase 1:</strong> Feb 15 – Mar 15, 2026 &middot; All lines affected except Atlantic City &middot; 50% service reduction between Newark &amp; Secaucus
+      <strong>Fase 1:</strong> 15 feb – 15 mar 2026 &middot; Todas las líneas afectadas excepto Atlantic City &middot; 50% de reducción de servicio entre Newark y Secaucus
     </div>
   </div>
 
-  <nav class="tool-nav" aria-label="Site tools">
-    <span class="hamburger-label">Line guide</span>
-    <button class="hamburger-btn" aria-expanded="false" aria-label="Toggle navigation menu">
-      <span></span>
-    </button>
+  <nav class="tool-nav">
     <div class="container">
-      <a href="index.html" class="tool-nav-link active" aria-current="page">Line guide</a>
-      <a href="compare.html" class="tool-nav-link">Commute comparison</a>
-      <a href="coverage.html" class="tool-nav-link">News coverage</a>
-      <a href="map.html" class="tool-nav-link">Map</a>
-      <a href="embed.html" class="tool-nav-link">Embed &amp; share</a>
+      <a href="../index.html" class="tool-nav-link active">Guía de líneas</a>
+      <a href="../compare.html" class="tool-nav-link">Comparar viajes</a>
+      <a href="../coverage.html" class="tool-nav-link">Noticias</a>
+      <a href="../map.html" class="tool-nav-link">Mapa</a>
+      <a href="../embed.html" class="tool-nav-link">Insertar y compartir</a>
     </div>
   </nav>
 
@@ -87,51 +95,50 @@
     <div class="control-panel">
       <section class="line-header">
         <div class="line-badge" id="line-badge">Select a line</div>
-        <nav class="line-nav" id="line-nav" aria-label="Select train line"></nav>
+        <nav class="line-nav" id="line-nav"></nav>
       </section>
 
       <section class="station-picker">
-        <label for="station-select">Your station</label>
+        <label for="station-select">Tu estación</label>
         <select id="station-select">
-          <option value="">Choose your station&hellip;</option>
+          <option value="">Elige tu estación…</option>
         </select>
       </section>
 
       <section class="direction-picker">
-        <label for="direction-select">Direction of travel</label>
-        <div class="direction-toggle" id="direction-toggle" role="group" aria-labelledby="direction-label">
-          <span id="direction-label" class="sr-only">Direction of travel</span>
-          <button class="direction-btn active" data-dir="nj-to-nyc" aria-pressed="true">NJ &rarr; NYC <span class="dir-sub">morning commute</span></button>
-          <button class="direction-btn" data-dir="nyc-to-nj" aria-pressed="false">NYC &rarr; NJ <span class="dir-sub">evening commute</span></button>
+        <label for="direction-select">Dirección de viaje</label>
+        <div class="direction-toggle" id="direction-toggle">
+          <button class="direction-btn active" data-dir="nj-to-nyc">NJ &rarr; NYC <span class="dir-sub">viaje matutino</span></button>
+          <button class="direction-btn" data-dir="nyc-to-nj">NYC &rarr; NJ <span class="dir-sub">viaje vespertino</span></button>
         </div>
       </section>
     </div>
 
-    <nav class="tool-tabs" role="tablist" aria-label="Tool options">
-      <button class="tab active" role="tab" aria-selected="true" aria-controls="panel-affected" id="tab-affected" data-tab="affected">Am I affected?</button>
-      <button class="tab" role="tab" aria-selected="false" aria-controls="panel-routes" id="tab-routes" data-tab="routes" tabindex="-1">Route planner</button>
-      <button class="tab" role="tab" aria-selected="false" aria-controls="panel-tickets" id="tab-tickets" data-tab="tickets" tabindex="-1">Ticket guide</button>
+    <nav class="tool-tabs" role="tablist">
+      <button class="tab active" role="tab" aria-selected="true" data-tab="affected">¿Me afecta?</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="routes">Planificador de rutas</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="tickets">Guía de boletos</button>
     </nav>
 
     <!-- Tool 1: Am I affected? -->
-    <section id="panel-affected" class="tool-panel active" role="tabpanel" aria-labelledby="tab-affected">
+    <section id="panel-affected" class="tool-panel active" role="tabpanel">
       <div class="panel-intro">
-        <h2>Am I affected?</h2>
-        <p>Select your line and station above to see exactly how the cutover changes your commute.</p>
+        <h2>¿Me afecta?</h2>
+        <p>Selecciona tu línea y estación arriba para ver exactamente cómo el cambio afecta tu viaje.</p>
       </div>
 
       <div id="impact-empty">
         <div class="cutover-summary">
-          <h3>How the cutover affects your commute</h3>
-          <p>Starting February 15, the Portal North Bridge connection will reduce NJ Transit service for four weeks. Select your line and station above to see exactly what changes for you.</p>
+          <h3>Cómo el cambio afecta tu viaje</h3>
+          <p>A partir del 15 de febrero, la conexión del Portal North Bridge reducirá el servicio de NJ Transit durante cuatro semanas. Selecciona tu línea y estación arriba para ver qué cambia para ti.</p>
           <div class="cutover-summary-grid">
             <div class="summary-stat">
               <span class="stat-number">5</span>
-              <span class="stat-label">lines affected</span>
+              <span class="stat-label">líneas afectadas</span>
             </div>
             <div class="summary-stat">
               <span class="stat-number">50%</span>
-              <span class="stat-label">service reduction</span>
+              <span class="stat-label">reducción de servicio</span>
             </div>
             <div class="summary-stat">
               <span class="stat-number">4 weeks</span>
@@ -145,7 +152,7 @@
     </section>
 
     <!-- Tool 2: Route planner -->
-    <section id="panel-routes" class="tool-panel" role="tabpanel" aria-labelledby="tab-routes">
+    <section id="panel-routes" class="tool-panel" role="tabpanel">
       <div class="panel-intro" id="routes-intro">
         <h2>Route planner</h2>
         <p>Select a line above to see your options during the cutover.</p>
@@ -154,7 +161,7 @@
     </section>
 
     <!-- Tool 3: Ticket guide -->
-    <section id="panel-tickets" class="tool-panel" role="tabpanel" aria-labelledby="tab-tickets">
+    <section id="panel-tickets" class="tool-panel" role="tabpanel">
       <div class="panel-intro" id="tickets-intro">
         <h2>What ticket should I buy?</h2>
         <p>Select a line above to see ticket guidance for the cutover period.</p>
@@ -164,8 +171,8 @@
 
     <!-- Hoboken Terminal guide -->
     <section class="info-section" id="hoboken-guide">
-      <h2>Navigating Hoboken Terminal</h2>
-      <p class="section-intro">If your line is diverted to Hoboken, you may be arriving at Hoboken Terminal for the first time. Here's how to get from your train to PATH, the ferry, or Bus 126.</p>
+      <h2>Cómo navegar Hoboken Terminal</h2>
+      <p class="section-intro">Si tu línea es desviada a Hoboken, puede que llegues a Hoboken Terminal por primera vez. Aquí te explicamos cómo llegar desde tu tren a PATH, el ferry o el Bus 126.</p>
 
       <div class="terminal-map">
         <div class="map-label map-label-river">Hudson River</div>
@@ -200,7 +207,7 @@
       <div class="transfer-cards">
         <div class="transfer-card path-card">
           <div class="transfer-header">
-            <span class="transfer-icon" role="img" aria-label="Train">&#x1F687;</span>
+            <span class="transfer-icon">&#x1F687;</span>
             <div>
               <h4>To PATH (33rd Street)</h4>
               <span class="transfer-time">~5 min from train</span>
@@ -218,7 +225,7 @@
 
         <div class="transfer-card ferry-card">
           <div class="transfer-header">
-            <span class="transfer-icon" role="img" aria-label="Ferry">&#x26F4;&#xFE0F;</span>
+            <span class="transfer-icon">&#x26F4;&#xFE0F;</span>
             <div>
               <h4>To NY Waterway ferry</h4>
               <span class="transfer-time">~8 min from train</span>
@@ -236,7 +243,7 @@
 
         <div class="transfer-card bus-card">
           <div class="transfer-header">
-            <span class="transfer-icon" role="img" aria-label="Bus">&#x1F68C;</span>
+            <span class="transfer-icon">&#x1F68C;</span>
             <div>
               <h4>To Bus 126 (Port Authority)</h4>
               <span class="transfer-time">~5 min from train</span>
@@ -257,15 +264,15 @@
     <!-- Compare tool callout -->
     <section class="info-section" id="compare-callout">
       <div class="callout-card">
-        <h3>Want to compare all your options side by side?</h3>
-        <p>Our commute comparison tool shows you every route to your Manhattan destination with visual time breakdowns, so you can pick the fastest option for where you're actually going.</p>
-        <a href="compare.html" class="callout-btn">Compare commute options &rarr;</a>
+        <h3>¿Quieres comparar todas tus opciones lado a lado?</h3>
+        <p>Nuestra herramienta de comparación de viajes te muestra cada ruta a tu destino en Manhattan con desgloses visuales de tiempo, para que elijas la opción más rápida.</p>
+        <a href="../compare.html" class="callout-btn">Comparar opciones de viaje &rarr;</a>
       </div>
     </section>
 
     <!-- Secaucus Junction section -->
     <section class="info-section" id="secaucus">
-      <h2>Secaucus Junction: the choke point</h2>
+      <h2>Secaucus Junction: el cuello de botella</h2>
       <p class="section-intro">During the cutover, only one track operates between Newark Penn Station and Secaucus Junction. This is the bottleneck that causes the 50% service reduction. Even if you don't transfer at Secaucus, delays here ripple across the entire system.</p>
 
       <div class="secaucus-grid">
@@ -301,7 +308,7 @@
 
     <!-- Timeline section -->
     <section class="info-section" id="timeline">
-      <h2>Timeline</h2>
+      <h2>Cronograma</h2>
       <div class="timeline">
         <div class="timeline-item past" id="tl-announce">
           <div class="timeline-marker"></div>
@@ -348,7 +355,7 @@
 
     <!-- Official resources -->
     <section class="info-section" id="resources">
-      <h2>Official resources</h2>
+      <h2>Recursos oficiales</h2>
       <div class="resources-grid">
         <a href="https://www.njtransit.com/portalcutover" target="_blank" rel="noopener" class="resource-link">
           <strong>NJ Transit cutover page</strong>
@@ -375,16 +382,17 @@
 
   </main>
 
-  <footer class="footer" role="contentinfo">
+  <footer class="footer">
     <div class="container">
-      <p class="disclaimer"><strong>Reroute NJ</strong> is an independent community tool. Not affiliated with or endorsed by NJ Transit, Amtrak, or any government agency. Information is based on official announcements and may change. Always verify with <a href="https://www.njtransit.com/portalcutover" target="_blank" rel="noopener">njtransit.com</a> before traveling.</p>
-      <p class="credit">Built by <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">Joe Amditis</a></p>
+      <p class="disclaimer"><strong>Reroute NJ</strong> es una herramienta comunitaria independiente. No está afiliada ni respaldada por NJ Transit, Amtrak ni ninguna agencia gubernamental. La información se basa en anuncios oficiales y puede cambiar. Verifica siempre en <a href="https://www.njtransit.com/portalcutover" target="_blank" rel="noopener">njtransit.com</a> antes de viajar.</p>
+      <p class="credit">Creado por <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">Joe Amditis</a></p>
     </div>
   </footer>
 
-  <script src="js/i18n.js"></script>
-  <script src="js/shared.js"></script>
-  <script src="js/app.js"></script>
+  <script>window.BASE_PATH="../";window._T={"common":{"skip_to_main":"Ir al contenido principal","high_contrast":"Alto contraste","simplified_view":"Vista simplificada","nav_line_guide":"Guía de líneas","nav_commute_comparison":"Comparar viajes","nav_news_coverage":"Noticias","nav_map":"Mapa","nav_embed":"Insertar y compartir","footer_disclaimer":"es una herramienta comunitaria independiente. No está afiliada ni respaldada por NJ Transit, Amtrak ni ninguna agencia gubernamental.","footer_disclaimer_index":"La información se basa en anuncios oficiales y puede cambiar. Verifica siempre en","footer_disclaimer_index_after":"antes de viajar.","footer_disclaimer_coverage":"Los enlaces de noticias van a sus fuentes originales. Verifica siempre en","footer_disclaimer_coverage_after":"antes de viajar.","footer_disclaimer_map":"Datos del mapa &copy; contribuidores de","footer_disclaimer_map_tiles":"Teselas &copy;","footer_disclaimer_embed":"Ver código fuente en GitHub","footer_built_by":"Creado por","cutover_begins_in":"El cambio comienza en","days":"días","day":"día","remaining_phase1":"restantes en la Fase 1","phase1_complete":"Fase 1 completada","phase2_expected":"Fase 2 prevista para"},"js":{"major_changes":"CAMBIOS IMPORTANTES","schedule_changes":"CAMBIOS DE HORARIO","before_normal":"Antes (servicio normal)","during_cutover":"Durante el cambio (días de semana, 15 feb – 15 mar)","during_cutover_short":"Durante el cambio (15 feb – 15 mar)","what_you_need_to_know":"Lo que necesitas saber","weekends_different":"Los fines de semana son diferentes:","weekend_service_continues":"El servicio Midtown Direct a Penn Station NY continúa los sábados y domingos. Compra boletos regulares de Penn Station para viajes de fin de semana.","estimated_savings":"Ahorro estimado para","zone":"zona","monthly_pass_penn":"Pase mensual a Penn Station:","monthly_pass_hoboken":"Pase mensual a Hoboken:","you_save":"Ahorras","per_month":"/mes","cross_honored_free":"y PATH/ferry desde Hoboken se acepta sin costo adicional.","fare_disclaimer":"Las tarifas son estimaciones aproximadas. Verifica en njtransit.com antes de comprar.","how_get_manhattan":"¿Cómo llego a Manhattan?","how_get_home":"¿Cómo llego a casa desde Manhattan?","planning_commute":"Planifica tu viaje","getting_home":"Regresando a casa en la noche","getting_past_newark":"Pasando Newark Penn","getting_home_manhattan":"Regresando a casa desde Manhattan","what_ticket":"¿Qué boleto debo comprar?","recommended":"Mejor para la mayoría","scenic_less_crowded":"Pintoresco y menos concurrido","port_authority_area":"Mejor para la zona de Port Authority","other_options":"Otras opciones a considerar","pro_tip":"Consejo:","monthly_pass_holders":"Titulares de pase mensual","one_way_buyers":"Compradores de boleto sencillo","weekend_riders":"Viajeros de fin de semana","occasional_riders":"Viajeros ocasionales / no estás seguro qué hacer","no_change":"Sin cambios","cross_honored":"Se acepta tu boleto","transfer":"Transferencia","walk_subway":"Caminar/metro","arrive":"Llegada","choose_station":"Elige tu estación…"},"compare":{"title":"Comparar opciones de viaje — Reroute NJ","tagline":"Compara tus opciones de viaje","hero_title":"¿Cómo cambia tu viaje?","hero_desc":"Elige tu estación y tu destino en Manhattan. Te mostramos cada opción lado a lado con desgloses visuales de tiempo.","step1":"Tu línea","step2":"Tu estación","step3":"¿A dónde en Manhattan?","your_normal_commute":"Tu viaje normal","min_total":"min en total","vs_normal":"vs normal","fastest":"Más rápido","copy_summary":"Copiar resumen del viaje","copied":"¡Copiado!"},"coverage":{"title":"Noticias — Reroute NJ","tagline":"Portal Bridge en las noticias","hero_title":"Portal Bridge en las noticias","hero_desc":"Cobertura seleccionada del cambio de fuentes locales y regionales.","last_updated":"Última actualización:","all_sources":"Todas las fuentes","all_categories":"Todas las categorías","all_lines":"Todas las líneas","all_directions":"Todas las direcciones","search_placeholder":"Buscar artículos…","no_articles":"Ningún artículo coincide con tus filtros.","source_label":"Fuente","category_label":"Categoría","line_label":"Línea","direction_label":"Dirección","search_label":"Buscar"}};</script>
+  <script src="../js/i18n.js"></script>
+  <script src="../js/shared.js"></script>
+  <script src="../js/app.js"></script>
   <script>initA11yToggles(); initLangSelector();</script>
 </body>
 </html>
