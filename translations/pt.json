@@ -3,7 +3,17 @@
     "lang": "pt",
     "dir": "ltr",
     "label": "Portuguese",
-    "nativeName": "Português"
+    "nativeName": "Português",
+    "index_description": "Ferramentas gratuitas para ajudar passageiros do NJ Transit a navegar a mudança do Portal North Bridge. Encontre rotas alternativas e entenda como sua viagem muda.",
+    "index_og_description": "Ferramentas gratuitas para passageiros do NJ Transit afetados pela mudança do Portal North Bridge (15 fev – 15 mar, 2026).",
+    "compare_description": "Compare suas opções de viagem durante a mudança do Portal Bridge do NJ Transit. Veja comparações visuais lado a lado de cada rota para Manhattan.",
+    "compare_og_description": "Comparação visual das opções de viagem durante a mudança do Portal Bridge. Escolha sua estação e destino, veja todas as opções.",
+    "coverage_description": "Cobertura de notícias sobre a mudança do Portal North Bridge do NJ Transit. Artigos do NJ.com, Gothamist, NorthJersey.com e mais.",
+    "coverage_og_description": "Cobertura de notícias sobre a mudança do Portal Bridge. Fique informado com reportagens de fontes locais e regionais.",
+    "map_description": "Mapa interativo da mudança do Portal Bridge mostrando estações afetadas, pontos de transferência e rotas alternativas.",
+    "map_og_description": "Mapa interativo da mudança do Portal Bridge mostrando estações afetadas, pontos de transferência e rotas alternativas.",
+    "embed_description": "Incorpore as ferramentas do Reroute NJ em seu site. Gratuito para redações, editores e organizações comunitárias.",
+    "embed_og_description": "Incorpore as ferramentas de trânsito do Reroute NJ em seu site. Gratuito para redações, editores e organizações."
   },
   "common": {
     "skip_to_main": "Pular para o conteúdo principal",

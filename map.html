@@ -17,6 +17,7 @@
   <meta name="twitter:description" content="Interactive map of the Portal Bridge cutover showing affected stations, transfer points, and alternative routes.">
   <meta name="twitter:image" content="https://reroutenj.org/img/og-image.png">
   <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="canonical" href="https://reroutenj.org/map.html">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="alternate" hreflang="en" href="https://reroutenj.org/map.html">
@@ -31,6 +32,39 @@
   <link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/map.html">
   <link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/map.html">
   <link rel="alternate" hreflang="x-default" href="https://reroutenj.org/map.html">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Reroute NJ",
+    "url": "https://reroutenj.org",
+    "description": "Free tools to help NJ Transit riders navigate the Portal North Bridge cutover (Feb 15 – Mar 15, 2026)",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Reroute NJ",
+      "url": "https://reroutenj.org"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Reroute NJ",
+        "item": "https://reroutenj.org/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Interactive map"
+      }
+    ]
+  }
+  </script>
   <style>
     #map {
       width: 100%;
@@ -154,6 +188,8 @@
   </nav>
 
   <main class="container" id="main-content">
+
+    <p class="seo-summary">Interactive map showing the Portal Bridge location over the Hackensack River in Kearny, NJ, all affected NJ Transit stations, key transfer hubs (Hoboken Terminal, Secaucus Junction, Newark Penn), and alternative transit routes during the Feb 15 – Mar 15, 2026 cutover.</p>
 
     <section class="compare-hero">
       <h1>Portal Bridge cutover map</h1>

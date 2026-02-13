@@ -3,7 +3,17 @@
     "lang": "ar",
     "dir": "rtl",
     "label": "Arabic",
-    "nativeName": "العربية"
+    "nativeName": "العربية",
+    "index_description": "أدوات مجانية لمساعدة ركاب NJ Transit على التعامل مع تحويل Portal North Bridge. اعثر على مسارات بديلة وافهم كيف تتغير رحلتك.",
+    "index_og_description": "أدوات مجانية لركاب NJ Transit المتأثرين بتحويل Portal North Bridge (15 فبراير – 15 مارس 2026).",
+    "compare_description": "قارن خيارات رحلتك أثناء تحويل Portal Bridge لـ NJ Transit. شاهد مقارنات مرئية جنبًا إلى جنب لكل مسار إلى مانهاتن.",
+    "compare_og_description": "مقارنة مرئية لخيارات الرحلة أثناء تحويل Portal Bridge. اختر محطتك ووجهتك وشاهد جميع الخيارات.",
+    "coverage_description": "تغطية إخبارية عن تحويل Portal North Bridge لـ NJ Transit. مقالات من NJ.com وGothamist وNorthJersey.com وغيرها.",
+    "coverage_og_description": "تغطية إخبارية عن تحويل Portal Bridge. ابق على اطلاع بالتقارير من المصادر المحلية والإقليمية.",
+    "map_description": "خريطة تفاعلية لتحويل Portal Bridge تُظهر المحطات المتأثرة ونقاط النقل والمسارات البديلة.",
+    "map_og_description": "خريطة تفاعلية لتحويل Portal Bridge تُظهر المحطات المتأثرة ونقاط النقل والمسارات البديلة.",
+    "embed_description": "ضع أدوات Reroute NJ في موقعك الإلكتروني. مجاني لغرف الأخبار والناشرين والمنظمات المجتمعية.",
+    "embed_og_description": "ضع أدوات النقل Reroute NJ في موقعك الإلكتروني. مجاني لغرف الأخبار والناشرين والمنظمات."
   },
   "common": {
     "skip_to_main": "انتقل إلى المحتوى الرئيسي",

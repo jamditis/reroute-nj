@@ -3,7 +3,17 @@
     "lang": "gu",
     "dir": "ltr",
     "label": "Gujarati",
-    "nativeName": "ગુજરાતી"
+    "nativeName": "ગુજરાતી",
+    "index_description": "NJ Transit મુસાફરોને Portal North Bridge કટઓવર નેવિગેટ કરવામાં મદદ કરવા માટે મફત ટૂલ્સ. વૈકલ્પિક માર્ગો શોધો અને તમારી મુસાફરી કેવી રીતે બદલાય છે તે સમજો.",
+    "index_og_description": "Portal North Bridge કટઓવરથી પ્રભાવિત NJ Transit મુસાફરો માટે મફત ટૂલ્સ (15 ફેબ – 15 માર્ચ, 2026).",
+    "compare_description": "NJ Transit Portal Bridge કટઓવર દરમિયાન તમારા મુસાફરી વિકલ્પોની તુલના કરો. Manhattan ના દરેક માર્ગની વિઝ્યુઅલ તુલના જુઓ.",
+    "compare_og_description": "Portal Bridge કટઓવર દરમિયાન મુસાફરી વિકલ્પોની વિઝ્યુઅલ તુલના. તમારું સ્ટેશન અને ગંતવ્ય પસંદ કરો.",
+    "coverage_description": "NJ Transit Portal North Bridge કટઓવર વિશેના સમાચાર. NJ.com, Gothamist, NorthJersey.com અને વધુમાંથી લેખો.",
+    "coverage_og_description": "Portal Bridge કટઓવર વિશેના સમાચાર. સ્થાનિક અને પ્રાદેશિક સમાચાર સ્ત્રોતોમાંથી અહેવાલો વાંચો.",
+    "map_description": "Portal Bridge કટઓવરનો ઇન્ટરેક્ટિવ નકશો — પ્રભાવિત સ્ટેશનો, ટ્રાન્સફર પોઇન્ટ્સ અને વૈકલ્પિક માર્ગો.",
+    "map_og_description": "Portal Bridge કટઓવરનો ઇન્ટરેક્ટિવ નકશો — પ્રભાવિત સ્ટેશનો, ટ્રાન્સફર પોઇન્ટ્સ અને વૈકલ્પિક માર્ગો.",
+    "embed_description": "તમારી વેબસાઇટ પર Reroute NJ ટૂલ્સ એમ્બેડ કરો. ન્યૂઝરૂમ, પ્રકાશકો અને સમુદાય સંસ્થાઓ માટે મફત.",
+    "embed_og_description": "તમારી વેબસાઇટ પર Reroute NJ ટ્રાન્ઝિટ ટૂલ્સ એમ્બેડ કરો. ન્યૂઝરૂમ, પ્રકાશકો અને સંસ્થાઓ માટે મફત."
   },
   "common": {
     "skip_to_main": "મુખ્ય સામગ્રી પર જાઓ",

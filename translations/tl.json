@@ -3,7 +3,17 @@
     "lang": "tl",
     "dir": "ltr",
     "label": "Tagalog",
-    "nativeName": "Tagalog"
+    "nativeName": "Tagalog",
+    "index_description": "Mga libreng tool para tulungan ang mga pasahero ng NJ Transit na mag-navigate sa Portal North Bridge cutover. Maghanap ng mga alternatibong ruta at unawain kung paano magbabago ang iyong biyahe.",
+    "index_og_description": "Mga libreng tool para sa mga pasahero ng NJ Transit na apektado ng Portal North Bridge cutover (Peb 15 – Mar 15, 2026).",
+    "compare_description": "Ihambing ang iyong mga opsyon sa biyahe sa panahon ng Portal Bridge cutover ng NJ Transit. Makita ang visual na paghahambing ng bawat ruta patungong Manhattan.",
+    "compare_og_description": "Visual na paghahambing ng mga opsyon sa biyahe sa panahon ng Portal Bridge cutover. Piliin ang iyong istasyon at destinasyon.",
+    "coverage_description": "Mga piniling balita tungkol sa Portal North Bridge cutover ng NJ Transit. Mga artikulo mula sa NJ.com, Gothamist, NorthJersey.com, at iba pa.",
+    "coverage_og_description": "Mga piniling balita tungkol sa Portal Bridge cutover. Manatiling updated sa mga ulat mula sa lokal at rehiyonal na mga pinagmulan.",
+    "map_description": "Interactive na mapa ng Portal Bridge cutover na nagpapakita ng mga apektadong istasyon, transfer point, at alternatibong ruta.",
+    "map_og_description": "Interactive na mapa ng Portal Bridge cutover na nagpapakita ng mga apektadong istasyon, transfer point, at alternatibong ruta.",
+    "embed_description": "I-embed ang mga tool ng Reroute NJ sa iyong website. Libre para sa mga newsroom, publisher, at community organization.",
+    "embed_og_description": "I-embed ang mga transit tool ng Reroute NJ sa iyong website. Libre para sa mga newsroom, publisher, at organisasyon."
   },
   "common": {
     "skip_to_main": "Pumunta sa pangunahing nilalaman",

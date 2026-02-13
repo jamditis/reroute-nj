@@ -1,0 +1,1033 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- English: index.html (homepage) -->
+  <url>
+    <loc>https://reroutenj.org/</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/index.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/index.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/index.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/index.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/index.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/index.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/index.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/index.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/index.html"/>
+  </url>
+
+  <!-- English: compare.html -->
+  <url>
+    <loc>https://reroutenj.org/compare.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/compare.html"/>
+  </url>
+
+  <!-- English: coverage.html -->
+  <url>
+    <loc>https://reroutenj.org/coverage.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/coverage.html"/>
+  </url>
+
+  <!-- English: map.html -->
+  <url>
+    <loc>https://reroutenj.org/map.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/map.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/map.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/map.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/map.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/map.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/map.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/map.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/map.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/map.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/map.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/map.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/map.html"/>
+  </url>
+
+  <!-- English: embed.html -->
+  <url>
+    <loc>https://reroutenj.org/embed.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/embed.html"/>
+  </url>
+
+  <!-- English: blog.html (no translations) -->
+  <url>
+    <loc>https://reroutenj.org/blog.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Spanish (es) -->
+  <url>
+    <loc>https://reroutenj.org/es/index.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/index.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/index.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/index.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/index.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/index.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/index.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/index.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/index.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/index.html"/>
+  </url>
+  <url>
+    <loc>https://reroutenj.org/es/compare.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/compare.html"/>
+  </url>
+  <url>
+    <loc>https://reroutenj.org/es/coverage.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/coverage.html"/>
+  </url>
+  <url>
+    <loc>https://reroutenj.org/es/map.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/map.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/map.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/map.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/map.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/map.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/map.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/map.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/map.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/map.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/map.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/map.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/map.html"/>
+  </url>
+  <url>
+    <loc>https://reroutenj.org/es/embed.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/embed.html"/>
+  </url>
+
+  <!-- Chinese (zh) -->
+  <url>
+    <loc>https://reroutenj.org/zh/index.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/index.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/index.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/index.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/index.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/index.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/index.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/index.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/index.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/index.html"/>
+  </url>
+  <url>
+    <loc>https://reroutenj.org/zh/compare.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/compare.html"/>
+  </url>
+  <url>
+    <loc>https://reroutenj.org/zh/coverage.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/coverage.html"/>
+  </url>
+  <url>
+    <loc>https://reroutenj.org/zh/map.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/map.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/map.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/map.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/map.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/map.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/map.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/map.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/map.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/map.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/map.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/map.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/map.html"/>
+  </url>
+  <url>
+    <loc>https://reroutenj.org/zh/embed.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/embed.html"/>
+  </url>
+
+  <!-- Tagalog (tl) -->
+  <url>
+    <loc>https://reroutenj.org/tl/index.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/index.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/index.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/index.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/index.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/index.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/index.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/index.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/index.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/index.html"/>
+  </url>
+  <url>
+    <loc>https://reroutenj.org/tl/compare.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/compare.html"/>
+  </url>
+  <url>
+    <loc>https://reroutenj.org/tl/coverage.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/coverage.html"/>
+  </url>
+  <url>
+    <loc>https://reroutenj.org/tl/map.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/map.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/map.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/map.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/map.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/map.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/map.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/map.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/map.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/map.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/map.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/map.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/map.html"/>
+  </url>
+  <url>
+    <loc>https://reroutenj.org/tl/embed.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/embed.html"/>
+  </url>
+
+  <!-- Korean (ko) -->
+  <url>
+    <loc>https://reroutenj.org/ko/index.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/index.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/index.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/index.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/index.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/index.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/index.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/index.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/index.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/index.html"/>
+  </url>
+  <url>
+    <loc>https://reroutenj.org/ko/compare.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/compare.html"/>
+  </url>
+  <url>
+    <loc>https://reroutenj.org/ko/coverage.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/coverage.html"/>
+  </url>
+  <url>
+    <loc>https://reroutenj.org/ko/map.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/map.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/map.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/map.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/map.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/map.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/map.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/map.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/map.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/map.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/map.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/map.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/map.html"/>
+  </url>
+  <url>
+    <loc>https://reroutenj.org/ko/embed.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/embed.html"/>
+  </url>
+
+  <!-- Portuguese (pt) -->
+  <url>
+    <loc>https://reroutenj.org/pt/index.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/index.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/index.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/index.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/index.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/index.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/index.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/index.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/index.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/index.html"/>
+  </url>
+  <url>
+    <loc>https://reroutenj.org/pt/compare.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/compare.html"/>
+  </url>
+  <url>
+    <loc>https://reroutenj.org/pt/coverage.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/coverage.html"/>
+  </url>
+  <url>
+    <loc>https://reroutenj.org/pt/map.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/map.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/map.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/map.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/map.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/map.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/map.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/map.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/map.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/map.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/map.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/map.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/map.html"/>
+  </url>
+  <url>
+    <loc>https://reroutenj.org/pt/embed.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/embed.html"/>
+  </url>
+
+  <!-- Gujarati (gu) -->
+  <url>
+    <loc>https://reroutenj.org/gu/index.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/index.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/index.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/index.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/index.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/index.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/index.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/index.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/index.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/index.html"/>
+  </url>
+  <url>
+    <loc>https://reroutenj.org/gu/compare.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/compare.html"/>
+  </url>
+  <url>
+    <loc>https://reroutenj.org/gu/coverage.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/coverage.html"/>
+  </url>
+  <url>
+    <loc>https://reroutenj.org/gu/map.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/map.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/map.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/map.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/map.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/map.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/map.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/map.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/map.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/map.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/map.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/map.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/map.html"/>
+  </url>
+  <url>
+    <loc>https://reroutenj.org/gu/embed.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/embed.html"/>
+  </url>
+
+  <!-- Hindi (hi) -->
+  <url>
+    <loc>https://reroutenj.org/hi/index.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/index.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/index.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/index.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/index.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/index.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/index.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/index.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/index.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/index.html"/>
+  </url>
+  <url>
+    <loc>https://reroutenj.org/hi/compare.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/compare.html"/>
+  </url>
+  <url>
+    <loc>https://reroutenj.org/hi/coverage.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/coverage.html"/>
+  </url>
+  <url>
+    <loc>https://reroutenj.org/hi/map.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/map.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/map.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/map.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/map.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/map.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/map.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/map.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/map.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/map.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/map.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/map.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/map.html"/>
+  </url>
+  <url>
+    <loc>https://reroutenj.org/hi/embed.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/embed.html"/>
+  </url>
+
+  <!-- Italian (it) -->
+  <url>
+    <loc>https://reroutenj.org/it/index.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/index.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/index.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/index.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/index.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/index.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/index.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/index.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/index.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/index.html"/>
+  </url>
+  <url>
+    <loc>https://reroutenj.org/it/compare.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/compare.html"/>
+  </url>
+  <url>
+    <loc>https://reroutenj.org/it/coverage.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/coverage.html"/>
+  </url>
+  <url>
+    <loc>https://reroutenj.org/it/map.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/map.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/map.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/map.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/map.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/map.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/map.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/map.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/map.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/map.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/map.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/map.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/map.html"/>
+  </url>
+  <url>
+    <loc>https://reroutenj.org/it/embed.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/embed.html"/>
+  </url>
+
+  <!-- Arabic (ar) -->
+  <url>
+    <loc>https://reroutenj.org/ar/index.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/index.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/index.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/index.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/index.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/index.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/index.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/index.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/index.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/index.html"/>
+  </url>
+  <url>
+    <loc>https://reroutenj.org/ar/compare.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/compare.html"/>
+  </url>
+  <url>
+    <loc>https://reroutenj.org/ar/coverage.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/coverage.html"/>
+  </url>
+  <url>
+    <loc>https://reroutenj.org/ar/map.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/map.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/map.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/map.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/map.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/map.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/map.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/map.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/map.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/map.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/map.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/map.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/map.html"/>
+  </url>
+  <url>
+    <loc>https://reroutenj.org/ar/embed.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/embed.html"/>
+  </url>
+
+  <!-- Polish (pl) -->
+  <url>
+    <loc>https://reroutenj.org/pl/index.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/index.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/index.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/index.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/index.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/index.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/index.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/index.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/index.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/index.html"/>
+  </url>
+  <url>
+    <loc>https://reroutenj.org/pl/compare.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/compare.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/compare.html"/>
+  </url>
+  <url>
+    <loc>https://reroutenj.org/pl/coverage.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/coverage.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/coverage.html"/>
+  </url>
+  <url>
+    <loc>https://reroutenj.org/pl/map.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/map.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/map.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/map.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/map.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/map.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/map.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/map.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/map.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/map.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/map.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/map.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/map.html"/>
+  </url>
+  <url>
+    <loc>https://reroutenj.org/pl/embed.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/embed.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/embed.html"/>
+  </url>
+
+</urlset>

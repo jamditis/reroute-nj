@@ -103,6 +103,58 @@ def replace_meta(html, translations, page_key):
     return html
 
 
+def replace_meta_description(html, translations, page_key):
+    """Replace meta description and og:description with translated values."""
+    desc = get_translation(translations, f"meta.{page_key}_description")
+    og_desc = get_translation(translations, f"meta.{page_key}_og_description")
+    if desc:
+        html = re.sub(
+            r'<meta name="description" content="[^"]*">',
+            f'<meta name="description" content="{desc}">',
+            html
+        )
+    if og_desc:
+        html = re.sub(
+            r'<meta property="og:description" content="[^"]*">',
+            f'<meta property="og:description" content="{og_desc}">',
+            html
+        )
+        html = re.sub(
+            r'<meta name="twitter:description" content="[^"]*">',
+            f'<meta name="twitter:description" content="{og_desc}">',
+            html
+        )
+    return html
+
+
+def fix_og_url(html, lang, page_name):
+    """Fix og:url to point to the translated page's own URL."""
+    translated_url = f"https://reroutenj.org/{lang}/{page_name}"
+    html = re.sub(
+        r'<meta property="og:url" content="[^"]*">',
+        f'<meta property="og:url" content="{translated_url}">',
+        html
+    )
+    return html
+
+
+def add_canonical(html, lang, page_name):
+    """Replace or add canonical link pointing to this translated page's own URL."""
+    canonical_url = f"https://reroutenj.org/{lang}/{page_name}"
+    if re.search(r'<link rel="canonical" href="[^"]*">', html):
+        html = re.sub(
+            r'<link rel="canonical" href="[^"]*">',
+            f'<link rel="canonical" href="{canonical_url}">',
+            html
+        )
+    else:
+        html = html.replace(
+            '<link rel="icon"',
+            f'<link rel="canonical" href="{canonical_url}">\n  <link rel="icon"'
+        )
+    return html
+
+
 def replace_tagline(html, translations, page_key):
     """Replace the tagline text."""
     tagline = get_translation(translations, f"{page_key}.tagline")
@@ -997,6 +1049,9 @@ def generate_page(page_name, lang, translations):
     html = replace_tagline(html, translations, page_key)
     html = replace_title(html, translations, page_key)
     html = replace_meta(html, translations, page_key)
+    html = replace_meta_description(html, translations, page_key)
+    html = fix_og_url(html, lang, page_name)
+    html = add_canonical(html, lang, page_name)
 
     # 4. Replace page-specific content
     html = replace_page_specific_content(html, translations, page_key)

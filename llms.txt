@@ -1,0 +1,42 @@
+# Reroute NJ
+
+> Free tools helping NJ Transit riders navigate the Portal North Bridge cutover (Feb 15 – Mar 15, 2026). Five interactive tools in 11 languages.
+
+Reroute NJ provides real-time guidance for the roughly 300,000 daily NJ Transit rail commuters affected by the Portal North Bridge construction cutover. During this period, approximately 50% of NJ Transit trains between New Jersey and New York Penn Station are cut. All rail lines except the Atlantic City Rail Line are affected.
+
+The cutover is caused by Amtrak transferring the first of two tracks from the 115-year-old Portal Bridge to the new Portal North Bridge over the Hackensack River in Kearny, NJ. This is Phase 1 of the Gateway Program milestone.
+
+## Tools
+
+- [Line guide](https://reroutenj.org/index.html): Select your NJ Transit line and station to see exactly what changes and what to do during the cutover
+- [Commute comparison](https://reroutenj.org/compare.html): Side-by-side comparison of alternative routes to Manhattan (PATH, ferry, bus) with visual time breakdowns and costs
+- [News coverage](https://reroutenj.org/coverage.html): Curated feed of Portal Bridge cutover reporting from 15+ regional news sources, filterable by line, direction, and category
+- [Interactive map](https://reroutenj.org/map.html): OpenStreetMap-based map showing the Portal Bridge location, all affected stations, and key transfer hubs
+- [Embed and share](https://reroutenj.org/embed.html): Free embed codes for newsrooms and publishers to republish any Reroute NJ tool on their websites
+
+## Key facts
+
+- Dates: February 15 to March 15, 2026 (Phase 1)
+- Cause: Amtrak transferring first track from old Portal Bridge to new Portal North Bridge
+- Impact: Approximately 50% service reduction between Newark Penn Station and New York Penn Station
+- Affected lines: Montclair-Boonton Line, Morris & Essex Lines, Northeast Corridor, North Jersey Coast Line, Raritan Valley Line
+- Not affected: Atlantic City Rail Line
+- Hoboken diversions: Montclair-Boonton and Morris & Essex weekday trains rerouted to Hoboken Terminal instead of New York Penn Station
+- Alternative transit from Hoboken: PATH train to 33rd St (~25 min), NY Waterway ferry to W. 39th St (~10 min), Bus 126 to Port Authority (~30-45 min)
+- Phase 2: Expected fall 2026 (second track cutover, dates TBA)
+
+## Line-by-line impact summary
+
+- **Montclair-Boonton Line**: Weekday trains diverted to Hoboken Terminal. Use PATH, ferry, or bus to reach Manhattan.
+- **Morris & Essex Lines (Morristown, Gladstone)**: Weekday trains diverted to Hoboken Terminal. Same alternatives as Montclair-Boonton.
+- **Northeast Corridor**: Reduced frequency. Trains still run to New York Penn Station but with fewer departures and possible delays at Secaucus.
+- **North Jersey Coast Line**: Reduced frequency. Same route but fewer trains. Allow extra travel time.
+- **Raritan Valley Line**: Trains terminate at Newark Penn Station (as usual). Transfer to reduced-frequency NEC trains for Penn Station.
+
+## Translations
+
+Available in 11 languages: English, Spanish (Español), Chinese (中文), Tagalog, Korean (한국어), Portuguese (Português), Gujarati (ગુજરાતી), Hindi (हिंदी), Italian (Italiano), Arabic (العربية), Polish (Polski)
+
+## About
+
+Reroute NJ is an independent, open-source community project created by Joe Amditis at the Center for Cooperative Media at Montclair State University. It is not affiliated with or endorsed by NJ Transit, Amtrak, or any government agency. Source code: https://github.com/jamditis/reroute-nj (MIT License).

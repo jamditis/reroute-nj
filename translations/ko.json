@@ -3,7 +3,17 @@
     "lang": "ko",
     "dir": "ltr",
     "label": "Korean",
-    "nativeName": "한국어"
+    "nativeName": "한국어",
+    "index_description": "NJ Transit 승객들이 Portal North Bridge 공사를 탐색할 수 있는 무료 도구. 대체 경로를 찾고 통근이 어떻게 변경되는지 확인하세요.",
+    "index_og_description": "Portal North Bridge 공사의 영향을 받는 NJ Transit 승객을 위한 무료 도구 (2026년 2월 15일 – 3월 15일).",
+    "compare_description": "NJ Transit Portal Bridge 공사 기간 동안 통근 옵션을 비교하세요. 맨해튼으로의 모든 경로를 시각적으로 비교할 수 있습니다.",
+    "compare_og_description": "Portal Bridge 공사 기간 통근 옵션 시각적 비교. 역과 목적지를 선택하고 모든 옵션을 확인하세요.",
+    "coverage_description": "NJ Transit Portal North Bridge 공사에 대한 뉴스 보도 모음. NJ.com, Gothamist, NorthJersey.com 등의 기사.",
+    "coverage_og_description": "Portal Bridge 공사에 대한 뉴스 보도 모음. 지역 및 광역 뉴스 소스의 보도를 확인하세요.",
+    "map_description": "Portal Bridge 공사 인터랙티브 지도 — 영향 받는 역, 환승 지점 및 대체 경로를 표시합니다.",
+    "map_og_description": "Portal Bridge 공사 인터랙티브 지도 — 영향 받는 역, 환승 지점 및 대체 경로를 표시합니다.",
+    "embed_description": "Reroute NJ 도구를 웹사이트에 삽입하세요. 뉴스룸, 출판사 및 커뮤니티 조직에 무료로 제공됩니다.",
+    "embed_og_description": "Reroute NJ 교통 도구를 웹사이트에 삽입하세요. 뉴스룸, 출판사 및 조직에 무료로 제공됩니다."
   },
   "common": {
     "skip_to_main": "본문으로 건너뛰기",

@@ -3,7 +3,17 @@
     "lang": "hi",
     "dir": "ltr",
     "label": "Hindi",
-    "nativeName": "हिंदी"
+    "nativeName": "हिंदी",
+    "index_description": "NJ Transit यात्रियों को Portal North Bridge कटओवर को नेविगेट करने में मदद करने के लिए मुफ्त टूल। वैकल्पिक मार्ग खोजें और समझें कि आपकी यात्रा कैसे बदलती है।",
+    "index_og_description": "Portal North Bridge कटओवर से प्रभावित NJ Transit यात्रियों के लिए मुफ्त टूल (15 फरवरी – 15 मार्च, 2026)।",
+    "compare_description": "NJ Transit Portal Bridge कटओवर के दौरान अपने यात्रा विकल्पों की तुलना करें। Manhattan के हर मार्ग की विज़ुअल तुलना देखें।",
+    "compare_og_description": "Portal Bridge कटओवर के दौरान यात्रा विकल्पों की विज़ुअल तुलना। अपना स्टेशन और गंतव्य चुनें।",
+    "coverage_description": "NJ Transit Portal North Bridge कटओवर के बारे में समाचार। NJ.com, Gothamist, NorthJersey.com और अन्य से लेख।",
+    "coverage_og_description": "Portal Bridge कटओवर के बारे में समाचार। स्थानीय और क्षेत्रीय समाचार स्रोतों से रिपोर्ट पढ़ें।",
+    "map_description": "Portal Bridge कटओवर का इंटरैक्टिव मानचित्र — प्रभावित स्टेशन, ट्रांसफर पॉइंट और वैकल्पिक मार्ग।",
+    "map_og_description": "Portal Bridge कटओवर का इंटरैक्टिव मानचित्र — प्रभावित स्टेशन, ट्रांसफर पॉइंट और वैकल्पिक मार्ग।",
+    "embed_description": "अपनी वेबसाइट पर Reroute NJ टूल एम्बेड करें। न्यूज़रूम, प्रकाशकों और सामुदायिक संगठनों के लिए मुफ्त।",
+    "embed_og_description": "अपनी वेबसाइट पर Reroute NJ ट्रांजिट टूल एम्बेड करें। न्यूज़रूम, प्रकाशकों और संगठनों के लिए मुफ्त।"
   },
   "common": {
     "skip_to_main": "मुख्य सामग्री पर जाएं",

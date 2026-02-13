@@ -3,7 +3,17 @@
     "lang": "en",
     "dir": "ltr",
     "label": "English",
-    "nativeName": "English"
+    "nativeName": "English",
+    "index_description": "Free tools to help NJ Transit riders navigate the Portal North Bridge cutover. Find alternative routes, figure out what ticket to buy, and understand how your commute changes.",
+    "index_og_description": "Free tools for NJ Transit riders affected by the Portal North Bridge cutover (Feb 15 – Mar 15, 2026).",
+    "compare_description": "Compare your commute options during the NJ Transit Portal Bridge cutover. See visual side-by-side breakdowns of every route to Manhattan.",
+    "compare_og_description": "Visual side-by-side commute comparison during the Portal Bridge cutover. Pick your station and destination, see all options ranked.",
+    "coverage_description": "Curated news coverage of the NJ Transit Portal North Bridge cutover. Articles from NJ.com, Gothamist, NorthJersey.com, and more.",
+    "coverage_og_description": "Curated news coverage of the Portal Bridge cutover. Stay informed with reporting from local and regional news sources.",
+    "map_description": "Interactive map of the Portal Bridge cutover showing affected stations, transfer points, and alternative routes.",
+    "map_og_description": "Interactive map of the Portal Bridge cutover showing affected stations, transfer points, and alternative routes.",
+    "embed_description": "Embed Reroute NJ tools on your website. Free for newsrooms, publishers, and community organizations.",
+    "embed_og_description": "Embed Reroute NJ transit tools on your website. Free for newsrooms, publishers, and community organizations."
   },
   "common": {
     "skip_to_main": "Skip to main content",

@@ -3,7 +3,17 @@
     "lang": "zh",
     "dir": "ltr",
     "label": "Chinese",
-    "nativeName": "中文"
+    "nativeName": "中文",
+    "index_description": "帮助NJ Transit乘客应对Portal North Bridge施工的免费工具。查找替代路线，了解您的通勤如何变化。",
+    "index_og_description": "为受Portal North Bridge施工影响的NJ Transit乘客提供的免费工具（2026年2月15日至3月15日）。",
+    "compare_description": "比较Portal Bridge施工期间的通勤选项。查看前往曼哈顿每条路线的并排视觉对比。",
+    "compare_og_description": "Portal Bridge施工期间的通勤选项视觉对比。选择您的车站和目的地，查看所有选项。",
+    "coverage_description": "关于NJ Transit Portal North Bridge施工的新闻报道汇总。来自NJ.com、Gothamist、NorthJersey.com等的文章。",
+    "coverage_og_description": "关于Portal Bridge施工的新闻报道汇总。了解来自本地和区域新闻来源的最新报道。",
+    "map_description": "Portal Bridge施工互动地图，显示受影响的车站、换乘点和替代路线。",
+    "map_og_description": "Portal Bridge施工互动地图，显示受影响的车站、换乘点和替代路线。",
+    "embed_description": "在您的网站上嵌入Reroute NJ工具。免费提供给新闻机构、出版商和社区组织。",
+    "embed_og_description": "在您的网站上嵌入Reroute NJ交通工具。免费提供给新闻机构、出版商和社区组织。"
   },
   "common": {
     "skip_to_main": "跳到主要内容",

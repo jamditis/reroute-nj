@@ -2615,3 +2615,12 @@ body[data-view="simplified"] .brand {
 [dir="rtl"] .arrow {
   transform: scaleX(-1);
 }
+
+/* Citation-ready answer blocks for SEO/LLMEO */
+.seo-summary {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--text-secondary, #555);
+  margin-bottom: 1.5rem;
+  max-width: 680px;
+}
