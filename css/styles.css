@@ -2419,6 +2419,11 @@ main.container {
   background-position: right 0.4rem center;
 }
 
+.lang-selector select option {
+  background: #fff;
+  color: #1a1a1a;
+}
+
 .lang-selector select:focus {
   outline: 2px solid var(--accent);
   outline-offset: 1px;
