@@ -365,7 +365,10 @@
     "read_more": "Leia mais →",
     "post2_title": "Novo: incorpore o Reroute NJ no seu site",
     "post2_date": "13 de fevereiro de 2026",
-    "post2_excerpt": "Redações e editoras agora podem incorporar ferramentas do Reroute NJ diretamente em seus sites. Quatro formatos de incorporação, um configurador visual e exportação PNG — tudo gratuito."
+    "post2_excerpt": "Redações e editoras agora podem incorporar ferramentas do Reroute NJ diretamente em seus sites. Quatro formatos de incorporação, um configurador visual e exportação PNG — tudo gratuito.",
+    "index_tagline": "Atualizações e histórias do projeto Reroute NJ",
+    "all_posts": "Todos os artigos",
+    "back_to_all_posts": "Voltar para todos os artigos"
   },
   "blog_post": {
     "title": "Por que construímos o Reroute NJ — Reroute NJ",

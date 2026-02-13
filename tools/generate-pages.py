@@ -1112,6 +1112,13 @@ def replace_page_specific_content(html, translations, page_key):
         if heading:
             html = html.replace(">Blog</h1>", f">{heading}</h1>")
 
+        index_tagline = get_translation(translations, "blog.index_tagline")
+        if index_tagline:
+            html = html.replace(
+                ">Updates and stories from the Reroute NJ project</p>",
+                f">{index_tagline}</p>"
+            )
+
         # Post card
         post1_title = get_translation(translations, "blog.post1_title")
         if post1_title:
@@ -1161,6 +1168,14 @@ def replace_page_specific_content(html, translations, page_key):
 
     elif page_key == "blog_post":
         # Blog post: "Why we built Reroute NJ"
+        # Back/footer nav links
+        all_posts = get_translation(translations, "blog.all_posts")
+        if all_posts:
+            html = html.replace(">&larr; All posts</a>", f">&larr; {all_posts}</a>")
+        back_all = get_translation(translations, "blog.back_to_all_posts")
+        if back_all:
+            html = html.replace(">&larr; Back to all posts</a>", f">&larr; {back_all}</a>")
+
         heading = get_translation(translations, "blog_post.heading")
         if heading:
             html = html.replace(">Why we built Reroute NJ</h1>", f">{heading}</h1>")
@@ -1374,6 +1389,14 @@ def replace_page_specific_content(html, translations, page_key):
 
     elif page_key == "blog_post_embed":
         # Blog post: "New: embed Reroute NJ on your website"
+        # Back/footer nav links
+        all_posts = get_translation(translations, "blog.all_posts")
+        if all_posts:
+            html = html.replace(">&larr; All posts</a>", f">&larr; {all_posts}</a>")
+        back_all = get_translation(translations, "blog.back_to_all_posts")
+        if back_all:
+            html = html.replace(">&larr; Back to all posts</a>", f">&larr; {back_all}</a>")
+
         heading = get_translation(translations, "blog_post_embed.heading")
         if heading:
             html = html.replace(">New: embed Reroute NJ on your website</h1>", f">{heading}</h1>")

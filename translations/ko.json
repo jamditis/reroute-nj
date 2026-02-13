@@ -365,7 +365,10 @@
     "read_more": "더 읽기 →",
     "post2_title": "새 기능: 웹사이트에 Reroute NJ 삽입",
     "post2_date": "2026년 2월 13일",
-    "post2_excerpt": "뉴스룸과 출판사는 이제 Reroute NJ 도구를 웹사이트에 직접 삽입할 수 있습니다. 4가지 삽입 형식, 시각적 구성 도구 및 PNG 내보내기 — 모두 무료입니다."
+    "post2_excerpt": "뉴스룸과 출판사는 이제 Reroute NJ 도구를 웹사이트에 직접 삽입할 수 있습니다. 4가지 삽입 형식, 시각적 구성 도구 및 PNG 내보내기 — 모두 무료입니다.",
+    "index_tagline": "Reroute NJ 프로젝트의 업데이트와 이야기",
+    "all_posts": "모든 글",
+    "back_to_all_posts": "모든 글로 돌아가기"
   },
   "blog_post": {
     "title": "Reroute NJ를 만든 이유 — Reroute NJ",

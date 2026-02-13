@@ -365,7 +365,10 @@
     "read_more": "阅读更多 →",
     "post2_title": "新功能：在您的网站上嵌入 Reroute NJ",
     "post2_date": "2026年2月13日",
-    "post2_excerpt": "新闻编辑室和发布者现在可以直接在他们的网站上嵌入 Reroute NJ 工具。四种嵌入格式、一个可视化配置器和 PNG 导出 — 全部免费。"
+    "post2_excerpt": "新闻编辑室和发布者现在可以直接在他们的网站上嵌入 Reroute NJ 工具。四种嵌入格式、一个可视化配置器和 PNG 导出 — 全部免费。",
+    "index_tagline": "Reroute NJ项目的最新动态和故事",
+    "all_posts": "所有文章",
+    "back_to_all_posts": "返回所有文章"
   },
   "blog_post": {
     "title": "我们为什么创建Reroute NJ — Reroute NJ",

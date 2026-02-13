@@ -365,7 +365,10 @@
     "read_more": "Czytaj więcej →",
     "post2_title": "Nowość: osadź Reroute NJ na swojej stronie",
     "post2_date": "13 lutego 2026",
-    "post2_excerpt": "Redakcje i wydawcy mogą teraz osadzać narzędzia Reroute NJ bezpośrednio na swoich stronach. Cztery formaty osadzania, wizualny konfigurator i eksport PNG — wszystko za darmo."
+    "post2_excerpt": "Redakcje i wydawcy mogą teraz osadzać narzędzia Reroute NJ bezpośrednio na swoich stronach. Cztery formaty osadzania, wizualny konfigurator i eksport PNG — wszystko za darmo.",
+    "index_tagline": "Aktualizacje i historie z projektu Reroute NJ",
+    "all_posts": "Wszystkie wpisy",
+    "back_to_all_posts": "Wróć do wszystkich wpisów"
   },
   "blog_post": {
     "title": "Dlaczego stworzyliśmy Reroute NJ — Reroute NJ",

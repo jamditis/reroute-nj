@@ -365,7 +365,10 @@
     "read_more": "Leer más →",
     "post2_title": "Nuevo: incrusta Reroute NJ en tu sitio web",
     "post2_date": "13 de febrero de 2026",
-    "post2_excerpt": "Las salas de redacción y editores ahora pueden incrustar las herramientas de Reroute NJ directamente en sus sitios web. Cuatro formatos de incrustación, un configurador visual y exportación PNG, todo gratis."
+    "post2_excerpt": "Las salas de redacción y editores ahora pueden incrustar las herramientas de Reroute NJ directamente en sus sitios web. Cuatro formatos de incrustación, un configurador visual y exportación PNG, todo gratis.",
+    "index_tagline": "Actualizaciones e historias del proyecto Reroute NJ",
+    "all_posts": "Todos los artículos",
+    "back_to_all_posts": "Volver a todos los artículos"
   },
   "blog_post": {
     "title": "Por qué construimos Reroute NJ — Reroute NJ",
