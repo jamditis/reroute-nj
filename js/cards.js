@@ -20,30 +20,97 @@
     return match ? decodeURIComponent(match[1]) : null;
   }
 
-  var IMPACT_LABELS = {
-    "hoboken-diversion": "Diverted to Hoboken",
-    "reduced-service": "Reduced service",
-    "newark-termination": "Terminates at Newark"
+  // =========================================================================
+  // CT — Card Translations (mutable defaults, overwritten by loadTranslations)
+  // =========================================================================
+  var CT = {
+    impact_hoboken_diversion: "Diverted to Hoboken",
+    impact_reduced_service: "Reduced service",
+    impact_newark_termination: "Terminates at Newark",
+    alt_hoboken_1: "PATH from Hoboken to 33rd St (~25 min)",
+    alt_hoboken_2: "NY Waterway ferry to W. 39th St (~15 min)",
+    alt_hoboken_3: "Bus 126 to Port Authority (~40 min)",
+    alt_reduced_1: "Expect longer wait times between trains",
+    alt_reduced_2: "Consider off-peak travel if flexible",
+    alt_reduced_3: "Check NJ Transit app for real-time status",
+    alt_newark_1: "Transfer to NEC at Newark Penn for PSNY",
+    alt_newark_2: "PATH from Newark to WTC (~25 min)",
+    alt_newark_3: "Consider driving to Newark Penn directly",
+    trains_before: "Trains before",
+    trains_during: "Trains during",
+    before: "Before",
+    during: "During",
+    your_alternatives: "Your alternatives",
+    date_range: "Feb 15 \u2013 Mar 15, 2026",
+    plan_your_commute: "Plan your commute",
+    full_details: "Full details",
+    summary_title: "Portal Bridge cutover",
+    summary_desc: "Five NJ Transit lines affected from Feb 15 \u2013 Mar 15, 2026. Service reduced while the new Portal North Bridge is connected.",
+    suspended: "Suspended",
+    zone: "Zone",
+    powered_by: "Powered by Reroute NJ \u00B7 reroutenj.org"
   };
 
-  var ALTERNATIVES = {
-    "hoboken-diversion": [
-      "PATH from Hoboken to 33rd St (~25 min)",
-      "NY Waterway ferry to W. 39th St (~15 min)",
-      "Bus 126 to Port Authority (~40 min)"
-    ],
-    "reduced-service": [
-      "Expect longer wait times between trains",
-      "Consider off-peak travel if flexible",
-      "Check NJ Transit app for real-time status"
-    ],
-    "newark-termination": [
-      "Transfer to NEC at Newark Penn for PSNY",
-      "PATH from Newark to WTC (~25 min)",
-      "Consider driving to Newark Penn directly"
-    ]
-  };
+  // =========================================================================
+  // TRANSLATION HELPERS
+  // =========================================================================
+  function getImpactLabel(impactType) {
+    var map = {
+      "hoboken-diversion": CT.impact_hoboken_diversion,
+      "reduced-service": CT.impact_reduced_service,
+      "newark-termination": CT.impact_newark_termination
+    };
+    return map[impactType] || impactType;
+  }
 
+  function getAlternatives(impactType) {
+    var map = {
+      "hoboken-diversion": [CT.alt_hoboken_1, CT.alt_hoboken_2, CT.alt_hoboken_3],
+      "reduced-service": [CT.alt_reduced_1, CT.alt_reduced_2, CT.alt_reduced_3],
+      "newark-termination": [CT.alt_newark_1, CT.alt_newark_2, CT.alt_newark_3]
+    };
+    return map[impactType] || [];
+  }
+
+  // =========================================================================
+  // ASYNC TRANSLATION LOADER
+  // =========================================================================
+  function loadTranslations(callback) {
+    var lang = getParam("lang");
+    if (!lang || lang === "en") {
+      callback();
+      return;
+    }
+
+    var url = "translations/" + encodeURIComponent(lang) + ".json";
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", url, true);
+    xhr.onload = function () {
+      if (xhr.status === 200) {
+        try {
+          var data = JSON.parse(xhr.responseText);
+          if (data.card) {
+            for (var key in data.card) {
+              if (data.card.hasOwnProperty(key) && CT.hasOwnProperty(key)) {
+                CT[key] = data.card[key];
+              }
+            }
+          }
+        } catch (e) {
+          // Parse error — fall back to English defaults
+        }
+      }
+      callback();
+    };
+    xhr.onerror = function () {
+      callback();
+    };
+    xhr.send();
+  }
+
+  // =========================================================================
+  // CARD RENDERERS (HTML)
+  // =========================================================================
   function renderLineCard(lineId) {
     var line = LINE_DATA[lineId];
     if (!line) return renderSummaryCard();
@@ -51,7 +118,7 @@
     var accent = getParam("accent");
     var barColor = accent ? "#" + accent.replace(/^#/, "") : line.color;
     var badgeClass = line.impactLevel === "severe" ? "badge-severe" : "badge-moderate";
-    var alts = ALTERNATIVES[line.impactType] || [];
+    var alts = getAlternatives(line.impactType);
 
     var altHtml = "";
     for (var i = 0; i < alts.length; i++) {
@@ -61,13 +128,13 @@
     var statsHtml = "";
     if (typeof line.trainsBefore === "number") {
       statsHtml = '<div class="card-stats">' +
-        '<div class="card-stat"><div class="card-stat-value">' + esc(String(line.trainsBefore)) + '</div><div class="card-stat-label">Trains before</div></div>' +
-        '<div class="card-stat"><div class="card-stat-value">' + esc(String(line.trainsAfter)) + '</div><div class="card-stat-label">Trains during</div></div>' +
+        '<div class="card-stat"><div class="card-stat-value">' + esc(String(line.trainsBefore)) + '</div><div class="card-stat-label">' + esc(CT.trains_before) + '</div></div>' +
+        '<div class="card-stat"><div class="card-stat-value">' + esc(String(line.trainsAfter)) + '</div><div class="card-stat-label">' + esc(CT.trains_during) + '</div></div>' +
         "</div>";
     } else {
       statsHtml = '<div class="card-stats">' +
-        '<div class="card-stat"><div class="card-stat-value" style="font-size:0.9rem;">' + esc(String(line.trainsBefore)) + '</div><div class="card-stat-label">Before</div></div>' +
-        '<div class="card-stat"><div class="card-stat-value" style="font-size:0.9rem;">' + esc(String(line.trainsAfter)) + '</div><div class="card-stat-label">During</div></div>' +
+        '<div class="card-stat"><div class="card-stat-value" style="font-size:0.9rem;">' + esc(String(line.trainsBefore)) + '</div><div class="card-stat-label">' + esc(CT.before) + '</div></div>' +
+        '<div class="card-stat"><div class="card-stat-value" style="font-size:0.9rem;">' + esc(String(line.trainsAfter)) + '</div><div class="card-stat-label">' + esc(CT.during) + '</div></div>' +
         "</div>";
     }
 
@@ -75,12 +142,12 @@
       '<div class="card-color-bar" style="background:' + esc(barColor) + ';"></div>' +
       '<div class="card-body">' +
         '<div class="card-line-name">' + esc(line.name) + "</div>" +
-        '<span class="card-badge ' + badgeClass + '">' + esc(IMPACT_LABELS[line.impactType] || line.impactType) + "</span>" +
+        '<span class="card-badge ' + badgeClass + '">' + esc(getImpactLabel(line.impactType)) + "</span>" +
         '<div class="card-summary">' + esc(line.summary) + "</div>" +
         statsHtml +
-        '<div class="card-alternatives"><h4>Your alternatives</h4>' + altHtml + "</div>" +
-        '<div class="card-dates">Feb 15 – Mar 15, 2026</div>' +
-        '<a class="card-cta" href="https://reroutenj.org/?line=' + esc(lineId) + '" target="_blank" rel="noopener">Plan your commute</a>' +
+        '<div class="card-alternatives"><h4>' + esc(CT.your_alternatives) + '</h4>' + altHtml + "</div>" +
+        '<div class="card-dates">' + esc(CT.date_range) + '</div>' +
+        '<a class="card-cta" href="https://reroutenj.org/?line=' + esc(lineId) + '" target="_blank" rel="noopener">' + esc(CT.plan_your_commute) + '</a>' +
       "</div></div>";
   }
 
@@ -100,7 +167,7 @@
     var accent = getParam("accent");
     var barColor = accent ? "#" + accent.replace(/^#/, "") : line.color;
     var badgeClass = line.impactLevel === "severe" ? "badge-severe" : "badge-moderate";
-    var alts = ALTERNATIVES[line.impactType] || [];
+    var alts = getAlternatives(line.impactType);
 
     var altHtml = "";
     for (var j = 0; j < alts.length; j++) {
@@ -111,19 +178,19 @@
       '<div class="card-color-bar" style="background:' + esc(barColor) + ';"></div>' +
       '<div class="card-body">' +
         '<div class="card-station-name">' + esc(station.name) + "</div>" +
-        '<div class="card-line-context">' + esc(line.name) + " · Zone " + esc(String(station.zone)) + "</div>" +
-        '<span class="card-badge ' + badgeClass + '">' + esc(IMPACT_LABELS[line.impactType] || line.impactType) + "</span>" +
+        '<div class="card-line-context">' + esc(line.name) + " \u00B7 " + esc(CT.zone) + " " + esc(String(station.zone)) + "</div>" +
+        '<span class="card-badge ' + badgeClass + '">' + esc(getImpactLabel(line.impactType)) + "</span>" +
         '<div class="card-summary">' + esc(line.summary) + "</div>" +
-        '<div class="card-alternatives"><h4>Your alternatives</h4>' + altHtml + "</div>" +
-        '<div class="card-dates">Feb 15 – Mar 15, 2026</div>' +
-        '<a class="card-cta" href="https://reroutenj.org/?line=' + esc(lineId) + '&station=' + esc(stationId) + '" target="_blank" rel="noopener">Full details</a>' +
+        '<div class="card-alternatives"><h4>' + esc(CT.your_alternatives) + '</h4>' + altHtml + "</div>" +
+        '<div class="card-dates">' + esc(CT.date_range) + '</div>' +
+        '<a class="card-cta" href="https://reroutenj.org/?line=' + esc(lineId) + '&station=' + esc(stationId) + '" target="_blank" rel="noopener">' + esc(CT.full_details) + '</a>' +
       "</div></div>";
   }
 
   function renderSummaryCard() {
     var html = '<div class="card"><div class="card-body">' +
-      '<div class="card-line-name">Portal Bridge cutover</div>' +
-      '<div class="card-summary">Five NJ Transit lines affected from Feb 15 – Mar 15, 2026. Service reduced while the new Portal North Bridge is connected.</div>' +
+      '<div class="card-line-name">' + esc(CT.summary_title) + '</div>' +
+      '<div class="card-summary">' + esc(CT.summary_desc) + '</div>' +
       '<div class="summary-grid">';
 
     for (var i = 0; i < LINE_ORDER.length; i++) {
@@ -131,20 +198,20 @@
       var line = LINE_DATA[id];
       var impactClass = line.impactLevel === "severe" ? "summary-severe" : "summary-moderate";
       var trainInfo = typeof line.trainsBefore === "number"
-        ? esc(String(line.trainsBefore)) + " → " + esc(String(line.trainsAfter))
-        : "Suspended";
+        ? esc(String(line.trainsBefore)) + " \u2192 " + esc(String(line.trainsAfter))
+        : esc(CT.suspended);
 
       html += '<div class="summary-line">' +
         '<span class="summary-dot" style="background:' + esc(line.color) + ';"></span>' +
         '<span class="summary-line-name">' + esc(line.shortName) + "</span>" +
-        '<span class="summary-impact ' + impactClass + '">' + esc(IMPACT_LABELS[line.impactType] || "") + "</span>" +
+        '<span class="summary-impact ' + impactClass + '">' + esc(getImpactLabel(line.impactType)) + "</span>" +
         '<span class="summary-trains">' + trainInfo + "</span>" +
         "</div>";
     }
 
     html += '</div>' +
-      '<div class="card-dates" style="margin-top:12px;">Feb 15 – Mar 15, 2026</div>' +
-      '<a class="card-cta" href="https://reroutenj.org" target="_blank" rel="noopener">Plan your commute</a>' +
+      '<div class="card-dates" style="margin-top:12px;">' + esc(CT.date_range) + '</div>' +
+      '<a class="card-cta" href="https://reroutenj.org" target="_blank" rel="noopener">' + esc(CT.plan_your_commute) + '</a>' +
       "</div></div>";
     return html;
   }
@@ -234,7 +301,7 @@
         curY += 28;
         ctx.fillStyle = subtextColor;
         ctx.font = "13px " + FONT_FAMILY;
-        ctx.fillText(line.name + " \u00B7 Zone " + station.zone, pad, curY + 10);
+        ctx.fillText(line.name + " \u00B7 " + CT.zone + " " + station.zone, pad, curY + 10);
         curY += 22;
       } else {
         // Station not found, render as line card
@@ -252,7 +319,7 @@
     }
 
     // Impact badge
-    var impactText = (IMPACT_LABELS[line.impactType] || line.impactType).toUpperCase();
+    var impactText = getImpactLabel(line.impactType).toUpperCase();
     var isSevere = line.impactLevel === "severe";
     ctx.font = "600 11px " + FONT_FAMILY;
     var badgeWidth = ctx.measureText(impactText).width + 20;
@@ -278,7 +345,7 @@
       for (var s = 0; s < 2; s++) {
         var sx = pad + s * (statBoxWidth + 16);
         var val = s === 0 ? String(line.trainsBefore) : String(line.trainsAfter);
-        var label = s === 0 ? "TRAINS BEFORE" : "TRAINS DURING";
+        var label = s === 0 ? CT.trains_before.toUpperCase() : CT.trains_during.toUpperCase();
         ctx.fillStyle = textColor;
         ctx.font = "bold 22px " + FONT_FAMILY;
         ctx.textAlign = "center";
@@ -294,7 +361,7 @@
       for (var sb = 0; sb < 2; sb++) {
         var bx = pad + sb * (halfW + 16);
         var bval = sb === 0 ? String(line.trainsBefore) : String(line.trainsAfter);
-        var blabel = sb === 0 ? "BEFORE" : "DURING";
+        var blabel = sb === 0 ? CT.before.toUpperCase() : CT.during.toUpperCase();
         ctx.fillStyle = textColor;
         ctx.font = "bold 13px " + FONT_FAMILY;
         ctx.textAlign = "center";
@@ -308,11 +375,11 @@
     }
 
     // Alternatives
-    var alts = ALTERNATIVES[line.impactType] || [];
+    var alts = getAlternatives(line.impactType);
     if (alts.length > 0) {
       ctx.fillStyle = bodyColor;
       ctx.font = "600 12px " + FONT_FAMILY;
-      ctx.fillText("Your alternatives", pad, curY + 10);
+      ctx.fillText(CT.your_alternatives, pad, curY + 10);
       curY += 20;
       ctx.font = "12px " + FONT_FAMILY;
       for (var ai = 0; ai < alts.length; ai++) {
@@ -333,13 +400,13 @@
     // Dates
     ctx.fillStyle = subtextColor;
     ctx.font = "12px " + FONT_FAMILY;
-    ctx.fillText("Feb 15 \u2013 Mar 15, 2026", pad, curY + 10);
+    ctx.fillText(CT.date_range, pad, curY + 10);
 
     // Attribution at bottom
     ctx.fillStyle = "#9eaab8";
     ctx.font = "11px " + FONT_FAMILY;
     ctx.textAlign = "center";
-    ctx.fillText("Powered by Reroute NJ \u00B7 reroutenj.org", width / 2, height - 12);
+    ctx.fillText(CT.powered_by, width / 2, height - 12);
     ctx.textAlign = "left";
 
     return canvas;
@@ -351,14 +418,13 @@
     // Title
     ctx.fillStyle = textColor;
     ctx.font = "bold 20px " + FONT_FAMILY;
-    ctx.fillText("Portal Bridge cutover", pad, curY + 16);
+    ctx.fillText(CT.summary_title, pad, curY + 16);
     curY += 30;
 
     // Summary text
     ctx.fillStyle = bodyColor;
     ctx.font = "14px " + FONT_FAMILY;
-    var summaryStr = "Five NJ Transit lines affected from Feb 15 \u2013 Mar 15, 2026. Service reduced while the new Portal North Bridge is connected.";
-    var sLines = wrapText(ctx, summaryStr, pad, curY + 12, width - pad * 2, 20);
+    var sLines = wrapText(ctx, CT.summary_desc, pad, curY + 12, width - pad * 2, 20);
     curY += sLines * 20 + 20;
 
     // Line rows
@@ -386,7 +452,7 @@
       ctx.fillText(line.shortName, pad + 30, rowY + rowH / 2 + 4);
 
       // Impact badge on right side
-      var impactLabel = IMPACT_LABELS[line.impactType] || "";
+      var impactLabel = getImpactLabel(line.impactType);
       ctx.font = "600 10px " + FONT_FAMILY;
       var impBadgeW = ctx.measureText(impactLabel).width + 16;
       var impBadgeX = width - pad - impBadgeW - 80;
@@ -402,7 +468,7 @@
       // Train count on far right
       var trainInfo = typeof line.trainsBefore === "number"
         ? String(line.trainsBefore) + " \u2192 " + String(line.trainsAfter)
-        : "Suspended";
+        : CT.suspended;
       ctx.fillStyle = subtextColor;
       ctx.font = "12px " + FONT_FAMILY;
       ctx.textAlign = "right";
@@ -417,13 +483,13 @@
     // Dates
     ctx.fillStyle = subtextColor;
     ctx.font = "12px " + FONT_FAMILY;
-    ctx.fillText("Feb 15 \u2013 Mar 15, 2026", pad, curY + 10);
+    ctx.fillText(CT.date_range, pad, curY + 10);
 
     // Attribution at bottom
     ctx.fillStyle = "#9eaab8";
     ctx.font = "11px " + FONT_FAMILY;
     ctx.textAlign = "center";
-    ctx.fillText("Powered by Reroute NJ \u00B7 reroutenj.org", width / 2, height - 12);
+    ctx.fillText(CT.powered_by, width / 2, height - 12);
     ctx.textAlign = "left";
 
     return canvas;
@@ -463,7 +529,7 @@
     }, "image/png");
   }
 
-  // Expose for PNG export (Task 4) and cross-frame calls
+  // Expose for PNG export and cross-frame calls
   window.renderLineCard = renderLineCard;
   window.renderStationCard = renderStationCard;
   window.renderSummaryCard = renderSummaryCard;
@@ -496,11 +562,22 @@
     }
 
     root.innerHTML = html;
+
+    // Auto-export as PNG when ?export=true is present
+    var exportMatch = window.location.search.match(/[?&]export=([^&]*)/);
+    if (exportMatch && decodeURIComponent(exportMatch[1]) === "true") {
+      exportCardAsPng();
+    }
+  }
+
+  // Wait for translations before init
+  function start() {
+    loadTranslations(init);
   }
 
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", init);
+    document.addEventListener("DOMContentLoaded", start);
   } else {
-    init();
+    start();
   }
 })();

@@ -31,6 +31,9 @@
 
   <script>
     // Widget loader — reads URL params and builds the appropriate tool
+    // Security note: setStaticHTML is used only for static HTML fragments with
+    // no user-controlled content. User input (tool param in error case) uses
+    // textContent for XSS safety.
     (function () {
       "use strict";
 
@@ -66,7 +69,177 @@
 
       // Build DOM safely from static HTML fragments (no user input)
       function setStaticHTML(el, html) {
-        el.innerHTML = html;
+        el.innerHTML = html; // eslint-disable-line -- static markup only, no user input
+      }
+
+      /**
+       * Fetch translations for the given language and set window._T.
+       * Falls back to English (empty _T) on error or if lang is "en"/absent.
+       */
+      function fetchTranslations(callback) {
+        var lang = getParam("lang");
+        if (!lang || lang === "en") {
+          window._T = {};
+          callback();
+          return;
+        }
+        // Set html lang attribute
+        document.documentElement.lang = lang;
+
+        var url = "translations/" + encodeURIComponent(lang) + ".json";
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", url, true);
+        xhr.onload = function () {
+          if (xhr.status === 200) {
+            try {
+              var data = JSON.parse(xhr.responseText);
+              // Populate window._T with all runtime-relevant sections
+              var sections = ["common", "js", "compare", "coverage", "card", "index", "map"];
+              window._T = {};
+              for (var i = 0; i < sections.length; i++) {
+                var key = sections[i];
+                if (data[key]) {
+                  window._T[key] = data[key];
+                }
+              }
+            } catch (e) {
+              window._T = {};
+            }
+          } else {
+            window._T = {};
+          }
+          callback();
+        };
+        xhr.onerror = function () {
+          window._T = {};
+          callback();
+        };
+        xhr.send();
+      }
+
+      /** Get a translated string, with fallback */
+      function wt(section, key, fallback) {
+        if (window._T && window._T[section] && window._T[section][key]) {
+          return window._T[section][key];
+        }
+        return fallback;
+      }
+
+      /**
+       * After translations load but before tool JS runs, update the
+       * hardcoded English labels in the scaffold DOM.
+       */
+      function retranslateScaffold(tool) {
+        if (!window._T || !Object.keys(window._T).length) return;
+
+        if (tool === "line-guide") {
+          // Line badge placeholder
+          var badge = document.getElementById("line-badge");
+          if (badge) badge.textContent = wt("js", "select_line", "Select a line");
+
+          // Station picker label
+          var stationLabel = document.querySelector('.station-picker label[for="station-select"]');
+          if (stationLabel) stationLabel.textContent = wt("index", "your_station", "Your station");
+
+          // Station select placeholder
+          var stationSelect = document.getElementById("station-select");
+          if (stationSelect && stationSelect.options[0]) {
+            stationSelect.options[0].textContent = wt("index", "choose_station", "Choose your station\u2026");
+          }
+
+          // Direction label
+          var dirLabel = document.querySelector('.direction-picker label[for="direction-select"]');
+          if (dirLabel) dirLabel.textContent = wt("index", "direction_of_travel", "Direction of travel");
+
+          // Direction buttons
+          var dirBtns = document.querySelectorAll(".direction-btn");
+          if (dirBtns.length >= 2) {
+            dirBtns[0].innerHTML = wt("index", "nj_to_nyc", "NJ &rarr; NYC") + ' <span class="dir-sub">' + wt("index", "morning_commute", "morning commute") + "</span>"; // eslint-disable-line -- static translated strings only
+            dirBtns[1].innerHTML = wt("index", "nyc_to_nj", "NYC &rarr; NJ") + ' <span class="dir-sub">' + wt("index", "evening_commute", "evening commute") + "</span>"; // eslint-disable-line -- static translated strings only
+          }
+
+          // Tab buttons
+          var tabAffected = document.getElementById("tab-affected");
+          if (tabAffected) tabAffected.textContent = wt("index", "am_i_affected", "Am I affected?");
+          var tabRoutes = document.getElementById("tab-routes");
+          if (tabRoutes) tabRoutes.textContent = wt("index", "route_planner", "Route planner");
+          var tabTickets = document.getElementById("tab-tickets");
+          if (tabTickets) tabTickets.textContent = wt("index", "ticket_guide", "Ticket guide");
+
+          // Panel headings and descriptions
+          var panelAffected = document.querySelector("#panel-affected .panel-intro");
+          if (panelAffected) {
+            var h2a = panelAffected.querySelector("h2");
+            var pa = panelAffected.querySelector("p");
+            if (h2a) h2a.textContent = wt("index", "am_i_affected", "Am I affected?");
+            if (pa) pa.textContent = wt("index", "affected_intro", "Select your line and station above to see exactly how the cutover changes your commute.");
+          }
+          var panelRoutes = document.querySelector("#panel-routes .panel-intro");
+          if (panelRoutes) {
+            var h2r = panelRoutes.querySelector("h2");
+            var pr = panelRoutes.querySelector("p");
+            if (h2r) h2r.textContent = wt("index", "route_planner", "Route planner");
+            if (pr) pr.textContent = wt("index", "routes_intro", "Select a line above to see your options during the cutover.");
+          }
+          var panelTickets = document.querySelector("#panel-tickets .panel-intro");
+          if (panelTickets) {
+            var h2t = panelTickets.querySelector("h2");
+            var pt = panelTickets.querySelector("p");
+            if (h2t) h2t.textContent = wt("index", "ticket_guide_title", "What ticket should I buy?");
+            if (pt) pt.textContent = wt("index", "tickets_intro", "Select a line above to see ticket guidance for the cutover period.");
+          }
+
+        } else if (tool === "compare") {
+          // Step labels
+          var steps = document.querySelectorAll(".step-label");
+          if (steps.length >= 3) {
+            // Keep the step-circle spans, update the text after them
+            var s1 = steps[0]; s1.childNodes[s1.childNodes.length - 1].textContent = " " + wt("compare", "your_line", "Your line");
+            var s2label = document.querySelector('label.step-label[for="station-select"]');
+            if (s2label) s2label.childNodes[s2label.childNodes.length - 1].textContent = " " + wt("compare", "your_station", "Your station");
+            var s3 = steps[2]; s3.childNodes[s3.childNodes.length - 1].textContent = " " + wt("compare", "where_manhattan", "Where in Manhattan?");
+          }
+
+          // Station select placeholder
+          var cmpStation = document.getElementById("station-select");
+          if (cmpStation && cmpStation.options[0]) {
+            cmpStation.options[0].textContent = wt("compare", "choose_station", "Choose your station\u2026");
+          }
+
+        } else if (tool === "coverage") {
+          // Filter labels
+          var filterLabels = {
+            "filter-source": wt("coverage", "source", "Source"),
+            "filter-category": wt("coverage", "category", "Category"),
+            "filter-line": wt("coverage", "line", "Line"),
+            "filter-direction": wt("coverage", "direction", "Direction"),
+            "filter-search": wt("coverage", "search", "Search")
+          };
+          for (var fid in filterLabels) {
+            if (filterLabels.hasOwnProperty(fid)) {
+              var lbl = document.querySelector('label[for="' + fid + '"]');
+              if (lbl) lbl.textContent = filterLabels[fid];
+            }
+          }
+
+          // "All sources" placeholder
+          var srcSelect = document.getElementById("filter-source");
+          if (srcSelect && srcSelect.options[0]) {
+            srcSelect.options[0].textContent = wt("coverage", "all_sources", "All sources");
+          }
+
+          // Search placeholder
+          var searchInput = document.getElementById("filter-search");
+          if (searchInput) searchInput.placeholder = wt("coverage", "search_articles", "Search articles\u2026");
+
+        } else if (tool === "map") {
+          // Map filter buttons
+          var allBtn = document.querySelector('[data-filter="all"]');
+          if (allBtn) allBtn.textContent = wt("map", "all", "All");
+
+          var hubBtn = document.querySelector('[data-filter="transfer-hubs"]');
+          if (hubBtn) hubBtn.textContent = wt("map", "transfer_hubs", "Transfer hubs");
+        }
       }
 
       var tool = getParam("tool");
@@ -80,53 +253,99 @@
 
       externalizeLinks();
 
-      if (tool === "line-guide") {
-        // Build DOM structure matching index.html / app.js expectations
-        setStaticHTML(main,
-          '<div class="control-panel">' +
-            '<section class="line-header">' +
-              '<div class="line-badge" id="line-badge">Select a line</div>' +
+      // Fetch translations, then build the tool scaffold + load JS
+      fetchTranslations(function () {
+
+        if (tool === "line-guide") {
+          // Build DOM structure matching index.html / app.js expectations
+          setStaticHTML(main,
+            '<div class="control-panel">' +
+              '<section class="line-header">' +
+                '<div class="line-badge" id="line-badge">Select a line</div>' +
+                '<nav class="line-nav" id="line-nav" aria-label="Select train line"></nav>' +
+              '</section>' +
+              '<section class="station-picker">' +
+                '<label for="station-select">Your station</label>' +
+                '<select id="station-select"><option value="">Choose your station&hellip;</option></select>' +
+              '</section>' +
+              '<section class="direction-picker">' +
+                '<label for="direction-select">Direction of travel</label>' +
+                '<div class="direction-toggle" id="direction-toggle" role="group" aria-labelledby="direction-label">' +
+                  '<span id="direction-label" class="sr-only">Direction of travel</span>' +
+                  '<button class="direction-btn active" data-dir="nj-to-nyc" aria-pressed="true">NJ &rarr; NYC <span class="dir-sub">morning commute</span></button>' +
+                  '<button class="direction-btn" data-dir="nyc-to-nj" aria-pressed="false">NYC &rarr; NJ <span class="dir-sub">evening commute</span></button>' +
+                '</div>' +
+              '</section>' +
+            '</div>' +
+            '<nav class="tool-tabs" role="tablist" aria-label="Tool options">' +
+              '<button class="tab active" role="tab" aria-selected="true" aria-controls="panel-affected" id="tab-affected" data-tab="affected">Am I affected?</button>' +
+              '<button class="tab" role="tab" aria-selected="false" aria-controls="panel-routes" id="tab-routes" data-tab="routes" tabindex="-1">Route planner</button>' +
+              '<button class="tab" role="tab" aria-selected="false" aria-controls="panel-tickets" id="tab-tickets" data-tab="tickets" tabindex="-1">Ticket guide</button>' +
+            '</nav>' +
+            '<section id="panel-affected" class="tool-panel active" role="tabpanel" aria-labelledby="tab-affected">' +
+              '<div class="panel-intro"><h2>Am I affected?</h2><p>Select your line and station above to see exactly how the cutover changes your commute.</p></div>' +
+              '<div id="impact-empty"></div>' +
+              '<div id="impact-result" class="hidden" aria-live="polite" tabindex="-1"></div>' +
+            '</section>' +
+            '<section id="panel-routes" class="tool-panel" role="tabpanel" aria-labelledby="tab-routes">' +
+              '<div class="panel-intro" id="routes-intro"><h2>Route planner</h2><p>Select a line above to see your options during the cutover.</p></div>' +
+              '<div id="routes-content" aria-live="polite" tabindex="-1"></div>' +
+            '</section>' +
+            '<section id="panel-tickets" class="tool-panel" role="tabpanel" aria-labelledby="tab-tickets">' +
+              '<div class="panel-intro" id="tickets-intro"><h2>What ticket should I buy?</h2><p>Select a line above to see ticket guidance for the cutover period.</p></div>' +
+              '<div id="tickets-content" aria-live="polite" tabindex="-1"></div>' +
+            '</section>' +
+            '<div id="countdown"></div>');
+
+          // Retranslate the scaffold before tool JS runs
+          retranslateScaffold("line-guide");
+
+          // Load scripts in order: i18n -> shared -> line-data -> app
+          loadScript("js/i18n.js", function () {
+            loadScript("js/shared.js", function () {
+              loadScript("js/line-data.js", function () {
+                loadScript("js/app.js", function () {
+                  // Pre-select line if specified
+                  if (lineId) {
+                    setTimeout(function () {
+                      var btn = document.querySelector('[data-line="' + lineId + '"]');
+                      if (btn) btn.click();
+                    }, 100);
+                  }
+                });
+              });
+            });
+          });
+
+        } else if (tool === "compare") {
+          // Build DOM structure matching compare.html / compare.js expectations
+          setStaticHTML(main,
+            '<section class="input-step">' +
+              '<div class="step-label"><span class="step-circle">1</span> Your line</div>' +
               '<nav class="line-nav" id="line-nav" aria-label="Select train line"></nav>' +
             '</section>' +
-            '<section class="station-picker">' +
-              '<label for="station-select">Your station</label>' +
+            '<section class="input-step">' +
+              '<label class="step-label" for="station-select"><span class="step-circle">2</span> Your station</label>' +
               '<select id="station-select"><option value="">Choose your station&hellip;</option></select>' +
             '</section>' +
-            '<section class="direction-picker">' +
-              '<label for="direction-select">Direction of travel</label>' +
-              '<div class="direction-toggle" id="direction-toggle" role="group" aria-labelledby="direction-label">' +
-                '<span id="direction-label" class="sr-only">Direction of travel</span>' +
-                '<button class="direction-btn active" data-dir="nj-to-nyc" aria-pressed="true">NJ &rarr; NYC <span class="dir-sub">morning commute</span></button>' +
-                '<button class="direction-btn" data-dir="nyc-to-nj" aria-pressed="false">NYC &rarr; NJ <span class="dir-sub">evening commute</span></button>' +
-              '</div>' +
+            '<section class="input-step">' +
+              '<div class="step-label"><span class="step-circle">3</span> Where in Manhattan?</div>' +
+              '<div class="dest-grid" id="dest-grid" role="group" aria-label="Manhattan destinations"></div>' +
             '</section>' +
-          '</div>' +
-          '<nav class="tool-tabs" role="tablist" aria-label="Tool options">' +
-            '<button class="tab active" role="tab" aria-selected="true" aria-controls="panel-affected" id="tab-affected" data-tab="affected">Am I affected?</button>' +
-            '<button class="tab" role="tab" aria-selected="false" aria-controls="panel-routes" id="tab-routes" data-tab="routes" tabindex="-1">Route planner</button>' +
-            '<button class="tab" role="tab" aria-selected="false" aria-controls="panel-tickets" id="tab-tickets" data-tab="tickets" tabindex="-1">Ticket guide</button>' +
-          '</nav>' +
-          '<section id="panel-affected" class="tool-panel active" role="tabpanel" aria-labelledby="tab-affected">' +
-            '<div class="panel-intro"><h2>Am I affected?</h2><p>Select your line and station above to see exactly how the cutover changes your commute.</p></div>' +
-            '<div id="impact-empty"></div>' +
-            '<div id="impact-result" class="hidden" aria-live="polite" tabindex="-1"></div>' +
-          '</section>' +
-          '<section id="panel-routes" class="tool-panel" role="tabpanel" aria-labelledby="tab-routes">' +
-            '<div class="panel-intro" id="routes-intro"><h2>Route planner</h2><p>Select a line above to see your options during the cutover.</p></div>' +
-            '<div id="routes-content" aria-live="polite" tabindex="-1"></div>' +
-          '</section>' +
-          '<section id="panel-tickets" class="tool-panel" role="tabpanel" aria-labelledby="tab-tickets">' +
-            '<div class="panel-intro" id="tickets-intro"><h2>What ticket should I buy?</h2><p>Select a line above to see ticket guidance for the cutover period.</p></div>' +
-            '<div id="tickets-content" aria-live="polite" tabindex="-1"></div>' +
-          '</section>' +
-          '<div id="countdown"></div>');
+            '<section id="results" class="compare-results hidden" aria-live="polite" tabindex="-1">' +
+              '<div id="results-header" class="results-header"></div>' +
+              '<div id="results-normal" class="results-normal"></div>' +
+              '<div id="results-list"></div>' +
+              '<div id="results-share" class="results-share"></div>' +
+            '</section>');
 
-        // Load scripts in order: i18n -> shared -> line-data -> app
-        loadScript("js/i18n.js", function () {
-          loadScript("js/shared.js", function () {
-            loadScript("js/line-data.js", function () {
-              loadScript("js/app.js", function () {
-                // Pre-select line if specified
+          retranslateScaffold("compare");
+
+          // Load scripts in order: i18n -> shared -> compare
+          // compare.js has its own embedded line/station data, no line-data.js needed
+          loadScript("js/i18n.js", function () {
+            loadScript("js/shared.js", function () {
+              loadScript("js/compare.js", function () {
                 if (lineId) {
                   setTimeout(function () {
                     var btn = document.querySelector('[data-line="' + lineId + '"]');
@@ -136,105 +355,73 @@
               });
             });
           });
-        });
 
-      } else if (tool === "compare") {
-        // Build DOM structure matching compare.html / compare.js expectations
-        setStaticHTML(main,
-          '<section class="input-step">' +
-            '<div class="step-label"><span class="step-circle">1</span> Your line</div>' +
-            '<nav class="line-nav" id="line-nav" aria-label="Select train line"></nav>' +
-          '</section>' +
-          '<section class="input-step">' +
-            '<label class="step-label" for="station-select"><span class="step-circle">2</span> Your station</label>' +
-            '<select id="station-select"><option value="">Choose your station&hellip;</option></select>' +
-          '</section>' +
-          '<section class="input-step">' +
-            '<div class="step-label"><span class="step-circle">3</span> Where in Manhattan?</div>' +
-            '<div class="dest-grid" id="dest-grid" role="group" aria-label="Manhattan destinations"></div>' +
-          '</section>' +
-          '<section id="results" class="compare-results hidden" aria-live="polite" tabindex="-1">' +
-            '<div id="results-header" class="results-header"></div>' +
-            '<div id="results-normal" class="results-normal"></div>' +
-            '<div id="results-list"></div>' +
-            '<div id="results-share" class="results-share"></div>' +
-          '</section>');
+        } else if (tool === "coverage") {
+          // Build DOM structure matching coverage.html / coverage.js expectations
+          setStaticHTML(main,
+            '<p class="coverage-updated" id="coverage-updated"></p>' +
+            '<section class="coverage-filters" id="coverage-filters" role="search" aria-label="Filter news articles">' +
+              '<div class="filter-group"><label for="filter-source">Source</label><select id="filter-source"><option value="">All sources</option></select></div>' +
+              '<div class="filter-group"><label for="filter-category">Category</label><select id="filter-category"><option value="">All categories</option><option value="news">News</option><option value="opinion">Opinion</option><option value="analysis">Analysis</option><option value="official">Official</option><option value="community">Community</option></select></div>' +
+              '<div class="filter-group"><label for="filter-line">Line</label><select id="filter-line"><option value="">All lines</option><option value="montclair-boonton">Montclair-Boonton</option><option value="morris-essex">Morris &amp; Essex</option><option value="northeast-corridor">Northeast Corridor</option><option value="north-jersey-coast">North Jersey Coast</option><option value="raritan-valley">Raritan Valley</option></select></div>' +
+              '<div class="filter-group"><label for="filter-direction">Direction</label><select id="filter-direction"><option value="">All directions</option><option value="nj-to-nyc">NJ to NYC</option><option value="nyc-to-nj">NYC to NJ</option><option value="both">Both directions</option></select></div>' +
+              '<div class="filter-group filter-search"><label for="filter-search">Search</label><input type="text" id="filter-search" placeholder="Search articles&hellip;"></div>' +
+            '</section>' +
+            '<section class="coverage-feed" id="coverage-feed" aria-live="polite" aria-label="News articles" tabindex="-1"></section>');
 
-        // Load scripts in order: i18n -> shared -> compare
-        // compare.js has its own embedded line/station data, no line-data.js needed
-        loadScript("js/i18n.js", function () {
-          loadScript("js/shared.js", function () {
-            loadScript("js/compare.js", function () {
-              if (lineId) {
-                setTimeout(function () {
-                  var btn = document.querySelector('[data-line="' + lineId + '"]');
-                  if (btn) btn.click();
-                }, 100);
-              }
-            });
-          });
-        });
+          retranslateScaffold("coverage");
 
-      } else if (tool === "coverage") {
-        // Build DOM structure matching coverage.html / coverage.js expectations
-        setStaticHTML(main,
-          '<p class="coverage-updated" id="coverage-updated"></p>' +
-          '<section class="coverage-filters" id="coverage-filters" role="search" aria-label="Filter news articles">' +
-            '<div class="filter-group"><label for="filter-source">Source</label><select id="filter-source"><option value="">All sources</option></select></div>' +
-            '<div class="filter-group"><label for="filter-category">Category</label><select id="filter-category"><option value="">All categories</option><option value="news">News</option><option value="opinion">Opinion</option><option value="analysis">Analysis</option><option value="official">Official</option><option value="community">Community</option></select></div>' +
-            '<div class="filter-group"><label for="filter-line">Line</label><select id="filter-line"><option value="">All lines</option><option value="montclair-boonton">Montclair-Boonton</option><option value="morris-essex">Morris &amp; Essex</option><option value="northeast-corridor">Northeast Corridor</option><option value="north-jersey-coast">North Jersey Coast</option><option value="raritan-valley">Raritan Valley</option></select></div>' +
-            '<div class="filter-group"><label for="filter-direction">Direction</label><select id="filter-direction"><option value="">All directions</option><option value="nj-to-nyc">NJ to NYC</option><option value="nyc-to-nj">NYC to NJ</option><option value="both">Both directions</option></select></div>' +
-            '<div class="filter-group filter-search"><label for="filter-search">Search</label><input type="text" id="filter-search" placeholder="Search articles&hellip;"></div>' +
-          '</section>' +
-          '<section class="coverage-feed" id="coverage-feed" aria-live="polite" aria-label="News articles" tabindex="-1"></section>');
-
-        loadScript("js/i18n.js", function () {
-          loadScript("js/shared.js", function () {
-            loadScript("js/coverage.js");
-          });
-        });
-
-      } else if (tool === "map") {
-        // Map needs Leaflet CSS + JS, filter bar, and map container
-        loadStylesheet("https://unpkg.com/leaflet@1.9.4/dist/leaflet.css");
-        setStaticHTML(main,
-          '<div class="map-filter-bar" id="map-filters" role="group" aria-label="Filter map by line">' +
-            '<button class="map-filter-btn active" data-filter="all" aria-pressed="true">All</button>' +
-            '<button class="map-filter-btn" data-filter="montclair-boonton" aria-pressed="false">Montclair-Boonton</button>' +
-            '<button class="map-filter-btn" data-filter="morris-essex" aria-pressed="false">Morris &amp; Essex</button>' +
-            '<button class="map-filter-btn" data-filter="northeast-corridor" aria-pressed="false">Northeast Corridor</button>' +
-            '<button class="map-filter-btn" data-filter="north-jersey-coast" aria-pressed="false">North Jersey Coast</button>' +
-            '<button class="map-filter-btn" data-filter="raritan-valley" aria-pressed="false">Raritan Valley</button>' +
-            '<button class="map-filter-btn" data-filter="transfer-hubs" aria-pressed="false">Transfer hubs</button>' +
-          '</div>' +
-          '<div id="map" role="application" aria-label="Interactive map" style="height:400px;border-radius:8px;"></div>');
-
-        loadScript("https://unpkg.com/leaflet@1.9.4/dist/leaflet.js", function () {
           loadScript("js/i18n.js", function () {
             loadScript("js/shared.js", function () {
-              loadScript("js/map.js");
+              loadScript("js/coverage.js");
             });
           });
-        });
 
-      } else {
-        // XSS-safe error for unknown tool — use textContent, not innerHTML for user input
-        var errDiv = document.createElement("div");
-        errDiv.className = "widget-error";
-        var h2 = document.createElement("h2");
-        h2.textContent = "Unknown tool: " + tool;
-        var p = document.createElement("p");
-        p.textContent = "Valid tools: line-guide, compare, coverage, map. ";
-        var link = document.createElement("a");
-        link.href = "https://reroutenj.org/embed.html";
-        link.setAttribute("target", "_blank");
-        link.setAttribute("rel", "noopener");
-        link.textContent = "See all embed options";
-        p.appendChild(link);
-        errDiv.appendChild(h2);
-        errDiv.appendChild(p);
-        main.appendChild(errDiv);
-      }
+        } else if (tool === "map") {
+          // Map needs Leaflet CSS + JS, filter bar, and map container
+          loadStylesheet("https://unpkg.com/leaflet@1.9.4/dist/leaflet.css");
+          setStaticHTML(main,
+            '<div class="map-filter-bar" id="map-filters" role="group" aria-label="Filter map by line">' +
+              '<button class="map-filter-btn active" data-filter="all" aria-pressed="true">All</button>' +
+              '<button class="map-filter-btn" data-filter="montclair-boonton" aria-pressed="false">Montclair-Boonton</button>' +
+              '<button class="map-filter-btn" data-filter="morris-essex" aria-pressed="false">Morris &amp; Essex</button>' +
+              '<button class="map-filter-btn" data-filter="northeast-corridor" aria-pressed="false">Northeast Corridor</button>' +
+              '<button class="map-filter-btn" data-filter="north-jersey-coast" aria-pressed="false">North Jersey Coast</button>' +
+              '<button class="map-filter-btn" data-filter="raritan-valley" aria-pressed="false">Raritan Valley</button>' +
+              '<button class="map-filter-btn" data-filter="transfer-hubs" aria-pressed="false">Transfer hubs</button>' +
+            '</div>' +
+            '<div id="map" role="application" aria-label="Interactive map" style="height:400px;border-radius:8px;"></div>');
+
+          retranslateScaffold("map");
+
+          loadScript("https://unpkg.com/leaflet@1.9.4/dist/leaflet.js", function () {
+            loadScript("js/i18n.js", function () {
+              loadScript("js/shared.js", function () {
+                loadScript("js/map.js");
+              });
+            });
+          });
+
+        } else {
+          // XSS-safe error for unknown tool — use textContent, not innerHTML for user input
+          var errDiv = document.createElement("div");
+          errDiv.className = "widget-error";
+          var h2 = document.createElement("h2");
+          h2.textContent = "Unknown tool: " + tool;
+          var p = document.createElement("p");
+          p.textContent = "Valid tools: line-guide, compare, coverage, map. ";
+          var link = document.createElement("a");
+          link.href = "https://reroutenj.org/embed.html";
+          link.setAttribute("target", "_blank");
+          link.setAttribute("rel", "noopener");
+          link.textContent = "See all embed options";
+          p.appendChild(link);
+          errDiv.appendChild(h2);
+          errDiv.appendChild(p);
+          main.appendChild(errDiv);
+        }
+
+      }); // end fetchTranslations callback
     })();
   </script>
 </body>

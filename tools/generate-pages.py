@@ -293,7 +293,7 @@ def replace_footer(html, translations, page_key):
 def inject_translations_script(html, translations, page_name):
     """Inject window._T before i18n.js so translations load synchronously."""
     # Only include the sections needed at runtime (js, common, compare, coverage)
-    runtime_keys = ["common", "js", "compare", "coverage"]
+    runtime_keys = ["common", "js", "compare", "coverage", "card"]
     runtime_t = {}
     for key in runtime_keys:
         if key in translations:

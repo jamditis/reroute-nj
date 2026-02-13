@@ -48,6 +48,7 @@
     var theme = el.getAttribute("data-theme") || "light";
     var accent = el.getAttribute("data-accent") || "";
     var cardType = el.getAttribute("data-card-type") || "";
+    var lang = el.getAttribute("data-lang") || "";
 
     // Resolve generic "card" type using data-card-type
     if (type === "card" && cardType) {
@@ -73,6 +74,7 @@
       if (station) { params.push("station=" + encodeURIComponent(station)); }
       if (theme) { params.push("theme=" + encodeURIComponent(theme)); }
       if (accent) { params.push("accent=" + encodeURIComponent(accent)); }
+      if (lang) { params.push("lang=" + encodeURIComponent(lang)); }
       return BASE_URL + "card.html?" + params.join("&");
     }
 
@@ -82,6 +84,7 @@
       if (line) { params.push("line=" + encodeURIComponent(line)); }
       if (theme) { params.push("theme=" + encodeURIComponent(theme)); }
       if (accent) { params.push("accent=" + encodeURIComponent(accent)); }
+      if (lang) { params.push("lang=" + encodeURIComponent(lang)); }
       return BASE_URL + "widget.html?" + params.join("&");
     }
 
@@ -89,11 +92,12 @@
     if (type === "tool" && tool) {
       var page = TOOL_PAGE_MAP[tool];
       if (page) {
+        var langPrefix = (lang && lang !== "en") ? lang + "/" : "";
         params.push("embed=true");
         if (line) { params.push("line=" + encodeURIComponent(line)); }
         if (theme) { params.push("theme=" + encodeURIComponent(theme)); }
         if (accent) { params.push("accent=" + encodeURIComponent(accent)); }
-        return BASE_URL + page + "?" + params.join("&");
+        return BASE_URL + langPrefix + page + "?" + params.join("&");
       }
     }
 
