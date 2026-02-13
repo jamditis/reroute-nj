@@ -240,9 +240,10 @@ main.container {
 }
 
 .line-nav {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: 0.5rem;
+  justify-content: center;
 }
 
 .line-btn {
@@ -271,7 +272,7 @@ main.container {
   transform: translateY(-1px);
 }
 
-.line-btn:hover:not(.disabled) {
+.line-btn:hover:not(.disabled):not(.active) {
   border-color: var(--primary-light);
   color: var(--primary);
 }
@@ -2281,7 +2282,7 @@ main.container {
   }
 
   .line-nav {
-    grid-template-columns: repeat(2, 1fr);
+    gap: 0.4rem;
   }
 
   .line-btn {
