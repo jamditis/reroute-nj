@@ -284,7 +284,9 @@
     // Update iframe preview
     var url = getPreviewUrl();
     // Use relative URL for preview when on same origin
-    var previewUrl = url.replace(BASE_URL, "./");
+    // BASE_PATH is injected by the translation system (e.g. "../" for /es/ pages)
+    var base = window.BASE_PATH || "./";
+    var previewUrl = url.replace(BASE_URL, base);
     if ($iframe.getAttribute("src") !== previewUrl) {
       $iframe.setAttribute("src", previewUrl);
     }
