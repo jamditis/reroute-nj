@@ -962,6 +962,135 @@ main.container {
   border-bottom-color: var(--accent);
 }
 
+/* Hamburger menu button — hidden on desktop */
+
+.hamburger-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 101;
+  min-height: 44px;
+  min-width: 44px;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger-btn span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 1px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  position: relative;
+}
+
+.hamburger-btn span::before,
+.hamburger-btn span::after {
+  content: "";
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 1px;
+  position: absolute;
+  left: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger-btn span::before {
+  top: -7px;
+}
+
+.hamburger-btn span::after {
+  top: 7px;
+}
+
+/* Animate to X when open */
+.tool-nav.open .hamburger-btn span {
+  background: transparent;
+}
+
+.tool-nav.open .hamburger-btn span::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.tool-nav.open .hamburger-btn span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+/* Mobile nav menu */
+
+@media (max-width: 767px) {
+  .tool-nav {
+    position: relative;
+    overflow: visible;
+  }
+
+  .hamburger-btn {
+    display: flex;
+  }
+
+  .tool-nav .container {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+  }
+
+  .tool-nav.open .container {
+    display: flex;
+  }
+
+  .tool-nav-link {
+    padding: 0.85rem 1.25rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-left: 3px solid transparent;
+    white-space: normal;
+  }
+
+  .tool-nav-link:last-child {
+    border-bottom: none;
+  }
+
+  .tool-nav-link.active {
+    border-bottom-color: rgba(255, 255, 255, 0.08);
+    border-left-color: var(--accent);
+  }
+
+  .tool-nav-link:last-child.active {
+    border-bottom-color: transparent;
+  }
+
+  /* Label for the hamburger when closed */
+  .hamburger-label {
+    display: block;
+    padding: 0.75rem 1.25rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.85rem;
+    font-weight: 600;
+    min-height: 44px;
+    line-height: 44px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .hamburger-btn,
+  .hamburger-label {
+    display: none !important;
+  }
+}
+
 /* Brand link */
 
 .brand-link {
@@ -2085,11 +2214,6 @@ main.container {
 
   .direction-toggle {
     max-width: 100%;
-  }
-
-  .tool-nav-link {
-    padding: 0.75rem 0.75rem;
-    font-size: 0.8rem;
   }
 
   .share-btn {
