@@ -21,7 +21,7 @@ embed.html              — Embed & share for publishers
 blog.html               — Blog index (lists posts)
 blog/                   — Blog posts (e.g., blog/why-we-built-reroute-nj.html)
 robots.txt              — Crawler guidance + AI bot allowances
-sitemap.xml             — All 79 pages with hreflang cross-refs
+sitemap.xml             — All 90 pages with hreflang cross-refs
 llms.txt                — AI search engine discoverability
 card.html               — Info card renderer (URL params → card)
 widget.html             — Mini-widget renderer (URL params → tool)
@@ -39,7 +39,7 @@ data/coverage.json      — Curated article metadata
 translations/en.json    — English source strings (~175 keys)
 translations/{lang}.json — 10 translated language files
 tools/generate-pages.py — Static page generator for translations
-{lang}/                 — Generated translated pages (70 total, 7 pages × 10 languages)
+{lang}/                 — Generated translated pages (80 total, 8 pages × 10 languages)
 ```
 
 ## Code conventions
@@ -86,7 +86,7 @@ These run after `replace_meta()` in the `generate_page()` function. If a transla
 1. Add key to `translations/en.json`
 2. Add replacement logic in `tools/generate-pages.py` (in `replace_page_specific_content()` under the correct page's `if/elif` block)
 3. Add translated values to all 10 language files: es, zh, tl, ko, pt, gu, hi, it, ar, pl
-4. Run `python3 tools/generate-pages.py` to regenerate all 70 pages
+4. Run `python3 tools/generate-pages.py` to regenerate all 80 pages
 5. Spot-check at least 2 languages for correct output
 
 ### Regenerating pages

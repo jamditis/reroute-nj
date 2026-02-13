@@ -22,11 +22,12 @@ PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TRANSLATIONS_DIR = os.path.join(PROJECT_ROOT, "translations")
 
 # Pages to generate
-PAGES = ["index.html", "compare.html", "coverage.html", "map.html", "embed.html", "blog.html", "blog/why-we-built-reroute-nj.html"]
+PAGES = ["index.html", "compare.html", "coverage.html", "map.html", "embed.html", "blog.html", "blog/why-we-built-reroute-nj.html", "blog/new-embed-system.html"]
 
 # Map page filenames to translation key prefixes (when different from filename stem)
 PAGE_KEY_MAP = {
     "blog/why-we-built-reroute-nj.html": "blog_post",
+    "blog/new-embed-system.html": "blog_post_embed",
 }
 
 # All supported languages for hreflang tags
@@ -252,6 +253,7 @@ def replace_footer(html, translations, page_key):
             "embed": ' <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">{embed_gh}</a>.',
             "blog": ' <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">{embed_gh}</a>.',
             "blog_post": ' <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">{embed_gh}</a>.',
+            "blog_post_embed": ' <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">{embed_gh}</a>.',
         }
         idx = get_translation(translations, "common.footer_disclaimer_index") or "Information is based on official announcements and may change. Always verify with"
         idx_after = get_translation(translations, "common.footer_disclaimer_index_after") or "before traveling."
@@ -348,6 +350,7 @@ def replace_hamburger_label(html, translations, page_key):
         "embed": "common.nav_embed",
         "blog": "common.menu",
         "blog_post": "common.menu",
+        "blog_post_embed": "common.menu",
     }
     eng_map = {
         "index": "Line guide",
@@ -357,6 +360,7 @@ def replace_hamburger_label(html, translations, page_key):
         "embed": "Embed &amp; share",
         "blog": "Menu",
         "blog_post": "Menu",
+        "blog_post_embed": "Menu",
     }
     key = label_map.get(page_key)
     eng = eng_map.get(page_key)
@@ -1134,6 +1138,26 @@ def replace_page_specific_content(html, translations, page_key):
                 f'>{read_more.replace("→", "&rarr;")}</span>'
             )
 
+        # Post 2 card (embed system post)
+        post2_title = get_translation(translations, "blog.post2_title")
+        if post2_title:
+            html = html.replace(">New: embed Reroute NJ on your website</h2>", f">{post2_title}</h2>")
+
+        post2_date = get_translation(translations, "blog.post2_date")
+        if post2_date:
+            html = html.replace(">February 13, 2026</time>", f">{post2_date}</time>")
+
+        post2_excerpt = get_translation(translations, "blog.post2_excerpt")
+        if post2_excerpt:
+            html = html.replace(
+                ">Newsrooms and publishers can now embed Reroute NJ tools directly on their websites. Four embed formats, a visual configurator, and PNG export — all free.</p>",
+                f'>{post2_excerpt}</p>'
+            )
+            html = html.replace(
+                ">Newsrooms and publishers can now embed Reroute NJ tools directly on their websites. Four embed formats, a visual configurator, and PNG export &#x2014; all free.</p>",
+                f'>{post2_excerpt}</p>'
+            )
+
     elif page_key == "blog_post":
         # Blog post: "Why we built Reroute NJ"
         heading = get_translation(translations, "blog_post.heading")
@@ -1344,6 +1368,80 @@ def replace_page_specific_content(html, translations, page_key):
         if cta:
             html = html.replace(
                 '>Plan your commute &rarr;</a>',
+                f'>{cta.replace("→", "&rarr;")}</a>'
+            )
+
+    elif page_key == "blog_post_embed":
+        # Blog post: "New: embed Reroute NJ on your website"
+        heading = get_translation(translations, "blog_post_embed.heading")
+        if heading:
+            html = html.replace(">New: embed Reroute NJ on your website</h1>", f">{heading}</h1>")
+
+        by_prefix = get_translation(translations, "blog_post_embed.by_prefix")
+        if by_prefix:
+            html = html.replace(">By Joe Amditis</span>", f">{by_prefix} Joe Amditis</span>")
+
+        date = get_translation(translations, "blog_post_embed.date")
+        if date:
+            html = html.replace(">February 13, 2026</time>", f">{date}</time>")
+
+        # Body paragraphs
+        para_map = {
+            "blog_post_embed.intro_p1": "The Portal Bridge cutover starts Saturday. If you cover transit in New Jersey &mdash; or if you run a community site, town Facebook page, or commuter forum &mdash; you can now put Reroute NJ tools directly on your website.",
+            "blog_post_embed.intro_p2": "We just shipped a full embed system. Four output formats, a visual configurator that builds the embed code for you, and PNG export for social media and email newsletters. Everything is free to use.",
+            "blog_post_embed.format_cards": '<strong>Info cards</strong> &mdash; Compact cards showing line impact, station details, or a full cutover summary. Drop one into an article sidebar or at the top of a liveblog. Three card types: line cards (one line\'s impact), station cards (one station\'s changes), and summary cards (all five lines at a glance).',
+            "blog_post_embed.format_widgets": '<strong>Interactive widgets</strong> &mdash; Mini versions of the line guide, comparison tool, news feed, or map. These are live, working tools that readers can interact with inside your page. Pick a tool and it loads in an iframe sized to fit.',
+            "blog_post_embed.format_full": '<strong>Full tool embeds</strong> &mdash; Any Reroute NJ page with the header and footer stripped out. Append <code>?embed=true</code> to any tool URL and it becomes embeddable. Good for dedicated cutover pages where you want to give readers the complete experience.',
+            "blog_post_embed.format_script": '<strong>Script-tag embeds</strong> &mdash; A single <code>&lt;script&gt;</code> tag and a <code>&lt;div&gt;</code>. No iframe configuration needed. Add the div with data attributes for the embed type, line, and station, include the script, and it handles the rest. Works in CMSes where pasting iframe code is restricted.',
+            "blog_post_embed.configurator_p1": 'The <a href="../embed.html">embed page</a> has a visual configurator that walks you through choosing your embed type, selecting the line and station, picking a theme (light or dark), and setting a custom accent color. It shows a live preview and gives you copy-paste code in all four formats.',
+            "blog_post_embed.configurator_p2": 'For info cards, you also get a <strong>Download PNG</strong> button that renders the card to a high-fidelity image. The PNG export uses Canvas rendering (not a screenshot), so text stays sharp at any size. Use it in newsletters, tweets, or print handouts.',
+            "blog_post_embed.configurator_p3": 'There\'s also a <strong>Download HTML</strong> option that gives you a self-contained file with all styles and data bundled in. No external dependencies, no network requests. Open it in a browser and it works offline.',
+            "blog_post_embed.customization_intro": "Every embed supports two customization options:",
+            "blog_post_embed.customization_outro": "Match the embed to your site\'s design without touching any code.",
+            "blog_post_embed.newsrooms_p1": "We built this for you. The cutover will dominate transit coverage in the region for a month, and your readers need tools, not just articles. A line card in your sidebar tells a Montclair-Boonton commuter exactly what changes for them. A comparison widget lets a reader punch in their station and see every alternative route.",
+            "blog_post_embed.newsrooms_p2": 'The embed codes work on WordPress, Squarespace, Ghost, Substack (with the script-tag format), and any platform that accepts HTML. If you run into trouble embedding on your specific platform, <a href="https://github.com/jamditis/reroute-nj/issues/new" target="_blank" rel="noopener">open an issue</a> or email <a href="mailto:amditisj@montclair.edu">amditisj@montclair.edu</a> and we\'ll help.',
+            "blog_post_embed.newsrooms_p3": 'Everything is MIT-licensed. No attribution required, though we appreciate a link back to <a href="https://reroutenj.org">reroutenj.org</a>.',
+            "blog_post_embed.whatelse_intro": "Along with the embed system, this release includes:",
+            "blog_post_embed.tryit_p1": 'Go to the <a href="../embed.html">embed configurator</a>, pick a format, and copy the code. It takes about 30 seconds.',
+            "blog_post_embed.tryit_p2": 'If you embed Reroute NJ on your site, we\'d like to know about it. Drop us a line at <a href="mailto:amditisj@montclair.edu">amditisj@montclair.edu</a> &mdash; we\'ll add your site to our <a href="../coverage.html">coverage page</a>.',
+        }
+        for key, eng_text in para_map.items():
+            translated = get_translation(translations, key)
+            if translated:
+                html = html.replace(f"<p>{eng_text}</p>", f"<p>{translated}</p>")
+
+        # H2 headings
+        h2_map = [
+            ("blog_post_embed.h2_formats", "Four ways to embed"),
+            ("blog_post_embed.h2_configurator", "The configurator"),
+            ("blog_post_embed.h2_customization", "Customization"),
+            ("blog_post_embed.h2_newsrooms", "For newsrooms"),
+            ("blog_post_embed.h2_whatelse", "What else is new"),
+            ("blog_post_embed.h2_tryit", "Try it"),
+        ]
+        for key, eng_text in h2_map:
+            translated = get_translation(translations, key)
+            if translated:
+                html = html.replace(f"<h2>{eng_text}</h2>", f"<h2>{translated}</h2>")
+
+        # List items
+        li_map = {
+            "blog_post_embed.customization_theme": '<strong>Theme</strong> &mdash; Light or dark. Append <code>&amp;theme=dark</code> to any embed URL or set <code>data-theme="dark"</code> on the script-tag div.',
+            "blog_post_embed.customization_accent": '<strong>Accent color</strong> &mdash; Any hex color. Append <code>&amp;accent=FF6B35</code> or set <code>data-accent="FF6B35"</code>. The accent applies to CTA buttons and color highlights.',
+            "blog_post_embed.whatelse_blog": "<strong>Blog in all 11 languages</strong> &mdash; Blog posts are now translated alongside the rest of the site. The blog has its own index page with a proper post structure.",
+            "blog_post_embed.whatelse_seo": '<strong>SEO and AI search optimization</strong> &mdash; Structured data (JSON-LD), full hreflang cross-references, <code>robots.txt</code> with AI bot guidance, <code>llms.txt</code> for AI search engines, and <code>sitemap.xml</code> covering all 79 pages.',
+            "blog_post_embed.whatelse_html": "<strong>Self-contained HTML downloads</strong> &mdash; Export any info card as a standalone HTML file that works without an internet connection.",
+        }
+        for key, eng_text in li_map.items():
+            translated = get_translation(translations, key)
+            if translated:
+                html = html.replace(f"<li>{eng_text}</li>", f"<li>{translated}</li>")
+
+        # CTA button
+        cta = get_translation(translations, "blog_post_embed.cta")
+        if cta:
+            html = html.replace(
+                '>Try the embed configurator &rarr;</a>',
                 f'>{cta.replace("→", "&rarr;")}</a>'
             )
 

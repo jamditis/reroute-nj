@@ -17,7 +17,9 @@
     "blog_description": "Mga update at kuwento mula sa Reroute NJ project &mdash; mga libreng tool na tumutulong sa mga pasahero ng NJ Transit na mag-navigate sa Portal Bridge cutover.",
     "blog_og_description": "Mga update at kuwento mula sa Reroute NJ project &mdash; mga libreng tool na tumutulong sa mga pasahero ng NJ Transit na mag-navigate sa Portal Bridge cutover.",
     "blog_post_description": "Reroute NJ: limang libreng tool sa 11 wika para tulungan ang mga pasahero ng NJ Transit na mag-navigate sa Portal Bridge cutover. Narito kung bakit ginawa namin ito at paano ka makakatulong.",
-    "blog_post_og_description": "Limang libreng tool sa 11 wika para tulungan ang mga pasahero ng NJ Transit na mag-navigate sa Portal Bridge cutover (Peb 15 – Mar 15, 2026)."
+    "blog_post_og_description": "Limang libreng tool sa 11 wika para tulungan ang mga pasahero ng NJ Transit na mag-navigate sa Portal Bridge cutover (Peb 15 – Mar 15, 2026).",
+    "blog_post_embed_description": "Ang mga newsroom at publisher ay maaari na ngayong mag-embed ng mga tool ng Reroute NJ nang direkta sa kanilang mga website. Apat na embed format, visual configurator, at PNG export — lahat libre.",
+    "blog_post_embed_og_description": "Apat na embed format, visual configurator, at PNG export para sa mga newsroom na sumasaklaw ng Portal Bridge cutover."
   },
   "common": {
     "skip_to_main": "Pumunta sa pangunahing nilalaman",
@@ -359,7 +361,10 @@
     "post1_title": "Bakit ginawa namin ang Reroute NJ",
     "post1_date": "Pebrero 12, 2026",
     "post1_excerpt": "Limang libreng tool sa 11 wika para tulungan ang mga pasahero ng NJ Transit na mag-navigate sa Portal Bridge cutover. Narito kung bakit ginawa namin ito at paano ka makakatulong.",
-    "read_more": "Magbasa pa →"
+    "read_more": "Magbasa pa →",
+    "post2_title": "Bago: i-embed ang Reroute NJ sa iyong website",
+    "post2_date": "Pebrero 13, 2026",
+    "post2_excerpt": "Ang mga newsroom at publisher ay maaari na ngayong mag-embed ng mga tool ng Reroute NJ nang direkta sa kanilang mga website. Apat na embed format, visual configurator, at PNG export — lahat libre."
   },
   "blog_post": {
     "title": "Bakit ginawa namin ang Reroute NJ — Reroute NJ",
@@ -401,5 +406,41 @@
     "bigger_p2": "Ang apat na linggong pagkaantala na ito ay ang presyo ng progreso. Kapag dumating ang Phase 2 sa taglagas ng 2026, i-update namin ang Reroute NJ para saklawin din iyon.",
     "bigger_p3": "Sa ngayon, umaasa kami na ang mga tool na ito ay gagawing mas madali ang susunod na buwan na mag-navigate. Mag-plano nang maaga, magpasensya sa isa't isa sa mga platform, at tandaan: ito ay pansamantala.",
     "cta": "Planuhin ang iyong commute &rarr;"
+  },
+  "blog_post_embed": {
+    "title": "Bago: i-embed ang Reroute NJ sa iyong website — Reroute NJ",
+    "tagline": "Mga tool ng embed para sa mga publisher",
+    "heading": "Bago: i-embed ang Reroute NJ sa iyong website",
+    "by_prefix": "Ni",
+    "date": "Pebrero 13, 2026",
+    "intro_p1": "Magsisimula ang Portal Bridge cutover sa Sabado. Kung sumasaklaw ka ng transit sa New Jersey &mdash; o kung nagpapatakbo ka ng community site, town Facebook page, o commuter forum &mdash; maaari mo nang ilagay ang mga tool ng Reroute NJ nang direkta sa iyong website.",
+    "intro_p2": "Kakalabas lang namin ng kumpletong sistema ng embed. Apat na output format, visual configurator na lumilikha ng embed code para sa iyo, at PNG export para sa social media at email newsletter. Lahat ay libre.",
+    "h2_formats": "Apat na paraan ng pag-embed",
+    "format_cards": "<strong>Info card</strong> &mdash; Compact na card na nagpapakita ng epekto sa linya, detalye ng istasyon, o buod ng cutover. Ilagay ito sa sidebar ng artikulo o sa itaas ng liveblog. Tatlong uri ng card: line card (epekto ng isang linya), station card (mga pagbabago sa isang istasyon), at summary card (lahat ng limang linya sa isang sulyap).",
+    "format_widgets": "<strong>Interactive na widget</strong> &mdash; Mini na bersyon ng line guide, comparison tool, news feed, o mapa. Ito ay live, gumaganang tool na maaaring pakialaman ng mga mambabasa sa loob ng iyong pahina. Pumili ng tool at mag-load ito sa iframe na swak sa sukat.",
+    "format_full": "<strong>Buong tool na embed</strong> &mdash; Anumang pahina ng Reroute NJ na may inalis na header at footer. Idagdag ang <code>?embed=true</code> sa anumang URL ng tool at ito ay nagiging nai-embed. Maganda para sa dedikadong pahina ng cutover kung saan gusto mong bigyan ang mga mambabasa ng kumpletong karanasan.",
+    "format_script": "<strong>Script-tag na embed</strong> &mdash; Isang <code>&lt;script&gt;</code> tag at isang <code>&lt;div&gt;</code>. Walang pangangailangan ng iframe configuration. Idagdag ang div na may data attribute para sa embed type, linya, at istasyon, isama ang script, at hawakan nito ang natitirang bahagi. Gumagana sa mga CMS kung saan limitado ang pag-paste ng iframe code.",
+    "h2_configurator": "Ang configurator",
+    "configurator_p1": "Ang <a href=\"../embed.html\">embed page</a> ay may visual configurator na gumagabay sa iyo sa pagpili ng iyong embed type, pagpili ng linya at istasyon, pagpili ng tema (light o dark), at pagtatakda ng custom accent color. Nagpapakita ito ng live preview at nagbibigay sa iyo ng copy-paste code sa lahat ng apat na format.",
+    "configurator_p2": "Para sa info card, mayroon ka ring <strong>Download PNG</strong> na button na nag-render ng card sa high-fidelity na imahe. Ang PNG export ay gumagamit ng Canvas rendering (hindi screenshot), kaya ang text ay nananatiling matalim sa anumang sukat. Gamitin ito sa newsletter, tweet, o print handout.",
+    "configurator_p3": "Mayroon ding <strong>Download HTML</strong> na opsyon na nagbibigay sa iyo ng self-contained na file na may lahat ng style at data na naka-bundle. Walang external na dependency, walang network request. Buksan ito sa browser at gumagana ito offline.",
+    "h2_customization": "Customization",
+    "customization_intro": "Bawat embed ay sumusuporta sa dalawang opsyon ng customization:",
+    "customization_theme": "<strong>Tema</strong> &mdash; Light o dark. Idagdag ang <code>&amp;theme=dark</code> sa anumang embed URL o itakda ang <code>data-theme=\"dark\"</code> sa script-tag div.",
+    "customization_accent": "<strong>Accent color</strong> &mdash; Anumang hex color. Idagdag ang <code>&amp;accent=FF6B35</code> o itakda ang <code>data-accent=\"FF6B35\"</code>. Ang accent ay inilalapat sa CTA button at color highlight.",
+    "customization_outro": "Itugma ang embed sa disenyo ng iyong site nang hindi hinahawakan ang anumang code.",
+    "h2_newsrooms": "Para sa mga newsroom",
+    "newsrooms_p1": "Ginawa namin ito para sa iyo. Ang cutover ay magdodominante sa transit coverage sa rehiyon sa loob ng isang buwan, at ang iyong mga mambabasa ay nangangailangan ng tool, hindi lang artikulo. Ang line card sa iyong sidebar ay nagsasabi sa Montclair-Boonton commuter ng eksaktong pagbabago para sa kanila. Ang comparison widget ay nagpapahintulot sa mambabasa na ipasok ang kanilang istasyon at makita ang bawat alternatibong ruta.",
+    "newsrooms_p2": "Ang mga embed code ay gumagana sa WordPress, Squarespace, Ghost, Substack (gamit ang script-tag format), at anumang platform na tumatanggap ng HTML. Kung magkaproblema ka sa pag-embed sa iyong partikular na platform, <a href=\"https://github.com/jamditis/reroute-nj/issues/new\" target=\"_blank\" rel=\"noopener\">mag-open ng issue</a> o mag-email sa <a href=\"mailto:amditisj@montclair.edu\">amditisj@montclair.edu</a> at tutulungan ka namin.",
+    "newsrooms_p3": "Lahat ay MIT-licensed. Hindi kailangan ng attribution, bagama't pinahahalagahan namin ang link pabalik sa <a href=\"https://reroutenj.org\">reroutenj.org</a>.",
+    "h2_whatelse": "Ano pa ang bago",
+    "whatelse_intro": "Kasama ng embed system, kasama sa release na ito:",
+    "whatelse_blog": "<strong>Blog sa lahat ng 11 wika</strong> &mdash; Ang mga blog post ay naisalin na kasama ng natitirang bahagi ng site. Ang blog ay may sariling index page na may wastong istruktura ng post.",
+    "whatelse_seo": "<strong>SEO at AI search optimization</strong> &mdash; Structured data (JSON-LD), buong hreflang cross-reference, <code>robots.txt</code> na may AI bot guidance, <code>llms.txt</code> para sa AI search engine, at <code>sitemap.xml</code> na sumasaklaw sa lahat ng 79 na pahina.",
+    "whatelse_html": "<strong>Self-contained na HTML download</strong> &mdash; I-export ang anumang info card bilang standalone HTML file na gumagana nang walang internet connection.",
+    "h2_tryit": "Subukan",
+    "tryit_p1": "Pumunta sa <a href=\"../embed.html\">embed configurator</a>, pumili ng format, at kopyahin ang code. Tumatagal lang ng mga 30 segundo.",
+    "tryit_p2": "Kung i-embed mo ang Reroute NJ sa iyong site, gusto naming malaman ito. Magpadala sa amin ng linya sa <a href=\"mailto:amditisj@montclair.edu\">amditisj@montclair.edu</a> &mdash; idadagdag namin ang iyong site sa aming <a href=\"../coverage.html\">coverage page</a>.",
+    "cta": "Subukan ang embed configurator &rarr;"
   }
 }

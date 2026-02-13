@@ -17,7 +17,9 @@
     "blog_description": "来自Reroute NJ项目的更新和动态——帮助NJ Transit乘客应对Portal Bridge转换的免费工具。",
     "blog_og_description": "来自Reroute NJ项目的更新和动态——帮助NJ Transit乘客应对Portal Bridge转换的免费工具。",
     "blog_post_description": "Reroute NJ：11种语言的5款免费工具，帮助NJ Transit乘客应对Portal Bridge转换。我们为什么创建它以及您如何帮助。",
-    "blog_post_og_description": "11种语言的5款免费工具，帮助NJ Transit乘客应对Portal Bridge转换（2026年2月15日至3月15日）。"
+    "blog_post_og_description": "11种语言的5款免费工具，帮助NJ Transit乘客应对Portal Bridge转换（2026年2月15日至3月15日）。",
+    "blog_post_embed_description": "新闻编辑室和发布者现在可以直接在他们的网站上嵌入 Reroute NJ 工具。四种嵌入格式、一个可视化配置器和 PNG 导出 — 全部免费。",
+    "blog_post_embed_og_description": "为报道 Portal Bridge 切换的新闻编辑室提供四种嵌入格式、一个可视化配置器和 PNG 导出。"
   },
   "common": {
     "skip_to_main": "跳到主要内容",
@@ -359,7 +361,10 @@
     "post1_title": "我们为什么创建Reroute NJ",
     "post1_date": "2026年2月12日",
     "post1_excerpt": "11种语言的5款免费工具，帮助NJ Transit乘客应对Portal Bridge转换。我们创建它的原因和您如何帮助。",
-    "read_more": "阅读更多 →"
+    "read_more": "阅读更多 →",
+    "post2_title": "新功能：在您的网站上嵌入 Reroute NJ",
+    "post2_date": "2026年2月13日",
+    "post2_excerpt": "新闻编辑室和发布者现在可以直接在他们的网站上嵌入 Reroute NJ 工具。四种嵌入格式、一个可视化配置器和 PNG 导出 — 全部免费。"
   },
   "blog_post": {
     "title": "我们为什么创建Reroute NJ — Reroute NJ",
@@ -401,5 +406,41 @@
     "bigger_p2": "这四周的中断是进步的代价。当2026年秋季第二阶段到来时，我们也会更新Reroute NJ来覆盖它。",
     "bigger_p3": "与此同时，我们希望这些工具能让接下来的一个月更容易应对。提前规划，在站台上对彼此保持耐心，并记住：这是暂时的。",
     "cta": "规划您的通勤 &rarr;"
+  },
+  "blog_post_embed": {
+    "title": "新功能：在您的网站上嵌入 Reroute NJ — Reroute NJ",
+    "tagline": "为发布者提供的嵌入工具",
+    "heading": "新功能：在您的网站上嵌入 Reroute NJ",
+    "by_prefix": "作者",
+    "date": "2026年2月13日",
+    "intro_p1": "Portal Bridge 切换将于周六开始。如果您报道 New Jersey 的交通 &mdash; 或者如果您运营社区网站、城镇 Facebook 页面或通勤论坛 &mdash; 您现在可以将 Reroute NJ 工具直接放在您的网站上。",
+    "intro_p2": "我们刚刚推出了完整的嵌入系统。四种输出格式、一个为您构建嵌入代码的可视化配置器，以及用于社交媒体和电子邮件通讯的 PNG 导出。所有功能免费使用。",
+    "h2_formats": "四种嵌入方式",
+    "format_cards": "<strong>信息卡片</strong> &mdash; 显示线路影响、车站详情或完整切换摘要的紧凑卡片。将其放入文章侧边栏或实时博客顶部。三种卡片类型：线路卡片（一条线路的影响）、车站卡片（一个车站的变化）和摘要卡片（一目了然的全部五条线路）。",
+    "format_widgets": "<strong>交互式小部件</strong> &mdash; 线路指南、比较工具、新闻源或地图的迷你版本。这些是读者可以在您的页面内进行交互的实时工作工具。选择一个工具，它会在一个适合大小的 iframe 中加载。",
+    "format_full": "<strong>完整工具嵌入</strong> &mdash; 任何去除页眉和页脚的 Reroute NJ 页面。在任何工具 URL 后附加 <code>?embed=true</code>，它就变得可以嵌入。适合专用的切换页面，在那里您希望为读者提供完整的体验。",
+    "format_script": "<strong>脚本标签嵌入</strong> &mdash; 一个 <code>&lt;script&gt;</code> 标签和一个 <code>&lt;div&gt;</code>。不需要 iframe 配置。添加带有嵌入类型、线路和车站数据属性的 div，包含脚本，它会处理其余部分。适用于粘贴 iframe 代码受限的 CMS。",
+    "h2_configurator": "配置器",
+    "configurator_p1": "<a href=\"../embed.html\">嵌入页面</a>有一个可视化配置器，它会引导您选择嵌入类型、选择线路和车站、选择主题（浅色或深色）并设置自定义强调色。它显示实时预览并为您提供所有四种格式的复制粘贴代码。",
+    "configurator_p2": "对于信息卡片，您还可以获得一个 <strong>Download PNG</strong> 按钮，它将卡片渲染为高保真图像。PNG 导出使用 Canvas 渲染（而不是截图），因此文本在任何大小下都保持清晰。在新闻通讯、tweets 或打印材料中使用它。",
+    "configurator_p3": "还有一个 <strong>Download HTML</strong> 选项，它为您提供一个包含所有样式和数据的自包含文件。没有外部依赖，没有网络请求。在浏览器中打开它即可离线工作。",
+    "h2_customization": "自定义",
+    "customization_intro": "每个嵌入都支持两个自定义选项：",
+    "customization_theme": "<strong>Theme</strong> &mdash; 浅色或深色。在任何嵌入 URL 后附加 <code>&amp;theme=dark</code> 或在脚本标签 div 上设置 <code>data-theme=\"dark\"</code>。",
+    "customization_accent": "<strong>Accent color</strong> &mdash; 任何十六进制颜色。附加 <code>&amp;accent=FF6B35</code> 或设置 <code>data-accent=\"FF6B35\"</code>。强调色应用于 CTA 按钮和颜色高亮。",
+    "customization_outro": "将嵌入与您网站的设计相匹配，无需触及任何代码。",
+    "h2_newsrooms": "为新闻编辑室",
+    "newsrooms_p1": "我们为您构建了这个。切换将在该地区主导交通报道一个月，您的读者需要工具，而不仅仅是文章。侧边栏中的线路卡片可以准确地告诉 Montclair-Boonton 通勤者对他们有什么变化。比较小部件让读者输入他们的车站并查看每条替代路线。",
+    "newsrooms_p2": "嵌入代码可在 WordPress、Squarespace、Ghost、Substack（使用脚本标签格式）以及任何接受 HTML 的平台上工作。如果您在特定平台上嵌入时遇到问题，<a href=\"https://github.com/jamditis/reroute-nj/issues/new\" target=\"_blank\" rel=\"noopener\">开一个 issue</a> 或发送电子邮件至 <a href=\"mailto:amditisj@montclair.edu\">amditisj@montclair.edu</a>，我们会提供帮助。",
+    "newsrooms_p3": "所有内容均采用 MIT 许可。无需署名，但我们感谢链接回 <a href=\"https://reroutenj.org\">reroutenj.org</a>。",
+    "h2_whatelse": "还有什么新功能",
+    "whatelse_intro": "与嵌入系统一起，此版本还包括：",
+    "whatelse_blog": "<strong>11 种语言的博客</strong> &mdash; 博客文章现在与网站的其余部分一起翻译。博客有自己的索引页面和适当的文章结构。",
+    "whatelse_seo": "<strong>SEO 和 AI 搜索优化</strong> &mdash; 结构化数据（JSON-LD）、完整的 hreflang 交叉引用、带有 AI 机器人指导的 <code>robots.txt</code>、用于 AI 搜索引擎的 <code>llms.txt</code> 以及覆盖所有 79 个页面的 <code>sitemap.xml</code>。",
+    "whatelse_html": "<strong>自包含 HTML 下载</strong> &mdash; 将任何信息卡片导出为可在没有互联网连接的情况下工作的独立 HTML 文件。",
+    "h2_tryit": "试试看",
+    "tryit_p1": "转到 <a href=\"../embed.html\">嵌入配置器</a>，选择一种格式，然后复制代码。大约需要 30 秒。",
+    "tryit_p2": "如果您在网站上嵌入了 Reroute NJ，我们希望了解它。请发送电子邮件至 <a href=\"mailto:amditisj@montclair.edu\">amditisj@montclair.edu</a> &mdash; 我们会将您的网站添加到我们的<a href=\"../coverage.html\">报道页面</a>。",
+    "cta": "试试嵌入配置器 &rarr;"
   }
 }

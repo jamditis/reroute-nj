@@ -17,7 +17,9 @@
     "blog_description": "Atualizações e histórias do projeto Reroute NJ — ferramentas gratuitas ajudando passageiros do NJ Transit a navegar a mudança do Portal Bridge.",
     "blog_og_description": "Atualizações e histórias do projeto Reroute NJ — ferramentas gratuitas ajudando passageiros do NJ Transit a navegar a mudança do Portal Bridge.",
     "blog_post_description": "Reroute NJ: cinco ferramentas gratuitas em 11 idiomas para ajudar passageiros do NJ Transit a navegar a mudança do Portal Bridge. Por que construímos e como você pode ajudar.",
-    "blog_post_og_description": "Cinco ferramentas gratuitas em 11 idiomas para ajudar passageiros do NJ Transit a navegar a mudança do Portal Bridge (15 fev – 15 mar, 2026)."
+    "blog_post_og_description": "Cinco ferramentas gratuitas em 11 idiomas para ajudar passageiros do NJ Transit a navegar a mudança do Portal Bridge (15 fev – 15 mar, 2026).",
+    "blog_post_embed_description": "Redações e editoras agora podem incorporar ferramentas do Reroute NJ diretamente em seus sites. Quatro formatos de incorporação, um configurador visual e exportação PNG — tudo gratuito.",
+    "blog_post_embed_og_description": "Quatro formatos de incorporação, um configurador visual e exportação PNG para redações cobrindo a mudança do Portal Bridge."
   },
   "common": {
     "skip_to_main": "Pular para o conteúdo principal",
@@ -359,7 +361,10 @@
     "post1_title": "Por que construímos o Reroute NJ",
     "post1_date": "12 de fevereiro de 2026",
     "post1_excerpt": "Cinco ferramentas gratuitas em 11 idiomas para ajudar passageiros do NJ Transit a navegar a mudança do Portal Bridge. Por que construímos e como você pode ajudar.",
-    "read_more": "Leia mais →"
+    "read_more": "Leia mais →",
+    "post2_title": "Novo: incorpore o Reroute NJ no seu site",
+    "post2_date": "13 de fevereiro de 2026",
+    "post2_excerpt": "Redações e editoras agora podem incorporar ferramentas do Reroute NJ diretamente em seus sites. Quatro formatos de incorporação, um configurador visual e exportação PNG — tudo gratuito."
   },
   "blog_post": {
     "title": "Por que construímos o Reroute NJ — Reroute NJ",
@@ -401,5 +406,41 @@
     "bigger_p2": "Essa interrupção de quatro semanas é o preço do progresso. Quando a Fase 2 chegar no outono de 2026, atualizaremos o Reroute NJ para cobrir isso também.",
     "bigger_p3": "Enquanto isso, esperamos que essas ferramentas tornem o próximo mês um pouco mais fácil de navegar. Planeje com antecedência, seja paciente uns com os outros nas plataformas e lembre-se: isso é temporário.",
     "cta": "Planeje seu trajeto &rarr;"
+  },
+  "blog_post_embed": {
+    "title": "Novo: incorpore o Reroute NJ no seu site — Reroute NJ",
+    "tagline": "Ferramentas de incorporação para editoras",
+    "heading": "Novo: incorpore o Reroute NJ no seu site",
+    "by_prefix": "Por",
+    "date": "13 de fevereiro de 2026",
+    "intro_p1": "A mudança do Portal Bridge começa no sábado. Se você cobre trânsito em New Jersey &mdash; ou se você administra um site comunitário, página do Facebook de uma cidade ou fórum de passageiros &mdash; agora você pode colocar as ferramentas do Reroute NJ diretamente no seu site.",
+    "intro_p2": "Acabamos de lançar um sistema completo de incorporação. Quatro formatos de saída, um configurador visual que constrói o código de incorporação para você e exportação PNG para mídias sociais e newsletters por e-mail. Tudo é gratuito para usar.",
+    "h2_formats": "Quatro formas de incorporar",
+    "format_cards": "<strong>Cartões informativos</strong> &mdash; Cartões compactos mostrando impacto da linha, detalhes da estação ou um resumo completo da mudança. Coloque um na barra lateral de um artigo ou no topo de um liveblog. Três tipos de cartão: cartões de linha (impacto de uma linha), cartões de estação (mudanças de uma estação) e cartões de resumo (todas as cinco linhas de relance).",
+    "format_widgets": "<strong>Widgets interativos</strong> &mdash; Versões mini do guia de linhas, ferramenta de comparação, feed de notícias ou mapa. São ferramentas funcionais e ao vivo com as quais os leitores podem interagir dentro da sua página. Escolha uma ferramenta e ela carrega em um iframe dimensionado para caber.",
+    "format_full": "<strong>Incorporações de ferramentas completas</strong> &mdash; Qualquer página do Reroute NJ com o cabeçalho e rodapé removidos. Adicione <code>?embed=true</code> a qualquer URL de ferramenta e ela se torna incorporável. Bom para páginas dedicadas de mudança onde você quer dar aos leitores a experiência completa.",
+    "format_script": "<strong>Incorporações com tag script</strong> &mdash; Uma única tag <code>&lt;script&gt;</code> e uma <code>&lt;div&gt;</code>. Nenhuma configuração de iframe necessária. Adicione a div com atributos de dados para o tipo de incorporação, linha e estação, inclua o script e ele cuida do resto. Funciona em CMSes onde colar código iframe é restrito.",
+    "h2_configurator": "O configurador",
+    "configurator_p1": "A <a href=\"../embed.html\">página de incorporação</a> tem um configurador visual que te guia na escolha do seu tipo de incorporação, seleção da linha e estação, escolha de um tema (claro ou escuro) e definição de uma cor de destaque personalizada. Ele mostra uma pré-visualização ao vivo e te dá código para copiar e colar em todos os quatro formatos.",
+    "configurator_p2": "Para cartões informativos, você também recebe um botão <strong>Baixar PNG</strong> que renderiza o cartão para uma imagem de alta fidelidade. A exportação PNG usa renderização Canvas (não uma captura de tela), então o texto fica nítido em qualquer tamanho. Use em newsletters, tweets ou folhetos impressos.",
+    "configurator_p3": "Há também uma opção <strong>Baixar HTML</strong> que te dá um arquivo autocontido com todos os estilos e dados agrupados. Sem dependências externas, sem requisições de rede. Abra em um navegador e funciona offline.",
+    "h2_customization": "Personalização",
+    "customization_intro": "Cada incorporação suporta duas opções de personalização:",
+    "customization_theme": "<strong>Tema</strong> &mdash; Claro ou escuro. Adicione <code>&amp;theme=dark</code> a qualquer URL de incorporação ou defina <code>data-theme=\"dark\"</code> na div da tag script.",
+    "customization_accent": "<strong>Cor de destaque</strong> &mdash; Qualquer cor hexadecimal. Adicione <code>&amp;accent=FF6B35</code> ou defina <code>data-accent=\"FF6B35\"</code>. O destaque se aplica aos botões CTA e destaques de cor.",
+    "customization_outro": "Combine a incorporação com o design do seu site sem tocar em nenhum código.",
+    "h2_newsrooms": "Para redações",
+    "newsrooms_p1": "Construímos isso para você. A mudança vai dominar a cobertura de trânsito na região por um mês, e seus leitores precisam de ferramentas, não apenas artigos. Um cartão de linha na sua barra lateral diz a um passageiro do Montclair-Boonton exatamente o que muda para ele. Um widget de comparação permite que um leitor digite sua estação e veja todas as rotas alternativas.",
+    "newsrooms_p2": "Os códigos de incorporação funcionam em WordPress, Squarespace, Ghost, Substack (com o formato de tag script) e qualquer plataforma que aceite HTML. Se você tiver problemas para incorporar na sua plataforma específica, <a href=\"https://github.com/jamditis/reroute-nj/issues/new\" target=\"_blank\" rel=\"noopener\">abra uma issue</a> ou envie e-mail para <a href=\"mailto:amditisj@montclair.edu\">amditisj@montclair.edu</a> e ajudaremos.",
+    "newsrooms_p3": "Tudo é licenciado MIT. Nenhuma atribuição necessária, embora apreciemos um link de volta para <a href=\"https://reroutenj.org\">reroutenj.org</a>.",
+    "h2_whatelse": "O que mais há de novo",
+    "whatelse_intro": "Junto com o sistema de incorporação, este lançamento inclui:",
+    "whatelse_blog": "<strong>Blog em todos os 11 idiomas</strong> &mdash; Postagens do blog agora são traduzidas junto com o resto do site. O blog tem sua própria página de índice com uma estrutura adequada de postagens.",
+    "whatelse_seo": "<strong>Otimização para SEO e busca AI</strong> &mdash; Dados estruturados (JSON-LD), referências cruzadas hreflang completas, <code>robots.txt</code> com orientação para bots AI, <code>llms.txt</code> para mecanismos de busca AI e <code>sitemap.xml</code> cobrindo todas as 79 páginas.",
+    "whatelse_html": "<strong>Downloads HTML autocontidos</strong> &mdash; Exporte qualquer cartão informativo como um arquivo HTML autônomo que funciona sem conexão com a internet.",
+    "h2_tryit": "Experimente",
+    "tryit_p1": "Vá para o <a href=\"../embed.html\">configurador de incorporação</a>, escolha um formato e copie o código. Leva cerca de 30 segundos.",
+    "tryit_p2": "Se você incorporar o Reroute NJ no seu site, gostaríamos de saber sobre isso. Nos envie uma mensagem em <a href=\"mailto:amditisj@montclair.edu\">amditisj@montclair.edu</a> &mdash; adicionaremos seu site à nossa <a href=\"../coverage.html\">página de cobertura</a>.",
+    "cta": "Experimente o configurador de incorporação &rarr;"
   }
 }

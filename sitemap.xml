@@ -142,6 +142,26 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/blog/why-we-built-reroute-nj.html"/>
   </url>
 
+  <!-- English: blog/new-embed-system.html -->
+  <url>
+    <loc>https://reroutenj.org/blog/new-embed-system.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/blog/new-embed-system.html"/>
+  </url>
+
   <!-- Embed utility pages (no translations, loaded inside iframes) -->
   <url>
     <loc>https://reroutenj.org/card.html</loc>
@@ -283,6 +303,24 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/blog/why-we-built-reroute-nj.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/blog/why-we-built-reroute-nj.html"/>
   </url>
+  <url>
+    <loc>https://reroutenj.org/es/blog/new-embed-system.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/blog/new-embed-system.html"/>
+  </url>
 
   <!-- Chinese (zh) -->
   <url>
@@ -410,6 +448,24 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/blog/why-we-built-reroute-nj.html"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/blog/why-we-built-reroute-nj.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/blog/why-we-built-reroute-nj.html"/>
+  </url>
+  <url>
+    <loc>https://reroutenj.org/zh/blog/new-embed-system.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/blog/new-embed-system.html"/>
   </url>
 
   <!-- Tagalog (tl) -->
@@ -539,6 +595,24 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/blog/why-we-built-reroute-nj.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/blog/why-we-built-reroute-nj.html"/>
   </url>
+  <url>
+    <loc>https://reroutenj.org/tl/blog/new-embed-system.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/blog/new-embed-system.html"/>
+  </url>
 
   <!-- Korean (ko) -->
   <url>
@@ -666,6 +740,24 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/blog/why-we-built-reroute-nj.html"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/blog/why-we-built-reroute-nj.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/blog/why-we-built-reroute-nj.html"/>
+  </url>
+  <url>
+    <loc>https://reroutenj.org/ko/blog/new-embed-system.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/blog/new-embed-system.html"/>
   </url>
 
   <!-- Portuguese (pt) -->
@@ -795,6 +887,24 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/blog/why-we-built-reroute-nj.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/blog/why-we-built-reroute-nj.html"/>
   </url>
+  <url>
+    <loc>https://reroutenj.org/pt/blog/new-embed-system.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/blog/new-embed-system.html"/>
+  </url>
 
   <!-- Gujarati (gu) -->
   <url>
@@ -922,6 +1032,24 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/blog/why-we-built-reroute-nj.html"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/blog/why-we-built-reroute-nj.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/blog/why-we-built-reroute-nj.html"/>
+  </url>
+  <url>
+    <loc>https://reroutenj.org/gu/blog/new-embed-system.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/blog/new-embed-system.html"/>
   </url>
 
   <!-- Hindi (hi) -->
@@ -1051,6 +1179,24 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/blog/why-we-built-reroute-nj.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/blog/why-we-built-reroute-nj.html"/>
   </url>
+  <url>
+    <loc>https://reroutenj.org/hi/blog/new-embed-system.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/blog/new-embed-system.html"/>
+  </url>
 
   <!-- Italian (it) -->
   <url>
@@ -1178,6 +1324,24 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/blog/why-we-built-reroute-nj.html"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/blog/why-we-built-reroute-nj.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/blog/why-we-built-reroute-nj.html"/>
+  </url>
+  <url>
+    <loc>https://reroutenj.org/it/blog/new-embed-system.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/blog/new-embed-system.html"/>
   </url>
 
   <!-- Arabic (ar) -->
@@ -1307,6 +1471,24 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/blog/why-we-built-reroute-nj.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/blog/why-we-built-reroute-nj.html"/>
   </url>
+  <url>
+    <loc>https://reroutenj.org/ar/blog/new-embed-system.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/blog/new-embed-system.html"/>
+  </url>
 
   <!-- Polish (pl) -->
   <url>
@@ -1434,6 +1616,24 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/blog/why-we-built-reroute-nj.html"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/blog/why-we-built-reroute-nj.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/blog/why-we-built-reroute-nj.html"/>
+  </url>
+  <url>
+    <loc>https://reroutenj.org/pl/blog/new-embed-system.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/blog/new-embed-system.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/blog/new-embed-system.html"/>
   </url>
 
 </urlset>

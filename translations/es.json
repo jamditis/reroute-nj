@@ -17,7 +17,9 @@
     "blog_description": "Actualizaciones e historias del proyecto Reroute NJ — herramientas gratuitas que ayudan a los pasajeros de NJ Transit a navegar el cambio del Portal Bridge.",
     "blog_og_description": "Actualizaciones e historias del proyecto Reroute NJ — herramientas gratuitas que ayudan a los pasajeros de NJ Transit a navegar el cambio del Portal Bridge.",
     "blog_post_description": "Reroute NJ: cinco herramientas gratuitas en 11 idiomas para ayudar a los pasajeros de NJ Transit a navegar el cambio del Portal Bridge. Por qué lo construimos y cómo puedes ayudar.",
-    "blog_post_og_description": "Cinco herramientas gratuitas en 11 idiomas para ayudar a los pasajeros de NJ Transit a navegar el cambio del Portal Bridge (15 feb – 15 mar, 2026)."
+    "blog_post_og_description": "Cinco herramientas gratuitas en 11 idiomas para ayudar a los pasajeros de NJ Transit a navegar el cambio del Portal Bridge (15 feb – 15 mar, 2026).",
+    "blog_post_embed_description": "Las salas de redacción y editores ahora pueden incrustar las herramientas de Reroute NJ directamente en sus sitios web. Cuatro formatos de incrustación, un configurador visual y exportación PNG, todo gratis.",
+    "blog_post_embed_og_description": "Cuatro formatos de incrustación, un configurador visual y exportación PNG para salas de redacción que cubren el cambio del Portal Bridge."
   },
   "common": {
     "skip_to_main": "Ir al contenido principal",
@@ -359,7 +361,10 @@
     "post1_title": "Por qué construimos Reroute NJ",
     "post1_date": "12 de febrero de 2026",
     "post1_excerpt": "Cinco herramientas gratuitas en 11 idiomas para ayudar a los pasajeros de NJ Transit a navegar el cambio del Portal Bridge. Por qué lo construimos y cómo puedes ayudar.",
-    "read_more": "Leer más →"
+    "read_more": "Leer más →",
+    "post2_title": "Nuevo: incrusta Reroute NJ en tu sitio web",
+    "post2_date": "13 de febrero de 2026",
+    "post2_excerpt": "Las salas de redacción y editores ahora pueden incrustar las herramientas de Reroute NJ directamente en sus sitios web. Cuatro formatos de incrustación, un configurador visual y exportación PNG, todo gratis."
   },
   "blog_post": {
     "title": "Por qué construimos Reroute NJ — Reroute NJ",
@@ -401,5 +406,41 @@
     "bigger_p2": "Esta interrupción de cuatro semanas es el precio del progreso. Cuando llegue la Fase 2 en el otoño de 2026, actualizaremos Reroute NJ para cubrirla también.",
     "bigger_p3": "Mientras tanto, esperamos que estas herramientas hagan que el próximo mes sea un poco más fácil de navegar. Planifica con anticipación, ten paciencia con los demás en las plataformas y recuerda: esto es temporal.",
     "cta": "Planifica tu viaje &rarr;"
+  },
+  "blog_post_embed": {
+    "title": "Nuevo: incrusta Reroute NJ en tu sitio web — Reroute NJ",
+    "tagline": "Herramientas de incrustación para editores",
+    "heading": "Nuevo: incrusta Reroute NJ en tu sitio web",
+    "by_prefix": "Por",
+    "date": "13 de febrero de 2026",
+    "intro_p1": "El cambio del Portal Bridge comienza el sábado. Si cubres el transporte en New Jersey &mdash; o si gestionas un sitio comunitario, una página de Facebook de tu ciudad o un foro de viajeros &mdash; ahora puedes poner las herramientas de Reroute NJ directamente en tu sitio web.",
+    "intro_p2": "Acabamos de lanzar un sistema completo de incrustación. Cuatro formatos de salida, un configurador visual que crea el código de incrustación por ti, y exportación PNG para redes sociales y boletines por correo electrónico. Todo es de uso gratuito.",
+    "h2_formats": "Cuatro formas de incrustar",
+    "format_cards": "<strong>Tarjetas de información</strong> &mdash; Tarjetas compactas que muestran el impacto de la línea, detalles de la estación o un resumen completo del cambio. Coloca una en la barra lateral de un artículo o en la parte superior de un blog en vivo. Tres tipos de tarjetas: tarjetas de línea (impacto de una línea), tarjetas de estación (cambios de una estación) y tarjetas de resumen (las cinco líneas de un vistazo).",
+    "format_widgets": "<strong>Widgets interactivos</strong> &mdash; Versiones mini de la guía de líneas, herramienta de comparación, feed de noticias o mapa. Estas son herramientas en vivo y funcionales con las que los lectores pueden interactuar dentro de tu página. Elige una herramienta y se carga en un iframe del tamaño adecuado.",
+    "format_full": "<strong>Incrustaciones de herramientas completas</strong> &mdash; Cualquier página de Reroute NJ sin el encabezado ni el pie de página. Añade <code>?embed=true</code> a cualquier URL de herramienta y se vuelve incrustable. Ideal para páginas dedicadas al cambio donde quieres dar a los lectores la experiencia completa.",
+    "format_script": "<strong>Incrustaciones con etiqueta de script</strong> &mdash; Una sola etiqueta <code>&lt;script&gt;</code> y un <code>&lt;div&gt;</code>. No se necesita configuración de iframe. Añade el div con atributos de datos para el tipo de incrustación, línea y estación, incluye el script y él se encarga del resto. Funciona en CMS donde pegar código de iframe está restringido.",
+    "h2_configurator": "El configurador",
+    "configurator_p1": "La <a href=\"../embed.html\">página de incrustación</a> tiene un configurador visual que te guía para elegir tu tipo de incrustación, seleccionar la línea y la estación, elegir un tema (claro u oscuro) y establecer un color de acento personalizado. Muestra una vista previa en vivo y te proporciona código para copiar y pegar en los cuatro formatos.",
+    "configurator_p2": "Para las tarjetas de información, también obtienes un botón <strong>Download PNG</strong> que renderiza la tarjeta a una imagen de alta fidelidad. La exportación PNG usa renderizado Canvas (no una captura de pantalla), por lo que el texto se mantiene nítido en cualquier tamaño. Úsalo en boletines, tweets o folletos impresos.",
+    "configurator_p3": "También hay una opción <strong>Download HTML</strong> que te da un archivo autocontenido con todos los estilos y datos incluidos. Sin dependencias externas, sin solicitudes de red. Ábrelo en un navegador y funciona sin conexión.",
+    "h2_customization": "Personalización",
+    "customization_intro": "Cada incrustación admite dos opciones de personalización:",
+    "customization_theme": "<strong>Theme</strong> &mdash; Claro u oscuro. Añade <code>&amp;theme=dark</code> a cualquier URL de incrustación o establece <code>data-theme=\"dark\"</code> en el div de etiqueta de script.",
+    "customization_accent": "<strong>Accent color</strong> &mdash; Cualquier color hexadecimal. Añade <code>&amp;accent=FF6B35</code> o establece <code>data-accent=\"FF6B35\"</code>. El acento se aplica a los botones de llamada a la acción y resaltados de color.",
+    "customization_outro": "Adapta la incrustación al diseño de tu sitio sin tocar ningún código.",
+    "h2_newsrooms": "Para salas de redacción",
+    "newsrooms_p1": "Construimos esto para ti. El cambio dominará la cobertura del transporte en la región durante un mes, y tus lectores necesitan herramientas, no solo artículos. Una tarjeta de línea en tu barra lateral le dice a un viajero de Montclair-Boonton exactamente qué cambia para ellos. Un widget de comparación permite a un lector ingresar su estación y ver todas las rutas alternativas.",
+    "newsrooms_p2": "Los códigos de incrustación funcionan en WordPress, Squarespace, Ghost, Substack (con el formato de etiqueta de script) y cualquier plataforma que acepte HTML. Si tienes problemas para incrustar en tu plataforma específica, <a href=\"https://github.com/jamditis/reroute-nj/issues/new\" target=\"_blank\" rel=\"noopener\">abre un issue</a> o envía un correo electrónico a <a href=\"mailto:amditisj@montclair.edu\">amditisj@montclair.edu</a> y te ayudaremos.",
+    "newsrooms_p3": "Todo tiene licencia MIT. No se requiere atribución, aunque apreciamos un enlace de vuelta a <a href=\"https://reroutenj.org\">reroutenj.org</a>.",
+    "h2_whatelse": "Qué más hay de nuevo",
+    "whatelse_intro": "Junto con el sistema de incrustación, esta versión incluye:",
+    "whatelse_blog": "<strong>Blog en los 11 idiomas</strong> &mdash; Las publicaciones del blog ahora están traducidas junto con el resto del sitio. El blog tiene su propia página de índice con una estructura de publicación adecuada.",
+    "whatelse_seo": "<strong>SEO y optimización de búsqueda de IA</strong> &mdash; Datos estructurados (JSON-LD), referencias cruzadas hreflang completas, <code>robots.txt</code> con orientación para bots de IA, <code>llms.txt</code> para motores de búsqueda de IA y <code>sitemap.xml</code> que cubre las 79 páginas.",
+    "whatelse_html": "<strong>Descargas HTML autocontenidas</strong> &mdash; Exporta cualquier tarjeta de información como un archivo HTML independiente que funciona sin conexión a internet.",
+    "h2_tryit": "Pruébalo",
+    "tryit_p1": "Ve al <a href=\"../embed.html\">configurador de incrustación</a>, elige un formato y copia el código. Toma unos 30 segundos.",
+    "tryit_p2": "Si incrusta Reroute NJ en tu sitio, nos gustaría saberlo. Envíanos un mensaje a <a href=\"mailto:amditisj@montclair.edu\">amditisj@montclair.edu</a> &mdash; agregaremos tu sitio a nuestra <a href=\"../coverage.html\">página de cobertura</a>.",
+    "cta": "Prueba el configurador de incrustación &rarr;"
   }
 }

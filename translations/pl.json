@@ -17,7 +17,9 @@
     "blog_description": "Aktualizacje i artykuły z projektu Reroute NJ &mdash; darmowe narzędzia pomagające pasażerom NJ Transit poruszać się podczas zmiany Portal Bridge.",
     "blog_og_description": "Aktualizacje i artykuły z projektu Reroute NJ &mdash; darmowe narzędzia pomagające pasażerom NJ Transit poruszać się podczas zmiany Portal Bridge.",
     "blog_post_description": "Reroute NJ: pięć darmowych narzędzi w 11 językach, które pomogą pasażerom NJ Transit poruszać się podczas zmiany Portal Bridge. Oto dlaczego je stworzyliśmy i jak możesz pomóc.",
-    "blog_post_og_description": "Pięć darmowych narzędzi w 11 językach, które pomogą pasażerom NJ Transit poruszać się podczas zmiany Portal Bridge (15 lut – 15 mar 2026)."
+    "blog_post_og_description": "Pięć darmowych narzędzi w 11 językach, które pomogą pasażerom NJ Transit poruszać się podczas zmiany Portal Bridge (15 lut – 15 mar 2026).",
+    "blog_post_embed_description": "Redakcje i wydawcy mogą teraz osadzać narzędzia Reroute NJ bezpośrednio na swoich stronach. Cztery formaty osadzania, wizualny konfigurator i eksport PNG — wszystko za darmo.",
+    "blog_post_embed_og_description": "Cztery formaty osadzania, wizualny konfigurator i eksport PNG dla redakcji relacjonujących przebudowę Portal Bridge."
   },
   "common": {
     "skip_to_main": "Przejdź do głównej treści",
@@ -359,7 +361,10 @@
     "post1_title": "Dlaczego stworzyliśmy Reroute NJ",
     "post1_date": "12 lutego 2026",
     "post1_excerpt": "Pięć darmowych narzędzi w 11 językach, które pomogą pasażerom NJ Transit poruszać się podczas zmiany Portal Bridge. Oto dlaczego je stworzyliśmy i jak możesz pomóc.",
-    "read_more": "Czytaj więcej →"
+    "read_more": "Czytaj więcej →",
+    "post2_title": "Nowość: osadź Reroute NJ na swojej stronie",
+    "post2_date": "13 lutego 2026",
+    "post2_excerpt": "Redakcje i wydawcy mogą teraz osadzać narzędzia Reroute NJ bezpośrednio na swoich stronach. Cztery formaty osadzania, wizualny konfigurator i eksport PNG — wszystko za darmo."
   },
   "blog_post": {
     "title": "Dlaczego stworzyliśmy Reroute NJ — Reroute NJ",
@@ -401,5 +406,41 @@
     "bigger_p2": "To czterotygodniowe zakłócenie to cena postępu. Gdy Faza 2 nadejdzie jesienią 2026 roku, zaktualizujemy Reroute NJ, aby obejmowało również to.",
     "bigger_p3": "W międzyczasie mamy nadzieję, że te narzędzia sprawią, że następny miesiąc będzie trochę łatwiejszy w nawigacji. Planuj z wyprzedzeniem, bądźcie cierpliwi wobec siebie nawzajem na peronach i pamiętajcie: to tymczasowe.",
     "cta": "Zaplanuj swój dojazd →"
+  },
+  "blog_post_embed": {
+    "title": "Nowość: osadź Reroute NJ na swojej stronie — Reroute NJ",
+    "tagline": "Narzędzia osadzania dla wydawców",
+    "heading": "Nowość: osadź Reroute NJ na swojej stronie",
+    "by_prefix": "Autor:",
+    "date": "13 lutego 2026",
+    "intro_p1": "Przebudowa Portal Bridge rozpoczyna się w sobotę. Jeśli relacjonujesz transport w New Jersey &mdash; lub prowadzisz stronę społecznościową, miejską stronę Facebook lub forum dojeżdżających &mdash; możesz teraz umieścić narzędzia Reroute NJ bezpośrednio na swojej stronie internetowej.",
+    "intro_p2": "Właśnie uruchomiliśmy pełny system osadzania. Cztery formaty wyjściowe, wizualny konfigurator, który tworzy kod osadzania, oraz eksport PNG do mediów społecznościowych i biuletynów e-mail. Wszystko jest darmowe.",
+    "h2_formats": "Cztery sposoby osadzania",
+    "format_cards": "<strong>Karty informacyjne</strong> &mdash; Kompaktowe karty pokazujące wpływ na linię, szczegóły stacji lub pełne podsumowanie przebudowy. Umieść jedną na pasku bocznym artykułu lub na górze relacji na żywo. Trzy typy kart: karty linii (wpływ jednej linii), karty stacji (zmiany jednej stacji) i karty podsumowania (wszystkie pięć linii na pierwszy rzut oka).",
+    "format_widgets": "<strong>Interaktywne widżety</strong> &mdash; Miniaturowe wersje przewodnika po liniach, narzędzia porównawczego, kanału informacyjnego lub mapy. To działające narzędzia, z którymi czytelnicy mogą wchodzić w interakcje wewnątrz Twojej strony. Wybierz narzędzie, a załaduje się w ramce iframe o odpowiednim rozmiarze.",
+    "format_full": "<strong>Pełne osadzanie narzędzi</strong> &mdash; Dowolna strona Reroute NJ z usuniętym nagłówkiem i stopką. Dodaj <code>?embed=true</code> do dowolnego adresu URL narzędzia, a stanie się ono osadzalne. Dobre dla dedykowanych stron przebudowy, gdzie chcesz dać czytelnikom pełne doświadczenie.",
+    "format_script": "<strong>Osadzanie za pomocą tagu script</strong> &mdash; Jeden tag <code>&lt;script&gt;</code> i <code>&lt;div&gt;</code>. Nie trzeba konfigurować iframe. Dodaj div z atrybutami danych dla typu osadzania, linii i stacji, dołącz skrypt, a reszta zostanie obsłużona. Działa w systemach CMS, gdzie wklejanie kodu iframe jest ograniczone.",
+    "h2_configurator": "Konfigurator",
+    "configurator_p1": "<a href=\"../embed.html\">Strona osadzania</a> ma wizualny konfigurator, który poprowadzi Cię przez wybór typu osadzania, wybór linii i stacji, wybór motywu (jasny lub ciemny) i ustawienie niestandardowego koloru akcentu. Pokazuje podgląd na żywo i daje gotowy do skopiowania kod we wszystkich czterech formatach.",
+    "configurator_p2": "Dla kart informacyjnych otrzymujesz również przycisk <strong>Pobierz PNG</strong>, który renderuje kartę do obrazu wysokiej jakości. Eksport PNG używa renderowania Canvas (nie zrzutu ekranu), więc tekst pozostaje ostry w dowolnym rozmiarze. Użyj go w biuletynach, tweetach lub wydrukowanych ulotkach.",
+    "configurator_p3": "Jest też opcja <strong>Pobierz HTML</strong>, która daje Ci samodzielny plik ze wszystkimi stylami i danymi w pakiecie. Bez zewnętrznych zależności, bez żądań sieciowych. Otwórz go w przeglądarce, a będzie działać offline.",
+    "h2_customization": "Dostosowywanie",
+    "customization_intro": "Każde osadzanie obsługuje dwie opcje dostosowywania:",
+    "customization_theme": "<strong>Motyw</strong> &mdash; Jasny lub ciemny. Dodaj <code>&amp;theme=dark</code> do dowolnego adresu URL osadzania lub ustaw <code>data-theme=\"dark\"</code> na div tagu script.",
+    "customization_accent": "<strong>Kolor akcentu</strong> &mdash; Dowolny kolor hex. Dodaj <code>&amp;accent=FF6B35</code> lub ustaw <code>data-accent=\"FF6B35\"</code>. Akcent stosuje się do przycisków CTA i podświetleń kolorów.",
+    "customization_outro": "Dopasuj osadzanie do projektu swojej strony bez dotykania jakiegokolwiek kodu.",
+    "h2_newsrooms": "Dla redakcji",
+    "newsrooms_p1": "Zbudowaliśmy to dla Ciebie. Przebudowa będzie dominować w relacjach o transporcie w regionie przez miesiąc, a Twoi czytelnicy potrzebują narzędzi, a nie tylko artykułów. Karta linii na pasku bocznym mówi dojeżdżającemu Montclair-Boonton dokładnie, co się dla nich zmienia. Widżet porównawczy pozwala czytelnikowi wpisać swoją stację i zobaczyć każdą alternatywną trasę.",
+    "newsrooms_p2": "Kody osadzania działają na WordPress, Squarespace, Ghost, Substack (w formacie tagu script) i każdej platformie, która akceptuje HTML. Jeśli napotkasz problemy z osadzaniem na swojej konkretnej platformie, <a href=\"https://github.com/jamditis/reroute-nj/issues/new\" target=\"_blank\" rel=\"noopener\">otwórz zgłoszenie</a> lub wyślij e-mail na <a href=\"mailto:amditisj@montclair.edu\">amditisj@montclair.edu</a>, a pomożemy.",
+    "newsrooms_p3": "Wszystko jest na licencji MIT. Nie wymaga się przypisania, choć doceniamy link zwrotny do <a href=\"https://reroutenj.org\">reroutenj.org</a>.",
+    "h2_whatelse": "Co jeszcze jest nowe",
+    "whatelse_intro": "Wraz z systemem osadzania, to wydanie obejmuje:",
+    "whatelse_blog": "<strong>Blog we wszystkich 11 językach</strong> &mdash; Wpisy na blogu są teraz tłumaczone razem z resztą strony. Blog ma własną stronę indeksu z odpowiednią strukturą wpisów.",
+    "whatelse_seo": "<strong>Optymalizacja SEO i wyszukiwania AI</strong> &mdash; Dane strukturalne (JSON-LD), pełne odniesienia hreflang, <code>robots.txt</code> ze wskazówkami dla botów AI, <code>llms.txt</code> dla wyszukiwarek AI i <code>sitemap.xml</code> obejmujący wszystkie 79 stron.",
+    "whatelse_html": "<strong>Samodzielne pliki HTML do pobrania</strong> &mdash; Eksportuj dowolną kartę informacyjną jako samodzielny plik HTML, który działa bez połączenia internetowego.",
+    "h2_tryit": "Wypróbuj",
+    "tryit_p1": "Przejdź do <a href=\"../embed.html\">konfiguratora osadzania</a>, wybierz format i skopiuj kod. Zajmuje to około 30 sekund.",
+    "tryit_p2": "Jeśli osadzisz Reroute NJ na swojej stronie, chcielibyśmy o tym wiedzieć. Wyślij nam wiadomość na <a href=\"mailto:amditisj@montclair.edu\">amditisj@montclair.edu</a> &mdash; dodamy Twoją stronę do naszej <a href=\"../coverage.html\">strony relacji</a>.",
+    "cta": "Wypróbuj konfigurator osadzania &rarr;"
   }
 }
