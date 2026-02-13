@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reroute NJ — Info card</title>
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f8f9fb; color: #1a2332; line-height: 1.5; padding: 12px; }
+    body.theme-dark { background: #1a2332; color: #e8ecf1; }
+
+    .card { background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); overflow: hidden; max-width: 480px; margin: 0 auto; }
+    .theme-dark .card { background: #243044; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+
+    .card-color-bar { height: 6px; }
+    .card-body { padding: 16px 20px; }
+
+    .card-line-name { font-size: 1.15rem; font-weight: 700; margin-bottom: 4px; }
+    .card-station-name { font-size: 1.3rem; font-weight: 700; margin-bottom: 2px; }
+    .card-line-context { font-size: 0.8rem; color: #73849a; margin-bottom: 8px; }
+    .theme-dark .card-line-context { color: #9eaab8; }
+
+    .card-badge { display: inline-block; padding: 3px 10px; border-radius: 100px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 10px; }
+    .badge-severe { background: #fde8e8; color: #c41e1e; }
+    .badge-moderate { background: #fff3cd; color: #856404; }
+    .theme-dark .badge-severe { background: #4a1c1c; color: #f87171; }
+    .theme-dark .badge-moderate { background: #4a3c0a; color: #fbbf24; }
+
+    .card-summary { font-size: 0.85rem; color: #4a5568; margin-bottom: 12px; line-height: 1.55; }
+    .theme-dark .card-summary { color: #b0bec5; }
+
+    .card-stats { display: flex; gap: 16px; margin-bottom: 12px; }
+    .card-stat { text-align: center; flex: 1; }
+    .card-stat-value { font-size: 1.4rem; font-weight: 700; }
+    .card-stat-label { font-size: 0.7rem; color: #73849a; text-transform: uppercase; letter-spacing: 0.04em; }
+    .theme-dark .card-stat-label { color: #9eaab8; }
+
+    .card-alternatives { margin-bottom: 12px; }
+    .card-alternatives h4 { font-size: 0.8rem; font-weight: 600; margin-bottom: 6px; color: #4a5568; }
+    .theme-dark .card-alternatives h4 { color: #9eaab8; }
+    .card-alt-item { font-size: 0.8rem; padding: 4px 0; border-bottom: 1px solid #f0f2f5; }
+    .card-alt-item:last-child { border-bottom: none; }
+    .theme-dark .card-alt-item { border-bottom-color: #2d3e54; }
+
+    .card-dates { font-size: 0.75rem; color: #73849a; margin-bottom: 12px; }
+    .theme-dark .card-dates { color: #9eaab8; }
+
+    .card-cta { display: inline-block; padding: 8px 16px; background: #e87722; color: #fff; text-decoration: none; border-radius: 6px; font-size: 0.8rem; font-weight: 600; }
+    .card-cta:hover { background: #d06a1e; }
+
+    .card-attribution { text-align: center; padding: 8px 0; font-size: 0.7rem; color: #9eaab8; }
+    .card-attribution a { color: #9eaab8; text-decoration: none; }
+    .card-attribution a:hover { color: #e87722; }
+
+    /* Summary card grid */
+    .summary-grid { display: grid; gap: 8px; }
+    .summary-line { display: flex; align-items: center; gap: 10px; padding: 10px 12px; background: #f8f9fb; border-radius: 8px; }
+    .theme-dark .summary-line { background: #1a2332; }
+    .summary-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+    .summary-line-name { font-size: 0.85rem; font-weight: 600; flex: 1; }
+    .summary-impact { font-size: 0.7rem; padding: 2px 8px; border-radius: 100px; font-weight: 600; }
+    .summary-severe { background: #fde8e8; color: #c41e1e; }
+    .summary-moderate { background: #fff3cd; color: #856404; }
+    .theme-dark .summary-severe { background: #4a1c1c; color: #f87171; }
+    .theme-dark .summary-moderate { background: #4a3c0a; color: #fbbf24; }
+    .summary-trains { font-size: 0.75rem; color: #73849a; white-space: nowrap; }
+    .theme-dark .summary-trains { color: #9eaab8; }
+  </style>
+</head>
+<body>
+  <div id="card-root"></div>
+  <div class="card-attribution">
+    Powered by <a href="https://reroutenj.org" target="_blank" rel="noopener">Reroute NJ</a>
+  </div>
+  <script src="js/line-data.js"></script>
+  <script src="js/cards.js"></script>
+  <script>
+    // Auto-export as PNG when ?export=true is present
+    (function () {
+      var match = window.location.search.match(/[?&]export=([^&]*)/);
+      if (match && decodeURIComponent(match[1]) === "true" && window.exportCardAsPng) {
+        window.exportCardAsPng();
+      }
+    })();
+  </script>
+</body>
+</html>

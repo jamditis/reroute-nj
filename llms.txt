@@ -33,6 +33,21 @@ The cutover is caused by Amtrak transferring the first of two tracks from the 11
 - **North Jersey Coast Line**: Reduced frequency. Same route but fewer trains. Allow extra travel time.
 - **Raritan Valley Line**: Trains terminate at Newark Penn Station (as usual). Transfer to reduced-frequency NEC trains for Penn Station.
 
+## Blog
+
+The blog index is at [blog.html](https://reroutenj.org/blog.html). Individual posts live at `blog/{slug}.html` (e.g., [Why we built Reroute NJ](https://reroutenj.org/blog/why-we-built-reroute-nj.html)). Both the index and posts are translated into all 11 languages.
+
+## Embeds for publishers
+
+Newsrooms and publishers can embed Reroute NJ tools on their websites using four formats:
+
+- **Info cards**: Compact cards showing line impact, station details, or a cutover summary. URL: `card.html?type=line&line=montclair-boonton`
+- **Interactive widgets**: Mini versions of the line guide, comparison tool, news feed, or map. URL: `widget.html?tool=line-guide`
+- **Full tools**: Complete tool pages with header/footer hidden. Append `?embed=true` to any tool URL.
+- **Script tag**: Drop-in `<script>` + `<div>` for automatic iframe creation: `<div class="reroutenj-embed" data-type="line-card" data-line="montclair-boonton"></div><script src="https://reroutenj.org/js/widget.js" async></script>`
+
+All embed types support `&theme=dark` and `&accent=HEX` customization. The [embed configurator](https://reroutenj.org/embed.html) generates copy-paste code, downloadable PNG images, and self-contained HTML files.
+
 ## Translations
 
 Available in 11 languages: English, Spanish (Español), Chinese (中文), Tagalog, Korean (한국어), Portuguese (Português), Gujarati (ગુજરાતી), Hindi (हिंदी), Italian (Italiano), Arabic (العربية), Polish (Polski)

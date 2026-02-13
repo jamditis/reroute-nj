@@ -106,6 +106,7 @@
       <a href="coverage.html" class="tool-nav-link">News coverage</a>
       <a href="map.html" class="tool-nav-link">Map</a>
       <a href="embed.html" class="tool-nav-link active" aria-current="page">Embed &amp; share</a>
+      <a href="blog.html" class="tool-nav-link">Blog</a>
     </div>
   </nav>
 
@@ -115,71 +116,175 @@
 
     <section class="embed-hero">
       <h1>Put Reroute NJ on your website</h1>
-      <p>Reroute NJ is free, open source, and built for the community. Newsrooms, publishers, community organizations, and anyone else can embed our tools, link to them, or republish them on their own sites.</p>
+      <p>Reroute NJ is free, open source, and built for the community. Pick an embed type, configure it, and grab the code.</p>
     </section>
 
-    <!-- Embed code generator -->
-    <section class="info-section" id="embed-generator" style="margin-top: 1rem; border-top: none;">
-      <h2>Embed code generator</h2>
-      <p class="section-intro">Copy and paste an iframe embed code to put any Reroute NJ tool on your website. The tool is fully interactive and responsive inside the iframe.</p>
-
-      <div class="embed-options">
-        <div class="filter-group">
-          <label for="embed-tool">Which tool?</label>
-          <select id="embed-tool">
-            <option value="index.html">Line guide</option>
-            <option value="compare.html">Commute comparison</option>
-            <option value="coverage.html">News coverage</option>
-            <option value="map.html">Interactive map</option>
-          </select>
-        </div>
-        <div class="filter-group">
-          <label for="embed-width">Width</label>
-          <select id="embed-width">
-            <option value="100%">Full width (100%)</option>
-            <option value="600px">600px</option>
-            <option value="800px">800px</option>
-          </select>
-        </div>
-        <div class="filter-group">
-          <label for="embed-height">Height</label>
-          <select id="embed-height">
-            <option value="700px">700px</option>
-            <option value="500px">500px</option>
-            <option value="900px">900px</option>
-          </select>
-        </div>
+    <!-- Step 1: Pick embed type -->
+    <section class="configurator-step" id="cfg-step-1">
+      <div class="cfg-step-header">
+        <span class="cfg-step-num">1</span>
+        <h2>Pick an embed type</h2>
       </div>
-
-      <div class="embed-preview">
-        <label class="embed-code-label">Your embed code</label>
-        <div class="embed-code-box" id="embed-code-box"></div>
-        <button class="share-btn" id="copy-embed-btn" style="margin-top: 0.75rem;">Copy embed code</button>
-        <span class="share-confirm hidden" id="copy-embed-confirm">Copied!</span>
+      <div class="cfg-type-cards">
+        <button class="cfg-type-card" data-type="card" type="button">
+          <span class="cfg-type-icon" aria-hidden="true">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><rect x="4" y="6" width="28" height="24" rx="4" stroke="currentColor" stroke-width="2"/><line x1="10" y1="14" x2="26" y2="14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="10" y1="19" x2="22" y2="19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/><line x1="10" y1="23" x2="18" y2="23" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/></svg>
+          </span>
+          <strong class="cfg-type-name">Info card</strong>
+          <span class="cfg-type-desc">A compact card with key facts about a line or station. Great for newsletters, social media, and article sidebars.</span>
+        </button>
+        <button class="cfg-type-card" data-type="widget" type="button">
+          <span class="cfg-type-icon" aria-hidden="true">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><rect x="3" y="4" width="30" height="28" rx="4" stroke="currentColor" stroke-width="2"/><rect x="7" y="9" width="10" height="6" rx="2" fill="currentColor" opacity="0.15" stroke="currentColor" stroke-width="1.5"/><rect x="19" y="9" width="10" height="6" rx="2" fill="currentColor" opacity="0.15" stroke="currentColor" stroke-width="1.5"/><rect x="7" y="19" width="22" height="3" rx="1.5" fill="currentColor" opacity="0.2"/><rect x="7" y="25" width="16" height="3" rx="1.5" fill="currentColor" opacity="0.2"/></svg>
+          </span>
+          <strong class="cfg-type-name">Interactive widget</strong>
+          <span class="cfg-type-desc">A mini version of our tools your readers can use inline. Works in any CMS that supports HTML blocks.</span>
+        </button>
+        <button class="cfg-type-card" data-type="tool" type="button">
+          <span class="cfg-type-icon" aria-hidden="true">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><rect x="2" y="3" width="32" height="30" rx="4" stroke="currentColor" stroke-width="2"/><line x1="2" y1="10" x2="34" y2="10" stroke="currentColor" stroke-width="2"/><circle cx="7" cy="6.5" r="1.5" fill="currentColor" opacity="0.4"/><circle cx="12" cy="6.5" r="1.5" fill="currentColor" opacity="0.4"/><circle cx="17" cy="6.5" r="1.5" fill="currentColor" opacity="0.4"/><rect x="6" y="14" width="24" height="4" rx="2" fill="currentColor" opacity="0.12"/><rect x="6" y="21" width="24" height="8" rx="2" fill="currentColor" opacity="0.08"/></svg>
+          </span>
+          <strong class="cfg-type-name">Full tool</strong>
+          <span class="cfg-type-desc">The complete tool experience, embedded on your page. All features, fully interactive.</span>
+        </button>
       </div>
     </section>
 
-    <!-- Direct link sharing -->
+    <!-- Step 2: Configure -->
+    <section class="configurator-step hidden" id="cfg-step-2">
+      <div class="cfg-step-header">
+        <span class="cfg-step-num">2</span>
+        <h2>Configure your embed</h2>
+      </div>
+      <div class="cfg-form" id="cfg-form">
+        <!-- Card-specific fields -->
+        <div class="cfg-field" id="cfg-field-card-type">
+          <label for="cfg-card-type">Card type</label>
+          <select id="cfg-card-type">
+            <option value="line">Line overview</option>
+            <option value="station">Station info</option>
+            <option value="summary">Cutover summary</option>
+          </select>
+        </div>
+        <!-- Tool/widget-specific field -->
+        <div class="cfg-field hidden" id="cfg-field-tool-type">
+          <label for="cfg-tool-type">Tool</label>
+          <select id="cfg-tool-type">
+            <option value="line-guide">Line guide</option>
+            <option value="compare">Commute comparison</option>
+            <option value="coverage">News coverage</option>
+            <option value="map">Interactive map</option>
+          </select>
+        </div>
+        <!-- Line picker -->
+        <div class="cfg-field" id="cfg-field-line">
+          <label for="cfg-line">Line</label>
+          <select id="cfg-line">
+            <option value="">Select a line&hellip;</option>
+          </select>
+        </div>
+        <!-- Station picker (card type=station only) -->
+        <div class="cfg-field hidden" id="cfg-field-station">
+          <label for="cfg-station">Station</label>
+          <select id="cfg-station">
+            <option value="">Select a station&hellip;</option>
+          </select>
+        </div>
+        <!-- Theme toggle -->
+        <div class="cfg-field" id="cfg-field-theme">
+          <label for="cfg-theme">Theme</label>
+          <select id="cfg-theme">
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+          </select>
+        </div>
+        <!-- Accent color -->
+        <div class="cfg-field" id="cfg-field-accent">
+          <label for="cfg-accent">Accent color</label>
+          <div class="cfg-color-input">
+            <input type="color" id="cfg-accent" value="#e87722">
+            <span class="cfg-color-value" id="cfg-accent-value">#e87722</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Step 3: Preview + Output -->
+    <section class="configurator-step hidden" id="cfg-step-3">
+      <div class="cfg-step-header">
+        <span class="cfg-step-num">3</span>
+        <h2>Preview &amp; grab the code</h2>
+      </div>
+      <div class="cfg-output-layout">
+        <!-- Preview -->
+        <div class="cfg-preview" id="cfg-preview">
+          <div class="cfg-preview-label">Live preview</div>
+          <div class="cfg-preview-frame" id="cfg-preview-frame">
+            <iframe id="cfg-iframe" title="Embed preview" sandbox="allow-scripts allow-same-origin" loading="lazy"></iframe>
+          </div>
+        </div>
+        <!-- Output -->
+        <div class="cfg-output">
+          <div class="cfg-output-tabs" role="tablist" aria-label="Output format">
+            <button class="cfg-tab active" role="tab" aria-selected="true" aria-controls="cfg-panel-iframe" id="cfg-tab-iframe" data-tab="iframe" type="button">Iframe</button>
+            <button class="cfg-tab" role="tab" aria-selected="false" aria-controls="cfg-panel-script" id="cfg-tab-script" data-tab="script" type="button">Script tag</button>
+            <button class="cfg-tab" role="tab" aria-selected="false" aria-controls="cfg-panel-png" id="cfg-tab-png" data-tab="png" type="button">Download PNG</button>
+            <button class="cfg-tab" role="tab" aria-selected="false" aria-controls="cfg-panel-html" id="cfg-tab-html" data-tab="html" type="button">Download HTML</button>
+          </div>
+          <!-- Iframe panel -->
+          <div class="cfg-panel active" role="tabpanel" id="cfg-panel-iframe" aria-labelledby="cfg-tab-iframe">
+            <div class="embed-code-box" id="cfg-code-iframe"></div>
+            <div class="cfg-copy-row">
+              <button class="share-btn cfg-copy-btn" id="cfg-copy-iframe" type="button">Copy code</button>
+              <span class="share-confirm hidden" id="cfg-copied-iframe">Copied!</span>
+            </div>
+          </div>
+          <!-- Script tag panel -->
+          <div class="cfg-panel hidden" role="tabpanel" id="cfg-panel-script" aria-labelledby="cfg-tab-script">
+            <div class="embed-code-box" id="cfg-code-script"></div>
+            <div class="cfg-copy-row">
+              <button class="share-btn cfg-copy-btn" id="cfg-copy-script" type="button">Copy code</button>
+              <span class="share-confirm hidden" id="cfg-copied-script">Copied!</span>
+            </div>
+          </div>
+          <!-- PNG panel -->
+          <div class="cfg-panel hidden" role="tabpanel" id="cfg-panel-png" aria-labelledby="cfg-tab-png">
+            <div class="cfg-download-area" id="cfg-png-area">
+              <p class="cfg-download-msg" id="cfg-png-msg">Click the button below to export the info card as a PNG image.</p>
+              <button class="share-btn cfg-download-btn" id="cfg-download-png" type="button">Download PNG</button>
+            </div>
+          </div>
+          <!-- HTML download panel -->
+          <div class="cfg-panel hidden" role="tabpanel" id="cfg-panel-html" aria-labelledby="cfg-tab-html">
+            <div class="cfg-download-area" id="cfg-html-area">
+              <p class="cfg-download-msg" id="cfg-html-msg">Click the button below to download a self-contained HTML file of the info card.</p>
+              <button class="share-btn cfg-download-btn" id="cfg-download-html" type="button">Download HTML</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Direct links -->
     <section class="info-section" id="direct-links">
       <h2>Direct links</h2>
       <p class="section-intro">Link directly to any tool. These URLs are permanent and shareable.</p>
-
       <div class="resources-grid">
         <div class="resource-link">
           <strong>Line guide</strong>
-          <span id="link-guide" class="embed-url">https://reroutenj.org/</span>
+          <span class="embed-url">https://reroutenj.org/</span>
         </div>
         <div class="resource-link">
           <strong>Commute comparison</strong>
-          <span id="link-compare" class="embed-url">https://reroutenj.org/compare.html</span>
+          <span class="embed-url">https://reroutenj.org/compare.html</span>
         </div>
         <div class="resource-link">
           <strong>News coverage</strong>
-          <span id="link-coverage" class="embed-url">https://reroutenj.org/coverage.html</span>
+          <span class="embed-url">https://reroutenj.org/coverage.html</span>
         </div>
         <div class="resource-link">
           <strong>Interactive map</strong>
-          <span id="link-map" class="embed-url">https://reroutenj.org/map.html</span>
+          <span class="embed-url">https://reroutenj.org/map.html</span>
         </div>
       </div>
     </section>
@@ -187,16 +292,15 @@
     <!-- For publishers -->
     <section class="info-section" id="for-publishers">
       <h2>For newsrooms &amp; publishers</h2>
-      <p class="section-intro">Reroute NJ is designed to be used by journalists, newsrooms, and community publishers. Here's how you can use it.</p>
-
+      <p class="section-intro">Reroute NJ is designed for journalists, newsrooms, and community publishers.</p>
       <div class="secaucus-grid">
         <div class="secaucus-card">
           <h4>Embed in your articles</h4>
           <ul>
-            <li>Use the embed code generator above to get an iframe snippet.</li>
-            <li>Paste it into your CMS (WordPress, Ghost, Squarespace, etc.) — most support raw HTML blocks.</li>
-            <li>The embed is responsive and works on mobile.</li>
-            <li>No API key or account needed. It just works.</li>
+            <li>Use the configurator above to generate embed code for any format.</li>
+            <li>Paste into your CMS (WordPress, Ghost, Squarespace, etc.) &mdash; most support raw HTML blocks.</li>
+            <li>The embeds are responsive and work on mobile.</li>
+            <li>No API key or account needed.</li>
           </ul>
         </div>
         <div class="secaucus-card">
@@ -204,7 +308,7 @@
           <ul>
             <li>Add a "Plan your commute" link box to your Portal Bridge stories.</li>
             <li>Link to specific tools based on what the article covers.</li>
-            <li>We have OG images and social cards already set up for clean social media previews.</li>
+            <li>OG images and social cards are already set up for clean previews.</li>
             <li>Suggested anchor text: "Use the free Reroute NJ tool to plan your commute."</li>
           </ul>
         </div>
@@ -212,22 +316,21 @@
           <h4>Contribute coverage</h4>
           <ul>
             <li>We curate Portal Bridge coverage on our <a href="coverage.html">news coverage page</a>.</li>
-            <li>To suggest an article, <a href="https://github.com/jamditis/reroute-nj/issues/new?template=article-suggestion.md" target="_blank" rel="noopener">open a GitHub issue</a> with the URL and details.</li>
-            <li>Or email <strong><a href="mailto:amditisj@montclair.edu">amditisj@montclair.edu</a></strong> with "Reroute NJ coverage" in the subject line.</li>
-            <li>We include all relevant coverage — opinion, analysis, community reporting, and more.</li>
+            <li>To suggest an article, <a href="https://github.com/jamditis/reroute-nj/issues/new?template=article-suggestion.md" target="_blank" rel="noopener">open a GitHub issue</a>.</li>
+            <li>Or email <strong><a href="mailto:amditisj@montclair.edu">amditisj@montclair.edu</a></strong> with "Reroute NJ coverage" in the subject.</li>
+            <li>We include all relevant coverage &mdash; opinion, analysis, community reporting, and more.</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- Custom branding -->
+    <!-- Co-branding -->
     <section class="info-section" id="custom-branding">
       <h2>Co-branding &amp; customization</h2>
       <p class="section-intro">Want to run Reroute NJ with your own branding? Since it's open source, you can.</p>
-
       <div class="ticket-scenarios">
         <div class="scenario-card">
-          <h3>Option 1: Fork the project</h3>
+          <h3>Fork the project</h3>
           <div class="scenario-body">
             <div class="step">
               <span class="step-num">1</span>
@@ -239,29 +342,11 @@
             </div>
             <div class="step">
               <span class="step-num">3</span>
-              <div><p>Replace the brand name, logo, and footer credit with your own. Add your newsroom's header/nav if you want.</p></div>
+              <div><p>Replace the brand name, logo, and footer credit with your own.</p></div>
             </div>
             <div class="step">
               <span class="step-num">4</span>
-              <div><p>Deploy to GitHub Pages, Netlify, Vercel, or your own server. No build step required — it's just static HTML.</p></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="scenario-card">
-          <h3>Option 2: Embed with your own intro</h3>
-          <div class="scenario-body">
-            <div class="step">
-              <span class="step-num">1</span>
-              <div><p>Embed the tool using the iframe code above.</p></div>
-            </div>
-            <div class="step">
-              <span class="step-num">2</span>
-              <div><p>Add your own header, intro text, and branding around the iframe.</p></div>
-            </div>
-            <div class="step">
-              <span class="step-num">3</span>
-              <div><p>Style the surrounding page to match your publication's design.</p></div>
+              <div><p>Deploy to GitHub Pages, Netlify, Vercel, or your own server. No build step required.</p></div>
             </div>
           </div>
         </div>
@@ -271,8 +356,7 @@
     <!-- How to contribute -->
     <section class="info-section" id="contribute">
       <h2>How to contribute</h2>
-      <p class="section-intro">Reroute NJ is a community project. Here's how you can help, regardless of your technical skill level.</p>
-
+      <p class="section-intro">Reroute NJ is a community project. Here's how you can help.</p>
       <div class="secaucus-grid">
         <div class="secaucus-card">
           <h4>Non-technical contributions</h4>
@@ -280,7 +364,6 @@
             <li><strong>Submit article suggestions:</strong> Know of a Portal Bridge article we missed? <a href="https://github.com/jamditis/reroute-nj/issues/new?template=article-suggestion.md" target="_blank" rel="noopener">Open an issue</a> or email joe@amditis.com.</li>
             <li><strong>Report inaccuracies:</strong> If schedule data or transfer times are wrong, let us know.</li>
             <li><strong>Share the tool:</strong> Tell your commuter friends, share on social media, post in your neighborhood group.</li>
-            <li><strong>Translate:</strong> Help us translate the tool into Spanish or other languages spoken by NJ Transit riders.</li>
           </ul>
         </div>
         <div class="secaucus-card">
@@ -315,7 +398,8 @@
 
   <script src="js/i18n.js"></script>
   <script src="js/shared.js"></script>
+  <script src="js/line-data.js"></script>
   <script src="js/embed.js"></script>
-  <script>initA11yToggles(); initLangSelector();</script>
+  <script>initEmbedMode(); initA11yToggles(); initLangSelector();</script>
 </body>
 </html>

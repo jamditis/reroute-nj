@@ -3,23 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Why we built Reroute NJ — Reroute NJ</title>
-  <meta name="description" content="Reroute NJ: five free tools in 11 languages to help NJ Transit riders navigate the Portal Bridge cutover. Here's why we built it and how you can help.">
-  <meta property="og:title" content="Why we built Reroute NJ">
-  <meta property="og:description" content="Five free tools in 11 languages to help NJ Transit riders navigate the Portal Bridge cutover (Feb 15 – Mar 15, 2026).">
-  <meta property="og:type" content="article">
+  <title>Blog — Reroute NJ</title>
+  <meta name="description" content="Updates and stories from the Reroute NJ project — free tools helping NJ Transit riders navigate the Portal Bridge cutover.">
+  <meta property="og:title" content="Blog — Reroute NJ">
+  <meta property="og:description" content="Updates and stories from the Reroute NJ project — free tools helping NJ Transit riders navigate the Portal Bridge cutover.">
+  <meta property="og:type" content="website">
   <meta property="og:url" content="https://reroutenj.org/blog.html">
   <meta property="og:image" content="https://reroutenj.org/img/og-image.png">
   <meta property="og:image:width" content="1920">
   <meta property="og:image:height" content="1080">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Why we built Reroute NJ">
-  <meta name="twitter:description" content="Five free tools in 11 languages to help NJ Transit riders navigate the Portal Bridge cutover (Feb 15 – Mar 15, 2026).">
+  <meta name="twitter:title" content="Blog — Reroute NJ">
+  <meta name="twitter:description" content="Updates and stories from the Reroute NJ project — free tools helping NJ Transit riders navigate the Portal Bridge cutover.">
   <meta name="twitter:image" content="https://reroutenj.org/img/og-image.png">
   <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
   <link rel="canonical" href="https://reroutenj.org/blog.html">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="alternate" hreflang="en" href="https://reroutenj.org/blog.html">
+  <link rel="alternate" hreflang="es" href="https://reroutenj.org/es/blog.html">
+  <link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/blog.html">
+  <link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/blog.html">
+  <link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/blog.html">
+  <link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/blog.html">
+  <link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/blog.html">
+  <link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/blog.html">
+  <link rel="alternate" hreflang="it" href="https://reroutenj.org/it/blog.html">
+  <link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/blog.html">
+  <link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/blog.html">
   <link rel="alternate" hreflang="x-default" href="https://reroutenj.org/blog.html">
   <script type="application/ld+json">
   {
@@ -38,30 +48,32 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Why we built Reroute NJ",
-    "description": "Five free tools in 11 languages to help NJ Transit riders navigate the Portal Bridge cutover (Feb 15 – Mar 15, 2026).",
-    "author": {
-      "@type": "Person",
-      "name": "Joe Amditis",
-      "url": "https://github.com/jamditis"
-    },
-    "datePublished": "2026-02-12",
-    "dateModified": "2026-02-13",
+    "@type": "CollectionPage",
+    "name": "Blog — Reroute NJ",
+    "description": "Updates and stories from the Reroute NJ project.",
+    "url": "https://reroutenj.org/blog.html",
     "publisher": {
       "@type": "Organization",
       "name": "Reroute NJ",
-      "url": "https://reroutenj.org",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://reroutenj.org/img/og-image.png"
-      }
+      "url": "https://reroutenj.org"
     },
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://reroutenj.org/blog.html"
-    },
-    "image": "https://reroutenj.org/img/og-image.png"
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "url": "https://reroutenj.org/blog/new-embed-system.html",
+          "name": "New: embed Reroute NJ on your website"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "url": "https://reroutenj.org/blog/why-we-built-reroute-nj.html",
+          "name": "Why we built Reroute NJ"
+        }
+      ]
+    }
   }
   </script>
   <script type="application/ld+json">
@@ -78,7 +90,7 @@
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "Why we built Reroute NJ"
+        "name": "Blog"
       }
     ]
   }
@@ -90,7 +102,7 @@
   <header class="header" role="banner">
     <div class="header-inner">
       <a href="index.html" class="brand-link"><div class="brand">Reroute<span>NJ</span></div></a>
-      <p class="tagline">Why we built this</p>
+      <p class="tagline">Updates and stories</p>
       <div class="a11y-toggles">
         <button class="a11y-btn" id="toggle-contrast" type="button" aria-pressed="false" aria-label="Toggle high contrast">High contrast</button>
         <button class="a11y-btn" id="toggle-simplified" type="button" aria-pressed="false" aria-label="Toggle simplified view">Simplified view</button>
@@ -125,90 +137,33 @@
       <a href="coverage.html" class="tool-nav-link">News coverage</a>
       <a href="map.html" class="tool-nav-link">Map</a>
       <a href="embed.html" class="tool-nav-link">Embed &amp; share</a>
+      <a href="blog.html" class="tool-nav-link active" aria-current="page">Blog</a>
     </div>
   </nav>
 
   <main class="container" id="main-content">
-    <article class="blog-post">
-      <header class="blog-header">
-        <h1>Why we built Reroute NJ</h1>
-        <div class="blog-meta">
-          <span class="blog-author">By Joe Amditis</span>
-          <time class="blog-date">February 12, 2026</time>
-        </div><br>
-        <img src="https://i.imgur.com/Huw6QXo.png" width="100%"></img>        
-      </header>
 
-      <div class="blog-body">
+    <section class="blog-index">
+      <h1>Blog</h1>
 
-        <p>On February 15, NJ Transit is implementing the largest service disruption in its history. For four weeks, as Amtrak connects the new Portal North Bridge to the Northeast Corridor, every rail line except the Atlantic City Rail Line will be affected. Roughly half of all trains between New Jersey and New York will be cut.</p>
-
-        <p>Hundreds of thousands of commuters need to figure out, in a short time, how their daily routine changes. The official resources don't always give you the clear, personalized answer you need at 6:30 in the morning when you're trying to get to work.</p>
-
-        <p>Reroute NJ is an attempt to help.</p>
-
-        <h2>Five tools, eleven languages</h2>
-
-        <p>We built five interactive tools that help riders answer the questions they're asking:</p>
-
-        <p><strong><a href="index.html">Line guide</a></strong> &mdash; Select your NJ Transit line and station to see exactly how your commute changes, what alternative routes are available, and what tickets you need. Works for both directions: morning commuters heading into NYC and evening commuters heading home.</p>
-
-        <p><strong><a href="compare.html">Commute comparison</a></strong> &mdash; Pick your NJ station and your Manhattan destination, and see every route option side by side with visual time breakdowns. PATH vs. ferry vs. bus, ranked by total travel time, with cost and transfer details.</p>
-
-        <p><strong><a href="coverage.html">News coverage</a></strong> &mdash; Curated reporting about the cutover from more than a dozen regional news sources. Filter by source, line, direction, or category.</p>
-
-        <p><strong><a href="map.html">Interactive map</a></strong> &mdash; All five affected NJ Transit lines rendered on a map with station markers, key transfer points (Hoboken Terminal, Secaucus Junction, Newark Penn), and the Portal Bridge location over the Hackensack River.</p>
-
-        <p><strong><a href="embed.html">Embed and share</a></strong> &mdash; Iframe embed codes, direct links, and instructions for newsrooms and publishers who want to republish any of these tools on their own sites.</p>
-
-        <p>Every tool page is available in 11 languages: English, Spanish, Chinese, Tagalog, Korean, Portuguese, Gujarati, Hindi, Italian, Arabic, and Polish. These aren't machine-translated afterthoughts &mdash; each language has its own set of pages with translated navigation, labels, descriptions, and metadata. Station names, line names, and place names stay in English because that's what's on the signs.</p>
-
-        <h2>Why it's built the way it is</h2>
-
-        <p>Reroute NJ is a zero-build static site. Plain HTML, CSS, and JavaScript. No frameworks, no npm, no build step. You can fork the repo, edit a file, and deploy it on GitHub Pages in minutes.</p>
-
-        <p>We wanted the project to be accessible to anyone who might want to contribute &mdash; journalists who can add articles to the coverage feed, community members who can report inaccuracies, and developers who can add features. Lowering the barrier to contribution matters more than using the latest technology.</p>
-
-        <p>Everything is client-side. No server, no database, no API keys. The data is bundled as JSON and JavaScript objects. The site is fast and works even if GitHub's servers are under load.</p>
-
-        <h2>For newsrooms and publishers</h2>
-
-        <p>We built Reroute NJ to be shared, embedded, and republished. If you run a local news site, a community blog, or a transit advocacy page, we want you to use these tools.</p>
-
-        <ul>
-          <li><strong>Embed any tool</strong> on your website using our <a href="embed.html">embed code generator</a>. Copy and paste an iframe.</li>
-          <li><strong>Link to the tools</strong> from your Portal Bridge coverage. The URLs are permanent and have social meta tags for clean previews.</li>
-          <li><strong>Fork the project</strong> and run your own branded version. The <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">code is MIT-licensed</a>. Change the colors, add your logo, deploy it on your own domain.</li>
-          <li><strong>Add your coverage</strong> to our <a href="coverage.html">news feed</a>. <a href="https://github.com/jamditis/reroute-nj/issues/new" target="_blank" rel="noopener">Open a GitHub issue</a> or email <a href="mailto:amditisj@montclair.edu">amditisj@montclair.edu</a> with your article links.</li>
-        </ul>
-
-        <p>We're interested in hearing from local publishers and community news outlets who serve the specific towns affected by the cutover. Your local coverage is what riders need, and we want to help get it in front of them.</p>
-
-        <h2>How you can help</h2>
-
-        <p>This is a community project and we need community help:</p>
-
-        <ul>
-          <li><strong>Share the tool.</strong> Text it to your train friends. Post it in your town's Facebook group. The more people who know about it, the better it works.</li>
-          <li><strong>Report inaccuracies.</strong> If a travel time estimate is wrong, or a schedule change isn't reflected, <a href="https://github.com/jamditis/reroute-nj/issues" target="_blank" rel="noopener">let us know</a>.</li>
-          <li><strong>Suggest articles.</strong> Found good Portal Bridge coverage we haven't listed? <a href="https://github.com/jamditis/reroute-nj/issues/new" target="_blank" rel="noopener">Submit it</a>.</li>
-          <li><strong>Contribute code.</strong> The <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">GitHub repo</a> is open. No build step, no framework knowledge required. If you can edit HTML, you can contribute.</li>
-          <li><strong>Help with accessibility.</strong> We want the tool to work for everyone. Screen reader testing, keyboard navigation improvements, and WCAG compliance review are all welcome.</li>
-        </ul>
-
-        <h2>The bigger picture</h2>
-
-        <p>The Portal Bridge cutover is painful, but it's a good thing. The 115-year-old Portal Bridge has been the worst bottleneck on the Northeast Corridor for decades. Every time it gets stuck opening for boat traffic, cascading delays affect hundreds of thousands of riders. The new Portal North Bridge eliminates that problem.</p>
-
-        <p>This four-week disruption is the price of progress. When Phase 2 comes in the fall of 2026, we'll update Reroute NJ to cover that, too.</p>
-
-        <p>In the meantime, we hope these tools make the next month a little easier to navigate. Plan ahead, be patient with each other on the platforms, and remember: this is temporary.</p>
-
-        <div class="blog-cta">
-          <a href="index.html" class="callout-btn">Plan your commute &rarr;</a>
-        </div>
+      <div class="blog-card">
+        <a href="blog/new-embed-system.html" class="blog-card-link">
+          <h2>New: embed Reroute NJ on your website</h2>
+          <time class="blog-card-date">February 13, 2026</time>
+          <p class="blog-card-excerpt">Newsrooms and publishers can now embed Reroute NJ tools directly on their websites. Four embed formats, a visual configurator, and PNG export — all free.</p>
+          <span class="blog-card-more">Read more &rarr;</span>
+        </a>
       </div>
-    </article>
+
+      <div class="blog-card">
+        <a href="blog/why-we-built-reroute-nj.html" class="blog-card-link">
+          <h2>Why we built Reroute NJ</h2>
+          <time class="blog-card-date">February 12, 2026</time>
+          <p class="blog-card-excerpt">Five free tools in 11 languages to help NJ Transit riders navigate the Portal Bridge cutover. Here's why we built it and how you can help.</p>
+          <span class="blog-card-more">Read more &rarr;</span>
+        </a>
+      </div>
+    </section>
 
   </main>
 

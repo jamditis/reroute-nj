@@ -18,21 +18,28 @@ compare.html            — Commute comparison
 coverage.html           — News coverage feed
 map.html                — Interactive Leaflet map
 embed.html              — Embed & share for publishers
-blog.html               — Blog (English only, not translated)
+blog.html               — Blog index (lists posts)
+blog/                   — Blog posts (e.g., blog/why-we-built-reroute-nj.html)
 robots.txt              — Crawler guidance + AI bot allowances
-sitemap.xml             — All 56 pages with hreflang cross-refs
+sitemap.xml             — All 90 pages with hreflang cross-refs
 llms.txt                — AI search engine discoverability
+card.html               — Info card renderer (URL params → card)
+widget.html             — Mini-widget renderer (URL params → tool)
 js/app.js               — Line guide logic (IIFE, ~1000 lines)
 js/compare.js           — Comparison tool (IIFE, ~700 lines)
 js/coverage.js          — Coverage feed (IIFE)
 js/i18n.js              — Runtime translation loader
-js/shared.js            — Shared globals: esc(), countdown, dates
+js/shared.js            — Shared globals: esc(), countdown, dates, initEmbedMode()
+js/line-data.js         — LINE_DATA and LINE_ORDER globals (shared by app, cards, widgets)
+js/cards.js             — Card rendering + Canvas PNG export (IIFE)
+js/embed.js             — Embed configurator logic (IIFE)
+js/widget.js            — Standalone script-tag embed library (IIFE)
 css/styles.css          — All styles, CSS custom properties in :root
 data/coverage.json      — Curated article metadata
 translations/en.json    — English source strings (~175 keys)
 translations/{lang}.json — 10 translated language files
 tools/generate-pages.py — Static page generator for translations
-{lang}/                 — Generated translated pages (50 total)
+{lang}/                 — Generated translated pages (80 total, 8 pages × 10 languages)
 ```
 
 ## Code conventions
@@ -67,18 +74,19 @@ These run after `replace_meta()` in the `generate_page()` function. If a transla
 
 ### Key rules for translations
 
-- **Keys use dot notation** organized by page: `index.*`, `compare.*`, `coverage.*`, `map.*`, `embed.*`, `common.*`, `meta.*`
+- **Keys use dot notation** organized by page: `index.*`, `compare.*`, `coverage.*`, `map.*`, `embed.*`, `blog.*` (index), `blog_post.*` (articles), `common.*`, `meta.*`
 - **Station names, line names, and place names stay in English** — they're proper nouns on physical signage
 - **HTML markup in translations** — Translation values can contain `<strong>`, `<a>`, `<code>` tags
 - **HTML entities must match exactly** — The generator uses `str.replace()`, so `&hellip;` and `…` are different strings. Match what's in the source HTML.
-- **`blog.html` is not translated** — English-only content, excluded from the generator
+- **Blog post pages use `PAGE_KEY_MAP`** — `blog/why-we-built-reroute-nj.html` maps to key prefix `blog_post` (not derived from filename). Add new blog posts to both `PAGES` and `PAGE_KEY_MAP` in generate-pages.py.
+- **Nested pages need depth-aware asset paths** — `fix_asset_paths()` handles this automatically based on `/` count in the page name.
 
 ### Adding new translatable content
 
 1. Add key to `translations/en.json`
 2. Add replacement logic in `tools/generate-pages.py` (in `replace_page_specific_content()` under the correct page's `if/elif` block)
 3. Add translated values to all 10 language files: es, zh, tl, ko, pt, gu, hi, it, ar, pl
-4. Run `python3 tools/generate-pages.py` to regenerate all 50 pages
+4. Run `python3 tools/generate-pages.py` to regenerate all 80 pages
 5. Spot-check at least 2 languages for correct output
 
 ### Regenerating pages

@@ -106,80 +106,185 @@
       <a href="coverage.html" class="tool-nav-link">Notizie</a>
       <a href="map.html" class="tool-nav-link">Mappa</a>
       <a href="embed.html" class="tool-nav-link active" aria-current="page">Incorpora e condividi</a>
+      <a href="blog.html" class="tool-nav-link">Blog</a>
     </div>
   </nav>
 
   <main class="container" id="main-content">
 
-    <p class="seo-summary">Embed Reroute NJ tools on your website for free. Newsrooms, publishers, and community organizations can iframe any tool, link directly, or fork the open-source code to create a branded version.</p>
+    <p class="seo-summary">Incorpora gratuitamente gli strumenti di Reroute NJ nel tuo sito web. Redazioni, editori e organizzazioni comunitarie possono usare iframe, collegare direttamente o fare fork del codice open source per creare una versione personalizzata.</p>
 
     <section class="embed-hero">
       <h1>Inserisci Reroute NJ nel tuo sito</h1>
-      <p>Reroute NJ è gratuito, open source e fatto per la comunità. Redazioni, editori, organizzazioni comunitarie e chiunque può incorporare, linkare o ripubblicare i nostri strumenti.</p>
+      <p>Reroute NJ è gratuito, open source e creato per la comunità. Scegli un tipo di incorporamento, configuralo e prendi il codice.</p>
     </section>
 
-    <!-- Embed code generator -->
-    <section class="info-section" id="embed-generator" style="margin-top: 1rem; border-top: none;">
-      <h2>Generatore di codice embed</h2>
-      <p class="section-intro">Copia e incolla un codice iframe per inserire qualsiasi strumento di Reroute NJ nel tuo sito. Lo strumento è interattivo e responsivo all'interno dell'iframe.</p>
-
-      <div class="embed-options">
-        <div class="filter-group">
-          <label for="embed-tool">Quale strumento?</label>
-          <select id="embed-tool">
-            <option value="index.html">Guida alle linee</option>
-            <option value="compare.html">Confronto tragitti</option>
-            <option value="coverage.html">Notizie</option>
-            <option value="map.html">Mappa interattiva</option>
-          </select>
-        </div>
-        <div class="filter-group">
-          <label for="embed-width">Larghezza</label>
-          <select id="embed-width">
-            <option value="100%">Larghezza piena (100%)</option>
-            <option value="600px">600px</option>
-            <option value="800px">800px</option>
-          </select>
-        </div>
-        <div class="filter-group">
-          <label for="embed-height">Altezza</label>
-          <select id="embed-height">
-            <option value="700px">700px</option>
-            <option value="500px">500px</option>
-            <option value="900px">900px</option>
-          </select>
-        </div>
+    <!-- Step 1: Pick embed type -->
+    <section class="configurator-step" id="cfg-step-1">
+      <div class="cfg-step-header">
+        <span class="cfg-step-num">1</span>
+        <h2>Scegli un tipo di incorporamento</h2>
       </div>
-
-      <div class="embed-preview">
-        <label class="embed-code-label">Il tuo codice embed</label>
-        <div class="embed-code-box" id="embed-code-box"></div>
-        <button class="share-btn" id="copy-embed-btn" style="margin-top: 0.75rem;">Copia codice embed</button>
-        <span class="share-confirm hidden" id="copy-embed-confirm">Copiato!</span>
+      <div class="cfg-type-cards">
+        <button class="cfg-type-card" data-type="card" type="button">
+          <span class="cfg-type-icon" aria-hidden="true">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><rect x="4" y="6" width="28" height="24" rx="4" stroke="currentColor" stroke-width="2"/><line x1="10" y1="14" x2="26" y2="14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="10" y1="19" x2="22" y2="19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/><line x1="10" y1="23" x2="18" y2="23" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/></svg>
+          </span>
+          <strong class="cfg-type-name">Scheda informativa</strong>
+          <span class="cfg-type-desc">Una scheda compatta con informazioni chiave su una linea o stazione. Ideale per newsletter, social media e barre laterali degli articoli.</span>
+        </button>
+        <button class="cfg-type-card" data-type="widget" type="button">
+          <span class="cfg-type-icon" aria-hidden="true">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><rect x="3" y="4" width="30" height="28" rx="4" stroke="currentColor" stroke-width="2"/><rect x="7" y="9" width="10" height="6" rx="2" fill="currentColor" opacity="0.15" stroke="currentColor" stroke-width="1.5"/><rect x="19" y="9" width="10" height="6" rx="2" fill="currentColor" opacity="0.15" stroke="currentColor" stroke-width="1.5"/><rect x="7" y="19" width="22" height="3" rx="1.5" fill="currentColor" opacity="0.2"/><rect x="7" y="25" width="16" height="3" rx="1.5" fill="currentColor" opacity="0.2"/></svg>
+          </span>
+          <strong class="cfg-type-name">Widget interattivo</strong>
+          <span class="cfg-type-desc">Una versione mini dei nostri strumenti che i tuoi lettori possono usare inline. Funziona in qualsiasi CMS che supporti blocchi HTML.</span>
+        </button>
+        <button class="cfg-type-card" data-type="tool" type="button">
+          <span class="cfg-type-icon" aria-hidden="true">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><rect x="2" y="3" width="32" height="30" rx="4" stroke="currentColor" stroke-width="2"/><line x1="2" y1="10" x2="34" y2="10" stroke="currentColor" stroke-width="2"/><circle cx="7" cy="6.5" r="1.5" fill="currentColor" opacity="0.4"/><circle cx="12" cy="6.5" r="1.5" fill="currentColor" opacity="0.4"/><circle cx="17" cy="6.5" r="1.5" fill="currentColor" opacity="0.4"/><rect x="6" y="14" width="24" height="4" rx="2" fill="currentColor" opacity="0.12"/><rect x="6" y="21" width="24" height="8" rx="2" fill="currentColor" opacity="0.08"/></svg>
+          </span>
+          <strong class="cfg-type-name">Strumento completo</strong>
+          <span class="cfg-type-desc">L'esperienza completa dello strumento, incorporata nella tua pagina. Tutte le funzionalità, completamente interattivo.</span>
+        </button>
       </div>
     </section>
 
-    <!-- Direct link sharing -->
+    <!-- Step 2: Configure -->
+    <section class="configurator-step hidden" id="cfg-step-2">
+      <div class="cfg-step-header">
+        <span class="cfg-step-num">2</span>
+        <h2>Configura il tuo incorporamento</h2>
+      </div>
+      <div class="cfg-form" id="cfg-form">
+        <!-- Card-specific fields -->
+        <div class="cfg-field" id="cfg-field-card-type">
+          <label for="cfg-card-type">Tipo di scheda</label>
+          <select id="cfg-card-type">
+            <option value="line">Panoramica linea</option>
+            <option value="station">Info stazione</option>
+            <option value="summary">Riepilogo del cambio</option>
+          </select>
+        </div>
+        <!-- Tool/widget-specific field -->
+        <div class="cfg-field hidden" id="cfg-field-tool-type">
+          <label for="cfg-tool-type">Strumento</label>
+          <select id="cfg-tool-type">
+            <option value="line-guide">Guida alle linee</option>
+            <option value="compare">Confronto pendolari</option>
+            <option value="coverage">Notizie</option>
+            <option value="map">Mappa interattiva</option>
+          </select>
+        </div>
+        <!-- Line picker -->
+        <div class="cfg-field" id="cfg-field-line">
+          <label for="cfg-line">Linea</label>
+          <select id="cfg-line">
+            <option value="">Seleziona una linea…</option>
+          </select>
+        </div>
+        <!-- Station picker (card type=station only) -->
+        <div class="cfg-field hidden" id="cfg-field-station">
+          <label for="cfg-station">Stazione</label>
+          <select id="cfg-station">
+            <option value="">Seleziona una stazione…</option>
+          </select>
+        </div>
+        <!-- Theme toggle -->
+        <div class="cfg-field" id="cfg-field-theme">
+          <label for="cfg-theme">Tema</label>
+          <select id="cfg-theme">
+            <option value="light">Chiaro</option>
+            <option value="dark">Scuro</option>
+          </select>
+        </div>
+        <!-- Accent color -->
+        <div class="cfg-field" id="cfg-field-accent">
+          <label for="cfg-accent">Colore accento</label>
+          <div class="cfg-color-input">
+            <input type="color" id="cfg-accent" value="#e87722">
+            <span class="cfg-color-value" id="cfg-accent-value">#e87722</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Step 3: Preview + Output -->
+    <section class="configurator-step hidden" id="cfg-step-3">
+      <div class="cfg-step-header">
+        <span class="cfg-step-num">3</span>
+        <h2>Anteprima e prendi il codice</h2>
+      </div>
+      <div class="cfg-output-layout">
+        <!-- Preview -->
+        <div class="cfg-preview" id="cfg-preview">
+          <div class="cfg-preview-label">Anteprima dal vivo</div>
+          <div class="cfg-preview-frame" id="cfg-preview-frame">
+            <iframe id="cfg-iframe" title="Embed preview" sandbox="allow-scripts allow-same-origin" loading="lazy"></iframe>
+          </div>
+        </div>
+        <!-- Output -->
+        <div class="cfg-output">
+          <div class="cfg-output-tabs" role="tablist" aria-label="Output format">
+            <button class="cfg-tab active" role="tab" aria-selected="true" aria-controls="cfg-panel-iframe" id="cfg-tab-iframe" data-tab="iframe" type="button">Iframe</button>
+            <button class="cfg-tab" role="tab" aria-selected="false" aria-controls="cfg-panel-script" id="cfg-tab-script" data-tab="script" type="button">Tag script</button>
+            <button class="cfg-tab" role="tab" aria-selected="false" aria-controls="cfg-panel-png" id="cfg-tab-png" data-tab="png" type="button">Scarica PNG</button>
+            <button class="cfg-tab" role="tab" aria-selected="false" aria-controls="cfg-panel-html" id="cfg-tab-html" data-tab="html" type="button">Scarica HTML</button>
+          </div>
+          <!-- Iframe panel -->
+          <div class="cfg-panel active" role="tabpanel" id="cfg-panel-iframe" aria-labelledby="cfg-tab-iframe">
+            <div class="embed-code-box" id="cfg-code-iframe"></div>
+            <div class="cfg-copy-row">
+              <button class="share-btn cfg-copy-btn" id="cfg-copy-iframe" type="button">Copia codice</button>
+              <span class="share-confirm hidden" id="cfg-copied-iframe">Copiato!</span>
+            </div>
+          </div>
+          <!-- Script tag panel -->
+          <div class="cfg-panel hidden" role="tabpanel" id="cfg-panel-script" aria-labelledby="cfg-tab-script">
+            <div class="embed-code-box" id="cfg-code-script"></div>
+            <div class="cfg-copy-row">
+              <button class="share-btn cfg-copy-btn" id="cfg-copy-script" type="button">Copia codice</button>
+              <span class="share-confirm hidden" id="cfg-copied-script">Copiato!</span>
+            </div>
+          </div>
+          <!-- PNG panel -->
+          <div class="cfg-panel hidden" role="tabpanel" id="cfg-panel-png" aria-labelledby="cfg-tab-png">
+            <div class="cfg-download-area" id="cfg-png-area">
+              <p class="cfg-download-msg" id="cfg-png-msg">Clicca il pulsante qui sotto per esportare la scheda informativa come immagine PNG.</p>
+              <button class="share-btn cfg-download-btn" id="cfg-download-png" type="button">Scarica PNG</button>
+            </div>
+          </div>
+          <!-- HTML download panel -->
+          <div class="cfg-panel hidden" role="tabpanel" id="cfg-panel-html" aria-labelledby="cfg-tab-html">
+            <div class="cfg-download-area" id="cfg-html-area">
+              <p class="cfg-download-msg" id="cfg-html-msg">Clicca il pulsante qui sotto per scaricare un file HTML autonomo della scheda informativa.</p>
+              <button class="share-btn cfg-download-btn" id="cfg-download-html" type="button">Scarica HTML</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Direct links -->
     <section class="info-section" id="direct-links">
       <h2>Link diretti</h2>
       <p class="section-intro">Collegati direttamente a qualsiasi strumento. Questi URL sono permanenti e condivisibili.</p>
-
       <div class="resources-grid">
         <div class="resource-link">
           <strong>Guida alle linee</strong>
-          <span id="link-guide" class="embed-url">https://reroutenj.org/</span>
+          <span class="embed-url">https://reroutenj.org/</span>
         </div>
         <div class="resource-link">
           <strong>Confronto tragitti</strong>
-          <span id="link-compare" class="embed-url">https://reroutenj.org/compare.html</span>
+          <span class="embed-url">https://reroutenj.org/compare.html</span>
         </div>
         <div class="resource-link">
           <strong>Notizie</strong>
-          <span id="link-coverage" class="embed-url">https://reroutenj.org/coverage.html</span>
+          <span class="embed-url">https://reroutenj.org/coverage.html</span>
         </div>
         <div class="resource-link">
           <strong>Mappa interattiva</strong>
-          <span id="link-map" class="embed-url">https://reroutenj.org/map.html</span>
+          <span class="embed-url">https://reroutenj.org/map.html</span>
         </div>
       </div>
     </section>
@@ -187,16 +292,15 @@
     <!-- For publishers -->
     <section class="info-section" id="for-publishers">
       <h2>Per redazioni ed editori</h2>
-      <p class="section-intro">Reroute NJ è pensato per giornalisti, redazioni ed editori comunitari. Ecco come puoi usarlo.</p>
-
+      <p class="section-intro">Reroute NJ è progettato per giornalisti, redazioni ed editori comunitari.</p>
       <div class="secaucus-grid">
         <div class="secaucus-card">
           <h4>Incorporalo nei tuoi articoli</h4>
           <ul>
-            <li>Usa il generatore di codice embed sopra per ottenere uno snippet iframe.</li>
-            <li>Incollalo nel tuo CMS (WordPress, Ghost, Squarespace, ecc.) — la maggior parte supporta blocchi HTML.</li>
-            <li>L'embed è responsivo e funziona su mobile.</li>
-            <li>Non servono chiavi API né account. Funziona e basta.</li>
+            <li>Usa il configuratore sopra per generare codice di incorporamento in qualsiasi formato.</li>
+            <li>Incolla nel tuo CMS (WordPress, Ghost, Squarespace, ecc.) — la maggior parte supporta blocchi HTML grezzi.</li>
+            <li>Gli incorporamenti sono responsivi e funzionano su dispositivi mobili.</li>
+            <li>Non serve chiave API o account.</li>
           </ul>
         </div>
         <div class="secaucus-card">
@@ -204,7 +308,7 @@
           <ul>
             <li>Aggiungi un box "Pianifica il tuo tragitto" ai tuoi articoli sul Portal Bridge.</li>
             <li>Linka a strumenti specifici in base all'argomento dell'articolo.</li>
-            <li>Abbiamo già immagini OG e social card per anteprime pulite sui social.</li>
+            <li>Immagini OG e card social sono già configurate per anteprime pulite.</li>
             <li>Testo suggerito per il link: "Usa lo strumento gratuito Reroute NJ per pianificare il tuo tragitto."</li>
           </ul>
         </div>
@@ -212,26 +316,25 @@
           <h4>Contribuisci con la tua copertura</h4>
           <ul>
             <li>Curiamo la copertura sul Portal Bridge nella nostra <a href="coverage.html">pagina notizie</a>.</li>
-            <li>Per suggerire un articolo, <a href="https://github.com/jamditis/reroute-nj/issues/new?template=article-suggestion.md" target="_blank" rel="noopener">apri un issue su GitHub</a> con l'URL e i dettagli.</li>
-            <li>Oppure scrivi a <strong><a href="mailto:amditisj@montclair.edu">amditisj@montclair.edu</a></strong> con "Reroute NJ coverage" nell'oggetto.</li>
+            <li>Per suggerire un articolo, <a href="https://github.com/jamditis/reroute-nj/issues/new?template=article-suggestion.md" target="_blank" rel="noopener">apri un issue su GitHub</a>.</li>
+            <li>Oppure invia un'email a <strong><a href="mailto:amditisj@montclair.edu">amditisj@montclair.edu</a></strong> con "Reroute NJ coverage" nell'oggetto.</li>
             <li>Includiamo tutta la copertura rilevante — opinioni, analisi, giornalismo comunitario e altro.</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- Custom branding -->
+    <!-- Co-branding -->
     <section class="info-section" id="custom-branding">
       <h2>Co-branding e personalizzazione</h2>
       <p class="section-intro">Vuoi usare Reroute NJ con il tuo marchio? Essendo open source, puoi farlo.</p>
-
       <div class="ticket-scenarios">
         <div class="scenario-card">
-          <h3>Opzione 1: Fai un fork del progetto</h3>
+          <h3>Fai il fork del progetto</h3>
           <div class="scenario-body">
             <div class="step">
               <span class="step-num">1</span>
-              <div><p>Fai un fork del <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">repository GitHub</a> nell'account della tua organizzazione.</p></div>
+              <div><p>Fai il fork del <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">repository GitHub</a> nell'account della tua organizzazione.</p></div>
             </div>
             <div class="step">
               <span class="step-num">2</span>
@@ -239,29 +342,11 @@
             </div>
             <div class="step">
               <span class="step-num">3</span>
-              <div><p>Sostituisci il nome del marchio, il logo e i crediti nel footer con i tuoi. Aggiungi l'header/navigazione della tua testata se vuoi.</p></div>
+              <div><p>Sostituisci il nome del brand, il logo e il credito nel footer con i tuoi.</p></div>
             </div>
             <div class="step">
               <span class="step-num">4</span>
-              <div><p>Pubblica su GitHub Pages, Netlify, Vercel o il tuo server. Non serve alcun passaggio di build — è solo HTML statico.</p></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="scenario-card">
-          <h3>Opzione 2: Incorpora con la tua introduzione</h3>
-          <div class="scenario-body">
-            <div class="step">
-              <span class="step-num">1</span>
-              <div><p>Incorpora lo strumento usando il codice iframe sopra.</p></div>
-            </div>
-            <div class="step">
-              <span class="step-num">2</span>
-              <div><p>Aggiungi il tuo header, testo introduttivo e branding attorno all'iframe.</p></div>
-            </div>
-            <div class="step">
-              <span class="step-num">3</span>
-              <div><p>Personalizza lo stile della pagina per adattarlo al design della tua pubblicazione.</p></div>
+              <div><p>Distribuisci su GitHub Pages, Netlify, Vercel o il tuo server. Nessun passaggio di build necessario.</p></div>
             </div>
           </div>
         </div>
@@ -271,8 +356,7 @@
     <!-- How to contribute -->
     <section class="info-section" id="contribute">
       <h2>Come contribuire</h2>
-      <p class="section-intro">Reroute NJ è un progetto comunitario. Ecco come puoi aiutare, indipendentemente dalle tue competenze tecniche.</p>
-
+      <p class="section-intro">Reroute NJ è un progetto comunitario. Ecco come puoi aiutare.</p>
       <div class="secaucus-grid">
         <div class="secaucus-card">
           <h4>Contributi non tecnici</h4>
@@ -280,7 +364,6 @@
             <li><strong>Suggerisci articoli:</strong> conosci un articolo sul Portal Bridge che ci è sfuggito? <a href="https://github.com/jamditis/reroute-nj/issues/new?template=article-suggestion.md" target="_blank" rel="noopener">Apri un issue</a> o scrivi a joe@amditis.com.</li>
             <li><strong>Segnala errori:</strong> se i dati sugli orari o i tempi di trasferimento sono sbagliati, faccelo sapere.</li>
             <li><strong>Condividi lo strumento:</strong> parlane ai tuoi amici pendolari, condividilo sui social, postalo nel tuo gruppo di quartiere.</li>
-            <li><strong>Traduci:</strong> aiutaci a tradurre lo strumento in spagnolo o altre lingue parlate dai passeggeri NJ Transit.</li>
           </ul>
         </div>
         <div class="secaucus-card">
@@ -313,10 +396,11 @@
     </div>
   </footer>
 
-  <script>window.BASE_PATH="../";window._T={"common":{"skip_to_main":"Vai al contenuto principale","high_contrast":"Alto contrasto","simplified_view":"Vista semplificata","nav_line_guide":"Guida alle linee","nav_commute_comparison":"Confronto tragitti","nav_news_coverage":"Notizie","nav_map":"Mappa","nav_embed":"Incorpora e condividi","footer_disclaimer":"è uno strumento comunitario indipendente. Non è affiliato né approvato da NJ Transit, Amtrak o alcun ente governativo.","footer_disclaimer_index":"Le informazioni si basano su annunci ufficiali e possono cambiare. Verifica sempre su","footer_disclaimer_index_after":"prima di viaggiare.","footer_disclaimer_coverage":"I link alle notizie rimandano alle fonti originali. Verifica sempre su","footer_disclaimer_coverage_after":"prima di viaggiare.","footer_disclaimer_map":"Dati mappa &copy; contributori di","footer_disclaimer_map_tiles":"Tile &copy;","footer_disclaimer_embed":"Vedi il codice sorgente su GitHub","footer_built_by":"Creato da","cutover_begins_in":"Il passaggio inizia tra","days":"giorni","day":"giorno","remaining_phase1":"rimanenti nella Fase 1","phase1_complete":"Fase 1 completata","phase2_expected":"Fase 2 prevista"},"js":{"major_changes":"CAMBIAMENTI IMPORTANTI","schedule_changes":"CAMBIAMENTI DI ORARIO","before_normal":"Prima (servizio normale)","during_cutover":"Durante il passaggio (giorni feriali, 15 feb – 15 mar)","during_cutover_short":"Durante il passaggio (15 feb – 15 mar)","what_you_need_to_know":"Cosa devi sapere","weekends_different":"I weekend sono diversi:","weekend_service_continues":"Il servizio Midtown Direct per Penn Station NY continua sabato e domenica. Acquista i biglietti normali di Penn Station per i viaggi del weekend.","estimated_savings":"Risparmio stimato per","zone":"zona","monthly_pass_penn":"Abbonamento mensile Penn Station:","monthly_pass_hoboken":"Abbonamento mensile Hoboken:","you_save":"Risparmi","per_month":"/mese","cross_honored_free":"e PATH/traghetto da Hoboken è accettato senza costi aggiuntivi.","fare_disclaimer":"Le tariffe sono stime. Verifica su njtransit.com prima dell'acquisto.","how_get_manhattan":"Come arrivo a Manhattan?","how_get_home":"Come torno da Manhattan?","planning_commute":"Pianifica il tuo tragitto","getting_home":"Tornare a casa la sera","getting_past_newark":"Passare da Newark Penn","getting_home_manhattan":"Tornare da Manhattan","what_ticket":"Quale biglietto devo comprare?","recommended":"Migliore per la maggior parte","scenic_less_crowded":"Panoramico e meno affollato","port_authority_area":"Migliore per la zona Port Authority","other_options":"Altre opzioni","pro_tip":"Suggerimento:","monthly_pass_holders":"Titolari di abbonamento mensile","one_way_buyers":"Acquirenti di biglietto singolo","weekend_riders":"Viaggiatori del weekend","occasional_riders":"Viaggiatori occasionali / non sicuri","no_change":"Nessun cambiamento","cross_honored":"Accettato","transfer":"Trasferimento","walk_subway":"A piedi/metro","arrive":"Arrivo","choose_station":"Scegli la tua stazione…"},"compare":{"title":"Confronta le opzioni — Reroute NJ","tagline":"Confronta le tue opzioni di viaggio","hero_title":"Come cambia il tuo tragitto?","hero_desc":"Scegli la tua stazione e destinazione a Manhattan. Ti mostreremo ogni opzione con analisi visive dei tempi.","step1":"La tua linea","step2":"La tua stazione","step3":"Dove a Manhattan?","your_normal_commute":"Il tuo tragitto abituale","min_total":"min totali","vs_normal":"vs normale","fastest":"Più veloce","copy_summary":"Copia il riepilogo","copied":"Copiato!"},"coverage":{"title":"Notizie — Reroute NJ","tagline":"Portal Bridge nelle notizie","hero_title":"Portal Bridge nelle notizie","hero_desc":"Copertura selezionata del passaggio da fonti locali e regionali.","last_updated":"Ultimo aggiornamento:","all_sources":"Tutte le fonti","all_categories":"Tutte le categorie","all_lines":"Tutte le linee","all_directions":"Tutte le direzioni","search_placeholder":"Cerca articoli…","no_articles":"Nessun articolo corrisponde ai tuoi filtri.","source_label":"Fonte","category_label":"Categoria","line_label":"Linea","direction_label":"Direzione","search_label":"Cerca","cat_news":"Notizie","cat_opinion":"Opinione","cat_analysis":"Analisi","cat_official":"Ufficiale","cat_community":"Comunità","dir_nj_nyc":"NJ verso NYC","dir_nyc_nj":"NYC verso NJ","dir_both":"Entrambe le direzioni"}};</script>
+  <script>window.BASE_PATH="../";window._T={"common":{"skip_to_main":"Vai al contenuto principale","high_contrast":"Alto contrasto","simplified_view":"Vista semplificata","nav_line_guide":"Guida alle linee","nav_commute_comparison":"Confronto tragitti","nav_news_coverage":"Notizie","nav_map":"Mappa","nav_embed":"Incorpora e condividi","footer_disclaimer":"è uno strumento comunitario indipendente. Non è affiliato né approvato da NJ Transit, Amtrak o alcun ente governativo.","footer_disclaimer_index":"Le informazioni si basano su annunci ufficiali e possono cambiare. Verifica sempre su","footer_disclaimer_index_after":"prima di viaggiare.","footer_disclaimer_coverage":"I link alle notizie rimandano alle fonti originali. Verifica sempre su","footer_disclaimer_coverage_after":"prima di viaggiare.","footer_disclaimer_map":"Dati mappa &copy; contributori di","footer_disclaimer_map_tiles":"Tile &copy;","footer_disclaimer_embed":"Vedi il codice sorgente su GitHub","footer_built_by":"Creato da","cutover_begins_in":"Il passaggio inizia tra","days":"giorni","day":"giorno","remaining_phase1":"rimanenti nella Fase 1","phase1_complete":"Fase 1 completata","phase2_expected":"Fase 2 prevista","nav_blog":"Blog"},"js":{"major_changes":"CAMBIAMENTI IMPORTANTI","schedule_changes":"CAMBIAMENTI DI ORARIO","before_normal":"Prima (servizio normale)","during_cutover":"Durante il passaggio (giorni feriali, 15 feb – 15 mar)","during_cutover_short":"Durante il passaggio (15 feb – 15 mar)","what_you_need_to_know":"Cosa devi sapere","weekends_different":"I weekend sono diversi:","weekend_service_continues":"Il servizio Midtown Direct per Penn Station NY continua sabato e domenica. Acquista i biglietti normali di Penn Station per i viaggi del weekend.","estimated_savings":"Risparmio stimato per","zone":"zona","monthly_pass_penn":"Abbonamento mensile Penn Station:","monthly_pass_hoboken":"Abbonamento mensile Hoboken:","you_save":"Risparmi","per_month":"/mese","cross_honored_free":"e PATH/traghetto da Hoboken è accettato senza costi aggiuntivi.","fare_disclaimer":"Le tariffe sono stime. Verifica su njtransit.com prima dell'acquisto.","how_get_manhattan":"Come arrivo a Manhattan?","how_get_home":"Come torno da Manhattan?","planning_commute":"Pianifica il tuo tragitto","getting_home":"Tornare a casa la sera","getting_past_newark":"Passare da Newark Penn","getting_home_manhattan":"Tornare da Manhattan","what_ticket":"Quale biglietto devo comprare?","recommended":"Migliore per la maggior parte","scenic_less_crowded":"Panoramico e meno affollato","port_authority_area":"Migliore per la zona Port Authority","other_options":"Altre opzioni","pro_tip":"Suggerimento:","monthly_pass_holders":"Titolari di abbonamento mensile","one_way_buyers":"Acquirenti di biglietto singolo","weekend_riders":"Viaggiatori del weekend","occasional_riders":"Viaggiatori occasionali / non sicuri","no_change":"Nessun cambiamento","cross_honored":"Accettato","transfer":"Trasferimento","walk_subway":"A piedi/metro","arrive":"Arrivo","choose_station":"Scegli la tua stazione…"},"compare":{"title":"Confronta le opzioni — Reroute NJ","tagline":"Confronta le tue opzioni di viaggio","hero_title":"Come cambia il tuo tragitto?","hero_desc":"Scegli la tua stazione e destinazione a Manhattan. Ti mostreremo ogni opzione con analisi visive dei tempi.","step1":"La tua linea","step2":"La tua stazione","step3":"Dove a Manhattan?","your_normal_commute":"Il tuo tragitto abituale","min_total":"min totali","vs_normal":"vs normale","fastest":"Più veloce","copy_summary":"Copia il riepilogo","copied":"Copiato!"},"coverage":{"title":"Notizie — Reroute NJ","tagline":"Portal Bridge nelle notizie","hero_title":"Portal Bridge nelle notizie","hero_desc":"Copertura selezionata del passaggio da fonti locali e regionali.","last_updated":"Ultimo aggiornamento:","all_sources":"Tutte le fonti","all_categories":"Tutte le categorie","all_lines":"Tutte le linee","all_directions":"Tutte le direzioni","search_placeholder":"Cerca articoli…","no_articles":"Nessun articolo corrisponde ai tuoi filtri.","source_label":"Fonte","category_label":"Categoria","line_label":"Linea","direction_label":"Direzione","search_label":"Cerca","cat_news":"Notizie","cat_opinion":"Opinione","cat_analysis":"Analisi","cat_official":"Ufficiale","cat_community":"Comunità","dir_nj_nyc":"NJ verso NYC","dir_nyc_nj":"NYC verso NJ","dir_both":"Entrambe le direzioni"}};</script>
   <script src="../js/i18n.js"></script>
   <script src="../js/shared.js"></script>
+  <script src="../js/line-data.js"></script>
   <script src="../js/embed.js"></script>
-  <script>initA11yToggles(); initLangSelector();</script>
+  <script>initEmbedMode(); initA11yToggles(); initLangSelector();</script>
 </body>
 </html>

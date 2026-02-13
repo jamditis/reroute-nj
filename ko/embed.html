@@ -106,80 +106,185 @@
       <a href="coverage.html" class="tool-nav-link">뉴스</a>
       <a href="map.html" class="tool-nav-link">지도</a>
       <a href="embed.html" class="tool-nav-link active" aria-current="page">임베드 및 공유</a>
+      <a href="blog.html" class="tool-nav-link">블로그</a>
     </div>
   </nav>
 
   <main class="container" id="main-content">
 
-    <p class="seo-summary">Embed Reroute NJ tools on your website for free. Newsrooms, publishers, and community organizations can iframe any tool, link directly, or fork the open-source code to create a branded version.</p>
+    <p class="seo-summary">Reroute NJ 도구를 무료로 웹사이트에 삽입하세요. 뉴스룸, 출판사, 커뮤니티 조직이 어떤 도구든 iframe으로 삽입하거나, 직접 링크하거나, 오픈소스 코드를 포크하여 브랜드 버전을 만들 수 있습니다.</p>
 
     <section class="embed-hero">
       <h1>웹사이트에 Reroute NJ를 넣으세요</h1>
-      <p>Reroute NJ는 무료 오픈소스 커뮤니티 도구입니다. 뉴스룸, 출판사, 커뮤니티 단체 등 누구나 도구를 임베드하거나 링크하거나 재게시할 수 있습니다.</p>
+      <p>Reroute NJ는 무료이며, 오픈 소스이고, 커뮤니티를 위해 만들어졌습니다. 삽입 유형을 선택하고, 설정하고, 코드를 가져가세요.</p>
     </section>
 
-    <!-- Embed code generator -->
-    <section class="info-section" id="embed-generator" style="margin-top: 1rem; border-top: none;">
-      <h2>임베드 코드 생성기</h2>
-      <p class="section-intro">iframe 임베드 코드를 복사하여 웹사이트에 Reroute NJ 도구를 삽입하세요. 도구는 iframe 내에서 완전히 인터랙티브하고 반응형으로 작동합니다.</p>
-
-      <div class="embed-options">
-        <div class="filter-group">
-          <label for="embed-tool">어떤 도구?</label>
-          <select id="embed-tool">
-            <option value="index.html">노선 안내</option>
-            <option value="compare.html">통근 비교</option>
-            <option value="coverage.html">뉴스</option>
-            <option value="map.html">인터랙티브 지도</option>
-          </select>
-        </div>
-        <div class="filter-group">
-          <label for="embed-width">너비</label>
-          <select id="embed-width">
-            <option value="100%">전체 너비 (100%)</option>
-            <option value="600px">600px</option>
-            <option value="800px">800px</option>
-          </select>
-        </div>
-        <div class="filter-group">
-          <label for="embed-height">높이</label>
-          <select id="embed-height">
-            <option value="700px">700px</option>
-            <option value="500px">500px</option>
-            <option value="900px">900px</option>
-          </select>
-        </div>
+    <!-- Step 1: Pick embed type -->
+    <section class="configurator-step" id="cfg-step-1">
+      <div class="cfg-step-header">
+        <span class="cfg-step-num">1</span>
+        <h2>삽입 유형 선택</h2>
       </div>
-
-      <div class="embed-preview">
-        <label class="embed-code-label">임베드 코드</label>
-        <div class="embed-code-box" id="embed-code-box"></div>
-        <button class="share-btn" id="copy-embed-btn" style="margin-top: 0.75rem;">임베드 코드 복사</button>
-        <span class="share-confirm hidden" id="copy-embed-confirm">복사됨!</span>
+      <div class="cfg-type-cards">
+        <button class="cfg-type-card" data-type="card" type="button">
+          <span class="cfg-type-icon" aria-hidden="true">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><rect x="4" y="6" width="28" height="24" rx="4" stroke="currentColor" stroke-width="2"/><line x1="10" y1="14" x2="26" y2="14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="10" y1="19" x2="22" y2="19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/><line x1="10" y1="23" x2="18" y2="23" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/></svg>
+          </span>
+          <strong class="cfg-type-name">정보 카드</strong>
+          <span class="cfg-type-desc">노선이나 역에 대한 핵심 정보가 담긴 간결한 카드입니다. 뉴스레터, 소셜 미디어, 기사 사이드바에 적합합니다.</span>
+        </button>
+        <button class="cfg-type-card" data-type="widget" type="button">
+          <span class="cfg-type-icon" aria-hidden="true">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><rect x="3" y="4" width="30" height="28" rx="4" stroke="currentColor" stroke-width="2"/><rect x="7" y="9" width="10" height="6" rx="2" fill="currentColor" opacity="0.15" stroke="currentColor" stroke-width="1.5"/><rect x="19" y="9" width="10" height="6" rx="2" fill="currentColor" opacity="0.15" stroke="currentColor" stroke-width="1.5"/><rect x="7" y="19" width="22" height="3" rx="1.5" fill="currentColor" opacity="0.2"/><rect x="7" y="25" width="16" height="3" rx="1.5" fill="currentColor" opacity="0.2"/></svg>
+          </span>
+          <strong class="cfg-type-name">인터랙티브 위젯</strong>
+          <span class="cfg-type-desc">독자들이 인라인으로 사용할 수 있는 도구의 미니 버전입니다. HTML 블록을 지원하는 모든 CMS에서 작동합니다.</span>
+        </button>
+        <button class="cfg-type-card" data-type="tool" type="button">
+          <span class="cfg-type-icon" aria-hidden="true">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><rect x="2" y="3" width="32" height="30" rx="4" stroke="currentColor" stroke-width="2"/><line x1="2" y1="10" x2="34" y2="10" stroke="currentColor" stroke-width="2"/><circle cx="7" cy="6.5" r="1.5" fill="currentColor" opacity="0.4"/><circle cx="12" cy="6.5" r="1.5" fill="currentColor" opacity="0.4"/><circle cx="17" cy="6.5" r="1.5" fill="currentColor" opacity="0.4"/><rect x="6" y="14" width="24" height="4" rx="2" fill="currentColor" opacity="0.12"/><rect x="6" y="21" width="24" height="8" rx="2" fill="currentColor" opacity="0.08"/></svg>
+          </span>
+          <strong class="cfg-type-name">전체 도구</strong>
+          <span class="cfg-type-desc">페이지에 삽입된 완전한 도구 경험. 모든 기능, 완전한 인터랙티브.</span>
+        </button>
       </div>
     </section>
 
-    <!-- Direct link sharing -->
+    <!-- Step 2: Configure -->
+    <section class="configurator-step hidden" id="cfg-step-2">
+      <div class="cfg-step-header">
+        <span class="cfg-step-num">2</span>
+        <h2>삽입 설정</h2>
+      </div>
+      <div class="cfg-form" id="cfg-form">
+        <!-- Card-specific fields -->
+        <div class="cfg-field" id="cfg-field-card-type">
+          <label for="cfg-card-type">카드 유형</label>
+          <select id="cfg-card-type">
+            <option value="line">노선 개요</option>
+            <option value="station">역 정보</option>
+            <option value="summary">전환 요약</option>
+          </select>
+        </div>
+        <!-- Tool/widget-specific field -->
+        <div class="cfg-field hidden" id="cfg-field-tool-type">
+          <label for="cfg-tool-type">도구</label>
+          <select id="cfg-tool-type">
+            <option value="line-guide">노선 안내</option>
+            <option value="compare">통근 비교</option>
+            <option value="coverage">뉴스</option>
+            <option value="map">인터랙티브 지도</option>
+          </select>
+        </div>
+        <!-- Line picker -->
+        <div class="cfg-field" id="cfg-field-line">
+          <label for="cfg-line">노선</label>
+          <select id="cfg-line">
+            <option value="">노선 선택…</option>
+          </select>
+        </div>
+        <!-- Station picker (card type=station only) -->
+        <div class="cfg-field hidden" id="cfg-field-station">
+          <label for="cfg-station">역</label>
+          <select id="cfg-station">
+            <option value="">역 선택…</option>
+          </select>
+        </div>
+        <!-- Theme toggle -->
+        <div class="cfg-field" id="cfg-field-theme">
+          <label for="cfg-theme">테마</label>
+          <select id="cfg-theme">
+            <option value="light">밝은</option>
+            <option value="dark">어두운</option>
+          </select>
+        </div>
+        <!-- Accent color -->
+        <div class="cfg-field" id="cfg-field-accent">
+          <label for="cfg-accent">강조 색상</label>
+          <div class="cfg-color-input">
+            <input type="color" id="cfg-accent" value="#e87722">
+            <span class="cfg-color-value" id="cfg-accent-value">#e87722</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Step 3: Preview + Output -->
+    <section class="configurator-step hidden" id="cfg-step-3">
+      <div class="cfg-step-header">
+        <span class="cfg-step-num">3</span>
+        <h2>미리보기 및 코드 가져가기</h2>
+      </div>
+      <div class="cfg-output-layout">
+        <!-- Preview -->
+        <div class="cfg-preview" id="cfg-preview">
+          <div class="cfg-preview-label">실시간 미리보기</div>
+          <div class="cfg-preview-frame" id="cfg-preview-frame">
+            <iframe id="cfg-iframe" title="Embed preview" sandbox="allow-scripts allow-same-origin" loading="lazy"></iframe>
+          </div>
+        </div>
+        <!-- Output -->
+        <div class="cfg-output">
+          <div class="cfg-output-tabs" role="tablist" aria-label="Output format">
+            <button class="cfg-tab active" role="tab" aria-selected="true" aria-controls="cfg-panel-iframe" id="cfg-tab-iframe" data-tab="iframe" type="button">Iframe</button>
+            <button class="cfg-tab" role="tab" aria-selected="false" aria-controls="cfg-panel-script" id="cfg-tab-script" data-tab="script" type="button">Script 태그</button>
+            <button class="cfg-tab" role="tab" aria-selected="false" aria-controls="cfg-panel-png" id="cfg-tab-png" data-tab="png" type="button">PNG 다운로드</button>
+            <button class="cfg-tab" role="tab" aria-selected="false" aria-controls="cfg-panel-html" id="cfg-tab-html" data-tab="html" type="button">HTML 다운로드</button>
+          </div>
+          <!-- Iframe panel -->
+          <div class="cfg-panel active" role="tabpanel" id="cfg-panel-iframe" aria-labelledby="cfg-tab-iframe">
+            <div class="embed-code-box" id="cfg-code-iframe"></div>
+            <div class="cfg-copy-row">
+              <button class="share-btn cfg-copy-btn" id="cfg-copy-iframe" type="button">코드 복사</button>
+              <span class="share-confirm hidden" id="cfg-copied-iframe">복사됨!</span>
+            </div>
+          </div>
+          <!-- Script tag panel -->
+          <div class="cfg-panel hidden" role="tabpanel" id="cfg-panel-script" aria-labelledby="cfg-tab-script">
+            <div class="embed-code-box" id="cfg-code-script"></div>
+            <div class="cfg-copy-row">
+              <button class="share-btn cfg-copy-btn" id="cfg-copy-script" type="button">코드 복사</button>
+              <span class="share-confirm hidden" id="cfg-copied-script">복사됨!</span>
+            </div>
+          </div>
+          <!-- PNG panel -->
+          <div class="cfg-panel hidden" role="tabpanel" id="cfg-panel-png" aria-labelledby="cfg-tab-png">
+            <div class="cfg-download-area" id="cfg-png-area">
+              <p class="cfg-download-msg" id="cfg-png-msg">아래 버튼을 클릭하여 정보 카드를 PNG 이미지로 내보내세요.</p>
+              <button class="share-btn cfg-download-btn" id="cfg-download-png" type="button">PNG 다운로드</button>
+            </div>
+          </div>
+          <!-- HTML download panel -->
+          <div class="cfg-panel hidden" role="tabpanel" id="cfg-panel-html" aria-labelledby="cfg-tab-html">
+            <div class="cfg-download-area" id="cfg-html-area">
+              <p class="cfg-download-msg" id="cfg-html-msg">아래 버튼을 클릭하여 정보 카드의 독립 HTML 파일을 다운로드하세요.</p>
+              <button class="share-btn cfg-download-btn" id="cfg-download-html" type="button">HTML 다운로드</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Direct links -->
     <section class="info-section" id="direct-links">
       <h2>직접 링크</h2>
       <p class="section-intro">도구에 직접 링크하세요. 이 URL은 영구적이며 공유할 수 있습니다.</p>
-
       <div class="resources-grid">
         <div class="resource-link">
           <strong>노선 안내</strong>
-          <span id="link-guide" class="embed-url">https://reroutenj.org/</span>
+          <span class="embed-url">https://reroutenj.org/</span>
         </div>
         <div class="resource-link">
           <strong>통근 비교</strong>
-          <span id="link-compare" class="embed-url">https://reroutenj.org/compare.html</span>
+          <span class="embed-url">https://reroutenj.org/compare.html</span>
         </div>
         <div class="resource-link">
           <strong>뉴스</strong>
-          <span id="link-coverage" class="embed-url">https://reroutenj.org/coverage.html</span>
+          <span class="embed-url">https://reroutenj.org/coverage.html</span>
         </div>
         <div class="resource-link">
           <strong>인터랙티브 지도</strong>
-          <span id="link-map" class="embed-url">https://reroutenj.org/map.html</span>
+          <span class="embed-url">https://reroutenj.org/map.html</span>
         </div>
       </div>
     </section>
@@ -187,16 +292,15 @@
     <!-- For publishers -->
     <section class="info-section" id="for-publishers">
       <h2>뉴스룸 및 출판사를 위한 안내</h2>
-      <p class="section-intro">Reroute NJ는 기자, 뉴스룸, 커뮤니티 출판사가 활용할 수 있도록 설계되었습니다. 사용 방법은 다음과 같습니다.</p>
-
+      <p class="section-intro">Reroute NJ는 기자, 뉴스룸, 커뮤니티 출판사를 위해 설계되었습니다.</p>
       <div class="secaucus-grid">
         <div class="secaucus-card">
           <h4>기사에 임베드하기</h4>
           <ul>
-            <li>위의 임베드 코드 생성기에서 iframe 코드를 복사하세요.</li>
+            <li>위의 설정 도구를 사용하여 어떤 형식이든 삽입 코드를 생성하세요.</li>
             <li>CMS(WordPress, Ghost, Squarespace 등)에 붙여넣으세요 — 대부분 원시 HTML 블록을 지원합니다.</li>
-            <li>임베드는 반응형이며 모바일에서도 작동합니다.</li>
-            <li>API 키나 계정이 필요 없습니다. 바로 사용할 수 있습니다.</li>
+            <li>삽입 콘텐츠는 반응형이며 모바일에서도 작동합니다.</li>
+            <li>API 키나 계정이 필요 없습니다.</li>
           </ul>
         </div>
         <div class="secaucus-card">
@@ -204,7 +308,7 @@
           <ul>
             <li>Portal Bridge 기사에 "통근 계획하기" 링크 박스를 추가하세요.</li>
             <li>기사 내용에 맞는 특정 도구에 링크하세요.</li>
-            <li>소셜 미디어 미리보기를 위한 OG 이미지와 소셜 카드가 이미 설정되어 있습니다.</li>
+            <li>OG 이미지와 소셜 카드가 깔끔한 미리보기를 위해 이미 설정되어 있습니다.</li>
             <li>추천 앵커 텍스트: "무료 Reroute NJ 도구로 통근을 계획하세요."</li>
           </ul>
         </div>
@@ -212,26 +316,25 @@
           <h4>기사 제보</h4>
           <ul>
             <li><a href="coverage.html">뉴스 페이지</a>에서 Portal Bridge 관련 보도를 모아두고 있습니다.</li>
-            <li>기사를 제안하려면 URL과 세부 정보를 포함하여 <a href="https://github.com/jamditis/reroute-nj/issues/new?template=article-suggestion.md" target="_blank" rel="noopener">GitHub 이슈를 등록</a>하세요.</li>
-            <li>또는 <strong><a href="mailto:amditisj@montclair.edu">amditisj@montclair.edu</a></strong>로 제목에 "Reroute NJ coverage"를 넣어 이메일을 보내세요.</li>
+            <li>기사를 제안하려면 <a href="https://github.com/jamditis/reroute-nj/issues/new?template=article-suggestion.md" target="_blank" rel="noopener">GitHub에서 이슈를 열어주세요</a>.</li>
+            <li>또는 <strong><a href="mailto:amditisj@montclair.edu">amditisj@montclair.edu</a></strong>로 "Reroute NJ coverage"를 제목에 넣어 이메일을 보내주세요.</li>
             <li>오피니언, 분석, 커뮤니티 보도 등 관련 기사를 모두 포함합니다.</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- Custom branding -->
+    <!-- Co-branding -->
     <section class="info-section" id="custom-branding">
       <h2>공동 브랜딩 및 맞춤 설정</h2>
       <p class="section-intro">자체 브랜딩으로 Reroute NJ를 운영하고 싶으신가요? 오픈소스이므로 가능합니다.</p>
-
       <div class="ticket-scenarios">
         <div class="scenario-card">
-          <h3>옵션 1: 프로젝트 포크</h3>
+          <h3>프로젝트 포크</h3>
           <div class="scenario-body">
             <div class="step">
               <span class="step-num">1</span>
-              <div><p><a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">GitHub 저장소</a>를 조직 계정으로 포크하세요.</p></div>
+              <div><p><a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">GitHub 저장소</a>를 조직의 계정으로 포크하세요.</p></div>
             </div>
             <div class="step">
               <span class="step-num">2</span>
@@ -239,29 +342,11 @@
             </div>
             <div class="step">
               <span class="step-num">3</span>
-              <div><p>브랜드 이름, 로고, 하단 크레딧을 교체하세요. 원하면 뉴스룸 헤더/내비게이션을 추가할 수 있습니다.</p></div>
+              <div><p>브랜드 이름, 로고, 푸터 크레딧을 자신의 것으로 교체하세요.</p></div>
             </div>
             <div class="step">
               <span class="step-num">4</span>
-              <div><p>GitHub Pages, Netlify, Vercel 또는 자체 서버에 배포하세요. 빌드 과정이 필요 없습니다 — 정적 HTML입니다.</p></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="scenario-card">
-          <h3>옵션 2: 자체 소개와 함께 임베드</h3>
-          <div class="scenario-body">
-            <div class="step">
-              <span class="step-num">1</span>
-              <div><p>위의 iframe 코드로 도구를 임베드하세요.</p></div>
-            </div>
-            <div class="step">
-              <span class="step-num">2</span>
-              <div><p>iframe 주변에 자체 헤더, 소개 텍스트, 브랜딩을 추가하세요.</p></div>
-            </div>
-            <div class="step">
-              <span class="step-num">3</span>
-              <div><p>주변 페이지를 출판물 디자인에 맞게 스타일링하세요.</p></div>
+              <div><p>GitHub Pages, Netlify, Vercel 또는 자체 서버에 배포하세요. 빌드 단계가 필요 없습니다.</p></div>
             </div>
           </div>
         </div>
@@ -271,8 +356,7 @@
     <!-- How to contribute -->
     <section class="info-section" id="contribute">
       <h2>기여 방법</h2>
-      <p class="section-intro">Reroute NJ는 커뮤니티 프로젝트입니다. 기술 수준에 관계없이 도움을 줄 수 있습니다.</p>
-
+      <p class="section-intro">Reroute NJ는 커뮤니티 프로젝트입니다. 다음과 같이 도움을 줄 수 있습니다.</p>
       <div class="secaucus-grid">
         <div class="secaucus-card">
           <h4>비기술적 기여</h4>
@@ -280,7 +364,6 @@
             <li><strong>기사 제안:</strong> 빠뜨린 Portal Bridge 기사를 알고 계신가요? <a href="https://github.com/jamditis/reroute-nj/issues/new?template=article-suggestion.md" target="_blank" rel="noopener">이슈를 등록</a>하거나 joe@amditis.com으로 이메일을 보내세요.</li>
             <li><strong>오류 신고:</strong> 시간표 데이터나 환승 소요 시간이 잘못된 경우 알려주세요.</li>
             <li><strong>도구 공유:</strong> 통근하는 지인에게 알려주고, 소셜 미디어에 공유하고, 동네 커뮤니티에 올려주세요.</li>
-            <li><strong>번역:</strong> NJ Transit 이용자가 사용하는 스페인어 및 기타 언어로 번역을 도와주세요.</li>
           </ul>
         </div>
         <div class="secaucus-card">
@@ -313,10 +396,11 @@
     </div>
   </footer>
 
-  <script>window.BASE_PATH="../";window._T={"common":{"skip_to_main":"본문으로 건너뛰기","high_contrast":"고대비","simplified_view":"간소화 보기","nav_line_guide":"노선 안내","nav_commute_comparison":"통근 비교","nav_news_coverage":"뉴스","nav_map":"지도","nav_embed":"임베드 및 공유","footer_disclaimer":"는 독립적인 커뮤니티 도구입니다. NJ Transit, Amtrak 또는 정부 기관과 관련이 없으며 승인을 받지 않았습니다.","footer_disclaimer_index":"정보는 공식 발표에 기반하며 변경될 수 있습니다. 여행 전 반드시","footer_disclaimer_index_after":"에서 확인하세요.","footer_disclaimer_coverage":"뉴스 링크는 원본 출처로 연결됩니다. 여행 전 반드시","footer_disclaimer_coverage_after":"에서 확인하세요.","footer_disclaimer_map":"지도 데이터 &copy;","footer_disclaimer_map_tiles":"타일 &copy;","footer_disclaimer_embed":"GitHub에서 소스 코드 보기","footer_built_by":"제작자","cutover_begins_in":"전환 시작까지","days":"일","day":"일","remaining_phase1":"1단계 남은 기간","phase1_complete":"1단계 완료","phase2_expected":"2단계 예정"},"js":{"major_changes":"주요 변경","schedule_changes":"시간표 변경","before_normal":"이전 (정상 운행)","during_cutover":"전환 기간 (평일, 2월 15일 – 3월 15일)","during_cutover_short":"전환 기간 (2월 15일 – 3월 15일)","what_you_need_to_know":"알아야 할 사항","weekends_different":"주말은 다릅니다:","weekend_service_continues":"Midtown Direct Penn Station NY행 서비스는 토요일과 일요일에 계속 운행됩니다. 주말 여행에는 일반 Penn Station 승차권을 구매하세요.","estimated_savings":"예상 절약액","zone":"구역","monthly_pass_penn":"Penn Station 정기권:","monthly_pass_hoboken":"Hoboken 정기권:","you_save":"절약","per_month":"/월","cross_honored_free":"Hoboken에서 PATH/페리 무료 환승 가능.","fare_disclaimer":"요금은 추정치입니다. 구매 전 njtransit.com에서 확인하세요.","how_get_manhattan":"Manhattan까지 어떻게 가나요?","how_get_home":"Manhattan에서 어떻게 귀가하나요?","planning_commute":"통근 계획","getting_home":"저녁 귀가","getting_past_newark":"Newark Penn 통과","getting_home_manhattan":"Manhattan에서 귀가","what_ticket":"어떤 승차권을 사야 하나요?","recommended":"대부분의 승객에게 적합","scenic_less_crowded":"경치 좋고 덜 붐빔","port_authority_area":"Port Authority 지역에 적합","other_options":"기타 옵션","pro_tip":"팁:","monthly_pass_holders":"정기권 소지자","one_way_buyers":"편도권 구매자","weekend_riders":"주말 이용자","occasional_riders":"가끔 이용자 / 잘 모르겠는 경우","no_change":"변경 없음","cross_honored":"환승 가능","transfer":"환승","walk_subway":"도보/지하철","arrive":"도착","choose_station":"역을 선택하세요…"},"compare":{"title":"통근 옵션 비교 — Reroute NJ","tagline":"통근 옵션 비교","hero_title":"통근이 어떻게 바뀌나요?","hero_desc":"역과 Manhattan 목적지를 선택하세요. 모든 옵션을 시각적 시간 분석과 함께 나란히 보여드립니다.","step1":"내 노선","step2":"내 역","step3":"Manhattan 어디?","your_normal_commute":"일반 통근","min_total":"분 총","vs_normal":"vs 일반","fastest":"가장 빠름","copy_summary":"통근 요약 복사","copied":"복사됨!"},"coverage":{"title":"뉴스 — Reroute NJ","tagline":"Portal Bridge 뉴스","hero_title":"Portal Bridge 뉴스","hero_desc":"지역 및 광역 뉴스 출처의 전환 관련 보도 모음입니다.","last_updated":"최종 업데이트:","all_sources":"모든 출처","all_categories":"모든 카테고리","all_lines":"모든 노선","all_directions":"모든 방향","search_placeholder":"기사 검색…","no_articles":"필터와 일치하는 기사가 없습니다.","source_label":"출처","category_label":"카테고리","line_label":"노선","direction_label":"방향","search_label":"검색","cat_news":"뉴스","cat_opinion":"오피니언","cat_analysis":"분석","cat_official":"공식","cat_community":"커뮤니티","dir_nj_nyc":"NJ에서 NYC","dir_nyc_nj":"NYC에서 NJ","dir_both":"양방향"}};</script>
+  <script>window.BASE_PATH="../";window._T={"common":{"skip_to_main":"본문으로 건너뛰기","high_contrast":"고대비","simplified_view":"간소화 보기","nav_line_guide":"노선 안내","nav_commute_comparison":"통근 비교","nav_news_coverage":"뉴스","nav_map":"지도","nav_embed":"임베드 및 공유","footer_disclaimer":"는 독립적인 커뮤니티 도구입니다. NJ Transit, Amtrak 또는 정부 기관과 관련이 없으며 승인을 받지 않았습니다.","footer_disclaimer_index":"정보는 공식 발표에 기반하며 변경될 수 있습니다. 여행 전 반드시","footer_disclaimer_index_after":"에서 확인하세요.","footer_disclaimer_coverage":"뉴스 링크는 원본 출처로 연결됩니다. 여행 전 반드시","footer_disclaimer_coverage_after":"에서 확인하세요.","footer_disclaimer_map":"지도 데이터 &copy;","footer_disclaimer_map_tiles":"타일 &copy;","footer_disclaimer_embed":"GitHub에서 소스 코드 보기","footer_built_by":"제작자","cutover_begins_in":"전환 시작까지","days":"일","day":"일","remaining_phase1":"1단계 남은 기간","phase1_complete":"1단계 완료","phase2_expected":"2단계 예정","nav_blog":"블로그"},"js":{"major_changes":"주요 변경","schedule_changes":"시간표 변경","before_normal":"이전 (정상 운행)","during_cutover":"전환 기간 (평일, 2월 15일 – 3월 15일)","during_cutover_short":"전환 기간 (2월 15일 – 3월 15일)","what_you_need_to_know":"알아야 할 사항","weekends_different":"주말은 다릅니다:","weekend_service_continues":"Midtown Direct Penn Station NY행 서비스는 토요일과 일요일에 계속 운행됩니다. 주말 여행에는 일반 Penn Station 승차권을 구매하세요.","estimated_savings":"예상 절약액","zone":"구역","monthly_pass_penn":"Penn Station 정기권:","monthly_pass_hoboken":"Hoboken 정기권:","you_save":"절약","per_month":"/월","cross_honored_free":"Hoboken에서 PATH/페리 무료 환승 가능.","fare_disclaimer":"요금은 추정치입니다. 구매 전 njtransit.com에서 확인하세요.","how_get_manhattan":"Manhattan까지 어떻게 가나요?","how_get_home":"Manhattan에서 어떻게 귀가하나요?","planning_commute":"통근 계획","getting_home":"저녁 귀가","getting_past_newark":"Newark Penn 통과","getting_home_manhattan":"Manhattan에서 귀가","what_ticket":"어떤 승차권을 사야 하나요?","recommended":"대부분의 승객에게 적합","scenic_less_crowded":"경치 좋고 덜 붐빔","port_authority_area":"Port Authority 지역에 적합","other_options":"기타 옵션","pro_tip":"팁:","monthly_pass_holders":"정기권 소지자","one_way_buyers":"편도권 구매자","weekend_riders":"주말 이용자","occasional_riders":"가끔 이용자 / 잘 모르겠는 경우","no_change":"변경 없음","cross_honored":"환승 가능","transfer":"환승","walk_subway":"도보/지하철","arrive":"도착","choose_station":"역을 선택하세요…"},"compare":{"title":"통근 옵션 비교 — Reroute NJ","tagline":"통근 옵션 비교","hero_title":"통근이 어떻게 바뀌나요?","hero_desc":"역과 Manhattan 목적지를 선택하세요. 모든 옵션을 시각적 시간 분석과 함께 나란히 보여드립니다.","step1":"내 노선","step2":"내 역","step3":"Manhattan 어디?","your_normal_commute":"일반 통근","min_total":"분 총","vs_normal":"vs 일반","fastest":"가장 빠름","copy_summary":"통근 요약 복사","copied":"복사됨!"},"coverage":{"title":"뉴스 — Reroute NJ","tagline":"Portal Bridge 뉴스","hero_title":"Portal Bridge 뉴스","hero_desc":"지역 및 광역 뉴스 출처의 전환 관련 보도 모음입니다.","last_updated":"최종 업데이트:","all_sources":"모든 출처","all_categories":"모든 카테고리","all_lines":"모든 노선","all_directions":"모든 방향","search_placeholder":"기사 검색…","no_articles":"필터와 일치하는 기사가 없습니다.","source_label":"출처","category_label":"카테고리","line_label":"노선","direction_label":"방향","search_label":"검색","cat_news":"뉴스","cat_opinion":"오피니언","cat_analysis":"분석","cat_official":"공식","cat_community":"커뮤니티","dir_nj_nyc":"NJ에서 NYC","dir_nyc_nj":"NYC에서 NJ","dir_both":"양방향"}};</script>
   <script src="../js/i18n.js"></script>
   <script src="../js/shared.js"></script>
+  <script src="../js/line-data.js"></script>
   <script src="../js/embed.js"></script>
-  <script>initA11yToggles(); initLangSelector();</script>
+  <script>initEmbedMode(); initA11yToggles(); initLangSelector();</script>
 </body>
 </html>
