@@ -30,27 +30,13 @@
   <link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/embed.html">
   <link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/embed.html">
   <link rel="alternate" hreflang="x-default" href="https://reroutenj.org/embed.html">
-  <link rel="alternate" hreflang="en" href="https://reroutenj.org/embed.html">
-  <link rel="alternate" hreflang="es" href="https://reroutenj.org/es/embed.html">
-  <link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/embed.html">
-  <link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/embed.html">
-  <link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/embed.html">
-  <link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/embed.html">
-  <link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/embed.html">
-  <link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/embed.html">
-  <link rel="alternate" hreflang="it" href="https://reroutenj.org/it/embed.html">
-  <link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/embed.html">
-  <link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/embed.html">
-  <link rel="alternate" hreflang="x-default" href="https://reroutenj.org/embed.html">
 </head>
 <body>
   <a href="#main-content" class="skip-link">본문으로 건너뛰기</a>
 
-  <a href="#main-content" class="skip-link">본문으로 건너뛰기</a>
-
   <header class="header" role="banner">
     <div class="header-inner">
-      <a href="../index.html" class="brand-link"><div class="brand">Reroute<span>NJ</span></div></a>
+      <a href="index.html" class="brand-link"><div class="brand">Reroute<span>NJ</span></div></a>
       <p class="tagline">임베드, 공유 및 재게시</p>
       <div class="a11y-toggles">
         <button class="a11y-btn" id="toggle-contrast" type="button" aria-pressed="false" aria-label="Toggle high contrast">고대비</button>
@@ -76,16 +62,16 @@
   </header>
 
   <nav class="tool-nav" aria-label="Site tools">
-    <span class="hamburger-label">Embed &amp; share</span>
+    <span class="hamburger-label">임베드 및 공유</span>
     <button class="hamburger-btn" aria-expanded="false" aria-label="Toggle navigation menu">
       <span></span>
     </button>
     <div class="container">
-      <a href="../index.html" class="tool-nav-link">노선 안내</a>
-      <a href="../compare.html" class="tool-nav-link">통근 비교</a>
-      <a href="../coverage.html" class="tool-nav-link">뉴스</a>
-      <a href="../map.html" class="tool-nav-link">지도</a>
-      <a href="../embed.html" class="tool-nav-link active" aria-current="page">Embed &amp; share</a>
+      <a href="index.html" class="tool-nav-link">노선 안내</a>
+      <a href="compare.html" class="tool-nav-link">통근 비교</a>
+      <a href="coverage.html" class="tool-nav-link">뉴스</a>
+      <a href="map.html" class="tool-nav-link">지도</a>
+      <a href="embed.html" class="tool-nav-link active" aria-current="page">임베드 및 공유</a>
     </div>
   </nav>
 
@@ -98,29 +84,29 @@
 
     <!-- Embed code generator -->
     <section class="info-section" id="embed-generator" style="margin-top: 1rem; border-top: none;">
-      <h2>Embed code generator</h2>
-      <p class="section-intro">Copy and paste an iframe embed code to put any Reroute NJ tool on your website. The tool is fully interactive and responsive inside the iframe.</p>
+      <h2>임베드 코드 생성기</h2>
+      <p class="section-intro">iframe 임베드 코드를 복사하여 웹사이트에 Reroute NJ 도구를 삽입하세요. 도구는 iframe 내에서 완전히 인터랙티브하고 반응형으로 작동합니다.</p>
 
       <div class="embed-options">
         <div class="filter-group">
-          <label for="embed-tool">Which tool?</label>
+          <label for="embed-tool">어떤 도구?</label>
           <select id="embed-tool">
-            <option value="index.html">Line guide</option>
-            <option value="compare.html">Commute comparison</option>
-            <option value="coverage.html">News coverage</option>
-            <option value="map.html">Interactive map</option>
+            <option value="index.html">노선 안내</option>
+            <option value="compare.html">통근 비교</option>
+            <option value="coverage.html">뉴스</option>
+            <option value="map.html">인터랙티브 지도</option>
           </select>
         </div>
         <div class="filter-group">
-          <label for="embed-width">Width</label>
+          <label for="embed-width">너비</label>
           <select id="embed-width">
-            <option value="100%">Full width (100%)</option>
+            <option value="100%">전체 너비 (100%)</option>
             <option value="600px">600px</option>
             <option value="800px">800px</option>
           </select>
         </div>
         <div class="filter-group">
-          <label for="embed-height">Height</label>
+          <label for="embed-height">높이</label>
           <select id="embed-height">
             <option value="700px">700px</option>
             <option value="500px">500px</option>
@@ -130,33 +116,33 @@
       </div>
 
       <div class="embed-preview">
-        <label class="embed-code-label">Your embed code</label>
+        <label class="embed-code-label">임베드 코드</label>
         <div class="embed-code-box" id="embed-code-box"></div>
-        <button class="share-btn" id="copy-embed-btn" style="margin-top: 0.75rem;">Copy embed code</button>
-        <span class="share-confirm hidden" id="copy-embed-confirm">Copied!</span>
+        <button class="share-btn" id="copy-embed-btn" style="margin-top: 0.75rem;">임베드 코드 복사</button>
+        <span class="share-confirm hidden" id="copy-embed-confirm">복사됨!</span>
       </div>
     </section>
 
     <!-- Direct link sharing -->
     <section class="info-section" id="direct-links">
-      <h2>Direct links</h2>
-      <p class="section-intro">Link directly to any tool. These URLs are permanent and shareable.</p>
+      <h2>직접 링크</h2>
+      <p class="section-intro">도구에 직접 링크하세요. 이 URL은 영구적이며 공유할 수 있습니다.</p>
 
       <div class="resources-grid">
         <div class="resource-link">
-          <strong>Line guide</strong>
+          <strong>노선 안내</strong>
           <span id="link-guide" class="embed-url">https://reroutenj.org/</span>
         </div>
         <div class="resource-link">
-          <strong>Commute comparison</strong>
+          <strong>통근 비교</strong>
           <span id="link-compare" class="embed-url">https://reroutenj.org/compare.html</span>
         </div>
         <div class="resource-link">
-          <strong>News coverage</strong>
+          <strong>뉴스</strong>
           <span id="link-coverage" class="embed-url">https://reroutenj.org/coverage.html</span>
         </div>
         <div class="resource-link">
-          <strong>Interactive map</strong>
+          <strong>인터랙티브 지도</strong>
           <span id="link-map" class="embed-url">https://reroutenj.org/map.html</span>
         </div>
       </div>
@@ -164,35 +150,35 @@
 
     <!-- For publishers -->
     <section class="info-section" id="for-publishers">
-      <h2>For newsrooms &amp; publishers</h2>
-      <p class="section-intro">Reroute NJ is designed to be used by journalists, newsrooms, and community publishers. Here's how you can use it.</p>
+      <h2>뉴스룸 및 출판사를 위한 안내</h2>
+      <p class="section-intro">Reroute NJ는 기자, 뉴스룸, 커뮤니티 출판사가 활용할 수 있도록 설계되었습니다. 사용 방법은 다음과 같습니다.</p>
 
       <div class="secaucus-grid">
         <div class="secaucus-card">
-          <h4>Embed in your articles</h4>
+          <h4>기사에 임베드하기</h4>
           <ul>
-            <li>Use the embed code generator above to get an iframe snippet.</li>
-            <li>Paste it into your CMS (WordPress, Ghost, Squarespace, etc.) — most support raw HTML blocks.</li>
-            <li>The embed is responsive and works on mobile.</li>
-            <li>No API key or account needed. It just works.</li>
+            <li>위의 임베드 코드 생성기에서 iframe 코드를 복사하세요.</li>
+            <li>CMS(WordPress, Ghost, Squarespace 등)에 붙여넣으세요 — 대부분 원시 HTML 블록을 지원합니다.</li>
+            <li>임베드는 반응형이며 모바일에서도 작동합니다.</li>
+            <li>API 키나 계정이 필요 없습니다. 바로 사용할 수 있습니다.</li>
           </ul>
         </div>
         <div class="secaucus-card">
-          <h4>Link from your coverage</h4>
+          <h4>기사에서 링크하기</h4>
           <ul>
-            <li>Add a "Plan your commute" link box to your Portal Bridge stories.</li>
-            <li>Link to specific tools based on what the article covers.</li>
-            <li>We have OG images and social cards already set up for clean social media previews.</li>
-            <li>Suggested anchor text: "Use the free Reroute NJ tool to plan your commute."</li>
+            <li>Portal Bridge 기사에 "통근 계획하기" 링크 박스를 추가하세요.</li>
+            <li>기사 내용에 맞는 특정 도구에 링크하세요.</li>
+            <li>소셜 미디어 미리보기를 위한 OG 이미지와 소셜 카드가 이미 설정되어 있습니다.</li>
+            <li>추천 앵커 텍스트: "무료 Reroute NJ 도구로 통근을 계획하세요."</li>
           </ul>
         </div>
         <div class="secaucus-card">
-          <h4>Contribute coverage</h4>
+          <h4>기사 제보</h4>
           <ul>
-            <li>We curate Portal Bridge coverage on our <a href="../coverage.html">news coverage page</a>.</li>
-            <li>To suggest an article, <a href="https://github.com/jamditis/reroute-nj/issues/new?template=article-suggestion.md" target="_blank" rel="noopener">open a GitHub issue</a> with the URL and details.</li>
-            <li>Or email <strong><a href="mailto:amditisj@montclair.edu">amditisj@montclair.edu</a></strong> with "Reroute NJ coverage" in the subject line.</li>
-            <li>We include all relevant coverage — opinion, analysis, community reporting, and more.</li>
+            <li><a href="coverage.html">뉴스 페이지</a>에서 Portal Bridge 관련 보도를 모아두고 있습니다.</li>
+            <li>기사를 제안하려면 URL과 세부 정보를 포함하여 <a href="https://github.com/jamditis/reroute-nj/issues/new?template=article-suggestion.md" target="_blank" rel="noopener">GitHub 이슈를 등록</a>하세요.</li>
+            <li>또는 <strong><a href="mailto:amditisj@montclair.edu">amditisj@montclair.edu</a></strong>로 제목에 "Reroute NJ coverage"를 넣어 이메일을 보내세요.</li>
+            <li>오피니언, 분석, 커뮤니티 보도 등 관련 기사를 모두 포함합니다.</li>
           </ul>
         </div>
       </div>
@@ -200,46 +186,46 @@
 
     <!-- Custom branding -->
     <section class="info-section" id="custom-branding">
-      <h2>Co-branding &amp; customization</h2>
-      <p class="section-intro">Want to run Reroute NJ with your own branding? Since it's open source, you can.</p>
+      <h2>공동 브랜딩 및 맞춤 설정</h2>
+      <p class="section-intro">자체 브랜딩으로 Reroute NJ를 운영하고 싶으신가요? 오픈소스이므로 가능합니다.</p>
 
       <div class="ticket-scenarios">
         <div class="scenario-card">
-          <h3>Option 1: Fork the project</h3>
+          <h3>옵션 1: 프로젝트 포크</h3>
           <div class="scenario-body">
             <div class="step">
               <span class="step-num">1</span>
-              <div><p>Fork the <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">GitHub repository</a> to your organization's account.</p></div>
+              <div><p><a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">GitHub 저장소</a>를 조직 계정으로 포크하세요.</p></div>
             </div>
             <div class="step">
               <span class="step-num">2</span>
-              <div><p>Edit <code>css/styles.css</code> to change colors, fonts, and branding. All theme values are CSS custom properties in the <code>:root</code> block.</p></div>
+              <div><p><code>css/styles.css</code>를 편집하여 색상, 폰트, 브랜딩을 변경하세요. 모든 테마 값은 <code>:root</code> 블록의 CSS 커스텀 속성입니다.</p></div>
             </div>
             <div class="step">
               <span class="step-num">3</span>
-              <div><p>Replace the brand name, logo, and footer credit with your own. Add your newsroom's header/nav if you want.</p></div>
+              <div><p>브랜드 이름, 로고, 하단 크레딧을 교체하세요. 원하면 뉴스룸 헤더/내비게이션을 추가할 수 있습니다.</p></div>
             </div>
             <div class="step">
               <span class="step-num">4</span>
-              <div><p>Deploy to GitHub Pages, Netlify, Vercel, or your own server. No build step required — it's just static HTML.</p></div>
+              <div><p>GitHub Pages, Netlify, Vercel 또는 자체 서버에 배포하세요. 빌드 과정이 필요 없습니다 — 정적 HTML입니다.</p></div>
             </div>
           </div>
         </div>
 
         <div class="scenario-card">
-          <h3>Option 2: Embed with your own intro</h3>
+          <h3>옵션 2: 자체 소개와 함께 임베드</h3>
           <div class="scenario-body">
             <div class="step">
               <span class="step-num">1</span>
-              <div><p>Embed the tool using the iframe code above.</p></div>
+              <div><p>위의 iframe 코드로 도구를 임베드하세요.</p></div>
             </div>
             <div class="step">
               <span class="step-num">2</span>
-              <div><p>Add your own header, intro text, and branding around the iframe.</p></div>
+              <div><p>iframe 주변에 자체 헤더, 소개 텍스트, 브랜딩을 추가하세요.</p></div>
             </div>
             <div class="step">
               <span class="step-num">3</span>
-              <div><p>Style the surrounding page to match your publication's design.</p></div>
+              <div><p>주변 페이지를 출판물 디자인에 맞게 스타일링하세요.</p></div>
             </div>
           </div>
         </div>
@@ -248,35 +234,35 @@
 
     <!-- How to contribute -->
     <section class="info-section" id="contribute">
-      <h2>How to contribute</h2>
-      <p class="section-intro">Reroute NJ is a community project. Here's how you can help, regardless of your technical skill level.</p>
+      <h2>기여 방법</h2>
+      <p class="section-intro">Reroute NJ는 커뮤니티 프로젝트입니다. 기술 수준에 관계없이 도움을 줄 수 있습니다.</p>
 
       <div class="secaucus-grid">
         <div class="secaucus-card">
-          <h4>Non-technical contributions</h4>
+          <h4>비기술적 기여</h4>
           <ul>
-            <li><strong>Submit article suggestions:</strong> Know of a Portal Bridge article we missed? <a href="https://github.com/jamditis/reroute-nj/issues/new?template=article-suggestion.md" target="_blank" rel="noopener">Open an issue</a> or email joe@amditis.com.</li>
-            <li><strong>Report inaccuracies:</strong> If schedule data or transfer times are wrong, let us know.</li>
-            <li><strong>Share the tool:</strong> Tell your commuter friends, share on social media, post in your neighborhood group.</li>
-            <li><strong>Translate:</strong> Help us translate the tool into Spanish or other languages spoken by NJ Transit riders.</li>
+            <li><strong>기사 제안:</strong> 빠뜨린 Portal Bridge 기사를 알고 계신가요? <a href="https://github.com/jamditis/reroute-nj/issues/new?template=article-suggestion.md" target="_blank" rel="noopener">이슈를 등록</a>하거나 joe@amditis.com으로 이메일을 보내세요.</li>
+            <li><strong>오류 신고:</strong> 시간표 데이터나 환승 소요 시간이 잘못된 경우 알려주세요.</li>
+            <li><strong>도구 공유:</strong> 통근하는 지인에게 알려주고, 소셜 미디어에 공유하고, 동네 커뮤니티에 올려주세요.</li>
+            <li><strong>번역:</strong> NJ Transit 이용자가 사용하는 스페인어 및 기타 언어로 번역을 도와주세요.</li>
           </ul>
         </div>
         <div class="secaucus-card">
-          <h4>Technical contributions</h4>
+          <h4>기술적 기여</h4>
           <ul>
-            <li><strong>File bugs:</strong> Found a bug? <a href="https://github.com/jamditis/reroute-nj/issues" target="_blank" rel="noopener">Open an issue on GitHub</a>.</li>
-            <li><strong>Submit a pull request:</strong> The codebase is vanilla HTML/CSS/JS with no build step. Fork, change, PR.</li>
-            <li><strong>Add data:</strong> Help us keep <code>data/coverage.json</code> up to date with new articles.</li>
-            <li><strong>Improve accessibility:</strong> Screen reader testing, WCAG compliance, keyboard navigation.</li>
+            <li><strong>버그 신고:</strong> 버그를 발견하셨나요? <a href="https://github.com/jamditis/reroute-nj/issues" target="_blank" rel="noopener">GitHub에서 이슈를 등록</a>하세요.</li>
+            <li><strong>풀 리퀘스트 제출:</strong> 코드베이스는 빌드 과정 없는 순수 HTML/CSS/JS입니다. 포크하고 수정하고 PR을 보내세요.</li>
+            <li><strong>데이터 추가:</strong> <code>data/coverage.json</code>에 새 기사를 업데이트하는 것을 도와주세요.</li>
+            <li><strong>접근성 개선:</strong> 스크린 리더 테스트, WCAG 준수, 키보드 내비게이션.</li>
           </ul>
         </div>
         <div class="secaucus-card">
-          <h4>License</h4>
+          <h4>라이선스</h4>
           <ul>
-            <li>Reroute NJ is released under the <strong>MIT License</strong>.</li>
-            <li>You can use, copy, modify, and distribute it freely.</li>
-            <li>Attribution is appreciated but not required.</li>
-            <li>The project is maintained by <a href="https://github.com/jamditis" target="_blank" rel="noopener">Joe Amditis</a>.</li>
+            <li>Reroute NJ는 <strong>MIT License</strong>로 배포됩니다.</li>
+            <li>자유롭게 사용, 복사, 수정, 배포할 수 있습니다.</li>
+            <li>출처 표시를 권장하지만 필수는 아닙니다.</li>
+            <li>이 프로젝트는 <a href="https://github.com/jamditis" target="_blank" rel="noopener">Joe Amditis</a>가 관리합니다.</li>
           </ul>
         </div>
       </div>
@@ -291,7 +277,7 @@
     </div>
   </footer>
 
-  <script>window.BASE_PATH="../";window._T={"common":{"skip_to_main":"본문으로 건너뛰기","high_contrast":"고대비","simplified_view":"간소화 보기","nav_line_guide":"노선 안내","nav_commute_comparison":"통근 비교","nav_news_coverage":"뉴스","nav_map":"지도","nav_embed":"임베드 및 공유","footer_disclaimer":"는 독립적인 커뮤니티 도구입니다. NJ Transit, Amtrak 또는 정부 기관과 관련이 없으며 승인을 받지 않았습니다.","footer_disclaimer_index":"정보는 공식 발표에 기반하며 변경될 수 있습니다. 여행 전 반드시","footer_disclaimer_index_after":"에서 확인하세요.","footer_disclaimer_coverage":"뉴스 링크는 원본 출처로 연결됩니다. 여행 전 반드시","footer_disclaimer_coverage_after":"에서 확인하세요.","footer_disclaimer_map":"지도 데이터 &copy;","footer_disclaimer_map_tiles":"타일 &copy;","footer_disclaimer_embed":"GitHub에서 소스 코드 보기","footer_built_by":"제작자","cutover_begins_in":"전환 시작까지","days":"일","day":"일","remaining_phase1":"1단계 남은 기간","phase1_complete":"1단계 완료","phase2_expected":"2단계 예정"},"js":{"major_changes":"주요 변경","schedule_changes":"시간표 변경","before_normal":"이전 (정상 운행)","during_cutover":"전환 기간 (평일, 2월 15일 – 3월 15일)","during_cutover_short":"전환 기간 (2월 15일 – 3월 15일)","what_you_need_to_know":"알아야 할 사항","weekends_different":"주말은 다릅니다:","weekend_service_continues":"Midtown Direct Penn Station NY행 서비스는 토요일과 일요일에 계속 운행됩니다. 주말 여행에는 일반 Penn Station 승차권을 구매하세요.","estimated_savings":"예상 절약액","zone":"구역","monthly_pass_penn":"Penn Station 정기권:","monthly_pass_hoboken":"Hoboken 정기권:","you_save":"절약","per_month":"/월","cross_honored_free":"Hoboken에서 PATH/페리 무료 환승 가능.","fare_disclaimer":"요금은 추정치입니다. 구매 전 njtransit.com에서 확인하세요.","how_get_manhattan":"Manhattan까지 어떻게 가나요?","how_get_home":"Manhattan에서 어떻게 귀가하나요?","planning_commute":"통근 계획","getting_home":"저녁 귀가","getting_past_newark":"Newark Penn 통과","getting_home_manhattan":"Manhattan에서 귀가","what_ticket":"어떤 승차권을 사야 하나요?","recommended":"대부분의 승객에게 적합","scenic_less_crowded":"경치 좋고 덜 붐빔","port_authority_area":"Port Authority 지역에 적합","other_options":"기타 옵션","pro_tip":"팁:","monthly_pass_holders":"정기권 소지자","one_way_buyers":"편도권 구매자","weekend_riders":"주말 이용자","occasional_riders":"가끔 이용자 / 잘 모르겠는 경우","no_change":"변경 없음","cross_honored":"환승 가능","transfer":"환승","walk_subway":"도보/지하철","arrive":"도착","choose_station":"역을 선택하세요…"},"compare":{"title":"통근 옵션 비교 — Reroute NJ","tagline":"통근 옵션 비교","hero_title":"통근이 어떻게 바뀌나요?","hero_desc":"역과 Manhattan 목적지를 선택하세요. 모든 옵션을 시각적 시간 분석과 함께 나란히 보여드립니다.","step1":"내 노선","step2":"내 역","step3":"Manhattan 어디?","your_normal_commute":"일반 통근","min_total":"분 총","vs_normal":"vs 일반","fastest":"가장 빠름","copy_summary":"통근 요약 복사","copied":"복사됨!"},"coverage":{"title":"뉴스 — Reroute NJ","tagline":"Portal Bridge 뉴스","hero_title":"Portal Bridge 뉴스","hero_desc":"지역 및 광역 뉴스 출처의 전환 관련 보도 모음입니다.","last_updated":"최종 업데이트:","all_sources":"모든 출처","all_categories":"모든 카테고리","all_lines":"모든 노선","all_directions":"모든 방향","search_placeholder":"기사 검색…","no_articles":"필터와 일치하는 기사가 없습니다.","source_label":"출처","category_label":"카테고리","line_label":"노선","direction_label":"방향","search_label":"검색"}};</script>
+  <script>window.BASE_PATH="../";window._T={"common":{"skip_to_main":"본문으로 건너뛰기","high_contrast":"고대비","simplified_view":"간소화 보기","nav_line_guide":"노선 안내","nav_commute_comparison":"통근 비교","nav_news_coverage":"뉴스","nav_map":"지도","nav_embed":"임베드 및 공유","footer_disclaimer":"는 독립적인 커뮤니티 도구입니다. NJ Transit, Amtrak 또는 정부 기관과 관련이 없으며 승인을 받지 않았습니다.","footer_disclaimer_index":"정보는 공식 발표에 기반하며 변경될 수 있습니다. 여행 전 반드시","footer_disclaimer_index_after":"에서 확인하세요.","footer_disclaimer_coverage":"뉴스 링크는 원본 출처로 연결됩니다. 여행 전 반드시","footer_disclaimer_coverage_after":"에서 확인하세요.","footer_disclaimer_map":"지도 데이터 &copy;","footer_disclaimer_map_tiles":"타일 &copy;","footer_disclaimer_embed":"GitHub에서 소스 코드 보기","footer_built_by":"제작자","cutover_begins_in":"전환 시작까지","days":"일","day":"일","remaining_phase1":"1단계 남은 기간","phase1_complete":"1단계 완료","phase2_expected":"2단계 예정"},"js":{"major_changes":"주요 변경","schedule_changes":"시간표 변경","before_normal":"이전 (정상 운행)","during_cutover":"전환 기간 (평일, 2월 15일 – 3월 15일)","during_cutover_short":"전환 기간 (2월 15일 – 3월 15일)","what_you_need_to_know":"알아야 할 사항","weekends_different":"주말은 다릅니다:","weekend_service_continues":"Midtown Direct Penn Station NY행 서비스는 토요일과 일요일에 계속 운행됩니다. 주말 여행에는 일반 Penn Station 승차권을 구매하세요.","estimated_savings":"예상 절약액","zone":"구역","monthly_pass_penn":"Penn Station 정기권:","monthly_pass_hoboken":"Hoboken 정기권:","you_save":"절약","per_month":"/월","cross_honored_free":"Hoboken에서 PATH/페리 무료 환승 가능.","fare_disclaimer":"요금은 추정치입니다. 구매 전 njtransit.com에서 확인하세요.","how_get_manhattan":"Manhattan까지 어떻게 가나요?","how_get_home":"Manhattan에서 어떻게 귀가하나요?","planning_commute":"통근 계획","getting_home":"저녁 귀가","getting_past_newark":"Newark Penn 통과","getting_home_manhattan":"Manhattan에서 귀가","what_ticket":"어떤 승차권을 사야 하나요?","recommended":"대부분의 승객에게 적합","scenic_less_crowded":"경치 좋고 덜 붐빔","port_authority_area":"Port Authority 지역에 적합","other_options":"기타 옵션","pro_tip":"팁:","monthly_pass_holders":"정기권 소지자","one_way_buyers":"편도권 구매자","weekend_riders":"주말 이용자","occasional_riders":"가끔 이용자 / 잘 모르겠는 경우","no_change":"변경 없음","cross_honored":"환승 가능","transfer":"환승","walk_subway":"도보/지하철","arrive":"도착","choose_station":"역을 선택하세요…"},"compare":{"title":"통근 옵션 비교 — Reroute NJ","tagline":"통근 옵션 비교","hero_title":"통근이 어떻게 바뀌나요?","hero_desc":"역과 Manhattan 목적지를 선택하세요. 모든 옵션을 시각적 시간 분석과 함께 나란히 보여드립니다.","step1":"내 노선","step2":"내 역","step3":"Manhattan 어디?","your_normal_commute":"일반 통근","min_total":"분 총","vs_normal":"vs 일반","fastest":"가장 빠름","copy_summary":"통근 요약 복사","copied":"복사됨!"},"coverage":{"title":"뉴스 — Reroute NJ","tagline":"Portal Bridge 뉴스","hero_title":"Portal Bridge 뉴스","hero_desc":"지역 및 광역 뉴스 출처의 전환 관련 보도 모음입니다.","last_updated":"최종 업데이트:","all_sources":"모든 출처","all_categories":"모든 카테고리","all_lines":"모든 노선","all_directions":"모든 방향","search_placeholder":"기사 검색…","no_articles":"필터와 일치하는 기사가 없습니다.","source_label":"출처","category_label":"카테고리","line_label":"노선","direction_label":"방향","search_label":"검색","cat_news":"뉴스","cat_opinion":"오피니언","cat_analysis":"분석","cat_official":"공식","cat_community":"커뮤니티","dir_nj_nyc":"NJ에서 NYC","dir_nyc_nj":"NYC에서 NJ","dir_both":"양방향"}};</script>
   <script src="../js/i18n.js"></script>
   <script src="../js/shared.js"></script>
   <script src="../js/embed.js"></script>

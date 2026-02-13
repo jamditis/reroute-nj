@@ -30,18 +30,6 @@
   <link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/index.html">
   <link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/index.html">
   <link rel="alternate" hreflang="x-default" href="https://reroutenj.org/index.html">
-  <link rel="alternate" hreflang="en" href="https://reroutenj.org/index.html">
-  <link rel="alternate" hreflang="es" href="https://reroutenj.org/es/index.html">
-  <link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/index.html">
-  <link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/index.html">
-  <link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/index.html">
-  <link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/index.html">
-  <link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/index.html">
-  <link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/index.html">
-  <link rel="alternate" hreflang="it" href="https://reroutenj.org/it/index.html">
-  <link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/index.html">
-  <link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/index.html">
-  <link rel="alternate" hreflang="x-default" href="https://reroutenj.org/index.html">
 </head>
 <body>
   <a href="#main-content" class="skip-link">Przejdź do głównej treści</a>
@@ -80,16 +68,16 @@
   </div>
 
   <nav class="tool-nav" aria-label="Site tools">
-    <span class="hamburger-label">Line guide</span>
+    <span class="hamburger-label">Przewodnik po liniach</span>
     <button class="hamburger-btn" aria-expanded="false" aria-label="Toggle navigation menu">
       <span></span>
     </button>
     <div class="container">
-      <a href="../index.html" class="tool-nav-link active" aria-current="page">Line guide</a>
-      <a href="../compare.html" class="tool-nav-link">Porównanie dojazdów</a>
-      <a href="../coverage.html" class="tool-nav-link">Wiadomości</a>
-      <a href="../map.html" class="tool-nav-link">Mapa</a>
-      <a href="../embed.html" class="tool-nav-link">Osadź i udostępnij</a>
+      <a href="index.html" class="tool-nav-link active" aria-current="page">Przewodnik po liniach</a>
+      <a href="compare.html" class="tool-nav-link">Porównanie dojazdów</a>
+      <a href="coverage.html" class="tool-nav-link">Wiadomości</a>
+      <a href="map.html" class="tool-nav-link">Mapa</a>
+      <a href="embed.html" class="tool-nav-link">Osadź i udostępnij</a>
     </div>
   </nav>
 
@@ -97,7 +85,7 @@
 
     <div class="control-panel">
       <section class="line-header">
-        <div class="line-badge" id="line-badge">Select a line</div>
+        <div class="line-badge" id="line-badge">Wybierz linię</div>
         <nav class="line-nav" id="line-nav" aria-label="Select train line"></nav>
       </section>
 
@@ -111,7 +99,7 @@
       <section class="direction-picker">
         <label for="direction-select">Kierunek podróży</label>
         <div class="direction-toggle" id="direction-toggle" role="group" aria-labelledby="direction-label">
-          <span id="direction-label" class="sr-only">Direction of travel</span>
+          <span id="direction-label" class="sr-only">Kierunek podróży</span>
           <button class="direction-btn active" data-dir="nj-to-nyc" aria-pressed="true">NJ &rarr; NYC <span class="dir-sub">poranny dojazd</span></button>
           <button class="direction-btn" data-dir="nyc-to-nj" aria-pressed="false">NYC &rarr; NJ <span class="dir-sub">wieczorny powrót</span></button>
         </div>
@@ -145,8 +133,8 @@
               <span class="stat-label">redukcja usług</span>
             </div>
             <div class="summary-stat">
-              <span class="stat-number">4 weeks</span>
-              <span class="stat-label">Feb 15 &ndash; Mar 15</span>
+              <span class="stat-number">4 tygodnie</span>
+              <span class="stat-label">15 lut – 15 mar</span>
             </div>
           </div>
         </div>
@@ -158,8 +146,8 @@
     <!-- Tool 2: Route planner -->
     <section id="panel-routes" class="tool-panel" role="tabpanel" aria-labelledby="tab-routes">
       <div class="panel-intro" id="routes-intro">
-        <h2>Route planner</h2>
-        <p>Select a line above to see your options during the cutover.</p>
+        <h2>Planer trasy</h2>
+        <p>Wybierz linię powyżej, aby zobaczyć dostępne opcje podczas zmiany.</p>
       </div>
       <div id="routes-content" aria-live="polite" tabindex="-1"></div>
     </section>
@@ -167,8 +155,8 @@
     <!-- Tool 3: Ticket guide -->
     <section id="panel-tickets" class="tool-panel" role="tabpanel" aria-labelledby="tab-tickets">
       <div class="panel-intro" id="tickets-intro">
-        <h2>What ticket should I buy?</h2>
-        <p>Select a line above to see ticket guidance for the cutover period.</p>
+        <h2>Jaki bilet kupić?</h2>
+        <p>Wybierz linię powyżej, aby zobaczyć informacje o biletach na czas zmiany.</p>
       </div>
       <div id="tickets-content" aria-live="polite" tabindex="-1"></div>
     </section>
@@ -179,32 +167,32 @@
       <p class="section-intro">Jeśli Twoja linia zostanie przekierowana do Hoboken, możesz tam dotrzeć po raz pierwszy. Oto jak dojść z pociągu do PATH, promu lub autobusu 126.</p>
 
       <div class="terminal-map">
-        <div class="map-label map-label-river">Hudson River</div>
+        <div class="map-label map-label-river">Rzeka Hudson</div>
         <div class="map-zone map-ferry">
-          <div class="map-zone-title">Ferry dock</div>
-          <div class="map-zone-detail">NY Waterway to W. 39th St</div>
+          <div class="map-zone-title">Przystań promowa</div>
+          <div class="map-zone-detail">NY Waterway do W. 39th St</div>
         </div>
         <div class="map-zone map-terminal">
-          <div class="map-zone-title">Terminal building</div>
+          <div class="map-zone-title">Budynek terminala</div>
           <div class="map-inner-zones">
             <div class="map-subzone map-platforms">
-              <div class="map-zone-title">Train platforms</div>
-              <div class="map-zone-detail">NJ Transit arrives here</div>
+              <div class="map-zone-title">Perony</div>
+              <div class="map-zone-detail">NJ Transit przyjeżdża tutaj</div>
             </div>
             <div class="map-arrow">&rarr;</div>
             <div class="map-subzone map-concourse">
-              <div class="map-zone-title">Main concourse</div>
-              <div class="map-zone-detail">Follow signs from here</div>
+              <div class="map-zone-title">Hala główna</div>
+              <div class="map-zone-detail">Podążaj za znakami stąd</div>
             </div>
           </div>
           <div class="map-path-entrance">
-            <div class="map-zone-title">PATH entrance</div>
-            <div class="map-zone-detail">Downstairs from concourse</div>
+            <div class="map-zone-title">Wejście do PATH</div>
+            <div class="map-zone-detail">Schody w dół z hali głównej</div>
           </div>
         </div>
         <div class="map-zone map-bus">
-          <div class="map-zone-title">Bus area</div>
-          <div class="map-zone-detail">Bus 126 to Port Authority &middot; Hudson Place</div>
+          <div class="map-zone-title">Strefa autobusowa</div>
+          <div class="map-zone-detail">Autobus 126 do Port Authority &middot; Hudson Place</div>
         </div>
       </div>
 
@@ -213,54 +201,54 @@
           <div class="transfer-header">
             <span class="transfer-icon" role="img" aria-label="Train">&#x1F687;</span>
             <div>
-              <h4>To PATH (33rd Street)</h4>
-              <span class="transfer-time">~5 min from train</span>
+              <h4>Do PATH (33rd Street)</h4>
+              <span class="transfer-time">~5 min od pociągu</span>
             </div>
           </div>
           <ol class="transfer-steps">
-            <li>Exit your train and walk toward the main terminal building</li>
-            <li>Enter the historic waiting room / main concourse</li>
-            <li>Look for PATH signs — the entrance is <strong>downstairs</strong></li>
-            <li>Take escalator/stairs down to PATH platform level</li>
-            <li>Board the Hoboken &rarr; 33rd Street train</li>
+            <li>Wysiądź z pociągu i idź w kierunku budynku terminala</li>
+            <li>Wejdź do historycznej poczekalni / hali głównej</li>
+            <li>Szukaj oznaczeń PATH — wejście jest <strong>na dole</strong></li>
+            <li>Zjedź ruchomymi schodami lub schodami na poziom peronu PATH</li>
+            <li>Wsiądź do pociągu Hoboken &rarr; 33rd Street</li>
           </ol>
-          <p class="transfer-tip">NJ Transit staff will be deployed throughout the terminal. Follow the crowds — most people will be heading to PATH.</p>
+          <p class="transfer-tip">Pracownicy NJ Transit będą rozmieszczeni w całym terminalu. Podążaj za tłumem — większość osób kieruje się do PATH.</p>
         </div>
 
         <div class="transfer-card ferry-card">
           <div class="transfer-header">
             <span class="transfer-icon" role="img" aria-label="Ferry">&#x26F4;&#xFE0F;</span>
             <div>
-              <h4>To NY Waterway ferry</h4>
-              <span class="transfer-time">~8 min from train</span>
+              <h4>Do promu NY Waterway</h4>
+              <span class="transfer-time">~8 min od pociągu</span>
             </div>
           </div>
           <ol class="transfer-steps">
-            <li>Exit your train and walk through the terminal building</li>
-            <li>Exit on the <strong>waterfront side</strong> (east side, toward the river)</li>
-            <li>The ferry dock is along the waterfront walkway to the right</li>
-            <li>Look for NY Waterway signage and the boarding area</li>
-            <li>Board the ferry to W. 39th St, Midtown</li>
+            <li>Wysiądź z pociągu i przejdź przez budynek terminala</li>
+            <li>Wyjdź <strong>od strony nabrzeża</strong> (wschodnia strona, w kierunku rzeki)</li>
+            <li>Przystań promowa znajduje się wzdłuż promenady nadrzecznej, po prawej stronie</li>
+            <li>Szukaj oznaczeń NY Waterway i strefy wejścia na pokład</li>
+            <li>Wsiądź na prom do W. 39th St, Midtown</li>
           </ol>
-          <p class="transfer-tip">Check the NY Waterway app for next departure time before leaving the terminal. Ferries run less frequently than PATH.</p>
+          <p class="transfer-tip">Sprawdź następny odjazd w aplikacji NY Waterway przed opuszczeniem terminala. Promy kursują rzadziej niż PATH.</p>
         </div>
 
         <div class="transfer-card bus-card">
           <div class="transfer-header">
             <span class="transfer-icon" role="img" aria-label="Bus">&#x1F68C;</span>
             <div>
-              <h4>To Bus 126 (Port Authority)</h4>
-              <span class="transfer-time">~5 min from train</span>
+              <h4>Do autobusu 126 (Port Authority)</h4>
+              <span class="transfer-time">~5 min od pociągu</span>
             </div>
           </div>
           <ol class="transfer-steps">
-            <li>Exit your train and walk through the terminal building</li>
-            <li>Exit on the <strong>street side</strong> (west side, away from the river)</li>
-            <li>The bus stops are on <strong>Hudson Place</strong>, the street in front of the terminal</li>
-            <li>Look for Bus 126 signage or ask NJ Transit staff</li>
-            <li>Board Bus 126 to Port Authority Bus Terminal</li>
+            <li>Wysiądź z pociągu i przejdź przez budynek terminala</li>
+            <li>Wyjdź <strong>od strony ulicy</strong> (zachodnia strona, w kierunku od rzeki)</li>
+            <li>Przystanki autobusowe znajdują się na <strong>Hudson Place</strong>, ulicy przed terminalem</li>
+            <li>Szukaj oznaczeń autobusu 126 lub zapytaj pracowników NJ Transit</li>
+            <li>Wsiądź do autobusu 126 do Port Authority Bus Terminal</li>
           </ol>
-          <p class="transfer-tip">Bus 126 goes through the Lincoln Tunnel. During peak hours, allow extra time for tunnel traffic.</p>
+          <p class="transfer-tip">Autobus 126 jedzie przez Lincoln Tunnel. W godzinach szczytu zaplanuj dodatkowy czas na korki w tunelu.</p>
         </div>
       </div>
     </section>
@@ -270,41 +258,41 @@
       <div class="callout-card">
         <h3>Chcesz porównać wszystkie opcje?</h3>
         <p>Nasze narzędzie do porównywania dojazdów pokazuje każdą trasę do Twojego celu na Manhattanie z wizualną analizą czasu.</p>
-        <a href="../compare.html" class="callout-btn">Porównaj opcje dojazdu &rarr;</a>
+        <a href="compare.html" class="callout-btn">Porównaj opcje dojazdu &rarr;</a>
       </div>
     </section>
 
     <!-- Secaucus Junction section -->
     <section class="info-section" id="secaucus">
       <h2>Secaucus Junction: wąskie gardło</h2>
-      <p class="section-intro">During the cutover, only one track operates between Newark Penn Station and Secaucus Junction. This is the bottleneck that causes the 50% service reduction. Even if you don't transfer at Secaucus, delays here ripple across the entire system.</p>
+      <p class="section-intro">Podczas zmiany między Newark Penn Station a Secaucus Junction działa tylko jeden tor. To wąskie gardło powoduje 50% redukcję usług. Nawet jeśli nie przesiadasz się w Secaucus, opóźnienia tutaj wpływają na cały system.</p>
 
       <div class="secaucus-grid">
         <div class="secaucus-card">
-          <h4>If you transfer at Secaucus</h4>
+          <h4>Jeśli przesiadasz się w Secaucus</h4>
           <ul>
-            <li><strong>Allow extra time.</strong> Connections that normally take 5–10 minutes may take 15–25 minutes due to single-track delays.</li>
-            <li><strong>Fewer trains means fewer connections.</strong> Check the temporary schedule for your specific connection — some may be eliminated.</li>
-            <li><strong>Follow the signs.</strong> NJ Transit is deploying extra staff at Secaucus to help with wayfinding and crowd management.</li>
-            <li><strong>Have a backup plan.</strong> If you miss a connection, know your next option (next train, or bus alternative).</li>
+            <li><strong>Zaplanuj dodatkowy czas.</strong> Przesiadki, które normalnie zajmują 5–10 minut, mogą zająć 15–25 minut z powodu opóźnień na pojedynczym torze.</li>
+            <li><strong>Mniej pociągów to mniej połączeń.</strong> Sprawdź tymczasowy rozkład dla swojego konkretnego połączenia — niektóre mogą zostać zlikwidowane.</li>
+            <li><strong>Podążaj za znakami.</strong> NJ Transit rozmieści dodatkowych pracowników w Secaucus, aby pomagać w orientacji i zarządzaniu tłumem.</li>
+            <li><strong>Miej plan awaryjny.</strong> Jeśli nie zdążysz na połączenie, znaj następną opcję (kolejny pociąg lub alternatywa autobusowa).</li>
           </ul>
         </div>
         <div class="secaucus-card">
-          <h4>Avoiding Secaucus entirely</h4>
+          <h4>Uniknięcie Secaucus</h4>
           <ul>
-            <li><strong>Hoboken-diverted lines (M-B, M&amp;E, Gladstone):</strong> Your trains go to Hoboken, not through Secaucus. The bottleneck doesn't directly affect you.</li>
-            <li><strong>Consider Hoboken as your hub.</strong> If you can get to a Morris &amp; Essex or Montclair-Boonton station, routing through Hoboken may be faster than fighting through Secaucus.</li>
-            <li><strong>Bus alternatives:</strong> NJ Transit buses that go directly to Port Authority skip Secaucus entirely.</li>
-            <li><strong>Drive to Newark Penn:</strong> If you normally drive to a station, consider driving directly to Newark Penn Station for a more direct NEC train to PSNY.</li>
+            <li><strong>Linie przekierowane do Hoboken (M-B, M&E, Gladstone):</strong> Twoje pociągi jadą do Hoboken, nie przez Secaucus. Wąskie gardło nie dotyczy Cię bezpośrednio.</li>
+            <li><strong>Rozważ Hoboken jako węzeł.</strong> Jeśli możesz dotrzeć do stacji Morris & Essex lub Montclair-Boonton, trasa przez Hoboken może być szybsza niż przejazd przez Secaucus.</li>
+            <li><strong>Alternatywy autobusowe:</strong> Autobusy NJ Transit jadące bezpośrednio do Port Authority omijają Secaucus.</li>
+            <li><strong>Dojazd samochodem do Newark Penn:</strong> Jeśli zwykle dojeżdżasz samochodem na stację, rozważ jazdę bezpośrednio do Newark Penn Station na bezpośredni pociąg NEC do PSNY.</li>
           </ul>
         </div>
         <div class="secaucus-card">
-          <h4>Delay expectations</h4>
+          <h4>Przewidywane opóźnienia</h4>
           <ul>
-            <li><strong>Peak hours (7–9am, 5–7pm):</strong> Delays of 15–30+ minutes are likely at Secaucus due to single-track operations.</li>
-            <li><strong>Off-peak:</strong> Delays should be shorter but still expect 5–15 minutes of added travel time.</li>
-            <li><strong>Cascading delays:</strong> A delay on one line backs up all lines sharing the single track. One late train affects everything behind it.</li>
-            <li><strong>Check real-time status:</strong> Use the NJ Transit app or <a href="https://www.njtransit.com/travel-alerts-to" target="_blank" rel="noopener">njtransit.com travel alerts</a> before leaving home.</li>
+            <li><strong>Godziny szczytu (7–9 rano, 17–19):</strong> Prawdopodobne opóźnienia 15–30+ minut w Secaucus z powodu ruchu na pojedynczym torze.</li>
+            <li><strong>Poza szczytem:</strong> Opóźnienia powinny być krótsze, ale oczekuj dodatkowych 5–15 minut podróży.</li>
+            <li><strong>Kaskadowe opóźnienia:</strong> Opóźnienie na jednej linii blokuje wszystkie linie korzystające z pojedynczego toru. Jeden spóźniony pociąg wpływa na wszystko za nim.</li>
+            <li><strong>Sprawdź status na bieżąco:</strong> Użyj aplikacji NJ Transit lub <a href="https://www.njtransit.com/travel-alerts-to" target="_blank" rel="noopener">alertów podróżnych njtransit.com</a> przed wyjściem z domu.</li>
           </ul>
         </div>
       </div>
@@ -318,40 +306,40 @@
           <div class="timeline-marker"></div>
           <div class="timeline-content">
             <span class="timeline-date">Jan 16, 2026</span>
-            <h4>Cutover announced</h4>
-            <p>NJ Transit and Amtrak announce the Portal North Bridge cutover schedule and temporary service changes.</p>
+            <h4>Ogłoszenie zmiany</h4>
+            <p>NJ Transit i Amtrak ogłaszają harmonogram zmiany Portal North Bridge oraz tymczasowe zmiany w usługach.</p>
           </div>
         </div>
         <div class="timeline-item" id="tl-tickets">
           <div class="timeline-marker"></div>
           <div class="timeline-content">
             <span class="timeline-date">Feb 1, 2026</span>
-            <h4>New ticket rules begin</h4>
-            <p>Midtown Direct riders should start buying Hoboken monthly passes (valid for Penn Station travel Feb 1–15).</p>
+            <h4>Nowe zasady biletów</h4>
+            <p>Podróżni Midtown Direct powinni zacząć kupować bilety miesięczne Hoboken (ważne na podróże do Penn Station 1–15 lutego).</p>
           </div>
         </div>
         <div class="timeline-item" id="tl-start">
           <div class="timeline-marker"></div>
           <div class="timeline-content">
             <span class="timeline-date">Feb 15, 2026</span>
-            <h4>Phase 1 begins</h4>
-            <p>Temporary schedules take effect. Midtown Direct weekday trains diverted to Hoboken. Single-track operation between Newark and Secaucus.</p>
+            <h4>Początek Fazy 1</h4>
+            <p>Wchodzą w życie tymczasowe rozkłady. Pociągi Midtown Direct w dni robocze przekierowane do Hoboken. Ruch jednym torem między Newark a Secaucus.</p>
           </div>
         </div>
         <div class="timeline-item" id="tl-end">
           <div class="timeline-marker"></div>
           <div class="timeline-content">
             <span class="timeline-date">Mar 15, 2026</span>
-            <h4>Phase 1 ends (expected)</h4>
-            <p>Regular schedules resume, subject to completion of safety testing. First track on the new Portal North Bridge enters service.</p>
+            <h4>Koniec Fazy 1 (planowany)</h4>
+            <p>Powrót do normalnych rozkładów, zależnie od zakończenia testów bezpieczeństwa. Pierwszy tor na nowym Portal North Bridge wchodzi do użytku.</p>
           </div>
         </div>
         <div class="timeline-item" id="tl-phase2">
           <div class="timeline-marker"></div>
           <div class="timeline-content">
             <span class="timeline-date">Fall 2026</span>
-            <h4>Phase 2</h4>
-            <p>Second track cutover. Similar service disruptions expected. Dates TBA. After this, the old Portal Bridge is permanently retired.</p>
+            <h4>Faza 2</h4>
+            <p>Zmiana drugiego toru. Podobne zakłócenia w usługach. Daty do ogłoszenia. Po tym stary Portal Bridge zostanie na stałe wycofany.</p>
           </div>
         </div>
       </div>
@@ -362,24 +350,24 @@
       <h2>Oficjalne zasoby</h2>
       <div class="resources-grid">
         <a href="https://www.njtransit.com/portalcutover" target="_blank" rel="noopener" class="resource-link">
-          <strong>NJ Transit cutover page</strong>
-          <span>Official schedules, maps, and FAQs</span>
+          <strong>Strona zmiany NJ Transit</strong>
+          <span>Oficjalne rozkłady, mapy i FAQ</span>
         </a>
         <a href="https://www.njtransit.com/train-to" target="_blank" rel="noopener" class="resource-link">
-          <strong>Temporary train schedules</strong>
-          <span>Line-by-line PDF schedules for Feb 15 – Mar 15</span>
+          <strong>Tymczasowe rozkłady pociągów</strong>
+          <span>Rozkłady PDF dla poszczególnych linii na 15 lut – 15 mar</span>
         </a>
         <a href="https://www.njtransit.com/travel-alerts-to" target="_blank" rel="noopener" class="resource-link">
-          <strong>Real-time travel alerts</strong>
-          <span>Live service status and delay notifications</span>
+          <strong>Alerty podróżne na żywo</strong>
+          <span>Bieżący status usług i powiadomienia o opóźnieniach</span>
         </a>
         <a href="https://www.panynj.gov/path/en/index.html" target="_blank" rel="noopener" class="resource-link">
-          <strong>PATH train schedules</strong>
-          <span>Hoboken – 33rd Street service info</span>
+          <strong>Rozkłady pociągów PATH</strong>
+          <span>Informacje o usłudze Hoboken – 33rd Street</span>
         </a>
         <a href="https://www.nywaterway.com" target="_blank" rel="noopener" class="resource-link">
-          <strong>NY Waterway ferries</strong>
-          <span>Hoboken – Midtown ferry schedules</span>
+          <strong>Promy NY Waterway</strong>
+          <span>Rozkłady promów Hoboken – Midtown</span>
         </a>
       </div>
     </section>
@@ -393,7 +381,7 @@
     </div>
   </footer>
 
-  <script>window.BASE_PATH="../";window._T={"common":{"skip_to_main":"Przejdź do głównej treści","high_contrast":"Wysoki kontrast","simplified_view":"Widok uproszczony","nav_line_guide":"Przewodnik po liniach","nav_commute_comparison":"Porównanie dojazdów","nav_news_coverage":"Wiadomości","nav_map":"Mapa","nav_embed":"Osadź i udostępnij","footer_disclaimer":"jest niezależnym narzędziem społecznościowym. Nie jest powiązane ani wspierane przez NJ Transit, Amtrak ani żadną agencję rządową.","footer_disclaimer_index":"Informacje oparte są na oficjalnych ogłoszeniach i mogą ulec zmianie. Przed podróżą zawsze sprawdź na","footer_disclaimer_index_after":".","footer_disclaimer_coverage":"Linki do wiadomości prowadzą do oryginalnych źródeł. Przed podróżą zawsze sprawdź na","footer_disclaimer_coverage_after":".","footer_disclaimer_map":"Dane mapy &copy; współtwórcy","footer_disclaimer_map_tiles":"Kafelki &copy;","footer_disclaimer_embed":"Zobacz kod źródłowy na GitHub","footer_built_by":"Stworzone przez","cutover_begins_in":"Zmiana rozpocznie się za","days":"dni","day":"dzień","remaining_phase1":"pozostało w Fazie 1","phase1_complete":"Faza 1 zakończona","phase2_expected":"Faza 2 planowana"},"js":{"major_changes":"Główne zmiany","schedule_changes":"Zmiany rozkładu","before_normal":"Przed (normalna usługa)","during_cutover":"Podczas zmiany (dni robocze, 15 lut – 15 mar)","during_cutover_short":"Podczas zmiany (15 lut – 15 mar)","what_you_need_to_know":"Co musisz wiedzieć","weekends_different":"Weekendy są inne:","weekend_service_continues":"Usługa Midtown Direct do Penn Station NY jest kontynuowana w soboty i niedziele. Na weekendowe podróże kup normalne bilety Penn Station.","estimated_savings":"Szacowane oszczędności dla","zone":"strefa","monthly_pass_penn":"Miesięczny bilet Penn Station:","monthly_pass_hoboken":"Miesięczny bilet Hoboken:","you_save":"Oszczędzasz","per_month":"/mies.","cross_honored_free":"a PATH/prom z Hoboken jest akceptowany bez dodatkowych kosztów.","fare_disclaimer":"Ceny są szacunkowe. Sprawdź na njtransit.com przed zakupem.","how_get_manhattan":"Jak dojechać na Manhattan?","how_get_home":"Jak wrócić z Manhattanu?","planning_commute":"Planowanie dojazdu","getting_home":"Powrót wieczorem","getting_past_newark":"Przejazd przez Newark Penn","getting_home_manhattan":"Powrót z Manhattanu","what_ticket":"Jaki bilet powinienem kupić?","recommended":"Najlepszy dla większości","scenic_less_crowded":"Widokowy i mniej zatłoczony","port_authority_area":"Najlepszy dla rejonu Port Authority","other_options":"Inne opcje","pro_tip":"Wskazówka:","monthly_pass_holders":"Posiadacze biletu miesięcznego","one_way_buyers":"Kupujący bilet jednorazowy","weekend_riders":"Podróżujący w weekendy","occasional_riders":"Okazjonalni podróżni / niepewni","no_change":"Bez zmian","cross_honored":"Akceptowany","transfer":"Przesiadka","walk_subway":"Pieszo/metro","arrive":"Przyjazd","choose_station":"Wybierz swoją stację…"},"compare":{"title":"Porównaj opcje dojazdu — Reroute NJ","tagline":"Porównaj swoje opcje dojazdu","hero_title":"Jak zmienia się Twój dojazd?","hero_desc":"Wybierz swoją stację i cel na Manhattanie. Pokażemy każdą opcję z wizualną analizą czasu.","step1":"Twoja linia","step2":"Twoja stacja","step3":"Gdzie na Manhattanie?","your_normal_commute":"Twój zwykły dojazd","min_total":"min łącznie","vs_normal":"vs zwykły","fastest":"Najszybszy","copy_summary":"Kopiuj podsumowanie","copied":"Skopiowano!"},"coverage":{"title":"Wiadomości — Reroute NJ","tagline":"Portal Bridge w wiadomościach","hero_title":"Portal Bridge w wiadomościach","hero_desc":"Wybrane artykuły o zmianie ze źródeł lokalnych i regionalnych.","last_updated":"Ostatnia aktualizacja:","all_sources":"Wszystkie źródła","all_categories":"Wszystkie kategorie","all_lines":"Wszystkie linie","all_directions":"Wszystkie kierunki","search_placeholder":"Szukaj artykułów…","no_articles":"Brak artykułów pasujących do Twoich filtrów.","source_label":"Źródło","category_label":"Kategoria","line_label":"Linia","direction_label":"Kierunek","search_label":"Szukaj"}};</script>
+  <script>window.BASE_PATH="../";window._T={"common":{"skip_to_main":"Przejdź do głównej treści","high_contrast":"Wysoki kontrast","simplified_view":"Widok uproszczony","nav_line_guide":"Przewodnik po liniach","nav_commute_comparison":"Porównanie dojazdów","nav_news_coverage":"Wiadomości","nav_map":"Mapa","nav_embed":"Osadź i udostępnij","footer_disclaimer":"jest niezależnym narzędziem społecznościowym. Nie jest powiązane ani wspierane przez NJ Transit, Amtrak ani żadną agencję rządową.","footer_disclaimer_index":"Informacje oparte są na oficjalnych ogłoszeniach i mogą ulec zmianie. Przed podróżą zawsze sprawdź na","footer_disclaimer_index_after":".","footer_disclaimer_coverage":"Linki do wiadomości prowadzą do oryginalnych źródeł. Przed podróżą zawsze sprawdź na","footer_disclaimer_coverage_after":".","footer_disclaimer_map":"Dane mapy &copy; współtwórcy","footer_disclaimer_map_tiles":"Kafelki &copy;","footer_disclaimer_embed":"Zobacz kod źródłowy na GitHub","footer_built_by":"Stworzone przez","cutover_begins_in":"Zmiana rozpocznie się za","days":"dni","day":"dzień","remaining_phase1":"pozostało w Fazie 1","phase1_complete":"Faza 1 zakończona","phase2_expected":"Faza 2 planowana"},"js":{"major_changes":"Główne zmiany","schedule_changes":"Zmiany rozkładu","before_normal":"Przed (normalna usługa)","during_cutover":"Podczas zmiany (dni robocze, 15 lut – 15 mar)","during_cutover_short":"Podczas zmiany (15 lut – 15 mar)","what_you_need_to_know":"Co musisz wiedzieć","weekends_different":"Weekendy są inne:","weekend_service_continues":"Usługa Midtown Direct do Penn Station NY jest kontynuowana w soboty i niedziele. Na weekendowe podróże kup normalne bilety Penn Station.","estimated_savings":"Szacowane oszczędności dla","zone":"strefa","monthly_pass_penn":"Miesięczny bilet Penn Station:","monthly_pass_hoboken":"Miesięczny bilet Hoboken:","you_save":"Oszczędzasz","per_month":"/mies.","cross_honored_free":"a PATH/prom z Hoboken jest akceptowany bez dodatkowych kosztów.","fare_disclaimer":"Ceny są szacunkowe. Sprawdź na njtransit.com przed zakupem.","how_get_manhattan":"Jak dojechać na Manhattan?","how_get_home":"Jak wrócić z Manhattanu?","planning_commute":"Planowanie dojazdu","getting_home":"Powrót wieczorem","getting_past_newark":"Przejazd przez Newark Penn","getting_home_manhattan":"Powrót z Manhattanu","what_ticket":"Jaki bilet powinienem kupić?","recommended":"Najlepszy dla większości","scenic_less_crowded":"Widokowy i mniej zatłoczony","port_authority_area":"Najlepszy dla rejonu Port Authority","other_options":"Inne opcje","pro_tip":"Wskazówka:","monthly_pass_holders":"Posiadacze biletu miesięcznego","one_way_buyers":"Kupujący bilet jednorazowy","weekend_riders":"Podróżujący w weekendy","occasional_riders":"Okazjonalni podróżni / niepewni","no_change":"Bez zmian","cross_honored":"Akceptowany","transfer":"Przesiadka","walk_subway":"Pieszo/metro","arrive":"Przyjazd","choose_station":"Wybierz swoją stację…"},"compare":{"title":"Porównaj opcje dojazdu — Reroute NJ","tagline":"Porównaj swoje opcje dojazdu","hero_title":"Jak zmienia się Twój dojazd?","hero_desc":"Wybierz swoją stację i cel na Manhattanie. Pokażemy każdą opcję z wizualną analizą czasu.","step1":"Twoja linia","step2":"Twoja stacja","step3":"Gdzie na Manhattanie?","your_normal_commute":"Twój zwykły dojazd","min_total":"min łącznie","vs_normal":"vs zwykły","fastest":"Najszybszy","copy_summary":"Kopiuj podsumowanie","copied":"Skopiowano!"},"coverage":{"title":"Wiadomości — Reroute NJ","tagline":"Portal Bridge w wiadomościach","hero_title":"Portal Bridge w wiadomościach","hero_desc":"Wybrane artykuły o zmianie ze źródeł lokalnych i regionalnych.","last_updated":"Ostatnia aktualizacja:","all_sources":"Wszystkie źródła","all_categories":"Wszystkie kategorie","all_lines":"Wszystkie linie","all_directions":"Wszystkie kierunki","search_placeholder":"Szukaj artykułów…","no_articles":"Brak artykułów pasujących do Twoich filtrów.","source_label":"Źródło","category_label":"Kategoria","line_label":"Linia","direction_label":"Kierunek","search_label":"Szukaj","cat_news":"Wiadomości","cat_opinion":"Opinia","cat_analysis":"Analiza","cat_official":"Oficjalne","cat_community":"Społeczność","dir_nj_nyc":"NJ do NYC","dir_nyc_nj":"NYC do NJ","dir_both":"Oba kierunki"}};</script>
   <script src="../js/i18n.js"></script>
   <script src="../js/shared.js"></script>
   <script src="../js/app.js"></script>
