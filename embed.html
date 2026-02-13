@@ -8,18 +8,19 @@
   <meta property="og:title" content="Embed &amp; republish — Reroute NJ">
   <meta property="og:description" content="Embed Reroute NJ transit tools on your website. Free for newsrooms, publishers, and community organizations.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://jamditis.github.io/reroute-nj/embed.html">
-  <meta property="og:image" content="https://jamditis.github.io/reroute-nj/img/og-image.png">
+  <meta property="og:url" content="https://reroutenj.org/embed.html">
+  <meta property="og:image" content="https://reroutenj.org/img/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Embed &amp; republish — Reroute NJ">
   <meta name="twitter:description" content="Embed Reroute NJ transit tools on your website. Free for newsrooms, publishers, and community organizations.">
-  <meta name="twitter:image" content="https://jamditis.github.io/reroute-nj/img/og-image.png">
+  <meta name="twitter:image" content="https://reroutenj.org/img/og-image.png">
   <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
@@ -28,6 +29,26 @@
       <a href="index.html" class="brand-link"><div class="brand">Reroute<span>NJ</span></div></a>
       <p class="tagline">Embed, share &amp; republish</p>
       <div class="countdown" id="countdown"></div>
+      <div class="a11y-toggles">
+        <button class="a11y-btn" id="toggle-contrast" type="button" aria-pressed="false" aria-label="Toggle high contrast">High contrast</button>
+        <button class="a11y-btn" id="toggle-simplified" type="button" aria-pressed="false" aria-label="Toggle simplified view">Simplified view</button>
+      </div>
+      <div class="lang-selector">
+        <label for="lang-select" class="lang-selector-label sr-only">Language</label>
+        <select id="lang-select">
+          <option value="en">English</option>
+          <option value="es">Espa&#241;ol</option>
+          <option value="zh">&#20013;&#25991;</option>
+          <option value="tl">Tagalog</option>
+          <option value="ko">&#54620;&#44397;&#50612;</option>
+          <option value="pt">Portugu&#234;s</option>
+          <option value="gu">&#2711;&#2753;&#2716;&#2736;&#2750;&#2724;&#2752;</option>
+          <option value="hi">&#2361;&#2367;&#2306;&#2342;&#2368;</option>
+          <option value="it">Italiano</option>
+          <option value="ar">&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;</option>
+          <option value="pl">Polski</option>
+        </select>
+      </div>
     </div>
   </header>
 
@@ -101,19 +122,19 @@
       <div class="resources-grid">
         <div class="resource-link">
           <strong>Line guide</strong>
-          <span id="link-guide" class="embed-url">https://jamditis.github.io/reroute-nj/</span>
+          <span id="link-guide" class="embed-url">https://reroutenj.org/</span>
         </div>
         <div class="resource-link">
           <strong>Commute comparison</strong>
-          <span id="link-compare" class="embed-url">https://jamditis.github.io/reroute-nj/compare.html</span>
+          <span id="link-compare" class="embed-url">https://reroutenj.org/compare.html</span>
         </div>
         <div class="resource-link">
           <strong>News coverage</strong>
-          <span id="link-coverage" class="embed-url">https://jamditis.github.io/reroute-nj/coverage.html</span>
+          <span id="link-coverage" class="embed-url">https://reroutenj.org/coverage.html</span>
         </div>
         <div class="resource-link">
           <strong>Interactive map</strong>
-          <span id="link-map" class="embed-url">https://jamditis.github.io/reroute-nj/map.html</span>
+          <span id="link-map" class="embed-url">https://reroutenj.org/map.html</span>
         </div>
       </div>
     </section>
@@ -147,7 +168,7 @@
           <ul>
             <li>We curate Portal Bridge coverage on our <a href="coverage.html">news coverage page</a>.</li>
             <li>To suggest an article, <a href="https://github.com/jamditis/reroute-nj/issues/new?template=article-suggestion.md" target="_blank" rel="noopener">open a GitHub issue</a> with the URL and details.</li>
-            <li>Or email <strong>joe@amditis.com</strong> with "Reroute NJ coverage" in the subject line.</li>
+            <li>Or email <strong><a href="mailto:amditisj@montclair.edu">amditisj@montclair.edu</a></strong> with "Reroute NJ coverage" in the subject line.</li>
             <li>We include all relevant coverage — opinion, analysis, community reporting, and more.</li>
           </ul>
         </div>
@@ -249,5 +270,6 @@
 
   <script src="js/shared.js"></script>
   <script src="js/embed.js"></script>
+  <script>initA11yToggles(); initLangSelector();</script>
 </body>
 </html>

@@ -8,18 +8,19 @@
   <meta property="og:title" content="Why we built Reroute NJ">
   <meta property="og:description" content="Announcing Reroute NJ: a free, open-source tool to help NJ Transit riders navigate the Portal Bridge cutover.">
   <meta property="og:type" content="article">
-  <meta property="og:url" content="https://jamditis.github.io/reroute-nj/blog.html">
-  <meta property="og:image" content="https://jamditis.github.io/reroute-nj/img/og-image.png">
+  <meta property="og:url" content="https://reroutenj.org/blog.html">
+  <meta property="og:image" content="https://reroutenj.org/img/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Why we built Reroute NJ">
   <meta name="twitter:description" content="Announcing Reroute NJ: a free, open-source tool to help NJ Transit riders navigate the Portal Bridge cutover.">
-  <meta name="twitter:image" content="https://jamditis.github.io/reroute-nj/img/og-image.png">
+  <meta name="twitter:image" content="https://reroutenj.org/img/og-image.png">
   <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
@@ -28,6 +29,26 @@
       <a href="index.html" class="brand-link"><div class="brand">Reroute<span>NJ</span></div></a>
       <p class="tagline">Why we built this</p>
       <div class="countdown" id="countdown"></div>
+      <div class="a11y-toggles">
+        <button class="a11y-btn" id="toggle-contrast" type="button" aria-pressed="false" aria-label="Toggle high contrast">High contrast</button>
+        <button class="a11y-btn" id="toggle-simplified" type="button" aria-pressed="false" aria-label="Toggle simplified view">Simplified view</button>
+      </div>
+      <div class="lang-selector">
+        <label for="lang-select" class="lang-selector-label sr-only">Language</label>
+        <select id="lang-select">
+          <option value="en">English</option>
+          <option value="es">Espa&#241;ol</option>
+          <option value="zh">&#20013;&#25991;</option>
+          <option value="tl">Tagalog</option>
+          <option value="ko">&#54620;&#44397;&#50612;</option>
+          <option value="pt">Portugu&#234;s</option>
+          <option value="gu">&#2711;&#2753;&#2716;&#2736;&#2750;&#2724;&#2752;</option>
+          <option value="hi">&#2361;&#2367;&#2306;&#2342;&#2368;</option>
+          <option value="it">Italiano</option>
+          <option value="ar">&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;</option>
+          <option value="pl">Polski</option>
+        </select>
+      </div>
     </div>
   </header>
 
@@ -91,11 +112,11 @@
         <ul>
           <li><strong>Embed any tool</strong> on your website using our <a href="embed.html">embed code generator</a>. Just copy and paste an iframe.</li>
           <li><strong>Link to the tools</strong> from your Portal Bridge coverage. The URLs are permanent and have proper social meta tags for clean previews.</li>
-          <li><strong>Fork the project</strong> and run your own branded version. The code is MIT-licensed. Change the colors, add your logo, deploy it on your own domain.</li>
-          <li><strong>Add your coverage</strong> to our news feed. <a href="https://github.com/jamditis/reroute-nj/issues/new" target="_blank" rel="noopener">Open a GitHub issue</a> or email joe@amditis.com with your article links.</li>
+          <li><strong>Fork the project</strong> and run your own branded version. The <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">code is MIT-licensed</a>. Change the colors, add your logo, deploy it on your own domain.</li>
+          <li><strong>Add your coverage</strong> to our <a href="coverage.html">news feed</a>. <a href="https://github.com/jamditis/reroute-nj/issues/new" target="_blank" rel="noopener">Open a GitHub issue</a> or email <a href="mailto:amditisj@montclair.edu">amditisj@montclair.edu</a> with your article links.</li>
         </ul>
 
-        <p>We're especially interested in hearing from local publishers &mdash; TAPinto sites, Patch editors, community news outlets &mdash; who serve the specific towns affected by the cutover. Your local coverage is exactly what riders need, and we want to help amplify it.</p>
+        <p>We're especially interested in hearing from local publishers and community news outlets who serve the specific towns affected by the cutover. Your local coverage is exactly what riders need, and we want to help amplify it.</p>
 
         <h2>How you can help</h2>
 
@@ -137,6 +158,8 @@
   <script>
     updateCountdown();
     setInterval(updateCountdown, 3600000);
+    initA11yToggles();
+    initLangSelector();
   </script>
 </body>
 </html>
