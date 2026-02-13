@@ -21,8 +21,13 @@ from html.parser import HTMLParser
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TRANSLATIONS_DIR = os.path.join(PROJECT_ROOT, "translations")
 
-# Pages to generate (blog.html excluded — English-only content)
-PAGES = ["index.html", "compare.html", "coverage.html", "map.html", "embed.html"]
+# Pages to generate
+PAGES = ["index.html", "compare.html", "coverage.html", "map.html", "embed.html", "blog.html", "blog/why-we-built-reroute-nj.html"]
+
+# Map page filenames to translation key prefixes (when different from filename stem)
+PAGE_KEY_MAP = {
+    "blog/why-we-built-reroute-nj.html": "blog_post",
+}
 
 # All supported languages for hreflang tags
 ALL_LANGS = ["en", "es", "zh", "tl", "ko", "pt", "gu", "hi", "it", "ar", "pl"]
@@ -59,12 +64,25 @@ def get_translation(translations, key):
     return obj
 
 
-def fix_asset_paths(html):
-    """Adjust relative paths for subdirectory deployment."""
-    for old, new in ASSET_PREFIXES:
-        html = html.replace(old, new)
-    for old, new in PAGE_LINKS:
-        html = html.replace(old, new)
+def fix_asset_paths(html, page_name):
+    """Adjust relative paths for subdirectory deployment.
+
+    For root-level pages (depth 0), assets go from css/ to ../css/.
+    For nested pages like blog/slug.html (depth 1), assets already have
+    ../ in the source template, so we adjust ../css/ to ../../css/.
+    """
+    depth = page_name.count('/')
+    if depth == 0:
+        # Root-level page: css/ → ../css/
+        for old, new in ASSET_PREFIXES:
+            html = html.replace(old, new)
+    else:
+        # Nested page: existing ../ paths need one more ../
+        existing = '../' * depth
+        target = '../' * (depth + 1)
+        for d in ['css/', 'img/', 'js/', 'data/']:
+            for attr in ['href="', 'src="']:
+                html = html.replace(f'{attr}{existing}{d}', f'{attr}{target}{d}')
 
     return html
 
@@ -232,6 +250,8 @@ def replace_footer(html, translations, page_key):
             "coverage": ' {cov} <a href="https://www.njtransit.com/portalcutover" target="_blank" rel="noopener">njtransit.com</a> {cov_after}',
             "map": ' {map_data} <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>. {map_tiles} <a href="https://carto.com/" target="_blank" rel="noopener">CARTO</a>.',
             "embed": ' <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">{embed_gh}</a>.',
+            "blog": ' <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">{embed_gh}</a>.',
+            "blog_post": ' <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">{embed_gh}</a>.',
         }
         idx = get_translation(translations, "common.footer_disclaimer_index") or "Information is based on official announcements and may change. Always verify with"
         idx_after = get_translation(translations, "common.footer_disclaimer_index_after") or "before traveling."
@@ -267,7 +287,7 @@ def replace_footer(html, translations, page_key):
     return html
 
 
-def inject_translations_script(html, translations):
+def inject_translations_script(html, translations, page_name):
     """Inject window._T before i18n.js so translations load synchronously."""
     # Only include the sections needed at runtime (js, common, compare, coverage)
     runtime_keys = ["common", "js", "compare", "coverage"]
@@ -277,13 +297,21 @@ def inject_translations_script(html, translations):
             runtime_t[key] = translations[key]
 
     t_json = json.dumps(runtime_t, ensure_ascii=False, separators=(",", ":"))
-    inject = f'<script>window.BASE_PATH="../";window._T={t_json};</script>\n  '
 
-    # Insert before the i18n.js script tag
-    html = html.replace(
-        '<script src="../js/i18n.js"></script>',
-        inject + '<script src="../js/i18n.js"></script>'
-    )
+    # Depth-aware BASE_PATH: root pages get ../, nested pages get ../../
+    depth = page_name.count('/') + 1  # +1 for the lang directory
+    base_path = '../' * depth
+    js_path = f'{base_path}js/i18n.js'
+
+    inject = f'<script>window.BASE_PATH="{base_path}";window._T={t_json};</script>\n  '
+
+    # Find the i18n.js script tag (path varies by depth)
+    for prefix in ['../../', '../']:
+        old_tag = f'<script src="{prefix}js/i18n.js"></script>'
+        if old_tag in html:
+            html = html.replace(old_tag, inject + f'<script src="{prefix}js/i18n.js"></script>')
+            break
+
     return html
 
 
@@ -318,6 +346,8 @@ def replace_hamburger_label(html, translations, page_key):
         "coverage": "common.nav_news_coverage",
         "map": "common.nav_map",
         "embed": "common.nav_embed",
+        "blog": "common.menu",
+        "blog_post": "common.menu",
     }
     eng_map = {
         "index": "Line guide",
@@ -325,6 +355,8 @@ def replace_hamburger_label(html, translations, page_key):
         "coverage": "News coverage",
         "map": "Map",
         "embed": "Embed &amp; share",
+        "blog": "Menu",
+        "blog_post": "Menu",
     }
     key = label_map.get(page_key)
     eng = eng_map.get(page_key)
@@ -1069,6 +1101,252 @@ def replace_page_specific_content(html, translations, page_key):
             if translated:
                 html = html.replace(f"<li>{eng_text}</li>", f"<li>{translated}</li>")
 
+    elif page_key == "blog":
+        # Blog index page
+        heading = get_translation(translations, "blog.heading")
+        if heading:
+            html = html.replace(">Blog</h1>", f">{heading}</h1>")
+
+        # Post card
+        post1_title = get_translation(translations, "blog.post1_title")
+        if post1_title:
+            html = html.replace(">Why we built Reroute NJ</h2>", f">{post1_title}</h2>")
+
+        post1_date = get_translation(translations, "blog.post1_date")
+        if post1_date:
+            html = html.replace(">February 12, 2026</time>", f">{post1_date}</time>")
+
+        post1_excerpt = get_translation(translations, "blog.post1_excerpt")
+        if post1_excerpt:
+            html = html.replace(
+                '>Five free tools in 11 languages to help NJ Transit riders navigate the Portal Bridge cutover. Here&#x27;s why we built it and how you can help.</p>',
+                f'>{post1_excerpt}</p>'
+            )
+            html = html.replace(
+                ">Five free tools in 11 languages to help NJ Transit riders navigate the Portal Bridge cutover. Here's why we built it and how you can help.</p>",
+                f'>{post1_excerpt}</p>'
+            )
+
+        read_more = get_translation(translations, "blog.read_more")
+        if read_more:
+            html = html.replace(
+                '>Read more &rarr;</span>',
+                f'>{read_more.replace("→", "&rarr;")}</span>'
+            )
+
+    elif page_key == "blog_post":
+        # Blog post: "Why we built Reroute NJ"
+        heading = get_translation(translations, "blog_post.heading")
+        if heading:
+            html = html.replace(">Why we built Reroute NJ</h1>", f">{heading}</h1>")
+
+        # Author prefix
+        by_prefix = get_translation(translations, "blog_post.by_prefix")
+        if by_prefix:
+            html = html.replace(">By Joe Amditis</span>", f">{by_prefix} Joe Amditis</span>")
+
+        # Date
+        date = get_translation(translations, "blog_post.date")
+        if date:
+            html = html.replace(">February 12, 2026</time>", f">{date}</time>")
+
+        # Intro paragraphs
+        intro_p1 = get_translation(translations, "blog_post.intro_p1")
+        if intro_p1:
+            html = html.replace(
+                "<p>On February 15, NJ Transit is implementing the largest service disruption in its history. For four weeks, as Amtrak connects the new Portal North Bridge to the Northeast Corridor, every rail line except the Atlantic City Rail Line will be affected. Roughly half of all trains between New Jersey and New York will be cut.</p>",
+                f"<p>{intro_p1}</p>"
+            )
+
+        intro_p2 = get_translation(translations, "blog_post.intro_p2")
+        if intro_p2:
+            html = html.replace(
+                "<p>Hundreds of thousands of commuters need to figure out, in a short time, how their daily routine changes. The official resources don&#x27;t always give you the clear, personalized answer you need at 6:30 in the morning when you&#x27;re trying to get to work.</p>",
+                f"<p>{intro_p2}</p>"
+            )
+            # Also try with literal apostrophes
+            html = html.replace(
+                "<p>Hundreds of thousands of commuters need to figure out, in a short time, how their daily routine changes. The official resources don't always give you the clear, personalized answer you need at 6:30 in the morning when you're trying to get to work.</p>",
+                f"<p>{intro_p2}</p>"
+            )
+
+        intro_p3 = get_translation(translations, "blog_post.intro_p3")
+        if intro_p3:
+            html = html.replace(
+                "<p>Reroute NJ is an attempt to help.</p>",
+                f"<p>{intro_p3}</p>"
+            )
+
+        # Section headings
+        for key, eng_text in [
+            ("blog_post.h2_tools", "Five tools, eleven languages"),
+            ("blog_post.h2_built", "Why it&#x27;s built the way it is"),
+            ("blog_post.h2_newsrooms", "For newsrooms and publishers"),
+            ("blog_post.h2_help", "How you can help"),
+            ("blog_post.h2_bigger", "The bigger picture"),
+        ]:
+            translated = get_translation(translations, key)
+            if translated:
+                html = html.replace(f">{eng_text}<", f">{translated}<")
+        # Also try with literal apostrophe for "Why it's built..."
+        h2_built = get_translation(translations, "blog_post.h2_built")
+        if h2_built:
+            html = html.replace(">Why it's built the way it is<", f">{h2_built}<")
+
+        # Tools intro
+        tools_intro = get_translation(translations, "blog_post.tools_intro")
+        if tools_intro:
+            html = html.replace(
+                "<p>We built five interactive tools that help riders answer the questions they're asking:</p>",
+                f"<p>{tools_intro}</p>"
+            )
+            html = html.replace(
+                "<p>We built five interactive tools that help riders answer the questions they&#x27;re asking:</p>",
+                f"<p>{tools_intro}</p>"
+            )
+
+        # Tool description paragraphs
+        tool_items = {
+            "blog_post.tool_line_guide": '<strong><a href="../index.html">Line guide</a></strong> &mdash; Select your NJ Transit line and station to see exactly how your commute changes, what alternative routes are available, and what tickets you need. Works for both directions: morning commuters heading into NYC and evening commuters heading home.',
+            "blog_post.tool_compare": '<strong><a href="../compare.html">Commute comparison</a></strong> &mdash; Pick your NJ station and your Manhattan destination, and see every route option side by side with visual time breakdowns. PATH vs. ferry vs. bus, ranked by total travel time, with cost and transfer details.',
+            "blog_post.tool_coverage": '<strong><a href="../coverage.html">News coverage</a></strong> &mdash; Curated reporting about the cutover from more than a dozen regional news sources. Filter by source, line, direction, or category.',
+            "blog_post.tool_map": '<strong><a href="../map.html">Interactive map</a></strong> &mdash; All five affected NJ Transit lines rendered on a map with station markers, key transfer points (Hoboken Terminal, Secaucus Junction, Newark Penn), and the Portal Bridge location over the Hackensack River.',
+            "blog_post.tool_embed": '<strong><a href="../embed.html">Embed and share</a></strong> &mdash; Iframe embed codes, direct links, and instructions for newsrooms and publishers who want to republish any of these tools on their own sites.',
+        }
+        for key, eng_text in tool_items.items():
+            translated = get_translation(translations, key)
+            if translated:
+                html = html.replace(f"<p>{eng_text}</p>", f"<p>{translated}</p>")
+
+        # Tools languages paragraph
+        tools_languages = get_translation(translations, "blog_post.tools_languages")
+        if tools_languages:
+            html = html.replace(
+                "<p>Every tool page is available in 11 languages: English, Spanish, Chinese, Tagalog, Korean, Portuguese, Gujarati, Hindi, Italian, Arabic, and Polish. These aren&#x27;t machine-translated afterthoughts &mdash; each language has its own set of pages with translated navigation, labels, descriptions, and metadata. Station names, line names, and place names stay in English because that&#x27;s what&#x27;s on the signs.</p>",
+                f"<p>{tools_languages}</p>"
+            )
+            html = html.replace(
+                "<p>Every tool page is available in 11 languages: English, Spanish, Chinese, Tagalog, Korean, Portuguese, Gujarati, Hindi, Italian, Arabic, and Polish. These aren't machine-translated afterthoughts &mdash; each language has its own set of pages with translated navigation, labels, descriptions, and metadata. Station names, line names, and place names stay in English because that's what's on the signs.</p>",
+                f"<p>{tools_languages}</p>"
+            )
+
+        # "Why it's built" paragraphs
+        built_p1 = get_translation(translations, "blog_post.built_p1")
+        if built_p1:
+            html = html.replace(
+                "<p>Reroute NJ is a zero-build static site. Plain HTML, CSS, and JavaScript. No frameworks, no npm, no build step. You can fork the repo, edit a file, and deploy it on GitHub Pages in minutes.</p>",
+                f"<p>{built_p1}</p>"
+            )
+
+        built_p2 = get_translation(translations, "blog_post.built_p2")
+        if built_p2:
+            html = html.replace(
+                "<p>We wanted the project to be accessible to anyone who might want to contribute &mdash; journalists who can add articles to the coverage feed, community members who can report inaccuracies, and developers who can add features. Lowering the barrier to contribution matters more than using the latest technology.</p>",
+                f"<p>{built_p2}</p>"
+            )
+
+        built_p3 = get_translation(translations, "blog_post.built_p3")
+        if built_p3:
+            html = html.replace(
+                "<p>Everything is client-side. No server, no database, no API keys. The data is bundled as JSON and JavaScript objects. The site is fast and works even if GitHub&#x27;s servers are under load.</p>",
+                f"<p>{built_p3}</p>"
+            )
+            html = html.replace(
+                "<p>Everything is client-side. No server, no database, no API keys. The data is bundled as JSON and JavaScript objects. The site is fast and works even if GitHub's servers are under load.</p>",
+                f"<p>{built_p3}</p>"
+            )
+
+        # Newsrooms section
+        newsrooms_intro = get_translation(translations, "blog_post.newsrooms_intro")
+        if newsrooms_intro:
+            html = html.replace(
+                "<p>We built Reroute NJ to be shared, embedded, and republished. If you run a local news site, a community blog, or a transit advocacy page, we want you to use these tools.</p>",
+                f"<p>{newsrooms_intro}</p>"
+            )
+
+        newsrooms_items = {
+            "blog_post.newsrooms_item1": '<strong>Embed any tool</strong> on your website using our <a href="../embed.html">embed code generator</a>. Copy and paste an iframe.',
+            "blog_post.newsrooms_item2": '<strong>Link to the tools</strong> from your Portal Bridge coverage. The URLs are permanent and have social meta tags for clean previews.',
+            "blog_post.newsrooms_item3": '<strong>Fork the project</strong> and run your own branded version. The <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">code is MIT-licensed</a>. Change the colors, add your logo, deploy it on your own domain.',
+            "blog_post.newsrooms_item4": '<strong>Add your coverage</strong> to our <a href="../coverage.html">news feed</a>. <a href="https://github.com/jamditis/reroute-nj/issues/new" target="_blank" rel="noopener">Open a GitHub issue</a> or email <a href="mailto:amditisj@montclair.edu">amditisj@montclair.edu</a> with your article links.',
+        }
+        for key, eng_text in newsrooms_items.items():
+            translated = get_translation(translations, key)
+            if translated:
+                html = html.replace(f"<li>{eng_text}</li>", f"<li>{translated}</li>")
+
+        newsrooms_outro = get_translation(translations, "blog_post.newsrooms_outro")
+        if newsrooms_outro:
+            html = html.replace(
+                "<p>We&#x27;re interested in hearing from local publishers and community news outlets who serve the specific towns affected by the cutover. Your local coverage is what riders need, and we want to help get it in front of them.</p>",
+                f"<p>{newsrooms_outro}</p>"
+            )
+            html = html.replace(
+                "<p>We're interested in hearing from local publishers and community news outlets who serve the specific towns affected by the cutover. Your local coverage is what riders need, and we want to help get it in front of them.</p>",
+                f"<p>{newsrooms_outro}</p>"
+            )
+
+        # How you can help section
+        help_intro = get_translation(translations, "blog_post.help_intro")
+        if help_intro:
+            html = html.replace(
+                "<p>This is a community project and we need community help:</p>",
+                f"<p>{help_intro}</p>"
+            )
+
+        help_items = {
+            "blog_post.help_item1": '<strong>Share the tool.</strong> Text it to your train friends. Post it in your town\'s Facebook group. The more people who know about it, the better it works.',
+            "blog_post.help_item2": '<strong>Report inaccuracies.</strong> If a travel time estimate is wrong, or a schedule change isn\'t reflected, <a href="https://github.com/jamditis/reroute-nj/issues" target="_blank" rel="noopener">let us know</a>.',
+            "blog_post.help_item3": '<strong>Suggest articles.</strong> Found good Portal Bridge coverage we haven\'t listed? <a href="https://github.com/jamditis/reroute-nj/issues/new" target="_blank" rel="noopener">Submit it</a>.',
+            "blog_post.help_item4": '<strong>Contribute code.</strong> The <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">GitHub repo</a> is open. No build step, no framework knowledge required. If you can edit HTML, you can contribute.',
+            "blog_post.help_item5": '<strong>Help with accessibility.</strong> We want the tool to work for everyone. Screen reader testing, keyboard navigation improvements, and WCAG compliance review are all welcome.',
+        }
+        for key, eng_text in help_items.items():
+            translated = get_translation(translations, key)
+            if translated:
+                html = html.replace(f"<li>{eng_text}</li>", f"<li>{translated}</li>")
+                # Also try with HTML entity apostrophes
+                eng_entity = eng_text.replace("'", "&#x27;")
+                html = html.replace(f"<li>{eng_entity}</li>", f"<li>{translated}</li>")
+
+        # The bigger picture paragraphs
+        bigger_p1 = get_translation(translations, "blog_post.bigger_p1")
+        if bigger_p1:
+            html = html.replace(
+                "<p>The Portal Bridge cutover is painful, but it&#x27;s a good thing. The 115-year-old Portal Bridge has been the worst bottleneck on the Northeast Corridor for decades. Every time it gets stuck opening for boat traffic, cascading delays affect hundreds of thousands of riders. The new Portal North Bridge eliminates that problem.</p>",
+                f"<p>{bigger_p1}</p>"
+            )
+            html = html.replace(
+                "<p>The Portal Bridge cutover is painful, but it's a good thing. The 115-year-old Portal Bridge has been the worst bottleneck on the Northeast Corridor for decades. Every time it gets stuck opening for boat traffic, cascading delays affect hundreds of thousands of riders. The new Portal North Bridge eliminates that problem.</p>",
+                f"<p>{bigger_p1}</p>"
+            )
+
+        bigger_p2 = get_translation(translations, "blog_post.bigger_p2")
+        if bigger_p2:
+            html = html.replace(
+                "<p>This four-week disruption is the price of progress. When Phase 2 comes in the fall of 2026, we&#x27;ll update Reroute NJ to cover that, too.</p>",
+                f"<p>{bigger_p2}</p>"
+            )
+            html = html.replace(
+                "<p>This four-week disruption is the price of progress. When Phase 2 comes in the fall of 2026, we'll update Reroute NJ to cover that, too.</p>",
+                f"<p>{bigger_p2}</p>"
+            )
+
+        bigger_p3 = get_translation(translations, "blog_post.bigger_p3")
+        if bigger_p3:
+            html = html.replace(
+                "<p>In the meantime, we hope these tools make the next month a little easier to navigate. Plan ahead, be patient with each other on the platforms, and remember: this is temporary.</p>",
+                f"<p>{bigger_p3}</p>"
+            )
+
+        # CTA button
+        cta = get_translation(translations, "blog_post.cta")
+        if cta:
+            html = html.replace(
+                '>Plan your commute &rarr;</a>',
+                f'>{cta.replace("→", "&rarr;")}</a>'
+            )
+
     return html
 
 
@@ -1078,14 +1356,14 @@ def generate_page(page_name, lang, translations):
     with open(src_path, "r", encoding="utf-8") as f:
         html = f.read()
 
-    page_key = page_name.replace(".html", "")
+    page_key = PAGE_KEY_MAP.get(page_name, page_name.replace(".html", ""))
     direction = get_translation(translations, "meta.dir") or "ltr"
 
     # 1. Set language and direction
     html = set_html_lang(html, lang, direction)
 
     # 2. Fix asset paths for subdirectory
-    html = fix_asset_paths(html)
+    html = fix_asset_paths(html, page_name)
 
     # 3. Replace common elements
     html = replace_skip_link(html, translations)
@@ -1104,15 +1382,14 @@ def generate_page(page_name, lang, translations):
     html = replace_page_specific_content(html, translations, page_key)
 
     # 5. Inject translations for JS runtime
-    html = inject_translations_script(html, translations)
+    html = inject_translations_script(html, translations, page_name)
 
     # 6. Add hreflang tags
     html = add_hreflang_tags(html, page_name)
 
     # 7. Write output
-    out_dir = os.path.join(PROJECT_ROOT, lang)
-    os.makedirs(out_dir, exist_ok=True)
-    out_path = os.path.join(out_dir, page_name)
+    out_path = os.path.join(PROJECT_ROOT, lang, page_name)
+    os.makedirs(os.path.dirname(out_path), exist_ok=True)
     with open(out_path, "w", encoding="utf-8") as f:
         f.write(html)
 

@@ -33,6 +33,10 @@ The cutover is caused by Amtrak transferring the first of two tracks from the 11
 - **North Jersey Coast Line**: Reduced frequency. Same route but fewer trains. Allow extra travel time.
 - **Raritan Valley Line**: Trains terminate at Newark Penn Station (as usual). Transfer to reduced-frequency NEC trains for Penn Station.
 
+## Blog
+
+The blog index is at [blog.html](https://reroutenj.org/blog.html). Individual posts live at `blog/{slug}.html` (e.g., [Why we built Reroute NJ](https://reroutenj.org/blog/why-we-built-reroute-nj.html)). Both the index and posts are translated into all 11 languages.
+
 ## Embeds for publishers
 
 Newsrooms and publishers can embed Reroute NJ tools on their websites using four formats:
