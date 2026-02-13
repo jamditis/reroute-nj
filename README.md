@@ -53,6 +53,9 @@ reroute-nj/
 ├── map.html                # Interactive cutover map
 ├── embed.html              # Embed & share page
 ├── blog.html               # Blog / updates
+├── robots.txt              # Crawler guidance + AI bot allowances
+├── sitemap.xml             # All 56 pages with hreflang cross-references
+├── llms.txt                # AI search engine discoverability
 ├── js/
 │   ├── shared.js           # Shared globals: esc(), countdown, date constants
 │   ├── app.js              # Line guide logic (IIFE, ~1000 lines)
@@ -159,9 +162,23 @@ This is an independent community tool. Not affiliated with or endorsed by NJ Tra
 - Mobile hamburger menu with proper focus management
 - Minimum 44px touch targets on mobile
 
+## SEO and discoverability
+
+The site is optimized for Google search, newsroom adoption, and AI search tools (ChatGPT, Gemini, Perplexity, Claude):
+
+- **`robots.txt`** — Allows all crawlers with explicit AI bot allowances (GPTBot, ClaudeBot, PerplexityBot, Google-Extended)
+- **`sitemap.xml`** — All 56 pages with `xhtml:link` hreflang cross-references for all 11 languages
+- **`llms.txt`** — Structured overview for AI search tools following the [llms.txt standard](https://llmstxt.org)
+- **JSON-LD structured data** — WebSite, FAQPage (7 questions), Article, and BreadcrumbList schemas on all pages
+- **Canonical tags** — Self-referencing canonical on every page (English and translated)
+- **Translated meta descriptions** — Each language has its own meta description and OG tags, not English defaults
+- **Citation-ready answer blocks** — Factual intro paragraphs on every tool page for search snippets and AI extraction
+
 ## Roadmap
 
 - [x] Full translation of all page content into 10 languages
+- [x] SEO foundations (robots.txt, sitemap.xml, canonical tags, structured data)
+- [x] AI search optimization (llms.txt, citation-ready content)
 - [ ] Phase 2 coverage when NJ Transit announces fall 2026 service changes
 - [ ] Bus bridge and shuttle information
 - [ ] Expanded ferry and PATH connection details

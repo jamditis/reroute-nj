@@ -19,6 +19,9 @@ coverage.html           — News coverage feed
 map.html                — Interactive Leaflet map
 embed.html              — Embed & share for publishers
 blog.html               — Blog (English only, not translated)
+robots.txt              — Crawler guidance + AI bot allowances
+sitemap.xml             — All 56 pages with hreflang cross-refs
+llms.txt                — AI search engine discoverability
 js/app.js               — Line guide logic (IIFE, ~1000 lines)
 js/compare.js           — Comparison tool (IIFE, ~700 lines)
 js/coverage.js          — Coverage feed (IIFE)
@@ -52,9 +55,19 @@ Hybrid approach: build-time HTML replacement + runtime JS translations.
 4. `window._T` is injected as an inline script for runtime JS translations
 5. Output goes to `{lang}/` directories (e.g., `es/index.html`)
 
+### SEO in the translation pipeline
+
+`generate-pages.py` handles three SEO-related replacements on every translated page:
+
+- **`replace_meta_description()`** — Swaps `<meta name="description">`, `og:description`, and `twitter:description` with translated values from `meta.{page}_description` and `meta.{page}_og_description` keys
+- **`fix_og_url()`** — Rewrites `og:url` to point to the translated page (e.g., `https://reroutenj.org/es/index.html`)
+- **`add_canonical()`** — Replaces or inserts `<link rel="canonical">` pointing to the translated page's own URL
+
+These run after `replace_meta()` in the `generate_page()` function. If a translation key is missing, the English value passes through unchanged.
+
 ### Key rules for translations
 
-- **Keys use dot notation** organized by page: `index.*`, `compare.*`, `coverage.*`, `map.*`, `embed.*`, `common.*`
+- **Keys use dot notation** organized by page: `index.*`, `compare.*`, `coverage.*`, `map.*`, `embed.*`, `common.*`, `meta.*`
 - **Station names, line names, and place names stay in English** — they're proper nouns on physical signage
 - **HTML markup in translations** — Translation values can contain `<strong>`, `<a>`, `<code>` tags
 - **HTML entities must match exactly** — The generator uses `str.replace()`, so `&hellip;` and `…` are different strings. Match what's in the source HTML.

@@ -37,6 +37,9 @@ reroute-nj/
 ├── coverage.html           # News coverage feed
 ├── map.html                # Interactive cutover map
 ├── embed.html              # Embed & share page
+├── robots.txt              # Crawler guidance + AI bot allowances
+├── sitemap.xml             # All 56 pages with hreflang cross-references
+├── llms.txt                # AI search engine discoverability
 ├── js/
 │   ├── shared.js           # Shared globals: esc(), countdown, date constants
 │   ├── app.js              # Line guide logic (IIFE, ~1000 lines)

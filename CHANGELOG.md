@@ -7,8 +7,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- `robots.txt` with explicit AI bot allowances (GPTBot, ChatGPT-User, Google-Extended, PerplexityBot, ClaudeBot, Applebot-Extended) and sitemap reference
+- `sitemap.xml` with all 56 pages, `xhtml:link` hreflang cross-references for 11 languages, and per-page priority/changefreq
+- `llms.txt` for AI search engine discoverability — structured overview of tools, key facts, line-by-line impact, and translations
+- JSON-LD structured data on all 6 English pages: WebSite + BreadcrumbList on every page, FAQPage with 7 questions on index.html, Article schema on blog.html
+- `<link rel="canonical">` tags on all English and translated pages (self-referencing)
+- Citation-ready `.seo-summary` answer blocks on all 5 English tool pages with factual intro paragraphs
+- Translated meta descriptions (`meta.{page}_description`, `meta.{page}_og_description`) in all 11 language JSON files
+- `hreflang` self-reference tags on blog.html (en + x-default)
+- `generate-pages.py` functions: `replace_meta_description()`, `fix_og_url()`, `add_canonical()` for translated page SEO
+
 ### Fixed
 - Language dropdown contrast: option text now uses dark color on white background instead of white-on-white
+- `og:url` on translated pages now points to the translated page's own URL instead of the English URL
+- `og:description` and `twitter:description` on translated pages now use translated text instead of English
+- Duplicate skip-link removed from blog.html (was two, now one)
 
 ## [1.1.0] - 2026-02-12
 
