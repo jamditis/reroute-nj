@@ -2635,6 +2635,323 @@ body[data-view="simplified"] .brand {
 }
 
 /* =========================================================================
+   EMBED CONFIGURATOR — three-step visual configurator on embed.html
+   ========================================================================= */
+
+/* Step container */
+.configurator-step {
+  margin-top: 1.5rem;
+}
+
+.cfg-step-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.cfg-step-header h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.cfg-step-num {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+/* Type cards — Step 1 */
+.cfg-type-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.cfg-type-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.5rem 1rem;
+  background: var(--card-bg);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: var(--transition);
+  text-align: center;
+  font-family: inherit;
+  font-size: inherit;
+  color: var(--text);
+}
+
+.cfg-type-card:hover {
+  border-color: var(--primary-light);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.cfg-type-card.active {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(232, 119, 34, 0.2);
+}
+
+.cfg-type-icon {
+  color: var(--primary);
+  line-height: 1;
+}
+
+.cfg-type-card.active .cfg-type-icon {
+  color: var(--accent);
+}
+
+.cfg-type-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.cfg-type-desc {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  line-height: 1.45;
+}
+
+/* Config form — Step 2 */
+.cfg-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: 1.25rem;
+}
+
+.cfg-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.cfg-field label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  margin-bottom: 0.35rem;
+}
+
+.cfg-field select {
+  padding: 0.6rem 0.85rem;
+  font-size: 0.95rem;
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg);
+  color: var(--text);
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%235a6677' d='M1.41 0L6 4.58 10.59 0 12 1.41l-6 6-6-6z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.cfg-field select:focus {
+  outline: none;
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 3px rgba(44, 95, 138, 0.15);
+}
+
+.cfg-color-input {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cfg-color-input input[type="color"] {
+  width: 40px;
+  height: 36px;
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2px;
+  cursor: pointer;
+  background: var(--bg);
+}
+
+.cfg-color-value {
+  font-family: "SF Mono", "Fira Code", "Fira Mono", Menlo, Consolas, monospace;
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+/* Output layout — Step 3 */
+.cfg-output-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+/* Preview pane */
+.cfg-preview {
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: 1rem;
+}
+
+.cfg-preview-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.cfg-preview-frame {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.cfg-preview-frame iframe {
+  border: none;
+  display: block;
+  max-width: 100%;
+}
+
+/* Output pane */
+.cfg-output {
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+/* Output tabs */
+.cfg-output-tabs {
+  display: flex;
+  border-bottom: 2px solid var(--border);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.cfg-tab {
+  padding: 0.65rem 1rem;
+  border: none;
+  background: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-family: inherit;
+  color: var(--text-light);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: var(--transition);
+  white-space: nowrap;
+  min-height: 44px;
+}
+
+.cfg-tab:hover {
+  color: var(--text);
+}
+
+.cfg-tab.active {
+  color: var(--primary);
+  border-bottom-color: var(--accent);
+}
+
+/* Tab panels */
+.cfg-panel {
+  padding: 1rem;
+}
+
+.cfg-panel .embed-code-box {
+  font-size: 0.75rem;
+  line-height: 1.5;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.cfg-copy-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.cfg-copy-btn {
+  padding: 0.55rem 1.25rem;
+  font-size: 0.85rem;
+}
+
+/* Download panels */
+.cfg-download-area {
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+.cfg-download-msg {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+.cfg-download-btn {
+  padding: 0.65rem 1.5rem;
+  font-size: 0.9rem;
+}
+
+/* Responsive — stack on mobile */
+@media (max-width: 767px) {
+  .cfg-type-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .cfg-type-card {
+    flex-direction: row;
+    text-align: left;
+    padding: 1rem;
+    gap: 0.75rem;
+  }
+
+  .cfg-type-icon {
+    flex-shrink: 0;
+  }
+
+  .cfg-form {
+    grid-template-columns: 1fr;
+  }
+
+  .cfg-output-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .cfg-output-tabs {
+    gap: 0;
+  }
+
+  .cfg-tab {
+    padding: 0.55rem 0.7rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* =========================================================================
    EMBED MODE — strips chrome when ?embed=true
    ========================================================================= */
 body.embed-mode { padding-top: 0; }
