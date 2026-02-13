@@ -145,8 +145,15 @@ function initLangSelector() {
   if (!sel) return;
 
   var path = window.location.pathname;
-  var page = path.substring(path.lastIndexOf("/") + 1) || "index.html";
+  // Strip leading slash and any language prefix (e.g. "/es/blog/foo.html" → "blog/foo.html")
+  var parts = path.replace(/^\//, "").split("/");
   var htmlLang = document.documentElement.lang || "en";
+  // If first segment is a language code (2-letter, not "js"/"css"/"img"), strip it
+  var langCodes = ["es","zh","tl","ko","pt","gu","hi","it","ar","pl"];
+  if (langCodes.indexOf(parts[0]) !== -1) {
+    parts = parts.slice(1);
+  }
+  var page = parts.join("/") || "index.html";
 
   for (var i = 0; i < sel.options.length; i++) {
     if (sel.options[i].value === htmlLang) {
