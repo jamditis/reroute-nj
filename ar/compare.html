@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مقارنة خيارات الرحلة — Reroute NJ</title>
+  <meta name="description" content="Compare your commute options during the NJ Transit Portal Bridge cutover. See visual side-by-side breakdowns of every route to Manhattan.">
+  <meta property="og:title" content="مقارنة خيارات الرحلة — Reroute NJ">
+  <meta property="og:description" content="Visual side-by-side commute comparison during the Portal Bridge cutover. Pick your station and destination, see all options ranked.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://reroutenj.org/compare.html">
+  <meta property="og:image" content="https://reroutenj.org/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="مقارنة خيارات الرحلة — Reroute NJ">
+  <meta name="twitter:description" content="Visual side-by-side commute comparison during the Portal Bridge cutover. Pick your station and destination, see all options ranked.">
+  <meta name="twitter:image" content="https://reroutenj.org/img/og-image.png">
+  <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="alternate" hreflang="en" href="https://reroutenj.org/compare.html">
+  <link rel="alternate" hreflang="es" href="https://reroutenj.org/es/compare.html">
+  <link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/compare.html">
+  <link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/compare.html">
+  <link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/compare.html">
+  <link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/compare.html">
+  <link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/compare.html">
+  <link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/compare.html">
+  <link rel="alternate" hreflang="it" href="https://reroutenj.org/it/compare.html">
+  <link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/compare.html">
+  <link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/compare.html">
+  <link rel="alternate" hreflang="x-default" href="https://reroutenj.org/compare.html">
+  <link rel="alternate" hreflang="en" href="https://reroutenj.org/compare.html">
+  <link rel="alternate" hreflang="es" href="https://reroutenj.org/es/compare.html">
+  <link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/compare.html">
+  <link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/compare.html">
+  <link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/compare.html">
+  <link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/compare.html">
+  <link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/compare.html">
+  <link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/compare.html">
+  <link rel="alternate" hreflang="it" href="https://reroutenj.org/it/compare.html">
+  <link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/compare.html">
+  <link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/compare.html">
+  <link rel="alternate" hreflang="x-default" href="https://reroutenj.org/compare.html">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">انتقل إلى المحتوى الرئيسي</a>
+
+  <header class="header">
+    <div class="header-inner">
+      <a href="../index.html" class="brand-link"><div class="brand">Reroute<span>NJ</span></div></a>
+      <p class="tagline">قارن خيارات رحلتك</p>
+      <div class="countdown" id="countdown"></div>
+      <div class="a11y-toggles">
+        <button class="a11y-btn" id="toggle-contrast" type="button" aria-pressed="false" aria-label="Toggle high contrast">تباين عالٍ</button>
+        <button class="a11y-btn" id="toggle-simplified" type="button" aria-pressed="false" aria-label="Toggle simplified view">عرض مبسّط</button>
+      </div>
+      <div class="lang-selector">
+        <label for="lang-select" class="lang-selector-label sr-only">Language</label>
+        <select id="lang-select">
+          <option value="en">English</option>
+          <option value="es">Espa&#241;ol</option>
+          <option value="zh">&#20013;&#25991;</option>
+          <option value="tl">Tagalog</option>
+          <option value="ko">&#54620;&#44397;&#50612;</option>
+          <option value="pt">Portugu&#234;s</option>
+          <option value="gu">&#2711;&#2753;&#2716;&#2736;&#2750;&#2724;&#2752;</option>
+          <option value="hi">&#2361;&#2367;&#2306;&#2342;&#2368;</option>
+          <option value="it">Italiano</option>
+          <option value="ar">&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;</option>
+          <option value="pl">Polski</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <nav class="tool-nav">
+    <div class="container">
+      <a href="../index.html" class="tool-nav-link">دليل الخطوط</a>
+      <a href="../compare.html" class="tool-nav-link active">مقارنة الرحلات</a>
+      <a href="../coverage.html" class="tool-nav-link">أخبار</a>
+      <a href="../map.html" class="tool-nav-link">خريطة</a>
+      <a href="../embed.html" class="tool-nav-link">تضمين ومشاركة</a>
+    </div>
+  </nav>
+
+  <main class="container" id="main-content">
+
+    <section class="compare-hero">
+      <h1>كيف تتغير رحلتك؟</h1>
+      <p>اختر محطتك ووجهتك في Manhattan. سنعرض كل خيار مع تحليل مرئي للوقت.</p>
+    </section>
+
+    <!-- Step 1: Line -->
+    <section class="input-step">
+      <div class="step-label"><span class="step-circle">1</span> خطك</div>
+      <nav class="line-nav" id="line-nav"></nav>
+    </section>
+
+    <!-- Step 2: Station -->
+    <section class="input-step">
+      <div class="step-label"><span class="step-circle">2</span> محطتك</div>
+      <select id="station-select">
+        <option value="">اختر محطتك…</option>
+      </select>
+    </section>
+
+    <!-- Step 3: Destination -->
+    <section class="input-step">
+      <div class="step-label"><span class="step-circle">3</span> أين في Manhattan؟</div>
+      <div class="dest-grid" id="dest-grid"></div>
+    </section>
+
+    <!-- Results -->
+    <section id="results" class="compare-results hidden" aria-live="polite" tabindex="-1">
+      <div id="results-header" class="results-header"></div>
+      <div id="results-normal" class="results-normal"></div>
+      <div id="results-list"></div>
+      <div id="results-share" class="results-share"></div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="disclaimer"><strong>Reroute NJ</strong> أداة مجتمعية مستقلة. غير تابعة أو معتمدة من NJ Transit أو Amtrak أو أي جهة حكومية. المعلومات مبنية على إعلانات رسمية وقابلة للتغيير. تحقق دائماً من <a href="https://www.njtransit.com/portalcutover" target="_blank" rel="noopener">njtransit.com</a> قبل السفر.</p>
+      <p class="credit">صنع بواسطة <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">Joe Amditis</a></p>
+    </div>
+  </footer>
+
+  <script>window.BASE_PATH="../";window._T={"common":{"skip_to_main":"انتقل إلى المحتوى الرئيسي","high_contrast":"تباين عالٍ","simplified_view":"عرض مبسّط","nav_line_guide":"دليل الخطوط","nav_commute_comparison":"مقارنة الرحلات","nav_news_coverage":"أخبار","nav_map":"خريطة","nav_embed":"تضمين ومشاركة","footer_disclaimer":"أداة مجتمعية مستقلة. غير تابعة أو معتمدة من NJ Transit أو Amtrak أو أي جهة حكومية.","footer_disclaimer_index":"المعلومات مبنية على إعلانات رسمية وقابلة للتغيير. تحقق دائماً من","footer_disclaimer_index_after":"قبل السفر.","footer_disclaimer_coverage":"روابط الأخبار تؤدي إلى مصادرها الأصلية. تحقق دائماً من","footer_disclaimer_coverage_after":"قبل السفر.","footer_disclaimer_map":"بيانات الخريطة &copy; مساهمو","footer_disclaimer_map_tiles":"المربعات &copy;","footer_disclaimer_embed":"عرض الكود المصدري على GitHub","footer_built_by":"صنع بواسطة","cutover_begins_in":"يبدأ التحويل خلال","days":"أيام","day":"يوم","remaining_phase1":"متبقية في المرحلة 1","phase1_complete":"المرحلة 1 مكتملة","phase2_expected":"المرحلة 2 متوقعة"},"js":{"major_changes":"تغييرات رئيسية","schedule_changes":"تغييرات الجدول","before_normal":"قبل (الخدمة العادية)","during_cutover":"أثناء التحويل (أيام العمل، 15 فبراير – 15 مارس)","during_cutover_short":"أثناء التحويل (15 فبراير – 15 مارس)","what_you_need_to_know":"ما تحتاج معرفته","weekends_different":"عطلة نهاية الأسبوع مختلفة:","weekend_service_continues":"تستمر خدمة Midtown Direct إلى Penn Station NY أيام السبت والأحد. اشترِ تذاكر Penn Station العادية لرحلات نهاية الأسبوع.","estimated_savings":"التوفير المقدر لـ","zone":"منطقة","monthly_pass_penn":"اشتراك شهري Penn Station:","monthly_pass_hoboken":"اشتراك شهري Hoboken:","you_save":"توفّر","per_month":"/شهر","cross_honored_free":"و PATH/العبّارة من Hoboken مقبولة بدون تكلفة إضافية.","fare_disclaimer":"الأسعار تقديرية. تحقق من njtransit.com قبل الشراء.","how_get_manhattan":"كيف أصل إلى Manhattan؟","how_get_home":"كيف أعود من Manhattan؟","planning_commute":"تخطيط رحلتك","getting_home":"العودة مساءً","getting_past_newark":"المرور عبر Newark Penn","getting_home_manhattan":"العودة من Manhattan","what_ticket":"أي تذكرة يجب أن أشتري؟","recommended":"الأفضل لمعظم الركاب","scenic_less_crowded":"مناظر جميلة وأقل ازدحاماً","port_authority_area":"الأفضل لمنطقة Port Authority","other_options":"خيارات أخرى","pro_tip":"نصيحة:","monthly_pass_holders":"حاملو الاشتراك الشهري","one_way_buyers":"مشترو التذكرة المفردة","weekend_riders":"ركاب نهاية الأسبوع","occasional_riders":"ركاب عرضيون / غير متأكدين","no_change":"لا تغيير","cross_honored":"مقبول","transfer":"انتقال","walk_subway":"مشي/مترو","arrive":"الوصول","choose_station":"اختر محطتك…"},"compare":{"title":"مقارنة خيارات الرحلة — Reroute NJ","tagline":"قارن خيارات رحلتك","hero_title":"كيف تتغير رحلتك؟","hero_desc":"اختر محطتك ووجهتك في Manhattan. سنعرض كل خيار مع تحليل مرئي للوقت.","step1":"خطك","step2":"محطتك","step3":"أين في Manhattan؟","your_normal_commute":"رحلتك المعتادة","min_total":"دقيقة إجمالي","vs_normal":"مقابل المعتاد","fastest":"الأسرع","copy_summary":"نسخ ملخص الرحلة","copied":"تم النسخ!"},"coverage":{"title":"أخبار — Reroute NJ","tagline":"Portal Bridge في الأخبار","hero_title":"Portal Bridge في الأخبار","hero_desc":"تغطية مختارة للتحويل من مصادر إخبارية محلية وإقليمية.","last_updated":"آخر تحديث:","all_sources":"جميع المصادر","all_categories":"جميع الفئات","all_lines":"جميع الخطوط","all_directions":"جميع الاتجاهات","search_placeholder":"ابحث عن مقالات…","no_articles":"لا توجد مقالات تطابق عوامل التصفية.","source_label":"المصدر","category_label":"الفئة","line_label":"الخط","direction_label":"الاتجاه","search_label":"بحث"}};</script>
+  <script src="../js/i18n.js"></script>
+  <script src="../js/shared.js"></script>
+  <script src="../js/compare.js"></script>
+  <script>initA11yToggles(); initLangSelector();</script>
+</body>
+</html>

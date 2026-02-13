@@ -114,7 +114,7 @@ def replace_tagline(html, translations, page_key):
     if tagline:
         html = re.sub(
             r'(<p class="tagline">)[^<]+(</p>)',
-            f'\\1{tagline}\\2',
+            lambda m: m.group(1) + tagline + m.group(2),
             html
         )
     return html
@@ -136,7 +136,7 @@ def replace_nav_links(html, translations):
             # Handle both active and non-active nav links
             html = re.sub(
                 r'(class="tool-nav-link[^"]*">)' + re.escape(eng_text) + r'(</a>)',
-                f'\\1{escaped}\\2',
+                lambda m: m.group(1) + escaped + m.group(2),
                 html
             )
     return html
@@ -266,13 +266,11 @@ def replace_page_specific_content(html, translations, page_key):
         phase1 = get_translation(translations, "index.alert_phase1")
         details = get_translation(translations, "index.alert_details")
         if phase1:
-            html = re.sub(r'(<strong>)Phase 1:(</strong>)', f'\\1{phase1}\\2', html)
+            html = html.replace('<strong>Phase 1:</strong>', f'<strong>{phase1}</strong>')
         if details:
-            # HTML uses &middot; entities, translate the full span
-            html = re.sub(
-                r'Feb 15 – Mar 15, 2026 &middot; All lines affected except Atlantic City &middot; 50% service reduction between Newark &amp; Secaucus',
-                details.replace("&", "&amp;").replace("·", "&middot;"),
-                html
+            html = html.replace(
+                'Feb 15 – Mar 15, 2026 &middot; All lines affected except Atlantic City &middot; 50% service reduction between Newark &amp; Secaucus',
+                details.replace("&", "&amp;").replace("·", "&middot;")
             )
 
         # Station selector
@@ -318,7 +316,7 @@ def replace_page_specific_content(html, translations, page_key):
         select_line = get_translation(translations, "index.select_line_station")
         if ami:
             # Panel intro has h2, impact-empty has h3
-            html = re.sub(r'(<h[23]>)Am I affected\?(</h[23]>)', f'\\1{ami}\\2', html)
+            html = re.sub(r'(<h[23]>)Am I affected\?(</h[23]>)', lambda m: m.group(1) + ami + m.group(2), html)
         if select_line:
             html = re.sub(
                 r'Select your line and station above to see exactly how the cutover changes your commute\.',

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>خريطة تفاعلية — Reroute NJ</title>
+  <meta name="description" content="Interactive map of the Portal Bridge cutover showing affected stations, transfer points, and alternative routes.">
+  <meta property="og:title" content="خريطة تفاعلية — Reroute NJ">
+  <meta property="og:description" content="Interactive map of the Portal Bridge cutover showing affected stations, transfer points, and alternative routes.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://reroutenj.org/map.html">
+  <meta property="og:image" content="https://reroutenj.org/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="خريطة تفاعلية — Reroute NJ">
+  <meta name="twitter:description" content="Interactive map of the Portal Bridge cutover showing affected stations, transfer points, and alternative routes.">
+  <meta name="twitter:image" content="https://reroutenj.org/img/og-image.png">
+  <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="alternate" hreflang="en" href="https://reroutenj.org/map.html">
+  <link rel="alternate" hreflang="es" href="https://reroutenj.org/es/map.html">
+  <link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/map.html">
+  <link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/map.html">
+  <link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/map.html">
+  <link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/map.html">
+  <link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/map.html">
+  <link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/map.html">
+  <link rel="alternate" hreflang="it" href="https://reroutenj.org/it/map.html">
+  <link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/map.html">
+  <link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/map.html">
+  <link rel="alternate" hreflang="x-default" href="https://reroutenj.org/map.html">
+  <style>
+    #map {
+      width: 100%;
+      height: 500px;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      margin-bottom: 1.5rem;
+      z-index: 1;
+    }
+    .map-legend {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 1rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .legend-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .legend-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.5rem;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.8rem;
+      color: var(--text-light);
+    }
+    .legend-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .legend-line {
+      width: 20px;
+      height: 4px;
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+    .map-filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .map-filter-btn {
+      padding: 0.4rem 0.8rem;
+      border: 2px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--card-bg);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-light);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .map-filter-btn:hover {
+      border-color: var(--primary-light);
+    }
+    .map-filter-btn.active {
+      border-color: var(--primary);
+      background: var(--primary);
+      color: #fff;
+    }
+    @media (max-width: 480px) {
+      #map { height: 350px; }
+    }
+    @media (min-width: 768px) {
+      #map { height: 600px; }
+    }
+  </style>
+  <link rel="alternate" hreflang="en" href="https://reroutenj.org/map.html">
+  <link rel="alternate" hreflang="es" href="https://reroutenj.org/es/map.html">
+  <link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/map.html">
+  <link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/map.html">
+  <link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/map.html">
+  <link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/map.html">
+  <link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/map.html">
+  <link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/map.html">
+  <link rel="alternate" hreflang="it" href="https://reroutenj.org/it/map.html">
+  <link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/map.html">
+  <link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/map.html">
+  <link rel="alternate" hreflang="x-default" href="https://reroutenj.org/map.html">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">انتقل إلى المحتوى الرئيسي</a>
+
+  <header class="header">
+    <div class="header-inner">
+      <a href="../index.html" class="brand-link"><div class="brand">Reroute<span>NJ</span></div></a>
+      <p class="tagline">خريطة تفاعلية للتحويل</p>
+      <div class="countdown" id="countdown"></div>
+      <div class="a11y-toggles">
+        <button class="a11y-btn" id="toggle-contrast" type="button" aria-pressed="false" aria-label="Toggle high contrast">تباين عالٍ</button>
+        <button class="a11y-btn" id="toggle-simplified" type="button" aria-pressed="false" aria-label="Toggle simplified view">عرض مبسّط</button>
+      </div>
+      <div class="lang-selector">
+        <label for="lang-select" class="lang-selector-label sr-only">Language</label>
+        <select id="lang-select">
+          <option value="en">English</option>
+          <option value="es">Espa&#241;ol</option>
+          <option value="zh">&#20013;&#25991;</option>
+          <option value="tl">Tagalog</option>
+          <option value="ko">&#54620;&#44397;&#50612;</option>
+          <option value="pt">Portugu&#234;s</option>
+          <option value="gu">&#2711;&#2753;&#2716;&#2736;&#2750;&#2724;&#2752;</option>
+          <option value="hi">&#2361;&#2367;&#2306;&#2342;&#2368;</option>
+          <option value="it">Italiano</option>
+          <option value="ar">&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;</option>
+          <option value="pl">Polski</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <nav class="tool-nav">
+    <div class="container">
+      <a href="../index.html" class="tool-nav-link">دليل الخطوط</a>
+      <a href="../compare.html" class="tool-nav-link">مقارنة الرحلات</a>
+      <a href="../coverage.html" class="tool-nav-link">أخبار</a>
+      <a href="../map.html" class="tool-nav-link active">خريطة</a>
+      <a href="../embed.html" class="tool-nav-link">تضمين ومشاركة</a>
+    </div>
+  </nav>
+
+  <main class="container" id="main-content">
+
+    <section class="compare-hero">
+      <h1>خريطة تحويل Portal Bridge</h1>
+      <p>شاهد جغرافية التحويل: موقع Portal Bridge، المحطات المتأثرة، مراكز الانتقال والمسارات البديلة.</p>
+    </section>
+
+    <div class="map-filter-bar" id="map-filters">
+      <button class="map-filter-btn active" data-filter="all">الكل</button>
+      <button class="map-filter-btn" data-filter="montclair-boonton">Montclair-Boonton</button>
+      <button class="map-filter-btn" data-filter="morris-essex">Morris &amp; Essex</button>
+      <button class="map-filter-btn" data-filter="northeast-corridor">Northeast Corridor</button>
+      <button class="map-filter-btn" data-filter="north-jersey-coast">North Jersey Coast</button>
+      <button class="map-filter-btn" data-filter="raritan-valley">Raritan Valley</button>
+      <button class="map-filter-btn" data-filter="transfer-hubs">مراكز الانتقال</button>
+    </div>
+
+    <div id="map"></div>
+
+    <div class="map-legend">
+      <div class="legend-title">مفتاح الخريطة</div>
+      <div class="legend-items">
+        <div class="legend-item"><span class="legend-dot" style="background:#e03030;"></span> Portal Bridge</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#7b2d8e;"></span> Montclair-Boonton</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#00a651;"></span> Morris &amp; Essex</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#ee3a43;"></span> Northeast Corridor</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#0082c8;"></span> North Jersey Coast</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#faa634;"></span> Raritan Valley</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#1a3a5c; border: 2px solid #fff; box-shadow: 0 0 0 1px #1a3a5c;"></span> Transfer hub</div>
+      </div>
+    </div>
+
+    <!-- Map context -->
+    <section class="info-section" style="margin-top: 1rem; border-top: none;">
+      <h2>عن Portal Bridge</h2>
+      <p class="section-intro">يعبر Portal Bridge نهر Hackensack في Kearny بولاية NJ، بين Newark و Secaucus. إنه البنية التحتية الأهم على Northeast Corridor بين New York و Washington, D.C.</p>
+
+      <div class="secaucus-grid">
+        <div class="secaucus-card">
+          <h4>The old bridge</h4>
+          <ul>
+            <li>Built in <strong>1910</strong> &mdash; 115 years old</li>
+            <li>Swing bridge design that opens for marine traffic</li>
+            <li>Frequently gets stuck, causing hours of delay</li>
+            <li>Carries every NJ Transit and Amtrak train on the Northeast Corridor</li>
+          </ul>
+        </div>
+        <div class="secaucus-card">
+          <h4>The new bridge</h4>
+          <ul>
+            <li>Portal North Bridge: $1.5 billion replacement</li>
+            <li>Fixed-span design &mdash; never opens, never gets stuck</li>
+            <li>50 feet higher than the old bridge, allowing boats to pass underneath</li>
+            <li>Part of the larger Gateway Program to modernize the corridor</li>
+          </ul>
+        </div>
+        <div class="secaucus-card">
+          <h4>The cutover</h4>
+          <ul>
+            <li><strong>Phase 1</strong> (Feb 15 &ndash; Mar 15, 2026): First track transferred to new bridge</li>
+            <li>Requires single-track operations between Newark and Secaucus</li>
+            <li>50% service reduction across all lines</li>
+            <li><strong>Phase 2</strong> (Fall 2026): Second track transferred, old bridge retired</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="disclaimer"><strong>Reroute NJ</strong> أداة مجتمعية مستقلة. غير تابعة أو معتمدة من NJ Transit أو Amtrak أو أي جهة حكومية. بيانات الخريطة &copy; مساهمو <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>. المربعات &copy; <a href="https://carto.com/" target="_blank" rel="noopener">CARTO</a>.</p>
+      <p class="credit">صنع بواسطة <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">Joe Amditis</a></p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script>window.BASE_PATH="../";window._T={"common":{"skip_to_main":"انتقل إلى المحتوى الرئيسي","high_contrast":"تباين عالٍ","simplified_view":"عرض مبسّط","nav_line_guide":"دليل الخطوط","nav_commute_comparison":"مقارنة الرحلات","nav_news_coverage":"أخبار","nav_map":"خريطة","nav_embed":"تضمين ومشاركة","footer_disclaimer":"أداة مجتمعية مستقلة. غير تابعة أو معتمدة من NJ Transit أو Amtrak أو أي جهة حكومية.","footer_disclaimer_index":"المعلومات مبنية على إعلانات رسمية وقابلة للتغيير. تحقق دائماً من","footer_disclaimer_index_after":"قبل السفر.","footer_disclaimer_coverage":"روابط الأخبار تؤدي إلى مصادرها الأصلية. تحقق دائماً من","footer_disclaimer_coverage_after":"قبل السفر.","footer_disclaimer_map":"بيانات الخريطة &copy; مساهمو","footer_disclaimer_map_tiles":"المربعات &copy;","footer_disclaimer_embed":"عرض الكود المصدري على GitHub","footer_built_by":"صنع بواسطة","cutover_begins_in":"يبدأ التحويل خلال","days":"أيام","day":"يوم","remaining_phase1":"متبقية في المرحلة 1","phase1_complete":"المرحلة 1 مكتملة","phase2_expected":"المرحلة 2 متوقعة"},"js":{"major_changes":"تغييرات رئيسية","schedule_changes":"تغييرات الجدول","before_normal":"قبل (الخدمة العادية)","during_cutover":"أثناء التحويل (أيام العمل، 15 فبراير – 15 مارس)","during_cutover_short":"أثناء التحويل (15 فبراير – 15 مارس)","what_you_need_to_know":"ما تحتاج معرفته","weekends_different":"عطلة نهاية الأسبوع مختلفة:","weekend_service_continues":"تستمر خدمة Midtown Direct إلى Penn Station NY أيام السبت والأحد. اشترِ تذاكر Penn Station العادية لرحلات نهاية الأسبوع.","estimated_savings":"التوفير المقدر لـ","zone":"منطقة","monthly_pass_penn":"اشتراك شهري Penn Station:","monthly_pass_hoboken":"اشتراك شهري Hoboken:","you_save":"توفّر","per_month":"/شهر","cross_honored_free":"و PATH/العبّارة من Hoboken مقبولة بدون تكلفة إضافية.","fare_disclaimer":"الأسعار تقديرية. تحقق من njtransit.com قبل الشراء.","how_get_manhattan":"كيف أصل إلى Manhattan؟","how_get_home":"كيف أعود من Manhattan؟","planning_commute":"تخطيط رحلتك","getting_home":"العودة مساءً","getting_past_newark":"المرور عبر Newark Penn","getting_home_manhattan":"العودة من Manhattan","what_ticket":"أي تذكرة يجب أن أشتري؟","recommended":"الأفضل لمعظم الركاب","scenic_less_crowded":"مناظر جميلة وأقل ازدحاماً","port_authority_area":"الأفضل لمنطقة Port Authority","other_options":"خيارات أخرى","pro_tip":"نصيحة:","monthly_pass_holders":"حاملو الاشتراك الشهري","one_way_buyers":"مشترو التذكرة المفردة","weekend_riders":"ركاب نهاية الأسبوع","occasional_riders":"ركاب عرضيون / غير متأكدين","no_change":"لا تغيير","cross_honored":"مقبول","transfer":"انتقال","walk_subway":"مشي/مترو","arrive":"الوصول","choose_station":"اختر محطتك…"},"compare":{"title":"مقارنة خيارات الرحلة — Reroute NJ","tagline":"قارن خيارات رحلتك","hero_title":"كيف تتغير رحلتك؟","hero_desc":"اختر محطتك ووجهتك في Manhattan. سنعرض كل خيار مع تحليل مرئي للوقت.","step1":"خطك","step2":"محطتك","step3":"أين في Manhattan؟","your_normal_commute":"رحلتك المعتادة","min_total":"دقيقة إجمالي","vs_normal":"مقابل المعتاد","fastest":"الأسرع","copy_summary":"نسخ ملخص الرحلة","copied":"تم النسخ!"},"coverage":{"title":"أخبار — Reroute NJ","tagline":"Portal Bridge في الأخبار","hero_title":"Portal Bridge في الأخبار","hero_desc":"تغطية مختارة للتحويل من مصادر إخبارية محلية وإقليمية.","last_updated":"آخر تحديث:","all_sources":"جميع المصادر","all_categories":"جميع الفئات","all_lines":"جميع الخطوط","all_directions":"جميع الاتجاهات","search_placeholder":"ابحث عن مقالات…","no_articles":"لا توجد مقالات تطابق عوامل التصفية.","source_label":"المصدر","category_label":"الفئة","line_label":"الخط","direction_label":"الاتجاه","search_label":"بحث"}};</script>
+  <script src="../js/i18n.js"></script>
+  <script src="../js/shared.js"></script>
+  <script src="../js/map.js"></script>
+  <script>initA11yToggles(); initLangSelector();</script>
+</body>
+</html>

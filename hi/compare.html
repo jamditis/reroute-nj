@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>यात्रा विकल्प तुलना — Reroute NJ</title>
+  <meta name="description" content="Compare your commute options during the NJ Transit Portal Bridge cutover. See visual side-by-side breakdowns of every route to Manhattan.">
+  <meta property="og:title" content="यात्रा विकल्प तुलना — Reroute NJ">
+  <meta property="og:description" content="Visual side-by-side commute comparison during the Portal Bridge cutover. Pick your station and destination, see all options ranked.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://reroutenj.org/compare.html">
+  <meta property="og:image" content="https://reroutenj.org/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="यात्रा विकल्प तुलना — Reroute NJ">
+  <meta name="twitter:description" content="Visual side-by-side commute comparison during the Portal Bridge cutover. Pick your station and destination, see all options ranked.">
+  <meta name="twitter:image" content="https://reroutenj.org/img/og-image.png">
+  <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="alternate" hreflang="en" href="https://reroutenj.org/compare.html">
+  <link rel="alternate" hreflang="es" href="https://reroutenj.org/es/compare.html">
+  <link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/compare.html">
+  <link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/compare.html">
+  <link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/compare.html">
+  <link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/compare.html">
+  <link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/compare.html">
+  <link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/compare.html">
+  <link rel="alternate" hreflang="it" href="https://reroutenj.org/it/compare.html">
+  <link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/compare.html">
+  <link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/compare.html">
+  <link rel="alternate" hreflang="x-default" href="https://reroutenj.org/compare.html">
+  <link rel="alternate" hreflang="en" href="https://reroutenj.org/compare.html">
+  <link rel="alternate" hreflang="es" href="https://reroutenj.org/es/compare.html">
+  <link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/compare.html">
+  <link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/compare.html">
+  <link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/compare.html">
+  <link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/compare.html">
+  <link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/compare.html">
+  <link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/compare.html">
+  <link rel="alternate" hreflang="it" href="https://reroutenj.org/it/compare.html">
+  <link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/compare.html">
+  <link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/compare.html">
+  <link rel="alternate" hreflang="x-default" href="https://reroutenj.org/compare.html">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">मुख्य सामग्री पर जाएं</a>
+
+  <header class="header">
+    <div class="header-inner">
+      <a href="../index.html" class="brand-link"><div class="brand">Reroute<span>NJ</span></div></a>
+      <p class="tagline">अपने यात्रा विकल्प तुलना करें</p>
+      <div class="countdown" id="countdown"></div>
+      <div class="a11y-toggles">
+        <button class="a11y-btn" id="toggle-contrast" type="button" aria-pressed="false" aria-label="Toggle high contrast">उच्च कंट्रास्ट</button>
+        <button class="a11y-btn" id="toggle-simplified" type="button" aria-pressed="false" aria-label="Toggle simplified view">सरलीकृत दृश्य</button>
+      </div>
+      <div class="lang-selector">
+        <label for="lang-select" class="lang-selector-label sr-only">Language</label>
+        <select id="lang-select">
+          <option value="en">English</option>
+          <option value="es">Espa&#241;ol</option>
+          <option value="zh">&#20013;&#25991;</option>
+          <option value="tl">Tagalog</option>
+          <option value="ko">&#54620;&#44397;&#50612;</option>
+          <option value="pt">Portugu&#234;s</option>
+          <option value="gu">&#2711;&#2753;&#2716;&#2736;&#2750;&#2724;&#2752;</option>
+          <option value="hi">&#2361;&#2367;&#2306;&#2342;&#2368;</option>
+          <option value="it">Italiano</option>
+          <option value="ar">&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;</option>
+          <option value="pl">Polski</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <nav class="tool-nav">
+    <div class="container">
+      <a href="../index.html" class="tool-nav-link">लाइन गाइड</a>
+      <a href="../compare.html" class="tool-nav-link active">यात्रा तुलना</a>
+      <a href="../coverage.html" class="tool-nav-link">समाचार</a>
+      <a href="../map.html" class="tool-nav-link">नक्शा</a>
+      <a href="../embed.html" class="tool-nav-link">एम्बेड और शेयर</a>
+    </div>
+  </nav>
+
+  <main class="container" id="main-content">
+
+    <section class="compare-hero">
+      <h1>आपकी यात्रा कैसे बदलती है?</h1>
+      <p>अपना स्टेशन और Manhattan गंतव्य चुनें। हम हर विकल्प विजुअल समय विश्लेषण के साथ दिखाएंगे।</p>
+    </section>
+
+    <!-- Step 1: Line -->
+    <section class="input-step">
+      <div class="step-label"><span class="step-circle">1</span> आपकी लाइन</div>
+      <nav class="line-nav" id="line-nav"></nav>
+    </section>
+
+    <!-- Step 2: Station -->
+    <section class="input-step">
+      <div class="step-label"><span class="step-circle">2</span> आपका स्टेशन</div>
+      <select id="station-select">
+        <option value="">अपना स्टेशन चुनें…</option>
+      </select>
+    </section>
+
+    <!-- Step 3: Destination -->
+    <section class="input-step">
+      <div class="step-label"><span class="step-circle">3</span> Manhattan में कहां?</div>
+      <div class="dest-grid" id="dest-grid"></div>
+    </section>
+
+    <!-- Results -->
+    <section id="results" class="compare-results hidden" aria-live="polite" tabindex="-1">
+      <div id="results-header" class="results-header"></div>
+      <div id="results-normal" class="results-normal"></div>
+      <div id="results-list"></div>
+      <div id="results-share" class="results-share"></div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="disclaimer"><strong>Reroute NJ</strong> एक स्वतंत्र सामुदायिक उपकरण है। NJ Transit, Amtrak या किसी सरकारी एजेंसी से संबद्ध या समर्थित नहीं है। जानकारी आधिकारिक घोषणाओं पर आधारित है और बदल सकती है। यात्रा से पहले हमेशा <a href="https://www.njtransit.com/portalcutover" target="_blank" rel="noopener">njtransit.com</a> पर जांच करें।</p>
+      <p class="credit">निर्माता <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">Joe Amditis</a></p>
+    </div>
+  </footer>
+
+  <script>window.BASE_PATH="../";window._T={"common":{"skip_to_main":"मुख्य सामग्री पर जाएं","high_contrast":"उच्च कंट्रास्ट","simplified_view":"सरलीकृत दृश्य","nav_line_guide":"लाइन गाइड","nav_commute_comparison":"यात्रा तुलना","nav_news_coverage":"समाचार","nav_map":"नक्शा","nav_embed":"एम्बेड और शेयर","footer_disclaimer":"एक स्वतंत्र सामुदायिक उपकरण है। NJ Transit, Amtrak या किसी सरकारी एजेंसी से संबद्ध या समर्थित नहीं है।","footer_disclaimer_index":"जानकारी आधिकारिक घोषणाओं पर आधारित है और बदल सकती है। यात्रा से पहले हमेशा","footer_disclaimer_index_after":"पर जांच करें।","footer_disclaimer_coverage":"समाचार लिंक मूल स्रोतों पर जाते हैं। यात्रा से पहले हमेशा","footer_disclaimer_coverage_after":"पर जांच करें।","footer_disclaimer_map":"मानचित्र डेटा &copy;","footer_disclaimer_map_tiles":"टाइल्स &copy;","footer_disclaimer_embed":"GitHub पर सोर्स कोड देखें","footer_built_by":"निर्माता","cutover_begins_in":"कटओवर शुरू होने में","days":"दिन","day":"दिन","remaining_phase1":"चरण 1 में शेष","phase1_complete":"चरण 1 पूर्ण","phase2_expected":"चरण 2 अपेक्षित"},"js":{"major_changes":"बड़े बदलाव","schedule_changes":"समय सारणी बदलाव","before_normal":"पहले (सामान्य सेवा)","during_cutover":"कटओवर के दौरान (कार्यदिवस, 15 फ़र – 15 मार्च)","during_cutover_short":"कटओवर के दौरान (15 फ़र – 15 मार्च)","what_you_need_to_know":"आपको क्या जानना चाहिए","weekends_different":"सप्ताहांत अलग हैं:","weekend_service_continues":"Midtown Direct Penn Station NY सेवा शनिवार और रविवार को जारी रहती है। सप्ताहांत यात्रा के लिए सामान्य Penn Station टिकट खरीदें।","estimated_savings":"अनुमानित बचत","zone":"ज़ोन","monthly_pass_penn":"Penn Station मासिक पास:","monthly_pass_hoboken":"Hoboken मासिक पास:","you_save":"आप बचाते हैं","per_month":"/माह","cross_honored_free":"और Hoboken से PATH/फेरी बिना अतिरिक्त लागत के स्वीकार किया जाता है।","fare_disclaimer":"किराये अनुमानित हैं। खरीदने से पहले njtransit.com पर जांचें।","how_get_manhattan":"Manhattan कैसे पहुंचें?","how_get_home":"Manhattan से घर कैसे जाएं?","planning_commute":"अपनी यात्रा की योजना","getting_home":"शाम को घर जाना","getting_past_newark":"Newark Penn से गुजरना","getting_home_manhattan":"Manhattan से घर","what_ticket":"मुझे कौन सा टिकट खरीदना चाहिए?","recommended":"अधिकांश यात्रियों के लिए सर्वश्रेष्ठ","scenic_less_crowded":"सुंदर और कम भीड़","port_authority_area":"Port Authority क्षेत्र के लिए सर्वश्रेष्ठ","other_options":"अन्य विकल्प","pro_tip":"सुझाव:","monthly_pass_holders":"मासिक पास धारक","one_way_buyers":"एकतरफा टिकट खरीदने वाले","weekend_riders":"सप्ताहांत यात्री","occasional_riders":"कभी-कभार यात्री / अनिश्चित","no_change":"कोई बदलाव नहीं","cross_honored":"स्वीकृत","transfer":"ट्रांसफर","walk_subway":"पैदल/सबवे","arrive":"आगमन","choose_station":"अपना स्टेशन चुनें…"},"compare":{"title":"यात्रा विकल्प तुलना — Reroute NJ","tagline":"अपने यात्रा विकल्प तुलना करें","hero_title":"आपकी यात्रा कैसे बदलती है?","hero_desc":"अपना स्टेशन और Manhattan गंतव्य चुनें। हम हर विकल्प विजुअल समय विश्लेषण के साथ दिखाएंगे।","step1":"आपकी लाइन","step2":"आपका स्टेशन","step3":"Manhattan में कहां?","your_normal_commute":"आपकी सामान्य यात्रा","min_total":"मिनट कुल","vs_normal":"vs सामान्य","fastest":"सबसे तेज़","copy_summary":"यात्रा सारांश कॉपी करें","copied":"कॉपी हो गया!"},"coverage":{"title":"समाचार — Reroute NJ","tagline":"समाचार में Portal Bridge","hero_title":"समाचार में Portal Bridge","hero_desc":"स्थानीय और क्षेत्रीय समाचार स्रोतों से कटओवर कवरेज।","last_updated":"अंतिम अपडेट:","all_sources":"सभी स्रोत","all_categories":"सभी श्रेणियां","all_lines":"सभी लाइनें","all_directions":"सभी दिशाएं","search_placeholder":"लेख खोजें…","no_articles":"आपके फ़िल्टर से कोई लेख मेल नहीं खाता।","source_label":"स्रोत","category_label":"श्रेणी","line_label":"लाइन","direction_label":"दिशा","search_label":"खोजें"}};</script>
+  <script src="../js/i18n.js"></script>
+  <script src="../js/shared.js"></script>
+  <script src="../js/compare.js"></script>
+  <script>initA11yToggles(); initLangSelector();</script>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>인터랙티브 지도 — Reroute NJ</title>
+  <meta name="description" content="Interactive map of the Portal Bridge cutover showing affected stations, transfer points, and alternative routes.">
+  <meta property="og:title" content="인터랙티브 지도 — Reroute NJ">
+  <meta property="og:description" content="Interactive map of the Portal Bridge cutover showing affected stations, transfer points, and alternative routes.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://reroutenj.org/map.html">
+  <meta property="og:image" content="https://reroutenj.org/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="인터랙티브 지도 — Reroute NJ">
+  <meta name="twitter:description" content="Interactive map of the Portal Bridge cutover showing affected stations, transfer points, and alternative routes.">
+  <meta name="twitter:image" content="https://reroutenj.org/img/og-image.png">
+  <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="alternate" hreflang="en" href="https://reroutenj.org/map.html">
+  <link rel="alternate" hreflang="es" href="https://reroutenj.org/es/map.html">
+  <link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/map.html">
+  <link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/map.html">
+  <link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/map.html">
+  <link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/map.html">
+  <link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/map.html">
+  <link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/map.html">
+  <link rel="alternate" hreflang="it" href="https://reroutenj.org/it/map.html">
+  <link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/map.html">
+  <link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/map.html">
+  <link rel="alternate" hreflang="x-default" href="https://reroutenj.org/map.html">
+  <style>
+    #map {
+      width: 100%;
+      height: 500px;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      margin-bottom: 1.5rem;
+      z-index: 1;
+    }
+    .map-legend {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 1rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .legend-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .legend-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.5rem;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.8rem;
+      color: var(--text-light);
+    }
+    .legend-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .legend-line {
+      width: 20px;
+      height: 4px;
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+    .map-filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .map-filter-btn {
+      padding: 0.4rem 0.8rem;
+      border: 2px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--card-bg);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-light);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .map-filter-btn:hover {
+      border-color: var(--primary-light);
+    }
+    .map-filter-btn.active {
+      border-color: var(--primary);
+      background: var(--primary);
+      color: #fff;
+    }
+    @media (max-width: 480px) {
+      #map { height: 350px; }
+    }
+    @media (min-width: 768px) {
+      #map { height: 600px; }
+    }
+  </style>
+  <link rel="alternate" hreflang="en" href="https://reroutenj.org/map.html">
+  <link rel="alternate" hreflang="es" href="https://reroutenj.org/es/map.html">
+  <link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/map.html">
+  <link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/map.html">
+  <link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/map.html">
+  <link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/map.html">
+  <link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/map.html">
+  <link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/map.html">
+  <link rel="alternate" hreflang="it" href="https://reroutenj.org/it/map.html">
+  <link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/map.html">
+  <link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/map.html">
+  <link rel="alternate" hreflang="x-default" href="https://reroutenj.org/map.html">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">본문으로 건너뛰기</a>
+
+  <header class="header">
+    <div class="header-inner">
+      <a href="../index.html" class="brand-link"><div class="brand">Reroute<span>NJ</span></div></a>
+      <p class="tagline">인터랙티브 전환 지도</p>
+      <div class="countdown" id="countdown"></div>
+      <div class="a11y-toggles">
+        <button class="a11y-btn" id="toggle-contrast" type="button" aria-pressed="false" aria-label="Toggle high contrast">고대비</button>
+        <button class="a11y-btn" id="toggle-simplified" type="button" aria-pressed="false" aria-label="Toggle simplified view">간소화 보기</button>
+      </div>
+      <div class="lang-selector">
+        <label for="lang-select" class="lang-selector-label sr-only">Language</label>
+        <select id="lang-select">
+          <option value="en">English</option>
+          <option value="es">Espa&#241;ol</option>
+          <option value="zh">&#20013;&#25991;</option>
+          <option value="tl">Tagalog</option>
+          <option value="ko">&#54620;&#44397;&#50612;</option>
+          <option value="pt">Portugu&#234;s</option>
+          <option value="gu">&#2711;&#2753;&#2716;&#2736;&#2750;&#2724;&#2752;</option>
+          <option value="hi">&#2361;&#2367;&#2306;&#2342;&#2368;</option>
+          <option value="it">Italiano</option>
+          <option value="ar">&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;</option>
+          <option value="pl">Polski</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <nav class="tool-nav">
+    <div class="container">
+      <a href="../index.html" class="tool-nav-link">노선 안내</a>
+      <a href="../compare.html" class="tool-nav-link">통근 비교</a>
+      <a href="../coverage.html" class="tool-nav-link">뉴스</a>
+      <a href="../map.html" class="tool-nav-link active">지도</a>
+      <a href="../embed.html" class="tool-nav-link">임베드 및 공유</a>
+    </div>
+  </nav>
+
+  <main class="container" id="main-content">
+
+    <section class="compare-hero">
+      <h1>Portal Bridge 전환 지도</h1>
+      <p>전환의 지리적 정보를 확인하세요: Portal Bridge 위치, 영향받는 역, 주요 환승 허브, 대체 경로.</p>
+    </section>
+
+    <div class="map-filter-bar" id="map-filters">
+      <button class="map-filter-btn active" data-filter="all">전체</button>
+      <button class="map-filter-btn" data-filter="montclair-boonton">Montclair-Boonton</button>
+      <button class="map-filter-btn" data-filter="morris-essex">Morris &amp; Essex</button>
+      <button class="map-filter-btn" data-filter="northeast-corridor">Northeast Corridor</button>
+      <button class="map-filter-btn" data-filter="north-jersey-coast">North Jersey Coast</button>
+      <button class="map-filter-btn" data-filter="raritan-valley">Raritan Valley</button>
+      <button class="map-filter-btn" data-filter="transfer-hubs">환승 허브</button>
+    </div>
+
+    <div id="map"></div>
+
+    <div class="map-legend">
+      <div class="legend-title">범례</div>
+      <div class="legend-items">
+        <div class="legend-item"><span class="legend-dot" style="background:#e03030;"></span> Portal Bridge</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#7b2d8e;"></span> Montclair-Boonton</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#00a651;"></span> Morris &amp; Essex</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#ee3a43;"></span> Northeast Corridor</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#0082c8;"></span> North Jersey Coast</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#faa634;"></span> Raritan Valley</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#1a3a5c; border: 2px solid #fff; box-shadow: 0 0 0 1px #1a3a5c;"></span> Transfer hub</div>
+      </div>
+    </div>
+
+    <!-- Map context -->
+    <section class="info-section" style="margin-top: 1rem; border-top: none;">
+      <h2>Portal Bridge 소개</h2>
+      <p class="section-intro">Portal Bridge는 NJ Kearny의 Hackensack River를 가로지르며 Newark와 Secaucus 사이에 있습니다. New York과 Washington, D.C. 사이 Northeast Corridor에서 가장 중요한 인프라입니다.</p>
+
+      <div class="secaucus-grid">
+        <div class="secaucus-card">
+          <h4>The old bridge</h4>
+          <ul>
+            <li>Built in <strong>1910</strong> &mdash; 115 years old</li>
+            <li>Swing bridge design that opens for marine traffic</li>
+            <li>Frequently gets stuck, causing hours of delay</li>
+            <li>Carries every NJ Transit and Amtrak train on the Northeast Corridor</li>
+          </ul>
+        </div>
+        <div class="secaucus-card">
+          <h4>The new bridge</h4>
+          <ul>
+            <li>Portal North Bridge: $1.5 billion replacement</li>
+            <li>Fixed-span design &mdash; never opens, never gets stuck</li>
+            <li>50 feet higher than the old bridge, allowing boats to pass underneath</li>
+            <li>Part of the larger Gateway Program to modernize the corridor</li>
+          </ul>
+        </div>
+        <div class="secaucus-card">
+          <h4>The cutover</h4>
+          <ul>
+            <li><strong>Phase 1</strong> (Feb 15 &ndash; Mar 15, 2026): First track transferred to new bridge</li>
+            <li>Requires single-track operations between Newark and Secaucus</li>
+            <li>50% service reduction across all lines</li>
+            <li><strong>Phase 2</strong> (Fall 2026): Second track transferred, old bridge retired</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="disclaimer"><strong>Reroute NJ</strong> 는 독립적인 커뮤니티 도구입니다. NJ Transit, Amtrak 또는 정부 기관과 관련이 없으며 승인을 받지 않았습니다. 지도 데이터 &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>. 타일 &copy; <a href="https://carto.com/" target="_blank" rel="noopener">CARTO</a>.</p>
+      <p class="credit">제작자 <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">Joe Amditis</a></p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script>window.BASE_PATH="../";window._T={"common":{"skip_to_main":"본문으로 건너뛰기","high_contrast":"고대비","simplified_view":"간소화 보기","nav_line_guide":"노선 안내","nav_commute_comparison":"통근 비교","nav_news_coverage":"뉴스","nav_map":"지도","nav_embed":"임베드 및 공유","footer_disclaimer":"는 독립적인 커뮤니티 도구입니다. NJ Transit, Amtrak 또는 정부 기관과 관련이 없으며 승인을 받지 않았습니다.","footer_disclaimer_index":"정보는 공식 발표에 기반하며 변경될 수 있습니다. 여행 전 반드시","footer_disclaimer_index_after":"에서 확인하세요.","footer_disclaimer_coverage":"뉴스 링크는 원본 출처로 연결됩니다. 여행 전 반드시","footer_disclaimer_coverage_after":"에서 확인하세요.","footer_disclaimer_map":"지도 데이터 &copy;","footer_disclaimer_map_tiles":"타일 &copy;","footer_disclaimer_embed":"GitHub에서 소스 코드 보기","footer_built_by":"제작자","cutover_begins_in":"전환 시작까지","days":"일","day":"일","remaining_phase1":"1단계 남은 기간","phase1_complete":"1단계 완료","phase2_expected":"2단계 예정"},"js":{"major_changes":"주요 변경","schedule_changes":"시간표 변경","before_normal":"이전 (정상 운행)","during_cutover":"전환 기간 (평일, 2월 15일 – 3월 15일)","during_cutover_short":"전환 기간 (2월 15일 – 3월 15일)","what_you_need_to_know":"알아야 할 사항","weekends_different":"주말은 다릅니다:","weekend_service_continues":"Midtown Direct Penn Station NY행 서비스는 토요일과 일요일에 계속 운행됩니다. 주말 여행에는 일반 Penn Station 승차권을 구매하세요.","estimated_savings":"예상 절약액","zone":"구역","monthly_pass_penn":"Penn Station 정기권:","monthly_pass_hoboken":"Hoboken 정기권:","you_save":"절약","per_month":"/월","cross_honored_free":"Hoboken에서 PATH/페리 무료 환승 가능.","fare_disclaimer":"요금은 추정치입니다. 구매 전 njtransit.com에서 확인하세요.","how_get_manhattan":"Manhattan까지 어떻게 가나요?","how_get_home":"Manhattan에서 어떻게 귀가하나요?","planning_commute":"통근 계획","getting_home":"저녁 귀가","getting_past_newark":"Newark Penn 통과","getting_home_manhattan":"Manhattan에서 귀가","what_ticket":"어떤 승차권을 사야 하나요?","recommended":"대부분의 승객에게 적합","scenic_less_crowded":"경치 좋고 덜 붐빔","port_authority_area":"Port Authority 지역에 적합","other_options":"기타 옵션","pro_tip":"팁:","monthly_pass_holders":"정기권 소지자","one_way_buyers":"편도권 구매자","weekend_riders":"주말 이용자","occasional_riders":"가끔 이용자 / 잘 모르겠는 경우","no_change":"변경 없음","cross_honored":"환승 가능","transfer":"환승","walk_subway":"도보/지하철","arrive":"도착","choose_station":"역을 선택하세요…"},"compare":{"title":"통근 옵션 비교 — Reroute NJ","tagline":"통근 옵션 비교","hero_title":"통근이 어떻게 바뀌나요?","hero_desc":"역과 Manhattan 목적지를 선택하세요. 모든 옵션을 시각적 시간 분석과 함께 나란히 보여드립니다.","step1":"내 노선","step2":"내 역","step3":"Manhattan 어디?","your_normal_commute":"일반 통근","min_total":"분 총","vs_normal":"vs 일반","fastest":"가장 빠름","copy_summary":"통근 요약 복사","copied":"복사됨!"},"coverage":{"title":"뉴스 — Reroute NJ","tagline":"Portal Bridge 뉴스","hero_title":"Portal Bridge 뉴스","hero_desc":"지역 및 광역 뉴스 출처의 전환 관련 보도 모음입니다.","last_updated":"최종 업데이트:","all_sources":"모든 출처","all_categories":"모든 카테고리","all_lines":"모든 노선","all_directions":"모든 방향","search_placeholder":"기사 검색…","no_articles":"필터와 일치하는 기사가 없습니다.","source_label":"출처","category_label":"카테고리","line_label":"노선","direction_label":"방향","search_label":"검색"}};</script>
+  <script src="../js/i18n.js"></script>
+  <script src="../js/shared.js"></script>
+  <script src="../js/map.js"></script>
+  <script>initA11yToggles(); initLangSelector();</script>
+</body>
+</html>
