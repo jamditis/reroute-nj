@@ -21,7 +21,9 @@
 </head>
 <body>
 
-  <header class="header">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="header" role="banner">
     <div class="header-inner">
       <a href="index.html" class="brand-link"><div class="brand">Reroute<span>NJ</span></div></a>
       <p class="tagline">Embed, share &amp; republish</p>
@@ -29,17 +31,17 @@
     </div>
   </header>
 
-  <nav class="tool-nav">
+  <nav class="tool-nav" aria-label="Site tools">
     <div class="container">
       <a href="index.html" class="tool-nav-link">Line guide</a>
       <a href="compare.html" class="tool-nav-link">Commute comparison</a>
       <a href="coverage.html" class="tool-nav-link">News coverage</a>
       <a href="map.html" class="tool-nav-link">Map</a>
-      <a href="embed.html" class="tool-nav-link active">Embed &amp; share</a>
+      <a href="embed.html" class="tool-nav-link active" aria-current="page">Embed &amp; share</a>
     </div>
   </nav>
 
-  <main class="container">
+  <main class="container" id="main-content">
 
     <section class="embed-hero">
       <h1>Put Reroute NJ on your website</h1>
@@ -234,7 +236,7 @@
 
   </main>
 
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="container">
       <p class="disclaimer"><strong>Reroute NJ</strong> is an independent community tool. Not affiliated with or endorsed by NJ Transit, Amtrak, or any government agency. <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">View source on GitHub</a>.</p>
       <p class="credit">Built by <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">Joe Amditis</a></p>

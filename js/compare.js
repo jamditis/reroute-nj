@@ -321,6 +321,7 @@
       var btn = document.createElement("button");
       btn.className = "line-btn";
       btn.setAttribute("data-line", lineId);
+      btn.setAttribute("aria-pressed", "false");
       btn.textContent = line.shortName;
       btn.addEventListener("click", function () { selectLine(lineId); });
       $lineNav.appendChild(btn);
@@ -335,7 +336,9 @@
     // Update active state
     var btns = $lineNav.querySelectorAll(".line-btn");
     for (var i = 0; i < btns.length; i++) {
-      btns[i].classList.toggle("active", btns[i].getAttribute("data-line") === lineId);
+      var isActive = btns[i].getAttribute("data-line") === lineId;
+      btns[i].classList.toggle("active", isActive);
+      btns[i].setAttribute("aria-pressed", isActive ? "true" : "false");
     }
 
     populateStations();
@@ -389,14 +392,17 @@
       btn.className = "dest-card";
       btn.setAttribute("data-dest", dest.id);
       btn.innerHTML =
-        '<span class="dest-icon">' + dest.icon + "</span>" +
+        '<span class="dest-icon" aria-hidden="true">' + dest.icon + "</span>" +
         '<span class="dest-name">' + esc(dest.name) + "</span>" +
         '<span class="dest-area">' + esc(dest.area) + "</span>";
+      btn.setAttribute("aria-pressed", "false");
       btn.addEventListener("click", function () {
         currentDest = dest;
         var cards = $destGrid.querySelectorAll(".dest-card");
         for (var i = 0; i < cards.length; i++) {
-          cards[i].classList.toggle("active", cards[i].getAttribute("data-dest") === dest.id);
+          var isActive = cards[i].getAttribute("data-dest") === dest.id;
+          cards[i].classList.toggle("active", isActive);
+          cards[i].setAttribute("aria-pressed", isActive ? "true" : "false");
         }
         if (currentStation) runComparison();
       });

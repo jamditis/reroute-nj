@@ -1,5 +1,42 @@
 /* Reroute NJ — Transit Tool Styles */
 
+/* Skip to content link — hidden until focused */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary-dark);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0 0 var(--radius) var(--radius);
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  z-index: 1000;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 0;
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+  color: #fff;
+}
+
+/* Screen reader only utility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 :root {
   --primary: #1a3a5c;
   --primary-light: #2c5f8a;
@@ -51,6 +88,22 @@ a {
 
 a:hover {
   color: var(--accent);
+}
+
+/* Focus-visible styles for keyboard navigation */
+a:focus-visible,
+button:focus-visible,
+select:focus-visible,
+input:focus-visible,
+[role="tab"]:focus-visible,
+[role="button"]:focus-visible,
+.dest-card:focus-visible,
+.map-filter-btn:focus-visible,
+.line-btn:focus-visible,
+.direction-btn:focus-visible,
+.resource-link:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
 }
 
 .container {
@@ -162,7 +215,7 @@ main.container {
 }
 
 .line-btn {
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1rem;
   border: 2px solid var(--border);
   border-radius: var(--radius);
   background: var(--card-bg);
@@ -171,6 +224,11 @@ main.container {
   color: var(--text);
   cursor: pointer;
   transition: var(--transition);
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .line-btn:hover:not(.disabled) {
@@ -255,7 +313,7 @@ main.container {
 
 .direction-btn {
   flex: 1;
-  padding: 0.6rem 1rem;
+  padding: 0.75rem 1rem;
   border: none;
   background: var(--card-bg);
   font-size: 0.9rem;
@@ -264,6 +322,7 @@ main.container {
   cursor: pointer;
   transition: var(--transition);
   text-align: center;
+  min-height: 44px;
 }
 
 .direction-btn + .direction-btn {
@@ -308,6 +367,7 @@ main.container {
   border-bottom: 3px solid transparent;
   margin-bottom: -2px;
   transition: var(--transition);
+  min-height: 44px;
 }
 
 .tab:hover {
@@ -869,6 +929,8 @@ main.container {
   background: var(--primary-dark);
   padding: 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .tool-nav .container {
@@ -878,13 +940,17 @@ main.container {
 
 .tool-nav-link {
   display: block;
-  padding: 0.6rem 1.25rem;
+  padding: 0.75rem 1.25rem;
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
   font-size: 0.85rem;
   font-weight: 600;
   transition: var(--transition);
   border-bottom: 2px solid transparent;
+  white-space: nowrap;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
 }
 
 .tool-nav-link:hover {
@@ -1198,6 +1264,7 @@ main.container {
   cursor: pointer;
   transition: var(--transition);
   text-align: center;
+  min-height: 44px;
 }
 
 .dest-card:hover {
@@ -1831,6 +1898,18 @@ main.container {
   opacity: 0.6;
 }
 
+/* Reduced motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 /* Responsive */
 
 @media (min-width: 600px) {
@@ -1927,6 +2006,7 @@ main.container {
     padding: 0.6rem 0.9rem;
     font-size: 0.85rem;
     white-space: nowrap;
+    min-height: 44px;
   }
 
   .route-details {
@@ -1939,7 +2019,10 @@ main.container {
 
   .station-tag {
     font-size: 0.75rem;
-    padding: 0.2rem 0.5rem;
+    padding: 0.25rem 0.6rem;
+    min-height: 28px;
+    display: inline-flex;
+    align-items: center;
   }
 
   .impact-header {
@@ -1991,6 +2074,38 @@ main.container {
     white-space: nowrap;
     flex-shrink: 0;
     font-size: 0.8rem;
-    padding: 0.4rem 0.75rem;
+    padding: 0.5rem 0.85rem;
+    min-height: 44px;
+  }
+
+  .station-picker select,
+  .input-step select {
+    max-width: 100%;
+  }
+
+  .direction-toggle {
+    max-width: 100%;
+  }
+
+  .tool-nav-link {
+    padding: 0.75rem 0.75rem;
+    font-size: 0.8rem;
+  }
+
+  .share-btn {
+    width: 100%;
+    padding: 0.85rem 2rem;
+    min-height: 44px;
+  }
+
+  .callout-btn {
+    display: block;
+    padding: 0.85rem 2rem;
+    min-height: 44px;
+  }
+
+  .resource-link {
+    padding: 1rem;
+    min-height: 44px;
   }
 }

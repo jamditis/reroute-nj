@@ -319,8 +319,10 @@
     LINE_ORDER.forEach(function (lineId) {
       var line = LINE_DATA[lineId];
       var btn = document.createElement("button");
-      btn.className = "line-btn" + (lineId === currentLineId ? " active" : "");
+      var isActive = lineId === currentLineId;
+      btn.className = "line-btn" + (isActive ? " active" : "");
       btn.setAttribute("data-line", lineId);
+      btn.setAttribute("aria-pressed", isActive ? "true" : "false");
       btn.textContent = line.shortName;
       btn.addEventListener("click", function () {
         selectLine(lineId);
@@ -337,10 +339,9 @@
     // Update nav active state
     var btns = $lineNav.querySelectorAll(".line-btn");
     for (var i = 0; i < btns.length; i++) {
-      btns[i].classList.toggle(
-        "active",
-        btns[i].getAttribute("data-line") === lineId
-      );
+      var isActive = btns[i].getAttribute("data-line") === lineId;
+      btns[i].classList.toggle("active", isActive);
+      btns[i].setAttribute("aria-pressed", isActive ? "true" : "false");
     }
 
     // Update badge
@@ -396,21 +397,47 @@
   // =========================================================================
   // TABS
   // =========================================================================
+  function activateTab(tab) {
+    var targetTab = tab.getAttribute("data-tab");
+    tabs.forEach(function (t) {
+      t.classList.remove("active");
+      t.setAttribute("aria-selected", "false");
+      t.setAttribute("tabindex", "-1");
+    });
+    tab.classList.add("active");
+    tab.setAttribute("aria-selected", "true");
+    tab.setAttribute("tabindex", "0");
+    tab.focus();
+    panels.forEach(function (p) {
+      p.classList.remove("active");
+    });
+    var targetPanel = document.getElementById("panel-" + targetTab);
+    if (targetPanel) targetPanel.classList.add("active");
+  }
+
   function initTabs() {
     tabs.forEach(function (tab) {
       tab.addEventListener("click", function () {
-        var targetTab = this.getAttribute("data-tab");
-        tabs.forEach(function (t) {
-          t.classList.remove("active");
-          t.setAttribute("aria-selected", "false");
-        });
-        this.classList.add("active");
-        this.setAttribute("aria-selected", "true");
-        panels.forEach(function (p) {
-          p.classList.remove("active");
-        });
-        var targetPanel = document.getElementById("panel-" + targetTab);
-        if (targetPanel) targetPanel.classList.add("active");
+        activateTab(this);
+      });
+      tab.addEventListener("keydown", function (e) {
+        var index = Array.prototype.indexOf.call(tabs, this);
+        var newIndex;
+        if (e.key === "ArrowRight" || e.key === "ArrowDown") {
+          e.preventDefault();
+          newIndex = (index + 1) % tabs.length;
+          activateTab(tabs[newIndex]);
+        } else if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
+          e.preventDefault();
+          newIndex = (index - 1 + tabs.length) % tabs.length;
+          activateTab(tabs[newIndex]);
+        } else if (e.key === "Home") {
+          e.preventDefault();
+          activateTab(tabs[0]);
+        } else if (e.key === "End") {
+          e.preventDefault();
+          activateTab(tabs[tabs.length - 1]);
+        }
       });
     });
   }
@@ -1036,7 +1063,7 @@
     return (
       '<div class="route-card">' +
       '<div class="route-card-header">' +
-      '<span class="mode-icon">' + icon + "</span>" +
+      '<span class="mode-icon" aria-hidden="true">' + icon + "</span>" +
       "<div>" +
       "<h3>" + title + "</h3>" +
       '<span class="' + badgeClass + '">' + esc(badgeText) + "</span>" +
@@ -1055,7 +1082,7 @@
     return (
       '<div class="route-card other">' +
       '<div class="route-card-header">' +
-      '<span class="mode-icon">&#x1F6B6;</span>' +
+      '<span class="mode-icon" aria-hidden="true">&#x1F6B6;</span>' +
       "<div><h3>Other options to consider</h3></div>" +
       "</div>" +
       '<div class="route-card-body"><div class="route-tips">' +
@@ -1210,7 +1237,9 @@
         if (dir === currentDirection) return;
         currentDirection = dir;
         for (var j = 0; j < btns.length; j++) {
-          btns[j].classList.toggle("active", btns[j].getAttribute("data-dir") === dir);
+          var isActive = btns[j].getAttribute("data-dir") === dir;
+          btns[j].classList.toggle("active", isActive);
+          btns[j].setAttribute("aria-pressed", isActive ? "true" : "false");
         }
         // Refresh content for new direction
         if (currentStationId) onStationChange();

@@ -99,7 +99,9 @@
 </head>
 <body>
 
-  <header class="header">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="header" role="banner">
     <div class="header-inner">
       <a href="index.html" class="brand-link"><div class="brand">Reroute<span>NJ</span></div></a>
       <p class="tagline">Interactive cutover map</p>
@@ -107,34 +109,34 @@
     </div>
   </header>
 
-  <nav class="tool-nav">
+  <nav class="tool-nav" aria-label="Site tools">
     <div class="container">
       <a href="index.html" class="tool-nav-link">Line guide</a>
       <a href="compare.html" class="tool-nav-link">Commute comparison</a>
       <a href="coverage.html" class="tool-nav-link">News coverage</a>
-      <a href="map.html" class="tool-nav-link active">Map</a>
+      <a href="map.html" class="tool-nav-link active" aria-current="page">Map</a>
       <a href="embed.html" class="tool-nav-link">Embed &amp; share</a>
     </div>
   </nav>
 
-  <main class="container">
+  <main class="container" id="main-content">
 
     <section class="compare-hero">
       <h1>Portal Bridge cutover map</h1>
       <p>See the geography of the cutover: the Portal Bridge location, affected stations, key transfer hubs, and alternative routes.</p>
     </section>
 
-    <div class="map-filter-bar" id="map-filters">
-      <button class="map-filter-btn active" data-filter="all">All</button>
-      <button class="map-filter-btn" data-filter="montclair-boonton">Montclair-Boonton</button>
-      <button class="map-filter-btn" data-filter="morris-essex">Morris &amp; Essex</button>
-      <button class="map-filter-btn" data-filter="northeast-corridor">Northeast Corridor</button>
-      <button class="map-filter-btn" data-filter="north-jersey-coast">North Jersey Coast</button>
-      <button class="map-filter-btn" data-filter="raritan-valley">Raritan Valley</button>
-      <button class="map-filter-btn" data-filter="transfer-hubs">Transfer hubs</button>
+    <div class="map-filter-bar" id="map-filters" role="group" aria-label="Filter map by line">
+      <button class="map-filter-btn active" data-filter="all" aria-pressed="true">All</button>
+      <button class="map-filter-btn" data-filter="montclair-boonton" aria-pressed="false">Montclair-Boonton</button>
+      <button class="map-filter-btn" data-filter="morris-essex" aria-pressed="false">Morris &amp; Essex</button>
+      <button class="map-filter-btn" data-filter="northeast-corridor" aria-pressed="false">Northeast Corridor</button>
+      <button class="map-filter-btn" data-filter="north-jersey-coast" aria-pressed="false">North Jersey Coast</button>
+      <button class="map-filter-btn" data-filter="raritan-valley" aria-pressed="false">Raritan Valley</button>
+      <button class="map-filter-btn" data-filter="transfer-hubs" aria-pressed="false">Transfer hubs</button>
     </div>
 
-    <div id="map"></div>
+    <div id="map" role="application" aria-label="Interactive map showing Portal Bridge cutover stations and routes"></div>
 
     <div class="map-legend">
       <div class="legend-title">Legend</div>
@@ -187,7 +189,7 @@
 
   </main>
 
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="container">
       <p class="disclaimer"><strong>Reroute NJ</strong> is an independent community tool. Not affiliated with or endorsed by NJ Transit, Amtrak, or any government agency. Map data &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors. Tiles &copy; <a href="https://carto.com/" target="_blank" rel="noopener">CARTO</a>.</p>
       <p class="credit">Built by <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">Joe Amditis</a></p>
