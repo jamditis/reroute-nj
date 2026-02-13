@@ -75,5 +75,14 @@
   </div>
   <script src="js/line-data.js"></script>
   <script src="js/cards.js"></script>
+  <script>
+    // Auto-export as PNG when ?export=true is present
+    (function () {
+      var match = window.location.search.match(/[?&]export=([^&]*)/);
+      if (match && decodeURIComponent(match[1]) === "true" && window.exportCardAsPng) {
+        window.exportCardAsPng();
+      }
+    })();
+  </script>
 </body>
 </html>

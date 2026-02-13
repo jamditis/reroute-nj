@@ -149,10 +149,326 @@
     return html;
   }
 
+  // --- Canvas PNG export helpers ---
+
+  var FONT_FAMILY = '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
+
+  function fillRoundRect(ctx, x, y, w, h, r) {
+    ctx.beginPath();
+    ctx.moveTo(x + r, y);
+    ctx.arcTo(x + w, y, x + w, y + h, r);
+    ctx.arcTo(x + w, y + h, x, y + h, r);
+    ctx.arcTo(x, y + h, x, y, r);
+    ctx.arcTo(x, y, x + w, y, r);
+    ctx.closePath();
+    ctx.fill();
+  }
+
+  function wrapText(ctx, text, x, y, maxWidth, lineHeight) {
+    var words = text.split(" ");
+    var line = "";
+    var lines = [];
+    for (var i = 0; i < words.length; i++) {
+      var test = line ? line + " " + words[i] : words[i];
+      if (ctx.measureText(test).width > maxWidth && line) {
+        lines.push(line);
+        line = words[i];
+      } else {
+        line = test;
+      }
+    }
+    if (line) lines.push(line);
+    for (var j = 0; j < lines.length; j++) {
+      ctx.fillText(lines[j], x, y + j * lineHeight);
+    }
+    return lines.length;
+  }
+
+  function renderCardToCanvas(type, lineId, stationId, theme) {
+    var isDark = theme === "dark";
+    var isSummary = type === "summary" || (!lineId && type !== "station");
+    var width = 600;
+    var height = isSummary ? 500 : 400;
+    var pad = 24;
+    var canvas = document.createElement("canvas");
+    canvas.width = width;
+    canvas.height = height;
+    var ctx = canvas.getContext("2d");
+
+    // Background
+    ctx.fillStyle = isDark ? "#1a2332" : "#ffffff";
+    fillRoundRect(ctx, 0, 0, width, height, 12);
+
+    var textColor = isDark ? "#e8ecf1" : "#1a2332";
+    var subtextColor = isDark ? "#9eaab8" : "#73849a";
+    var bodyColor = isDark ? "#b0bec5" : "#4a5568";
+
+    if (isSummary) {
+      return renderSummaryToCanvas(ctx, canvas, isDark, textColor, subtextColor, bodyColor, width, height, pad);
+    }
+
+    var line = LINE_DATA[lineId];
+    if (!line) {
+      return renderSummaryToCanvas(ctx, canvas, isDark, textColor, subtextColor, bodyColor, width, height, pad);
+    }
+
+    // Color bar
+    ctx.fillStyle = line.color;
+    ctx.fillRect(0, 0, width, 8);
+
+    var curY = 8 + pad;
+
+    // Station card: station name + line context
+    if (type === "station" && stationId) {
+      var station = null;
+      for (var si = 0; si < line.stations.length; si++) {
+        if (line.stations[si].id === stationId) {
+          station = line.stations[si];
+          break;
+        }
+      }
+      if (station) {
+        ctx.fillStyle = textColor;
+        ctx.font = "bold 20px " + FONT_FAMILY;
+        ctx.fillText(station.name, pad, curY + 16);
+        curY += 28;
+        ctx.fillStyle = subtextColor;
+        ctx.font = "13px " + FONT_FAMILY;
+        ctx.fillText(line.name + " \u00B7 Zone " + station.zone, pad, curY + 10);
+        curY += 22;
+      } else {
+        // Station not found, render as line card
+        ctx.fillStyle = textColor;
+        ctx.font = "bold 18px " + FONT_FAMILY;
+        ctx.fillText(line.name, pad, curY + 14);
+        curY += 26;
+      }
+    } else {
+      // Line card: line name
+      ctx.fillStyle = textColor;
+      ctx.font = "bold 18px " + FONT_FAMILY;
+      ctx.fillText(line.name, pad, curY + 14);
+      curY += 26;
+    }
+
+    // Impact badge
+    var impactText = (IMPACT_LABELS[line.impactType] || line.impactType).toUpperCase();
+    var isSevere = line.impactLevel === "severe";
+    ctx.font = "600 11px " + FONT_FAMILY;
+    var badgeWidth = ctx.measureText(impactText).width + 20;
+    ctx.fillStyle = isDark
+      ? (isSevere ? "#4a1c1c" : "#4a3c0a")
+      : (isSevere ? "#fde8e8" : "#fff3cd");
+    fillRoundRect(ctx, pad, curY, badgeWidth, 22, 11);
+    ctx.fillStyle = isDark
+      ? (isSevere ? "#f87171" : "#fbbf24")
+      : (isSevere ? "#c41e1e" : "#856404");
+    ctx.fillText(impactText, pad + 10, curY + 15);
+    curY += 32;
+
+    // Summary text
+    ctx.fillStyle = bodyColor;
+    ctx.font = "14px " + FONT_FAMILY;
+    var summaryLines = wrapText(ctx, line.summary, pad, curY + 12, width - pad * 2, 20);
+    curY += summaryLines * 20 + 18;
+
+    // Train stats
+    if (typeof line.trainsBefore === "number") {
+      var statBoxWidth = (width - pad * 2 - 16) / 2;
+      for (var s = 0; s < 2; s++) {
+        var sx = pad + s * (statBoxWidth + 16);
+        var val = s === 0 ? String(line.trainsBefore) : String(line.trainsAfter);
+        var label = s === 0 ? "TRAINS BEFORE" : "TRAINS DURING";
+        ctx.fillStyle = textColor;
+        ctx.font = "bold 22px " + FONT_FAMILY;
+        ctx.textAlign = "center";
+        ctx.fillText(val, sx + statBoxWidth / 2, curY + 18);
+        ctx.fillStyle = subtextColor;
+        ctx.font = "10px " + FONT_FAMILY;
+        ctx.fillText(label, sx + statBoxWidth / 2, curY + 34);
+      }
+      ctx.textAlign = "left";
+      curY += 46;
+    } else {
+      var halfW = (width - pad * 2 - 16) / 2;
+      for (var sb = 0; sb < 2; sb++) {
+        var bx = pad + sb * (halfW + 16);
+        var bval = sb === 0 ? String(line.trainsBefore) : String(line.trainsAfter);
+        var blabel = sb === 0 ? "BEFORE" : "DURING";
+        ctx.fillStyle = textColor;
+        ctx.font = "bold 13px " + FONT_FAMILY;
+        ctx.textAlign = "center";
+        ctx.fillText(bval, bx + halfW / 2, curY + 16);
+        ctx.fillStyle = subtextColor;
+        ctx.font = "10px " + FONT_FAMILY;
+        ctx.fillText(blabel, bx + halfW / 2, curY + 32);
+      }
+      ctx.textAlign = "left";
+      curY += 46;
+    }
+
+    // Alternatives
+    var alts = ALTERNATIVES[line.impactType] || [];
+    if (alts.length > 0) {
+      ctx.fillStyle = bodyColor;
+      ctx.font = "600 12px " + FONT_FAMILY;
+      ctx.fillText("Your alternatives", pad, curY + 10);
+      curY += 20;
+      ctx.font = "12px " + FONT_FAMILY;
+      for (var ai = 0; ai < alts.length; ai++) {
+        ctx.fillStyle = bodyColor;
+        ctx.fillText(alts[ai], pad, curY + 12);
+        curY += 20;
+        if (ai < alts.length - 1) {
+          ctx.strokeStyle = isDark ? "#2d3e54" : "#f0f2f5";
+          ctx.beginPath();
+          ctx.moveTo(pad, curY);
+          ctx.lineTo(width - pad, curY);
+          ctx.stroke();
+        }
+      }
+      curY += 8;
+    }
+
+    // Dates
+    ctx.fillStyle = subtextColor;
+    ctx.font = "12px " + FONT_FAMILY;
+    ctx.fillText("Feb 15 \u2013 Mar 15, 2026", pad, curY + 10);
+
+    // Attribution at bottom
+    ctx.fillStyle = "#9eaab8";
+    ctx.font = "11px " + FONT_FAMILY;
+    ctx.textAlign = "center";
+    ctx.fillText("Powered by Reroute NJ \u00B7 reroutenj.org", width / 2, height - 12);
+    ctx.textAlign = "left";
+
+    return canvas;
+  }
+
+  function renderSummaryToCanvas(ctx, canvas, isDark, textColor, subtextColor, bodyColor, width, height, pad) {
+    var curY = pad;
+
+    // Title
+    ctx.fillStyle = textColor;
+    ctx.font = "bold 20px " + FONT_FAMILY;
+    ctx.fillText("Portal Bridge cutover", pad, curY + 16);
+    curY += 30;
+
+    // Summary text
+    ctx.fillStyle = bodyColor;
+    ctx.font = "14px " + FONT_FAMILY;
+    var summaryStr = "Five NJ Transit lines affected from Feb 15 \u2013 Mar 15, 2026. Service reduced while the new Portal North Bridge is connected.";
+    var sLines = wrapText(ctx, summaryStr, pad, curY + 12, width - pad * 2, 20);
+    curY += sLines * 20 + 20;
+
+    // Line rows
+    var rowH = 36;
+    var rowGap = 6;
+    for (var i = 0; i < LINE_ORDER.length; i++) {
+      var id = LINE_ORDER[i];
+      var line = LINE_DATA[id];
+      var rowY = curY;
+      var isSevere = line.impactLevel === "severe";
+
+      // Row background
+      ctx.fillStyle = isDark ? "#243044" : "#f8f9fb";
+      fillRoundRect(ctx, pad, rowY, width - pad * 2, rowH, 6);
+
+      // Dot
+      ctx.fillStyle = line.color;
+      ctx.beginPath();
+      ctx.arc(pad + 16, rowY + rowH / 2, 5, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Line name
+      ctx.fillStyle = textColor;
+      ctx.font = "600 13px " + FONT_FAMILY;
+      ctx.fillText(line.shortName, pad + 30, rowY + rowH / 2 + 4);
+
+      // Impact badge on right side
+      var impactLabel = IMPACT_LABELS[line.impactType] || "";
+      ctx.font = "600 10px " + FONT_FAMILY;
+      var impBadgeW = ctx.measureText(impactLabel).width + 16;
+      var impBadgeX = width - pad - impBadgeW - 80;
+      ctx.fillStyle = isDark
+        ? (isSevere ? "#4a1c1c" : "#4a3c0a")
+        : (isSevere ? "#fde8e8" : "#fff3cd");
+      fillRoundRect(ctx, impBadgeX, rowY + 8, impBadgeW, 20, 10);
+      ctx.fillStyle = isDark
+        ? (isSevere ? "#f87171" : "#fbbf24")
+        : (isSevere ? "#c41e1e" : "#856404");
+      ctx.fillText(impactLabel, impBadgeX + 8, rowY + 22);
+
+      // Train count on far right
+      var trainInfo = typeof line.trainsBefore === "number"
+        ? String(line.trainsBefore) + " \u2192 " + String(line.trainsAfter)
+        : "Suspended";
+      ctx.fillStyle = subtextColor;
+      ctx.font = "12px " + FONT_FAMILY;
+      ctx.textAlign = "right";
+      ctx.fillText(trainInfo, width - pad - 6, rowY + rowH / 2 + 4);
+      ctx.textAlign = "left";
+
+      curY += rowH + rowGap;
+    }
+
+    curY += 8;
+
+    // Dates
+    ctx.fillStyle = subtextColor;
+    ctx.font = "12px " + FONT_FAMILY;
+    ctx.fillText("Feb 15 \u2013 Mar 15, 2026", pad, curY + 10);
+
+    // Attribution at bottom
+    ctx.fillStyle = "#9eaab8";
+    ctx.font = "11px " + FONT_FAMILY;
+    ctx.textAlign = "center";
+    ctx.fillText("Powered by Reroute NJ \u00B7 reroutenj.org", width / 2, height - 12);
+    ctx.textAlign = "left";
+
+    return canvas;
+  }
+
+  function exportCardAsPng() {
+    var type = getParam("type") || "summary";
+    var lineId = getParam("line");
+    var stationId = getParam("station");
+    var theme = getParam("theme");
+
+    // Validate lineId
+    if (lineId && !LINE_DATA[lineId]) {
+      lineId = null;
+    }
+
+    var canvas = renderCardToCanvas(type, lineId, stationId, theme);
+    var filename;
+    if (type === "station" && lineId && stationId) {
+      filename = "reroute-nj-station-" + stationId + ".png";
+    } else if (type === "line" && lineId) {
+      filename = "reroute-nj-line-" + lineId + ".png";
+    } else {
+      filename = "reroute-nj-summary.png";
+    }
+
+    canvas.toBlob(function (blob) {
+      if (!blob) return;
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement("a");
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(function () { URL.revokeObjectURL(url); }, 100);
+    }, "image/png");
+  }
+
   // Expose for PNG export (Task 4) and cross-frame calls
   window.renderLineCard = renderLineCard;
   window.renderStationCard = renderStationCard;
   window.renderSummaryCard = renderSummaryCard;
+  window.renderCardToCanvas = renderCardToCanvas;
+  window.exportCardAsPng = exportCardAsPng;
 
   function init() {
     var type = getParam("type") || "summary";
