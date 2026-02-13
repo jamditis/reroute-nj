@@ -44,7 +44,8 @@
     "day": "天",
     "remaining_phase1": "第一阶段剩余",
     "phase1_complete": "第一阶段已完成",
-    "phase2_expected": "第二阶段预计"
+    "phase2_expected": "第二阶段预计",
+    "nav_blog": "博客"
   },
   "index": {
     "title": "Reroute NJ — Portal Bridge转换指南",

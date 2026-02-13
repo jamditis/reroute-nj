@@ -194,6 +194,7 @@ def replace_nav_links(html, translations):
         "News coverage": "common.nav_news_coverage",
         "Map": "common.nav_map",
         "Embed &amp; share": "common.nav_embed",
+        "Blog": "common.nav_blog",
     }
     for eng_text, key in nav_map.items():
         translated = get_translation(translations, key)
