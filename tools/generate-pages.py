@@ -738,6 +738,7 @@ def replace_page_specific_content(html, translations, page_key):
             ("coverage.category_label", "Category"),
             ("coverage.line_label", "Line"),
             ("coverage.direction_label", "Direction"),
+            ("coverage.sort_label", "Sort"),
             ("coverage.search_label", "Search"),
         ]:
             translated = get_translation(translations, key)
@@ -767,6 +768,16 @@ def replace_page_specific_content(html, translations, page_key):
             ("coverage.dir_nj_nyc", "NJ to NYC"),
             ("coverage.dir_nyc_nj", "NYC to NJ"),
             ("coverage.dir_both", "Both directions"),
+        ]:
+            translated = get_translation(translations, key)
+            if translated:
+                html = html.replace(f">{eng_text}</option>", f">{translated}</option>")
+
+        # Sort options
+        for key, eng_text in [
+            ("coverage.sort_newest", "Newest first"),
+            ("coverage.sort_relevance", "Most relevant"),
+            ("coverage.sort_oldest", "Oldest first"),
         ]:
             translated = get_translation(translations, key)
             if translated:

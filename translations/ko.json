@@ -199,7 +199,18 @@
     "cat_community": "커뮤니티",
     "dir_nj_nyc": "NJ에서 NYC",
     "dir_nyc_nj": "NYC에서 NJ",
-    "dir_both": "양방향"
+    "dir_both": "양방향",
+    "sort_label": "정렬",
+    "sort_newest": "최신순",
+    "sort_relevance": "관련도순",
+    "sort_oldest": "오래된순",
+    "showing": "표시 중",
+    "of": "/",
+    "articles_count": "개 기사",
+    "prev": "이전",
+    "next": "다음",
+    "page": "페이지",
+    "pagination_label": "기사 페이지 탐색"
   },
   "map": {
     "title": "인터랙티브 지도 — Reroute NJ",

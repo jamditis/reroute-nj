@@ -159,13 +159,23 @@
           <option value="both">Both directions</option>
         </select>
       </div>
+      <div class="filter-group">
+        <label for="filter-sort">Sort</label>
+        <select id="filter-sort">
+          <option value="newest">Newest first</option>
+          <option value="relevance">Most relevant</option>
+          <option value="oldest">Oldest first</option>
+        </select>
+      </div>
       <div class="filter-group filter-search">
         <label for="filter-search">Search</label>
         <input type="text" id="filter-search" placeholder="Search articles&hellip;">
       </div>
     </section>
 
+    <p class="coverage-result-count" id="coverage-result-count" aria-live="polite"></p>
     <section class="coverage-feed" id="coverage-feed" aria-live="polite" aria-label="News articles" tabindex="-1"></section>
+    <div class="coverage-pagination" id="coverage-pagination" aria-live="polite"></div>
 
   </main>
 

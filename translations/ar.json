@@ -199,7 +199,18 @@
     "cat_community": "مجتمعي",
     "dir_nj_nyc": "NJ إلى NYC",
     "dir_nyc_nj": "NYC إلى NJ",
-    "dir_both": "كلا الاتجاهين"
+    "dir_both": "كلا الاتجاهين",
+    "sort_label": "ترتيب",
+    "sort_newest": "الأحدث أولاً",
+    "sort_relevance": "الأكثر صلة",
+    "sort_oldest": "الأقدم أولاً",
+    "showing": "عرض",
+    "of": "من",
+    "articles_count": "مقالات",
+    "prev": "السابق",
+    "next": "التالي",
+    "page": "صفحة",
+    "pagination_label": "ترقيم صفحات المقالات"
   },
   "map": {
     "title": "خريطة تفاعلية — Reroute NJ",

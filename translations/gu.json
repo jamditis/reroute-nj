@@ -199,7 +199,18 @@
     "cat_community": "સમુદાય",
     "dir_nj_nyc": "NJ થી NYC",
     "dir_nyc_nj": "NYC થી NJ",
-    "dir_both": "બંને દિશાઓ"
+    "dir_both": "બંને દિશાઓ",
+    "sort_label": "ક્રમ",
+    "sort_newest": "નવીનતમ પ્રથમ",
+    "sort_relevance": "સૌથી સુસંગત",
+    "sort_oldest": "સૌથી જૂનું પ્રથમ",
+    "showing": "બતાવી રહ્યું છે",
+    "of": "માંથી",
+    "articles_count": "લેખો",
+    "prev": "પાછલું",
+    "next": "આગળ",
+    "page": "પૃષ્ઠ",
+    "pagination_label": "લેખ પૃષ્ઠાંકન"
   },
   "map": {
     "title": "ઇન્ટરેક્ટિવ નકશો — Reroute NJ",

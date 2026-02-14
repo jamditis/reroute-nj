@@ -199,7 +199,18 @@
     "cat_community": "सामुदायिक",
     "dir_nj_nyc": "NJ से NYC",
     "dir_nyc_nj": "NYC से NJ",
-    "dir_both": "दोनों दिशाएं"
+    "dir_both": "दोनों दिशाएं",
+    "sort_label": "क्रमबद्ध करें",
+    "sort_newest": "नवीनतम पहले",
+    "sort_relevance": "सबसे प्रासंगिक",
+    "sort_oldest": "सबसे पुराने पहले",
+    "showing": "दिखा रहा है",
+    "of": "में से",
+    "articles_count": "लेख",
+    "prev": "पिछला",
+    "next": "अगला",
+    "page": "पृष्ठ",
+    "pagination_label": "लेख पृष्ठांकन"
   },
   "map": {
     "title": "इंटरैक्टिव नक्शा — Reroute NJ",
