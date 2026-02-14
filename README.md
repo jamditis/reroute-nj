@@ -63,15 +63,16 @@ reroute-nj/
 ├── sitemap.xml             # All 90 pages with hreflang cross-references
 ├── llms.txt                # AI search engine discoverability
 ├── js/
+│   ├── i18n.js             # Translation loader with t() function
 │   ├── shared.js           # Shared globals: esc(), countdown, date constants
+│   ├── line-data.js        # LINE_DATA and LINE_ORDER globals
 │   ├── app.js              # Line guide logic (IIFE)
 │   ├── compare.js          # Comparison tool logic (IIFE)
 │   ├── coverage.js         # Coverage feed logic (IIFE)
-│   ├── embed.js            # Embed configurator (IIFE)
+│   ├── map.js              # Leaflet map logic (IIFE)
 │   ├── cards.js            # Card rendering + Canvas PNG export (IIFE)
-│   ├── line-data.js        # LINE_DATA and LINE_ORDER globals
-│   ├── widget.js           # Standalone script-tag embed library (IIFE)
-│   └── i18n.js             # Translation loader with t() function
+│   ├── embed.js            # Embed configurator (IIFE)
+│   └── widget.js           # Standalone script-tag embed library (IIFE)
 ├── css/
 │   └── styles.css          # All styles, CSS custom properties for theming
 ├── img/

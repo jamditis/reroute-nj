@@ -4,51 +4,96 @@ Project-specific instructions for Claude Code sessions working on Reroute NJ.
 
 ## Project overview
 
-Reroute NJ is a zero-build static site helping NJ Transit riders navigate the Portal North Bridge cutover (Feb 15 – Mar 15, 2026). Five tools, 11 languages, no framework.
+Reroute NJ is a zero-build static site helping NJ Transit riders navigate the Portal North Bridge cutover (Feb 15 – Mar 15, 2026). Six tools, a blog, an embed system, 11 languages, no framework.
 
 **Live site:** https://reroutenj.org
+**Repo:** https://github.com/jamditis/reroute-nj
 
 ## Architecture
 
 No npm, no bundler, no framework. Do not add a build step.
 
 ```
-index.html              — Line guide (main tool)
-compare.html            — Commute comparison
-coverage.html           — News coverage feed
-map.html                — Interactive Leaflet map
-embed.html              — Embed & share for publishers
-blog.html               — Blog index (lists posts)
-blog/                   — Blog posts (e.g., blog/why-we-built-reroute-nj.html)
-robots.txt              — Crawler guidance + AI bot allowances
-sitemap.xml             — All 90 pages with hreflang cross-refs
-llms.txt                — AI search engine discoverability
-card.html               — Info card renderer (URL params → card)
-widget.html             — Mini-widget renderer (URL params → tool)
-js/app.js               — Line guide logic (IIFE, ~1000 lines)
-js/compare.js           — Comparison tool (IIFE, ~700 lines)
-js/coverage.js          — Coverage feed (IIFE)
-js/i18n.js              — Runtime translation loader
-js/shared.js            — Shared globals: esc(), countdown, dates, initEmbedMode()
-js/line-data.js         — LINE_DATA and LINE_ORDER globals (shared by app, cards, widgets)
-js/cards.js             — Card rendering + Canvas PNG export (IIFE)
-js/embed.js             — Embed configurator logic (IIFE)
-js/widget.js            — Standalone script-tag embed library (IIFE)
-css/styles.css          — All styles, CSS custom properties in :root
-data/coverage.json      — Curated article metadata
-translations/en.json    — English source strings (~175 keys)
-translations/{lang}.json — 10 translated language files
-tools/generate-pages.py — Static page generator for translations
-{lang}/                 — Generated translated pages (80 total, 8 pages × 10 languages)
+index.html                — Line guide (main tool)
+compare.html              — Commute comparison
+coverage.html             — News coverage feed
+map.html                  — Interactive Leaflet map
+embed.html                — Embed & share configurator
+blog.html                 — Blog index (lists posts)
+blog/                     — Blog posts (individual articles)
+  why-we-built-reroute-nj.html
+  new-embed-system.html
+card.html                 — Info card renderer (URL params → card)
+widget.html               — Mini-widget renderer (URL params → tool)
+robots.txt                — Crawler guidance + AI bot allowances
+sitemap.xml               — All 90 pages with hreflang cross-refs
+llms.txt                  — AI search engine discoverability
+js/
+  i18n.js                 — Runtime translation loader (105 lines)
+  shared.js               — Shared globals: esc(), countdown, dates, a11y (192 lines)
+  line-data.js            — LINE_DATA and LINE_ORDER globals (212 lines)
+  app.js                  — Line guide logic (IIFE, 1055 lines)
+  compare.js              — Comparison tool (IIFE, 706 lines)
+  coverage.js             — Coverage feed (IIFE, 240 lines)
+  map.js                  — Leaflet map logic (IIFE, 418 lines)
+  cards.js                — Card rendering + Canvas PNG export (IIFE, 593 lines)
+  embed.js                — Embed configurator logic (IIFE, 786 lines)
+  widget.js               — Standalone script-tag embed library (IIFE, 163 lines)
+css/
+  styles.css              — All styles, CSS custom properties in :root (3167 lines)
+img/
+  favicon.svg             — SVG favicon
+  og-image.png            — OpenGraph social preview image
+  screenshot.png          — README screenshot
+data/
+  coverage.json           — Curated article metadata (38 articles)
+translations/
+  en.json                 — English source strings (~300 keys)
+  {lang}.json             — 10 translated language files
+tools/
+  generate-pages.py       — Static page generator for translations (1556 lines)
+docs/plans/               — Implementation design docs (SEO, embed system)
+.github/
+  workflows/static.yml    — GitHub Pages deployment
+  ISSUE_TEMPLATE/         — Bug report, data correction, feature request, content suggestion
+  pull_request_template.md
+{lang}/                   — Generated translated pages (80 total, 8 pages × 10 languages)
 ```
+
+### Script load order
+
+Pages load JS in this order — dependencies must be satisfied:
+
+1. `i18n.js` — defines `window.t()` and `window._T`
+2. `shared.js` — depends on `t()`; defines `esc()`, `updateCountdown()`, date constants, a11y toggles
+3. `line-data.js` — standalone; defines `LINE_DATA`, `LINE_ORDER` globals
+4. Page-specific script (`app.js`, `compare.js`, `coverage.js`, `map.js`, `embed.js`, `cards.js`)
+
+`widget.js` is standalone (no dependencies) — loaded via script tag by external sites.
+
+### Key globals
+
+| Global | Defined in | Purpose |
+|--------|-----------|---------|
+| `window.t(key)` | `i18n.js` | Translation lookup (dot notation) |
+| `window._T` | `i18n.js` (overwritten by generator) | Translation object |
+| `esc(str)` | `shared.js` | XSS-safe HTML escaping |
+| `updateCountdown()` | `shared.js` | Updates #countdown element |
+| `CUTOVER_START`, `CUTOVER_END` | `shared.js` | Date constants for the cutover period |
+| `LINE_DATA` | `line-data.js` | All transit line/station data |
+| `LINE_ORDER` | `line-data.js` | Display order of lines |
+| `initEmbedMode()` | `shared.js` | Hides chrome when `?embed=true` |
 
 ## Code conventions
 
-- **IIFE pattern** — All JS wrapped in `(function() { "use strict"; ... })()`
-- **`var` declarations** — ES5-style for browser compatibility, do not convert to `let`/`const`
-- **`esc()` for HTML** — Always sanitize with `esc()` before DOM insertion
-- **CSS custom properties** — Use existing `--var-name` tokens from `:root`
-- **No external dependencies** — No CDN libraries, no npm packages
+- **IIFE pattern** — All JS wrapped in `(function() { "use strict"; ... })()`. Exception: `line-data.js` intentionally exposes globals without IIFE.
+- **`var` declarations** — ES5-style for browser compatibility. Do not convert to `let`/`const`.
+- **`esc()` for HTML** — Always sanitize with `esc()` before DOM insertion. Never use `innerHTML` with unsanitized data.
+- **CSS custom properties** — Use existing `--var-name` tokens from `:root`. Add new ones to `:root` if needed.
+- **No external dependencies** — No CDN libraries, no npm packages. Exception: `map.html` loads Leaflet via CDN.
+- **Mobile-first responsive** — Breakpoints at 768px and 480px. Test changes at both sizes.
+- **Data accuracy** — All transit info in `LINE_DATA` must be traceable to official NJ Transit sources.
+- **EditorConfig** — 2-space indentation, UTF-8, LF line endings, trim trailing whitespace.
 
 ## Translation system
 
@@ -62,23 +107,31 @@ Hybrid approach: build-time HTML replacement + runtime JS translations.
 4. `window._T` is injected as an inline script for runtime JS translations
 5. Output goes to `{lang}/` directories (e.g., `es/index.html`)
 
+### Supported languages
+
+English (`en`), Spanish (`es`), Chinese Simplified (`zh`), Tagalog (`tl`), Korean (`ko`), Portuguese (`pt`), Gujarati (`gu`), Hindi (`hi`), Italian (`it`), Arabic (`ar`, RTL), Polish (`pl`).
+
 ### SEO in the translation pipeline
 
-`generate-pages.py` handles three SEO-related replacements on every translated page:
+`generate-pages.py` handles four SEO-related replacements on every translated page:
 
 - **`replace_meta_description()`** — Swaps `<meta name="description">`, `og:description`, and `twitter:description` with translated values from `meta.{page}_description` and `meta.{page}_og_description` keys
 - **`fix_og_url()`** — Rewrites `og:url` to point to the translated page (e.g., `https://reroutenj.org/es/index.html`)
 - **`add_canonical()`** — Replaces or inserts `<link rel="canonical">` pointing to the translated page's own URL
+- **`add_hreflang_tags()`** — Adds `<link rel="alternate" hreflang="...">` tags for all 11 languages + x-default
 
 These run after `replace_meta()` in the `generate_page()` function. If a translation key is missing, the English value passes through unchanged.
 
 ### Key rules for translations
 
-- **Keys use dot notation** organized by page: `index.*`, `compare.*`, `coverage.*`, `map.*`, `embed.*`, `blog.*` (index), `blog_post.*` (articles), `common.*`, `meta.*`
+- **Keys use dot notation** organized by page: `index.*`, `compare.*`, `coverage.*`, `map.*`, `embed.*`, `blog.*` (index), `blog_post.*` (first article), `blog_post_embed.*` (second article), `common.*`, `meta.*`
 - **Station names, line names, and place names stay in English** — they're proper nouns on physical signage
 - **HTML markup in translations** — Translation values can contain `<strong>`, `<a>`, `<code>` tags
 - **HTML entities must match exactly** — The generator uses `str.replace()`, so `&hellip;` and `…` are different strings. Match what's in the source HTML.
-- **Blog post pages use `PAGE_KEY_MAP`** — `blog/why-we-built-reroute-nj.html` maps to key prefix `blog_post` (not derived from filename). Add new blog posts to both `PAGES` and `PAGE_KEY_MAP` in generate-pages.py.
+- **Blog post pages use `PAGE_KEY_MAP`** — Maps page filenames to translation key prefixes:
+  - `blog/why-we-built-reroute-nj.html` → `blog_post`
+  - `blog/new-embed-system.html` → `blog_post_embed`
+  - Add new blog posts to both `PAGES` and `PAGE_KEY_MAP` in generate-pages.py.
 - **Nested pages need depth-aware asset paths** — `fix_asset_paths()` handles this automatically based on `/` count in the page name.
 
 ### Adding new translatable content
@@ -89,6 +142,18 @@ These run after `replace_meta()` in the `generate_page()` function. If a transla
 4. Run `python3 tools/generate-pages.py` to regenerate all 80 pages
 5. Spot-check at least 2 languages for correct output
 
+### Adding a new blog post
+
+1. Create the English HTML file in `blog/` (e.g., `blog/new-post.html`)
+2. Add the filename to the `PAGES` list in `generate-pages.py`
+3. Add a `PAGE_KEY_MAP` entry mapping the filename to a translation key prefix
+4. Add all translation keys under that prefix to `translations/en.json`
+5. Add replacement logic in the `replace_page_specific_content()` function
+6. Add translated values to all 10 language files
+7. Update `blog.html` to include the new post card
+8. Add blog card translations for the new post under `blog.*` keys
+9. Run `python3 tools/generate-pages.py` to regenerate
+
 ### Regenerating pages
 
 ```bash
@@ -98,27 +163,83 @@ python3 tools/generate-pages.py es zh     # Specific languages only
 
 ## Data model
 
-`LINE_DATA` in `js/app.js` drives all content. Each line has an `impactType`:
+`LINE_DATA` in `js/line-data.js` drives all content. Each line has:
+
+- `name`, `shortName` — Display names
+- `color` — Hex color code
+- `cssClass` — CSS class name
+- `impactType` — One of three values (see below)
+- `impactLevel` — Severity indicator
+- `trainsBefore`, `trainsAfter` — Train count comparison
+- `hub` — Main hub station
+- `summary` — One-line impact description
+- `branches` — Named branches (if applicable)
+- `stations` — Array of `{ id, name, branch, zone }` objects
+
+### Impact types
 
 - `hoboken-diversion` — Trains rerouted to Hoboken (Montclair-Boonton, Morris & Essex)
-- `reduced-service` — Fewer trains, same route (NEC, North Jersey Coast)
+- `reduced-service` — Fewer trains, same route (Northeast Corridor, North Jersey Coast)
 - `newark-termination` — Trains stop at Newark Penn (Raritan Valley)
+
+To add or modify line data, edit the `LINE_DATA` object directly. The UI generates from this data automatically.
+
+## Embed system
+
+The embed system has three layers:
+
+1. **`embed.html` + `embed.js`** — Visual configurator wizard (pick type → configure → preview/copy code)
+2. **`card.html` + `cards.js`** — Renders info cards (line, station, summary) as HTML or Canvas PNG. URL params control type, line, station, theme, accent, language.
+3. **`widget.html`** — Renders mini-widgets (condensed tool views). URL params control tool, line, station.
+4. **`widget.js`** — Script-tag embed library. Finds `.reroutenj-embed` elements, reads `data-*` attributes, injects iframes.
+
+Four output formats: iframe embed, script tag, PNG download, self-contained HTML download.
+
+## SEO and discoverability
+
+- **`robots.txt`** — Allows all crawlers; explicit AI bot allowances (GPTBot, ClaudeBot, PerplexityBot, Google-Extended)
+- **`sitemap.xml`** — 90 pages with `xhtml:link` hreflang cross-references for 11 languages
+- **`llms.txt`** — Structured overview for AI search tools following the [llms.txt standard](https://llmstxt.org)
+- **JSON-LD structured data** — WebSite, FAQPage, Article, and BreadcrumbList schemas
+- **Canonical tags** — Self-referencing on every page (English and translated)
+- **Translated meta descriptions** — Each language has its own meta/OG tags
+
+## Accessibility
+
+- Skip-to-content link on every page
+- High contrast toggle (persisted via localStorage)
+- Simplified view toggle for reduced visual complexity
+- Keyboard-navigable controls with ARIA labels, roles, and live regions
+- Mobile hamburger menu with proper focus management
+- Minimum 44px touch targets on mobile
 
 ## Testing
 
 No test suite. Verify by:
-1. Open all 5 HTML pages in a browser
+1. Open all HTML pages in a browser (`python3 -m http.server 8000`)
 2. Select each line and at least one station per line
 3. Test coverage filters and comparison tool
-4. Resize to mobile (breakpoints at 768px, 480px)
-5. Check browser console for errors
-6. After translation changes, check 2+ translated pages for untranslated English
+4. Test embed configurator — generate each format, verify preview
+5. Resize to mobile (breakpoints at 768px, 480px)
+6. Check browser console for errors
+7. After translation changes, check 2+ translated pages for untranslated English
+8. After data changes, verify card.html and widget.html render correctly with URL params
 
 ## Common tasks
 
 | Task | Command |
 |------|---------|
 | Serve locally | `python3 -m http.server 8000` |
-| Regenerate translations | `python3 tools/generate-pages.py` |
+| Regenerate all translations | `python3 tools/generate-pages.py` |
 | Regenerate one language | `python3 tools/generate-pages.py es` |
-| Deploy | Push to `main` (GitHub Pages auto-deploys) |
+| Regenerate specific languages | `python3 tools/generate-pages.py es zh ko` |
+| Deploy | Push to `main` (GitHub Pages auto-deploys via `.github/workflows/static.yml`) |
+
+## File counts
+
+- **HTML pages:** 90 total (8 English base + 2 blog posts + 80 translated)
+- **JS files:** 10 in `js/` (~4,470 lines total)
+- **CSS:** 1 file (~3,170 lines)
+- **Translation files:** 11 JSON (~300 keys each)
+- **Data files:** 1 JSON (38 articles)
+- **Python scripts:** 1 (~1,560 lines)
