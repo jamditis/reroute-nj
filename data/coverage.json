@@ -1,6 +1,20 @@
 {
-  "lastUpdated": "2026-02-14T04:31:24Z",
+  "lastUpdated": "2026-02-14T05:10:09Z",
   "articles": [
+    {
+      "id": "twp-millburn-nj-us-transit-major-service-2026-02-14",
+      "title": "NJ Transit Major Service Update: Portal North Bridge Cutover • Millburn Township, NJ",
+      "url": "https://twp.millburn.nj.us/m/NewsFlash/Home/Detail/2600",
+      "source": "twp.millburn.nj.us",
+      "author": null,
+      "date": "2026-02-14",
+      "category": "news",
+      "excerpt": "Amtrak will perform critical construction to transfer, or “cut over,” rail operations from the existing Portal Bridge to the new Portal North Bridge over the Hackensack River. This work will require temporary but significant service changes starting Sunday, February 15 and last approximately four weeks. A major milestone in the Gateway Program, the work is essential to advancing long-term...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
     {
       "id": "njtransit-portalcutover-page",
       "title": "Portal Bridge Cutover: What It Means For You",
@@ -129,6 +143,20 @@
       "date": "2026-02-12",
       "category": "news",
       "excerpt": "NJ Transit to cut service by 50% for four weeks The project in 2024. Photo courtesy of Amtrak New Jersey Transit riders will have a tough time reaching New York City for the next month. Starting Sunday, February 15, NJ Transit will cut service by 50 percent for four weeks to transfer rail operations from one track on the 115-year-old Portal Bridge to one track on the new $1.5 billion Portal North...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "njtransit-transit-2026-02-12",
+      "title": "NJ TRANSIT",
+      "url": "https://www.njtransit.com/node/2053431",
+      "source": "NJ Transit",
+      "author": null,
+      "date": "2026-02-12",
+      "category": "official",
+      "excerpt": "NJ TRANSIT Rail, Light Rail, and Bus Service for Presidents’ Day – Monday, February 16, 2026 \\| New Jersey Public Transportation Corporation On Monday, February 16, 2026, NJ TRANSIT Rail service will operate an enhanced weekend schedule for Presidents’ Day. The enhanced weekend schedule includes additional trains during the morning and afternoon/evening “peak” periods. See shaded trains in...",
       "lines": [
         "all"
       ],
@@ -347,6 +375,20 @@
       "date": "2026-01-15",
       "category": "official",
       "excerpt": "Beginning February 13, 2026, Amtrak will transfer one track of rail service from the 115-year-old Portal Bridge in Kearny, NJ to the new Portal North Bridge over the Hackensack River. This Gateway Program milestone requires a multi-week reduction in Amtrak and NJ Transit service in New Jersey and the Northeast Corridor. Amtrak President Roger Harris called the cutover 'a whole new level of reliability on the Northeast Corridor.'",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "njtransit-transit-2025-12-17",
+      "title": "NJ TRANSIT",
+      "url": "https://www.njtransit.com/node/2023763",
+      "source": "NJ Transit",
+      "author": null,
+      "date": "2025-12-17",
+      "category": "official",
+      "excerpt": "Select Parking Lot Rate Updates – Effective Thursday, January 15, 2026 \\| New Jersey Public Transportation Corporation NJ TRANSIT is updating parking rates at some facilities as we work to balance affordability with the realities of rising operating and maintenance costs. While the updated rates bring prices closer to—though still below—local market levels, we recognize that any increase can be...",
       "lines": [
         "all"
       ],
