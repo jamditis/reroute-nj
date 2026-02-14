@@ -274,7 +274,7 @@
       changes = [
         "Your weekday train to Penn Station New York is suspended. All weekday " + esc(line.name) + " trains now terminate at Hoboken.",
         "At Hoboken, transfer to PATH (33rd St), NY Waterway ferry (W. 39th St), or Bus 126 (Port Authority). All are cross-honored with your NJ Transit ticket.",
-        "Weekend service to Penn Station continues normally. No changes on Saturdays and Sundays.",
+        "Weekend service to Penn Station continues normally. No changes on Saturdays and Sundays. Note: Feb 16 (Presidents\u2019 Day) runs a holiday/weekend schedule with additional trains.",
         "Buy tickets to/from Hoboken (not Penn Station) for weekday travel during Feb 15 – Mar 15.",
         "Travel before 7am or after 9am to avoid the worst crowding at Hoboken and on PATH.",
       ];
@@ -919,6 +919,11 @@
         "If you ride <strong>weekdays between Feb 15 and Mar 15</strong>: buy a ticket to <strong>Hoboken</strong>. Transfer to PATH/ferry/bus at Hoboken for free.",
         "If you ride <strong>weekends</strong> or <strong>outside the cutover dates</strong>: buy a regular ticket to <strong>Penn Station New York</strong>.",
         'When in doubt, check <a href="https://www.njtransit.com/portalcutover" target="_blank" rel="noopener">njtransit.com/portalcutover</a> or ask a conductor.',
+      ]) +
+      makeScenarioCard("FLEXPASS option", [
+        "NJ Transit is offering a special <strong>FLEXPASS</strong> (20-trip ticket with a 15% discount) available starting February 15.",
+        "Good option if you ride regularly but don't need a full monthly pass during the cutover period.",
+        'Check <a href="https://www.njtransit.com/portalcutover" target="_blank" rel="noopener">njtransit.com/portalcutover</a> for FLEXPASS pricing and purchase options.',
       ]) +
       "</div>"
     );

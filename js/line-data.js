@@ -35,9 +35,11 @@ var LINE_DATA = {
       { id: "wayne-route23", name: "Wayne/Route 23", branch: "boonton", zone: 5 },
       { id: "lincoln-park", name: "Lincoln Park", branch: "boonton", zone: 6 },
       { id: "boonton", name: "Boonton", branch: "boonton", zone: 6 },
+      { id: "towaco", name: "Towaco", branch: "boonton", zone: 6 },
       { id: "mountain-lakes", name: "Mountain Lakes", branch: "boonton", zone: 7 },
       { id: "denville", name: "Denville", branch: "boonton", zone: 7 },
       { id: "dover-mb", name: "Dover", branch: "boonton", zone: 7 },
+      { id: "mount-arlington", name: "Mount Arlington", branch: "boonton", zone: 8 },
       { id: "lake-hopatcong", name: "Lake Hopatcong", branch: "boonton", zone: 8 },
       { id: "netcong", name: "Netcong", branch: "boonton", zone: 8 },
       { id: "mount-olive", name: "Mount Olive", branch: "boonton", zone: 9 },
@@ -63,6 +65,8 @@ var LINE_DATA = {
     },
     stations: [
       // Morristown Line (east to west)
+      { id: "east-orange", name: "East Orange", branch: "morristown", zone: 2 },
+      { id: "brick-church", name: "Brick Church", branch: "morristown", zone: 2 },
       { id: "orange", name: "Orange", branch: "morristown", zone: 2 },
       { id: "highland-ave", name: "Highland Avenue", branch: "morristown", zone: 3 },
       { id: "mountain-station", name: "Mountain Station", branch: "morristown", zone: 3 },
@@ -76,8 +80,7 @@ var LINE_DATA = {
       { id: "convent-station", name: "Convent Station", branch: "morristown", zone: 5 },
       { id: "morristown", name: "Morristown", branch: "morristown", zone: 6 },
       { id: "morris-plains", name: "Morris Plains", branch: "morristown", zone: 6 },
-      { id: "hanover", name: "Hanover", branch: "morristown", zone: 6 },
-      { id: "whippany", name: "Whippany", branch: "morristown", zone: 6 },
+      { id: "mount-tabor", name: "Mount Tabor", branch: "morristown", zone: 7 },
       // Gladstone Branch (splits at Summit)
       { id: "murray-hill", name: "Murray Hill", branch: "gladstone", zone: 5 },
       { id: "new-providence", name: "New Providence", branch: "gladstone", zone: 5 },
@@ -162,6 +165,7 @@ var LINE_DATA = {
       { id: "south-amboy", name: "South Amboy", branch: "njcl", zone: 5 },
       { id: "perth-amboy", name: "Perth Amboy", branch: "njcl", zone: 5 },
       { id: "woodbridge", name: "Woodbridge", branch: "njcl", zone: 4 },
+      { id: "avenel", name: "Avenel", branch: "njcl", zone: 4 },
     ],
   },
 

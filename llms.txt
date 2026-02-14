@@ -22,7 +22,7 @@ The cutover is caused by Amtrak transferring the first of two tracks from the 11
 - Affected lines: Montclair-Boonton Line, Morris & Essex Lines, Northeast Corridor, North Jersey Coast Line, Raritan Valley Line
 - Not affected: Atlantic City Rail Line
 - Hoboken diversions: Montclair-Boonton and Morris & Essex weekday trains rerouted to Hoboken Terminal instead of New York Penn Station
-- Alternative transit from Hoboken: PATH train to 33rd St (~25 min), NY Waterway ferry to W. 39th St (~10 min), Bus 126 to Port Authority (~30-45 min)
+- Alternative transit from Hoboken: PATH train to 33rd St (~15 min, every 3-5 min rush hour), NY Waterway ferry to W. 39th St (~10 min), Bus 126 to Port Authority (~30-45 min)
 - Phase 2: Expected fall 2026 (second track cutover, dates TBA)
 
 ## Line-by-line impact summary
@@ -31,7 +31,7 @@ The cutover is caused by Amtrak transferring the first of two tracks from the 11
 - **Morris & Essex Lines (Morristown, Gladstone)**: Weekday trains diverted to Hoboken Terminal. Same alternatives as Montclair-Boonton.
 - **Northeast Corridor**: Reduced frequency. Trains still run to New York Penn Station but with fewer departures and possible delays at Secaucus.
 - **North Jersey Coast Line**: Reduced frequency. Same route but fewer trains. Allow extra travel time.
-- **Raritan Valley Line**: Trains terminate at Newark Penn Station (as usual). Transfer to reduced-frequency NEC trains for Penn Station.
+- **Raritan Valley Line**: All one-seat rides to Penn Station NY suspended. All trains terminate at Newark Penn Station. Transfer to reduced-frequency NEC trains to reach Penn Station NY (adds 15-30 min).
 
 ## Blog
 
