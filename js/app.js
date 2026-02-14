@@ -225,6 +225,24 @@
   }
 
   // =========================================================================
+  // SOURCE ATTRIBUTION
+  // =========================================================================
+  function makeSourceFooter(line) {
+    var sources = line && line.sources ? line.sources : {};
+    var cutoverUrl = "https://www.njtransit.com/portalcutover";
+    var pressUrl = sources.impactType || "https://www.njtransit.com/press-releases/portal-north-bridge-enters-final-phase-construction-work-begins-put-first-track";
+    return (
+      '<div class="source-attribution">' +
+      '<p class="source-label">Sources: ' +
+      '<a href="' + esc(cutoverUrl) + '" target="_blank" rel="noopener">NJ Transit cutover page</a>' +
+      ' · <a href="' + esc(pressUrl) + '" target="_blank" rel="noopener">NJ Transit/Amtrak press release</a>' +
+      ' · <a href="https://www.panynj.gov/path/en/schedules-maps.html" target="_blank" rel="noopener">PATH schedules</a>' +
+      ' · <a href="https://www.nywaterway.com/HobokenMidtown.aspx" target="_blank" rel="noopener">NY Waterway</a>' +
+      "</p></div>"
+    );
+  }
+
+  // =========================================================================
   // IMPACT PANEL (Am I affected?)
   // =========================================================================
   function onStationChange() {
@@ -274,7 +292,7 @@
       changes = [
         "Your weekday train to Penn Station New York is suspended. All weekday " + esc(line.name) + " trains now terminate at Hoboken.",
         "At Hoboken, transfer to PATH (33rd St), NY Waterway ferry (W. 39th St), or Bus 126 (Port Authority). All are cross-honored with your NJ Transit ticket.",
-        "Weekend service to Penn Station continues normally. No changes on Saturdays and Sundays.",
+        "Weekend service to Penn Station continues normally. No changes on Saturdays and Sundays. Note: Feb 16 (Presidents\u2019 Day) runs a holiday/weekend schedule with additional trains.",
         "Buy tickets to/from Hoboken (not Penn Station) for weekday travel during Feb 15 – Mar 15.",
         "Travel before 7am or after 9am to avoid the worst crowding at Hoboken and on PATH.",
       ];
@@ -342,6 +360,7 @@
       "</ul></div>" +
       savingsHtml +
       '<div class="weekend-note"><strong>' + t("js.weekends_different") + '</strong> ' + t("js.weekend_service_continues") + '</div>' +
+      makeSourceFooter(line) +
       "</div></div>"
     );
   }
@@ -417,6 +436,7 @@
       changes.map(function (c) { return "<li>" + c + "</li>"; }).join("") +
       "</ul></div>" +
       '<div class="weekend-note"><strong>Tip:</strong> Your route doesn\'t change, but your schedule does. Download the temporary schedule PDF from <a href="https://www.njtransit.com/portalcutover" target="_blank" rel="noopener">njtransit.com/portalcutover</a> and find your specific trains.</div>' +
+      makeSourceFooter(line) +
       "</div></div>"
     );
   }
@@ -503,6 +523,7 @@
       changes.map(function (c) { return "<li>" + esc(c) + "</li>"; }).join("") +
       "</ul></div>" +
       '<div class="weekend-note"><strong>Alternative:</strong> If you can drive to Newark Penn Station, you can skip the Raritan Valley Line entirely and take an NEC train directly (reduced but still running). Or consider NJ Transit bus service as a backup — some routes serve the Raritan Valley corridor.</div>' +
+      makeSourceFooter(line) +
       "</div></div>"
     );
   }
@@ -919,6 +940,11 @@
         "If you ride <strong>weekdays between Feb 15 and Mar 15</strong>: buy a ticket to <strong>Hoboken</strong>. Transfer to PATH/ferry/bus at Hoboken for free.",
         "If you ride <strong>weekends</strong> or <strong>outside the cutover dates</strong>: buy a regular ticket to <strong>Penn Station New York</strong>.",
         'When in doubt, check <a href="https://www.njtransit.com/portalcutover" target="_blank" rel="noopener">njtransit.com/portalcutover</a> or ask a conductor.',
+      ]) +
+      makeScenarioCard("FLEXPASS option", [
+        "NJ Transit is offering a special <strong>FLEXPASS</strong> (20-trip ticket with a 15% discount) available starting February 15.",
+        "Good option if you ride regularly but don't need a full monthly pass during the cutover period.",
+        'Check <a href="https://www.njtransit.com/portalcutover" target="_blank" rel="noopener">njtransit.com/portalcutover</a> for FLEXPASS pricing and purchase options.',
       ]) +
       "</div>"
     );

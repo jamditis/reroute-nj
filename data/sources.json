@@ -1,0 +1,390 @@
+{
+  "lastVerified": "2026-02-14T00:00:00Z",
+  "sources": {
+    "njtransit-portal-cutover": {
+      "title": "Portal Bridge Cutover: What It Means For You",
+      "url": "https://www.njtransit.com/portalcutover",
+      "publisher": "NJ Transit",
+      "type": "official",
+      "accessed": "2026-02-14",
+      "supports": [
+        "cutover-dates",
+        "train-counts",
+        "hoboken-diversion",
+        "cross-honoring",
+        "temporary-schedules",
+        "flexpass",
+        "weekend-service",
+        "presidents-day-schedule"
+      ]
+    },
+    "njtransit-press-release": {
+      "title": "Portal North Bridge Enters Final Phase of Construction as Work Begins to Put First Track into Service",
+      "url": "https://www.njtransit.com/press-releases/portal-north-bridge-enters-final-phase-construction-work-begins-put-first-track",
+      "publisher": "NJ Transit",
+      "type": "official",
+      "accessed": "2026-02-14",
+      "supports": [
+        "cutover-dates",
+        "train-counts",
+        "hoboken-diversion",
+        "cross-honoring",
+        "single-track-operations",
+        "40000-man-hours",
+        "workers-per-shift",
+        "phase2-expected"
+      ]
+    },
+    "amtrak-press-release": {
+      "title": "Portal North Bridge Enters Final Phase of Construction as Work Begins to Put First Track into Service",
+      "url": "https://media.amtrak.com/2026/01/portal-north-bridge-enters-final-phase-of-construction-as-work-begins-to-put-first-track-into-service/",
+      "publisher": "Amtrak",
+      "type": "official",
+      "accessed": "2026-02-14",
+      "supports": [
+        "cutover-dates",
+        "bridge-age",
+        "gateway-program",
+        "single-track-operations",
+        "40000-man-hours",
+        "workers-per-shift",
+        "phase2-expected"
+      ]
+    },
+    "njtransit-service-advisory": {
+      "title": "Temporary Rail Service Changes: February 15, 2026 – March 15, 2026",
+      "url": "https://www.njtransit.com/service-advisory/2036487",
+      "publisher": "NJ Transit",
+      "type": "official",
+      "accessed": "2026-02-14",
+      "supports": [
+        "cutover-dates",
+        "temporary-schedules",
+        "all-lines-affected"
+      ]
+    },
+    "njtransit-fares": {
+      "title": "NJ Transit Fares",
+      "url": "https://www.njtransit.com/fares",
+      "publisher": "NJ Transit",
+      "type": "official",
+      "accessed": "2026-02-14",
+      "supports": [
+        "fare-data",
+        "zone-prices",
+        "monthly-pass-prices"
+      ]
+    },
+    "njtransit-montclair-boonton": {
+      "title": "Montclair-Boonton Line Schedule",
+      "url": "https://www.njtransit.com/train-to?origin=Hoboken&destination=Hackettstown&line=MOBO",
+      "publisher": "NJ Transit",
+      "type": "official",
+      "accessed": "2026-02-14",
+      "supports": [
+        "station-list-montclair-boonton"
+      ]
+    },
+    "njtransit-morristown": {
+      "title": "Morristown Line Schedule",
+      "url": "https://www.njtransit.com/train-to?origin=New+York&destination=Dover&line=MOBO",
+      "publisher": "NJ Transit",
+      "type": "official",
+      "accessed": "2026-02-14",
+      "supports": [
+        "station-list-morris-essex"
+      ]
+    },
+    "njtransit-gladstone": {
+      "title": "Gladstone Branch Schedule",
+      "url": "https://www.njtransit.com/train-to?origin=Hoboken&destination=Gladstone&line=GLAD",
+      "publisher": "NJ Transit",
+      "type": "official",
+      "accessed": "2026-02-14",
+      "supports": [
+        "station-list-morris-essex"
+      ]
+    },
+    "njtransit-nec": {
+      "title": "Northeast Corridor Schedule",
+      "url": "https://www.njtransit.com/train-to?origin=Trenton&destination=New+York&line=NEC",
+      "publisher": "NJ Transit",
+      "type": "official",
+      "accessed": "2026-02-14",
+      "supports": [
+        "station-list-northeast-corridor"
+      ]
+    },
+    "njtransit-njcl": {
+      "title": "North Jersey Coast Line Schedule",
+      "url": "https://www.njtransit.com/train-to?origin=Bay+Head&destination=New+York&line=NJCL",
+      "publisher": "NJ Transit",
+      "type": "official",
+      "accessed": "2026-02-14",
+      "supports": [
+        "station-list-north-jersey-coast"
+      ]
+    },
+    "njtransit-rvl": {
+      "title": "Raritan Valley Line Schedule",
+      "url": "https://www.njtransit.com/train-to?origin=High+Bridge&destination=Newark&line=RARV",
+      "publisher": "NJ Transit",
+      "type": "official",
+      "accessed": "2026-02-14",
+      "supports": [
+        "station-list-raritan-valley"
+      ]
+    },
+    "path-schedules": {
+      "title": "PATH Weekday Schedules",
+      "url": "https://www.panynj.gov/path/en/schedules-maps/weekday-schedules.html",
+      "publisher": "Port Authority of NY & NJ",
+      "type": "official",
+      "accessed": "2026-02-14",
+      "supports": [
+        "path-travel-time",
+        "path-frequency"
+      ]
+    },
+    "path-fares": {
+      "title": "PATH Fares",
+      "url": "https://www.panynj.gov/path/en/fares.html",
+      "publisher": "Port Authority of NY & NJ",
+      "type": "official",
+      "accessed": "2026-02-14",
+      "supports": [
+        "path-fare"
+      ]
+    },
+    "nywaterway-schedules": {
+      "title": "NY Waterway Hoboken / Midtown Ferry Schedule",
+      "url": "https://www.nywaterway.com/HobokenMidtown.aspx",
+      "publisher": "NY Waterway",
+      "type": "official",
+      "accessed": "2026-02-14",
+      "supports": [
+        "ferry-travel-time",
+        "ferry-frequency"
+      ]
+    },
+    "njtransit-bus-126": {
+      "title": "NJ Transit Bus 126 Schedule",
+      "url": "https://www.njtransit.com/bus-to?origin=Hoboken+Terminal&destination=Port+Authority+Bus+Terminal",
+      "publisher": "NJ Transit",
+      "type": "official",
+      "accessed": "2026-02-14",
+      "supports": [
+        "bus-126-travel-time"
+      ]
+    },
+    "gateway-program": {
+      "title": "Gateway Program — Portal North Bridge",
+      "url": "https://www.gatewayprogram.org/portal-north-bridge/",
+      "publisher": "Gateway Development Commission",
+      "type": "official",
+      "accessed": "2026-02-14",
+      "supports": [
+        "gateway-program",
+        "bridge-age",
+        "project-cost",
+        "phase2-expected"
+      ]
+    },
+    "wikipedia-portal-bridge": {
+      "title": "Portal Bridge — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Portal_Bridge",
+      "publisher": "Wikipedia",
+      "type": "reference",
+      "accessed": "2026-02-14",
+      "supports": [
+        "bridge-age",
+        "bridge-history"
+      ]
+    },
+    "wikipedia-portal-north": {
+      "title": "Portal North Bridge — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Portal_North_Bridge",
+      "publisher": "Wikipedia",
+      "type": "reference",
+      "accessed": "2026-02-14",
+      "supports": [
+        "project-cost",
+        "gateway-program",
+        "construction-timeline"
+      ]
+    }
+  },
+  "claims": {
+    "cutover-dates": {
+      "claim": "The Portal Bridge cutover runs from February 15 to March 15, 2026 (Phase 1)",
+      "sources": ["njtransit-portal-cutover", "njtransit-press-release", "amtrak-press-release"],
+      "status": "verified",
+      "lastVerified": "2026-02-14"
+    },
+    "train-counts": {
+      "claim": "Train count reductions: M-B 64→60, M&E 149→141, NEC 133→112, NJCL 109→92",
+      "sources": ["njtransit-portal-cutover", "njtransit-press-release"],
+      "status": "verified",
+      "lastVerified": "2026-02-14"
+    },
+    "hoboken-diversion": {
+      "claim": "All weekday Midtown Direct trains on M-B and M&E lines diverted to Hoboken Terminal",
+      "sources": ["njtransit-portal-cutover", "njtransit-press-release"],
+      "status": "verified",
+      "lastVerified": "2026-02-14"
+    },
+    "weekend-service": {
+      "claim": "Weekend Midtown Direct service to Penn Station NY continues for M-B and M&E",
+      "sources": ["njtransit-portal-cutover", "njtransit-press-release"],
+      "status": "verified",
+      "lastVerified": "2026-02-14"
+    },
+    "cross-honoring": {
+      "claim": "NJ Transit passes/tickets cross-honored on PATH (Hoboken↔33rd St), NY Waterway ferry (Hoboken↔W 39th St), and Bus 126 (Hoboken↔Port Authority)",
+      "sources": ["njtransit-portal-cutover", "njtransit-press-release"],
+      "status": "verified",
+      "lastVerified": "2026-02-14"
+    },
+    "single-track-operations": {
+      "claim": "Single-track operation between Newark Penn Station and Secaucus Junction during cutover",
+      "sources": ["njtransit-press-release", "amtrak-press-release"],
+      "status": "verified",
+      "lastVerified": "2026-02-14"
+    },
+    "rvl-one-seat-ride": {
+      "claim": "All Raritan Valley Line one-seat rides to Penn Station NY are suspended during cutover",
+      "sources": ["njtransit-portal-cutover"],
+      "status": "verified",
+      "lastVerified": "2026-02-14"
+    },
+    "path-travel-time": {
+      "claim": "PATH Hoboken to 33rd Street takes approximately 15 minutes",
+      "sources": ["path-schedules"],
+      "status": "verified",
+      "lastVerified": "2026-02-14"
+    },
+    "path-frequency": {
+      "claim": "PATH Hoboken–33rd St runs every 3–5 min during peak, 10–15 min off-peak",
+      "sources": ["path-schedules"],
+      "status": "verified",
+      "lastVerified": "2026-02-14"
+    },
+    "ferry-travel-time": {
+      "claim": "NY Waterway ferry Hoboken to W. 39th St takes approximately 10–12 minutes",
+      "sources": ["nywaterway-schedules"],
+      "status": "verified",
+      "lastVerified": "2026-02-14"
+    },
+    "bus-126-travel-time": {
+      "claim": "Bus 126 from Hoboken to Port Authority takes 20–40 minutes depending on traffic",
+      "sources": ["njtransit-bus-126"],
+      "status": "verified",
+      "lastVerified": "2026-02-14"
+    },
+    "bridge-age": {
+      "claim": "The Portal Bridge opened November 27, 1910 (115 years old as of 2026)",
+      "sources": ["amtrak-press-release", "wikipedia-portal-bridge"],
+      "status": "verified",
+      "lastVerified": "2026-02-14"
+    },
+    "50-percent-reduction": {
+      "claim": "Approximately 50% service reduction between Newark and New York Penn Station",
+      "sources": ["njtransit-portal-cutover", "njtransit-press-release"],
+      "status": "verified",
+      "lastVerified": "2026-02-14",
+      "note": "Some sources report 53%; 50% is the NJ Transit-stated approximation"
+    },
+    "40000-man-hours": {
+      "claim": "The cutover engineering work requires 40,000 man-hours",
+      "sources": ["njtransit-press-release", "amtrak-press-release"],
+      "status": "verified",
+      "lastVerified": "2026-02-14"
+    },
+    "workers-per-shift": {
+      "claim": "70–90 workers per shift across two daily shifts, seven days a week",
+      "sources": ["njtransit-press-release", "amtrak-press-release"],
+      "status": "verified",
+      "lastVerified": "2026-02-14"
+    },
+    "phase2-expected": {
+      "claim": "Phase 2 (second track cutover) expected Fall 2026",
+      "sources": ["njtransit-press-release", "amtrak-press-release", "gateway-program"],
+      "status": "verified",
+      "lastVerified": "2026-02-14"
+    },
+    "gateway-program": {
+      "claim": "Portal North Bridge is a milestone of the Gateway Program",
+      "sources": ["gateway-program", "amtrak-press-release"],
+      "status": "verified",
+      "lastVerified": "2026-02-14"
+    },
+    "all-lines-affected": {
+      "claim": "All NJ Transit rail lines except Atlantic City Rail Line are affected",
+      "sources": ["njtransit-portal-cutover", "njtransit-press-release"],
+      "status": "verified",
+      "lastVerified": "2026-02-14"
+    },
+    "flexpass": {
+      "claim": "Special FLEXPASS (20-trip ticket, 15% discount) available starting February 15",
+      "sources": ["njtransit-portal-cutover"],
+      "status": "verified",
+      "lastVerified": "2026-02-14"
+    },
+    "presidents-day-schedule": {
+      "claim": "Feb 16 (Presidents' Day) runs holiday/weekend schedule; weekday Hoboken diversions begin Feb 17",
+      "sources": ["njtransit-portal-cutover", "njtransit-service-advisory"],
+      "status": "verified",
+      "lastVerified": "2026-02-14"
+    },
+    "fare-data": {
+      "claim": "Zone-based monthly pass prices for Penn Station and Hoboken destinations",
+      "sources": ["njtransit-fares"],
+      "status": "verified",
+      "lastVerified": "2026-02-14",
+      "note": "Fare data should be reverified after July 1, 2026 (next scheduled 3% increase)"
+    },
+    "station-list-montclair-boonton": {
+      "claim": "24 stations on Montclair-Boonton Line (10 Montclair branch, 14 Boonton branch)",
+      "sources": ["njtransit-montclair-boonton"],
+      "status": "verified",
+      "lastVerified": "2026-02-14"
+    },
+    "station-list-morris-essex": {
+      "claim": "28 stations on Morris & Essex Lines (16 Morristown, 12 Gladstone)",
+      "sources": ["njtransit-morristown", "njtransit-gladstone"],
+      "status": "verified",
+      "lastVerified": "2026-02-14"
+    },
+    "station-list-northeast-corridor": {
+      "claim": "15 stations on Northeast Corridor (Trenton to Secaucus Junction)",
+      "sources": ["njtransit-nec"],
+      "status": "verified",
+      "lastVerified": "2026-02-14"
+    },
+    "station-list-north-jersey-coast": {
+      "claim": "19 stations on North Jersey Coast Line (Bay Head to Avenel)",
+      "sources": ["njtransit-njcl"],
+      "status": "verified",
+      "lastVerified": "2026-02-14"
+    },
+    "station-list-raritan-valley": {
+      "claim": "16 stations on Raritan Valley Line (High Bridge to Union)",
+      "sources": ["njtransit-rvl"],
+      "status": "verified",
+      "lastVerified": "2026-02-14"
+    },
+    "path-fare": {
+      "claim": "PATH fare is $2.75 per ride",
+      "sources": ["path-fares"],
+      "status": "verified",
+      "lastVerified": "2026-02-14"
+    },
+    "project-cost": {
+      "claim": "Portal North Bridge project cost approximately $1.8–2.3 billion",
+      "sources": ["wikipedia-portal-north", "gateway-program"],
+      "status": "verified",
+      "lastVerified": "2026-02-14",
+      "note": "Cost varies by source and what is included. FFGA amount is $1.73B; total project cost reported up to $2.3B"
+    }
+  }
+}

@@ -3165,3 +3165,85 @@ body.embed-mode .container { padding: 0.5rem; }
 .embed-attribution { text-align: center; padding: 6px 0; font-size: 0.75rem; color: #73849a; border-top: 1px solid #e8ecf1; margin-top: 1rem; }
 .embed-attribution a { color: #73849a; text-decoration: none; }
 .embed-attribution a:hover { color: #e87722; }
+
+/* =========================================================================
+   SOURCE ATTRIBUTION — verifiable links on data cards
+   ========================================================================= */
+.source-attribution {
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
+}
+.source-attribution .source-label {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+.source-attribution a {
+  color: var(--text-muted);
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 2px;
+}
+.source-attribution a:hover {
+  color: var(--accent);
+  text-decoration-style: solid;
+}
+@media (max-width: 480px) {
+  .source-attribution .source-label {
+    font-size: 0.72rem;
+  }
+}
+
+/* Sources section grid */
+.sources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+.source-item {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+.source-item h4 {
+  margin: 0 0 0.5rem;
+  font-size: 0.95rem;
+}
+.source-item p {
+  margin: 0 0 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+.source-item ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+.source-item li {
+  font-size: 0.85rem;
+  margin-bottom: 0.3rem;
+}
+.source-item a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.source-item a:hover {
+  text-decoration: underline;
+}
+.sources-note {
+  margin-top: 1.25rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  padding: 0.75rem 1rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+.sources-note a { color: var(--accent); }
+@media (max-width: 480px) {
+  .sources-grid { grid-template-columns: 1fr; }
+}

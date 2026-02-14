@@ -15,6 +15,11 @@ var LINE_DATA = {
     hub: "Newark Broad St",
     summary:
       "All weekday Midtown Direct trains diverted to Hoboken. Weekend service to Penn Station NY continues.",
+    sources: {
+      trainCounts: "https://www.njtransit.com/portalcutover",
+      impactType: "https://www.njtransit.com/press-releases/portal-north-bridge-enters-final-phase-construction-work-begins-put-first-track",
+      stations: "https://www.njtransit.com/train-to?origin=Hoboken&destination=Hackettstown&line=MOBO",
+    },
     branches: {
       montclair: "Montclair branch",
       boonton: "Boonton branch",
@@ -35,9 +40,11 @@ var LINE_DATA = {
       { id: "wayne-route23", name: "Wayne/Route 23", branch: "boonton", zone: 5 },
       { id: "lincoln-park", name: "Lincoln Park", branch: "boonton", zone: 6 },
       { id: "boonton", name: "Boonton", branch: "boonton", zone: 6 },
+      { id: "towaco", name: "Towaco", branch: "boonton", zone: 6 },
       { id: "mountain-lakes", name: "Mountain Lakes", branch: "boonton", zone: 7 },
       { id: "denville", name: "Denville", branch: "boonton", zone: 7 },
       { id: "dover-mb", name: "Dover", branch: "boonton", zone: 7 },
+      { id: "mount-arlington", name: "Mount Arlington", branch: "boonton", zone: 8 },
       { id: "lake-hopatcong", name: "Lake Hopatcong", branch: "boonton", zone: 8 },
       { id: "netcong", name: "Netcong", branch: "boonton", zone: 8 },
       { id: "mount-olive", name: "Mount Olive", branch: "boonton", zone: 9 },
@@ -57,12 +64,19 @@ var LINE_DATA = {
     hub: "Newark Broad St",
     summary:
       "All weekday Midtown Direct trains on the Morristown Line and Gladstone Branch diverted to Hoboken. Weekend service to Penn Station NY continues.",
+    sources: {
+      trainCounts: "https://www.njtransit.com/portalcutover",
+      impactType: "https://www.njtransit.com/press-releases/portal-north-bridge-enters-final-phase-construction-work-begins-put-first-track",
+      stations: "https://www.njtransit.com/train-to?origin=New+York&destination=Dover&line=MOBO",
+    },
     branches: {
       morristown: "Morristown Line",
       gladstone: "Gladstone Branch",
     },
     stations: [
       // Morristown Line (east to west)
+      { id: "east-orange", name: "East Orange", branch: "morristown", zone: 2 },
+      { id: "brick-church", name: "Brick Church", branch: "morristown", zone: 2 },
       { id: "orange", name: "Orange", branch: "morristown", zone: 2 },
       { id: "highland-ave", name: "Highland Avenue", branch: "morristown", zone: 3 },
       { id: "mountain-station", name: "Mountain Station", branch: "morristown", zone: 3 },
@@ -76,8 +90,7 @@ var LINE_DATA = {
       { id: "convent-station", name: "Convent Station", branch: "morristown", zone: 5 },
       { id: "morristown", name: "Morristown", branch: "morristown", zone: 6 },
       { id: "morris-plains", name: "Morris Plains", branch: "morristown", zone: 6 },
-      { id: "hanover", name: "Hanover", branch: "morristown", zone: 6 },
-      { id: "whippany", name: "Whippany", branch: "morristown", zone: 6 },
+      { id: "mount-tabor", name: "Mount Tabor", branch: "morristown", zone: 7 },
       // Gladstone Branch (splits at Summit)
       { id: "murray-hill", name: "Murray Hill", branch: "gladstone", zone: 5 },
       { id: "new-providence", name: "New Providence", branch: "gladstone", zone: 5 },
@@ -106,6 +119,11 @@ var LINE_DATA = {
     hub: "Newark Penn",
     summary:
       "Trains still run to Penn Station NY, but service is reduced from 133 to 112 daily trains due to single-track operation between Newark and Secaucus.",
+    sources: {
+      trainCounts: "https://www.njtransit.com/portalcutover",
+      impactType: "https://www.njtransit.com/press-releases/portal-north-bridge-enters-final-phase-construction-work-begins-put-first-track",
+      stations: "https://www.njtransit.com/train-to?origin=Trenton&destination=New+York&line=NEC",
+    },
     branches: {
       nec: "Northeast Corridor",
     },
@@ -140,6 +158,11 @@ var LINE_DATA = {
     hub: "Secaucus Junction",
     summary:
       "Trains still run to Penn Station NY, but reduced from 109 to 92 daily trains. Significant schedule changes. Perth Amboy/Woodbridge riders get bus cross-honoring to Port Authority.",
+    sources: {
+      trainCounts: "https://www.njtransit.com/portalcutover",
+      impactType: "https://www.njtransit.com/press-releases/portal-north-bridge-enters-final-phase-construction-work-begins-put-first-track",
+      stations: "https://www.njtransit.com/train-to?origin=Bay+Head&destination=New+York&line=NJCL",
+    },
     branches: {
       njcl: "North Jersey Coast Line",
     },
@@ -162,6 +185,7 @@ var LINE_DATA = {
       { id: "south-amboy", name: "South Amboy", branch: "njcl", zone: 5 },
       { id: "perth-amboy", name: "Perth Amboy", branch: "njcl", zone: 5 },
       { id: "woodbridge", name: "Woodbridge", branch: "njcl", zone: 4 },
+      { id: "avenel", name: "Avenel", branch: "njcl", zone: 4 },
     ],
   },
 
@@ -177,6 +201,11 @@ var LINE_DATA = {
     hub: "Newark Penn",
     summary:
       "All one-seat rides to Penn Station New York are suspended. All trains now originate and terminate at Newark Penn Station. Transfer to NEC at Newark Penn to reach PSNY.",
+    sources: {
+      trainCounts: "https://www.njtransit.com/portalcutover",
+      impactType: "https://www.njtransit.com/press-releases/portal-north-bridge-enters-final-phase-construction-work-begins-put-first-track",
+      stations: "https://www.njtransit.com/train-to?origin=High+Bridge&destination=Newark&line=RARV",
+    },
     branches: {
       rvl: "Raritan Valley Line",
     },
