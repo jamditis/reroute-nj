@@ -84,7 +84,8 @@
       "category_label": "Category",
       "line_label": "Line",
       "direction_label": "Direction",
-      "search_label": "Search"
+      "search_label": "Search",
+      "last_updated": "Last updated:"
     }
   };
 

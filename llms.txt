@@ -10,7 +10,7 @@ The cutover is caused by Amtrak transferring the first of two tracks from the 11
 
 - [Line guide](https://reroutenj.org/index.html): Select your NJ Transit line and station to see exactly what changes and what to do during the cutover
 - [Commute comparison](https://reroutenj.org/compare.html): Side-by-side comparison of alternative routes to Manhattan (PATH, ferry, bus) with visual time breakdowns and costs
-- [News coverage](https://reroutenj.org/coverage.html): Curated feed of Portal Bridge cutover reporting from 15+ regional news sources, filterable by line, direction, and category
+- [News coverage](https://reroutenj.org/coverage.html): Feed of Portal Bridge cutover reporting from 15+ regional news sources, filterable by line, direction, and category
 - [Interactive map](https://reroutenj.org/map.html): OpenStreetMap-based map showing the Portal Bridge location, all affected stations, and key transfer hubs
 - [Embed and share](https://reroutenj.org/embed.html): Free embed codes for newsrooms and publishers to republish any Reroute NJ tool on their websites
 
@@ -65,6 +65,15 @@ All data on this site is traceable to official sources. Last verified: February 
 - **Gateway Program context**: [Gateway Development Commission](https://www.gatewayprogram.org/)
 - **Travel alerts**: [NJ Transit travel alerts](https://www.njtransit.com/travel-alerts-to)
 - **Structured citation database**: [data/sources.json](https://github.com/jamditis/reroute-nj/blob/main/data/sources.json) (machine-readable, 28 verified claims with source links)
+
+## Methodology
+
+Full details: [About our methodology](https://reroutenj.org/about.html)
+
+- Translations are AI-assisted and reviewed for natural phrasing. Station names, line names, and place names stay in English to match physical signage.
+- All transit data is traceable to official NJ Transit, Amtrak, PATH, and NY Waterway sources via a structured citation database.
+- 698+ automated tests verify data accuracy, HTML integrity, translation completeness, and accessibility compliance before every deploy.
+- The site meets WCAG 2.1 AA with high contrast mode, simplified view, keyboard navigation, screen reader support, and RTL layout for Arabic.
 
 ## About
 

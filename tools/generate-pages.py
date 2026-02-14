@@ -22,7 +22,7 @@ PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TRANSLATIONS_DIR = os.path.join(PROJECT_ROOT, "translations")
 
 # Pages to generate
-PAGES = ["index.html", "compare.html", "coverage.html", "map.html", "embed.html", "blog.html", "blog/why-we-built-reroute-nj.html", "blog/new-embed-system.html"]
+PAGES = ["index.html", "compare.html", "coverage.html", "map.html", "embed.html", "blog.html", "blog/why-we-built-reroute-nj.html", "blog/new-embed-system.html", "about.html"]
 
 # Map page filenames to translation key prefixes (when different from filename stem)
 PAGE_KEY_MAP = {
@@ -255,6 +255,7 @@ def replace_footer(html, translations, page_key):
             "blog": ' <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">{embed_gh}</a>.',
             "blog_post": ' <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">{embed_gh}</a>.',
             "blog_post_embed": ' <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">{embed_gh}</a>.',
+            "about": ' <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">{embed_gh}</a>.',
         }
         idx = get_translation(translations, "common.footer_disclaimer_index") or "Information is based on official announcements and may change. Always verify with"
         idx_after = get_translation(translations, "common.footer_disclaimer_index_after") or "before traveling."
@@ -287,6 +288,11 @@ def replace_footer(html, translations, page_key):
             html,
             count=1
         )
+
+    # Translate "About our methodology" footer link
+    about_link_text = get_translation(translations, "about.heading") or "About our methodology"
+    html = html.replace('>About our methodology</a>', f'>{about_link_text}</a>')
+
     return html
 
 
@@ -352,6 +358,7 @@ def replace_hamburger_label(html, translations, page_key):
         "blog": "common.menu",
         "blog_post": "common.menu",
         "blog_post_embed": "common.menu",
+        "about": "about.hamburger_label",
     }
     eng_map = {
         "index": "Line guide",
@@ -362,6 +369,7 @@ def replace_hamburger_label(html, translations, page_key):
         "blog": "Menu",
         "blog_post": "Menu",
         "blog_post_embed": "Menu",
+        "about": "About",
     }
     key = label_map.get(page_key)
     eng = eng_map.get(page_key)
@@ -1466,6 +1474,88 @@ def replace_page_specific_content(html, translations, page_key):
         if cta:
             html = html.replace(
                 '>Try the embed configurator &rarr;</a>',
+                f'>{cta.replace("→", "&rarr;")}</a>'
+            )
+
+    elif page_key == "about":
+        # About / methodology page
+        heading = get_translation(translations, "about.heading")
+        if heading:
+            html = html.replace(">About our methodology</h1>", f">{heading}</h1>")
+
+        intro = get_translation(translations, "about.intro")
+        if intro:
+            html = html.replace(
+                "Reroute NJ gives commuters specific guidance: which train to take, which ticket to buy, where to transfer. That information has to be right. People depend on it to get to work on time. Our approach prioritizes accuracy and accessibility over everything else.",
+                intro
+            )
+
+        # H2 headings
+        h2_map = [
+            ("about.h2_translations", "How we produce translations"),
+            ("about.h2_verification", "How we verify transit data"),
+            ("about.h2_accessibility", "Our accessibility standards"),
+            ("about.h2_philosophy", "Why we built it this way"),
+            ("about.h2_mistakes", "What we get wrong"),
+        ]
+        for key, eng_text in h2_map:
+            translated = get_translation(translations, key)
+            if translated:
+                html = html.replace(f"<h2>{eng_text}</h2>", f"<h2>{translated}</h2>")
+
+        # Body paragraphs
+        para_map = {
+            "about.translations_p1": 'Every tool on this site is available in 11 languages: English, Spanish, Chinese, Tagalog, Korean, Portuguese, Gujarati, Hindi, Italian, Arabic, and Polish. These languages were chosen because they are the most commonly spoken languages in New Jersey according to U.S. Census data.',
+            "about.translations_p2": 'Translations are produced with the help of AI language models and reviewed for natural phrasing and accuracy. Each language gets its own complete set of HTML pages with translated navigation, labels, headings, descriptions, accessibility text, and metadata. This is not a browser auto-translate overlay &mdash; every translated page is a standalone document that works without JavaScript if necessary.',
+            "about.translations_rules": "We follow specific rules about what gets translated and what doesn't:",
+            "about.translations_fidelity": 'This is a deliberate choice: fidelity to what riders actually see and hear at the station matters more than linguistic consistency. A Spanish-speaking commuter looking at their phone needs to read "Tome el tren a Hoboken Terminal" &mdash; not "Tome el tren a Terminal de Hoboken" &mdash; because the sign above the platform says "Hoboken Terminal."',
+            "about.verification_p1": 'Every claim on this site &mdash; train counts, schedule changes, fare information, transfer directions &mdash; is traceable to an official source. We maintain a <a href="https://github.com/jamditis/reroute-nj/blob/main/data/sources.json" target="_blank" rel="noopener">citation database</a> linking 28 specific claims to the official NJ Transit, Amtrak, PATH, and NY Waterway pages they come from.',
+            "about.verification_intro": "Our verification process:",
+            "about.accessibility_p1": 'Accessibility is not a feature we added &mdash; it\'s a constraint we designed around. The site meets WCAG 2.1 AA, the international standard for web accessibility.',
+            "about.accessibility_intro": "What that means in practice:",
+            "about.philosophy_p1": "Reroute NJ is a plain HTML, CSS, and JavaScript site. No frameworks, no build step, no server, no database. This isn't a technology preference &mdash; it's a reliability decision.",
+            "about.philosophy_p2": "During the cutover, hundreds of thousands of commuters will need this information at peak hours. A static site served from a CDN handles traffic spikes without breaking. It works on old phones, slow connections, and every browser. There's no server to go down, no API to rate-limit, no dependency to break.",
+            "about.philosophy_p3": "The tools are designed for someone checking their phone at 6:30 in the morning, standing on a platform, trying to figure out if their train still runs. That person needs a clear answer fast. They don't need animations, loading spinners, or a signup form. Every design decision starts from that scenario.",
+            "about.mistakes_p1": "We make mistakes. When we find them, we fix them and document the change. A few things to know:",
+            "about.mistakes_p2": 'This is an independent project. We are not affiliated with NJ Transit, Amtrak, or any government agency. Always verify critical travel information at <a href="https://www.njtransit.com/portalcutover" target="_blank" rel="noopener">njtransit.com</a> before traveling.',
+        }
+        for key, eng_text in para_map.items():
+            translated = get_translation(translations, key)
+            if translated:
+                html = html.replace(f"<p>{eng_text}</p>", f"<p>{translated}</p>")
+
+        # List items
+        li_map = {
+            "about.li_stations": "<strong>Station names stay in English.</strong> \"Secaucus Junction\" is what's on the platform sign. Translating it would make it harder to find your train, not easier.",
+            "about.li_lines": '<strong>Line names stay in English.</strong> "Northeast Corridor" and "Montclair-Boonton Line" are official NJ Transit designations. They appear in English on every schedule, app, and sign.',
+            "about.li_places": '<strong>Place names stay in English.</strong> "Hoboken Terminal," "Penn Station New York," and "Port Authority" are proper nouns. Riders need to match what they see to what they read.',
+            "about.li_everything_else": "<strong>Everything else is translated.</strong> Instructions, descriptions, labels, navigation, button text, accessibility announcements, error messages, and page metadata are all translated into each language.",
+            "about.li_official_sources": '<strong>Official sources first.</strong> Train counts, diversions, cross-honoring policies, and fare information come from <a href="https://www.njtransit.com/portalcutover" target="_blank" rel="noopener">njtransit.com/portalcutover</a> and official NJ Transit press releases. We do not use secondhand reporting as a primary source for transit data.',
+            "about.li_automated_validation": "<strong>Automated validation.</strong> We run 698+ automated checks across 14 test suites that verify data structure, transit facts, cross-references between pages, HTML integrity, translation completeness, and accessibility compliance. These tests run before every change is published.",
+            "about.li_automated_monitoring": "<strong>Automated monitoring.</strong> A scraper checks official NJ Transit and Amtrak pages four times a day for schedule or policy changes. When content changes, we review and update the site.",
+            "about.li_source_attribution": "<strong>Source attribution on every page.</strong> Each line guide card and commute comparison result includes links to the official sources backing its claims, so riders can verify for themselves.",
+            "about.li_open_source": '<strong>Open source.</strong> The entire codebase, all data files, and all test suites are <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">public on GitHub</a>. Anyone can inspect, challenge, or correct the data.',
+            "about.li_high_contrast": "<strong>High contrast mode.</strong> A toggle on every page switches to a high-contrast color scheme for riders with low vision. The setting persists across pages.",
+            "about.li_simplified": "<strong>Simplified view.</strong> Strips decorative elements to reduce visual noise for riders who need fewer distractions.",
+            "about.li_keyboard": "<strong>Keyboard navigation.</strong> Every control is reachable by keyboard. Focus indicators are visible. The tab order follows the visual layout.",
+            "about.li_screenreader": "<strong>Screen reader support.</strong> ARIA labels, roles, and live regions let screen readers announce content changes. Skip-to-content links on every page.",
+            "about.li_touch": "<strong>Touch targets.</strong> All buttons and controls are at least 44 pixels on mobile &mdash; large enough to tap accurately on a bumpy train.",
+            "about.li_rtl": "<strong>Right-to-left support.</strong> The Arabic translation renders with proper right-to-left layout, text direction, and mirrored navigation.",
+            "about.li_print": "<strong>Print stylesheets.</strong> Every page prints cleanly for riders who want a paper backup.",
+            "about.li_travel_times": '<strong>Travel time estimates are approximations.</strong> We use published schedules and average travel times, not live data. Actual times will vary, especially during the cutover when the system is under stress.',
+            "about.li_schedules_change": "<strong>Schedules change.</strong> NJ Transit may adjust service during the cutover based on ridership patterns. We monitor for changes four times a day, but there may be a delay between an official update and our site reflecting it.",
+            "about.li_translation_errors": '<strong>Translations may have errors.</strong> While we work to make translations natural and accurate, we rely on AI-assisted translation. If you find an error in any language, please <a href="https://github.com/jamditis/reroute-nj/issues/new" target="_blank" rel="noopener">report it</a> and we\'ll fix it.',
+        }
+        for key, eng_text in li_map.items():
+            translated = get_translation(translations, key)
+            if translated:
+                html = html.replace(f"<li>{eng_text}</li>", f"<li>{translated}</li>")
+
+        # CTA button
+        cta = get_translation(translations, "about.cta")
+        if cta:
+            html = html.replace(
+                '>Plan your commute &rarr;</a>',
                 f'>{cta.replace("→", "&rarr;")}</a>'
             )
 
