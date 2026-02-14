@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-14T06:22:52Z",
+  "lastUpdated": "2026-02-14T11:16:42Z",
   "articles": [
     {
       "id": "twp-millburn-nj-us-transit-major-service-2026-02-14",
@@ -38,6 +38,104 @@
       "date": "2026-02-13",
       "category": "news",
       "excerpt": "Rail service into New York will be reduced for a month as Amtrak shifts train operations from the 110-year-old Portal Bridge to the newly constructed Portal North Bridge over the Hackensack River, a key milestone in the Gateway Program. The “cutover” work, scheduled from Feb. 15 through March 14, will temporarily limit trains to a single track between Newark and Secaucus. As a result, fewer...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "nytimes-transit-could-2026-02-13",
+      "title": "NJ Transit Could Be Disrupted During Portal North Bridge Construction",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPYzI3Y2xlMjRDSm1JWHZ5WFVUdXR1M2xvY1hCNVdVNVp5XzltOXd6eGFwb3hmWlFFalZhNVlyTzREU2IzM29ienJrR1ByVk1yTU9WdVpPeUM3T29weTFLbnM0QzZBblBMT3BnZUY0MmNlVVFrTlRhenh6U0M5cmVRZEtUNnBhZw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "The New York Times",
+      "author": null,
+      "date": "2026-02-13",
+      "category": "news",
+      "excerpt": "This page has been blocked by an extension This page has been blocked by an extension https://www.nytimes.com/2026/02/13/nyregion/portal-bridge-njtransit-amtrak.html New Jersey commuters who take trains into Manhattan may be in for a long month of travel disruptions as bridge work begins along a key segment of the Northeast Corridor, the busiest passenger rail route in the Western Hemisphere. On...",
+      "lines": [
+        "northeast-corridor"
+      ],
+      "direction": "nj-to-nyc"
+    },
+    {
+      "id": "abc7-what-the-portal-bridge-2026-02-13",
+      "title": "What the Portal Bridge cutover means for NJ Transit, Amtrak commuters",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPVFpqOG1lVjlCSkxqNTJoTXVPY0VWLU1CdWd4UFhKa0pEQTZzaTRQZENNSkdHTlFPWkZBOVRTMHlVMlZmUE9fMklqTTVIRWZwQWNFUkViZGpEY2J4bVNfTE9nc0t6NFM5c3h0NU5oY2Exa1duRDZjTlNlU0hKejBjOElMRm1wUUtqQkhjZ3pxUXEzQTdYZDBwLUJBVk5xOHh2VThua1FxZE1rb1dhXzVCMk9CazFNdVQ0U1prZjA5cklsYzFZWU9v0gHMAUFVX3lxTFBVSDhZQ2Y2WWhocEtpSDdHU0ZCXzFoNFh2NkpHWWVZaUZVY0FyaVVjakJTWHZENGZMQWdYT21QS05xUk4yRXZwRG5xY2x2NV9peWRMdHNMOWVwN3EzUEoyaVRDVUJxelNhNEdrQUN1aFNJRV9HQlNmNnM2VEEzaHJWTGFFNmZNYUpaX0dnSklsSWEyaDRwbFZFUWR3c3JhN2JQRm9lWFRMbEVsX0Q0UkhveURoWjd2V1ExenlSN0xFbUdxNmxLaGdfazVXTQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "ABC7 New York",
+      "author": null,
+      "date": "2026-02-13",
+      "category": "news",
+      "excerpt": "An error has occurred. Please contact support for more assistance. Sonia Rincon has details on the service changes. NEW JERSEY (WABC) -- Beginning February 13, Amtrak will begin the first stage to transfer rail service from the century-old Portal Bridge to the new Portal North Bridge over the Hackensack River. During the transfer, all rail lines except the Atlantic City Rail Line will experience...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "nbc-new-york-portal-bridge-project-2026-02-13",
+      "title": "Portal Bridge project to impact NJ Transit, Amtrak service starting this weekend: What to know",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNR1VOREc2OVBJTElQVWlScTktX1NFejZ4ZDN2azNHM282UDBqcWVfUndvdTdiTjlZei0xQU91bTlQaTd4anIzNjFDR2VJc2t6T3dGajFnYnlRTWc1Qm9lTExNc0phTlFhZnNMc1BmVjhNRDVYSHdFSXU4WmxvYnVnTDg3VTdHTlBZR2pjT0M1OFl6UzNqRXJ2aU530gGiAUFVX3lxTE9oTzZmWVMxWmxINHZDU1pfM0VxSTlyenZaSy11QVRKbFptdE9DckFRRU4yMVFLS3NKMFkxOFJVZHBrYmY4OXBOR09UY1hnVUhHX255eUhXZ0tiVmFzTXdiVjdYM2syTVV2bUFKODBmTGt4MlpzQl8xbEU0RGZNQWRDelNUMEtMNGlkUms0b3pQM1BKQy16YmNPRTMzVGhfOHphZw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "NBC New York",
+      "author": null,
+      "date": "2026-02-13",
+      "category": "analysis",
+      "excerpt": "A big construction project is about to have a big effect on traffic in and out of NYC. It’s related to construction on the new Portal Bridge over the Hackensack River, which has been a problem for years whenever it gets stuck. NJ Transit says nearly every rail line will see changes, and Amtrak will also be disrupted. NBC New York’s Romney Smith reports. NJ Transit and Amtrak are warning its...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "fox-5-new-york-transit-new-schedules-2026-02-13",
+      "title": "NJ Transit new schedules start next week: How to avoid worst delays",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFB4cUxveE42TEFwU29mSGxoSUNxVnBLOUNadXBWX0V4Y2REU2tZY0JfNEhGaEdhd2RSbS1XUHFPeTlEZXZSTUMwbFRMT3JnMktwZVltUmJMSXBvQdIBX0FVX3lxTFBTV2ZObHZwQkNWQUU3SU1XazBxZ0RoSjQ3SEViT1hRT29Hd3djZU83aGNBWGRualNVdURwSFcwZ2lFd1cyUHhIWk82ODJoWnpLZFhOUGVSU1pfOE5KMml3?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "FOX 5 New York",
+      "author": null,
+      "date": "2026-02-13",
+      "category": "news",
+      "excerpt": "Major schedule changes tied to Portal Bridge construction are about to reshape the daily commute for New Jersey Transit commuters. FOX 5 NY's Stephanie Bertini has the details. - Major changes are coming to NJ Transit, and officials are urging commuters: if you can work from home, now’s the time. - For those who must commute, NJ Transit recommends traveling before 7 a.m. or after 9 a.m., and...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "aol-com-transit-new-schedules-2026-02-13",
+      "title": "NJ Transit new schedules start next week: How to avoid worst delays",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE4tOWh2NkNtSGRuX1dkaHBoMzU5MkRyVGlzLVFWYjlpcjNRWlFpbHBOTjViTktXd3hlcFdVZnpab1VTUkRxZS1Mb0Etb0VSZUtoRUttRjNmd0k5amNPbmVGMlI3Q3ZGbjU3VVN4MV9uZmtjZ3RtbnhaZVUwYw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "AOL.com",
+      "author": null,
+      "date": "2026-02-13",
+      "category": "news",
+      "excerpt": "- Major changes are coming to NJ Transit, and officials are urging commuters: if you can work from home, now’s the time. - For those who must commute, NJ Transit recommends traveling before 7 a.m. or after 9 a.m., and before 4 p.m. or after 7 p.m. - NJ Transit says customers should expect modified schedules, including earlier departures, reduced service on some segments, longer travel times, and...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "news12-new-jersey-appeals-court-temporarily-releases-2026-02-13",
+      "title": "Appeals court temporarily releases Gateway Tunnel Project funding",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPU2Fpb0dGNlZHbVdtMnZMTHg4b1Q3XzNSS1lFQjVFZTA2OWFaQllOM2RqSW1fRDVFZnZjT1U1LVNrckdMOEZ5b2VGR3p4QVF4T0pmcm1TVVM0RFI0OWZNb05LYVdERjVrbEpRck1sMzZTLTdUcXQ4OWw5cVFJN0dEaGZVcXBEVXJBUWlQSzBUamFPYkNqbFRYSmFTc0xPM2haQnVrSmFB?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "News12 | New Jersey",
+      "author": null,
+      "date": "2026-02-13",
+      "category": "news",
+      "excerpt": "'Out of money, out of options.' Jefferson School District facing cuts 7h ago](https://newjersey.news12.com/out-of-money-out-of-options-jefferson-school-district-facing-cuts) Jersey Proud: 2 kids in South Jersey helped firefighters during a snowstorm 7h ago](https://newjersey.news12.com/jersey-proud-2-kids-in-south-jersey-helped-firefighters-during-a-snowstorm) Officials: Lithium-ion batteries...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "pix11-transit-urges-remote-2026-02-13",
+      "title": "NJ Transit urges remote work amid rail service changes",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNNGcyZ283M1hsVXBWaWxGcE5sNEJKYVhvOUNNQ194elJMM1lPYXdQdG5mUk9ZcnJERFcxS0diQmZ4Sm5RMUZwT1gwYkhicjJfTjZXS0VrWEhzTDUxTnA3UW12dFZpR3YwVU8tYUJOOXRJbG15YzRfbWhhRXppQ3V4eU1WVUJGNWU4OWluVTEzMlFYNGhUNTQxQnloZ19hOElOV0dnMklyOXNiTERaRTdydS1JQU_SAbQBQVVfeXFMTTRnMmdvNzNYbFVwVmlsRnBObDRCSmFYbzlDTUNfeHpSTDNZT2F3UHRuZlJPWXJyRERXMUtHYkJmeEpuUTFGcE9YMGJIYnIyX042V0tFa1hIc0w1MU5wN1FtdnRWaUd2MFVPLWFCTjl0SWxteWM0X21oYUV6aUN1eHlNVlVCRjVlODlpblUxMzJRWDRoVDU0MUJ5aGdfYThJTldHZzJJcjlzYkxEWkU3cnUtSUFP?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "PIX11",
+      "author": null,
+      "date": "2026-02-13",
+      "category": "news",
+      "excerpt": "- captions settings, opens captions settings dialog HLS playlist request error at URL:...",
       "lines": [
         "all"
       ],
@@ -118,6 +216,76 @@
       "direction": "both"
     },
     {
+      "id": "njtransit-transit-2026-02-12",
+      "title": "NJ TRANSIT",
+      "url": "https://www.njtransit.com/node/2053431",
+      "source": "NJ Transit",
+      "author": null,
+      "date": "2026-02-12",
+      "category": "official",
+      "excerpt": "NJ TRANSIT Rail, Light Rail, and Bus Service for Presidents’ Day – Monday, February 16, 2026 \\| New Jersey Public Transportation Corporation On Monday, February 16, 2026, NJ TRANSIT Rail service will operate an enhanced weekend schedule for Presidents’ Day. The enhanced weekend schedule includes additional trains during the morning and afternoon/evening “peak” periods. See shaded trains in...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "njbiz-portal-north-bridge-cutover-2026-02-12",
+      "title": "Portal North Bridge cutover to disrupt NJ Transit service",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE8wT2R0ajFsdk9GS3Qta1gzOFFWRWlLV2RhSzllSFF1Nm45NnVtVHd4UnpTUkJ0cjRWRU9NSm9nYTd0U3NxaTBMZEpjS1BNdjA4Q0tkR1lyRWxFNktDb1p3UTFiUWhkd3hXYk5Na3NpeEt5UQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "NJBIZ",
+      "author": null,
+      "date": "2026-02-12",
+      "category": "news",
+      "excerpt": "Following a 30-hour journey down the Hudson River, the first of three massive arches to support the new Portal North Bridge arrived at the construction site in November 2024. The new bridge will replace the current 114-year-old swing bridge, which opens for maritime traffic and often has mechanical issues, resulting in service delays. - PROVIDED BY NJ TRANSIT Portal North Bridge cutover to...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "cbs-news-portal-north-bridges-debut-2026-02-12",
+      "title": "Portal North Bridge's debut in N.J. will result in extensive Amtrak schedule changes. Here's what to know.",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPQUFOelhJVmRZN3JNQURhQVdQblJWM0YxcjdzcnVZaGY3dzJ6VGp1UXRiQ0ZFb21YVmxfZWdDUG1nR1dpVE52STZrUVFFYkszdXFoX0NveGtLdEVjMXFvNGdQODNUXzJWTVRZaDNpbTg0R1Y4aFRTWUVQRlg0cVVSRjVsS1N3aGtfWjc5ODhMV0Yta1FlbWVYRlR3?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "CBS News",
+      "author": null,
+      "date": "2026-02-12",
+      "category": "analysis",
+      "excerpt": "- The 5:33 \\| Legacy of the LIRR Massacre - On The Dot with David Schechter: Wildfires & Climate Change The Portal North Bridge in New Jersey is nearing completion, and when done will mark a major milestone for commuters along the Northeast Corridor. Bringing it online, however, will mean about a month of disruptions for hundreds of thousands of rail commuters. The big changes start this weekend....",
+      "lines": [
+        "northeast-corridor"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "montclair-girl-transit-reduce-2026-02-12",
+      "title": "NJ Transit To Reduce Service to New York Penn Station Through March 15",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPSTVpcE1qTGNHUkpNWVFoT3dJWjVUMVRtY09HNFYxN2xmZ202aGxwWU9Ld00xU0MwMnNxcnEwcGJOUVVrLWFxdHFlVFIyVDF0ZjNkejMtWDNsY0hralA2QkV2Sl9vQjBtVzVFZmhWN284LVZMLW1VU25VYjBtM2wtT2dvYThzOUxZajNqQXhfTjZnRHJNYzhPQVJzSQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "Montclair Girl",
+      "author": null,
+      "date": "2026-02-12",
+      "category": "news",
+      "excerpt": "NJ Transit Commuters heading to and from New York Penn Station should expect to transfer trains from February 15 to March 15 due to construction transferring rail operations to the new Portal North Bridge over the Hackensack River. During construction, trains will only be able to operate on a single track between Newark and Secaucus. As a result, there will be fewer trains going to NY Penn on...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "abc7-portal-bridge-construction-will-2026-02-12",
+      "title": "Portal Bridge construction will cause NJ Transit, Amtrak service changes for 4 weeks",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQVUg4WUNmNlloaHBLaUg3R1NGQl8xaDRYdjZKR1llWWlGVWNBcmlVY2pCU1h2RDRmTEFnWE9tUEtOcVJOMkV2cERucWNsdjVfaXlkTHRzTDllcDdxM1BKMmlUQ1VCcXpTYTRHa0FDdWhTSUVfR0JTZjZzNlRBM2hyVkxhRTZmTWFKWl9HZ0pJbElhMmg0cGxWRVFkd3NyYTdiUEZvZVhUTGxFbF9ENFJIb3lEaFo3dldRMXp5UjdMRW1HcTZsS2hnX2s1V03SAcwBQVVfeXFMUFVIOFlDZjZZaGhwS2lIN0dTRkJfMWg0WHY2SkdZZVlpRlVjQXJpVWNqQlNYdkQ0ZkxBZ1hPbVBLTnFSTjJFdnBEbnFjbHY1X2l5ZEx0c0w5ZXA3cTNQSjJpVENVQnF6U2E0R2tBQ3VoU0lFX0dCU2Y2czZUQTNoclZMYUU2Zk1hSlpfR2dKSWxJYTJoNHBsVkVRZHdzcmE3YlBGb2VYVExsRWxfRDRSSG95RGhaN3ZXUTF6eVI3TEVtR3E2bEtoZ19rNVdN?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "ABC7 New York",
+      "author": null,
+      "date": "2026-02-12",
+      "category": "news",
+      "excerpt": "NJ Transit, Amtrak temporary service change amid Portal Bridge construction - ABC7 New York Sonia Rincon has details on the service changes. NEW JERSEY (WABC) -- Beginning February 13, Amtrak will begin the first stage to transfer rail service from the century-old Portal Bridge to the new Portal North Bridge over the Hackensack River. During the transfer, all rail lines except the Atlantic City...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
       "id": "northjersey-its-going-2026-02-11",
       "title": "It's going to be harder soon to get to New York via train. Here's why",
       "url": "https://www.northjersey.com/story/news/transportation/2026/02/11/nj-transit-service-cuts-starting-for-construction-heres-where/88622464007/",
@@ -126,6 +294,62 @@
       "date": "2026-02-11",
       "category": "news",
       "excerpt": "Feb. 11, 2026Updated Feb. 12, 2026, 1:29 p.m. ET Rail service into New York will be reduced for a month as Amtrak shifts train operations from the 110-year-old Portal Bridge to the newly constructed Portal North Bridge over the Hackensack River, a key milestone in the Gateway Program. The “cutover” work, scheduled from Feb. 15 through March 14, will temporarily limit trains to a single track...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "bergen-record-its-going-2026-02-11",
+      "title": "It's going to be harder soon to get to New York via train. Here's why",
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQbmZteUhkNlZiX1ZfSzg0dUZJOEtHYld4b2hsdFVsczlSdmMzX1h5NmhtQUtnWTFmd2lIbkE5dThEb0l0VjN3ZjN6V2h6MmRtaVZxcVpFVWMwVUpmYTJDVDhoaV9QTThLZE95WXJENmc1b2tJaEU3eDNzYUJsTWlNRmd0cXBmVGN2alJGR3AwX2t4bkVfNVpNMFItYm9Mb2hvVnhsWmszcnJVc052ekI0S29SNllXcXlpV1l2bHdBSzUyaURLaTRPdTlLWk1VV1lGZFJ5dVR3?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "Bergen Record",
+      "author": null,
+      "date": "2026-02-11",
+      "category": "news",
+      "excerpt": "Feb. 11, 2026Updated Feb. 12, 2026, 1:29 p.m. ET Rail service into New York will be reduced for a month as Amtrak shifts train operations from the 110-year-old Portal Bridge to the newly constructed Portal North Bridge over the Hackensack River, a key milestone in the Gateway Program. The “cutover” work, scheduled from Feb. 15 through March 14, will temporarily limit trains to a single track...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "new-jersey-herald-its-going-2026-02-11",
+      "title": "It's going to be harder soon to get to New York via train. Here's why",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPRVJwMGZjTGhXaS00VFQwQmZQVVJUekZxeXBHcFA0ZE5BQ05XWHJLOXFWNWxvcU1NcVc2eXhlQzJmRldrVW5oemNIV2dYMHl0MEMzVlVrX25XMWtWaEw5czBhRmhVSzduWU04SVdpOW5UTHc5amZ2ei1NR3E2NzlUbG1SN2xrWU43bHlCcUlwUnoxMFkwZkQ5cmRWOVBXYjZBUUI4SUZlVFpSNWg1WUZwX291WExCRlduUEV1T01vQmJ6WXJGQzhZZVZEZUJYcTlKVVE?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "New Jersey Herald",
+      "author": null,
+      "date": "2026-02-11",
+      "category": "news",
+      "excerpt": "Feb. 11, 2026Updated Feb. 12, 2026, 1:29 p.m. ET Rail service into New York will be reduced for a month as Amtrak shifts train operations from the 110-year-old Portal Bridge to the newly constructed Portal North Bridge over the Hackensack River, a key milestone in the Gateway Program. The “cutover” work, scheduled from Feb. 15 through March 14, will temporarily limit trains to a single track...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "msn-bridge-project-brings-2026-02-11",
+      "title": "$2B bridge project brings weeks of delays for 200K NJ Transit, Amtrak commuters",
+      "url": "https://news.google.com/rss/articles/CBMi1wJBVV95cUxPR0RGZjFGM2ZVRmc1T2hiczNpdmVpb0hkV2pZeVB4dHVKdmg1UjdDanZ1S2sxOFZMaVdVdVVUT1ZZeHFjMGZZMFp3VjdBa21vVW1MdmxRTVZDbURZTFQxSS1nY2tkRGZFMGFLWXI4VjFpLXhiS2NHR3g2SnNTX1JRZFFjU3NFUWdFQlpOUWVubkFjcWRfTmdNOV9TNzZIclk5SENuSjY5elN3eTQybEdkVy1VcHN6eXh6MFRFcmo4R3FxVllhYnd4VkwtTmhpTE93U1hSaHl3M0NFalo4MWIzX1JGcFFIdXF0MlVNelpZUi00b2RMTFVheVBMemxIOF83SWtDaUZCV05ieExsSmloT2hlZGZTVTNpNmhZb0tsV2xpSURsRml6Q1ByRzJ5QzBXS0JuQ2NRWDQ4YUROMG5OSzd6aDl1bnJSZjhLeWdpVkxISm9pT19J?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "MSN",
+      "author": null,
+      "date": "2026-02-11",
+      "category": "news",
+      "excerpt": "Upgrade your Chrome browser with MSN New Tab Get localized weather, trending news, AI powered search and more...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "constructionreviewonline-com-final-construction-2026-02-11",
+      "title": "Final Construction of $2.4 Billion New Portal North Bridge Prompts New Jersey Transit to Alter Route Schedules",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPWUJhMnhhaVZHLTFJUTRRd0RDaE9TZFhLSjFtRXBSbXR6cmVtcHJ0WTBNQms0WTZ5SWpBZ3VfdTBzMHZnTFpXNkZzZGRqT1BCVUZjYUg3SGQzQkV6RFpxdTdCQ1dwLW10Y2tLQ01Fb3Z4MlYwR2JfRmM5U1hFcWEtNG1raW03ODJ2QWFiTHZhZGdPY3NJbEZtZjdua2EtSW5aRjA1UHhxeHNsR1oyaDFwUHh5NnNmb2hOUy1jTHdtZXR2b25MUGNGN0x3aXVoYVRuX1c4RjdBQQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "constructionreviewonline.com",
+      "author": null,
+      "date": "2026-02-11",
+      "category": "news",
+      "excerpt": "To provide the best experiences, we use technologies like cookies to store and/or access device information. Consenting to these technologies will allow us to process data such as browsing behavior or unique IDs on this site. Not consenting or withdrawing consent, may adversely affect certain features and functions. The technical storage or access is strictly necessary for the legitimate purpose...",
       "lines": [
         "all"
       ],
@@ -179,6 +403,76 @@
       "direction": "both"
     },
     {
+      "id": "news12-new-jersey-portal-bridge-cutover-project-2026-02-10",
+      "title": "Portal Bridge ‘cutover’ project to impact NJ Transit services. Here’s what it means for you.",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQdTUzeUpBeUhOT09JNTZ1MS0xSDFZWnZydzQwOGxtMWhwcHVHRFU0UXpLUzNET2xQaEhDcV82TlZmWDlCR0tZdUxKTndoYThFbEtaUEotQ0FfbDRhUkQxRU9IYnQ2bi1mQmpOemlQWEJ2LUVuQlB2XzZXX2drSkUtQ2xvWEtaWTdMTkIxbzM5NXJISFF6eTljb0VMVWJ6VDhkWXdOeGJkcGhJckdsSjlnSGp6NzNnMXM?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "News12 | New Jersey",
+      "author": null,
+      "date": "2026-02-10",
+      "category": "news",
+      "excerpt": "'Out of money, out of options.' Jefferson School District facing cuts 7h ago](https://newjersey.news12.com/out-of-money-out-of-options-jefferson-school-district-facing-cuts) Jersey Proud: 2 kids in South Jersey helped firefighters during a snowstorm 7h ago](https://newjersey.news12.com/jersey-proud-2-kids-in-south-jersey-helped-firefighters-during-a-snowstorm) Officials: Lithium-ion batteries...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "pix11-final-construction-new-2026-02-10",
+      "title": "Final construction of new Portal Bridge requires month of service changes for commuters",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOX2djN0NkRTBvdTVWaGZvMFlLRHY1ZVlEeUhOSWFVejhueXhCTENSUnk0U3pRQXdlNVpuNk9TREo0LWl2ZFVFQURlS0xTYmJpaGJxY2NZZnhROWFOejJnRTE2cXNxUzc2cE1Rcms5ODdqQ1RVb1l4bHQzS1Z1T2NkMUxEV0Myc05iTnJtV3Q1c0Y2bld0Q2h5Szk1UWtzcmVualRfUFFrQ3FyUmFIQVVwZEZQRDZQUkZ3bml5M0JmWdIBxAFBVV95cUxPX0lJbExWOFo3NUV2RTRSaTJzLW04NjNHb0tqMUZUT2Y4bkI3T2hZWUxYWnltWk9tSDg3YjVocllvem9kNVI1dUNzTW5xQllsQjZmWERsc2tTWG9EeXQ1Z3M5eFpfLWFRNllwOHZzMnQtUDZqQWpONkpPZzBId1pMWFp1VERkUEg2UEdjU05nOERhcEk0LVM5OUpqU19SdjVqVnlpeDNrREV4UzVqRlkzaXd5a2t2THAzaXIteV9WZzZQRjZ3?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "PIX11",
+      "author": null,
+      "date": "2026-02-10",
+      "category": "news",
+      "excerpt": "NEW JERSEY (PIX11) — Check the schedule before taking a train ride between New York and New Jersey for the next month. NJ Transit is implementing reroutes and modified schedules tied to work on the new Portal Bridge, which is part of the overall Gateway Program. NJ Transit officials are urging riders on all rail lines to check temporary schedules online, warning that most train lines will be...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "pix11-transit-alters-schedules-2026-02-10",
+      "title": "NJ Transit alters schedules for Portal Bridge work",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQZTQzUDY0VnVSWkNWVFVjRnRsc280OXhPN0pCNElJSDdaV1FxY21pWkZRQzBtbkhHTU5TS2FrYlVjVjlTOEdEZ0tBYWpoS2FkZllSMmtxYTdZdDdkSHU3dlo1QXBwM2xIUDlTN1B4SjdwMG51MlFpNXFra1hQZVh4bTQydFdGMFZLek9ocg?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "PIX11",
+      "author": null,
+      "date": "2026-02-10",
+      "category": "news",
+      "excerpt": "- captions settings, opens captions settings dialog The media could not be loaded, either because the server or network failed or because the format is not supported. Beginning of dialog window. Escape will cancel and close the window. TextColorWhiteBlackRedGreenBlueYellowMagentaCyanOpacityOpaqueSemi-TransparentText...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "hobokengirl-path-riders-advised-2026-02-10",
+      "title": "PATH Riders Advised to Prepare for Delays from February 15th",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQUWVGOWd5STUyN2ZRT3pzMkdSVGxRWUNkZVN0X2FUcVc4R2FJbTFHbkRtUUpIcW9MNFdaWUs0Wmh1UjFJXzIzLXRTbmtybTFtNXNpR0lxd0ZUT19xN1VSeWlqZXFfNTVCZkZWNUN2a3prS2pyWTk5M0NnNlZ6RTBjQ2c2RQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "Hoboken Girl",
+      "author": null,
+      "date": "2026-02-10",
+      "category": "news",
+      "excerpt": "From February 15th through March 15, work to repair the Portal Bridge over the Hackensack River will impact Amtrak and NJ Transit passengers. The PATH has encouraged riders to make alternate plans during this time, such as working remotely and avoiding rush hour traveling. Read on for more about the upcoming work on the rail line and what passengers need to know. The changes are set to begin on...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "nj1015-transit-reduce-2026-02-10",
+      "title": "NJ Transit to reduce rail service by 50% for 4 weeks",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9JYnhNaFN0cXI0ajNmU0J0S3dLaDZMVzV3TzdfWEtubFpvSEtPYW9iQzg5cFdmZDFYTS02UTlNdHJaXzNsUGFqN1kwWHFWSFM4RVlZV0MzcUlKdVQ1?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "New Jersey 101.5",
+      "author": null,
+      "date": "2026-02-10",
+      "category": "analysis",
+      "excerpt": "4 weeks of hell start Sunday: What to know as NJ Transit cuts 50% of trains 4 weeks of hell start Sunday: What to know as NJ Transit cuts 50% of trains The payoff may be years of smoother, more reliable rail service but the next four weeks will test New Jersey commuters’ patience — especially after a day from hell on Monday that NJ Transit's leader had to apologize for. Starting Sunday, NJ...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
       "id": "lackawannacoalition-org-portal-north-bridge-cutover-2026-02-08",
       "title": "Portal North Bridge Cutover Brings Schedule Changes Later This Winter – Lackawanna Coalition",
       "url": "https://lackawannacoalition.org/2026/02/08/portal-north-bridge-cutover-brings-schedule-changes-later-this-winter/",
@@ -187,6 +481,20 @@
       "date": "2026-02-08",
       "category": "news",
       "excerpt": "The new Portal North Bridge located west of Secaucus Station is essentially ready for service, and NJ Transit has plans to start using it.  Cutting over from the existing bridge, which is more than 100 years old, is a complex process that will require single-track operation between Newark Penn Station and Secaucus Junction Station. Although trains coming from Broad Street Station in Newark enter...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "news12-new-jersey-high-winds-blow-down-2026-02-08",
+      "title": "High winds blow down canopy at Pompton Lakes gas station",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQSUlnRjFGeWFkYmZtN3Y3bDhqOVdjdklqRmM1LWxmWEN4RDl3MnVNc0otQ1BsOUZOYzBQcENNUWZEa3ItZWFWdTlyblRHNW5nbkxMaXJEcWRicTZFSFJ1a3ljUy1kcFBNeVBBelZLbUM1dGhkbTBNT0doMFI0S2twT1l0M2ZCYXpad3NBMGx3?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "News12 | New Jersey",
+      "author": null,
+      "date": "2026-02-08",
+      "category": "news",
+      "excerpt": "'Out of money, out of options.' Jefferson School District facing cuts 7h ago](https://newjersey.news12.com/out-of-money-out-of-options-jefferson-school-district-facing-cuts) Jersey Proud: 2 kids in South Jersey helped firefighters during a snowstorm 7h ago](https://newjersey.news12.com/jersey-proud-2-kids-in-south-jersey-helped-firefighters-during-a-snowstorm) Officials: Lithium-ion batteries...",
       "lines": [
         "all"
       ],
@@ -207,6 +515,119 @@
       "direction": "both"
     },
     {
+      "id": "news12-new-jersey-water-main-breaks-causing-2026-02-01",
+      "title": "Water main breaks causing traffic issues in Middlesex County",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOTVBmYTVKaDgtVUo0VEVuMkRTa3JHYlFTSmdJaG9RQVBtakJSZUZrWTNTZU8xYlFqOUtsRVJwS2l3VVphdzJXeDcwdkVSZG12LWZ5NnVVRURSMWlsOVlQMmNHbTNNTHVydzE0Ql9hSVpERi12eVluaHNyR3NUaU9tc1FJeFFyRXZJdldWamFXR1VqRkk?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "News12 | New Jersey",
+      "author": null,
+      "date": "2026-02-01",
+      "category": "news",
+      "excerpt": "Portal Bridge ‘cutover’ project to impact NJ Transit services. Here’s what it means for you. 14h ago](https://newjersey.news12.com/portal-bridge-cutover-project-to-impact-nj-transit-services-heres-what-it-means-for-you) Appeals court temporarily releases Gateway Tunnel Project funding 22h ago](https://newjersey.news12.com/appeals-court-temporarily-releases-gateway-tunnel-project-funding) NJ...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "news12-new-jersey-ntsb-releases-preliminary-report-2026-01-23",
+      "title": "NTSB releases preliminary report on NJ Transit crash in Montclair",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQTkQ0aWotR1FXSHRfY01mSzY1TXgtT1ZvaDhDaGtLSVEwVUxBSUxZS25LUzN4WHZnZUZJWkgwNmlFN0lpV2dmSmo5RTlkVHRjenhTY0xFZm42WWRiNnVRUFotZTUxYmpSRnBKRlBzUDliRnRrd3M0TTZLN2N6dzc2azhQLUN2c054Mk56QmdGY0puUkhPNzBvbjVB?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "News12 | New Jersey",
+      "author": null,
+      "date": "2026-01-23",
+      "category": "news",
+      "excerpt": "Portal Bridge ‘cutover’ project to impact NJ Transit services. Here’s what it means for you. 14h ago](https://newjersey.news12.com/portal-bridge-cutover-project-to-impact-nj-transit-services-heres-what-it-means-for-you) Appeals court temporarily releases Gateway Tunnel Project funding 22h ago](https://newjersey.news12.com/appeals-court-temporarily-releases-gateway-tunnel-project-funding) NJ...",
+      "lines": [
+        "montclair-boonton"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "montclair-local-news-portal-bridge-work-2026-01-21",
+      "title": "Portal Bridge Work to Bring a Month of Train Pain for Commuters",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPblo2SXNhbVpELWtUNGpWcWVIaU1nOUZhcFFya1FZNzB0dU1lX0RDZ085WEM2UVVhNVNMdTZFeS1DT2FEeXd0Zk1iZHRXckFJclhtaFVuSFFMVlh1YjJENV9GSVprNm16STBoLVFhYnk5WFpyX0d5SXpZdE9iMUY2WWZnWXNSN200cmk0OTNTYVQ2NWF1bmFyZTljSGFkeGdUOGc?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "Montclair Local News",
+      "author": null,
+      "date": "2026-01-21",
+      "category": "news",
+      "excerpt": "Montclair Local is free to read—but it's not free to produce. Your support helps keep it that way—for everyone. Stay informed with our free newsletters for the latest news, events, and local stories. Join 14,000+ locals who trust our fact-based journalism delivered free to their inboxes. NJ Transit riders heading into New York City should prepare for extra travel time and alternate routes next...",
+      "lines": [
+        "montclair-boonton"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "railway-supply-portal-bridge-replacement-delays-2026-01-21",
+      "title": "Portal Bridge replacement delays set to disrupt NJ TRANSIT",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOeHRQNFZhSEZPcjZ3SS1xQ3dSd1diNzNXOERoSGczQjE2SnRLekFMU0lCa2Ewa2tJNzB3VWhua2ZaazNFd3B0X0ZHd05DXzNSRjRKX3F4WjBLLW90dTlaNm9VX1FfdExmOHZBRW8zX0w2YUlIeXUtclgzai1HYzlHYk9VVlg0QWxrVnBHMlljSQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "Railway Supply",
+      "author": null,
+      "date": "2026-01-21",
+      "category": "news",
+      "excerpt": "Portal Bridge replacement delays are set to affect NJ TRANSIT and Amtrak riders across North Jersey for several weeks beginning next month, as crews enter a critical stage of replacing the 115-year-old Portal Bridge, as reported by Railway Supply. Photo Credit: NJ Transit (njtransit.com/portal) The nearly $2 billion Portal Bridge project will replace the aging movable span with a taller, modern...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "news12-new-jersey-toll-commuting-portal-2026-01-19",
+      "title": "Toll of Commuting: Portal Bridge construction to disrupt NJ Transit, Amtrak commuters",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPUWJ0dHBJa184SW81RUNodjB4RlotcTU2QWI2NlQ2dXBiSlZ6SjduSzJYclkwSnBjVVIyWkNCMjN5ejR6UFJKQkltQmlTbG1RSXpwMVNhOXFUVkREcW5neUx3U2p6bHVXNk1EMk9PdUFOX19SNERpcFZRR2N5dXRIUDlsN21DTlFsU1AtejkyRm1sMVR5VjVzNzVib1JfeG5IX09EZ0toREJXR0ZfRUFObExn?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "News12 | New Jersey",
+      "author": null,
+      "date": "2026-01-19",
+      "category": "news",
+      "excerpt": "Toll of Commuting: Train vs. bus commute tested in Glen Rock 2ds ago](https://newjersey.news12.com/toll-of-commuting-train-vs-bus-commute-tested-in-glen-rock) Toll of Commuting: Commuters weigh time versus cost on Bergen County to NYC trips 5ds ago](https://newjersey.news12.com/toll-of-commuting-commuters-weigh-time-versus-cost-on-bergen-county-to-nyc-trips) Toll of Commuting: Rutgers...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "railway-supply-portal-bridge-service-disruption-2026-01-19",
+      "title": "Portal Bridge service disruption: four weeks of rail changes",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNc2RDVDBOdjVJNnl3STZxdVZJQmJzRk5PWnppZXVrZVBPa1dEckhreThhcWc2TFNiUFZydzNPT2ZZT2FXeF9MdkJCLWNoRWx4cmJrMGMtOHRTRDdnVi1uTldRZUJCRWVydjVPeWFwRTFWa0tTdElaQlM3MzV5SjBRYjIySkowdjh0SGtmVzhHNHY?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "Railway Supply",
+      "author": null,
+      "date": "2026-01-19",
+      "category": "news",
+      "excerpt": "Rail passengers are being warned that the Portal Bridge service disruption will mean about four weeks of reduced and adjusted service for NJ Transit and Amtrak as crews complete the new Portal Bridge crossing of the Hackensack River, as described by Railway Supply. The nearly $2 billion project is a key link for commuters, but moving off the existing 111-year-old bridge will temporarily reshape...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "railway-supply-portal-north-bridge-service-2026-01-18",
+      "title": "Portal North Bridge service cuts hit Amtrak and NJ Transit",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQQXV1emJ1RVI2TFpRXzVfeW42cWprWTd2clFBc0hxOWhOVmZTX1NLaGZKOS1ma25Qbmoyd0V0ZkRnVTZNODZTVTU0eUxNYTRfLTRzaGJ4SG93Nk1vVnJma3dnVEdpY29raWpCcXItUm9NalZsMVRCT0EyRnhra1lZRHYzTFBjVnNwM1B0Q045QQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "Railway Supply",
+      "author": null,
+      "date": "2026-01-18",
+      "category": "news",
+      "excerpt": "Portal North Bridge service cuts will reshape rail schedules in New Jersey and New York starting February 15, when NJ Transit and Amtrak reduce service by 53% for four weeks. This is reported by the railway transport news portal Railway Supply. The temporary pullback supports the Portal Bridge transition needed to connect the new Portal North Bridge to the Northeast Corridor Line, as outlined on...",
+      "lines": [
+        "northeast-corridor"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "villagegreennj-com-starting-feb-all-2026-01-18",
+      "title": "Starting Feb. 15, All Weekday South Orange",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQei01Z000c2lqZXN5TUVmMWNZSTVTaUVZVlo1Z3R5bkZlcW9kMDhEOVFqWGt2NTJib0kzYkpmSk00TXFlQkktVU96U1dlWG1rLTJQQUpKZUlEWHlUUk04ZkpkcUtpMUk0VnhjcGF3REtNZVQ0VW01X0xTd2JSOVhfd1hjM3Y4XzhjSUJDNm5hRzlhb2VVM0pZTDVTTk1RQnpOei1XMjFJVHpseWVaOVUyY3BPZUxLN19qb1E?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "villagegreennj.com",
+      "author": null,
+      "date": "2026-01-18",
+      "category": "news",
+      "excerpt": "Weekday Midtown Direct trains on the Morris & Essex (M&E), Gladstone Branch and Montclair-Boonton Line will be diverted to Hoboken. Weekend Midtown Direct trains will operate to/from PSNY. NJ Transit sent out a press release advising that train service schedules will be affected beginning February 15 due to critical rail transfer (cutover) work. (Note: the opening sentence of their press release...",
+      "lines": [
+        "montclair-boonton",
+        "morris-essex"
+      ],
+      "direction": "both"
+    },
+    {
       "id": "nj-spotlight-portal-north-2026-01-16",
       "title": "NJ Transit to cut some service to NY for repairs",
       "url": "https://www.pbs.org/video/headline-c-portal-north-1768590364/",
@@ -220,6 +641,62 @@
         "north-jersey-coast",
         "montclair-boonton",
         "morris-essex"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "nj-spotlight-transit-cut-2026-01-16",
+      "title": "NJ Transit to cut some service to NY for Portal North Bridge repairs",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQb2FWNXZJUTNYb3NxTl9DRFEwY0psNThMTlVjQnVxZk9hbnU4MkUtdUpoSk5kbUxtcGM4d2lMZTBKbW52b21wOXBzN0x2bTRLWm1xRGNEb1p2c0swTmNtN3M0SHNyUFQ2SlZDblZQQ3NGTEdSU0ZWRGZNQXRaWmR2S0FtdGZ4c0Y0YkdQeHlDdjZTRFJ1UkhlaGxWNGxFWWZkaHZlSEo4UThIR1U?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "NJ Spotlight News",
+      "author": null,
+      "date": "2026-01-16",
+      "category": "news",
+      "excerpt": "NJ Transit to cut some service to NY for repairs - YouTube If playback doesn't begin shortly, try restarting your device. Videos you watch may be added to the TV's watch history and influence TV recommendations. To avoid this, cancel and sign in to YouTube on your computer. An error occurred while retrieving sharing information. Please try again later. New Jersey Transit rail commuters should...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "roi-nj-portal-north-bridge-begins-2026-01-16",
+      "title": "Portal North Bridge begins last phase of construction as work starts to put first track into service",
+      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNQ244VXlsY3hjNXVWaTh4RlBaTlpOWE1RdUJDZk5sUUt5cWtRNV9aaU9Rb3JuQ05BTG4yQ3l4bFowMXBLaEt5M2hocm1mYmNvV0tjamdqaGR6a0s1RVhSTzhiRWc4ckplLVZUbE84dy1lWlg3QU5YUjAwQzhuUmk5N2UtTk9CVTBfNC1ZSEpwZzdMdG1jZjl0bzhKV2JpRDBQMU1GSWpTUG9WQy1oX2xoUFg3bWJ5YXlrRG1CUEJ4TWlYUWVNUVdiQ3UyLWZva3M2N1JLSHc1WTY0aXcwbEhEZzRHMkE?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "ROI-NJ",
+      "author": null,
+      "date": "2026-01-16",
+      "category": "news",
+      "excerpt": "- Support Quality Journalism. Support ROI-NJ. Starting on Feb. 13, Amtrak will perform critical work to transfer one track of rail service from the century-old Portal Bridge to the new Portal North Bridge over the Hackensack River. Through the years, the aging Portal Bridge has frustrated many commuters, with frequent malfunctions and delays. “The Portal North Bridge is a foundational piece of...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "progressive-railroading-rail-news-2026-01-16",
+      "title": "Rail News",
+      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQSFZxcTkyOW95V3E5eHlQd0FrUDBkRmVxSjRFeEVVS1hhNWRRbkU1MUpzQjNEZVU4UkRldTBhWDFWdHBUZDAwM09JT2Q0UF8wSlpnZ3JxUVp6LUJMTXFodGVDRU1vaVhKWTc5MHYzdy1vd1VoU0Q4SndvNjVIcHJLU2w5R2c4dGhwREZzZklaa0ZHMGcxT3R1cmJlOUN1NDVvTDhnb0JWMW4wNlI1MDVaMDJYWjZDbTF1T3ZQVTc2Y1FPWmI4STBWTWx1WjJ3aENKaG9uR0dKcHQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "Progressive Railroading",
+      "author": null,
+      "date": "2026-01-16",
+      "category": "news",
+      "excerpt": "NEW!![](https://www.progressiverailroading.com/graphics/railprime-inline-reverse-teal-white.png) - ![The Reasons For CN’s Dramatic Capex Drop This Year](https://www.progressiverailroading.com/canadiannational/article/CN-allots-fewer-dollars-for-2026-capex-following-completion-of-capacity-fleet-investments-in-prior-years--76289) - ![From The Editor: Calling All Rising Stars Nominees For...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "railway-track-and-structures-portal-north-bridge-cutover-2026-01-16",
+      "title": "Portal North Bridge Cutover Coming Soon",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNcTVTUmZTYkJacC1EQTZyRmJRTHVQTDYwRl9WTjRHSGFsLUE2ZGhhOFRZQi12RHhUdVkxV1RvbkNjcWdUSF9Sc2pvTWY5NXBzdnNScVhhSUw0ZHIzdHQySnFRdDBTbS1NbEdjakZJU3R4WThGbGR0bVM0NWhzTmNKMHRUTUhYYkU1N1BMeHRsU3B2UUhLdUE?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "Railway Track and Structures",
+      "author": null,
+      "date": "2026-01-16",
+      "category": "news",
+      "excerpt": "NEW YORK –– Changes will be coming to train schedules on New Jersey Transit (NJT) during the second half of February and the first half of March, as the agency and Amtrak prepare for the cutover from the current century-old Portal Bridge over the Hackensack River to the newly constructed Portal North Bridge. Officials from both railroads gave a briefing on Jan. 15, describing the scope of work...",
+      "lines": [
+        "all"
       ],
       "direction": "both"
     },
@@ -260,6 +737,804 @@
       "date": "2026-01-15",
       "category": "official",
       "excerpt": "Beginning February 13, 2026, Amtrak will transfer one track of rail service from the 115-year-old Portal Bridge in Kearny, NJ to the new Portal North Bridge over the Hackensack River. This Gateway Program milestone requires a multi-week reduction in Amtrak and NJ Transit service in New Jersey and the Northeast Corridor. Amtrak President Roger Harris called the cutover 'a whole new level of reliability on the Northeast Corridor.'",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "amtrak-portal-north-bridge-enters-2026-01-15",
+      "title": "Portal North Bridge Enters Final Phase of Construction as Work Begins to Put First Track into Service",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQbUhLQjNKN1E4bVFWRGdKVTBJbFBVeGxYeHdreE1YZVN2dHFIam15QnB0UUVyWXpNalZZT1Z4eVNjaGFMWE1VX3ZmVFJIdWRablZyRmFmcW5zc0lkdHlpRTVlajZBSmN0dWt3dlNWMFJ6Uk5YM0h4OGhFS2xyZTFGZUdtN0ZzdWIyN3FzRGtXejdkd1c1YXFkVzhMX0J2cld4cE9PYkJzRFFobmZ6aE94QkFqSUZiSGc1eEk5NTBpNW9hendNb1pCczBCWlpYS2dP?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "Amtrak Media",
+      "author": null,
+      "date": "2026-01-15",
+      "category": "news",
+      "excerpt": "Beginning February 13, 2026, Amtrak will perform critical work to “cutover,” or transfer one track of rail service from the 115-year-old Portal Bridge in Kearny, NJ to the new Portal North Bridge over the Hackensack River. A major milestone in the Gateway Program, the work is essential to advancing long-term reliability and capacity improvements on the Northeast Corridor. During this time, and in...",
+      "lines": [
+        "northeast-corridor"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "njdotcom-amtrak-transit-facing-2026-01-15",
+      "title": "Amtrak, NJ Transit facing major service cuts for Portal Bridge work",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNUkQ1LUVXMjFjb09mU1JzTXNkdGppTEdqR2xYbDB3RlFQa3hoM0pIU0tZNmdQZlJMQTRMNjlHcmRobnpTbnlzM2lvZHh4ZFVRRW1HUzQ3cjh4eUh6YlZOazhaUmN0WnZlelpnSjh2ZlJYNVlNcm43ekpueG9qYnlELTlnRm42a3BqU2d2MVhoSHhkZTNoMFRXbDlfYmZaYlp0ZEpFNXVn0gG6AUFVX3lxTE0xWmdnUl9fMjdSbEdOMng0YnBDMkRMM25xTTlEMWNIbi01elJ1aWVxYmtreFZkV2JoYnQzNWZJcm5kTURFbHNqcVBGLWphdVpBUFBYR2dDQUpBYlpPbHdNN3c3VDhUOS1fcTVpTXZoTHlnYzVSVmZpaFltYndBZGp3MUxMekVoR292cFRVR0xOMnVxUmxEOU44dWVZVXZzd3F0UlBpMnVQb25Gd282TEt6YjVaX3FObGktUQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "NJ.com",
+      "author": null,
+      "date": "2026-01-15",
+      "category": "news",
+      "excerpt": "NJ Transit and Amtrak riders will see a 53% reduction in train service to and from New York beginning Feb. 15 to connect the new Portal North Bridge to the rest of the busy Northeast Corridor Line. Officials announced Thursday that the four‑week process will affect the schedules of 280 Amtrak trains and 332 NJ Transit trains across five rail lines to allow for infrastructure work and testing....",
+      "lines": [
+        "northeast-corridor"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "trains-com-portal-bridge-cutover-2026-01-15",
+      "title": "Portal Bridge cutover to trigger 50% reduction in trains for a month",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOVGxPNUpMWnEwYk9SeEtUdDdWQ0VpSUgwT1FtU3ZIZ2s2OS1ORWdLaHpJRkxsMDVnQ1NkQk1qNnJCVEdxWk9veVhBeWFISEVxZXhCX29ma20tZzVmdU0tUzg3V2U4d0hmVUtoU3VieEtpUUhBWmlFYTZTQmpTYmhLWDJMQjZtaXVEWmx5b3U2ZnRqREFQZ21yYzlYQjBkLVYwZUVZVmo5Zkk?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "trains.com",
+      "author": null,
+      "date": "2026-01-15",
+      "category": "news",
+      "excerpt": "We’ve refreshed our site! Check out our new look. Work to begin replacement of aging New Jersey bridge to begin Feb. 13 Get the newest photos, videos, stories, and more from Trains.com brands. Sign-up for email today! NEWARK, N.J. — Amtrak and NJ Transit will reduce the number of weekday trains between Newark and Secaucus, N.J., from 332 to 178 between Feb. 15 and March 14 for the first phase of...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "rpa-regional-plan-association-rpa-statement-portal-2026-01-15",
+      "title": "RPA Statement on Portal North Bridge Work and NJTRANSIT Delays",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOQW1HT0dkYUNYN01vazlIbDJZdzd0UkgyZmhlb3RpejBJd0h4T05HcExOTlFMYTZILVlFTWNRclA2NzVBeW83cnpvZkNQQmIydGg4V2k4U01taVlzY1RoYXFLcm9HNzFtWGc5R25tdEplaWxZajhpN1NOVkh6SWNXSEpmd2ZWeVdsbTNpQndZd1ZJZUhkSGsyU1RaQ1o?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "RPA | Regional Plan Association",
+      "author": null,
+      "date": "2026-01-15",
+      "category": "opinion",
+      "excerpt": "The following is attributable to Tom Wright, President and CEO of RPA: For several years, riders along the Northeast Corridor have watched the construction of the Portal North Bridge over the Hackensack River — span by span, column by column. This bridge will reduce delays on the Northeast Corridor and provide fast, reliable service for hundreds of thousands of daily riders between New York and...",
+      "lines": [
+        "northeast-corridor"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "news12-new-jersey-transit-amtrak-commuters-2026-01-15",
+      "title": "NJ Transit, Amtrak commuters forced to adapt for new bridge installation",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQYndVNnltanhsTUJGUHZTM2VwWGY0cnJfZFd2eWVuOGtJUTZtcTZaUE1vYmhNQlBsbWpJM3NoenVvRlU0LW16eVpZa2d3UWJlN1RwTGg1Zm5xalQzeFktWm0zUlRhcDhET2s1MGtzMXF2UVBkZ2Y3SUh2R2wweGdFb0ZoWUY0MXRwOGVEUDRBcXh5aXptSFlUX0RkS1FkRzVwY3c?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "News12 | New Jersey",
+      "author": null,
+      "date": "2026-01-15",
+      "category": "news",
+      "excerpt": "'Out of money, out of options.' Jefferson School District facing cuts 7h ago](https://newjersey.news12.com/out-of-money-out-of-options-jefferson-school-district-facing-cuts) Jersey Proud: 2 kids in South Jersey helped firefighters during a snowstorm 7h ago](https://newjersey.news12.com/jersey-proud-2-kids-in-south-jersey-helped-firefighters-during-a-snowstorm) Officials: Lithium-ion batteries...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "bergen-record-major-service-cuts-disruptions-2026-01-15",
+      "title": "Major service cuts, disruptions loom for NJ Transit, Amtrak riders",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNM081OThwT292eDA5OXdoeFZZVDhiRGZpZk1LRjVueC1oZHltYm54OHlJVVpjek1xX0s2dURWM0FQcVlHQUZGZTh2SDZUcW1zb0wyOUxTYkxWTXN3dmFGcGRZdklDTXNldmFua2xaU2FUSlBJZUdER19XRDZjV0FkTUloUnZELVlIanpnWkx3NFlrTnJfOFpvdmlfNEt4N29kNDZycjdxM0JLREtNVkZRRkYyRzR0cjQ3STF0YkdOWTlmSU5VNXc?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "Bergen Record",
+      "author": null,
+      "date": "2026-01-15",
+      "category": "news",
+      "excerpt": "Jan. 15, 2026Updated Jan. 16, 2026, 8:57 p.m. ET There will be a 50% reduction in train service for four weeks starting in mid-February as NJ Transit, Amtrak and construction crews work to switch one track of the new Portal North Bridge to existing tracks and systems. The new service plan will go into effect Feb. 15 and is expected to last through March 14, NJ Transit and Amtrak officials said on...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "news12-new-jersey-family-man-killed-2026-01-10",
+      "title": "Family of man killed by NJ Transit bus in Fort Lee files claim for $50M lawsuit",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQNm16aTVhWXVFZ0E5NlY2a0NUYWdOanJ5Zk56MEw2OHBTNDJKMWNXZXdSZ2haZ3RXeUpVVWR3M2pVMHcyTXlGVlgyeE1GZXBWVmtSMWxKTWNISk02LWNYV0FVWk81YmZrSE01VThPRHVYNlExQVFPUE5OdGI5bVlJOUxfMElRWi02c0F4Y0FyN2l5c3M4VWRva2ZManNvWXJhdU5mUFhnMm1SVTg?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "News12 | New Jersey",
+      "author": null,
+      "date": "2026-01-10",
+      "category": "news",
+      "excerpt": "'Out of money, out of options.' Jefferson School District facing cuts 7h ago](https://newjersey.news12.com/out-of-money-out-of-options-jefferson-school-district-facing-cuts) Jersey Proud: 2 kids in South Jersey helped firefighters during a snowstorm 7h ago](https://newjersey.news12.com/jersey-proud-2-kids-in-south-jersey-helped-firefighters-during-a-snowstorm) Officials: Lithium-ion batteries...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "news12-new-jersey-transit-boss-reflects-2026-01-09",
+      "title": "NJ Transit boss reflects River Line improvements, new Turnpike Authority job",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNZy1zT2g4WWNfSV91dkRBWUhwbzFGYkZxSVhtcDNReWFvWTAxcVQ4THdOVzBqSGRxM0lIWnNkalRrQWVTWXZjSWtnYVJvR0lWcUQ5SmFOMFYxc0lHZWZtY2Jqc083R0ZOdFF5U1JDTy1tUGFHYVJaaDNqZThkeTF0b1hUMU9ub2tNeWs2SnRtLWpiR1I2S3RFVGVHUEJsUVVqeEtSeWhPZw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "News12 | New Jersey",
+      "author": null,
+      "date": "2026-01-09",
+      "category": "news",
+      "excerpt": "Portal Bridge ‘cutover’ project to impact NJ Transit services. Here’s what it means for you. 14h ago](https://newjersey.news12.com/portal-bridge-cutover-project-to-impact-nj-transit-services-heres-what-it-means-for-you) Appeals court temporarily releases Gateway Tunnel Project funding 22h ago](https://newjersey.news12.com/appeals-court-temporarily-releases-gateway-tunnel-project-funding) NJ...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "bergen-record-2026-will-bring-toll-2025-12-24",
+      "title": "2026 will bring toll hikes, projects on NJ transportation front",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOTERzMDlOTjRrNkd6MFZDb2dyQUFXR1FEenNsbDNkZk4tYjNscndrWTdpZjlSdlJ6ZXFFbjZzZlY3SFQxV0ZNVVp4QjV2SjJVUmZLTE9mcUJoWmpHcHJNcXVkNE9ZUG1kTnVyeTdiNTQ1QnA1c0Q0YVZVeFptajVDeWQybktxSVZuaDlwdlgwOWRxMFNGQ1hzcHlkNERIQVdMOUFGNkN5SXpaUklQVV80ZUowWktsYlBKSmcxR3pIYTQyd3VqTzBnVmdRVUVZRjRoMnZwNmt6bw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "Bergen Record",
+      "author": null,
+      "date": "2025-12-24",
+      "category": "news",
+      "excerpt": "The Garden State transportation universe that Gov.-elect Mikie Sherrill will inherit in 2026 is nothing short of busy. Big events such as the FIFA World Cup are nearing, and massive infrastructure projects are underway like the Port Authority bus terminal and Gateway rail tunnel projects. And the new Portal Bridge will open later in the year.",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "bergen-record-despite-upgrades-delays-will-2025-12-23",
+      "title": "Despite upgrades, delays will continue for NJ Transit, Amtrak riders",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNdXlrTGJYU1lOcDdQdmY3bkh4LVNldnJlTVNxeUE1YWNISG1OakxfLWtHODNZam56YWNnYUxOMzhqWlB4ZUdvZ3ZSR3hDaUtIUkFHUGtfdC1BTnlKTmZja0dGVGNDcU9SZ1pzWnBzbEx2UWU5ckxsSUhKSm1FNkVZRU5XZ1RBZzhlZF85ekxFNEhRaUdlblBTb19sSDF4cDBka3ZMRTBacnZud2FUcF9Tc3FDNFlOT3ZCZ2N1Sw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "Bergen Record",
+      "author": null,
+      "date": "2025-12-23",
+      "category": "news",
+      "excerpt": "Commuting on the Northeast Corridor will likely get worse before it gets better. During the first 10 days of December, NJ Transit and Amtrak customers endured delays or cancellations on five of those days due to overhead wire issues, signal problems, an engine failure and problems caused by contractors working on the new Portal North Bridge.",
+      "lines": [
+        "northeast-corridor"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "news12-new-jersey-transit-train-crash-2025-12-20",
+      "title": "NJ Transit: Train crash at Montclair train station results in several injuries",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQbUFkcldMX09LSG53dUdsdVBnbXNua2pKSHhwMm03ZS14NlZzV21DOFQyd1FVSEFBbmZnTmJadVBPR1I2QXJLcXVyOHpobVpPNE1Fc3VNSDljeXJqc1lGV0t2T0ZNY1k0cldGMldpMHF2RVZhVlJKaDdQenAwNXUxR0UybU1ITlJrRkpsLWVLTU1EWUJEd19NZWhvempjbEQ5MzZGSzNXQUZYZw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "News12 | New Jersey",
+      "author": null,
+      "date": "2025-12-20",
+      "category": "news",
+      "excerpt": "'Out of money, out of options.' Jefferson School District facing cuts 7h ago](https://newjersey.news12.com/out-of-money-out-of-options-jefferson-school-district-facing-cuts) Jersey Proud: 2 kids in South Jersey helped firefighters during a snowstorm 7h ago](https://newjersey.news12.com/jersey-proud-2-kids-in-south-jersey-helped-firefighters-during-a-snowstorm) Officials: Lithium-ion batteries...",
+      "lines": [
+        "montclair-boonton"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "news12-new-jersey-bear-hunt-extended-2025-12-15",
+      "title": "NJ bear hunt extended as hunters fail to meet harvest threshold",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNS3Y5eWk3ZkRzeFRmU0N5NzlvdW9xUjJ4OHlwRDExVUMtYk1OWFY3MmZwQWhWMkYzbjFGZ0t5Y0duM0dmMmFPVHd5N1dVU09PWXhZQVRvX1pPMzI5OGNKeFdlbnFnb1UyVTF2cm8yOGQ1OG9mcU4wLUUtdHd0TDNhMnVIRHBteEo5dldRd29KREl6SkVaSmJr?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "News12 | New Jersey",
+      "author": null,
+      "date": "2025-12-15",
+      "category": "news",
+      "excerpt": "'Out of money, out of options.' Jefferson School District facing cuts 7h ago](https://newjersey.news12.com/out-of-money-out-of-options-jefferson-school-district-facing-cuts) Jersey Proud: 2 kids in South Jersey helped firefighters during a snowstorm 7h ago](https://newjersey.news12.com/jersey-proud-2-kids-in-south-jersey-helped-firefighters-during-a-snowstorm) Officials: Lithium-ion batteries...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "njdotcom-northeast-corridor-riders-will-2025-12-11",
+      "title": "Northeast Corridor riders will face delays as work on this N.J. bridge continues",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQM2RndVZvNmdxUUdia05KUjI4b21QX3NQMTFHZTR2azBGcWVFeEJiVFV3SVo4V0FXZ0gtYXJWdm53NFFjUHZWWXVjUF81d0M2ZTNFU0trdnJpVE1tNGtvaFNXM0IweFdCMjJqVkltS21vTGNGekd0NUhOWTRrOXlyQWc0SGZWZDZiMFJIbmw0MTE1N200UGduMldtVXBrcVZEMXROWjBfX2s0VGk5b2Y4UlFCQXJSd9IBygFBVV95cUxNeUQ1VkZuMkMyaGtVMHo0S3Q0SHV6bXhTc2twekNtTkpCeHFvNUVfalRXN29NeEhKd3VBVGdRaks4al9jMGhSMEIyUU1kZEZmYjdkT3dwTVgwU0pNRVhEMDNCX0VpX3BHZkU4R2JDc1FRSlZyR0dHVEROWnpWeE5UcXVpeUNKT0tyN2k1UUZkTWo1R1RqVHZsYzJUakZZMXk5MHlwN19qYlZhRzRRM2Z2MUhHWW50Y3ZPSUpfby1xbXZ2Sk5kd1FXQUZR?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "NJ.com",
+      "author": null,
+      "date": "2025-12-11",
+      "category": "news",
+      "excerpt": "Commuters who depend on the busy Northeast Corridor line will learn next month how work to switch one track over to the new Portal North Bridge will affect rail service when it starts in February. The long-awaited change moves one track from from the current 115-year-old Portal swing bridge to the first of two tracks on the new $2.3 billion Portal North Bridge over the Hackensack River in Kearny....",
+      "lines": [
+        "northeast-corridor"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "news12-new-jersey-driving-njs-least-favorite-2025-12-10",
+      "title": "Driving NJ's least favorite roadways: No. 1",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPUzN2WnhsaDJxdlFDa0hIUVJXd3dPY2JyTVVKaTJmdXFsMG4ta2Z0UTEycTYzQlIxZndPNDBfdkJnMmpwdUtvU2ExMUpBSTFDWEFXR3hRakF6M28xNlIyMUQxNVMtZ2JXV1RHaEhOcTJtWXc0NlUyYTlNanB0N2txZGxjRWQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "News12 | New Jersey",
+      "author": null,
+      "date": "2025-12-10",
+      "category": "news",
+      "excerpt": "Portal Bridge ‘cutover’ project to impact NJ Transit services. Here’s what it means for you. 14h ago](https://newjersey.news12.com/portal-bridge-cutover-project-to-impact-nj-transit-services-heres-what-it-means-for-you) Appeals court temporarily releases Gateway Tunnel Project funding 22h ago](https://newjersey.news12.com/appeals-court-temporarily-releases-gateway-tunnel-project-funding) NJ...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "trains-com-cutover-portal-north-2025-11-12",
+      "title": "Cutover of Portal North Bridge could require six weeks of rail disruptions",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQYmdUaFRhYjdJeHliRWhnTkx3RldBbVA0LW5GZTlTTHhIbGRYdF82ZXlia2ZOdDRiaWFlVzRhdkhseW1BVHcycnVVVWZsdHRPMXZmOVNaeGVkbERFVFU5X2ZFdGk1TGZ6Z1VOd0hRVHFpNGJRYm1rNkhzNUNocjNNdjAyN3J0YUlNWllWSnA1Q0hyUEtGbVJVLWI2LVEwQXFGOHc4TDVsNWZfZmNJR28tWmF2dUQwZTVUdmJsNg?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "trains.com",
+      "author": null,
+      "date": "2025-11-12",
+      "category": "news",
+      "excerpt": "We’ve refreshed our site! Check out our new look. News report says cancellations, reroutes possible; plans to be released in December Get the newest photos, videos, stories, and more from Trains.com brands. Sign-up for email today! KEARNY, N.J. — The cutover of traffic to the new Portal North Bridge on the Northeast Corridor in early 2026 could disrupt Amtrak and NJ Transit traffic for up to six...",
+      "lines": [
+        "northeast-corridor"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "techstock-transit-commuter-alert-2025-11-12",
+      "title": "NJ Transit Commuter Alert for Nov. 12, 2025: Portal Bridge Cutover to Trigger 6 Weeks of Service Changes; Weather Delays Earlier This Week; River Line Takeover Update",
+      "url": "https://news.google.com/rss/articles/CBMijwJBVV95cUxNb0ZSTlMxTVgxN2hqYTVXUDBOYkFCMnQ3QUxaQk15cE04RV9yQWlsSTlQZW9BVjd2ZXA5YnhlV2ttakczb1g2N3JFQURkQ2d6a1hBUkZGMTdXZjRnSmhmYmROQjdiYnRxM0t6bUwzZVhXdE82M3Zjek44TjIxOXJ3R0NNb0IxRm1BejlWdGVVU3g0UXNkM2RDLXZ3dmdUSk5SUmRYNUFGam1WTlNvRHBxcmpodERtRUQyQTFYSWFCNU9tRE5HSGhPRGFWTGhyWFNNbUUzOVBnX0dnSG9oTDQtTW54Z1NKbnN0TWwxcl9aTXoweTBFNTNfcm9HOWNPTS02Q1RiMVhFRmx6bXVuT3Bj?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "TechStock²",
+      "author": null,
+      "date": "2025-11-12",
+      "category": "news",
+      "excerpt": "- A six‑week “cutover” to the new Portal North Bridge will shift tracks from the 1910-era Portal swing bridge, with some NJ Transit and Amtrak trains likely rerouted or canceled during the window. Exact timetables are pending. Yahoo - The Portal North Bridge is a fixed‑span, 50‑foot‑high replacement that removes the need for bridge openings and addresses a major Northeast Corridor choke point...",
+      "lines": [
+        "northeast-corridor"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "bergen-record-cutover-new-portal-2025-11-12",
+      "title": "Cutover to new Portal Bridge could disrupt NJ Transit, Amtrak train service for 6 weeks",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNa2dEYUFRd19qODZWRFE1eXNWdDRlVmF2RC1DX0ZyNm9UaHJZd0NhTF8tcXF0U3g5X21mT1J4aWV1WmwzcEdLOU03elNrSWFqVVdIX3Rva01zWHZEQmVBNGM1R254QzNsTkNXOU5uS3IxQlBzM0tfUHFpQ1lNYVNMbFhBa2ZHVHZSU3ZsWjFwbFl5ZTlYSlBMR2xlMi1mQ3NjenVzUXFTWDBCTHNOajBReEpUZ2g1MmdkblR6ckxHRDI4VlVPUThYTmZWZUo?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "Bergen Record",
+      "author": null,
+      "date": "2025-11-12",
+      "category": "news",
+      "excerpt": "Significant schedule changes could upend rail service for NJ Transit and Amtrak customers in early 2026 so workers can get some of the final pieces in place to open the new Portal North Bridge next year, NorthJersey.com has learned. Some trains will likely need to be rerouted or canceled over what could be about six weeks.",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "news12-new-jersey-faa-reducing-air-traffic-2025-11-05",
+      "title": "FAA reducing air traffic by 10% across 40 'high",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOVDltSFYtRkVVSnVYMVd0eVRUNnlJS1ZRSG54SDJpaGVkN1MwUjJPNXZGQi1UaXQzdTdTUWRLbUdwNktxVG5XZWxFRHpGa2JLcWtIM2VsUUhQTGVpQ25PUk5GNWpGVDlDVEMwTVNkVnpxcXVzTERDMUpadkZ0bkJJNF9qdWVuRnAycWVUOFdlVjNMa0pzS0xabXlSel9tVkVpN3FCdlFPbXJIaFZ5WjVFcnFadlBXMXM?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "News12 | New Jersey",
+      "author": null,
+      "date": "2025-11-05",
+      "category": "news",
+      "excerpt": "Portal Bridge ‘cutover’ project to impact NJ Transit services. Here’s what it means for you. 14h ago](https://newjersey.news12.com/portal-bridge-cutover-project-to-impact-nj-transit-services-heres-what-it-means-for-you) Appeals court temporarily releases Gateway Tunnel Project funding 22h ago](https://newjersey.news12.com/appeals-court-temporarily-releases-gateway-tunnel-project-funding) NJ...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "news12-new-jersey-north-jersey-coast-line-2025-10-30",
+      "title": "North Jersey Coast Line service resumes following fallen tree",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxONjNVaWxkTEYyS2VOS2U1WVpWVkNJcDlablVjX3NZdUNNV0g4UENEaEh2aUc0Y0ljNVF6aVQ5dmN1eW1qbkhTZHA3WHB6R2lnZjQySEpYSjRCbV9aVlU5Y0dkbGdJazdjS2Z1TDNsN3JfUXc0Rm8waTIwb2RBNll0TzNWS2NuMVhHSzAydmRQZS1TVzc3?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "News12 | New Jersey",
+      "author": null,
+      "date": "2025-10-30",
+      "category": "news",
+      "excerpt": "'Out of money, out of options.' Jefferson School District facing cuts 7h ago](https://newjersey.news12.com/out-of-money-out-of-options-jefferson-school-district-facing-cuts) Jersey Proud: 2 kids in South Jersey helped firefighters during a snowstorm 7h ago](https://newjersey.news12.com/jersey-proud-2-kids-in-south-jersey-helped-firefighters-during-a-snowstorm) Officials: Lithium-ion batteries...",
+      "lines": [
+        "north-jersey-coast"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "news12-new-jersey-million-pounds-2025-10-28",
+      "title": "4.9 million pounds of frozen, boneless chicken have been recalled",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQczFSM1NNWndUaWpKRHBXaFhRTHhEQUctamR5OWpBSlIyYUZsTlc0dmxhUUZhOWh3emZKaTVsY3BqdVFFa2NaeXlCSG5jLWxIQ3hTb1UtQ3l3a1E3ZjRVZ0NrWHFqWnRieFFZY0tvWk9pNU5mVFBFaUJ3V3JTZ0pxazFCN241djJSaHRIX0ZCSlBiSnRkZkd3?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "News12 | New Jersey",
+      "author": null,
+      "date": "2025-10-28",
+      "category": "news",
+      "excerpt": "'Out of money, out of options.' Jefferson School District facing cuts 7h ago](https://newjersey.news12.com/out-of-money-out-of-options-jefferson-school-district-facing-cuts) Jersey Proud: 2 kids in South Jersey helped firefighters during a snowstorm 7h ago](https://newjersey.news12.com/jersey-proud-2-kids-in-south-jersey-helped-firefighters-during-a-snowstorm) Officials: Lithium-ion batteries...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "news12-new-jersey-trumps-tunnel-threat-draws-2025-10-16",
+      "title": "Trump’s tunnel threat draws backlash from NJ commuters",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQajNRU0kwUHVRRFIyWlhieFpVLU1vNUZzR0RDTVZaZFpGZXBfSGZBQkZlc1V4aGhqbm5YZUdQckZIZERQXzc4eDFNbnVpWHFGTkpJQ05xZS1SWVNHRnFicS1wV1NHVkxLcjN4M3IyVzFjZ2p6bjdESFF1eUgzemRmSDRWVDBJNlh2TUE?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "News12 | New Jersey",
+      "author": null,
+      "date": "2025-10-16",
+      "category": "news",
+      "excerpt": "'Out of money, out of options.' Jefferson School District facing cuts 7h ago](https://newjersey.news12.com/out-of-money-out-of-options-jefferson-school-district-facing-cuts) Jersey Proud: 2 kids in South Jersey helped firefighters during a snowstorm 7h ago](https://newjersey.news12.com/jersey-proud-2-kids-in-south-jersey-helped-firefighters-during-a-snowstorm) Officials: Lithium-ion batteries...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "news12-new-jersey-president-trump-indicates-the-2025-10-15",
+      "title": "President Trump indicates the Gateway rail tunnel project has been 'terminated'",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPS193YXd1Y2h1d3E1ODFfRURVZnJqR25aSS1pTUpDNDN4R2J2NXV3WXFXUFZJcXNOM3lHckJOQ3I3V3A5aG1LLW1CM2FwOTBORm1LVFhFckVyclpSV2FaSTFCZW0wVXdYQnBiZDBQaHl2UkppTnFXMWdJSlRxQklGajhpTURxN056bTZqdXQxeGVIRWt6VEVmWXBqbkhCME1aM0Zta2psVmdlUQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "News12 | New Jersey",
+      "author": null,
+      "date": "2025-10-15",
+      "category": "news",
+      "excerpt": "Portal Bridge ‘cutover’ project to impact NJ Transit services. Here’s what it means for you. 14h ago](https://newjersey.news12.com/portal-bridge-cutover-project-to-impact-nj-transit-services-heres-what-it-means-for-you) Appeals court temporarily releases Gateway Tunnel Project funding 22h ago](https://newjersey.news12.com/appeals-court-temporarily-releases-gateway-tunnel-project-funding) NJ...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "news12-new-jersey-path-service-resumes-after-2025-10-02",
+      "title": "PATH service resumes after broken rail near Christopher Street",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQNUZRUmtmNG90YnE2R0hTMlhqLXhBcmcwbTR5cy05eGxBclp0cFFPejNINm5JdUdtTVNDR3NzQnFTOVNjQ2FVcFVyZ3gxcnY5Y3BNSEp0T1NNb0VMWkRialUtNlJGZ2tFd24zdDIxcnZ2RUNCbFRQQlEzenJSUFNyMDh4MVdmcWU5UF9qYTdVN25sVlk2UWc?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "News12 | New Jersey",
+      "author": null,
+      "date": "2025-10-02",
+      "category": "news",
+      "excerpt": "'Out of money, out of options.' Jefferson School District facing cuts 7h ago](https://newjersey.news12.com/out-of-money-out-of-options-jefferson-school-district-facing-cuts) Jersey Proud: 2 kids in South Jersey helped firefighters during a snowstorm 7h ago](https://newjersey.news12.com/jersey-proud-2-kids-in-south-jersey-helped-firefighters-during-a-snowstorm) Officials: Lithium-ion batteries...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "news12-new-jersey-transit-service-2025-09-28",
+      "title": "NJ Transit service to operate on special schedule Monday on Morris and Essex lines following weekend derailment",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNXzhQelFmcm1WVnV4RURCblZWYS1UT0x2cnFmTTVnZU9vN1ZlWlZnTXl5Mk9DZ29qWWpwVEJXcUo0REZjd0Rqdjd4blhZOWd0MWRJaDNLSFNhNE5OTUYwald6RXd2c3hWR3FQbU9CcTg1SHRXVDVQRDBhZElRcWtOVmJ4ZDIwdVBjeC1HSDNIb0o0UV9Sd1kzVVk3SEdWNjVjZnlnY1JzNXM0ZlozM1VjenZQcUpXb0w5QXN5aGRkb21TWEJQR3labjJ3blZ3amJRUjdCREVCbw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "News12 | New Jersey",
+      "author": null,
+      "date": "2025-09-28",
+      "category": "news",
+      "excerpt": "Portal Bridge ‘cutover’ project to impact NJ Transit services. Here’s what it means for you. 14h ago](https://newjersey.news12.com/portal-bridge-cutover-project-to-impact-nj-transit-services-heres-what-it-means-for-you) Appeals court temporarily releases Gateway Tunnel Project funding 22h ago](https://newjersey.news12.com/appeals-court-temporarily-releases-gateway-tunnel-project-funding) NJ...",
+      "lines": [
+        "morris-essex"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "news12-new-jersey-transit-service-2025-09-27",
+      "title": "NJ Transit service to remain suspended on Morris and Essex lines through Sunday following freight train derailment",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxORG9QZHVzUFlQQV9fYXBSank4Ym92VFJwMmpKUWZ4UGlZYUN5ZEdFQ3U4M0dxSEFVbTZ2QzlkcGxqZUI0T3FEV2RpSzdFM3RaM1oyZGF2SGV1RnJSdzFzdHVkX3E3WG9rc0pLN0NqWUtLNlBlSkttdVdyUXN0eDNONU5QYWdyOHFlNVRJTElyY2NjYkZOREdj?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "News12 | New Jersey",
+      "author": null,
+      "date": "2025-09-27",
+      "category": "news",
+      "excerpt": "Portal Bridge ‘cutover’ project to impact NJ Transit services. Here’s what it means for you. 14h ago](https://newjersey.news12.com/portal-bridge-cutover-project-to-impact-nj-transit-services-heres-what-it-means-for-you) Appeals court temporarily releases Gateway Tunnel Project funding 22h ago](https://newjersey.news12.com/appeals-court-temporarily-releases-gateway-tunnel-project-funding) NJ...",
+      "lines": [
+        "morris-essex"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "news12-new-jersey-park-ridge-confiscates-2025-09-05",
+      "title": "Park Ridge PD confiscates motorcycles mistaken as e",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQZWpuWFhkTUxzLTNzU2lfakdpZlczRE5Ec1VVc25iTWtlbjlhWkRXbUktenJPbFY2eTBpaWJnSXJZd3ZCWXNaN0VqUEdmUTB0RmxMbnJBaDZEeHFESXZNYW9BMU41ejRYUjVYZEZUazA0S2VxQm83ZXFHU3A4ZllkUVRtaHBHT3QxWnNqTFR4cXlSSUE4ZHVyR2lwSFVuQQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "News12 | New Jersey",
+      "author": null,
+      "date": "2025-09-05",
+      "category": "news",
+      "excerpt": "'Out of money, out of options.' Jefferson School District facing cuts 7h ago](https://newjersey.news12.com/out-of-money-out-of-options-jefferson-school-district-facing-cuts) Jersey Proud: 2 kids in South Jersey helped firefighters during a snowstorm 7h ago](https://newjersey.news12.com/jersey-proud-2-kids-in-south-jersey-helped-firefighters-during-a-snowstorm) Officials: Lithium-ion batteries...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "news12-new-jersey-transit-launches-interactive-2025-08-26",
+      "title": "NJ Transit launches interactive map showcasing historical sites across the state",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPRlZCdGE3OFhNWHg1VXJFLWI5anZDN2toUVpYWGN5a2RtTUxTdk0xREMxNGJualNjWG9wdWkxQnlQTFYtR2NINUlOUk9YMk14UENzNzBYc3ZCaW54VHVzWC12QnhHbWF0TXhOY0ZicWNYQU9neUQ2VlgzOGVJMEZNU3Z0aUl0djI1bHRUUjVWWFFiUVlQaWN0YU1fQjdfNXl5YUlWV1Z3RFhPU3BoRGc?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "News12 | New Jersey",
+      "author": null,
+      "date": "2025-08-26",
+      "category": "news",
+      "excerpt": "Portal Bridge ‘cutover’ project to impact NJ Transit services. Here’s what it means for you. 14h ago](https://newjersey.news12.com/portal-bridge-cutover-project-to-impact-nj-transit-services-heres-what-it-means-for-you) Appeals court temporarily releases Gateway Tunnel Project funding 22h ago](https://newjersey.news12.com/appeals-court-temporarily-releases-gateway-tunnel-project-funding) NJ...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "news12-new-jersey-injured-when-2025-08-12",
+      "title": "14 injured when NJ Transit bus crashes into PSE&G truck in Newark",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNYnA2MUtYWlV1Z2c5cjRpRWFFM2tjOV90T0dOVXJPMVF6RkxaeThLVjNEOUhCSUxuWlZLSkRFY1REeEF6TGFrYl9QZ1dDNWZtbVBCRnB6RjhCelR5QnVOV050UDRYdVZ1ZmJHS1FxTE9qN1RZeTdvRFpZdHhrOHRCRGV1b1duY0tWckJzdDhZa3ZfMGs3U2ZNQg?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "News12 | New Jersey",
+      "author": null,
+      "date": "2025-08-12",
+      "category": "news",
+      "excerpt": "'Out of money, out of options.' Jefferson School District facing cuts 7h ago](https://newjersey.news12.com/out-of-money-out-of-options-jefferson-school-district-facing-cuts) Jersey Proud: 2 kids in South Jersey helped firefighters during a snowstorm 7h ago](https://newjersey.news12.com/jersey-proud-2-kids-in-south-jersey-helped-firefighters-during-a-snowstorm) Officials: Lithium-ion batteries...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "news12-new-jersey-new-jersey-transit-train-2025-08-07",
+      "title": "New Jersey Transit train fatally strikes woman in Hackensack",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPMmw1ejhaWV9ncGJQM2k2anJzam02M1p3OWU0ZUdjRUlONXhLY3lrQjQ3THlZNnhNZjJMRkd4ZEltN0hJYmgxTHlQMmpYM19fanNBLTdObkU1Q3hEZ2Rwd3RfRmN3YXMyNGczQ1BydEhYU1B0YVVIMHdKdEl4cDJzWm5FeUZCVlNjODIwNGV0bVNYY3VNSHc?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "News12 | New Jersey",
+      "author": null,
+      "date": "2025-08-07",
+      "category": "news",
+      "excerpt": "'Out of money, out of options.' Jefferson School District facing cuts 7h ago](https://newjersey.news12.com/out-of-money-out-of-options-jefferson-school-district-facing-cuts) Jersey Proud: 2 kids in South Jersey helped firefighters during a snowstorm 7h ago](https://newjersey.news12.com/jersey-proud-2-kids-in-south-jersey-helped-firefighters-during-a-snowstorm) Officials: Lithium-ion batteries...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "bergen-record-transit-settles-with-2025-08-01",
+      "title": "NJ Transit settles with fired engineer who raised issues about new Portal Bridge",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOdUYyQ1ZUektST2h0aE9FLTc0REkxQ1BERThJT1R1MnIweUhkYjhlNEkzZkU1MlM5R1k0ck9wOW52WGhJUXJUbEFCbDQ2ZjF3ems1UXY0ZFJZdnBMMWJoWlB6aUpQUlNXTnFOclduUkRBLS16R3FFQlJ3aTVGNXlaRFE1Wjk4RlFfLVR2WVZjaUVScEl5aFlGVHR3YmRXWEo0V04wazRYc3ZodWpKNzhuTHdIQm84Z3VFT3ZvdkJVNnZhdlY4M1pPRkJSOVp5dw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "Bergen Record",
+      "author": null,
+      "date": "2025-08-01",
+      "category": "news",
+      "excerpt": "A fired NJ Transit employee who raised concerns about construction of the new Portal North Bridge was paid a $450,000 settlement earlier this year. Mohammed Nasim was fired in October 2023 and said at the time in an exclusive interview with NorthJersey.com that it came as a “surprise” and was “a very unfair decision.”",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "railway-track-and-structures-amtrak-shares-portal-north-2025-07-29",
+      "title": "Amtrak Shares Portal North Bridge Progress",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNb295SVFpSWpUNFFuS3NZdTk4dEdLWjRSeXNyS1JMUmkwejQ2eWlkdUE1bzZsWnUtMVh5azlOcndZRGRKbHNrU245VzN2UlNPUUNZMnY3Y3FTR1FqZDlORjZmcVJtUWJCNmhyLWFwd29KaHVkdGd1TmhFQV90ZlBiWHo5eEU0Z3NwMGNoVkdXbVVTdDhlWGs1Z3NUeXA0UXZuZ3lr?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "Railway Track and Structures",
+      "author": null,
+      "date": "2025-07-29",
+      "category": "news",
+      "excerpt": "KEARNY, N.J. - Work progresses on the Portal North Bridge. Amtrak shared an update on LinkedIn of the Portal North Bridge project in Kearny, N.J. Over the last three weeks, crews have added 800 tons of ballast and installed 1,200 linear feet of track and ties. Amtrak thanked its partners at NJ Transit for their work between site visits. Below is a gallery of images, courtesy of Amtrak. Tags:...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "news12-new-jersey-boaters-blocked-shark-2025-07-28",
+      "title": "Boaters blocked as Shark River span shuts down for 2 days",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNWG5vRHNFUk5Xc0UxUHo4MHRmT2Rxc1JwQVNhZEpwdXgzQlNBYjc0OG91bF9sUFpqc3dsaERPUkoxSGFlMHVOT0FEY296YTJneG9uYVNGa1hoMGtDbnNFRmJnSHUwb1R6QTdlZkg2N0p4Tnlxa2hHQktUdkN4VWZuNlFzb3diQ2FDa1k4M2V6OA?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "News12 | New Jersey",
+      "author": null,
+      "date": "2025-07-28",
+      "category": "news",
+      "excerpt": "'Out of money, out of options.' Jefferson School District facing cuts 7h ago](https://newjersey.news12.com/out-of-money-out-of-options-jefferson-school-district-facing-cuts) Jersey Proud: 2 kids in South Jersey helped firefighters during a snowstorm 7h ago](https://newjersey.news12.com/jersey-proud-2-kids-in-south-jersey-helped-firefighters-during-a-snowstorm) Officials: Lithium-ion batteries...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "news12-new-jersey-fallen-tree-disrupts-some-2025-07-25",
+      "title": "Fallen tree disrupts some New Jersey Transit service",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPaWpKbG8wVW9udXI0YjZhZHhMc3BxaHItWjNPUmpwSS1xcjBlempOOUVQV2lVVmlTY2JHcE00UTRHbVduWUpTLWhhZW5PY3R4ZmdLUXFOdGJncmRzSjRIWVFIX3loUGNic1lVbUs5OUQ3QnRQck93RWJzT3BXM29JWk1NU0NGR19T?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "News12 | New Jersey",
+      "author": null,
+      "date": "2025-07-25",
+      "category": "news",
+      "excerpt": "'Out of money, out of options.' Jefferson School District facing cuts 7h ago](https://newjersey.news12.com/out-of-money-out-of-options-jefferson-school-district-facing-cuts) Jersey Proud: 2 kids in South Jersey helped firefighters during a snowstorm 7h ago](https://newjersey.news12.com/jersey-proud-2-kids-in-south-jersey-helped-firefighters-during-a-snowstorm) Officials: Lithium-ion batteries...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "engineering-news-record-transit-settles-termination-2025-07-09",
+      "title": "NJ Transit Settles Termination Lawsuit With Its Former Portal North Bridge CM",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNejNwcEg1UXZDbnExbzJBZ0NmZ2laX2NFYVUtMEEtMUxNZkdHTzBNM2tEUHY3TWF2b3J2ZE9DdEIzT3dwUFJ3d202dlg0WWJjZ1cybk4yd1QwRU15X3ZrbjBWdU9GOEJzV0owNU1lR0FsTTVnRVR3YkZCaVVHa3pfYk95VWZOV2xIWHl2ekIxY3g4bkotRTVsZjhBT0hrWS12NWlnNkVoemIxaDJacDlTZ1JB?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "Engineering News-Record",
+      "author": null,
+      "date": "2025-07-09",
+      "category": "news",
+      "excerpt": "Portal North Bridge is reportedly on time and budget despite warnings of former employee Mohammed Nasim. New Jersey Transit has settled a lawsuit brought by its former construction manager on the estimated $2.3-billion Portal North Bridge replacement project, who claimed he was fired in 2023 in retaliation for alleging it had design deficiencies. First reported by the political news platform...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "njdotcom-heres-when-the-replacement-2025-07-02",
+      "title": "Here’s when the replacement to this vital NJ Transit, Amtrak bridge will open",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNQjJydmc4dVhCVEx6bnd6TG9kZ01BbG5YQjBLUFBqdndhZ2lRMTVzZlRHOWV1Vmd2WHpMc2dxc3lWWWp2bkhXSmdiaFkxaEVOVHFmMktVbjgtMktxZlVxYTJmbmFRaEFWOGU2WUpHby1BSHBaczhpTEItZnNKeGxhdk8xVzdncFYzN0xUSzFySVUtS3JRcGZxQnFVY3lneUlCUjdEUXFwYTE2RnhfbkFsdmJ30gHGAUFVX3lxTE52RnI2NzFpYkdZc0Q2T180d3hwNUJUX2JlV2poTlI1MDlrMjFOLWZBZXpfaWFNejZUelV3T3lCT2J1SWVZT1ExUngzTllmNDFJVy1WcFdDVUdsSU4tRGxXUlI1QkQta0kzU3JYdEs2REdhUzEwMEJDTHlOSzhkZ1hmUFV0a05Pd1pGNkUyRnljempCOHlhV3dHLTNTcmdxS3FLVzVSMENOcHotdTNNaWtkeGNEY2FvYzNmRFMyanNDTDBsZnY5QQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "NJ.com",
+      "author": null,
+      "date": "2025-07-02",
+      "category": "news",
+      "excerpt": "After spending years securing funding to build the new Portal North Bridge, U.S. Sen. Cory Booker, D-N.J., climbed to track level to see the construction firsthand. The bridge is scheduled to open in the Spring of 2026. “Hundreds of millions of dollars that we got in the senate and house has been put to incredible work, putting hundreds to work,” Booker said after making the climb up and down...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "news12-new-jersey-transit-fares-for-2025-07-01",
+      "title": "NJ Transit fares for trains and buses increase 3%",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPWEdtNVpsWEx4NHJoUmMyamd3X1JURmx4R1dQcVdUUV9ZdVlfU3hxYU9nb05qNWJpMGJCaXd3U3hFRHZSb1dXSnR3UlpyRkhlZjcybVR5T09wYnozTGIybWpid1U2QWduMDFDZDN2MnJ2Q2EwcnU1YW1nOU5XY2x4NWlOU2ZEMXlod2Zr?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "News12 | New Jersey",
+      "author": null,
+      "date": "2025-07-01",
+      "category": "news",
+      "excerpt": "'Out of money, out of options.' Jefferson School District facing cuts 7h ago](https://newjersey.news12.com/out-of-money-out-of-options-jefferson-school-district-facing-cuts) Jersey Proud: 2 kids in South Jersey helped firefighters during a snowstorm 7h ago](https://newjersey.news12.com/jersey-proud-2-kids-in-south-jersey-helped-firefighters-during-a-snowstorm) Officials: Lithium-ion batteries...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "construction-briefing-portal-north-bridge-skanska-2025-05-22",
+      "title": "Portal North Bridge: Skanska",
+      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOWHkyNllqbVJFRGM3amIydzZqclphOWVyMWloaXVnRmM0LUZDbDFqYlctZGRPRFRlRDk0N3A1d1FvWFZEUTNqMkVyelp3RzRBaUNyZHdyUVpJM3BGU0JTd2xuTHVpZTkzUlppRmtiMTdqb1hMTWlSQm9vcGs4ZXRSTEpiNVVzNk9FQmZUejFuQjVhZmJUZGxwYUpEb0pGckNmQ1BLYXZ2cFNDeDZYcUoxSWpDZzRMbUtQZFZYOVhOQUszcG8zS04wdmxUUmlVZW1KTHVzc09aVE1BQQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "Construction Briefing",
+      "author": null,
+      "date": "2025-05-22",
+      "category": "news",
+      "excerpt": "Read this article in 中文 Français Deutsch Italiano Português Español A joint venture involving Sweden-based contractor Skanska and US-based Traylor Brothers construction company is nearing completion on its scope of work for the Portal North Bridge project in New Jersey, US, a major regional rail upgrade. The clients are New Jersey Transit Corporation (NJ Transit) and Amtrak. The US$1.6-billion...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "news12-new-jersey-newark-launches-free-microtransit-2025-05-14",
+      "title": "Newark launches free microtransit service around arts district",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPWXBrVUYwc2M2TTI3MXBSRmRzYkx5UHprS2cxWThwQW84Z0ZSdHZwdHdtX3FJU3c1TDdPR1BKbW5maGJKc1kwUTd2R0R6Q1NIZFZfTm9aOUhwN2NDMXBYS0J3R0RnTlQ4c0FmNWpaV3dtd0NwTTFZVEo3amhQSXFLX1hfTFU4UXRUV0g4U0dma3NubElxUEE?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "News12 | New Jersey",
+      "author": null,
+      "date": "2025-05-14",
+      "category": "news",
+      "excerpt": "Portal Bridge ‘cutover’ project to impact NJ Transit services. Here’s what it means for you. 14h ago](https://newjersey.news12.com/portal-bridge-cutover-project-to-impact-nj-transit-services-heres-what-it-means-for-you) Appeals court temporarily releases Gateway Tunnel Project funding 22h ago](https://newjersey.news12.com/appeals-court-temporarily-releases-gateway-tunnel-project-funding) NJ...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "njdotcom-signal-issue-portal-2025-05-05",
+      "title": "Signal issue on portal bridge leads to long delays for NJ Transit trains in and out of N.Y.",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQcFA3bDRyMG5nZzAyM0FOX1BjUHFhaFgzUnVWcFJqd0V0eXlueVh1WjViYWlUVmFFc2wtLWFQbHZsVWxGM0dsQjFpNFpkMjZwZ2JjRlVDTTd4OWV4a1lwNmdlY3JrcUZvNnhfbDhKNWdBeF9rS2o2UTl6NFVMY2ZTXzNMN2VNLUdqUmlZOEVWMlpEZ2ZMVkFNNHRPV3JmakNJMzRDQ2t2RDZwLWhINWFIdlp6X2Uzc0hMRW9mQUlhSF9Nd2pJeWNr0gHbAUFVX3lxTE10VERWWWJSbFhWQnowSkVERTVJNEprNzd0SE1xMDBlUlpSMXVPb2tvLVNQRWRzeUVCNF9hOVZod2VUMldPbS1WM1FUaTRwczhsZnNpbWcxWkdkeHJ2MGJsOGZTbVBIYk93VlBJc3JFNEpPYldKSzZHWENaNVp1c1JGaHhtcjNrb0V0N2lHRjVPNUxjcnJSN0RPZDYtQV9xQmd1NVB6QjBqRmVTMXhUZ3YzNGpJZHpxNUxzMjdYdnVTT1VjdFcwN3lISUpLcTUxeHpNeS1hekl3YWJ1SQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "NJ.com",
+      "author": null,
+      "date": "2025-05-05",
+      "category": "news",
+      "excerpt": "A signal issue at the Amtrak Portal Bridge has caused up to 30-minute delays for NJ Transit trains in and out of Penn Station New York on Monday night, officials said. Trains were delayed as long as hour when the issue first began around 5 p.m. Midtown Direct trains are being diverted to Hoboken, NJ Transit said in a tweet. Rail tickets and passes are being crossed-honored by NJ Transit and...",
+      "lines": [
+        "montclair-boonton"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "news12-new-jersey-transits-morris-and-2025-04-01",
+      "title": "NJ Transit’s Morris and Essex line resumes after train hits tree",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPbWNMc253WklpdXoyNkJsRHNXTG54ZURILUM3QVVDOTNrdU1YdWl1Qm5nV2M3UHctZ21lV2c1bmRxS0FWcENIRVVVT1VOQjAtVWhBeFpFT0wzc20tV0pQQ2xwaHFxMHFsZ0FxZmpuMjdENTBVWXhZc0xLa1ZOTmZ3dnhrYjlYX0RfUTdiUEYwUC00aFpMMFZB?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "News12 | New Jersey",
+      "author": null,
+      "date": "2025-04-01",
+      "category": "news",
+      "excerpt": "'Out of money, out of options.' Jefferson School District facing cuts 7h ago](https://newjersey.news12.com/out-of-money-out-of-options-jefferson-school-district-facing-cuts) Jersey Proud: 2 kids in South Jersey helped firefighters during a snowstorm 7h ago](https://newjersey.news12.com/jersey-proud-2-kids-in-south-jersey-helped-firefighters-during-a-snowstorm) Officials: Lithium-ion batteries...",
+      "lines": [
+        "morris-essex"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "nj-spotlight--2025-03-25",
+      "title": "Op",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNeFB0cFFpLU1LYnBwSHdvc2ZCYzg3aF8xUEhoMDdGVW5Wb2JSQmFGQVpkcDZYa2FSRk9KUzR6Nm1BNnlacmlXR3p5ZW5WcW1ycG5qSGRTSlpmazNrOFItUXFpMUJRdmk5NzB4anRIemlhQWlGMHFTbEs3X056ZTUweXN6Zmd4RWw1U3ZwTFlsUWVqdXMyT3lDRGhwVXEtZUVpV21hX2x3?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "NJ Spotlight News",
+      "author": null,
+      "date": "2025-03-25",
+      "category": "news",
+      "excerpt": "Each week, my wife and I drop our son and daughter off at daycare, search for a parking space, and head (sometimes running) to our local station to ride a New Jersey Transit train toward New York City for work. Like countless other families across New Jersey, we are completely reliant on public transportation to make our livelihoods possible — and to deliver us back home in time to pick up our...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "new-jersey-digest-transit-news-portal-2025-03-07",
+      "title": "Transit News: NJ Portal Bridge to Finish in 2026",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQVUptSTl6V2w0emsyUERVNUtiLTAxUlVUaDQ1NDdQYzh3WGZyYmtyMzM2N0JTRTFvTDdXUjY1Zzc3YTFrbW1GZTZZSHZwYjVrUWlidEtOS1RScXoyREx5RkdtelNXWWNJSUFubjZqb2pVY3lfVXkwS2pkcUJKS3Z6aUs1MUJ3aWJwcDJFUEp3M0M?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "New Jersey Digest",
+      "author": null,
+      "date": "2025-03-07",
+      "category": "news",
+      "excerpt": "A massive portal bridge spanning across the Hackensack River in Kearny is set to finish in mid 2026. The much-needed bridge was approved to replace its 114-year-old counterpart over the same river that has been the cause of many of the NJ Transit and Amtrak delays over the last decade. Amtrak CEO Stephen Gardner has stated that the bridge is roughly 80% of the way through construction. The...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "njdotcom-portal-bridge-track-2025-02-27",
+      "title": "Portal bridge on track for mid",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPZWtvSzI4OE5oRzFCMjlJTlBfajVmQ0VYaWNyajFIdFF4VXU3X2dhSThDR3BYUG1XenVFSEpnYm1wbWowQWhJdW1qcGpxeW1xbGluTG1rMnNlZlZrVDhyTTVybExZUEk2TFFIS1E3RUtBNl9mdkVGNVpqbTRzOWxOZGlxcEZKeEXSAZsBQVVfeXFMTkhfUW5tc0NWQTBTT3JVYlF0MEE3cFppQlpjZVNmY292ejVZMjRCRzB2T0JjNFNxT1FFVHVuS3lHMUZ4bVpYMk9fdFRlbE4tUmE2NDMtMlRnYWNQYWNZWnIzR0JWRVFteXdaOHdPS3kzTWpiVm5FVXZLZEpRdUdvX2ZvZkJaZXlNSUFTbUlwM1M1Rkd3eEQ0STN5bXc?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "NJ.com",
+      "author": null,
+      "date": "2025-02-27",
+      "category": "news",
+      "excerpt": "The massive three spans of the new Portal North Bridge have been lifted in place and are expected to be ready for trains next year, officials said Wednesday. “We believe the first set of tracks will be open by the middle of 2026,” NJ Transit CEO Kris Kolluri said during a tour of the worksite on the banks of the Hackensack River Wednesday. The new bridge replaces a problematic 114-year-old bridge...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "railway-track-and-structures-portal-north-bridges-third-2025-02-27",
+      "title": "Portal North Bridge's Third Arch In Place",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOSnZmSTFvdWlmWUxPdVlHbXoyT0R6cEw3ZlZ4dWpQWjBPeXMyLXJnVHVaMy0ydnRiWFo4ZnU4a3AxQ3NMVVBTM3pVLV84UzVmNkVZWkRpUElPbjVTMUJER01ieUlsemI5UGNYRXVZaFdaYXBJd3h5enhQVEpEdTVBamNpTTVTS0ZYOU4xUkJmSm9yOHZQY2lLY1YwR3ljOFl2OGFQZ1NBVkRJbmxhSTVXTHlHc1FJY1VicktNeEx5YVU0dw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "Railway Track and Structures",
+      "author": null,
+      "date": "2025-02-27",
+      "category": "news",
+      "excerpt": "Amtrak and NJ TRANSIT highlight the delivery of the third and final arch for the Portal North Bridge. KEARNY, N.J. - Amtrak CEO Stephen Gardner and NJ TRANSIT President and CEO Kris Kolluri visited the Portal North Bridge to highlight the third arch's delivery. The third arch is the final of the bridge span to be delivered. RT&S reported on the delivery of the first arch in November 2024. These...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "bergen-record-portal-north-bridge-third-2025-02-26",
+      "title": "Portal North Bridge: Third and final arch is put in place",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQMjdtS2VDQkF2LXhUUnVqYU40a0JnUlJBaXBNSmwzTTF5YXpzT3hvS1BNY3RRM1EtdnpfbFlZQm95dnY0V09acGtSU1JHYTZSVENFZFdjZUlZZUFyTV84QVBQc0hrMm1YOEdOSGVxTnFlOVVXS0doaVNhVlBmNEVUc08xNUFIb1VtVTRORTN4d1M1Uk1ieC1BVldTcnBteGROaS1zcDVxWHZ3Y1p3YlNQTnR6aGFTbFNQZ3g1cXM3aDdrVlR1bFp5OExB?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "Bergen Record",
+      "author": null,
+      "date": "2025-02-26",
+      "category": "news",
+      "excerpt": "A view of the Portal North Bridge during construction of its third and final arch over the Hackensack River in Kearny on Wednesday, Feb. 26, 2025. Julian Leshay Guadalupe/NorthJersey.com!NJ Transit CEO and President Kris Kolluri, right, speaks during a press conference alongside Amtrak CEO Stephen Gardner about construction of the third and final arch for the Portal North Bridge over the...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "bergen-record-portal-north-bridges-final-2025-02-26",
+      "title": "Portal North Bridge's final arch put into place as construction continues",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQSk9LWFBvbFVKMnoxS0I2YTlnbVNXV1dOZHlrUmRuRjlKOTFyZzhfdGhfdjRiY1BfOExiYVFpc19vX213Mmp1RXFFZGIzZVcyYW9HTzJTb1phdVJEeUhsYzhaT1lsNGJ1cWY4MUtIRVU5bGo0akMwTkdXb3dyRjF3MVVENGpoSXRtRjlVSXg5TTZmaVpyTU1XdE1IUW1saE1Ia0w5REpZcVZPUHIwS3g1ZnRrVQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "Bergen Record",
+      "author": null,
+      "date": "2025-02-26",
+      "category": "news",
+      "excerpt": "- The Portal North Bridge project, an endeavor to replace a deteriorating 114-year-old swing-span bridge, is currently 80% complete and on track for its projected 2026 completion date. - The $2.3 billion project will enhance reliability and safety for the more than 100 trains that traverse the bridge daily. - Despite concerns about potential federal funding cuts, officials remain optimistic about...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "cbs-news-portal-north-bridges-third-2025-02-26",
+      "title": "Portal North Bridge's third and final arch is now in place. It's a major milestone in the project.",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBId2J6aGtza3VvWmplVjJMVEhxdDNuYmJpUUZYeXZ6ZmhPNFNKZlY2ZHNvUTZhWXpLWWhUa1FxUUVvUU5CWG5xY3BrSm1ESXUycnd2d0s0ZUtTT05WcHNCOV9idHJOSVJ5TzZJVXhuQmtKVWEtZUVMUXBsVTA?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "CBS News",
+      "author": null,
+      "date": "2025-02-26",
+      "category": "news",
+      "excerpt": "- The 5:33 \\| Legacy of the LIRR Massacre - On The Dot with David Schechter: Wildfires & Climate Change The final arch on the new Portal North Bridge in New Jersey is in place. It's a major milestone in a crucial piece of rail infrastructure. Roughly 450 trains cross the old Portal Bridge daily, carrying some 200,000 Amtrak and NJ Transit riders over the Hackensack River. The 114-year-old bridge...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "news12-new-jersey-transit-and-amtrak-2025-02-26",
+      "title": "NJ Transit and Amtrak get final arch installed to Portal North Bridge",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNZEgyS0VqamFtY1NpcHBOeEphZF9GMTVXVDJ5ZGI4OExYdjhVTDBaTVpIbkhhbHRnZHlWaVVxWTJFWlFBUGk3LU1fTnQ5M0lIbnJxRHhVSVdfNU5RM1FEZ3QyVWhhSVRFZjdCRTBrOGczVUw1b0ItRHE4cWFVOERUUDRPWHJNVUdMUkpiZ1lyYmctTXZhOUZ4Z0MxSUwtMVFp?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "News12 | New Jersey",
+      "author": null,
+      "date": "2025-02-26",
+      "category": "news",
+      "excerpt": "Portal Bridge ‘cutover’ project to impact NJ Transit services. Here’s what it means for you. 14h ago](https://newjersey.news12.com/portal-bridge-cutover-project-to-impact-nj-transit-services-heres-what-it-means-for-you) Appeals court temporarily releases Gateway Tunnel Project funding 22h ago](https://newjersey.news12.com/appeals-court-temporarily-releases-gateway-tunnel-project-funding) NJ...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "roi-nj-major-milestone-for-2025-02-20",
+      "title": "In major milestone for NJ Transit, final span for Portal North Bridge arrives",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOaUViUElGaGhsRE5mVkhhajd6TXF2RUNKN3RYQ1VfSTIwYWwySFJKbE50LVhBdEN0Qkd2UmxGbEx2RDJUMnVQdHlsM0tTVFFpNzdOdS1jS0VycVZJX0RuVHhzSVVMOFoxU2FxODlDendLcy12MENJUXJpNDZuaGRDOW54ZnhDWi1NZkp5N2FKbnl0YUdUOFFaUFVRMGVLUzR2M1hZOXp6R2Y2YmZTVy1KZFBkdDVjUzhGZ1FSQQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "ROI-NJ",
+      "author": null,
+      "date": "2025-02-20",
+      "category": "news",
+      "excerpt": "- Support Quality Journalism. Support ROI-NJ. NJ TRANSIT President Kris Kolluri - NJ TRANSIT The third and final span for the Portal North Bridge has arrived, marking a significant step forward in one of the nation’s largest and most ambitious infrastructure projects. The completion of the new bridge promises to ease delays for commuters traveling along the Northeast Corridor as trains pass over...",
+      "lines": [
+        "northeast-corridor"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "amtrak-portal-north-bridge-2024-11-26",
+      "title": "Portal North Bridge",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5vc3pHNFJXbWItZDVUUGY3Q0FFTGg3dmlINFAtV1RKVU1KREFldEpMN3NrVUxIVkJsV1RqRExpVHVyUS1JZlVNVkEwaDJuUXNYMWxJckJrVUUwbVFpQlRQWDVVUnVlaUxPcjNVN1BmaXY?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "Amtrak Media",
+      "author": null,
+      "date": "2024-11-26",
+      "category": "news",
+      "excerpt": "NJ TRANSIT and Amtrak are replacing the century-old Portal Bridge over the Hackensack River in New Jersey with a higher bridge that will not have to open and close for river traffic. The existing, century-old Portal Bridge was built by the Pennsylvania Railroad and entered revenue service in November 1910. The bridge carries more than 450 daily Amtrak and NJ TRANSIT trains and 200,000 daily...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "nj-spotlight-portal-north-bridge-reaches-2024-11-26",
+      "title": "Portal North Bridge reaches key milestone",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPYnJUUm9jRVZyZHN6WU0wRFVYY1pJcmpZeHRnUThZQi01SHJTZmF4WGNYQWZ0WGxHM2FleDBFeU5yamg1TlhtajdOVXdCYVBQVmM2dDMxaHV6NGhibGRGWE9ZeldLeTJ5MzN1RmtKQXZrN0oyOHh1ZFBlXzUtQW13RFA1MGVrejA?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "NJ Spotlight News",
+      "author": null,
+      "date": "2024-11-26",
+      "category": "news",
+      "excerpt": "Portal North Bridge reaches key milestone - YouTube If playback doesn't begin shortly, try restarting your device. Videos you watch may be added to the TV's watch history and influence TV recommendations. To avoid this, cancel and sign in to YouTube on your computer. An error occurred while retrieving sharing information. Please try again later. Workers are preparing to move a massive arched span...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "railway-age-portal-north-bridge-2024-08-30",
+      "title": "Portal North Bridge in the Home Stretch",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQUFRuQXNaX1l1czN6MVpQd0xCREJfeURIX1cxbmVlUDdHRXlmY3pVTWFjdktNcFJUUXJURVJrV1dudldneUJtcU1zVjNyRXhYTmQzVW5veU9Ib3ZxZHRRUjR3SWh0WTNBeWd2eTNXZ3gtQlo2bHFnYndQWjZoRVUwLVMwWQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "Railway Age",
+      "author": null,
+      "date": "2024-08-30",
+      "category": "news",
+      "excerpt": "Portal North Bridge Arches under construction near Albany, N.Y. NJ Transit. Portal North Bridge, a key component of the larger Gateway Program, has reached 50% completion, New Jersey Transit, Amtrak and prime construction contractor Skanska/Traylor Bros. PNB Joint Venture (STJV) reported on Aug. 29. The new, fixed-span double-track bridge will replace the current 114-year-old, problematic...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "abc7-amtrak-transit-announce-2024-05-13",
+      "title": "Amtrak, NJ Transit announce new Portal North Bridge halfway complete and on budget",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQcktnOExUUWJWUTdBNkdKSkhET1ptUHhsVUdGU2RnVURTeGlMTXZRSkQ1cVE4NXF6d25yUGZIcGNlY1hMM3pZYy1HbDBYa1lKZXVsTUMyLXhidTczTXBvZ0I3WHFfam9KQld3SW9vdzNiT1RSZ2o3SEZTUkQxRHJIc0hEWW96eFBtRlYzU1pnVm9qbTNSSGdhZFVmWGh4aXVOczJCMldTM2lZUHpqLTBnR1R4U0NjTTJ1aWNZczFFVdIBxAFBVV95cUxPZ1NQS2dvRDhhYnl1SUFWcGZRN3N5NS1KajBFaGs0QnFSZVZ1VjdIaXJwS05mNmtKbG1DWDlCNHEwTnh1MUtmNEhzUWphRUIzejRiZEhNbDNZT3NGMEp0Y3p0Nks2WWk4eDdkUkt6YW1SS29xQ2NzRXltM0R4aWNreEVrZDdRSjFnZ0tDMG1fU0ZXYm8xaWRpTHh1M0xmWGdHYmhsYWJtcXNyQkRYYUx3R3JoWERXa2dqLWEwOWtKODltSFVW?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "ABC7 New York",
+      "author": null,
+      "date": "2024-05-13",
+      "category": "news",
+      "excerpt": "An error has occurred. Please contact support for more assistance. Anthony Johnson has the story in New Jersey on the bridge. NEW JERSEY (WABC) -- Amtrak and New Jersey Transit announced Monday that the new Portal North Bridge is halfway complete. It is the biggest transportation project in the nation, they said, and it is making good progress. While trains are still running over the old Portal...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "trains-com-suit-fired-2024-02-06",
+      "title": "Suit by fired NJ Transit official claims Portal Bridge has design issues",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOWDBKRzRkQVV1Q0tQZVpCanZhTDFsS3E0NlFvQW1FZkNZZ1hUNjdyaV82MzBDWmZOZWdGaEZCbHRuZExET1VSTG5ua01nc2RVY1FOdDRCellEZ2pocThheUdYSGFHbWllQy1EWG9mRURLVzBIby10azhhM1ZwVVhwMDVsdlFfclBVYkw5WjRxWE9yaElhWklIOUxvQUsyVnlkY3dURkd0bWlxSWtFNDNaNmY3RE1JVzRRMzVJ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "trains.com",
+      "author": null,
+      "date": "2024-02-06",
+      "category": "news",
+      "excerpt": "We’ve refreshed our site! Check out our new look. Former head of construction on $2.3 billion project says concerns led to retaliation Get the newest photos, videos, stories, and more from Trains.com brands. Sign-up for email today! NEWARK, N.J. — The NJ Transit official who was fired last year from his job overseeing the Portal Bridge construction project claims in a lawsuit that the agency...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "bergen-record-lawsuit-fired-head-2024-02-06",
+      "title": "Lawsuit by fired head of NJ Transit's Portal Bridge project warns about key design flaws",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPbm8wZ0VpcHJGWm1meXhYelVRTk5pVUVKMWhjV2RnbF9ocHNaVlpYbjdXN0xHY0VXQVFrTlRfbXZmbDVBRUpBQXBjZWJSWnk0OTZfTExVOC1vZHhRRlBJR1haNFk4aTdQS3MtQ1ZuNG1fMVFXdWhzV21Fb2pWMFJEQ2RwM18wMEVVZGduSUpNSXU1OTFWVnh5ejU1WExNeGNoSXVOenBqQmUtSXlPZ0xmeWZEWTVDRi1SZXhvNldOYm90UDQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "Bergen Record",
+      "author": null,
+      "date": "2024-02-06",
+      "category": "news",
+      "excerpt": "The engineer who oversaw NJ Transit’s Portal North Bridge project accused the agency of ignoring his whistleblower concerns about the new bridge’s design, which he alleges led to retaliation and discrimination, says a recently filed lawsuit. Within months of his hiring at NJ Transit in 2021, Mohammed Nasim — the agency's former chief of construction management — began reporting “design defects...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "railway-track-and-structures-transit-portal-bridge-2023-12-22",
+      "title": "NJ TRANSIT Portal Bridge Update",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5uVHFIS2htVlpkbXFlNXlnVlh6NTY1YUhXMmpMcUh1Z3p2NkI1cGhsZ0hLVFNfUW9OTmtqV0h2Wm1FM1RGcVc0bUxzVFpNVU1fVkcyTU5TUndQSHk4ZGg2TV90Y3AyUVRBaTNZbjNNWnNRcVE?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "Railway Track and Structures",
+      "author": null,
+      "date": "2023-12-22",
+      "category": "news",
+      "excerpt": "EAST NEWARK, N.J. –– More progress at NJ TRANSIT’s new Portal Bridge! The first steel beam was hoisted into position today. A crane positioned the 175-thousand pound girder to mark another milestone in the construction of the new rail bridge over the Hackensack River. Tags: Breaking News, passenger rail, track construction - Bridges/Tunnels, Shortline/Regional, Track Construction -...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "amtrak-new-era-rail-2023-08-18",
+      "title": "New Era of Rail: Portal North Bridge Project Update",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQOF85R1I3MjlxekN1MTIzTjI3SnFmb1A3a3N1Rzc3THRGNEVHOFBUQkpaN3lUZXJuRXdHbXktV1lPVG0xVTRFd29tS3k1R01QU3ZoWTcxQlVSSGtyR2ZlLUNjTEUyQnBwRmRMU2NEUDRzR0VqcXphU2dzLXBiWlY1NWU2VDVLLW5peHhKRw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "Amtrak Media",
+      "author": null,
+      "date": "2023-08-18",
+      "category": "news",
+      "excerpt": "New Era of Rail: Portal North Bridge Project Update - YouTube If playback doesn't begin shortly, try restarting your device. Videos you watch may be added to the TV's watch history and influence TV recommendations. To avoid this, cancel and sign in to YouTube on your computer. An error occurred while retrieving sharing information. Please try again later. The Portal North Bridge, a key Phase I...",
       "lines": [
         "all"
       ],
