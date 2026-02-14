@@ -46,7 +46,7 @@ img/
   og-image.png            — OpenGraph social preview image
   screenshot.png          — README screenshot
 data/
-  coverage.json           — Curated article metadata (37 articles)
+  coverage.json           — Article metadata (24 articles, auto-updated by scraper)
   sources.json            — Citation database (28 verified claims with source links)
   source-registry.json    — Source freshness tracking and verification windows
 translations/
@@ -56,6 +56,8 @@ tools/
   generate-pages.py       — Static page generator for translations (1556 lines)
   validate-data.py        — Data integrity and source verification checks
   validate-research-pipeline.py — Source registry schema and freshness validator
+  scrape-coverage.py      — Automated article discovery (RSS + Firecrawl, 1029 lines)
+  scrape-config.json      — Scraper source URLs, feeds, and search config
 tests/                    — 14 test suites with 698+ automated checks
 docs/plans/               — Implementation design docs (SEO, embed system)
 .github/
@@ -253,6 +255,10 @@ Also verify manually:
 | Regenerate one language | `python3 tools/generate-pages.py es` |
 | Regenerate specific languages | `python3 tools/generate-pages.py es zh ko` |
 | Validate sources | `python3 tools/validate-research-pipeline.py --check-urls` |
+| Validate data | `python3 tools/validate-data.py` |
+| Run coverage scraper | `~/.claude/workstation/venv/bin/python3 tools/scrape-coverage.py` |
+| Scraper dry run | `~/.claude/workstation/venv/bin/python3 tools/scrape-coverage.py --dry-run` |
+| Verify existing articles | `~/.claude/workstation/venv/bin/python3 tools/scrape-coverage.py --verify` |
 | Deploy | Push to `main` (GitHub Pages auto-deploys via `.github/workflows/static.yml`) |
 
 ## File counts
@@ -261,6 +267,6 @@ Also verify manually:
 - **JS files:** 10 in `js/` (~4,553 lines total)
 - **CSS:** 1 file (~3,295 lines)
 - **Translation files:** 11 JSON (~457 keys each)
-- **Data files:** 3 JSON (37 articles + 28 citations + source registry)
+- **Data files:** 3 JSON (24 articles + 28 citations + source registry)
 - **Test files:** 14 in `tests/` (698+ checks)
-- **Python scripts:** 3 in `tools/` (~2,463 lines total)
+- **Python scripts:** 4 in `tools/` (~3,492 lines total) + 1 JSON config

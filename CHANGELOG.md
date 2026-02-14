@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.1.1] - 2026-02-13
+
+### Added
+- **Automated coverage scraper** (`tools/scrape-coverage.py`) — Three-layer discovery pipeline using RSS feeds and Firecrawl search/scrape, running 4x daily via cron. Includes 404 page detection, URL deduplication, article validation, git auto-commit, and Telegram notifications.
+- **Scraper config** (`tools/scrape-config.json`) — RSS feed URLs, official source monitoring targets, search queries, and classification keywords
+- 6 new coverage articles discovered and verified via the scraper pipeline
+
+### Fixed
+- 4 article datelines corrected using verified `article:published_time` metadata (PIX11: Feb 13→Feb 10, Hoboken Girl: Feb 13→Feb 10, NJBIZ: Feb 13→Feb 12, Montclair Girl: Feb 13→Feb 12)
+- 2 article datelines corrected manually (Amtrak PDF and NJ Transit press release: Feb 14→Jan 15)
+- Removed 19 articles with dead/404 URLs from coverage.json
+- Removed "Curated" language from coverage descriptions in English and all 10 translated pages
+- Fixed dangling source reference (`njtransit-service-advisory`) in sources.json
+- Deleted 2 stale remote branches
+
 ## [2.1.0] - 2026-02-13
 
 ### Added
@@ -127,6 +142,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - GitHub Pages deployment workflow
 - MIT license
 
+[2.1.1]: https://github.com/jamditis/reroute-nj/compare/v2.1.0...v2.1.1
 [2.1.0]: https://github.com/jamditis/reroute-nj/compare/v2.0.0...v2.1.0
 [2.0.0]: https://github.com/jamditis/reroute-nj/compare/v1.1.0...v2.0.0
 [1.1.0]: https://github.com/jamditis/reroute-nj/compare/v1.0.2...v1.1.0
