@@ -62,8 +62,8 @@ All data on this site is traceable to official sources. Last verified: February 
 - **PATH schedules and fares**: [Port Authority of NY & NJ](https://www.panynj.gov/path/en/schedules-maps.html)
 - **Ferry schedules**: [NY Waterway: Hoboken / Midtown](https://www.nywaterway.com/HobokenMidtown.aspx)
 - **NJ Transit fares**: [NJ Transit fares page](https://www.njtransit.com/fares)
-- **Gateway Program context**: [Gateway Development Commission](https://www.gatewayprogram.org/portal-north-bridge/)
-- **Service advisories**: [NJ Transit service advisory](https://www.njtransit.com/service-advisory/2036487)
+- **Gateway Program context**: [Gateway Development Commission](https://www.gatewayprogram.org/)
+- **Travel alerts**: [NJ Transit travel alerts](https://www.njtransit.com/travel-alerts-to)
 - **Structured citation database**: [data/sources.json](https://github.com/jamditis/reroute-nj/blob/main/data/sources.json) (machine-readable, 28 verified claims with source links)
 
 ## About

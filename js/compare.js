@@ -642,9 +642,10 @@
 
     // Share button
     var shareText = buildShareText(line, options, normalTotal);
-    $resultsShare.innerHTML =
+    $resultsShare.innerHTML = // Safe: all values are t() calls or pre-sanitized HTML
       '<button class="share-btn" id="share-btn">' + t("compare.copy_summary") + '</button>' +
-      '<span class="share-confirm hidden" id="share-confirm">' + t("compare.copied") + '</span>';
+      '<span class="share-confirm hidden" id="share-confirm">' + t("compare.copied") + '</span>' +
+      makeCompareSourceFooter(line);
 
     document.getElementById("share-btn").addEventListener("click", function () {
       if (navigator.clipboard) {
@@ -660,6 +661,21 @@
     // Scroll to results and focus for screen readers
     $results.scrollIntoView({ behavior: "smooth", block: "start" });
     $results.focus();
+  }
+
+  function makeCompareSourceFooter(line) {
+    var stationUrl = line && line.sources && line.sources.stations
+      ? line.sources.stations
+      : "https://www.njtransit.com/train-to";
+    return (
+      '<div class="source-attribution">' +
+      '<p class="source-label">Sources: ' +
+      '<a href="https://www.njtransit.com/portalcutover" target="_blank" rel="noopener">NJ Transit cutover page</a>' +
+      ' · <a href="' + esc(stationUrl) + '" target="_blank" rel="noopener">NJ Transit schedules</a>' +
+      ' · <a href="https://www.panynj.gov/path/en/schedules-maps.html" target="_blank" rel="noopener">PATH schedules</a>' +
+      ' · <a href="https://www.nywaterway.com/HobokenMidtown.aspx" target="_blank" rel="noopener">NY Waterway</a>' +
+      "</p></div>"
+    );
   }
 
   function buildShareText(line, options, normalTotal) {
