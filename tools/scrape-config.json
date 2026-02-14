@@ -55,36 +55,7 @@
       "filter_keywords": ["portal bridge", "portal north", "nj transit", "cutover"]
     }
   ],
-  "search_queries": [
-    "Portal Bridge NJ Transit 2026",
-    "Portal North Bridge cutover",
-    "NJ Transit service reduction February 2026",
-    "Portal Bridge Hoboken diversion"
-  ],
-  "known_outlets": [
-    "nj.com",
-    "northjersey.com",
-    "gothamist.com",
-    "nytimes.com",
-    "wnyc.org",
-    "nj1015.com",
-    "pix11.com",
-    "abc7ny.com",
-    "politico.com",
-    "njspotlightnews.org",
-    "tapinto.net",
-    "patch.com",
-    "njbiz.com",
-    "hobokengirl.com",
-    "themontclairgirl.com",
-    "newjersey.news12.com",
-    "cbsnews.com",
-    "nbcnewyork.com",
-    "fox5ny.com",
-    "silive.com",
-    "dailyrecord.com",
-    "app.com"
-  ],
+  "google_news_query": "\"portal bridge\" OR \"portal north bridge\" NJ Transit",
   "line_keywords": {
     "montclair-boonton": ["montclair", "boonton", "montclair-boonton", "midtown direct"],
     "morris-essex": ["morris", "essex", "morristown", "gladstone", "morris & essex", "morris and essex"],

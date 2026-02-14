@@ -170,6 +170,32 @@ def is_excluded_url(url):
     return False
 
 
+def check_url_status(url, timeout=10):
+    """HEAD request to verify URL returns 200. Returns (status_code, final_url) or (None, None) on error."""
+    import urllib.request
+    try:
+        req = urllib.request.Request(url, method="HEAD", headers={
+            "User-Agent": "RerouteNJ/1.0 (news aggregator)"
+        })
+        resp = urllib.request.urlopen(req, timeout=timeout)
+        return resp.status, resp.url
+    except urllib.error.HTTPError as e:
+        return e.code, url
+    except Exception as e:
+        logging.warning("URL check failed for %s: %s", url, e)
+        return None, None
+
+
+RELEVANCE_KEYWORDS = ["portal bridge", "portal north", "cutover", "portal north bridge"]
+
+def is_relevant_content(markdown):
+    """Check that scraped content mentions the Portal Bridge cutover."""
+    if not markdown:
+        return False
+    text = markdown.lower()
+    return any(kw in text for kw in RELEVANCE_KEYWORDS)
+
+
 def extract_date_from_metadata(metadata):
     """Extract publication date from Firecrawl metadata."""
     # Try published_time first (most reliable)
@@ -599,49 +625,95 @@ def poll_rss_feeds(config, existing_urls):
     return candidates
 
 
-def discover_new_articles(app, config, existing_urls):
-    """Search for new articles about the Portal Bridge cutover."""
+def poll_google_news(config, existing_urls):
+    """Poll Google News RSS for new articles about the Portal Bridge cutover.
+
+    Google News returns real, published article URLs.
+    Links redirect through Google, so we follow redirects to get actual URLs.
+    """
+    import urllib.request
+
+    query = config.get("google_news_query", "")
+    if not query:
+        logging.warning("No google_news_query in config")
+        return []
+
+    encoded_query = query.replace(" ", "+").replace('"', "%22")
+    feed_url = (
+        f"https://news.google.com/rss/search?"
+        f"q={encoded_query}&hl=en-US&gl=US&ceid=US:en"
+    )
+
     candidates = []
     seen_urls = set()
 
-    for query in config.get("search_queries", []):
-        try:
-            limit = config.get("search_result_limit", 10)
-            results = app.search(query, limit=limit)
+    try:
+        req = urllib.request.Request(feed_url, headers={
+            "User-Agent": "RerouteNJ/1.0 (news aggregator)"
+        })
+        resp = urllib.request.urlopen(req, timeout=15)
+        xml_data = resp.read().decode("utf-8", errors="replace")
+        root = ET.fromstring(xml_data)
 
-            for item in (results.web or []):
-                url = item.url
-                if not url:
-                    continue
+        channel = root.find("channel")
+        if channel is None:
+            channel = root
 
-                norm = normalize_url(url)
-                if norm in existing_urls or norm in seen_urls:
-                    continue
+        items = channel.findall("item")
+        logging.info("Google News RSS: %d items returned", len(items))
 
-                # Skip blocked sites
-                if is_blocked_site(url):
-                    logging.info("Skipping blocked site: %s", url)
-                    continue
+        for item in items:
+            title = (item.findtext("title") or "").strip()
+            link = (item.findtext("link") or "").strip()
+            pub_date = item.findtext("pubDate", "")
+            source_el = item.find("source")
+            source_name = source_el.text if source_el is not None else ""
 
-                # Skip non-news URLs
-                if is_excluded_url(url):
-                    logging.info("Skipping excluded URL: %s", url)
-                    continue
+            if not link or not title:
+                continue
 
-                seen_urls.add(norm)
-                candidates.append({
-                    "url": url,
-                    "title": item.title or "",
-                    "description": item.description or "",
+            # Google News links redirect to actual article URL
+            try:
+                real_req = urllib.request.Request(link, method="HEAD", headers={
+                    "User-Agent": "RerouteNJ/1.0 (news aggregator)"
                 })
+                real_resp = urllib.request.urlopen(real_req, timeout=10)
+                actual_url = real_resp.url
+            except Exception:
+                actual_url = link
 
-            logging.info("Search '%s': %d results, %d new candidates",
-                         query, len(results.web or []), len(candidates))
+            norm = normalize_url(actual_url)
+            if norm in existing_urls or norm in seen_urls:
+                continue
+            if is_blocked_site(actual_url) or is_excluded_url(actual_url):
+                continue
 
-        except Exception as e:
-            logging.error("Search failed for '%s': %s", query, e)
+            date = None
+            if pub_date:
+                try:
+                    dt = parsedate_to_datetime(pub_date)
+                    date = dt.strftime("%Y-%m-%d")
+                except Exception:
+                    pass
+
+            seen_urls.add(norm)
+            candidates.append({
+                "url": actual_url,
+                "title": title,
+                "description": "",
+                "date": date,
+                "source": source_name or source_name_from_url(actual_url),
+                "from_google_news": True,
+            })
+
+        logging.info("Google News: %d new candidates after dedup", len(candidates))
+
+    except Exception as e:
+        logging.error("Google News RSS failed: %s", e)
 
     return candidates
+
+
 
 
 def verify_existing_articles(app, coverage_data):
@@ -838,13 +910,14 @@ def run_discover(app, config, dry_run=False):
     rss_candidates = poll_rss_feeds(config, existing_urls)
     logging.info("RSS feeds: %d new candidates.", len(rss_candidates))
 
-    # Then search via Firecrawl for outlets without RSS
-    search_candidates = discover_new_articles(app, config, existing_urls)
+    # Then poll Google News RSS for broader coverage
+    google_candidates = poll_google_news(config, existing_urls)
+    logging.info("Google News: %d new candidates.", len(google_candidates))
 
     # Merge, dedup by URL
     seen = set()
     candidates = []
-    for c in rss_candidates + search_candidates:
+    for c in rss_candidates + google_candidates:
         norm = normalize_url(c["url"])
         if norm not in seen:
             seen.add(norm)
@@ -868,8 +941,20 @@ def run_discover(app, config, dry_run=False):
     new_articles = []
     used_ids = {a["id"] for a in coverage_data["articles"]}
     for candidate in candidates:
+        # Gate 1: HTTP validation
+        status, final_url = check_url_status(candidate["url"])
+        if status != 200:
+            logging.info("Rejected %s: HTTP %s", candidate["url"], status)
+            continue
+        candidate["url"] = final_url
+
         scraped = scrape_article_metadata(app, candidate["url"])
         if not scraped:
+            continue
+
+        # Gate 2: Content relevance
+        if not is_relevant_content(scraped.get("markdown", "")):
+            logging.info("Rejected %s: not relevant to Portal Bridge", candidate["url"])
             continue
 
         source = candidate.get("source") or source_name_from_url(candidate["url"])
@@ -991,16 +1076,56 @@ def run_verify(app, dry_run=False):
     return applied
 
 
+def run_check_links():
+    """Check HTTP status of all article URLs in coverage.json."""
+    coverage_data = load_coverage()
+    articles = coverage_data.get("articles", [])
+    total = len(articles)
+    broken = []
+    ok = 0
+
+    for i, article in enumerate(articles):
+        url = article["url"]
+        logging.info("[%d/%d] Checking %s", i + 1, total, article["id"])
+
+        status, final_url = check_url_status(url)
+
+        if status == 200:
+            ok += 1
+        elif status is not None:
+            broken.append({"id": article["id"], "url": url, "status": status})
+            logging.warning("  BROKEN: HTTP %d", status)
+        else:
+            broken.append({"id": article["id"], "url": url, "status": "error"})
+            logging.warning("  ERROR: could not connect")
+
+    logging.info("Link check: %d OK, %d broken out of %d total", ok, len(broken), total)
+
+    if broken:
+        print("\nBroken links:")
+        for b in broken:
+            print(f"  {b['id']}: HTTP {b['status']} -- {b['url']}")
+
+    return len(broken)
+
+
 def main():
     parser = argparse.ArgumentParser(description="Reroute NJ coverage scraper")
     parser.add_argument("--verify", action="store_true",
                         help="Verify existing articles instead of discovering new ones")
     parser.add_argument("--dry-run", action="store_true",
                         help="Show changes without writing files")
+    parser.add_argument("--check-links", action="store_true",
+                        help="Check HTTP status of all article URLs")
     args = parser.parse_args()
 
     setup_logging()
     logging.info("=== Scraper run started ===")
+
+    if args.check_links:
+        count = run_check_links()
+        logging.info("=== Link check finished. %d broken. ===", count)
+        sys.exit(1 if count > 0 else 0)
 
     config = load_config()
     api_key = get_firecrawl_key(config)
