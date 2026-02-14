@@ -1965,6 +1965,81 @@ main.container {
   margin-bottom: 0.5rem;
 }
 
+/* Result count */
+
+.coverage-result-count {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+/* Pagination */
+
+.coverage-pagination {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.pagination-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pagination-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary);
+  background: var(--card-bg);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition);
+  min-height: 44px;
+  min-width: 44px;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  border-color: var(--primary-light);
+  background: var(--bg);
+}
+
+.pagination-btn:focus {
+  outline: none;
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 3px rgba(44, 95, 138, 0.15);
+}
+
+.pagination-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.pagination-arrow {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.pagination-prev {
+  /* Left-aligned prev button — also used as JS selector */
+}
+
+.pagination-next {
+  /* Right-aligned next button — also used as JS selector */
+}
+
+.pagination-info {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-light);
+  white-space: nowrap;
+}
+
 /* =======================================================================
    BLOG INDEX
    ======================================================================= */
@@ -2412,10 +2487,34 @@ main.container {
 @media (max-width: 600px) {
   .coverage-filters {
     flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.75rem;
   }
 
   .filter-group {
     flex: 1 1 auto;
+  }
+
+  .filter-group select,
+  .filter-group input {
+    min-height: 44px;
+    font-size: 1rem;
+  }
+
+  .coverage-result-count {
+    text-align: center;
+  }
+
+  .pagination-btn-text {
+    display: none;
+  }
+
+  .pagination-btn {
+    padding: 0.6rem 0.8rem;
+  }
+
+  .pagination-arrow {
+    font-size: 1.3rem;
   }
 }
 

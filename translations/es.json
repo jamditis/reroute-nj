@@ -199,7 +199,18 @@
     "cat_community": "Comunidad",
     "dir_nj_nyc": "NJ a NYC",
     "dir_nyc_nj": "NYC a NJ",
-    "dir_both": "Ambas direcciones"
+    "dir_both": "Ambas direcciones",
+    "sort_label": "Ordenar",
+    "sort_newest": "Más recientes",
+    "sort_relevance": "Más relevantes",
+    "sort_oldest": "Más antiguos",
+    "showing": "Mostrando",
+    "of": "de",
+    "articles_count": "artículos",
+    "prev": "Anterior",
+    "next": "Siguiente",
+    "page": "Página",
+    "pagination_label": "Paginación de artículos"
   },
   "map": {
     "title": "Mapa interactivo — Reroute NJ",

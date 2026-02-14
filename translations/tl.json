@@ -199,7 +199,18 @@
     "cat_community": "Komunidad",
     "dir_nj_nyc": "NJ papuntang NYC",
     "dir_nyc_nj": "NYC papuntang NJ",
-    "dir_both": "Parehong direksyon"
+    "dir_both": "Parehong direksyon",
+    "sort_label": "Ayusin",
+    "sort_newest": "Pinakabago muna",
+    "sort_relevance": "Pinaka-kaugnay",
+    "sort_oldest": "Pinakaluma muna",
+    "showing": "Ipinapakita",
+    "of": "sa",
+    "articles_count": "artikulo",
+    "prev": "Nakaraang",
+    "next": "Susunod",
+    "page": "Pahina",
+    "pagination_label": "Pahina ng artikulo"
   },
   "map": {
     "title": "Interactive na mapa — Reroute NJ",
