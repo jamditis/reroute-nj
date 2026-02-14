@@ -167,6 +167,21 @@ All transit information is based on official NJ Transit announcements:
 
 This is an independent community tool. Not affiliated with or endorsed by NJ Transit, Amtrak, or any government agency. Always verify with official sources before traveling.
 
+## Verification pipeline
+
+To keep rider-facing claims timely and accurate, the repo includes a repeatable research pipeline:
+
+- `data/source-registry.json` — source registry with claim areas, freshness windows, and `lastVerified` timestamps
+- `tools/validate-research-pipeline.py` — validates source registry schema/freshness and coverage data integrity
+- `docs/research-and-validation-pipeline.md` — operating model for web search, library, custodial, and historical research workflows
+
+Run locally:
+
+```bash
+python3 tools/validate-research-pipeline.py
+python3 tools/validate-research-pipeline.py --check-urls
+```
+
 ## Accessibility
 
 - Skip-to-content link on every page

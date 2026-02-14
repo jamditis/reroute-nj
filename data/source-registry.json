@@ -1,0 +1,55 @@
+{
+  "updatedAt": "2026-02-14T00:00:00Z",
+  "entries": [
+    {
+      "id": "official-cutover-portal-page",
+      "claimArea": "cutover-policy",
+      "claim": "Portal cutover service policy, phase timing, and line-level advisories",
+      "sourceType": "official",
+      "verificationMethod": "manual",
+      "verificationWindowHours": 24,
+      "lastVerified": "2026-02-14T00:00:00Z",
+      "urls": [
+        "https://www.njtransit.com/portalcutover"
+      ]
+    },
+    {
+      "id": "official-rail-schedules",
+      "claimArea": "service-frequency",
+      "claim": "Published train frequencies and schedule details for affected lines",
+      "sourceType": "official",
+      "verificationMethod": "manual+scripted",
+      "verificationWindowHours": 24,
+      "lastVerified": "2026-02-14T00:00:00Z",
+      "urls": [
+        "https://www.njtransit.com/rail-schedules"
+      ]
+    },
+    {
+      "id": "official-alerts",
+      "claimArea": "customer-alerts",
+      "claim": "Service alert changes and temporary operating adjustments",
+      "sourceType": "official",
+      "verificationMethod": "manual",
+      "verificationWindowHours": 12,
+      "lastVerified": "2026-02-14T00:00:00Z",
+      "urls": [
+        "https://www.njtransit.com/service-advisory"
+      ]
+    },
+    {
+      "id": "secondary-news-coverage",
+      "claimArea": "news-context",
+      "claim": "Newsroom and regional reporting context shown in coverage feed",
+      "sourceType": "secondary",
+      "verificationMethod": "scripted",
+      "verificationWindowHours": 72,
+      "lastVerified": "2026-02-14T00:00:00Z",
+      "urls": [
+        "https://www.northjersey.com/",
+        "https://www.nj.com/",
+        "https://gothamist.com/"
+      ]
+    }
+  ]
+}
