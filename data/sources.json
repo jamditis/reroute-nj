@@ -332,7 +332,7 @@
     },
     "presidents-day-schedule": {
       "claim": "Feb 16 (Presidents' Day) runs holiday/weekend schedule; weekday Hoboken diversions begin Feb 17",
-      "sources": ["njtransit-portal-cutover", "njtransit-service-advisory"],
+      "sources": ["njtransit-portal-cutover"],
       "status": "verified",
       "lastVerified": "2026-02-14"
     },

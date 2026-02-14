@@ -1,34 +1,6 @@
 {
-  "lastUpdated": "2026-02-14T04:25:26Z",
+  "lastUpdated": "2026-02-14T04:31:24Z",
   "articles": [
-    {
-      "id": "amtrak-pdf-portal-north-bridge-2026-02-14",
-      "title": "[PDF] Portal North Bridge Track Cutover Work - Amtrak Media",
-      "url": "https://media.amtrak.com/wp-content/uploads/2026/01/Portal-Cutover-Presentation-1.15.26.pdf",
-      "source": "Amtrak Media",
-      "author": null,
-      "date": "2026-02-14",
-      "category": "official",
-      "excerpt": "Amtrak will perform a critical series of construction and operational activities to transfer, or “cut over,” rail operations from one track on the existing Portal Bridge to one track on the new Portal North Bridge over the Hackensack River. During this work, trains will only be able to operate on a single track between Newark and Secaucus. This cutover represents a major milestone in the Gateway...",
-      "lines": [
-        "all"
-      ],
-      "direction": "both"
-    },
-    {
-      "id": "njtransit-transit-2026-02-14",
-      "title": "NJ TRANSIT",
-      "url": "https://www.njtransit.com/press-releases/portal-north-bridge-enters-final-phase-construction-work-begins-put-first-track",
-      "source": "NJ Transit",
-      "author": null,
-      "date": "2026-02-14",
-      "category": "official",
-      "excerpt": "PORTAL NORTH BRIDGE ENTERS FINAL PHASE OF CONSTRUCTION AS WORK BEGINS TO PUT FIRST TRACK INTO SERVICE \\| New Jersey Public Transportation Corporation NEWARK, NJ — Beginning February 13, Amtrak will perform critical work to transfer one track of rail service from the century-old Portal Bridge to the new Portal North Bridge over the Hackensack River. A major milestone in the Gateway Program, the...",
-      "lines": [
-        "all"
-      ],
-      "direction": "both"
-    },
     {
       "id": "njtransit-portalcutover-page",
       "title": "Portal Bridge Cutover: What It Means For You",
@@ -335,6 +307,34 @@
         "north-jersey-coast",
         "montclair-boonton",
         "morris-essex"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "amtrak-pdf-portal-north-bridge-2026-01-15",
+      "title": "Portal North Bridge track cutover work (presentation)",
+      "url": "https://media.amtrak.com/wp-content/uploads/2026/01/Portal-Cutover-Presentation-1.15.26.pdf",
+      "source": "Amtrak Media",
+      "author": null,
+      "date": "2026-01-15",
+      "category": "official",
+      "excerpt": "Amtrak will perform a critical series of construction and operational activities to transfer, or “cut over,” rail operations from one track on the existing Portal Bridge to one track on the new Portal North Bridge over the Hackensack River. During this work, trains will only be able to operate on a single track between Newark and Secaucus. This cutover represents a major milestone in the Gateway...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "njtransit-press-release-portal-north-2026-01-15",
+      "title": "Portal North Bridge enters final phase of construction",
+      "url": "https://www.njtransit.com/press-releases/portal-north-bridge-enters-final-phase-construction-work-begins-put-first-track",
+      "source": "NJ Transit",
+      "author": null,
+      "date": "2026-01-15",
+      "category": "official",
+      "excerpt": "PORTAL NORTH BRIDGE ENTERS FINAL PHASE OF CONSTRUCTION AS WORK BEGINS TO PUT FIRST TRACK INTO SERVICE | New Jersey Public Transportation Corporation NEWARK, NJ — Beginning February 13, Amtrak will perform critical work to transfer one track of rail service from the century-old Portal Bridge to the new Portal North Bridge over the Hackensack River. A major milestone in the Gateway Program, the...",
+      "lines": [
+        "all"
       ],
       "direction": "both"
     },

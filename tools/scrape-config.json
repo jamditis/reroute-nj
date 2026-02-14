@@ -1,0 +1,104 @@
+{
+  "firecrawl_api_key_cmd": "pass show claude/api/firecrawl",
+  "official_sources": [
+    {
+      "id": "njtransit-portalcutover",
+      "url": "https://www.njtransit.com/portalcutover",
+      "source_name": "NJ Transit",
+      "category": "official",
+      "registry_id": "official-cutover-portal-page"
+    },
+    {
+      "id": "njtransit-travel-alerts",
+      "url": "https://www.njtransit.com/travel-alerts-to",
+      "source_name": "NJ Transit",
+      "category": "official",
+      "registry_id": "official-alerts"
+    },
+    {
+      "id": "amtrak-portal-north",
+      "url": "https://media.amtrak.com/2026/01/portal-north-bridge-enters-final-phase-of-construction-as-work-begins-to-put-first-track-into-service/",
+      "source_name": "Amtrak Media",
+      "category": "official",
+      "registry_id": null
+    }
+  ],
+  "rss_feeds": [
+    {
+      "id": "njtransit-rail-alerts",
+      "url": "https://www.njtransit.com/rss/NJTRailAlertsAndAdvisories_feed.xml",
+      "source_name": "NJ Transit",
+      "category": "official",
+      "format": "njtransit-custom"
+    },
+    {
+      "id": "njtransit-customer-notices",
+      "url": "https://www.njtransit.com/rss/CustomerNotices_feed.xml",
+      "source_name": "NJ Transit",
+      "category": "official",
+      "format": "rss"
+    },
+    {
+      "id": "njdotcom",
+      "url": "https://nj.com/arc/outboundfeeds/rss/",
+      "source_name": "NJ.com",
+      "category": "news",
+      "format": "rss",
+      "filter_keywords": ["portal bridge", "portal north", "nj transit", "cutover"]
+    },
+    {
+      "id": "gothamist",
+      "url": "https://gothamist.com/feed",
+      "source_name": "Gothamist",
+      "category": "news",
+      "format": "rss",
+      "filter_keywords": ["portal bridge", "portal north", "nj transit", "cutover"]
+    }
+  ],
+  "search_queries": [
+    "Portal Bridge NJ Transit 2026",
+    "Portal North Bridge cutover",
+    "NJ Transit service reduction February 2026",
+    "Portal Bridge Hoboken diversion"
+  ],
+  "known_outlets": [
+    "nj.com",
+    "northjersey.com",
+    "gothamist.com",
+    "nytimes.com",
+    "wnyc.org",
+    "nj1015.com",
+    "pix11.com",
+    "abc7ny.com",
+    "politico.com",
+    "njspotlightnews.org",
+    "tapinto.net",
+    "patch.com",
+    "njbiz.com",
+    "hobokengirl.com",
+    "themontclairgirl.com",
+    "newjersey.news12.com",
+    "cbsnews.com",
+    "nbcnewyork.com",
+    "fox5ny.com",
+    "silive.com",
+    "dailyrecord.com",
+    "app.com"
+  ],
+  "line_keywords": {
+    "montclair-boonton": ["montclair", "boonton", "montclair-boonton", "midtown direct"],
+    "morris-essex": ["morris", "essex", "morristown", "gladstone", "morris & essex", "morris and essex"],
+    "northeast-corridor": ["northeast corridor", "nec", "northeast corridor line"],
+    "north-jersey-coast": ["north jersey coast", "njcl", "coast line", "bay head", "long branch"],
+    "raritan-valley": ["raritan valley", "raritan", "rvl", "one-seat ride"]
+  },
+  "category_keywords": {
+    "official": ["njtransit.com", "media.amtrak.com", "panynj.gov"],
+    "opinion": ["opinion", "editorial", "op-ed", "column", "commentary", "perspective"],
+    "analysis": ["analysis", "explainer", "guide", "what to know", "what you need to know", "breakdown", "deep dive"],
+    "community": ["tapinto", "patch.com", "hobokengirl", "montclairgirl", "your commute", "your town", "local"]
+  },
+  "search_result_limit": 10,
+  "telegram_chat_id": null,
+  "log_file": "/home/jamditis/.claude/workstation/logs/reroute-scrape.log"
+}
