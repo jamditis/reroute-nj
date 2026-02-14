@@ -210,6 +210,9 @@
     "prev": "Nakaraang",
     "next": "Susunod",
     "page": "Pahina",
+    "page_of": "Pahina {current} ng {total}",
+    "go_prev": "Pumunta sa nakaraang pahina",
+    "go_next": "Pumunta sa susunod na pahina",
     "pagination_label": "Pahina ng artikulo"
   },
   "map": {

@@ -210,6 +210,9 @@
     "prev": "पिछला",
     "next": "अगला",
     "page": "पृष्ठ",
+    "page_of": "पृष्ठ {current} / {total}",
+    "go_prev": "पिछले पृष्ठ पर जाएं",
+    "go_next": "अगले पृष्ठ पर जाएं",
     "pagination_label": "लेख पृष्ठांकन"
   },
   "map": {

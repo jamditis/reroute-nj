@@ -2009,10 +2009,15 @@ main.container {
   background: var(--bg);
 }
 
-.pagination-btn:focus {
-  outline: none;
+.pagination-btn:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
   border-color: var(--primary-light);
   box-shadow: 0 0 0 3px rgba(44, 95, 138, 0.15);
+}
+
+.pagination-btn:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .pagination-btn:disabled {
@@ -2511,10 +2516,21 @@ main.container {
 
   .pagination-btn {
     padding: 0.6rem 0.8rem;
+    min-height: 44px;
+    min-width: 44px;
+    justify-content: center;
   }
 
   .pagination-arrow {
     font-size: 1.3rem;
+  }
+
+  .pagination-nav {
+    gap: 0.75rem;
+  }
+
+  .pagination-info {
+    font-size: 0.85rem;
   }
 }
 
@@ -2531,6 +2547,29 @@ main.container {
   .coverage-card-footer {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .pagination-nav {
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .pagination-btn {
+    flex: 0 0 auto;
+    padding: 0.5rem 0.7rem;
+    min-height: 44px;
+    min-width: 44px;
+    justify-content: center;
+  }
+
+  .pagination-info {
+    font-size: 0.8rem;
+    flex: 1 1 auto;
+    text-align: center;
+  }
+
+  .coverage-pagination {
+    margin-bottom: 1.5rem;
   }
 
   .tool-tabs {
@@ -2846,6 +2885,20 @@ body[data-contrast="high"] .result-card.recommended {
 
 body[data-contrast="high"] .coverage-card {
   border: 2px solid #000;
+}
+
+body[data-contrast="high"] .pagination-btn {
+  border: 2px solid #000;
+  color: #000;
+}
+
+body[data-contrast="high"] .pagination-btn:disabled {
+  border-color: #666;
+  color: #666;
+}
+
+body[data-contrast="high"] .pagination-info {
+  color: #000;
 }
 
 body[data-contrast="high"] .alert-banner {
@@ -3383,11 +3436,15 @@ body.embed-mode .container { padding: 0.5rem; }
   a[href]::after { content: " (" attr(href) ")"; font-size: 0.85em; }
   a[href^="#"]::after { content: none; }
 
+  /* Hide pagination in print */
+  .coverage-pagination { display: none !important; }
+
   /* Prevent page breaks inside cards and key content */
   .line-card,
   .station-card,
   .impact-card,
   .source-item,
   .compare-card,
+  .coverage-card,
   .article-card { page-break-inside: avoid; }
 }

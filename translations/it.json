@@ -210,6 +210,9 @@
     "prev": "Precedente",
     "next": "Successivo",
     "page": "Pagina",
+    "page_of": "Pagina {current} di {total}",
+    "go_prev": "Vai alla pagina precedente",
+    "go_next": "Vai alla pagina successiva",
     "pagination_label": "Paginazione articoli"
   },
   "map": {

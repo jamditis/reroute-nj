@@ -235,25 +235,28 @@
     var prevLabel = t("coverage.prev") || "Previous";
     var nextLabel = t("coverage.next") || "Next";
     var pageLabel = t("coverage.page") || "Page";
+    var pageOfLabel = (t("coverage.page_of") || "Page {current} of {total}")
+      .replace("{current}", currentPage)
+      .replace("{total}", totalPages);
 
-    var html = '<nav class="pagination-nav" aria-label="' + esc(t("coverage.pagination_label") || "Article pagination") + '">';
+    var html = '<nav class="pagination-nav" role="navigation" aria-label="' + esc(t("coverage.pagination_label") || "Article pagination") + '">';
 
-    html += '<button class="pagination-btn pagination-prev"' +
-      (currentPage <= 1 ? " disabled" : "") +
-      ' aria-label="' + esc(prevLabel) + '">' +
-      '<span class="pagination-arrow">\u2190</span> ' +
+    html += '<button class="pagination-btn pagination-prev" type="button"' +
+      (currentPage <= 1 ? ' disabled aria-disabled="true"' : "") +
+      ' aria-label="' + esc(t("coverage.go_prev") || "Go to previous page") + '">' +
+      '<span class="pagination-arrow" aria-hidden="true">\u2190</span> ' +
       '<span class="pagination-btn-text">' + esc(prevLabel) + '</span>' +
       "</button>";
 
-    html += '<span class="pagination-info">' +
-      esc(pageLabel) + " " + currentPage + " / " + totalPages +
+    html += '<span class="pagination-info" role="status" aria-live="polite" aria-atomic="true">' +
+      esc(pageOfLabel) +
       "</span>";
 
-    html += '<button class="pagination-btn pagination-next"' +
-      (currentPage >= totalPages ? " disabled" : "") +
-      ' aria-label="' + esc(nextLabel) + '">' +
+    html += '<button class="pagination-btn pagination-next" type="button"' +
+      (currentPage >= totalPages ? ' disabled aria-disabled="true"' : "") +
+      ' aria-label="' + esc(t("coverage.go_next") || "Go to next page") + '">' +
       '<span class="pagination-btn-text">' + esc(nextLabel) + '</span>' +
-      ' <span class="pagination-arrow">\u2192</span>' +
+      ' <span class="pagination-arrow" aria-hidden="true">\u2192</span>' +
       "</button>";
 
     html += "</nav>";
@@ -266,7 +269,7 @@
         if (currentPage > 1) {
           currentPage--;
           renderFeed();
-          scrollToFeed();
+          scrollToFeed("next");
         }
       });
     }
@@ -275,17 +278,19 @@
         if (currentPage < totalPages) {
           currentPage++;
           renderFeed();
-          scrollToFeed();
+          scrollToFeed("prev");
         }
       });
     }
   }
 
-  function scrollToFeed() {
+  function scrollToFeed(focusTarget) {
     var filtersEl = document.getElementById("coverage-filters");
     if (filtersEl) {
       filtersEl.scrollIntoView({ behavior: "smooth", block: "start" });
     }
+    // Move focus to the feed region so screen readers announce new content
+    $feed.focus({ preventScroll: true });
   }
 
   function renderCard(article) {
