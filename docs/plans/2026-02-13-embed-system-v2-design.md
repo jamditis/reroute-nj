@@ -22,7 +22,7 @@ The embed page (`embed.html`) has a basic dropdown that generates an `<iframe>` 
 |--------|----------|----------|
 | Iframe (copy/paste) | Any CMS editor | WordPress, Ghost, Squarespace, any HTML block |
 | Script tag (`<script>` + `<div>`) | Developers, advanced publishers | Custom sites, advanced CMS setups |
-| Download PNG | Anyone — newsletters, social, print | Email, Twitter/X, Facebook, Slack, PDF |
+| Download PNG | Anyone — newsletters, social, print | Email, Twitter, Facebook, Slack, PDF |
 | Download HTML | Publishers who want to host it themselves | Any web server, S3, local file |
 
 All formats include attribution: small "Powered by RerouteNJ" with SVG logo + link back to reroutenj.org.
