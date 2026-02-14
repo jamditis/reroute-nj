@@ -25,7 +25,8 @@
 
 - **[Line guide](https://reroutenj.org/)** — Select your NJ Transit line and station to see how the cutover affects your commute, get route alternatives, and figure out what ticket to buy
 - **[Commute comparison](https://reroutenj.org/compare.html)** — Pick your station and Manhattan destination, see every route option side by side with visual time breakdowns
-- **[News coverage](https://reroutenj.org/coverage.html)** — Curated feed of Portal Bridge cutover coverage from local and regional news sources, filterable by source, category, line, and direction
+- **[News coverage](https://reroutenj.org/coverage.html)** — Feed of Portal Bridge cutover coverage from local and regional news sources, filterable by source, category, line, and direction
+- **[About](https://reroutenj.org/about.html)** — Methodology, data sourcing, and verification process
 - **[Interactive map](https://reroutenj.org/map.html)** — Visualize the Portal Bridge location, affected stations, transfer hubs, and alternative routes
 - **[Embed & share](https://reroutenj.org/embed.html)** — Visual configurator with four embed formats: iframe, script tag, PNG image, and self-contained HTML download. Free for newsrooms and publishers
 - **[Blog](https://reroutenj.org/blog.html)** — Project updates and feature announcements
@@ -53,6 +54,7 @@ reroute-nj/
 ├── coverage.html           # News coverage feed
 ├── map.html                # Interactive cutover map
 ├── embed.html              # Embed & share configurator
+├── about.html              # Methodology and data sourcing
 ├── blog.html               # Blog index (lists posts)
 ├── blog/                   # Blog posts
 │   ├── why-we-built-reroute-nj.html
@@ -80,7 +82,7 @@ reroute-nj/
 │   ├── og-image.png        # Social preview image
 │   └── screenshot.png      # README screenshot
 ├── data/
-│   ├── coverage.json       # Curated article data for the coverage feed
+│   ├── coverage.json       # Article data for the coverage feed
 │   ├── sources.json        # Citation database (28 verified claims)
 │   └── source-registry.json # Source freshness tracking
 ├── translations/           # Translation JSON files
@@ -91,12 +93,13 @@ reroute-nj/
 ├── tools/
 │   └── generate-pages.py   # Generates translated HTML pages from templates
 ├── tests/                  # 14 test suites with 698+ automated checks
-└── {lang}/                 # Generated translated pages (80 total, 8 pages × 10 languages)
+└── {lang}/                 # Generated translated pages (90 total, 9 pages × 10 languages)
     ├── index.html
     ├── compare.html
     ├── coverage.html
     ├── map.html
     ├── embed.html
+    ├── about.html
     ├── blog.html
     └── blog/
         ├── why-we-built-reroute-nj.html
@@ -109,7 +112,7 @@ reroute-nj/
 
 ## Translations
 
-All eight pages are available in 11 languages, chosen based on [NJ Transit ridership demographics](https://www.njtransit.com/):
+All nine pages are available in 11 languages, chosen based on [NJ Transit ridership demographics](https://www.njtransit.com/):
 
 | Language | Code | Direction |
 |----------|------|-----------|

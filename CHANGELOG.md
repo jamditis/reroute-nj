@@ -5,6 +5,29 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.1.2] - 2026-02-14
+
+### Added
+- **About/methodology page** (`about.html`) — Project methodology, data sourcing, and verification process. Translated into all 10 languages.
+- **Google News RSS discovery** — Scraper now uses Google News RSS as primary article discovery source, replacing Firecrawl search which hallucinated URLs
+- **HTTP validation gate** — `check_url_status()` verifies every candidate URL returns HTTP 200 before adding to coverage
+- **Content relevance gate** — `is_relevant_content()` checks that scraped article text mentions Portal Bridge keywords before adding
+- **Link health checker** — `--check-links` mode audits all existing article URLs and reports broken links
+- About page added to site navigation across all 11 languages
+
+### Fixed
+- Removed 9 articles with fabricated or irrelevant URLs from coverage.json (3 TAPinto with nonexistent URL paths, 4 NYTimes returning 404, 2 off-topic NJ Transit pages)
+- Coverage feed reduced from 27 to 18 verified articles
+
+### Changed
+- Scraper discovery switched from Firecrawl search to Google News RSS + existing RSS feeds
+- Firecrawl now used only for content scraping (excerpts, metadata), not article discovery
+- `scrape-config.json` uses `google_news_query` instead of `search_queries` and `known_outlets`
+
+### Removed
+- `discover_new_articles()` function (replaced by `poll_google_news()`)
+- Firecrawl search queries from scraper config
+
 ## [2.1.1] - 2026-02-13
 
 ### Added
@@ -142,6 +165,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - GitHub Pages deployment workflow
 - MIT license
 
+[2.1.2]: https://github.com/jamditis/reroute-nj/compare/v2.1.1...v2.1.2
 [2.1.1]: https://github.com/jamditis/reroute-nj/compare/v2.1.0...v2.1.1
 [2.1.0]: https://github.com/jamditis/reroute-nj/compare/v2.0.0...v2.1.0
 [2.0.0]: https://github.com/jamditis/reroute-nj/compare/v1.1.0...v2.0.0
