@@ -35,6 +35,15 @@
     "raritan-valley": "#faa634",
   };
 
+  // WCAG AA accessible text colors (4.5:1 contrast against white)
+  var LINE_TEXT_COLORS = {
+    "montclair-boonton": "#7b2d8e",
+    "morris-essex": "#007a3d",
+    "northeast-corridor": "#c5303a",
+    "north-jersey-coast": "#006ba1",
+    "raritan-valley": "#8a5d00",
+  };
+
   // =========================================================================
   // STATION DATA (key stations with coordinates)
   // Stations are ordered west→east or south→north for each line.
@@ -300,6 +309,7 @@
   // =========================================================================
   STATIONS.forEach(function (s) {
     var color = LINE_COLORS[s.line] || "#999";
+    var textColor = LINE_TEXT_COLORS[s.line] || color;
     var lineLabel = s.line.split("-").map(function (w) { return w.charAt(0).toUpperCase() + w.slice(1); }).join(" ");
 
     var icon = L.circleMarker([s.lat, s.lng], {
@@ -312,7 +322,7 @@
 
     icon.bindPopup(
       '<strong>' + esc(s.name) + '</strong><br>' +
-      '<span style="color:' + color + ';font-weight:700;">' + esc(lineLabel) + ' Line</span><br>' +
+      '<span style="color:' + textColor + ';font-weight:700;">' + esc(lineLabel) + ' Line</span><br>' +
       '<a href="index.html" target="_blank">Plan your commute &rarr;</a>'
     );
 

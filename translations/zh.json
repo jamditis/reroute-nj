@@ -45,7 +45,8 @@
     "remaining_phase1": "第一阶段剩余",
     "phase1_complete": "第一阶段已完成",
     "phase2_expected": "第二阶段预计",
-    "nav_blog": "博客"
+    "nav_blog": "博客",
+    "menu": "菜单"
   },
   "index": {
     "title": "Reroute NJ — Portal Bridge转换指南",
@@ -418,10 +419,10 @@
     "tool_coverage": "<strong><a href=\"../coverage.html\">新闻报道</a></strong> &mdash; 来自十几个区域新闻来源的转换相关精选报道。按来源、线路、方向或类别筛选。",
     "tool_map": "<strong><a href=\"../map.html\">交互式地图</a></strong> &mdash; 受影响的五条NJ Transit线路在地图上呈现，带有车站标记、主要换乘点（Hoboken Terminal、Secaucus Junction、Newark Penn）以及Portal Bridge在Hackensack River上的位置。",
     "tool_embed": "<strong><a href=\"../embed.html\">嵌入和分享</a></strong> &mdash; Iframe嵌入代码、直接链接以及新闻编辑室和出版商在自己网站上转载这些工具的说明。",
-    "tools_languages": "每个工具页面都提供11种语言版本：英语、西班牙语、中文、塔加洛语、韩语、葡萄牙语、古吉拉特语、印地语、意大利语、阿拉伯语和波兰语。这些不是敷衍的机器翻译——每种语言都有自己的页面集，包含翻译的导航、标签、描述和元数据。车站名、线路名和地名保持英文，因为标识牌上就是这样写的。",
+    "tools_languages": "每个工具页面都提供11种语言版本：英语、西班牙语、中文、塔加洛语、韩语、葡萄牙语、古吉拉特语、印地语、意大利语、阿拉伯语和波兰语。这些不是敷衍的机器翻译&mdash;每种语言都有自己的页面集，包含翻译的导航、标签、描述和元数据。车站名、线路名和地名保持英文，因为标识牌上就是这样写的。",
     "h2_built": "为什么这样构建",
     "built_p1": "Reroute NJ是一个零构建静态网站。纯HTML、CSS和JavaScript。没有框架，没有npm，没有构建步骤。您可以fork这个仓库，编辑一个文件，然后在几分钟内部署到GitHub Pages。",
-    "built_p2": "我们希望这个项目对任何想要贡献的人都易于上手——能添加文章到报道订阅的记者、能报告不准确信息的社区成员以及能添加功能的开发者。降低贡献门槛比使用最新技术更重要。",
+    "built_p2": "我们希望这个项目对任何想要贡献的人都易于上手&mdash;能添加文章到报道订阅的记者、能报告不准确信息的社区成员以及能添加功能的开发者。降低贡献门槛比使用最新技术更重要。",
     "built_p3": "一切都在客户端。没有服务器，没有数据库，没有API密钥。数据打包为JSON和JavaScript对象。网站速度快，即使GitHub的服务器负载很高也能正常工作。",
     "h2_newsrooms": "面向新闻编辑室和出版商",
     "newsrooms_intro": "我们创建Reroute NJ是为了让它被分享、嵌入和转载。如果您运营本地新闻网站、社区博客或交通倡导页面，我们希望您使用这些工具。",

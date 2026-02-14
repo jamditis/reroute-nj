@@ -184,6 +184,8 @@ python3 tools/validate-research-pipeline.py --check-urls
 
 ## Accessibility
 
+**Accessibility is non-negotiable** — a11y compliance (WCAG 2.1 AA minimum) always takes priority over design preferences, brand aesthetics, or convenience.
+
 - Skip-to-content link on every page
 - High contrast toggle (persisted via localStorage)
 - Simplified view toggle for reduced visual complexity
@@ -191,6 +193,8 @@ python3 tools/validate-research-pipeline.py --check-urls
 - ARIA labels, roles, and live regions for screen readers
 - Mobile hamburger menu with proper focus management
 - Minimum 44px touch targets on mobile
+- Color contrast meets WCAG AA (4.5:1 for normal text, 3:1 for large text)
+- Print stylesheets on all pages
 
 ## SEO and discoverability
 

@@ -57,6 +57,11 @@
   --warning-bg: #fff8e1;
   --danger: #c62828;
   --danger-bg: #fce4ec;
+  --line-montclair-boonton: #7b2d8e;
+  --line-morris-essex: #007a3d;
+  --line-northeast-corridor: #c5303a;
+  --line-north-jersey-coast: #006ba1;
+  --line-raritan-valley: #8a5d00;
   --radius: 8px;
   --radius-lg: 12px;
   --shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
@@ -1223,7 +1228,7 @@ main.container {
 }
 
 .map-label-river {
-  color: #0082c8;
+  color: var(--line-north-jersey-coast);
 }
 
 .map-zone {
@@ -3246,4 +3251,45 @@ body.embed-mode .container { padding: 0.5rem; }
 .sources-note a { color: var(--accent); }
 @media (max-width: 480px) {
   .sources-grid { grid-template-columns: 1fr; }
+}
+
+/* =========================================================================
+   Print styles
+   ========================================================================= */
+@media print {
+  /* Hide non-essential UI */
+  .hamburger-btn,
+  .tool-nav,
+  #toggle-contrast,
+  #toggle-simplified,
+  .embed-attribution,
+  .skip-link,
+  #lang-select,
+  .countdown,
+  .footer { display: none !important; }
+
+  /* Optimize for print */
+  body {
+    background: #fff !important;
+    color: #000 !important;
+    font-size: 12pt;
+  }
+
+  * { box-shadow: none !important; }
+
+  .container,
+  .content,
+  main { max-width: none !important; }
+
+  /* Show URLs after links */
+  a[href]::after { content: " (" attr(href) ")"; font-size: 0.85em; }
+  a[href^="#"]::after { content: none; }
+
+  /* Prevent page breaks inside cards and key content */
+  .line-card,
+  .station-card,
+  .impact-card,
+  .source-item,
+  .compare-card,
+  .article-card { page-break-inside: avoid; }
 }
