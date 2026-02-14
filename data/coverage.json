@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-14T06:16:25Z",
+  "lastUpdated": "2026-02-14T06:22:52Z",
   "articles": [
     {
       "id": "twp-millburn-nj-us-transit-major-service-2026-02-14",
@@ -24,20 +24,6 @@
       "date": "2026-02-13",
       "category": "official",
       "excerpt": "NJ Transit's official Portal Bridge cutover information hub. Includes temporary schedules for all affected lines, cross-honoring details for PATH, NY Waterway ferry, and Bus 126, FLEXPASS options, and real-time service alerts. The definitive source for schedule changes during Feb 15 – Mar 15, 2026.",
-      "lines": [
-        "all"
-      ],
-      "direction": "both"
-    },
-    {
-      "id": "nytimes-bridge-snarl-2026-02-13",
-      "title": "New Jersey Bridge Project Could Snarl Rail Traffic for a Month",
-      "url": "https://www.nytimes.com/2026/02/13/nyregion/portal-bridge-nj-transit.html",
-      "source": "The New York Times",
-      "author": null,
-      "date": "2026-02-13",
-      "category": "news",
-      "excerpt": "The Portal North Bridge cutover begins this weekend, with NJ Transit and Amtrak reducing service by approximately 50% for four weeks. Single-track operations between Newark and Secaucus will create a bottleneck affecting hundreds of thousands of daily commuters.",
       "lines": [
         "all"
       ],
@@ -118,23 +104,6 @@
       "direction": "nj-to-nyc"
     },
     {
-      "id": "nytimes-evening-commute-2026-02-12",
-      "title": "For Workers Heading to New Jersey, the Evening Commute Just Got Harder",
-      "url": "https://www.nytimes.com/2026/02/12/nyregion/nj-transit-evening-commute-portal-bridge.html",
-      "source": "The New York Times",
-      "author": "Patrick McGeehan",
-      "date": "2026-02-12",
-      "category": "news",
-      "excerpt": "The Portal Bridge cutover doesn't just affect morning commuters heading into Manhattan. Evening riders heading home to New Jersey face their own set of challenges: fewer trains from Penn Station on NEC and North Jersey Coast lines, and a complete reroute through Hoboken for Midtown Direct riders. Commuters heading to Morris County and the Montclair area will need to take PATH or ferry to Hoboken, then catch their NJ Transit train home.",
-      "lines": [
-        "montclair-boonton",
-        "morris-essex",
-        "northeast-corridor",
-        "north-jersey-coast"
-      ],
-      "direction": "nyc-to-nj"
-    },
-    {
       "id": "6sqft-com-transit-cut-2026-02-12",
       "title": "NJ Transit to cut service by 50% for four weeks",
       "url": "https://www.6sqft.com/nj-transit-to-cut-service-by-50-for-four-weeks/",
@@ -210,20 +179,6 @@
       "direction": "both"
     },
     {
-      "id": "nytimes-portal-bridge-2026-02-10",
-      "title": "A Critical Bridge Is Getting Replaced. Hundreds of Thousands of Commuters Will Feel It.",
-      "url": "https://www.nytimes.com/2026/02/10/nyregion/portal-bridge-nj-transit-cutover.html",
-      "source": "The New York Times",
-      "author": "Patrick McGeehan",
-      "date": "2026-02-10",
-      "category": "news",
-      "excerpt": "The Portal Bridge, a 115-year-old swing bridge over the Hackensack River, has been the Northeast Corridor's most notorious chokepoint for decades. Now, as Amtrak finally replaces it with the new Portal North Bridge, NJ Transit riders face a month of significant service reductions. The cutover is a milestone in the long-delayed Gateway Program and could eventually eliminate one of the most common causes of delays on the entire corridor.",
-      "lines": [
-        "all"
-      ],
-      "direction": "both"
-    },
-    {
       "id": "lackawannacoalition-org-portal-north-bridge-cutover-2026-02-08",
       "title": "Portal North Bridge Cutover Brings Schedule Changes Later This Winter – Lackawanna Coalition",
       "url": "https://lackawannacoalition.org/2026/02/08/portal-north-bridge-cutover-brings-schedule-changes-later-this-winter/",
@@ -246,20 +201,6 @@
       "date": "2026-02-05",
       "category": "official",
       "excerpt": "NJ Transit today released temporary schedules for all affected rail lines during the Portal North Bridge cutover period (February 15 – March 15, 2026). Key highlights include cross-honoring agreements with PATH, NY Waterway, and NJ Transit Bus 126 for riders diverted to Hoboken Terminal. Enhanced NY Waterway ferry service will operate from Hoboken during peak commuting hours.",
-      "lines": [
-        "all"
-      ],
-      "direction": "both"
-    },
-    {
-      "id": "nytimes-gateway-context-2026-02-05",
-      "title": "The Portal Bridge: Why Replacing a 115-Year-Old Drawbridge Matters for the Northeast",
-      "url": "https://www.nytimes.com/2026/02/05/nyregion/portal-bridge-history-gateway-program.html",
-      "source": "The New York Times",
-      "author": "Patrick McGeehan",
-      "date": "2026-02-05",
-      "category": "analysis",
-      "excerpt": "The Portal Bridge has been the bane of Northeast Corridor commuters for decades. The 115-year-old swing bridge over the Hackensack River gets stuck while opening for marine traffic, causing cascading delays that can ripple for hours. Its replacement — the $1.5 billion Portal North Bridge — will be a modern, fixed-span bridge that eliminates the movable component entirely. The cutover is the final step in bringing the new bridge online.",
       "lines": [
         "all"
       ],
