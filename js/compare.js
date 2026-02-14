@@ -644,7 +644,8 @@
     var shareText = buildShareText(line, options, normalTotal);
     $resultsShare.innerHTML =
       '<button class="share-btn" id="share-btn">' + t("compare.copy_summary") + '</button>' +
-      '<span class="share-confirm hidden" id="share-confirm">' + t("compare.copied") + '</span>';
+      '<span class="share-confirm hidden" id="share-confirm">' + t("compare.copied") + '</span>' +
+      renderResultSources(line);
 
     document.getElementById("share-btn").addEventListener("click", function () {
       if (navigator.clipboard) {
@@ -660,6 +661,29 @@
     // Scroll to results and focus for screen readers
     $results.scrollIntoView({ behavior: "smooth", block: "start" });
     $results.focus();
+  }
+
+  function renderResultSources(line) {
+    var links = [
+      { label: "NJ Transit: Portal cutover service plan", url: "https://www.njtransit.com/portalcutover" },
+      { label: "NJ Transit: Rail schedules", url: "https://www.njtransit.com/train-to" },
+      { label: "PATH schedules & alerts", url: "https://www.panynj.gov/path/en/index.html" },
+      { label: "NY Waterway schedules", url: "https://www.nywaterway.com" },
+    ];
+
+    if (line && line.sources && line.sources.length) {
+      links = line.sources.concat(links);
+    }
+
+    var seen = {};
+    var html = '<div class="result-note" style="margin-top:12px;"><strong>Verify routes and times:</strong><ul>';
+    for (var i = 0; i < links.length; i++) {
+      if (seen[links[i].url]) continue;
+      seen[links[i].url] = true;
+      html += '<li><a href="' + esc(links[i].url) + '" target="_blank" rel="noopener">' + esc(links[i].label) + "</a></li>";
+    }
+    html += "</ul></div>";
+    return html;
   }
 
   function buildShareText(line, options, normalTotal) {

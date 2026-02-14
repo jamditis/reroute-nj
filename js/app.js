@@ -65,6 +65,24 @@
     return null;
   }
 
+  function renderSourceLinks(line, includeFareSource) {
+    var links = [];
+    if (line && line.sources && line.sources.length) {
+      links = links.concat(line.sources);
+    }
+    if (includeFareSource) {
+      links.push({ label: "NJ Transit rail fare tables", url: "https://www.njtransit.com/tickets/rail-tickets" });
+    }
+
+    if (!links.length) return "";
+
+    var items = links.map(function (link) {
+      return '<li><a href="' + esc(link.url) + '" target="_blank" rel="noopener">' + esc(link.label) + "</a></li>";
+    }).join("");
+
+    return '<div class="weekend-note"><strong>Sources for this guidance:</strong><ul>' + items + "</ul></div>";
+  }
+
   // =========================================================================
   // TIMELINE
   // =========================================================================
@@ -342,6 +360,7 @@
       "</ul></div>" +
       savingsHtml +
       '<div class="weekend-note"><strong>' + t("js.weekends_different") + '</strong> ' + t("js.weekend_service_continues") + '</div>' +
+      renderSourceLinks(line, true) +
       "</div></div>"
     );
   }
@@ -417,6 +436,7 @@
       changes.map(function (c) { return "<li>" + c + "</li>"; }).join("") +
       "</ul></div>" +
       '<div class="weekend-note"><strong>Tip:</strong> Your route doesn\'t change, but your schedule does. Download the temporary schedule PDF from <a href="https://www.njtransit.com/portalcutover" target="_blank" rel="noopener">njtransit.com/portalcutover</a> and find your specific trains.</div>' +
+      renderSourceLinks(line, false) +
       "</div></div>"
     );
   }
@@ -503,6 +523,7 @@
       changes.map(function (c) { return "<li>" + esc(c) + "</li>"; }).join("") +
       "</ul></div>" +
       '<div class="weekend-note"><strong>Alternative:</strong> If you can drive to Newark Penn Station, you can skip the Raritan Valley Line entirely and take an NEC train directly (reduced but still running). Or consider NJ Transit bus service as a backup — some routes serve the Raritan Valley corridor.</div>' +
+      renderSourceLinks(line, false) +
       "</div></div>"
     );
   }

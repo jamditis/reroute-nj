@@ -15,6 +15,10 @@ var LINE_DATA = {
     hub: "Newark Broad St",
     summary:
       "All weekday Midtown Direct trains diverted to Hoboken. Weekend service to Penn Station NY continues.",
+    sources: [
+      { label: "NJ Transit: Portal cutover service plan", url: "https://www.njtransit.com/portalcutover" },
+      { label: "NJ Transit: Montclair-Boonton schedules", url: "https://www.njtransit.com/train-to?line=Montclair-Boonton%20Line" },
+    ],
     branches: {
       montclair: "Montclair branch",
       boonton: "Boonton branch",
@@ -57,6 +61,10 @@ var LINE_DATA = {
     hub: "Newark Broad St",
     summary:
       "All weekday Midtown Direct trains on the Morristown Line and Gladstone Branch diverted to Hoboken. Weekend service to Penn Station NY continues.",
+    sources: [
+      { label: "NJ Transit: Portal cutover service plan", url: "https://www.njtransit.com/portalcutover" },
+      { label: "NJ Transit: Morris & Essex schedules", url: "https://www.njtransit.com/train-to?line=Morris%20%26%20Essex%20Line" },
+    ],
     branches: {
       morristown: "Morristown Line",
       gladstone: "Gladstone Branch",
@@ -106,6 +114,10 @@ var LINE_DATA = {
     hub: "Newark Penn",
     summary:
       "Trains still run to Penn Station NY, but service is reduced from 133 to 112 daily trains due to single-track operation between Newark and Secaucus.",
+    sources: [
+      { label: "NJ Transit: Portal cutover service plan", url: "https://www.njtransit.com/portalcutover" },
+      { label: "NJ Transit: Northeast Corridor schedules", url: "https://www.njtransit.com/train-to?line=Northeast%20Corridor%20Line" },
+    ],
     branches: {
       nec: "Northeast Corridor",
     },
@@ -140,6 +152,10 @@ var LINE_DATA = {
     hub: "Secaucus Junction",
     summary:
       "Trains still run to Penn Station NY, but reduced from 109 to 92 daily trains. Significant schedule changes. Perth Amboy/Woodbridge riders get bus cross-honoring to Port Authority.",
+    sources: [
+      { label: "NJ Transit: Portal cutover service plan", url: "https://www.njtransit.com/portalcutover" },
+      { label: "NJ Transit: North Jersey Coast schedules", url: "https://www.njtransit.com/train-to?line=North%20Jersey%20Coast%20Line" },
+    ],
     branches: {
       njcl: "North Jersey Coast Line",
     },
@@ -177,6 +193,10 @@ var LINE_DATA = {
     hub: "Newark Penn",
     summary:
       "All one-seat rides to Penn Station New York are suspended. All trains now originate and terminate at Newark Penn Station. Transfer to NEC at Newark Penn to reach PSNY.",
+    sources: [
+      { label: "NJ Transit: Portal cutover service plan", url: "https://www.njtransit.com/portalcutover" },
+      { label: "NJ Transit: Raritan Valley schedules", url: "https://www.njtransit.com/train-to?line=Raritan%20Valley%20Line" },
+    ],
     branches: {
       rvl: "Raritan Valley Line",
     },
