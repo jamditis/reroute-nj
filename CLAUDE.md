@@ -263,7 +263,7 @@ Also verify manually:
 
 ## File counts
 
-- **HTML pages:** 90 total (8 English base + 2 blog posts + 80 translated)
+- **HTML pages:** 101 total (9 English base + 2 blog posts + 90 translated)
 - **JS files:** 10 in `js/` (~4,553 lines total)
 - **CSS:** 1 file (~3,295 lines)
 - **Translation files:** 11 JSON (~457 keys each)

@@ -182,9 +182,9 @@ if (sitemapRaw) {
 
 if (sitemapRaw) {
   var totalUrls = locUrls.length;
-  // Expected: 8 English + 80 translated + 2 utility (card.html, widget.html) = 90
-  var expectedMin = 88;
-  var expectedMax = 92;
+  // Expected: 9 English + 90 translated + 2 utility (card.html, widget.html) = 101
+  var expectedMin = 99;
+  var expectedMax = 103;
 
   if (totalUrls >= expectedMin && totalUrls <= expectedMax) {
     pass("4. Total URL count is approximately 90", totalUrls + " URLs found (expected " + expectedMin + "-" + expectedMax + ")");

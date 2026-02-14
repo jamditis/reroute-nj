@@ -1659,91 +1659,181 @@
   <!-- Translated: about.html (10 languages) -->
   <url>
     <loc>https://reroutenj.org/es/about.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/about.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/about.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/about.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/about.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/about.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/about.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/about.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/about.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/about.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/about.html"/>
   </url>
   <url>
     <loc>https://reroutenj.org/zh/about.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/about.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/about.html"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/about.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/about.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/about.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/about.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/about.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/about.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/about.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/about.html"/>
   </url>
   <url>
     <loc>https://reroutenj.org/tl/about.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/about.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/about.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/about.html"/>
     <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/about.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/about.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/about.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/about.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/about.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/about.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/about.html"/>
   </url>
   <url>
     <loc>https://reroutenj.org/ko/about.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/about.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/about.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/about.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/about.html"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/about.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/about.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/about.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/about.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/about.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/about.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/about.html"/>
   </url>
   <url>
     <loc>https://reroutenj.org/pt/about.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/about.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/about.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/about.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/about.html"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/about.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/about.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/about.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/about.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/about.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/about.html"/>
   </url>
   <url>
     <loc>https://reroutenj.org/gu/about.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/about.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/about.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/about.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/about.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/about.html"/>
     <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/about.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/about.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/about.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/about.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/about.html"/>
   </url>
   <url>
     <loc>https://reroutenj.org/hi/about.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/about.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/about.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/about.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/about.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/about.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/about.html"/>
     <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/about.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/about.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/about.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/about.html"/>
   </url>
   <url>
     <loc>https://reroutenj.org/it/about.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/about.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/about.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/about.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/about.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/about.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/about.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/about.html"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/about.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/about.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/about.html"/>
   </url>
   <url>
     <loc>https://reroutenj.org/ar/about.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/about.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/about.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/about.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/about.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/about.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/about.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/about.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/about.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/about.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/about.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/about.html"/>
   </url>
   <url>
     <loc>https://reroutenj.org/pl/about.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/about.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://reroutenj.org/es/about.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://reroutenj.org/zh/about.html"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://reroutenj.org/tl/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://reroutenj.org/ko/about.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://reroutenj.org/pt/about.html"/>
+    <xhtml:link rel="alternate" hreflang="gu" href="https://reroutenj.org/gu/about.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://reroutenj.org/hi/about.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://reroutenj.org/it/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://reroutenj.org/ar/about.html"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://reroutenj.org/pl/about.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://reroutenj.org/about.html"/>
   </url>
