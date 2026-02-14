@@ -158,6 +158,8 @@ function isAllowedEnglishWord(word) {
     "Gothamist", "NorthJersey", "com",
     // Coverage terms
     "Facebook", "coverage", "liveblog",
+    // Template placeholders (used as {current}, {total} in JS)
+    "current", "total",
     // Technical and proper nouns that appear in embed/technical contexts
     "issue", "pull", "request", "Pages", "Junction",
     "York", "Washington", "styles", "root",

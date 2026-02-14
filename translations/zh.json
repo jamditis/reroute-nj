@@ -210,6 +210,9 @@
     "prev": "上一页",
     "next": "下一页",
     "page": "页面",
+    "page_of": "第 {current} 页，共 {total} 页",
+    "go_prev": "转到上一页",
+    "go_next": "转到下一页",
     "pagination_label": "文章分页"
   },
   "map": {
