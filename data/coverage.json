@@ -1,6 +1,20 @@
 {
-  "lastUpdated": "2026-02-14T11:16:42Z",
+  "lastUpdated": "2026-02-14T17:00:00Z",
   "articles": [
+    {
+      "id": "gothamist-nj-transit-amtrak-riders-disruptions-2026-02-14",
+      "title": "NJ Transit, Amtrak riders in for a month of disruptions for Portal Bridge transition",
+      "url": "https://gothamist.com/news/nj-transit-amtrak-riders-in-for-a-month-of-disruptions-for-portal-bridge-transition",
+      "source": "Gothamist",
+      "author": null,
+      "date": "2026-02-14",
+      "category": "news",
+      "excerpt": "Amtrak and NJ Transit are bracing customers for a month of potentially difficult commutes with construction that will upend normal commuter schedules. Starting Sunday, Amtrak will begin work to transfer or \u201ccut over\u201d rail traffic from one track that crosses the 115-year-old Portal Bridge over the Hackensack River, to a track that crosses over the newly constructed Portal North Bridge. The work will require around 40,000 hours of work, with two shifts of around 70 to 90 workers a day.",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
     {
       "id": "twp-millburn-nj-us-transit-major-service-2026-02-14",
       "title": "NJ Transit Major Service Update: Portal North Bridge Cutover • Millburn Township, NJ",
@@ -10,6 +24,20 @@
       "date": "2026-02-14",
       "category": "news",
       "excerpt": "Amtrak will perform critical construction to transfer, or “cut over,” rail operations from the existing Portal Bridge to the new Portal North Bridge over the Hackensack River. This work will require temporary but significant service changes starting Sunday, February 15 and last approximately four weeks. A major milestone in the Gateway Program, the work is essential to advancing long-term...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "ridgewoodblog-big-switch-portal-bridge-2026-02-13",
+      "title": "The Big Switch: NJ TRANSIT and Amtrak Announce Month-Long Portal Bridge Service Changes",
+      "url": "https://theridgewoodblog.net/the-big-switch-nj-transit-and-amtrak-announce-month-long-portal-bridge-service-changes/",
+      "source": "The Ridgewood Blog",
+      "author": null,
+      "date": "2026-02-13",
+      "category": "community",
+      "excerpt": "NJ Transit and Amtrak have announced coordinated service modifications for the Portal Bridge cutover. The changes, spanning approximately one month beginning February 15, will temporarily reduce rail service as Amtrak transfers operations to the new Portal North Bridge over the Hackensack River.",
       "lines": [
         "all"
       ],
