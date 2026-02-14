@@ -19,8 +19,8 @@ widget.html             — Mini-widget renderer (URL params → tool)
 js/i18n.js              — Runtime translation loader with t() function
 js/shared.js            — Shared globals: esc(), countdown, date constants, a11y
 js/line-data.js         — LINE_DATA and LINE_ORDER globals (shared data model)
-js/app.js               — Line guide logic (~1055 lines, IIFE)
-js/compare.js           — Comparison tool logic (~706 lines, IIFE)
+js/app.js               — Line guide logic (~1081 lines, IIFE)
+js/compare.js           — Comparison tool logic (~722 lines, IIFE)
 js/coverage.js          — Coverage feed logic (~240 lines, IIFE)
 js/map.js               — Leaflet map logic (~418 lines, IIFE)
 js/cards.js             — Card rendering + Canvas PNG export (~593 lines, IIFE)
@@ -28,10 +28,15 @@ js/embed.js             — Embed configurator logic (~786 lines, IIFE)
 js/widget.js            — Standalone script-tag embed library (~163 lines, IIFE)
 css/styles.css          — All styles, CSS custom properties
 img/                    — Favicon, OG image, screenshot
-data/coverage.json      — Curated article data (38 articles)
-translations/en.json    — English source strings (~300 keys)
+data/coverage.json      — Curated article data (37 articles)
+data/sources.json       — Citation database (28 verified claims with source links)
+data/source-registry.json — Source freshness tracking and verification windows
+translations/en.json    — English source strings (~457 keys)
 translations/{lang}.json — 10 language files (es, zh, tl, ko, pt, gu, hi, it, ar, pl)
-tools/generate-pages.py — Generates translated HTML from templates + JSON
+tools/generate-pages.py — Generates translated HTML from templates + JSON (~1556 lines)
+tools/validate-data.py  — Data integrity and source verification checks
+tools/validate-research-pipeline.py — Source registry schema and freshness validator
+tests/                  — 14 test files with 698+ checks (run with node tests/test-*.js)
 {lang}/                 — Generated translated pages (80 total, 8 pages × 10 languages)
 ```
 
@@ -114,12 +119,31 @@ Output formats: iframe, script tag, PNG download, self-contained HTML download.
 
 ## Testing
 
-No test suite. Verify changes by:
-1. Opening all HTML pages in a browser
-2. Selecting each line and at least one station per line
-3. Checking the comparison tool with different station/destination pairs
-4. Testing coverage page filters (source, category, line, direction, search)
-5. Testing embed configurator — generate each format, verify preview
-6. Resizing the browser to mobile width
-7. Checking the browser console for errors
-8. After translation changes, check at least 2 translated pages for untranslated English text
+14 test files with 698+ automated checks. Run all tests:
+
+```bash
+for t in tests/test-*.js; do node "$t"; done
+```
+
+Run a specific test:
+
+```bash
+node tests/test-line-data-structure.js    # LINE_DATA schema and station counts
+node tests/test-transit-facts.js          # Train counts, dates, impact types vs sources
+node tests/test-js-integrity.js           # IIFE patterns, esc() usage, XSS checks
+node tests/test-html-structure.js         # HTML validity, JSON-LD, meta tags, hreflang
+node tests/test-css-a11y.js              # Color contrast, ARIA, touch targets, a11y toggles
+node tests/test-translations.js           # Key parity across all 11 languages
+node tests/test-coverage-json.js          # Coverage feed data integrity
+node tests/test-cross-references.js       # Data consistency across files
+node tests/test-seo-sitemap.js            # Sitemap, robots.txt, llms.txt validation
+node tests/test-linguistic-*.js           # Per-language linguistic accuracy (5 suites)
+```
+
+Also verify manually:
+1. Open all HTML pages in a browser (`python3 -m http.server 8000`)
+2. Select each line and at least one station per line
+3. Test coverage filters and comparison tool
+4. Test embed configurator — generate each format, verify preview
+5. Resize to mobile (breakpoints at 768px, 480px)
+6. Check browser console for errors

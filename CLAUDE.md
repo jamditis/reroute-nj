@@ -30,28 +30,33 @@ sitemap.xml               — All 90 pages with hreflang cross-refs
 llms.txt                  — AI search engine discoverability
 js/
   i18n.js                 — Runtime translation loader (105 lines)
-  shared.js               — Shared globals: esc(), countdown, dates, a11y (192 lines)
-  line-data.js            — LINE_DATA and LINE_ORDER globals (212 lines)
-  app.js                  — Line guide logic (IIFE, 1055 lines)
-  compare.js              — Comparison tool (IIFE, 706 lines)
+  shared.js               — Shared globals: esc(), countdown, dates, a11y (191 lines)
+  line-data.js            — LINE_DATA and LINE_ORDER globals (245 lines)
+  app.js                  — Line guide logic (IIFE, 1081 lines)
+  compare.js              — Comparison tool (IIFE, 722 lines)
   coverage.js             — Coverage feed (IIFE, 240 lines)
-  map.js                  — Leaflet map logic (IIFE, 418 lines)
+  map.js                  — Leaflet map logic (IIFE, 427 lines)
   cards.js                — Card rendering + Canvas PNG export (IIFE, 593 lines)
   embed.js                — Embed configurator logic (IIFE, 786 lines)
   widget.js               — Standalone script-tag embed library (IIFE, 163 lines)
 css/
-  styles.css              — All styles, CSS custom properties in :root (3167 lines)
+  styles.css              — All styles, CSS custom properties in :root (3295 lines)
 img/
   favicon.svg             — SVG favicon
   og-image.png            — OpenGraph social preview image
   screenshot.png          — README screenshot
 data/
-  coverage.json           — Curated article metadata (38 articles)
+  coverage.json           — Curated article metadata (37 articles)
+  sources.json            — Citation database (28 verified claims with source links)
+  source-registry.json    — Source freshness tracking and verification windows
 translations/
   en.json                 — English source strings (~300 keys)
   {lang}.json             — 10 translated language files
 tools/
   generate-pages.py       — Static page generator for translations (1556 lines)
+  validate-data.py        — Data integrity and source verification checks
+  validate-research-pipeline.py — Source registry schema and freshness validator
+tests/                    — 14 test suites with 698+ automated checks
 docs/plans/               — Implementation design docs (SEO, embed system)
 .github/
   workflows/static.yml    — GitHub Pages deployment
@@ -220,7 +225,15 @@ Four output formats: iframe embed, script tag, PNG download, self-contained HTML
 
 ## Testing
 
-No test suite. Verify by:
+14 test files with 698+ automated checks. Run all:
+
+```bash
+for t in tests/test-*.js; do node "$t"; done
+```
+
+Test suites cover: line data structure, transit facts, JS integrity (IIFE patterns, `esc()` usage, XSS), HTML structure (meta tags, JSON-LD, hreflang), CSS accessibility (contrast, ARIA, touch targets), translations (key parity), coverage JSON, cross-references, SEO/sitemap, and linguistic accuracy (Spanish, Chinese, Korean, Hindi/Gujarati, other).
+
+Also verify manually:
 1. Open all HTML pages in a browser (`python3 -m http.server 8000`)
 2. Select each line and at least one station per line
 3. Test coverage filters and comparison tool
@@ -235,16 +248,19 @@ No test suite. Verify by:
 | Task | Command |
 |------|---------|
 | Serve locally | `python3 -m http.server 8000` |
+| Run all tests | `for t in tests/test-*.js; do node "$t"; done` |
 | Regenerate all translations | `python3 tools/generate-pages.py` |
 | Regenerate one language | `python3 tools/generate-pages.py es` |
 | Regenerate specific languages | `python3 tools/generate-pages.py es zh ko` |
+| Validate sources | `python3 tools/validate-research-pipeline.py --check-urls` |
 | Deploy | Push to `main` (GitHub Pages auto-deploys via `.github/workflows/static.yml`) |
 
 ## File counts
 
 - **HTML pages:** 90 total (8 English base + 2 blog posts + 80 translated)
-- **JS files:** 10 in `js/` (~4,470 lines total)
-- **CSS:** 1 file (~3,170 lines)
-- **Translation files:** 11 JSON (~300 keys each)
-- **Data files:** 1 JSON (38 articles)
-- **Python scripts:** 1 (~1,560 lines)
+- **JS files:** 10 in `js/` (~4,553 lines total)
+- **CSS:** 1 file (~3,295 lines)
+- **Translation files:** 11 JSON (~457 keys each)
+- **Data files:** 3 JSON (37 articles + 28 citations + source registry)
+- **Test files:** 14 in `tests/` (698+ checks)
+- **Python scripts:** 3 in `tools/` (~2,463 lines total)

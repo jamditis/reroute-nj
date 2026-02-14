@@ -36,27 +36,39 @@ reroute-nj/
 ├── compare.html            # Commute comparison tool
 ├── coverage.html           # News coverage feed
 ├── map.html                # Interactive cutover map
-├── embed.html              # Embed & share page
+├── embed.html              # Embed & share configurator
+├── blog.html               # Blog index
+├── blog/                   # Blog posts
+├── card.html               # Info card renderer
+├── widget.html             # Embeddable widget
 ├── robots.txt              # Crawler guidance + AI bot allowances
-├── sitemap.xml             # All 56 pages with hreflang cross-references
+├── sitemap.xml             # All 90 pages with hreflang cross-references
 ├── llms.txt                # AI search engine discoverability
 ├── js/
+│   ├── i18n.js             # Runtime translation loader with t() function
 │   ├── shared.js           # Shared globals: esc(), countdown, date constants
-│   ├── app.js              # Line guide logic (IIFE, ~1000 lines)
-│   ├── compare.js          # Comparison tool logic (IIFE, ~700 lines)
+│   ├── line-data.js        # LINE_DATA and LINE_ORDER globals
+│   ├── app.js              # Line guide logic (IIFE)
+│   ├── compare.js          # Comparison tool logic (IIFE)
 │   ├── coverage.js         # Coverage feed logic (IIFE)
-│   └── i18n.js             # Runtime translation loader with t() function
+│   ├── map.js              # Leaflet map logic (IIFE)
+│   ├── cards.js            # Card rendering + Canvas PNG export (IIFE)
+│   ├── embed.js            # Embed configurator (IIFE)
+│   └── widget.js           # Standalone script-tag embed library (IIFE)
 ├── css/
 │   └── styles.css          # All styles, CSS custom properties for theming
 ├── img/                    # Favicon, OG image, screenshot
 ├── data/
-│   └── coverage.json       # Curated article data
+│   ├── coverage.json       # Curated article data (37 articles)
+│   ├── sources.json        # Citation database (28 verified claims)
+│   └── source-registry.json # Source freshness tracking
 ├── translations/           # Translation JSON files (en + 10 languages)
-│   ├── en.json             # English source strings
+│   ├── en.json             # English source strings (~457 keys)
 │   └── {lang}.json         # es, zh, tl, ko, pt, gu, hi, it, ar, pl
 ├── tools/
 │   └── generate-pages.py   # Generates translated HTML pages
-└── {lang}/                 # Generated translated pages (5 per language)
+├── tests/                  # 14 test suites (698+ checks)
+└── {lang}/                 # Generated translated pages (8 per language)
 ```
 
 ### Code conventions
@@ -69,7 +81,7 @@ reroute-nj/
 
 ### Data model
 
-Transit data lives in the `LINE_DATA` object at the top of `js/app.js`. Each line entry has:
+Transit data lives in the `LINE_DATA` object in `js/line-data.js`. Each line entry has:
 
 ```
 {
@@ -85,7 +97,7 @@ The `impactType` field drives which content templates render for each line.
 
 ### Translations
 
-All 5 pages are fully translated into 10 languages. To improve or fix a translation:
+All 8 pages are fully translated into 10 languages. To improve or fix a translation:
 
 1. Edit the relevant `translations/{lang}.json` file
 2. Run `python3 tools/generate-pages.py {lang}` to regenerate that language's pages
@@ -97,10 +109,11 @@ To add a new language, create `translations/{code}.json` following the key struc
 
 1. Fork the repo and create a branch from `main`
 2. Make your changes
-3. Test by opening `index.html`, `compare.html`, `coverage.html`, `map.html`, and `embed.html` in a browser
-4. Check mobile layout (responsive breakpoints at 768px and 480px)
-5. If you changed translations, run `python3 tools/generate-pages.py` and include generated pages in your PR
-6. Submit a PR using the template
+3. Run the test suite: `for t in tests/test-*.js; do node "$t"; done`
+4. Test by opening pages in a browser (`python3 -m http.server 8000`)
+5. Check mobile layout (responsive breakpoints at 768px and 480px)
+6. If you changed translations, run `python3 tools/generate-pages.py` and include generated pages in your PR
+7. Submit a PR using the template
 
 ## Getting help
 

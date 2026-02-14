@@ -5,24 +5,55 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [2.1.0] - 2026-02-13
 
 ### Added
-- `robots.txt` with explicit AI bot allowances (GPTBot, ChatGPT-User, Google-Extended, PerplexityBot, ClaudeBot, Applebot-Extended) and sitemap reference
-- `sitemap.xml` with all 56 pages, `xhtml:link` hreflang cross-references for 11 languages, and per-page priority/changefreq
-- `llms.txt` for AI search engine discoverability — structured overview of tools, key facts, line-by-line impact, and translations
-- JSON-LD structured data on all 6 English pages: WebSite + BreadcrumbList on every page, FAQPage with 7 questions on index.html, Article schema on blog.html
-- `<link rel="canonical">` tags on all English and translated pages (self-referencing)
-- Citation-ready `.seo-summary` answer blocks on all 5 English tool pages with factual intro paragraphs
-- Translated meta descriptions (`meta.{page}_description`, `meta.{page}_og_description`) in all 11 language JSON files
-- `hreflang` self-reference tags on blog.html (en + x-default)
-- `generate-pages.py` functions: `replace_meta_description()`, `fix_og_url()`, `add_canonical()` for translated page SEO
+- **Test suite** — 14 test files with 698+ checks covering line data structure, transit facts, JS integrity, HTML structure, CSS accessibility, translations, SEO/sitemap, coverage JSON, cross-references, and linguistic validation for 5 languages
+- **Source attribution on comparison tool** — `makeCompareSourceFooter()` in `compare.js` shows NJ Transit, PATH, and NY Waterway source links below commute comparison results
+- **Source attribution on line guide** — `makeSourceFooter()` in `app.js` shows verifiable source links on every impact card
+- **Citation system** — `data/sources.json` with 28 verified claims linked to official sources, and `data/source-registry.json` with freshness tracking
+- **Research validation pipeline** — `tools/validate-data.py` and `tools/validate-research-pipeline.py` for automated data integrity checking
+- **Source references in line data** — Each line in `LINE_DATA` now has a `sources` object linking claims to official NJ Transit URLs
 
 ### Fixed
-- Language dropdown contrast: option text now uses dark color on white background instead of white-on-white
-- `og:url` on translated pages now points to the translated page's own URL instead of the English URL
-- `og:description` and `twitter:description` on translated pages now use translated text instead of English
-- Duplicate skip-link removed from blog.html (was two, now one)
+- Coverage article date corrected from Feb 14 to Feb 13 (UTC timezone error in automated pipeline)
+- Replaced broken link to NJ Transit service advisory (404) with permanent travel alerts page
+- Replaced broken link to Gateway Program portal-north-bridge page (302 to 404) with working root URL
+- Twitter/X naming standardized to just "Twitter" across the codebase
+- Card renderer and embed system internationalized for all 11 languages
+- Embed preview 404s on translated pages
+- Case-sensitive string replacement for embed post title
+- Language selector dropping blog/ subdirectory on nested pages
+- Blog card title capitalization
+- iframe sandbox: added allow-downloads for PNG export
+
+### Changed
+- Line description summaries on cards and PNG exports are now translated
+- Article suggestion email updated
+
+## [2.0.0] - 2026-02-13
+
+### Added
+- **Embed system v2** — Visual configurator with four output formats: iframe embed, script tag, PNG image download, and self-contained HTML download
+- **Blog** — Blog index (`blog.html`) and two posts: "Why we built Reroute NJ" and "New embed system"
+- **Card renderer** (`card.html` + `cards.js`) — Info cards with Canvas PNG export, driven by URL parameters
+- **Widget system** (`widget.html` + `widget.js`) — Standalone script-tag embed library for external sites
+- **SEO and AI discoverability:**
+  - `robots.txt` with explicit AI bot allowances (GPTBot, ChatGPT-User, Google-Extended, PerplexityBot, ClaudeBot, Applebot-Extended)
+  - `sitemap.xml` with all 90 pages and `xhtml:link` hreflang cross-references
+  - `llms.txt` for AI search engines following the [llms.txt standard](https://llmstxt.org)
+  - JSON-LD structured data on all pages: WebSite, BreadcrumbList, FAQPage (7 questions), Article
+  - `<link rel="canonical">` tags on all English and translated pages
+  - Citation-ready `.seo-summary` answer blocks on tool pages
+  - Translated meta descriptions and OG tags for all 11 languages
+- `line-data.js` — Extracted `LINE_DATA` into its own file as a shared global
+- `CLAUDE.md` — Project instructions for Claude Code sessions
+
+### Fixed
+- Language dropdown contrast: option text now visible (dark on white background)
+- `og:url` on translated pages now points to the translated page URL
+- `og:description` and `twitter:description` use translated text on translated pages
+- Duplicate skip-link removed from blog.html
 
 ## [1.1.0] - 2026-02-12
 
@@ -36,7 +67,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Language persistence: navigating between pages now stays in the selected language instead of reverting to English
 - Active nav link translation: regex now matches links with `aria-current="page"` attribute
 - Compare step 2 label: replacement handles both `<div>` and `<label>` wrapper elements
-- Coverage search placeholder: entity mismatch (`&hellip;` vs `…`) prevented translation
+- Coverage search placeholder: entity mismatch (`&hellip;` vs `...`) prevented translation
 - Duplicate skip links removed from embed.html and map.html source HTML
 - Duplicate hreflang tags: generator now skips when tags already exist in source
 
@@ -96,7 +127,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - GitHub Pages deployment workflow
 - MIT license
 
-[Unreleased]: https://github.com/jamditis/reroute-nj/compare/v1.1.0...HEAD
+[2.1.0]: https://github.com/jamditis/reroute-nj/compare/v2.0.0...v2.1.0
+[2.0.0]: https://github.com/jamditis/reroute-nj/compare/v1.1.0...v2.0.0
 [1.1.0]: https://github.com/jamditis/reroute-nj/compare/v1.0.2...v1.1.0
 [1.0.2]: https://github.com/jamditis/reroute-nj/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/jamditis/reroute-nj/compare/v1.0.0...v1.0.1

@@ -80,7 +80,9 @@ reroute-nj/
 │   ├── og-image.png        # Social preview image
 │   └── screenshot.png      # README screenshot
 ├── data/
-│   └── coverage.json       # Curated article data for the coverage feed
+│   ├── coverage.json       # Curated article data for the coverage feed
+│   ├── sources.json        # Citation database (28 verified claims)
+│   └── source-registry.json # Source freshness tracking
 ├── translations/           # Translation JSON files
 │   ├── en.json             # English (base, ~300 keys)
 │   ├── es.json             # Spanish
@@ -88,6 +90,7 @@ reroute-nj/
 │   └── ...                 # + 8 more languages
 ├── tools/
 │   └── generate-pages.py   # Generates translated HTML pages from templates
+├── tests/                  # 14 test suites with 698+ automated checks
 └── {lang}/                 # Generated translated pages (80 total, 8 pages × 10 languages)
     ├── index.html
     ├── compare.html
@@ -167,15 +170,24 @@ All transit information is based on official NJ Transit announcements:
 
 This is an independent community tool. Not affiliated with or endorsed by NJ Transit, Amtrak, or any government agency. Always verify with official sources before traveling.
 
-## Verification pipeline
+## Testing and verification
 
-To keep rider-facing claims timely and accurate, the repo includes a repeatable research pipeline:
+**Automated test suite:** 14 test files with 698+ checks covering data structure, transit facts, JS integrity, HTML structure, CSS accessibility, translations, SEO, and linguistic accuracy.
 
+```bash
+# Run all tests
+for t in tests/test-*.js; do node "$t"; done
+
+# Run a specific suite
+node tests/test-transit-facts.js
+```
+
+**Research validation pipeline:** Verifies source freshness and data integrity against official sources.
+
+- `data/sources.json` — citation database with 28 verified claims linked to official sources
 - `data/source-registry.json` — source registry with claim areas, freshness windows, and `lastVerified` timestamps
-- `tools/validate-research-pipeline.py` — validates source registry schema/freshness and coverage data integrity
-- `docs/research-and-validation-pipeline.md` — operating model for web search, library, custodial, and historical research workflows
-
-Run locally:
+- `tools/validate-data.py` — data integrity checker
+- `tools/validate-research-pipeline.py` — source registry schema and freshness validator
 
 ```bash
 python3 tools/validate-research-pipeline.py
@@ -215,6 +227,8 @@ The site is optimized for Google search, newsroom adoption, and AI search tools 
 - [x] AI search optimization (llms.txt, citation-ready content)
 - [x] Embed system v2: four output formats, visual configurator, info cards, PNG export
 - [x] Blog with proper index + slugged post architecture
+- [x] Citation system with verifiable source links on all tools
+- [x] Automated test suite (698+ checks across 14 suites)
 - [ ] Phase 2 coverage when NJ Transit announces fall 2026 service changes
 - [ ] Bus bridge and shuttle information
 - [ ] Expanded ferry and PATH connection details
