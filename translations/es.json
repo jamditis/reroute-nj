@@ -45,7 +45,8 @@
     "remaining_phase1": "restantes en la Fase 1",
     "phase1_complete": "Fase 1 completada",
     "phase2_expected": "Fase 2 prevista para",
-    "nav_blog": "Blog"
+    "nav_blog": "Blog",
+    "menu": "Menú"
   },
   "index": {
     "title": "Reroute NJ — Navega el cambio del Portal Bridge",
@@ -418,10 +419,10 @@
     "tool_coverage": "<strong><a href=\"../coverage.html\">Cobertura de noticias</a></strong> &mdash; Reportajes seleccionados sobre el cambio de más de una docena de fuentes de noticias regionales. Filtra por fuente, línea, dirección o categoría.",
     "tool_map": "<strong><a href=\"../map.html\">Mapa interactivo</a></strong> &mdash; Las cinco líneas afectadas de NJ Transit renderizadas en un mapa con marcadores de estaciones, puntos clave de transferencia (Hoboken Terminal, Secaucus Junction, Newark Penn) y la ubicación del Portal Bridge sobre el Hackensack River.",
     "tool_embed": "<strong><a href=\"../embed.html\">Insertar y compartir</a></strong> &mdash; Códigos de inserción iframe, enlaces directos e instrucciones para redacciones y editores que quieran republicar cualquiera de estas herramientas en sus propios sitios.",
-    "tools_languages": "Cada página de herramienta está disponible en 11 idiomas: inglés, español, chino, tagalo, coreano, portugués, gujarati, hindi, italiano, árabe y polaco. No son traducciones automáticas descuidadas — cada idioma tiene su propio conjunto de páginas con navegación, etiquetas, descripciones y metadatos traducidos. Los nombres de estaciones, líneas y lugares permanecen en inglés porque eso es lo que está en las señales.",
+    "tools_languages": "Cada página de herramienta está disponible en 11 idiomas: inglés, español, chino, tagalo, coreano, portugués, gujarati, hindi, italiano, árabe y polaco. No son traducciones automáticas descuidadas &mdash; cada idioma tiene su propio conjunto de páginas con navegación, etiquetas, descripciones y metadatos traducidos. Los nombres de estaciones, líneas y lugares permanecen en inglés porque eso es lo que está en las señales.",
     "h2_built": "Por qué está construido de esta manera",
     "built_p1": "Reroute NJ es un sitio estático de cero compilación. HTML, CSS y JavaScript simples. Sin frameworks, sin npm, sin paso de compilación. Puedes bifurcar el repositorio, editar un archivo y desplegarlo en GitHub Pages en minutos.",
-    "built_p2": "Queríamos que el proyecto fuera accesible para cualquiera que quisiera contribuir — periodistas que pueden agregar artículos al feed de cobertura, miembros de la comunidad que pueden reportar inexactitudes y desarrolladores que pueden agregar funciones. Reducir la barrera de contribución importa más que usar la última tecnología.",
+    "built_p2": "Queríamos que el proyecto fuera accesible para cualquiera que quisiera contribuir &mdash; periodistas que pueden agregar artículos al feed de cobertura, miembros de la comunidad que pueden reportar inexactitudes y desarrolladores que pueden agregar funciones. Reducir la barrera de contribución importa más que usar la última tecnología.",
     "built_p3": "Todo es del lado del cliente. Sin servidor, sin base de datos, sin claves de API. Los datos se empaquetan como JSON y objetos JavaScript. El sitio es rápido y funciona incluso si los servidores de GitHub están bajo carga.",
     "h2_newsrooms": "Para redacciones y editores",
     "newsrooms_intro": "Construimos Reroute NJ para ser compartido, insertado y republicado. Si diriges un sitio de noticias locales, un blog comunitario o una página de defensa del tránsito, queremos que uses estas herramientas.",

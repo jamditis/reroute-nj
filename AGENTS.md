@@ -45,6 +45,7 @@ tools/generate-pages.py — Generates translated HTML from templates + JSON
 6. **CSS custom properties for theming.** Colors and spacing use `--var-name` tokens defined in `:root`. Use existing tokens; add new ones to `:root` if needed.
 7. **Mobile-first responsive.** Breakpoints at 768px and 480px. Test all changes at both sizes.
 8. **Data accuracy matters.** All transit information in `LINE_DATA` must be traceable to official NJ Transit sources.
+9. **Accessibility trumps design preference always.** WCAG 2.1 AA is the minimum bar. All color contrast must meet AA ratios (4.5:1 for normal text, 3:1 for large text). Every page must include a print stylesheet. Never sacrifice a11y for aesthetics.
 
 ## Script load order
 
@@ -100,6 +101,16 @@ Four components work together:
 4. **`widget.js`** — Script-tag embed library (auto-finds `.reroutenj-embed` elements, injects iframes)
 
 Output formats: iframe, script tag, PNG download, self-contained HTML download.
+
+## Accessibility
+
+**Accessibility is non-negotiable.** A11y compliance (WCAG 2.1 AA minimum) always takes priority over design preferences, brand aesthetics, or convenience. Never ship code that fails accessibility checks.
+
+- Color contrast must meet WCAG AA (4.5:1 for normal text, 3:1 for large text) — if brand colors don't meet this, use darkened accessible variants for text
+- Print stylesheets are required on all pages
+- Skip-to-content links, ARIA labels, roles, and live regions are mandatory
+- Minimum 44px touch targets on mobile
+- Keyboard navigation must work for all interactive controls
 
 ## Testing
 

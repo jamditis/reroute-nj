@@ -32,6 +32,13 @@
     "nav_embed": "Embed & share",
     "nav_blog": "Blog",
     "footer_disclaimer": "is an independent community tool. Not affiliated with or endorsed by NJ Transit, Amtrak, or any government agency.",
+    "footer_disclaimer_index": "Information is based on official announcements and may change. Always verify with",
+    "footer_disclaimer_index_after": "before traveling.",
+    "footer_disclaimer_coverage": "News links go to their original sources. Always verify with",
+    "footer_disclaimer_coverage_after": "before traveling.",
+    "footer_disclaimer_map": "Map data &copy; contributors of",
+    "footer_disclaimer_map_tiles": "Tiles &copy;",
+    "footer_disclaimer_embed": "View source on GitHub",
     "footer_built_by": "Built by",
     "cutover_begins_in": "Cutover begins in",
     "days": "days",
@@ -434,7 +441,8 @@
     "cross_honored": "Cross-honored",
     "transfer": "Transfer",
     "walk_subway": "Walk/subway",
-    "arrive": "Arrive"
+    "arrive": "Arrive",
+    "choose_station": "Choose your station\u2026"
   },
   "blog_post_embed": {
     "title": "New: embed Reroute NJ on your website — Reroute NJ",

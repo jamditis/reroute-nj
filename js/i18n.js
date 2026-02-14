@@ -4,6 +4,7 @@
 // via an inline <script> BEFORE this file loads.
 
 (function () {
+  "use strict";
   // Built-in English translations (canonical source: translations/en.json)
   var EN = {
     "common": {

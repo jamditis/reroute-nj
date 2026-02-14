@@ -94,6 +94,7 @@ Pages load JS in this order — dependencies must be satisfied:
 - **Mobile-first responsive** — Breakpoints at 768px and 480px. Test changes at both sizes.
 - **Data accuracy** — All transit info in `LINE_DATA` must be traceable to official NJ Transit sources.
 - **EditorConfig** — 2-space indentation, UTF-8, LF line endings, trim trailing whitespace.
+- **Accessibility trumps design preference always** — WCAG 2.1 AA is the minimum bar. All color contrast must meet AA ratios (4.5:1 normal text, 3:1 large text). Every page must include a print stylesheet. Never sacrifice a11y for aesthetics.
 
 ## Translation system
 
@@ -206,12 +207,16 @@ Four output formats: iframe embed, script tag, PNG download, self-contained HTML
 
 ## Accessibility
 
+**Accessibility is non-negotiable.** A11y compliance (WCAG 2.1 AA minimum) always takes priority over design preferences, brand aesthetics, or convenience. Never ship code that fails accessibility checks.
+
 - Skip-to-content link on every page
 - High contrast toggle (persisted via localStorage)
 - Simplified view toggle for reduced visual complexity
 - Keyboard-navigable controls with ARIA labels, roles, and live regions
 - Mobile hamburger menu with proper focus management
 - Minimum 44px touch targets on mobile
+- Color contrast must meet WCAG AA (4.5:1 for normal text, 3:1 for large text) — if brand colors don't meet this, use darkened accessible variants for text
+- Print stylesheets are required on all pages
 
 ## Testing
 
