@@ -85,7 +85,14 @@
       "line_label": "Line",
       "direction_label": "Direction",
       "search_label": "Search",
-      "last_updated": "Last updated:"
+      "last_updated": "Last updated:",
+      "showing": "Showing",
+      "of": "of",
+      "articles_count": "articles",
+      "prev": "Previous",
+      "next": "Next",
+      "page": "Page",
+      "pagination_label": "Article pagination"
     }
   };
 
