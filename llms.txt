@@ -52,6 +52,20 @@ All embed types support `&theme=dark` and `&accent=HEX` customization. The [embe
 
 Available in 11 languages: English, Spanish (Español), Chinese (中文), Tagalog, Korean (한국어), Portuguese (Português), Gujarati (ગુજરાતી), Hindi (हिंदी), Italian (Italiano), Arabic (العربية), Polish (Polski)
 
+## Sources & verification
+
+All data on this site is traceable to official sources. Last verified: February 14, 2026.
+
+- **Train counts, schedules, cross-honoring, FLEXPASS**: [NJ Transit: Portal Bridge Cutover](https://www.njtransit.com/portalcutover)
+- **Cutover details, engineering scope, Phase 2 timeline**: [NJ Transit/Amtrak joint press release](https://www.njtransit.com/press-releases/portal-north-bridge-enters-final-phase-construction-work-begins-put-first-track)
+- **Amtrak operations, bridge history**: [Amtrak: Portal North Bridge press release](https://media.amtrak.com/2026/01/portal-north-bridge-enters-final-phase-of-construction-as-work-begins-to-put-first-track-into-service/)
+- **PATH schedules and fares**: [Port Authority of NY & NJ](https://www.panynj.gov/path/en/schedules-maps.html)
+- **Ferry schedules**: [NY Waterway: Hoboken / Midtown](https://www.nywaterway.com/HobokenMidtown.aspx)
+- **NJ Transit fares**: [NJ Transit fares page](https://www.njtransit.com/fares)
+- **Gateway Program context**: [Gateway Development Commission](https://www.gatewayprogram.org/portal-north-bridge/)
+- **Service advisories**: [NJ Transit service advisory](https://www.njtransit.com/service-advisory/2036487)
+- **Structured citation database**: [data/sources.json](https://github.com/jamditis/reroute-nj/blob/main/data/sources.json) (machine-readable, 28 verified claims with source links)
+
 ## About
 
 Reroute NJ is an independent, open-source community project created by Joe Amditis at the Center for Cooperative Media at Montclair State University. It is not affiliated with or endorsed by NJ Transit, Amtrak, or any government agency. Source code: https://github.com/jamditis/reroute-nj (MIT License).

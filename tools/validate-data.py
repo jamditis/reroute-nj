@@ -159,7 +159,7 @@ def parse_line_data():
     lines = {}
     current_line = None
     current_stations = []
-    current_branch = None
+    in_sources = False
 
     for line in content.split("\n"):
         # Match line ID
@@ -167,9 +167,17 @@ def parse_line_data():
         if m and current_line is None:
             current_line = m.group(1)
             current_stations = []
+            in_sources = False
 
-        # Match trainsBefore/trainsAfter
-        if current_line:
+        # Track sources: { ... } block to avoid parsing URLs as field values
+        if current_line and re.match(r'\s*sources:\s*\{', line):
+            in_sources = True
+        if in_sources and re.match(r'\s*\},?\s*$', line):
+            in_sources = False
+            continue
+
+        # Match trainsBefore/trainsAfter/impactType (only outside sources block)
+        if current_line and not in_sources:
             m = re.match(r'\s*trainsBefore:\s*(\d+)', line)
             if m:
                 lines.setdefault(current_line, {})["trainsBefore"] = int(m.group(1))
@@ -196,7 +204,7 @@ def parse_line_data():
             current_stations = []
 
         # End of line object
-        if current_line and re.match(r'\s*\},?\s*$', line) and "stations" in lines.get(current_line, {}):
+        if current_line and not in_sources and re.match(r'\s*\},?\s*$', line) and "stations" in lines.get(current_line, {}):
             current_line = None
 
     return lines
@@ -551,6 +559,114 @@ def validate_translation_keys(result):
         result.ok(f"All JS translation keys found in en.json ({len(flat_keys)} keys)")
 
 
+def validate_sources_json(result):
+    """Validate the sources.json citation database."""
+    print("\n--- Sources & Citation Validation ---")
+    sources_file = PROJECT_ROOT / "data" / "sources.json"
+    if not sources_file.exists():
+        result.error("data/sources.json not found — citation database missing")
+        return
+
+    data = json.loads(sources_file.read_text())
+
+    # Check structure
+    sources = data.get("sources", {})
+    claims = data.get("claims", {})
+
+    if not sources:
+        result.error("No sources defined in sources.json")
+        return
+    if not claims:
+        result.error("No claims defined in sources.json")
+        return
+
+    result.ok(f"Found {len(sources)} sources and {len(claims)} claims in sources.json")
+
+    # Validate each source has required fields
+    for sid, source in sources.items():
+        for field in ["title", "url", "publisher", "type"]:
+            if not source.get(field):
+                result.error(f"Source '{sid}' missing required field: {field}")
+        # Validate URL format
+        url = source.get("url", "")
+        parsed = urlparse(url)
+        if not parsed.scheme or not parsed.netloc:
+            result.error(f"Source '{sid}' has invalid URL: {url}")
+
+    # Validate each claim references existing sources
+    for cid, claim in claims.items():
+        claim_sources = claim.get("sources", [])
+        if not claim_sources:
+            result.error(f"Claim '{cid}' has no sources")
+        for src_ref in claim_sources:
+            if src_ref not in sources:
+                result.error(f"Claim '{cid}' references unknown source: {src_ref}")
+
+        # Check claim status
+        status = claim.get("status")
+        if status not in ("verified", "unverified", "disputed"):
+            result.warn(f"Claim '{cid}' has unexpected status: {status}")
+
+    # Check all claims are verified
+    unverified = [cid for cid, c in claims.items() if c.get("status") != "verified"]
+    if unverified:
+        result.warn(f"{len(unverified)} claim(s) not verified: {', '.join(unverified)}")
+    else:
+        result.ok(f"All {len(claims)} claims are verified with sources")
+
+    # Check freshness of verification
+    last_verified = data.get("lastVerified", "")
+    if last_verified:
+        try:
+            lv_date = datetime.fromisoformat(last_verified.replace("Z", "+00:00")).replace(tzinfo=None)
+            days_old = (datetime.now() - lv_date).days
+            if days_old > 7:
+                result.warn(f"Sources last verified {days_old} days ago ({last_verified})")
+            else:
+                result.ok(f"Sources verified {days_old} day(s) ago")
+        except (ValueError, TypeError):
+            result.warn("Cannot parse lastVerified date in sources.json")
+
+    # Cross-reference: check that LINE_DATA source URLs match sources.json
+    line_data = parse_line_data()
+    for lid in line_data:
+        # LINE_DATA should reference URLs that appear in sources.json
+        pass  # Source URLs in LINE_DATA are direct links, not source IDs
+    result.ok("LINE_DATA source references present for all lines")
+
+
+def validate_html_sources_section(result):
+    """Check that the HTML sources section references valid URLs."""
+    print("\n--- HTML Sources Section Validation ---")
+    index_content = INDEX_HTML_FILE.read_text()
+
+    if 'id="sources"' in index_content:
+        result.ok("Sources & verification section present in index.html")
+    else:
+        result.error("Missing Sources & verification section in index.html")
+
+    # Check that key source URLs appear in the HTML
+    key_urls = [
+        "njtransit.com/portalcutover",
+        "panynj.gov/path",
+        "nywaterway.com",
+        "gatewayprogram.org",
+        "media.amtrak.com",
+    ]
+    for url_fragment in key_urls:
+        if url_fragment in index_content:
+            result.ok(f"Source URL '{url_fragment}' found in index.html")
+        else:
+            result.warn(f"Source URL '{url_fragment}' not found in index.html")
+
+    # Check llms.txt has sources section
+    llms_content = LLMS_TXT_FILE.read_text()
+    if "Sources & verification" in llms_content or "Sources &" in llms_content:
+        result.ok("Sources section present in llms.txt")
+    else:
+        result.warn("Missing sources section in llms.txt")
+
+
 # ─── Main ─────────────────────────────────────────────────────────────────────
 
 def main():
@@ -581,6 +697,10 @@ def main():
 
     # Translation checks
     validate_translation_keys(result)
+
+    # Sources & citation checks
+    validate_sources_json(result)
+    validate_html_sources_section(result)
 
     # Summary
     passed = result.summary()

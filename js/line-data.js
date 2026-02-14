@@ -15,6 +15,11 @@ var LINE_DATA = {
     hub: "Newark Broad St",
     summary:
       "All weekday Midtown Direct trains diverted to Hoboken. Weekend service to Penn Station NY continues.",
+    sources: {
+      trainCounts: "https://www.njtransit.com/portalcutover",
+      impactType: "https://www.njtransit.com/press-releases/portal-north-bridge-enters-final-phase-construction-work-begins-put-first-track",
+      stations: "https://www.njtransit.com/train-to?origin=Hoboken&destination=Hackettstown&line=MOBO",
+    },
     branches: {
       montclair: "Montclair branch",
       boonton: "Boonton branch",
@@ -59,6 +64,11 @@ var LINE_DATA = {
     hub: "Newark Broad St",
     summary:
       "All weekday Midtown Direct trains on the Morristown Line and Gladstone Branch diverted to Hoboken. Weekend service to Penn Station NY continues.",
+    sources: {
+      trainCounts: "https://www.njtransit.com/portalcutover",
+      impactType: "https://www.njtransit.com/press-releases/portal-north-bridge-enters-final-phase-construction-work-begins-put-first-track",
+      stations: "https://www.njtransit.com/train-to?origin=New+York&destination=Dover&line=MOBO",
+    },
     branches: {
       morristown: "Morristown Line",
       gladstone: "Gladstone Branch",
@@ -109,6 +119,11 @@ var LINE_DATA = {
     hub: "Newark Penn",
     summary:
       "Trains still run to Penn Station NY, but service is reduced from 133 to 112 daily trains due to single-track operation between Newark and Secaucus.",
+    sources: {
+      trainCounts: "https://www.njtransit.com/portalcutover",
+      impactType: "https://www.njtransit.com/press-releases/portal-north-bridge-enters-final-phase-construction-work-begins-put-first-track",
+      stations: "https://www.njtransit.com/train-to?origin=Trenton&destination=New+York&line=NEC",
+    },
     branches: {
       nec: "Northeast Corridor",
     },
@@ -143,6 +158,11 @@ var LINE_DATA = {
     hub: "Secaucus Junction",
     summary:
       "Trains still run to Penn Station NY, but reduced from 109 to 92 daily trains. Significant schedule changes. Perth Amboy/Woodbridge riders get bus cross-honoring to Port Authority.",
+    sources: {
+      trainCounts: "https://www.njtransit.com/portalcutover",
+      impactType: "https://www.njtransit.com/press-releases/portal-north-bridge-enters-final-phase-construction-work-begins-put-first-track",
+      stations: "https://www.njtransit.com/train-to?origin=Bay+Head&destination=New+York&line=NJCL",
+    },
     branches: {
       njcl: "North Jersey Coast Line",
     },
@@ -181,6 +201,11 @@ var LINE_DATA = {
     hub: "Newark Penn",
     summary:
       "All one-seat rides to Penn Station New York are suspended. All trains now originate and terminate at Newark Penn Station. Transfer to NEC at Newark Penn to reach PSNY.",
+    sources: {
+      trainCounts: "https://www.njtransit.com/portalcutover",
+      impactType: "https://www.njtransit.com/press-releases/portal-north-bridge-enters-final-phase-construction-work-begins-put-first-track",
+      stations: "https://www.njtransit.com/train-to?origin=High+Bridge&destination=Newark&line=RARV",
+    },
     branches: {
       rvl: "Raritan Valley Line",
     },
