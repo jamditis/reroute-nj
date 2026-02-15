@@ -606,8 +606,7 @@
     "tool_embed": "<strong><a href=\"../embed.html\">嵌入和分享</a></strong> &mdash; 嵌入代码和工具，供新闻机构和出版商在自己的网站上发布这些资源。",
     "h2_languages": "提供11种语言版本",
     "languages_p": "Reroute NJ的每个页面都提供英语、西班牙语、中文、塔加洛语、韩语、葡萄牙语、古吉拉特语、印地语、意大利语、阿拉伯语和波兰语版本。这些是New Jersey最常用的语言。每种语言都有自己完整的翻译页面集，包含导航、标签、描述和元数据。车站名和线路名保持英文，因为标识牌上就是这样写的。",
-    "h2_support": "支持本项目",
-    "support_p": "Reroute NJ免费且开源。如果你觉得有帮助，可以通过<a href=\"https://github.com/sponsors/jamditis\" target=\"_blank\" rel=\"noopener\">GitHub Sponsors</a>、<a href=\"https://venmo.com/jamditis\" target=\"_blank\" rel=\"noopener\">Venmo</a>支持项目，或将它分享给乘坐NJ Transit的人。",
+    "support_p": "Reroute NJ 是免费、开源且由社区支持的项目。如果你觉得有用，请分享给乘坐 NJ Transit 的人，或<a href=\"https://github.com/sponsors/jamditis\" target=\"_blank\" rel=\"noopener\">支持本项目</a>。",
     "closing_p1": "这次中断是暂时的。新的Portal North Bridge将取代一个已经造成Northeast Corridor连锁延误数十年的115年老瓶颈。四周的不便换来多年更好的服务。",
     "closing_p2": "提前规划，早点出门，在站台上对彼此多些耐心。我们会一起度过这段时期。",
     "cta": "规划你的通勤 →"

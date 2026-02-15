@@ -1471,7 +1471,6 @@ def replace_page_specific_content(html, translations, page_key):
             ("blog_post_cutover.h2_need_to_know", "What you need to know"),
             ("blog_post_cutover.h2_how_helps", "How Reroute NJ helps"),
             ("blog_post_cutover.h2_languages", "Available in 11 languages"),
-            ("blog_post_cutover.h2_support", "Support the project"),
         ]:
             translated = get_translation(translations, key)
             if translated:
@@ -1529,12 +1528,12 @@ def replace_page_specific_content(html, translations, page_key):
                 f"<p>{languages_p}</p>"
             )
 
-        # Support paragraph
+        # Support note (deemphasized)
         support_p = get_translation(translations, "blog_post_cutover.support_p")
         if support_p:
             html = html.replace(
-                '<p>Reroute NJ is free and open source. If you find it useful, you can support the project on <a href="https://github.com/sponsors/jamditis" target="_blank" rel="noopener">GitHub Sponsors</a>, <a href="https://venmo.com/jamditis" target="_blank" rel="noopener">Venmo</a>, or by sharing it with someone who rides NJ Transit.</p>',
-                f"<p>{support_p}</p>"
+                '<p class="blog-support-note" style="font-size: 0.85rem; color: var(--text-muted); margin-top: 2rem;">Reroute NJ is free, open source, and community-supported. If you find it useful, share it with someone who rides NJ Transit or <a href="https://github.com/sponsors/jamditis" target="_blank" rel="noopener">support the project</a>.</p>',
+                f'<p class="blog-support-note" style="font-size: 0.85rem; color: var(--text-muted); margin-top: 2rem;">{support_p}</p>'
             )
 
         # Closing paragraphs

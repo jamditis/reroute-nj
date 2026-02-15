@@ -21,6 +21,7 @@ map.html                  — Interactive Leaflet map
 embed.html                — Embed & share configurator
 blog.html                 — Blog index (lists posts)
 blog/                     — Blog posts (individual articles)
+  cutover-begins.html
   why-we-built-reroute-nj.html
   new-embed-system.html
 card.html                 — Info card renderer (URL params → card)
@@ -64,7 +65,7 @@ docs/plans/               — Implementation design docs (SEO, embed system)
   workflows/static.yml    — GitHub Pages deployment
   ISSUE_TEMPLATE/         — Bug report, data correction, feature request, content suggestion
   pull_request_template.md
-{lang}/                   — Generated translated pages (90 total, 9 pages × 10 languages)
+{lang}/                   — Generated translated pages (100 total, 10 pages × 10 languages)
 ```
 
 ### Script load order
@@ -138,6 +139,7 @@ These run in the `generate_page()` function pipeline. If a translation key is mi
 - **HTML markup in translations** — Translation values can contain `<strong>`, `<a>`, `<code>` tags
 - **HTML entities must match exactly** — The generator uses `str.replace()`, so `&hellip;` and `…` are different strings. Match what's in the source HTML.
 - **Blog post pages use `PAGE_KEY_MAP`** — Maps page filenames to translation key prefixes:
+  - `blog/cutover-begins.html` → `blog_post_cutover`
   - `blog/why-we-built-reroute-nj.html` → `blog_post`
   - `blog/new-embed-system.html` → `blog_post_embed`
   - Add new blog posts to both `PAGES` and `PAGE_KEY_MAP` in generate-pages.py.
@@ -148,7 +150,7 @@ These run in the `generate_page()` function pipeline. If a translation key is mi
 1. Add key to `translations/en.json`
 2. Add replacement logic in `tools/generate-pages.py` (in `replace_page_specific_content()` under the correct page's `if/elif` block)
 3. Add translated values to all 10 language files: es, zh, tl, ko, pt, gu, hi, it, ar, pl
-4. Run `python3 tools/generate-pages.py` to regenerate all 80 pages
+4. Run `python3 tools/generate-pages.py` to regenerate all 100 pages
 5. Spot-check at least 2 languages for correct output
 
 ### Adding a new blog post
@@ -300,7 +302,7 @@ The scraper does `git pull --rebase` before pushing to handle remote divergence 
 
 ## File counts
 
-- **HTML pages:** 101 total (9 English base + 2 blog posts + 90 translated)
+- **HTML pages:** 112 total (7 English base + 3 blog posts + 2 utility + 100 translated)
 - **JS files:** 10 in `js/` (~4,716 lines total)
 - **CSS:** 1 file (~3,449 lines)
 - **Translation files:** 11 JSON (~548 keys each)
