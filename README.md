@@ -25,7 +25,7 @@
 
 - **[Line guide](https://reroutenj.org/)** — Select your NJ Transit line and station to see how the cutover affects your commute, get route alternatives, and figure out what ticket to buy
 - **[Commute comparison](https://reroutenj.org/compare.html)** — Pick your station and Manhattan destination, see every route option side by side with visual time breakdowns
-- **[News coverage](https://reroutenj.org/coverage.html)** — Feed of Portal Bridge cutover coverage from local and regional news sources, filterable by source, category, line, and direction
+- **[News coverage](https://reroutenj.org/coverage.html)** — 111 articles from local and regional news sources covering the Portal Bridge cutover, with pagination, relevance sorting, and filters by source, category, line, and direction
 - **[About](https://reroutenj.org/about.html)** — Methodology, data sourcing, and verification process
 - **[Interactive map](https://reroutenj.org/map.html)** — Visualize the Portal Bridge location, affected stations, transfer hubs, and alternative routes
 - **[Embed & share](https://reroutenj.org/embed.html)** — Visual configurator with four embed formats: iframe, script tag, PNG image, and self-contained HTML download. Free for newsrooms and publishers
@@ -82,17 +82,17 @@ reroute-nj/
 │   ├── og-image.png        # Social preview image
 │   └── screenshot.png      # README screenshot
 ├── data/
-│   ├── coverage.json       # Article data for the coverage feed
+│   ├── coverage.json       # Article data for the coverage feed (111 articles)
 │   ├── sources.json        # Citation database (28 verified claims)
 │   └── source-registry.json # Source freshness tracking
 ├── translations/           # Translation JSON files
-│   ├── en.json             # English (base, ~300 keys)
+│   ├── en.json             # English (base, ~548 keys)
 │   ├── es.json             # Spanish
 │   ├── zh.json             # Chinese (Simplified)
 │   └── ...                 # + 8 more languages
 ├── tools/
 │   └── generate-pages.py   # Generates translated HTML pages from templates
-├── tests/                  # 14 test suites with 698+ automated checks
+├── tests/                  # 14 test suites with 948+ automated checks
 └── {lang}/                 # Generated translated pages (90 total, 9 pages × 10 languages)
     ├── index.html
     ├── compare.html
@@ -130,7 +130,7 @@ All nine pages are available in 11 languages, chosen based on [NJ Transit riders
 
 All page content is fully translated — navigation, section headings, body text, form labels, filter options, map labels, transfer directions, and informational cards. Station names and line names remain in English across all languages since they're proper nouns on physical signage.
 
-Translations use a hybrid approach: static HTML text is replaced at build time by `tools/generate-pages.py` (~300 translation keys per language), while interactive JS strings load at runtime through `js/i18n.js`.
+Translations use a hybrid approach: static HTML text is replaced at build time by `tools/generate-pages.py` (~548 translation keys per language), while interactive JS strings load at runtime through `js/i18n.js`. JSON-LD structured data (WebSite, FAQPage, BreadcrumbList, CollectionPage, Article) is also translated per-language with correct localized URLs.
 
 To add a new language, create `translations/{code}.json` following the structure in `translations/en.json`, then run `python3 tools/generate-pages.py`.
 
@@ -175,7 +175,7 @@ This is an independent community tool. Not affiliated with or endorsed by NJ Tra
 
 ## Testing and verification
 
-**Automated test suite:** 14 test files with 698+ checks covering data structure, transit facts, JS integrity, HTML structure, CSS accessibility, translations, SEO, and linguistic accuracy.
+**Automated test suite:** 14 test files with 948+ checks covering data structure, transit facts, JS integrity, HTML structure, CSS accessibility, translations, SEO, and linguistic accuracy.
 
 ```bash
 # Run all tests
@@ -218,7 +218,7 @@ The site is optimized for Google search, newsroom adoption, and AI search tools 
 - **`robots.txt`** — Allows all crawlers with explicit AI bot allowances (GPTBot, ClaudeBot, PerplexityBot, Google-Extended)
 - **`sitemap.xml`** — All 90 pages with `xhtml:link` hreflang cross-references for all 11 languages
 - **`llms.txt`** — Structured overview for AI search tools following the [llms.txt standard](https://llmstxt.org)
-- **JSON-LD structured data** — WebSite, FAQPage (7 questions), Article, and BreadcrumbList schemas on all pages
+- **JSON-LD structured data** — WebSite, FAQPage (7 questions), Article, BreadcrumbList, and CollectionPage schemas on all pages, translated per-language with localized URLs
 - **Canonical tags** — Self-referencing canonical on every page (English and translated)
 - **Translated meta descriptions** — Each language has its own meta description and OG tags, not English defaults
 - **Citation-ready answer blocks** — Factual intro paragraphs on every tool page for search snippets and AI extraction
@@ -231,7 +231,10 @@ The site is optimized for Google search, newsroom adoption, and AI search tools 
 - [x] Embed system v2: four output formats, visual configurator, info cards, PNG export
 - [x] Blog with proper index + slugged post architecture
 - [x] Citation system with verifiable source links on all tools
-- [x] Automated test suite (698+ checks across 14 suites)
+- [x] Automated test suite (948+ checks across 14 suites)
+- [x] Translated JSON-LD structured data across all 90 translated pages
+- [x] News coverage feed with 111 articles, pagination, and relevance sorting
+- [x] WCAG AA color contrast and heading hierarchy audit
 - [ ] Phase 2 coverage when NJ Transit announces fall 2026 service changes
 - [ ] Bus bridge and shuttle information
 - [ ] Expanded ferry and PATH connection details

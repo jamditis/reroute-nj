@@ -29,42 +29,42 @@ robots.txt                — Crawler guidance + AI bot allowances
 sitemap.xml               — All 90 pages with hreflang cross-refs
 llms.txt                  — AI search engine discoverability
 js/
-  i18n.js                 — Runtime translation loader (105 lines)
+  i18n.js                 — Runtime translation loader (128 lines)
   shared.js               — Shared globals: esc(), countdown, dates, a11y (191 lines)
   line-data.js            — LINE_DATA and LINE_ORDER globals (245 lines)
   app.js                  — Line guide logic (IIFE, 1081 lines)
   compare.js              — Comparison tool (IIFE, 722 lines)
-  coverage.js             — Coverage feed (IIFE, 240 lines)
+  coverage.js             — Coverage feed (IIFE, 380 lines)
   map.js                  — Leaflet map logic (IIFE, 427 lines)
   cards.js                — Card rendering + Canvas PNG export (IIFE, 593 lines)
   embed.js                — Embed configurator logic (IIFE, 786 lines)
   widget.js               — Standalone script-tag embed library (IIFE, 163 lines)
 css/
-  styles.css              — All styles, CSS custom properties in :root (3295 lines)
+  styles.css              — All styles, CSS custom properties in :root (3449 lines)
 img/
   favicon.svg             — SVG favicon
   og-image.png            — OpenGraph social preview image
   screenshot.png          — README screenshot
 data/
-  coverage.json           — Article metadata (18 articles, auto-updated by scraper)
+  coverage.json           — Article metadata (111 articles, auto-updated by scraper)
   sources.json            — Citation database (28 verified claims with source links)
   source-registry.json    — Source freshness tracking and verification windows
 translations/
-  en.json                 — English source strings (~300 keys)
+  en.json                 — English source strings (~548 keys)
   {lang}.json             — 10 translated language files
 tools/
-  generate-pages.py       — Static page generator for translations (1556 lines)
+  generate-pages.py       — Static page generator for translations (1788 lines)
   validate-data.py        — Data integrity and source verification checks
   validate-research-pipeline.py — Source registry schema and freshness validator
   scrape-coverage.py      — Automated article discovery (RSS + Google News, 1154 lines)
   scrape-config.json      — Scraper source URLs, feeds, Google News query, and classification keywords
-tests/                    — 14 test suites with 698+ automated checks
+tests/                    — 14 test suites with 948+ automated checks
 docs/plans/               — Implementation design docs (SEO, embed system)
 .github/
   workflows/static.yml    — GitHub Pages deployment
   ISSUE_TEMPLATE/         — Bug report, data correction, feature request, content suggestion
   pull_request_template.md
-{lang}/                   — Generated translated pages (80 total, 8 pages × 10 languages)
+{lang}/                   — Generated translated pages (90 total, 9 pages × 10 languages)
 ```
 
 ### Script load order
@@ -121,18 +121,19 @@ English (`en`), Spanish (`es`), Chinese Simplified (`zh`), Tagalog (`tl`), Korea
 
 ### SEO in the translation pipeline
 
-`generate-pages.py` handles four SEO-related replacements on every translated page:
+`generate-pages.py` handles five SEO-related replacements on every translated page:
 
 - **`replace_meta_description()`** — Swaps `<meta name="description">`, `og:description`, and `twitter:description` with translated values from `meta.{page}_description` and `meta.{page}_og_description` keys
 - **`fix_og_url()`** — Rewrites `og:url` to point to the translated page (e.g., `https://reroutenj.org/es/index.html`)
 - **`add_canonical()`** — Replaces or inserts `<link rel="canonical">` pointing to the translated page's own URL
 - **`add_hreflang_tags()`** — Adds `<link rel="alternate" hreflang="...">` tags for all 11 languages + x-default
+- **`translate_jsonld()`** — Translates JSON-LD structured data (WebSite, FAQPage, BreadcrumbList, CollectionPage, Article) using `schema.*` keys, with language-prefixed URLs
 
-These run after `replace_meta()` in the `generate_page()` function. If a translation key is missing, the English value passes through unchanged.
+These run in the `generate_page()` function pipeline. If a translation key is missing, the English value passes through unchanged.
 
 ### Key rules for translations
 
-- **Keys use dot notation** organized by page: `index.*`, `compare.*`, `coverage.*`, `map.*`, `embed.*`, `blog.*` (index), `blog_post.*` (first article), `blog_post_embed.*` (second article), `common.*`, `meta.*`
+- **Keys use dot notation** organized by page: `index.*`, `compare.*`, `coverage.*`, `map.*`, `embed.*`, `blog.*` (index), `blog_post.*` (first article), `blog_post_embed.*` (second article), `common.*`, `meta.*`, `schema.*` (JSON-LD structured data)
 - **Station names, line names, and place names stay in English** — they're proper nouns on physical signage
 - **HTML markup in translations** — Translation values can contain `<strong>`, `<a>`, `<code>` tags
 - **HTML entities must match exactly** — The generator uses `str.replace()`, so `&hellip;` and `…` are different strings. Match what's in the source HTML.
@@ -208,7 +209,7 @@ Four output formats: iframe embed, script tag, PNG download, self-contained HTML
 - **`robots.txt`** — Allows all crawlers; explicit AI bot allowances (GPTBot, ClaudeBot, PerplexityBot, Google-Extended)
 - **`sitemap.xml`** — 90 pages with `xhtml:link` hreflang cross-references for 11 languages
 - **`llms.txt`** — Structured overview for AI search tools following the [llms.txt standard](https://llmstxt.org)
-- **JSON-LD structured data** — WebSite, FAQPage, Article, and BreadcrumbList schemas
+- **JSON-LD structured data** — WebSite, FAQPage, Article, BreadcrumbList, and CollectionPage schemas, translated per-language with localized URLs
 - **Canonical tags** — Self-referencing on every page (English and translated)
 - **Translated meta descriptions** — Each language has its own meta/OG tags
 
@@ -300,9 +301,9 @@ The scraper does `git pull --rebase` before pushing to handle remote divergence 
 ## File counts
 
 - **HTML pages:** 101 total (9 English base + 2 blog posts + 90 translated)
-- **JS files:** 10 in `js/` (~4,553 lines total)
-- **CSS:** 1 file (~3,295 lines)
-- **Translation files:** 11 JSON (~457 keys each)
-- **Data files:** 3 JSON (18 articles + 28 citations + source registry)
-- **Test files:** 14 in `tests/` (698+ checks)
-- **Python scripts:** 4 in `tools/` (~3,492 lines total) + 1 JSON config
+- **JS files:** 10 in `js/` (~4,716 lines total)
+- **CSS:** 1 file (~3,449 lines)
+- **Translation files:** 11 JSON (~548 keys each)
+- **Data files:** 3 JSON (111 articles + 28 citations + source registry)
+- **Test files:** 14 in `tests/` (948+ checks)
+- **Python scripts:** 4 in `tools/` (~3,849 lines total) + 1 JSON config
