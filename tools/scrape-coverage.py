@@ -797,6 +797,11 @@ def git_commit_and_push(message):
             ["git", "commit", "-m", message],
             cwd=PROJECT_DIR, check=True, capture_output=True, timeout=30,
         )
+        # Pull with rebase before pushing to handle remote divergence
+        subprocess.run(
+            ["git", "pull", "--rebase", "origin", "main"],
+            cwd=PROJECT_DIR, check=True, capture_output=True, text=True, timeout=60,
+        )
         result = subprocess.run(
             ["git", "push", "origin", "main"],
             cwd=PROJECT_DIR, check=True, capture_output=True, text=True, timeout=60,
@@ -875,10 +880,14 @@ def check_official_sources(app, config):
 
     if changed_sources:
         names = ", ".join(s["name"] for s in changed_sources)
-        send_telegram(
-            f"Reroute NJ: official source content changed - {names}. "
-            f"Review snapshots at ~/.claude/workstation/reroute-snapshots/"
-        )
+        logging.info("Official sources changed: %s", names)
+
+        # Append to changelog for review during wake sessions
+        changelog = snapshot_dir / "changelog.log"
+        now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+        with open(changelog, "a") as f:
+            for s in changed_sources:
+                f.write(f"{now} | {s['name']} | {s['url']}\n")
 
     return changed_sources
 
@@ -1038,11 +1047,7 @@ def run_discover(app, config, dry_run=False):
     )
     git_commit_and_push(commit_msg)
 
-    # Telegram notification
-    summary_lines = [f"Reroute NJ: added {len(new_articles)} new article(s)"]
-    for a in new_articles[:5]:
-        summary_lines.append(f"- {a['source']}: {a['title'][:60]}")
-    send_telegram("\n".join(summary_lines))
+    logging.info("Added %d article(s) and pushed to remote.", len(new_articles))
 
     return len(new_articles)
 
@@ -1072,7 +1077,7 @@ def run_verify(app, dry_run=False):
     commit_msg = f"Fix metadata for {applied} coverage article(s)\n\nVerified against source pages via Firecrawl."
     git_commit_and_push(commit_msg)
 
-    send_telegram(f"Reroute NJ: corrected metadata for {applied} article(s)")
+    logging.info("Corrected metadata for %d article(s).", applied)
     return applied
 
 
