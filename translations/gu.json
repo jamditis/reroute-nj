@@ -21,7 +21,9 @@
     "blog_post_embed_description": "ન્યૂઝરૂમ અને પ્રકાશકો હવે તેમની વેબસાઇટ્સ પર સીધા Reroute NJ ટૂલ્સ એમ્બેડ કરી શકે છે. ચાર એમ્બેડ ફોર્મેટ, વિઝ્યુઅલ કૉન્ફિગ્યુરેટર અને PNG એક્સપોર્ટ — બધું મફત.",
     "blog_post_embed_og_description": "Portal Bridge કટઓવરને આવરી લેતા ન્યૂઝરૂમ માટે ચાર એમ્બેડ ફોર્મેટ, વિઝ્યુઅલ કૉન્ફિગ્યુરેટર અને PNG એક્સપોર્ટ.",
     "about_description": "અમારી પદ્ધતિ: Reroute NJ કેવી રીતે અનુવાદો બનાવે છે, ટ્રાન્ઝિટ ડેટા ચકાસે છે અને ઍક્સેસિબિલિટી ધોરણો પૂરા કરે છે.",
-    "about_og_description": "Reroute NJ કેવી રીતે અનુવાદો બનાવે છે, ટ્રાન્ઝિટ ડેટા ચકાસે છે અને ઍક્સેસિબિલિટી ધોરણો પૂરા કરે છે."
+    "about_og_description": "Reroute NJ કેવી રીતે અનુવાદો બનાવે છે, ટ્રાન્ઝિટ ડેટા ચકાસે છે અને ઍક્સેસિબિલિટી ધોરણો પૂરા કરે છે.",
+    "blog_post_cutover_description": "Portal North Bridge કટઓવર 15 ફેબ્રુઆરી, 2026 ના રોજ શરૂ થાય છે. NJ Transit મુસાફરોએ શું જાણવું જોઈએ અને આગામી ચાર અઠવાડિયા માટે Reroute NJ કેવી રીતે મદદ કરી શકે.",
+    "blog_post_cutover_og_description": "Portal North Bridge કટઓવર આજે શરૂ થાય છે. આગામી ચાર અઠવાડિયા માટે NJ Transit મુસાફરોએ શું જાણવું જોઈએ."
   },
   "common": {
     "skip_to_main": "મુખ્ય સામગ્રી પર જાઓ",
@@ -418,7 +420,10 @@
     "post2_excerpt": "ન્યૂઝરૂમ અને પ્રકાશકો હવે તેમની વેબસાઇટ્સ પર સીધા Reroute NJ ટૂલ્સ એમ્બેડ કરી શકે છે. ચાર એમ્બેડ ફોર્મેટ, વિઝ્યુઅલ કૉન્ફિગ્યુરેટર અને PNG એક્સપોર્ટ — બધું મફત.",
     "index_tagline": "Reroute NJ પ્રોજેક્ટના અપડેટ્સ અને વાર્તાઓ",
     "all_posts": "બધા લેખો",
-    "back_to_all_posts": "બધા લેખો પર પાછા જાઓ"
+    "back_to_all_posts": "બધા લેખો પર પાછા જાઓ",
+    "post3_title": "કટઓવર આજે શરૂ થાય છે",
+    "post3_date": "15 ફેબ્રુઆરી, 2026",
+    "post3_excerpt": "Portal North Bridge કટઓવર આજે શરૂ થાય છે. NJ Transit મુસાફરોએ શું જાણવું જોઈએ અને આગામી ચાર અઠવાડિયા માટે Reroute NJ કેવી રીતે મદદ કરી શકે."
   },
   "blog_post": {
     "title": "અમે Reroute NJ શા માટે બનાવ્યું — Reroute NJ",
@@ -573,6 +578,38 @@
     "article1_headline": "અમે Reroute NJ શા માટે બનાવ્યું",
     "article1_description": "NJ Transit મુસાફરોને Portal Bridge કટઓવર (15 ફેબ – 15 માર્ચ, 2026) નેવિગેટ કરવામાં મદદ કરવા માટે 11 ભાષાઓમાં પાંચ મફત ટૂલ્સ.",
     "article2_headline": "નવું: તમારી વેબસાઇટ પર Reroute NJ એમ્બેડ કરો",
-    "article2_description": "Portal Bridge કટઓવર આવરી લેતા ન્યૂઝરૂમ માટે ચાર એમ્બેડ ફોર્મેટ, વિઝ્યુઅલ કૉન્ફિગ્યુરેટર અને PNG એક્સપોર્ટ."
+    "article2_description": "Portal Bridge કટઓવર આવરી લેતા ન્યૂઝરૂમ માટે ચાર એમ્બેડ ફોર્મેટ, વિઝ્યુઅલ કૉન્ફિગ્યુરેટર અને PNG એક્સપોર્ટ.",
+    "breadcrumb_blog_post_cutover": "કટઓવર આજે શરૂ થાય છે",
+    "article3_headline": "કટઓવર આજે શરૂ થાય છે",
+    "article3_description": "Portal North Bridge કટઓવર આજે શરૂ થાય છે. આગામી ચાર અઠવાડિયા માટે NJ Transit મુસાફરોએ શું જાણવું જોઈએ.",
+    "collection_item3": "કટઓવર આજે શરૂ થાય છે"
+  },
+  "blog_post_cutover": {
+    "title": "કટઓવર આજે શરૂ થાય છે — Reroute NJ",
+    "tagline": "પ્રથમ દિવસ",
+    "heading": "કટઓવર આજે શરૂ થાય છે",
+    "by_prefix": "લેખક:",
+    "date": "15 ફેબ્રુઆરી, 2026",
+    "intro_p1": "Portal North Bridge કટઓવર થઈ રહ્યો છે. આજે 15 ફેબ્રુઆરીથી, Amtrak નવા પુલને Northeast Corridor સાથે જોડી રહ્યો છે, અને NJ Transit સેવા ચાર અઠવાડિયા માટે વિક્ષેપિત થશે. Atlantic City Rail Line સિવાય દરેક રેલ લાઇન પ્રભાવિત છે.",
+    "intro_p2": "જો તમે NJ Transit થી New York જાઓ છો, તો તમારી મુસાફરી આજથી બદલાય છે. આ લેખ તમારે શું જાણવાની જરૂર છે અને Reroute NJ તમને વિગતો સમજવામાં કેવી રીતે મદદ કરી શકે તે આવરી લે છે.",
+    "h2_need_to_know": "તમારે શું જાણવાની જરૂર છે",
+    "need_to_know_p": "કટઓવર 15 ફેબ્રુઆરીથી 15 માર્ચ, 2026 સુધી ચાલે છે. આ સમયગાળા દરમિયાન, New Jersey અને New York Penn Station વચ્ચેની NJ Transit ની લગભગ અડધી ટ્રેનો કાપવામાં આવશે. અસર તમારી લાઇન પર આધારિત છે:",
+    "ntk_hoboken": "<strong>Montclair-Boonton અને Morris &amp; Essex લાઇનો</strong> New York Penn Station ને બદલે Hoboken Terminal તરફ વાળવામાં આવે છે. Hoboken થી Manhattan પહોંચવા PATH, ફેરી અથવા બસમાં ટ્રાન્સફર કરો.",
+    "ntk_reduced": "<strong>Northeast Corridor અને North Jersey Coast Line</strong> New York Penn Station તરફ ચાલુ રહે છે પરંતુ ઓછી આવૃત્તિ સાથે. ઓછી ટ્રેનો, લાંબી રાહ.",
+    "ntk_newark": "<strong>Raritan Valley Line</strong> Penn Station માટેની બધી સીધી સવારી ગુમાવે છે. ટ્રેનો Newark Penn Station પર સમાપ્ત થાય છે. ત્યાંથી Northeast Corridor અથવા PATH માં ટ્રાન્સફર કરો.",
+    "h2_how_helps": "Reroute NJ કેવી રીતે મદદ કરે છે",
+    "how_helps_intro": "અમે આગામી ચાર અઠવાડિયાને નેવિગેટ કરવામાં મદદ કરવા પાંચ ટૂલ્સ બનાવ્યા છે:",
+    "tool_line_guide": "<strong><a href=\"../index.html\">લાઇન માર્ગદર્શિકા</a></strong> &mdash; તમારી લાઇન અને સ્ટેશન પસંદ કરો અને જુઓ કે તમારી મુસાફરી કેવી રીતે બદલાય છે, કયા વૈકલ્પિક માર્ગો ઉપલબ્ધ છે અને તમને કઈ ટિકિટ જોઈએ છે.",
+    "tool_compare": "<strong><a href=\"../compare.html\">મુસાફરી સરખામણી</a></strong> &mdash; તમારું NJ સ્ટેશન અને Manhattan ગંતવ્ય પસંદ કરો, પછી મુસાફરી સમય, ખર્ચ અને ટ્રાન્સફર વિગતો સાથે દરેક રૂટ વિકલ્પ સાથે જુઓ.",
+    "tool_coverage": "<strong><a href=\"../coverage.html\">સમાચાર કવરેજ</a></strong> &mdash; સ્થાનિક અને પ્રાદેશિક સમાચાર સ્ત્રોતોમાંથી કટઓવર વિશેના અહેવાલો, દિવસ દરમિયાન અપડેટ. સ્ત્રોત, લાઇન અથવા કેટેગરી દ્વારા ફિલ્ટર કરો.",
+    "tool_map": "<strong><a href=\"../map.html\">ઇન્ટરેક્ટિવ નકશો</a></strong> &mdash; સ્ટેશન માર્કર્સ, ટ્રાન્સફર પોઇન્ટ્સ અને Portal Bridge ના સ્થાન સાથે નકશા પર રેન્ડર કરેલી બધી પાંચ પ્રભાવિત લાઇનો.",
+    "tool_embed": "<strong><a href=\"../embed.html\">એમ્બેડ અને શેર</a></strong> &mdash; ન્યૂઝરૂમ અને પ્રકાશકો માટે એમ્બેડ કોડ્સ અને ટૂલ્સ જે આ સંસાધનોને તેમની પોતાની સાઇટ્સ પર મૂકવા માંગે છે.",
+    "h2_languages": "11 ભાષાઓમાં ઉપલબ્ધ",
+    "languages_p": "Reroute NJ ના દરેક પેજ અંગ્રેજી, સ્પેનિશ, ચાઇનીઝ, ટાગાલોગ, કોરિયન, પોર્ટુગીઝ, ગુજરાતી, હિન્દી, ઇટાલિયન, અરબી અને પોલિશમાં ઉપલબ્ધ છે. આ New Jersey માં સૌથી વધુ બોલાતી ભાષાઓ છે. દરેક ભાષામાં નેવિગેશન, લેબલ્સ, વર્ણનો અને મેટાડેટા અનુવાદિત પેજનો પોતાનો સંપૂર્ણ સેટ છે. સ્ટેશન નામો અને લાઇન નામો અંગ્રેજીમાં રહે છે કારણ કે તે સંકેતો પર શું છે.",
+    "h2_support": "પ્રોજેક્ટને સમર્થન આપો",
+    "support_p": "Reroute NJ મફત અને ઓપન સોર્સ છે. જો તમને તે ઉપયોગી લાગે, તો તમે <a href=\"https://github.com/sponsors/jamditis\" target=\"_blank\" rel=\"noopener\">GitHub Sponsors</a>, <a href=\"https://venmo.com/jamditis\" target=\"_blank\" rel=\"noopener\">Venmo</a> પર પ્રોજેક્ટને સમર્થન આપી શકો છો, અથવા NJ Transit નો ઉપયોગ કરતા કોઈને શેર કરીને.",
+    "closing_p1": "આ વિક્ષેપ કામચલાઉ છે. નવો Portal North Bridge દાયકાઓથી Northeast Corridor પર સાંકળ વિલંબનું કારણ બનેલા 115 વર્ષ જૂના અવરોધને બદલશે. વર્ષોની સારી સેવા માટે ચાર અઠવાડિયાની મુશ્કેલી.",
+    "closing_p2": "આગળ આયોજન કરો, વહેલા નીકળો, અને પ્લેટફોર્મ પર એકબીજા સાથે ધીરજ રાખો. આપણે સાથે મળીને આમાંથી પસાર થઈશું.",
+    "cta": "તમારી મુસાફરીનું આયોજન કરો →"
   }
 }

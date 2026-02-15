@@ -21,7 +21,9 @@
     "blog_post_embed_description": "Ang mga newsroom at publisher ay maaari na ngayong mag-embed ng mga tool ng Reroute NJ nang direkta sa kanilang mga website. Apat na embed format, visual configurator, at PNG export — lahat libre.",
     "blog_post_embed_og_description": "Apat na embed format, visual configurator, at PNG export para sa mga newsroom na sumasaklaw ng Portal Bridge cutover.",
     "about_description": "Paano gumagawa ang Reroute NJ ng mga pagsasalin sa 11 wika, bine-verify ang datos ng transit, at inuuna ang accessibility at katumpakan kaysa estilo.",
-    "about_og_description": "Paano kami gumagawa ng mga pagsasalin, bine-verify ang datos ng transit, at inuuna ang accessibility at katumpakan."
+    "about_og_description": "Paano kami gumagawa ng mga pagsasalin, bine-verify ang datos ng transit, at inuuna ang accessibility at katumpakan.",
+    "blog_post_cutover_description": "Ang Portal North Bridge cutover ay nagsisimula sa Pebrero 15, 2026. Narito ang kailangan malaman ng mga pasahero ng NJ Transit at kung paano makakatulong ang Reroute NJ sa susunod na apat na linggo.",
+    "blog_post_cutover_og_description": "Ang Portal North Bridge cutover ay nagsisimula ngayon. Ang kailangan malaman ng mga pasahero ng NJ Transit sa susunod na apat na linggo."
   },
   "common": {
     "skip_to_main": "Pumunta sa pangunahing nilalaman",
@@ -418,7 +420,10 @@
     "post2_excerpt": "Ang mga newsroom at publisher ay maaari na ngayong mag-embed ng mga tool ng Reroute NJ nang direkta sa kanilang mga website. Apat na embed format, visual configurator, at PNG export — lahat libre.",
     "index_tagline": "Mga update at kwento mula sa proyektong Reroute NJ",
     "all_posts": "Lahat ng post",
-    "back_to_all_posts": "Bumalik sa lahat ng post"
+    "back_to_all_posts": "Bumalik sa lahat ng post",
+    "post3_title": "Nagsimula na ang cutover ngayon",
+    "post3_date": "Pebrero 15, 2026",
+    "post3_excerpt": "Ang Portal North Bridge cutover ay nagsisimula ngayon. Narito ang kailangan malaman ng mga pasahero ng NJ Transit at kung paano makakatulong ang Reroute NJ sa susunod na apat na linggo."
   },
   "blog_post": {
     "title": "Bakit ginawa namin ang Reroute NJ — Reroute NJ",
@@ -573,6 +578,38 @@
     "article1_headline": "Bakit ginawa namin ang Reroute NJ",
     "article1_description": "Limang libreng tool sa 11 wika para tulungan ang mga pasahero ng NJ Transit na mag-navigate sa Portal Bridge cutover (Feb 15 – Mar 15, 2026).",
     "article2_headline": "Bago: i-embed ang Reroute NJ sa iyong website",
-    "article2_description": "Apat na embed format, visual configurator, at PNG export para sa mga newsroom na sumasaklaw sa Portal Bridge cutover."
+    "article2_description": "Apat na embed format, visual configurator, at PNG export para sa mga newsroom na sumasaklaw sa Portal Bridge cutover.",
+    "breadcrumb_blog_post_cutover": "Nagsimula na ang cutover ngayon",
+    "article3_headline": "Nagsimula na ang cutover ngayon",
+    "article3_description": "Ang Portal North Bridge cutover ay nagsisimula ngayon. Ang kailangan malaman ng mga pasahero ng NJ Transit sa susunod na apat na linggo.",
+    "collection_item3": "Nagsimula na ang cutover ngayon"
+  },
+  "blog_post_cutover": {
+    "title": "Nagsimula na ang cutover ngayon — Reroute NJ",
+    "tagline": "Unang araw",
+    "heading": "Nagsimula na ang cutover ngayon",
+    "by_prefix": "Ni",
+    "date": "Pebrero 15, 2026",
+    "intro_p1": "Nangyayari na ang Portal North Bridge cutover. Simula ngayon, Pebrero 15, kino-connect ng Amtrak ang bagong tulay sa Northeast Corridor, at maaantala ang serbisyo ng NJ Transit sa loob ng apat na linggo. Lahat ng linya ng riles maliban sa Atlantic City Rail Line ay apektado.",
+    "intro_p2": "Kung sumasakay ka sa NJ Transit papuntang New York, magbabago ang iyong biyahe simula ngayon. Sinasaklaw ng post na ito ang kailangan mong malaman at kung paano makakatulong ang Reroute NJ sa mga detalye.",
+    "h2_need_to_know": "Ang kailangan mong malaman",
+    "need_to_know_p": "Ang cutover ay mula Pebrero 15 hanggang Marso 15, 2026. Sa panahong ito, halos kalahati ng lahat ng tren ng NJ Transit sa pagitan ng New Jersey at New York Penn Station ay mababawasan. Ang epekto ay depende sa iyong linya:",
+    "ntk_hoboken": "<strong>Ang mga linya ng Montclair-Boonton at Morris &amp; Essex</strong> ay dina-divert sa Hoboken Terminal sa halip na New York Penn Station. Mula sa Hoboken, mag-transfer ka sa PATH, ferry, o bus para makarating sa Manhattan.",
+    "ntk_reduced": "<strong>Ang Northeast Corridor at North Jersey Coast Line</strong> ay patuloy na papunta sa New York Penn Station ngunit may nabawasang dalas. Mas kaunting tren, mas mahabang paghihintay.",
+    "ntk_newark": "<strong>Ang Raritan Valley Line</strong> ay nawalan ng lahat ng one-seat ride papuntang Penn Station. Ang mga tren ay nagtatapos sa Newark Penn Station. Mag-transfer sa Northeast Corridor o PATH mula roon.",
+    "h2_how_helps": "Paano makakatulong ang Reroute NJ",
+    "how_helps_intro": "Gumawa kami ng limang tool para tulungan kang mag-navigate sa susunod na apat na linggo:",
+    "tool_line_guide": "<strong><a href=\"../index.html\">Gabay sa linya</a></strong> &mdash; Piliin ang iyong linya at istasyon para makita kung paano eksaktong nagbabago ang iyong biyahe, anong mga alternatibong ruta ang available, at anong tiket ang kailangan mo.",
+    "tool_compare": "<strong><a href=\"../compare.html\">Paghahambing ng biyahe</a></strong> &mdash; Piliin ang iyong istasyon sa NJ at destinasyon sa Manhattan, at tingnan ang bawat opsyon ng ruta na magkatabi na may mga oras ng biyahe, gastos, at detalye ng transfer.",
+    "tool_coverage": "<strong><a href=\"../coverage.html\">Mga balita</a></strong> &mdash; Mga ulat tungkol sa cutover mula sa mga lokal at rehiyonal na pinagmulan ng balita, ina-update sa buong araw. I-filter ayon sa pinagmulan, linya, o kategorya.",
+    "tool_map": "<strong><a href=\"../map.html\">Interactive na mapa</a></strong> &mdash; Lahat ng limang apektadong linya sa mapa na may mga marker ng istasyon, transfer point, at lokasyon ng Portal Bridge.",
+    "tool_embed": "<strong><a href=\"../embed.html\">I-embed at ibahagi</a></strong> &mdash; Mga embed code at tool para sa mga newsroom at publisher na gustong ilagay ang mga resource na ito sa kanilang sariling site.",
+    "h2_languages": "Available sa 11 wika",
+    "languages_p": "Ang bawat pahina ng Reroute NJ ay available sa English, Spanish, Chinese, Tagalog, Korean, Portuguese, Gujarati, Hindi, Italian, Arabic, at Polish. Ito ang mga pinakakaraniwang sinasalitang wika sa New Jersey. Ang bawat wika ay may sariling kumpletong set ng mga isinalin na pahina na may navigation, label, paglalarawan, at metadata. Ang mga pangalan ng istasyon at linya ay nananatiling English dahil iyon ang nasa mga karatula.",
+    "h2_support": "Suportahan ang proyekto",
+    "support_p": "Ang Reroute NJ ay libre at open source. Kung nakita mong kapaki-pakinabang ito, maaari mong suportahan ang proyekto sa <a href=\"https://github.com/sponsors/jamditis\" target=\"_blank\" rel=\"noopener\">GitHub Sponsors</a>, <a href=\"https://venmo.com/jamditis\" target=\"_blank\" rel=\"noopener\">Venmo</a>, o sa pamamagitan ng pagbabahagi nito sa isang taong sumasakay sa NJ Transit.",
+    "closing_p1": "Ang pagkaantalang ito ay pansamantala. Ang bagong Portal North Bridge ay papalitan ang isang 115-taong-gulang na bottleneck na nagdudulot ng sunud-sunod na pagkaantala sa Northeast Corridor sa loob ng mga dekada. Apat na linggo ng hirap kapalit ng mga taon ng mas magandang serbisyo.",
+    "closing_p2": "Mag-plano nang maaga, umalis nang maaga, at magpasensya sa isa't isa sa mga platform. Malalampasan natin ito.",
+    "cta": "Planuhin ang iyong biyahe →"
   }
 }

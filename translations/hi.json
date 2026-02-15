@@ -21,7 +21,9 @@
     "blog_post_embed_description": "समाचार कक्ष और प्रकाशक अब अपनी वेबसाइटों पर सीधे Reroute NJ टूल एम्बेड कर सकते हैं। चार एम्बेड प्रारूप, एक विजुअल कॉन्फ़िगरेटर, और PNG निर्यात — सब मुफ्त।",
     "blog_post_embed_og_description": "समाचार कक्षों के लिए Portal Bridge कटओवर को कवर करने के लिए चार एम्बेड प्रारूप, एक विजुअल कॉन्फ़िगरेटर, और PNG निर्यात।",
     "about_description": "हमारी कार्यप्रणाली: Reroute NJ कैसे अनुवाद तैयार करता है, ट्रांजिट डेटा सत्यापित करता है और एक्सेसिबिलिटी मानकों को पूरा करता है.",
-    "about_og_description": "Reroute NJ कैसे अनुवाद तैयार करता है, ट्रांजिट डेटा सत्यापित करता है और एक्सेसिबिलिटी मानकों को पूरा करता है."
+    "about_og_description": "Reroute NJ कैसे अनुवाद तैयार करता है, ट्रांजिट डेटा सत्यापित करता है और एक्सेसिबिलिटी मानकों को पूरा करता है.",
+    "blog_post_cutover_description": "Portal North Bridge कटओवर 15 फरवरी, 2026 से शुरू हो रहा है। NJ Transit यात्रियों को क्या जानना चाहिए और अगले चार सप्ताह में Reroute NJ कैसे मदद कर सकता है।",
+    "blog_post_cutover_og_description": "Portal North Bridge कटओवर आज से शुरू हो रहा है। अगले चार सप्ताह के लिए NJ Transit यात्रियों को क्या जानना चाहिए।"
   },
   "common": {
     "skip_to_main": "मुख्य सामग्री पर जाएं",
@@ -418,7 +420,10 @@
     "post2_excerpt": "समाचार कक्ष और प्रकाशक अब अपनी वेबसाइटों पर सीधे Reroute NJ टूल एम्बेड कर सकते हैं। चार एम्बेड प्रारूप, एक विजुअल कॉन्फ़िगरेटर, और PNG निर्यात — सब मुफ्त।",
     "index_tagline": "Reroute NJ परियोजना की अपडेट और कहानियाँ",
     "all_posts": "सभी लेख",
-    "back_to_all_posts": "सभी लेखों पर वापस जाएं"
+    "back_to_all_posts": "सभी लेखों पर वापस जाएं",
+    "post3_title": "कटओवर आज से शुरू",
+    "post3_date": "15 फरवरी, 2026",
+    "post3_excerpt": "Portal North Bridge कटओवर आज से शुरू हो रहा है। NJ Transit यात्रियों को क्या जानना चाहिए और अगले चार सप्ताह में Reroute NJ कैसे मदद कर सकता है।"
   },
   "blog_post": {
     "title": "हमने Reroute NJ क्यों बनाया — Reroute NJ",
@@ -497,6 +502,34 @@
     "tryit_p2": "यदि आप अपनी साइट पर Reroute NJ एम्बेड करते हैं, तो हम इसके बारे में जानना चाहते हैं। हमें <a href=\"mailto:amditisj@montclair.edu\">amditisj@montclair.edu</a> पर एक संदेश भेजें &mdash; हम आपकी साइट को हमारे <a href=\"../coverage.html\">कवरेज पेज</a> में जोड़ेंगे।",
     "cta": "एम्बेड कॉन्फ़िगरेटर आज़माएं &rarr;"
   },
+  "blog_post_cutover": {
+    "title": "कटओवर आज से शुरू — Reroute NJ",
+    "tagline": "पहला दिन",
+    "heading": "कटओवर आज से शुरू",
+    "by_prefix": "लेखक:",
+    "date": "15 फरवरी, 2026",
+    "intro_p1": "Portal North Bridge कटओवर शुरू हो गया है। आज, 15 फरवरी से, Amtrak नए पुल को Northeast Corridor से जोड़ रहा है, और NJ Transit सेवा चार सप्ताह के लिए बाधित होगी। Atlantic City Rail Line को छोड़कर हर रेल लाइन प्रभावित है।",
+    "intro_p2": "अगर आप NJ Transit से New York जाते हैं, तो आज से आपकी यात्रा बदल जाती है। इस पोस्ट में बताया गया है कि आपको क्या जानना चाहिए और Reroute NJ विवरण समझने में कैसे मदद कर सकता है।",
+    "h2_need_to_know": "आपको क्या जानना चाहिए",
+    "need_to_know_p": "कटओवर 15 फरवरी से 15 मार्च, 2026 तक चलता है। इस दौरान, New Jersey और New York Penn Station के बीच लगभग आधी NJ Transit ट्रेनें बंद कर दी जाएंगी। प्रभाव आपकी लाइन पर निर्भर करता है:",
+    "ntk_hoboken": "<strong>Montclair-Boonton और Morris &amp; Essex लाइनें</strong> New York Penn Station के बजाय Hoboken Terminal की ओर मोड़ दी गई हैं। Hoboken से, आप Manhattan पहुंचने के लिए PATH, फेरी या बस में ट्रांसफर कर सकते हैं।",
+    "ntk_reduced": "<strong>Northeast Corridor और North Jersey Coast Line</strong> New York Penn Station जाना जारी रखती हैं लेकिन कम ट्रेनों के साथ। कम ट्रेनें, लंबा इंतज़ार।",
+    "ntk_newark": "<strong>Raritan Valley Line</strong> Penn Station तक की सभी सीधी सवारियां बंद। ट्रेनें Newark Penn Station पर समाप्त होती हैं। वहां से Northeast Corridor या PATH में ट्रांसफर करें।",
+    "h2_how_helps": "Reroute NJ कैसे मदद करता है",
+    "how_helps_intro": "हमने अगले चार सप्ताह को नेविगेट करने में आपकी मदद के लिए पांच टूल बनाए हैं:",
+    "tool_line_guide": "<strong><a href=\"../index.html\">लाइन गाइड</a></strong> &mdash; अपनी लाइन और स्टेशन चुनें और ठीक से देखें कि आपकी यात्रा कैसे बदलती है, कौन से वैकल्पिक मार्ग उपलब्ध हैं, और आपको कौन से टिकट चाहिए।",
+    "tool_compare": "<strong><a href=\"../compare.html\">यात्रा तुलना</a></strong> &mdash; अपना NJ स्टेशन और Manhattan गंतव्य चुनें, फिर यात्रा समय, लागत और ट्रांसफर विवरण के साथ हर मार्ग विकल्प को साथ-साथ देखें।",
+    "tool_coverage": "<strong><a href=\"../coverage.html\">समाचार कवरेज</a></strong> &mdash; स्थानीय और क्षेत्रीय समाचार स्रोतों से कटओवर की रिपोर्ट, पूरे दिन अपडेट होती रहती है। स्रोत, लाइन या श्रेणी के अनुसार फ़िल्टर करें।",
+    "tool_map": "<strong><a href=\"../map.html\">इंटरैक्टिव मानचित्र</a></strong> &mdash; स्टेशन मार्करों, ट्रांसफर पॉइंट और Portal Bridge स्थान के साथ मानचित्र पर सभी पांच प्रभावित लाइनें।",
+    "tool_embed": "<strong><a href=\"../embed.html\">एम्बेड और शेयर</a></strong> &mdash; न्यूज़रूम और प्रकाशकों के लिए एम्बेड कोड और टूल जो ये संसाधन अपनी साइटों पर रखना चाहते हैं।",
+    "h2_languages": "11 भाषाओं में उपलब्ध",
+    "languages_p": "Reroute NJ पर हर पेज अंग्रेजी, स्पेनिश, चीनी, तागालोग, कोरियाई, पुर्तगाली, गुजराती, हिंदी, इतालवी, अरबी और पोलिश में उपलब्ध है। ये New Jersey में सबसे ज़्यादा बोली जाने वाली भाषाएं हैं। प्रत्येक भाषा के पास अनुवादित पृष्ठों का अपना पूरा सेट है जिसमें नेविगेशन, लेबल, विवरण और मेटाडेटा शामिल है। स्टेशन और लाइन के नाम अंग्रेजी में रहते हैं क्योंकि यही संकेतों पर है।",
+    "h2_support": "प्रोजेक्ट का समर्थन करें",
+    "support_p": "Reroute NJ मुफ्त और ओपन सोर्स है। अगर आपको यह उपयोगी लगता है, तो आप <a href=\"https://github.com/sponsors/jamditis\" target=\"_blank\" rel=\"noopener\">GitHub Sponsors</a>, <a href=\"https://venmo.com/jamditis\" target=\"_blank\" rel=\"noopener\">Venmo</a> पर या इसे किसी NJ Transit यात्री के साथ शेयर करके प्रोजेक्ट का समर्थन कर सकते हैं।",
+    "closing_p1": "यह बाधा अस्थायी है। नया Portal North Bridge उस 115 वर्ष पुराने अवरोध की जगह लेगा जो दशकों से Northeast Corridor पर व्यापक देरी का कारण बना रहा है। बेहतर सेवा के वर्षों के लिए चार सप्ताह की तकलीफ।",
+    "closing_p2": "पहले से योजना बनाएं, जल्दी निकलें, और प्लेटफार्मों पर एक-दूसरे के साथ धैर्य रखें। हम इससे गुज़र जाएंगे।",
+    "cta": "अपनी यात्रा की योजना बनाएं →"
+  },
   "about": {
     "tagline": "हमारी कार्यप्रणाली",
     "hamburger_label": "हमारे बारे में",
@@ -573,6 +606,10 @@
     "article1_headline": "हमने Reroute NJ क्यों बनाया",
     "article1_description": "NJ Transit यात्रियों को Portal Bridge कटओवर (Feb 15 – Mar 15, 2026) से निपटने में मदद करने के लिए 11 भाषाओं में पांच मुफ्त टूल।",
     "article2_headline": "नया: अपनी वेबसाइट पर Reroute NJ एम्बेड करें",
-    "article2_description": "Portal Bridge कटओवर को कवर करने वाले समाचार कक्षों के लिए चार एम्बेड प्रारूप, एक विजुअल कॉन्फ़िगरेटर, और PNG निर्यात।"
+    "article2_description": "Portal Bridge कटओवर को कवर करने वाले समाचार कक्षों के लिए चार एम्बेड प्रारूप, एक विजुअल कॉन्फ़िगरेटर, और PNG निर्यात।",
+    "breadcrumb_blog_post_cutover": "कटओवर आज से शुरू",
+    "article3_headline": "कटओवर आज से शुरू",
+    "article3_description": "Portal North Bridge कटओवर आज से शुरू हो रहा है। अगले चार सप्ताह के लिए NJ Transit यात्रियों को क्या जानना चाहिए।",
+    "collection_item3": "कटओवर आज से शुरू"
   }
 }

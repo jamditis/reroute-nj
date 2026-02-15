@@ -21,7 +21,9 @@
     "blog_post_embed_description": "يمكن لغرف الأخبار والناشرين الآن تضمين أدوات Reroute NJ مباشرة في مواقعهم الإلكترونية. أربعة تنسيقات تضمين، ومُكوِّن مرئي، وتصدير PNG — كلها مجانية.",
     "blog_post_embed_og_description": "أربعة تنسيقات تضمين، ومُكوِّن مرئي، وتصدير PNG لغرف الأخبار التي تغطي تحويل Portal Bridge.",
     "about_description": "منهجيتنا: كيف يُنتج Reroute NJ الترجمات ويتحقق من بيانات النقل ويلتزم بمعايير إمكانية الوصول.",
-    "about_og_description": "كيف يُنتج Reroute NJ الترجمات ويتحقق من بيانات النقل ويلتزم بمعايير إمكانية الوصول."
+    "about_og_description": "كيف يُنتج Reroute NJ الترجمات ويتحقق من بيانات النقل ويلتزم بمعايير إمكانية الوصول.",
+    "blog_post_cutover_description": "يبدأ تحويل Portal North Bridge في 15 فبراير 2026. إليك ما يحتاج ركاب NJ Transit معرفته وكيف يمكن لـ Reroute NJ المساعدة خلال الأسابيع الأربعة القادمة.",
+    "blog_post_cutover_og_description": "يبدأ تحويل Portal North Bridge اليوم. ما يحتاج ركاب NJ Transit معرفته خلال الأسابيع الأربعة القادمة."
   },
   "common": {
     "skip_to_main": "انتقل إلى المحتوى الرئيسي",
@@ -418,7 +420,10 @@
     "post2_excerpt": "يمكن لغرف الأخبار والناشرين الآن تضمين أدوات Reroute NJ مباشرة في مواقعهم الإلكترونية. أربعة تنسيقات تضمين، ومُكوِّن مرئي، وتصدير PNG — كلها مجانية.",
     "index_tagline": "تحديثات وقصص من مشروع Reroute NJ",
     "all_posts": "جميع المقالات",
-    "back_to_all_posts": "العودة إلى جميع المقالات"
+    "back_to_all_posts": "العودة إلى جميع المقالات",
+    "post3_title": "التحويل يبدأ اليوم",
+    "post3_date": "15 فبراير 2026",
+    "post3_excerpt": "يبدأ تحويل Portal North Bridge اليوم. ما يحتاج ركاب NJ Transit معرفته وكيف يمكن لـ Reroute NJ المساعدة خلال الأسابيع الأربعة القادمة."
   },
   "blog_post": {
     "title": "لماذا أنشأنا Reroute NJ — Reroute NJ",
@@ -497,6 +502,34 @@
     "tryit_p2": "إذا قمت بتضمين Reroute NJ في موقعك، نود أن نعرف عن ذلك. راسلنا على <a href=\"mailto:amditisj@montclair.edu\">amditisj@montclair.edu</a> &mdash; سنضيف موقعك إلى <a href=\"../coverage.html\">صفحة التغطية</a> الخاصة بنا.",
     "cta": "جرّب مُكوِّن التضمين &rarr;"
   },
+  "blog_post_cutover": {
+    "title": "التحويل يبدأ اليوم — Reroute NJ",
+    "tagline": "اليوم الأول",
+    "heading": "التحويل يبدأ اليوم",
+    "by_prefix": "بقلم",
+    "date": "15 فبراير 2026",
+    "intro_p1": "بدأ تحويل Portal North Bridge. اعتباراً من اليوم، 15 فبراير، تقوم Amtrak بربط الجسر الجديد بـ Northeast Corridor، وستتعطل خدمة NJ Transit لمدة أربعة أسابيع. كل خطوط السكك الحديدية متأثرة باستثناء Atlantic City Rail Line.",
+    "intro_p2": "إذا كنت تستقل NJ Transit إلى New York، فرحلتك تتغير اعتباراً من اليوم. يغطي هذا المقال ما تحتاج معرفته وكيف يمكن لـ Reroute NJ مساعدتك في فهم التفاصيل.",
+    "h2_need_to_know": "ما تحتاج معرفته",
+    "need_to_know_p": "يمتد التحويل من 15 فبراير إلى 15 مارس 2026. خلال هذه الفترة، سيتم قطع حوالي نصف جميع قطارات NJ Transit بين New Jersey و New York Penn Station. يعتمد التأثير على خطك:",
+    "ntk_hoboken": "<strong>خطوط Montclair-Boonton و Morris &amp; Essex</strong> محوّلة إلى Hoboken Terminal بدلاً من New York Penn Station. من Hoboken، يمكنك الانتقال إلى PATH أو العبّارة أو الباص للوصول إلى Manhattan.",
+    "ntk_reduced": "<strong>Northeast Corridor و North Jersey Coast Line</strong> يستمران إلى New York Penn Station لكن بتكرار أقل. قطارات أقل، انتظار أطول.",
+    "ntk_newark": "<strong>Raritan Valley Line</strong> تفقد جميع الرحلات المباشرة إلى Penn Station. القطارات تنتهي في Newark Penn Station. انتقل إلى Northeast Corridor أو PATH من هناك.",
+    "h2_how_helps": "كيف يساعد Reroute NJ",
+    "how_helps_intro": "أنشأنا خمسة أدوات لمساعدتك على التنقل خلال الأسابيع الأربعة القادمة:",
+    "tool_line_guide": "<strong><a href=\"../index.html\">دليل الخطوط</a></strong> &mdash; اختر خطك ومحطتك لترى بالضبط كيف تتغير رحلتك، وما هي المسارات البديلة المتاحة، وما هي التذاكر التي تحتاجها.",
+    "tool_compare": "<strong><a href=\"../compare.html\">مقارنة الرحلات</a></strong> &mdash; اختر محطتك في NJ ووجهتك في Manhattan، ثم شاهد كل خيار مسار جنباً إلى جنب مع أوقات السفر والتكاليف وتفاصيل الانتقال.",
+    "tool_coverage": "<strong><a href=\"../coverage.html\">تغطية إخبارية</a></strong> &mdash; تقارير عن التحويل من مصادر إخبارية محلية وإقليمية، تُحدَّث طوال اليوم. صنّف حسب المصدر أو الخط أو الفئة.",
+    "tool_map": "<strong><a href=\"../map.html\">خريطة تفاعلية</a></strong> &mdash; جميع الخطوط الخمسة المتأثرة على الخريطة مع علامات المحطات ونقاط الانتقال وموقع Portal Bridge.",
+    "tool_embed": "<strong><a href=\"../embed.html\">التضمين والمشاركة</a></strong> &mdash; أكواد تضمين وأدوات لغرف الأخبار والناشرين الذين يريدون وضع هذه الموارد على مواقعهم.",
+    "h2_languages": "متاح بـ 11 لغة",
+    "languages_p": "كل صفحة في Reroute NJ متاحة بالإنجليزية والإسبانية والصينية والتاغالوغية والكورية والبرتغالية والغوجاراتية والهندية والإيطالية والعربية والبولندية. هذه هي اللغات الأكثر تحدثاً في New Jersey. كل لغة لها مجموعتها الكاملة من الصفحات المترجمة مع التنقل والتسميات والأوصاف والبيانات الوصفية. أسماء المحطات والخطوط تبقى بالإنجليزية لأن هذا ما هو مكتوب على اللافتات.",
+    "h2_support": "ادعم المشروع",
+    "support_p": "Reroute NJ مجاني ومفتوح المصدر. إذا وجدته مفيداً، يمكنك دعم المشروع عبر <a href=\"https://github.com/sponsors/jamditis\" target=\"_blank\" rel=\"noopener\">GitHub Sponsors</a> أو <a href=\"https://venmo.com/jamditis\" target=\"_blank\" rel=\"noopener\">Venmo</a> أو بمشاركته مع شخص يستقل NJ Transit.",
+    "closing_p1": "هذا التعطيل مؤقت. سيحل Portal North Bridge الجديد محل عنق الزجاجة البالغ عمره 115 عاماً الذي تسبب في تأخيرات متتالية على Northeast Corridor لعقود. أربعة أسابيع من الصعوبة مقابل سنوات من خدمة أفضل.",
+    "closing_p2": "خطط مسبقاً، اخرج مبكراً، وكن صبوراً مع الآخرين على الأرصفة. سنتجاوز هذا.",
+    "cta": "خطط لرحلتك ←"
+  },
   "about": {
     "tagline": "منهجيتنا",
     "hamburger_label": "حول",
@@ -573,6 +606,10 @@
     "article1_headline": "لماذا أنشأنا Reroute NJ",
     "article1_description": "خمسة أدوات مجانية بـ 11 لغة لمساعدة ركاب NJ Transit على التعامل مع تحويل Portal Bridge (Feb 15 – Mar 15, 2026).",
     "article2_headline": "جديد: ضمّن Reroute NJ في موقعك الإلكتروني",
-    "article2_description": "أربعة تنسيقات تضمين، ومُكوِّن مرئي، وتصدير PNG لغرف الأخبار التي تغطي تحويل Portal Bridge."
+    "article2_description": "أربعة تنسيقات تضمين، ومُكوِّن مرئي، وتصدير PNG لغرف الأخبار التي تغطي تحويل Portal Bridge.",
+    "breadcrumb_blog_post_cutover": "التحويل يبدأ اليوم",
+    "article3_headline": "التحويل يبدأ اليوم",
+    "article3_description": "يبدأ تحويل Portal North Bridge اليوم. ما يحتاج ركاب NJ Transit معرفته خلال الأسابيع الأربعة القادمة.",
+    "collection_item3": "التحويل يبدأ اليوم"
   }
 }

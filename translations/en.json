@@ -21,7 +21,9 @@
     "blog_post_embed_description": "Newsrooms and publishers can now embed Reroute NJ tools directly on their websites. Four embed formats, a visual configurator, and PNG export — all free.",
     "blog_post_embed_og_description": "Four embed formats, a visual configurator, and PNG export for newsrooms covering the Portal Bridge cutover.",
     "about_description": "How Reroute NJ produces translations in 11 languages, verifies transit data, and prioritizes accessibility and accuracy over style.",
-    "about_og_description": "How we produce translations, verify transit data, and prioritize accessibility and accuracy."
+    "about_og_description": "How we produce translations, verify transit data, and prioritize accessibility and accuracy.",
+    "blog_post_cutover_description": "The Portal North Bridge cutover starts February 15, 2026. Here's what NJ Transit riders need to know and how Reroute NJ can help for the next four weeks.",
+    "blog_post_cutover_og_description": "The Portal North Bridge cutover starts today. What NJ Transit riders need to know for the next four weeks."
   },
   "common": {
     "skip_to_main": "Skip to main content",
@@ -346,7 +348,10 @@
     "back_to_all_posts": "Back to all posts",
     "post2_title": "New: embed Reroute NJ on your website",
     "post2_date": "February 13, 2026",
-    "post2_excerpt": "Newsrooms and publishers can now embed Reroute NJ tools directly on their websites. Four embed formats, a visual configurator, and PNG export — all free."
+    "post2_excerpt": "Newsrooms and publishers can now embed Reroute NJ tools directly on their websites. Four embed formats, a visual configurator, and PNG export — all free.",
+    "post3_title": "The cutover starts today",
+    "post3_date": "February 15, 2026",
+    "post3_excerpt": "The Portal North Bridge cutover starts today. Here's what NJ Transit riders need to know and how Reroute NJ can help for the next four weeks."
   },
   "blog_post": {
     "title": "Why we built Reroute NJ — Reroute NJ",
@@ -459,7 +464,7 @@
     "transfer": "Transfer",
     "walk_subway": "Walk/subway",
     "arrive": "Arrive",
-    "choose_station": "Choose your station\u2026"
+    "choose_station": "Choose your station…"
   },
   "blog_post_embed": {
     "title": "New: embed Reroute NJ on your website — Reroute NJ",
@@ -573,6 +578,38 @@
     "article1_headline": "Why we built Reroute NJ",
     "article1_description": "Five free tools in 11 languages to help NJ Transit riders navigate the Portal Bridge cutover (Feb 15 – Mar 15, 2026).",
     "article2_headline": "New: embed Reroute NJ on your website",
-    "article2_description": "Four embed formats, a visual configurator, and PNG export for newsrooms covering the Portal Bridge cutover."
+    "article2_description": "Four embed formats, a visual configurator, and PNG export for newsrooms covering the Portal Bridge cutover.",
+    "breadcrumb_blog_post_cutover": "The cutover starts today",
+    "article3_headline": "The cutover starts today",
+    "article3_description": "The Portal North Bridge cutover starts today. What NJ Transit riders need to know for the next four weeks.",
+    "collection_item3": "The cutover starts today"
+  },
+  "blog_post_cutover": {
+    "title": "The cutover starts today — Reroute NJ",
+    "tagline": "Day one",
+    "heading": "The cutover starts today",
+    "by_prefix": "By",
+    "date": "February 15, 2026",
+    "intro_p1": "The Portal North Bridge cutover is happening. Starting today, February 15, Amtrak is connecting the new bridge to the Northeast Corridor, and NJ Transit service will be disrupted for four weeks. Every rail line except the Atlantic City Rail Line is affected.",
+    "intro_p2": "If you ride NJ Transit into New York, your commute changes today. This post covers what you need to know and how Reroute NJ can help you figure out the specifics.",
+    "h2_need_to_know": "What you need to know",
+    "need_to_know_p": "The cutover runs from February 15 through March 15, 2026. During this period, roughly half of all NJ Transit trains between New Jersey and New York Penn Station will be cut. The impact depends on your line:",
+    "ntk_hoboken": "<strong>Montclair-Boonton and Morris &amp; Essex lines</strong> are diverted to Hoboken Terminal instead of New York Penn Station. From Hoboken, you transfer to PATH, ferry, or bus to reach Manhattan.",
+    "ntk_reduced": "<strong>Northeast Corridor and North Jersey Coast Line</strong> continue to New York Penn Station but with reduced frequency. Fewer trains, longer waits.",
+    "ntk_newark": "<strong>Raritan Valley Line</strong> loses all one-seat rides to Penn Station. Trains terminate at Newark Penn Station. Transfer to Northeast Corridor or PATH from there.",
+    "h2_how_helps": "How Reroute NJ helps",
+    "how_helps_intro": "We built five tools to help you navigate the next four weeks:",
+    "tool_line_guide": "<strong><a href=\"../index.html\">Line guide</a></strong> &mdash; Select your line and station to see exactly how your commute changes, what alternative routes are available, and what tickets you need.",
+    "tool_compare": "<strong><a href=\"../compare.html\">Commute comparison</a></strong> &mdash; Pick your NJ station and your Manhattan destination, then see every route option side by side with travel times, costs, and transfer details.",
+    "tool_coverage": "<strong><a href=\"../coverage.html\">News coverage</a></strong> &mdash; Reporting about the cutover from local and regional news sources, updated throughout the day. Filter by source, line, or category.",
+    "tool_map": "<strong><a href=\"../map.html\">Interactive map</a></strong> &mdash; All five affected lines rendered on a map with station markers, transfer points, and the Portal Bridge location.",
+    "tool_embed": "<strong><a href=\"../embed.html\">Embed and share</a></strong> &mdash; Embed codes and tools for newsrooms and publishers who want to put these resources on their own sites.",
+    "h2_languages": "Available in 11 languages",
+    "languages_p": "Every page on Reroute NJ is available in English, Spanish, Chinese, Tagalog, Korean, Portuguese, Gujarati, Hindi, Italian, Arabic, and Polish. These are the most commonly spoken languages in New Jersey. Each language has its own complete set of translated pages with navigation, labels, descriptions, and metadata. Station names and line names stay in English because that's what's on the signs.",
+    "h2_support": "Support the project",
+    "support_p": "Reroute NJ is free and open source. If you find it useful, you can support the project on <a href=\"https://github.com/sponsors/jamditis\" target=\"_blank\" rel=\"noopener\">GitHub Sponsors</a>, <a href=\"https://venmo.com/jamditis\" target=\"_blank\" rel=\"noopener\">Venmo</a>, or by sharing it with someone who rides NJ Transit.",
+    "closing_p1": "This disruption is temporary. The new Portal North Bridge will replace a 115-year-old bottleneck that has caused cascading delays across the Northeast Corridor for decades. Four weeks of pain for years of better service.",
+    "closing_p2": "Plan ahead, leave early, and be patient with each other on the platforms. We'll get through it.",
+    "cta": "Plan your commute →"
   }
 }

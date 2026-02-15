@@ -21,7 +21,9 @@
     "blog_post_embed_description": "新闻编辑室和发布者现在可以直接在他们的网站上嵌入 Reroute NJ 工具。四种嵌入格式、一个可视化配置器和 PNG 导出 — 全部免费。",
     "blog_post_embed_og_description": "为报道 Portal Bridge 切换的新闻编辑室提供四种嵌入格式、一个可视化配置器和 PNG 导出。",
     "about_description": "Reroute NJ 如何制作11种语言的翻译、验证交通数据，以及为什么我们将无障碍性和准确性放在风格之上。",
-    "about_og_description": "我们如何制作翻译、验证交通数据，以及为什么我们优先考虑无障碍性和准确性。"
+    "about_og_description": "我们如何制作翻译、验证交通数据，以及为什么我们优先考虑无障碍性和准确性。",
+    "blog_post_cutover_description": "Portal North Bridge转换于2026年2月15日开始。以下是NJ Transit乘客需要了解的信息，以及Reroute NJ在未来四周内如何提供帮助。",
+    "blog_post_cutover_og_description": "Portal North Bridge转换从今天开始。NJ Transit乘客在未来四周需要了解的信息。"
   },
   "common": {
     "skip_to_main": "跳到主要内容",
@@ -418,7 +420,10 @@
     "post2_excerpt": "新闻编辑室和发布者现在可以直接在他们的网站上嵌入 Reroute NJ 工具。四种嵌入格式、一个可视化配置器和 PNG 导出 — 全部免费。",
     "index_tagline": "Reroute NJ项目的最新动态和故事",
     "all_posts": "所有文章",
-    "back_to_all_posts": "返回所有文章"
+    "back_to_all_posts": "返回所有文章",
+    "post3_title": "转换从今天开始",
+    "post3_date": "2026年2月15日",
+    "post3_excerpt": "Portal North Bridge转换从今天开始。以下是NJ Transit乘客需要了解的信息，以及Reroute NJ在未来四周内如何提供帮助。"
   },
   "blog_post": {
     "title": "我们为什么创建Reroute NJ — Reroute NJ",
@@ -573,6 +578,38 @@
     "article1_headline": "我们为什么创建Reroute NJ",
     "article1_description": "11种语言的5款免费工具，帮助NJ Transit乘客应对Portal Bridge切换（Feb 15 – Mar 15, 2026）。",
     "article2_headline": "新功能：在您的网站上嵌入Reroute NJ",
-    "article2_description": "四种嵌入格式、一个可视化配置器和PNG导出，为报道Portal Bridge切换的新闻编辑室提供。"
+    "article2_description": "四种嵌入格式、一个可视化配置器和PNG导出，为报道Portal Bridge切换的新闻编辑室提供。",
+    "breadcrumb_blog_post_cutover": "转换从今天开始",
+    "article3_headline": "转换从今天开始",
+    "article3_description": "Portal North Bridge转换从今天开始。NJ Transit乘客在未来四周需要了解的信息。",
+    "collection_item3": "转换从今天开始"
+  },
+  "blog_post_cutover": {
+    "title": "转换从今天开始 — Reroute NJ",
+    "tagline": "第一天",
+    "heading": "转换从今天开始",
+    "by_prefix": "作者",
+    "date": "2026年2月15日",
+    "intro_p1": "Portal North Bridge转换正在进行。从今天（2月15日）起，Amtrak正在将新桥连接到Northeast Corridor，NJ Transit服务将中断四周。除Atlantic City Rail Line外的所有铁路线都受到影响。",
+    "intro_p2": "如果你乘坐NJ Transit前往New York，你的通勤从今天起发生变化。本文介绍你需要了解的信息，以及Reroute NJ如何帮助你弄清具体情况。",
+    "h2_need_to_know": "你需要了解的信息",
+    "need_to_know_p": "转换从2026年2月15日持续到3月15日。在此期间，NJ Transit在New Jersey和New York Penn Station之间的列车约有一半被削减。影响程度取决于你的线路：",
+    "ntk_hoboken": "<strong>Montclair-Boonton和Morris &amp; Essex线路</strong>改道至Hoboken Terminal，不再前往New York Penn Station。从Hoboken换乘PATH、渡轮或公交到达Manhattan。",
+    "ntk_reduced": "<strong>Northeast Corridor和North Jersey Coast Line</strong>继续前往New York Penn Station，但班次减少。列车更少，等待更久。",
+    "ntk_newark": "<strong>Raritan Valley Line</strong>所有直达Penn Station的列车均已取消。列车终点站为Newark Penn Station。从那里换乘Northeast Corridor或PATH。",
+    "h2_how_helps": "Reroute NJ如何帮助你",
+    "how_helps_intro": "我们创建了五个工具来帮助你应对未来四周：",
+    "tool_line_guide": "<strong><a href=\"../index.html\">线路指南</a></strong> &mdash; 选择你的线路和车站，查看通勤的具体变化、可用的替代路线以及需要购买的车票。",
+    "tool_compare": "<strong><a href=\"../compare.html\">通勤比较</a></strong> &mdash; 选择你在NJ的车站和Manhattan目的地，并排查看所有路线选项，包含出行时间、费用和换乘详情。",
+    "tool_coverage": "<strong><a href=\"../coverage.html\">新闻报道</a></strong> &mdash; 来自本地和区域新闻来源的转换相关报道，全天更新。按来源、线路或类别筛选。",
+    "tool_map": "<strong><a href=\"../map.html\">互动地图</a></strong> &mdash; 五条受影响线路在地图上呈现，带有车站标记、换乘点和Portal Bridge位置。",
+    "tool_embed": "<strong><a href=\"../embed.html\">嵌入和分享</a></strong> &mdash; 嵌入代码和工具，供新闻机构和出版商在自己的网站上发布这些资源。",
+    "h2_languages": "提供11种语言版本",
+    "languages_p": "Reroute NJ的每个页面都提供英语、西班牙语、中文、塔加洛语、韩语、葡萄牙语、古吉拉特语、印地语、意大利语、阿拉伯语和波兰语版本。这些是New Jersey最常用的语言。每种语言都有自己完整的翻译页面集，包含导航、标签、描述和元数据。车站名和线路名保持英文，因为标识牌上就是这样写的。",
+    "h2_support": "支持本项目",
+    "support_p": "Reroute NJ免费且开源。如果你觉得有帮助，可以通过<a href=\"https://github.com/sponsors/jamditis\" target=\"_blank\" rel=\"noopener\">GitHub Sponsors</a>、<a href=\"https://venmo.com/jamditis\" target=\"_blank\" rel=\"noopener\">Venmo</a>支持项目，或将它分享给乘坐NJ Transit的人。",
+    "closing_p1": "这次中断是暂时的。新的Portal North Bridge将取代一个已经造成Northeast Corridor连锁延误数十年的115年老瓶颈。四周的不便换来多年更好的服务。",
+    "closing_p2": "提前规划，早点出门，在站台上对彼此多些耐心。我们会一起度过这段时期。",
+    "cta": "规划你的通勤 →"
   }
 }

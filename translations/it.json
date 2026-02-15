@@ -21,7 +21,9 @@
     "blog_post_embed_description": "Redazioni ed editori possono ora incorporare gli strumenti di Reroute NJ direttamente sui loro siti web. Quattro formati di incorporamento, un configuratore visivo e l'esportazione PNG — tutto gratuito.",
     "blog_post_embed_og_description": "Quattro formati di incorporamento, un configuratore visivo e l'esportazione PNG per redazioni che coprono il passaggio del Portal Bridge.",
     "about_description": "La nostra metodologia: come Reroute NJ produce le traduzioni, verifica i dati del trasporto e soddisfa gli standard di accessibilità.",
-    "about_og_description": "Come Reroute NJ produce le traduzioni, verifica i dati del trasporto e soddisfa gli standard di accessibilità."
+    "about_og_description": "Come Reroute NJ produce le traduzioni, verifica i dati del trasporto e soddisfa gli standard di accessibilità.",
+    "blog_post_cutover_description": "Il passaggio del Portal North Bridge inizia il 15 febbraio 2026. Ecco cosa devono sapere i passeggeri NJ Transit e come Reroute NJ può aiutare nelle prossime quattro settimane.",
+    "blog_post_cutover_og_description": "Il passaggio del Portal North Bridge inizia oggi. Cosa devono sapere i passeggeri NJ Transit per le prossime quattro settimane."
   },
   "common": {
     "skip_to_main": "Vai al contenuto principale",
@@ -418,7 +420,10 @@
     "post2_excerpt": "Redazioni ed editori possono ora incorporare gli strumenti di Reroute NJ direttamente sui loro siti web. Quattro formati di incorporamento, un configuratore visivo e l'esportazione PNG — tutto gratuito.",
     "index_tagline": "Aggiornamenti e storie dal progetto Reroute NJ",
     "all_posts": "Tutti gli articoli",
-    "back_to_all_posts": "Torna a tutti gli articoli"
+    "back_to_all_posts": "Torna a tutti gli articoli",
+    "post3_title": "Il passaggio inizia oggi",
+    "post3_date": "15 febbraio 2026",
+    "post3_excerpt": "Il passaggio del Portal North Bridge inizia oggi. Cosa devono sapere i passeggeri NJ Transit e come Reroute NJ può aiutare nelle prossime quattro settimane."
   },
   "blog_post": {
     "title": "Perché abbiamo creato Reroute NJ — Reroute NJ",
@@ -497,6 +502,34 @@
     "tryit_p2": "Se incorpori Reroute NJ sul tuo sito, vorremmo saperlo. Scrivici a <a href=\"mailto:amditisj@montclair.edu\">amditisj@montclair.edu</a> &mdash; aggiungeremo il tuo sito alla nostra <a href=\"../coverage.html\">pagina di copertura</a>.",
     "cta": "Prova il configuratore di incorporamento &rarr;"
   },
+  "blog_post_cutover": {
+    "title": "Il passaggio inizia oggi — Reroute NJ",
+    "tagline": "Primo giorno",
+    "heading": "Il passaggio inizia oggi",
+    "by_prefix": "Di",
+    "date": "15 febbraio 2026",
+    "intro_p1": "Il passaggio del Portal North Bridge è in corso. Da oggi, 15 febbraio, Amtrak sta collegando il nuovo ponte al Northeast Corridor, e il servizio NJ Transit sarà interrotto per quattro settimane. Ogni linea ferroviaria è interessata, tranne l'Atlantic City Rail Line.",
+    "intro_p2": "Se viaggi con NJ Transit verso New York, il tuo tragitto cambia da oggi. Questo articolo spiega cosa devi sapere e come Reroute NJ può aiutarti a capire i dettagli.",
+    "h2_need_to_know": "Cosa devi sapere",
+    "need_to_know_p": "Il passaggio va dal 15 febbraio al 15 marzo 2026. In questo periodo, circa la metà di tutti i treni NJ Transit tra New Jersey e New York Penn Station verrà tagliata. L'impatto dipende dalla tua linea:",
+    "ntk_hoboken": "<strong>Le linee Montclair-Boonton e Morris &amp; Essex</strong> sono deviate su Hoboken Terminal invece di New York Penn Station. Da Hoboken, puoi trasferire su PATH, traghetto o bus per raggiungere Manhattan.",
+    "ntk_reduced": "<strong>Northeast Corridor e North Jersey Coast Line</strong> continuano verso New York Penn Station ma con frequenza ridotta. Meno treni, attese più lunghe.",
+    "ntk_newark": "<strong>Raritan Valley Line</strong> perde tutte le corse dirette a Penn Station. I treni terminano a Newark Penn Station. Da lì, trasferisci su Northeast Corridor o PATH.",
+    "h2_how_helps": "Come aiuta Reroute NJ",
+    "how_helps_intro": "Abbiamo creato cinque strumenti per aiutarti a navigare le prossime quattro settimane:",
+    "tool_line_guide": "<strong><a href=\"../index.html\">Guida alle linee</a></strong> &mdash; Seleziona la tua linea e stazione per vedere esattamente come cambia il tuo tragitto, quali percorsi alternativi sono disponibili e quali biglietti ti servono.",
+    "tool_compare": "<strong><a href=\"../compare.html\">Confronto tragitti</a></strong> &mdash; Scegli la tua stazione NJ e la tua destinazione a Manhattan, poi vedi ogni opzione di percorso affiancata con tempi di viaggio, costi e dettagli sui trasferimenti.",
+    "tool_coverage": "<strong><a href=\"../coverage.html\">Copertura stampa</a></strong> &mdash; Articoli sul passaggio da fonti locali e regionali, aggiornati durante tutto il giorno. Filtra per fonte, linea o categoria.",
+    "tool_map": "<strong><a href=\"../map.html\">Mappa interattiva</a></strong> &mdash; Tutte e cinque le linee interessate sulla mappa con marcatori delle stazioni, punti di trasferimento e la posizione del Portal Bridge.",
+    "tool_embed": "<strong><a href=\"../embed.html\">Incorpora e condividi</a></strong> &mdash; Codici di incorporamento e strumenti per redazioni ed editori che vogliono inserire queste risorse sui propri siti.",
+    "h2_languages": "Disponibile in 11 lingue",
+    "languages_p": "Ogni pagina di Reroute NJ è disponibile in inglese, spagnolo, cinese, tagalog, coreano, portoghese, gujarati, hindi, italiano, arabo e polacco. Queste sono le lingue più parlate nel New Jersey. Ogni lingua ha il proprio set completo di pagine tradotte con navigazione, etichette, descrizioni e metadati. I nomi delle stazioni e delle linee restano in inglese perché è quello che c'è sui cartelli.",
+    "h2_support": "Sostieni il progetto",
+    "support_p": "Reroute NJ è gratuito e open source. Se lo trovi utile, puoi sostenere il progetto su <a href=\"https://github.com/sponsors/jamditis\" target=\"_blank\" rel=\"noopener\">GitHub Sponsors</a>, <a href=\"https://venmo.com/jamditis\" target=\"_blank\" rel=\"noopener\">Venmo</a>, o condividendolo con qualcuno che viaggia con NJ Transit.",
+    "closing_p1": "Questa interruzione è temporanea. Il nuovo Portal North Bridge sostituirà un collo di bottiglia vecchio 115 anni che ha causato ritardi a catena sul Northeast Corridor per decenni. Quattro settimane di disagio per anni di servizio migliore.",
+    "closing_p2": "Pianifica in anticipo, parti presto e sii paziente con gli altri sulle banchine. Ce la faremo.",
+    "cta": "Pianifica il tuo tragitto →"
+  },
   "about": {
     "tagline": "La nostra metodologia",
     "hamburger_label": "Chi siamo",
@@ -573,6 +606,10 @@
     "article1_headline": "Perché abbiamo creato Reroute NJ",
     "article1_description": "Cinque strumenti gratuiti in 11 lingue per aiutare i passeggeri NJ Transit a gestire il passaggio del Portal Bridge (Feb 15 – Mar 15, 2026).",
     "article2_headline": "Nuovo: incorpora Reroute NJ sul tuo sito web",
-    "article2_description": "Quattro formati di incorporamento, un configuratore visivo e l'esportazione PNG per le redazioni che coprono il passaggio del Portal Bridge."
+    "article2_description": "Quattro formati di incorporamento, un configuratore visivo e l'esportazione PNG per le redazioni che coprono il passaggio del Portal Bridge.",
+    "breadcrumb_blog_post_cutover": "Il passaggio inizia oggi",
+    "article3_headline": "Il passaggio inizia oggi",
+    "article3_description": "Il passaggio del Portal North Bridge inizia oggi. Cosa devono sapere i passeggeri NJ Transit per le prossime quattro settimane.",
+    "collection_item3": "Il passaggio inizia oggi"
   }
 }
