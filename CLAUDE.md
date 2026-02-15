@@ -245,6 +245,41 @@ Also verify manually:
 7. After translation changes, check 2+ translated pages for untranslated English
 8. After data changes, verify card.html and widget.html render correctly with URL params
 
+## Coverage scraper
+
+The scraper (`tools/scrape-coverage.py`) runs 4x daily via cron (00:10, 06:10, 12:10, 18:10) during the cutover period (Feb 15 – Mar 15). It uses the workstation venv (`~/.claude/workstation/venv/bin/python3`).
+
+### What it does each run
+
+1. **Checks official sources** — scrapes NJ Transit and Amtrak pages via Firecrawl, hashes content, compares to previous hash. Changes are logged to `~/.claude/workstation/reroute-snapshots/changelog.log` (no Telegram alert).
+2. **Discovers new articles** — polls RSS feeds (NJ Transit, NJ.com, Gothamist) and Google News, scrapes candidates, validates relevance, deduplicates by URL.
+3. **Commits and pushes** — auto-commits `data/coverage.json` and `data/source-registry.json`, pulls with rebase, then pushes.
+
+### Notification policy
+
+Telegram alerts go to Joe's phone — use them only for errors.
+
+| Event | Action |
+|-------|--------|
+| Official source content changed | Log to `changelog.log` + scraper log |
+| New articles found | Log only |
+| Metadata corrections | Log only |
+| Git push failure | Telegram alert |
+| Scraper crash | Telegram alert |
+
+### Key paths
+
+| Path | Purpose |
+|------|---------|
+| `~/.claude/workstation/logs/reroute-scrape.log` | Scraper log (all runs) |
+| `~/.claude/workstation/reroute-snapshots/` | Official source content snapshots + hashes |
+| `~/.claude/workstation/reroute-snapshots/changelog.log` | Append-only log of official source changes |
+| `tools/scrape-config.json` | Source URLs, RSS feeds, keywords, classification rules |
+
+### Git push handling
+
+The scraper does `git pull --rebase` before pushing to handle remote divergence from PRs or manual commits. If rebase conflicts occur (rare — only data files change), the push fails and sends a Telegram alert.
+
 ## Common tasks
 
 | Task | Command |
