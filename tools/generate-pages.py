@@ -1574,6 +1574,133 @@ def replace_page_specific_content(html, translations, page_key):
     return html
 
 
+def translate_jsonld(html, translations, page_key, lang, page_name):
+    """Translate JSON-LD structured data blocks for the target language.
+
+    Finds each <script type="application/ld+json"> block, parses the JSON,
+    translates fields based on @type, updates URLs with language prefix,
+    and replaces the block in the HTML.
+    """
+    pattern = re.compile(
+        r'(<script type="application/ld\+json">\s*)(.*?)(</script>)',
+        re.DOTALL
+    )
+
+    def replace_block(match):
+        prefix = match.group(1)
+        raw_json = match.group(2)
+        suffix = match.group(3)
+
+        try:
+            data = json.loads(raw_json)
+        except json.JSONDecodeError:
+            return match.group(0)  # Leave malformed blocks untouched
+
+        schema_type = data.get("@type", "")
+
+        if schema_type == "WebSite":
+            desc = get_translation(translations, "schema.site_description")
+            if desc:
+                data["description"] = desc
+
+        elif schema_type == "FAQPage":
+            entities = data.get("mainEntity", [])
+            for i, entity in enumerate(entities):
+                q_key = f"schema.faq_q{i + 1}"
+                a_key = f"schema.faq_a{i + 1}"
+                q = get_translation(translations, q_key)
+                a = get_translation(translations, a_key)
+                if q:
+                    entity["name"] = q
+                if a and "acceptedAnswer" in entity:
+                    entity["acceptedAnswer"]["text"] = a
+
+        elif schema_type == "BreadcrumbList":
+            items = data.get("itemListElement", [])
+            for item in items:
+                pos = item.get("position", 0)
+                if pos == 1:
+                    # Home breadcrumb — URL stays as site root
+                    continue
+                if pos == 2:
+                    # Second-level breadcrumb
+                    if len(items) == 3:
+                        # 3-level breadcrumb (blog posts): pos 2 is always "Blog"
+                        bc = get_translation(translations, "schema.breadcrumb_blog")
+                    else:
+                        # 2-level breadcrumb: pos 2 is the page itself
+                        bc = get_translation(translations, f"schema.breadcrumb_{page_key}")
+                    if bc:
+                        item["name"] = bc
+                    # Update URL if present
+                    if "item" in item:
+                        item["item"] = item["item"].replace(
+                            "https://reroutenj.org/",
+                            f"https://reroutenj.org/{lang}/"
+                        )
+                elif pos == 3:
+                    # Third-level breadcrumb (blog post title)
+                    bc = get_translation(translations, f"schema.breadcrumb_{page_key}")
+                    if bc:
+                        item["name"] = bc
+
+        elif schema_type == "CollectionPage":
+            name = get_translation(translations, "schema.collection_name")
+            desc = get_translation(translations, "schema.collection_description")
+            if name:
+                data["name"] = name
+            if desc:
+                data["description"] = desc
+            # Update page URL
+            if "url" in data:
+                data["url"] = data["url"].replace(
+                    "https://reroutenj.org/",
+                    f"https://reroutenj.org/{lang}/"
+                )
+            # Translate item list entries
+            main_entity = data.get("mainEntity", {})
+            if main_entity.get("@type") == "ItemList":
+                for item in main_entity.get("itemListElement", []):
+                    item_key = f"schema.collection_item{item.get('position', 0)}"
+                    item_name = get_translation(translations, item_key)
+                    if item_name:
+                        item["name"] = item_name
+                    if "url" in item:
+                        item["url"] = item["url"].replace(
+                            "https://reroutenj.org/",
+                            f"https://reroutenj.org/{lang}/"
+                        )
+
+        elif schema_type == "Article":
+            # Determine which article (blog_post or blog_post_embed)
+            if page_key == "blog_post":
+                art_prefix = "article1"
+            elif page_key == "blog_post_embed":
+                art_prefix = "article2"
+            else:
+                art_prefix = None
+
+            if art_prefix:
+                headline = get_translation(translations, f"schema.{art_prefix}_headline")
+                desc = get_translation(translations, f"schema.{art_prefix}_description")
+                if headline:
+                    data["headline"] = headline
+                if desc:
+                    data["description"] = desc
+                # Update mainEntityOfPage URL
+                mep = data.get("mainEntityOfPage", {})
+                if "@id" in mep:
+                    mep["@id"] = mep["@id"].replace(
+                        "https://reroutenj.org/",
+                        f"https://reroutenj.org/{lang}/"
+                    )
+
+        new_json = json.dumps(data, ensure_ascii=False, indent=4)
+        return prefix + new_json + "\n  " + suffix
+
+    return pattern.sub(replace_block, html)
+
+
 def generate_page(page_name, lang, translations):
     """Generate a single translated page."""
     src_path = os.path.join(PROJECT_ROOT, page_name)
@@ -1604,6 +1731,9 @@ def generate_page(page_name, lang, translations):
 
     # 4. Replace page-specific content
     html = replace_page_specific_content(html, translations, page_key)
+
+    # 4.5. Translate JSON-LD structured data
+    html = translate_jsonld(html, translations, page_key, lang, page_name)
 
     # 5. Inject translations for JS runtime
     html = inject_translations_script(html, translations, page_name)
