@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-16T05:11:35Z",
+  "lastUpdated": "2026-02-16T11:11:25Z",
   "articles": [
     {
       "id": "travel-and-tour-world-massive-service-disruptions-ahead-2026-02-16",
@@ -10,6 +10,48 @@
       "date": "2026-02-16",
       "category": "news",
       "excerpt": "As construction on New Jersey’s Portal Bridge progresses, commuters using NJ Transit and Amtrak will experience significant changes in service for the next month. Starting on Sunday, Amtrak will begin transferring rail traffic from the aging 115-year-old Portal Bridge to a new track that crosses the Portal North Bridge over the Hackensack River. This transition, known as the Portal North Bridge...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "abc7-transit-amtrak-commuters-2026-02-16",
+      "title": "NJ Transit, Amtrak commuters face changes amid Portal Bridge cutover",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNWjhNZjhVRktkMmE5b3gwdGRjRVNPWnJVcTluUFJVUVVuN0t1TW5JQ0N0Nm1CUzJpUlNQYzV3VEZ2amczTTBmYmMwR0JUb1FrOE1WNnIyWXdncGZMbXNscEJlQ3dpS2hFemY1VDZTd1I3S2JvUTJzTjVIcl9YWVZ3X2IwczZjcnZSbkx6M3hBc21YMDVDVWM5Wm5mUUxObnVDeGdJ0gGoAUFVX3lxTE1BaEVGSFJLNmdyVXo5UkZOamhfV2hSMDB6MUZoYUZqTzBHRzdUNmFFZGJjSWk5ZDFqRXJHaDBHTEFqYXpOX09RQmdiampJV05tSHhCd0dOc3EtRW5oUjE3VEplNHFYU29Rb2pEc3VKRXN0Z3p2WUV3RzhzX3dQS0R5MnhlQVVJZk1kel9nNWdzVGhQZmhZTlFfWnBBVWIxOTdha1RXcV8tRg?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "ABC7 New York",
+      "author": null,
+      "date": "2026-02-16",
+      "category": "news",
+      "excerpt": "The Portal Bridge cutover means service disruptions for NJ Transit and Amtrak commuters over the next 4 weeks. NEW JERSEY (WABC) -- Today is a holiday, but transit officials are trying to get the word out for tomorrow's weekday start: commuters can expect modified train schedules, along with some changes and cancellations for the next month. Amtrak has begun the first stage to transfer rail...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "rls-media-commuter-alert-portal-bridge-2026-02-16",
+      "title": "Commuter Alert: Portal Bridge Cutover Brings Week of NJ TRANSIT Delays, Cancellations",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQVlpFeGhONEZWcHU0UU5JTDZNQnc4Y2lreXhZUGxtVnlHLWtnMjc3Sy1wSUpKekxZNGZLZjR1elNLTTEwZnIzaGpjT05hUTlET09fcTgtYlJ5bEt0dG1pVHZKVi1IVUJNd1FpWjBkeGEwSHBKeWRFMUtReFNaM2VXZXRRMUhQUDRBSVdOd25JaXgwSWZyV0FDZHAydEZwdEpMcUtuT2VyQy05d0JDM1d5WEdydw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "RLS Media",
+      "author": null,
+      "date": "2026-02-16",
+      "category": "news",
+      "excerpt": "New Jersey rail commuters are being advised to prepare for delays and possible cancellations this week as the Portal Bridge cutover project gets underway, a major infrastructure transition that officials say will ultimately improve reliability but will temporarily disrupt service across North Jersey and the Northeast Corridor. The transition is expected to last approximately four weeks and...",
+      "lines": [
+        "northeast-corridor"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "cbs-news-final-phase-construction-2026-02-16",
+      "title": "Final phase of construction on N.J.'s Portal Bridge to lead to service disruptions",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOWGJ2WGROVWt0ZGJOT2JRV3h5Rm9iR1MwYUo1N0RJUm9HLXlfcUZ5aHp1U19LY3NWNFBRSGl5bGxoRi01OWl0R3NYbmRDbUhia3RraFlsV2E2RHprT09hZ01tYmVSc2pvVklfQ0Q0R2lPUHI0UHlBSXFoLUlseGhVQ3lfMjU1UEswRTA5SW5oTWZPajdOeUhzbHptRVBnQXE2VTBKb1BrbWN5SS0xWm8wRTNPakZ1N1FPSkdxOQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "CBS News",
+      "author": null,
+      "date": "2026-02-16",
+      "category": "news",
+      "excerpt": "- The 5:33 \\| Legacy of the LIRR Massacre - On The Dot with David Schechter: Wildfires & Climate Change Hundreds of thousands of Amtrak and NJ Transit riders are going to feel travel pain for the next four weeks. CBS News New York's Naveen Dhaliwal reports.",
       "lines": [
         "all"
       ],
@@ -1160,6 +1202,20 @@
       "direction": "both"
     },
     {
+      "id": "news12-new-jersey-people-killed-when-2026-01-18",
+      "title": "2 people killed when car crashes into Gloucester County home",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPTmUzTzZCcDljUEJGQktjR1NVYkVTenpWTUVsWFYzYW5BcWdNbmJwanZvOHJiQVpiX2NDclY4c29VSS1TQjNOaW83ZlBWM2RDYVVXUjBwLS1aRGVZeEQzZWY4TXc5V2JUUXhGTnVuRTBpVXowUXBPSEpLRHBNNFdrMGlWRF9CaWNPSjJicVRCbExwT00?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "News12 | New Jersey",
+      "author": null,
+      "date": "2026-01-18",
+      "category": "news",
+      "excerpt": "'It's been really hard, it's really bad,' Family of Isabella Salas speaks out for first time since fatal hit-and-run 7h ago](https://newjersey.news12.com/family-of-isabella-salas-speaks-out-for-first-time-since-fatal-hit-and-run) 'Our hearts are theirs.' Local knitting group dedicates memorial to Cranford hit-and-run victims 9h...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
       "id": "nj-spotlight-portal-north-2026-01-16",
       "title": "NJ Transit to cut some service to NY for repairs",
       "url": "https://www.pbs.org/video/headline-c-portal-north-1768590364/",
@@ -1499,6 +1555,20 @@
       "direction": "both"
     },
     {
+      "id": "news12-new-jersey-thunderbolt-holiday-rush-2025-12-23",
+      "title": "Thunderbolt 12: Holiday rush and winter storm snarl travel in New Jersey",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOeXl6cy12TUxCWVdqa0NkMTkyUldUS083cF9kdDBKZTB3ZWhBdDdHdTdrQ3FTdll5czIzZTZ3b2RQY2NVRFNndlA0WXNwVUwweFlOVmF5NGVZWHpsdEZPUlltUkZrVlBsaEdXWEZUX1FXU3MxYmRfQkFwX29nQ1Y0VHpYa3hmTk44aF9ydWUyNzFMbXpTRDg4ZHlvQk15SVlzSXh4dVF4M1MxbHgxeVN5VldR?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "News12 | New Jersey",
+      "author": null,
+      "date": "2025-12-23",
+      "category": "news",
+      "excerpt": "'It's been really hard, it's really bad,' Family of Isabella Salas speaks out for first time since fatal hit-and-run 7h ago](https://newjersey.news12.com/family-of-isabella-salas-speaks-out-for-first-time-since-fatal-hit-and-run) 'Our hearts are theirs.' Local knitting group dedicates memorial to Cranford hit-and-run victims 9h...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
       "id": "news12-new-jersey-transit-train-crash-2025-12-20",
       "title": "NJ Transit: Train crash at Montclair train station results in several injuries",
       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQbUFkcldMX09LSG53dUdsdVBnbXNua2pKSHhwMm03ZS14NlZzV21DOFQyd1FVSEFBbmZnTmJadVBPR1I2QXJLcXVyOHpobVpPNE1Fc3VNSDljeXJqc1lGV0t2T0ZNY1k0cldGMldpMHF2RVZhVlJKaDdQenAwNXUxR0UybU1ITlJrRkpsLWVLTU1EWUJEd19NZWhvempjbEQ5MzZGSzNXQUZYZw?oc=5&hl=en-US&gl=US&ceid=US:en",
@@ -1521,6 +1591,20 @@
       "date": "2025-12-15",
       "category": "news",
       "excerpt": "'Out of money, out of options.' Jefferson School District facing cuts 7h ago](https://newjersey.news12.com/out-of-money-out-of-options-jefferson-school-district-facing-cuts) Jersey Proud: 2 kids in South Jersey helped firefighters during a snowstorm 7h ago](https://newjersey.news12.com/jersey-proud-2-kids-in-south-jersey-helped-firefighters-during-a-snowstorm) Officials: Lithium-ion batteries...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "news12-new-jersey-metro-2025-12-15",
+      "title": "Metro",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQRllVdWRfQTFUenFQUDVKWVpjRUV5VExIaExlRktkQlRnV3N3bmctYmpuZzcxam9rdkhkcjRYVDJLd1hXV0NBYmlEbzhQYXBTN0xjNFRvUTRzdC1jN3lkN3FDdTlnSGZWelYtMG5ULUp0OVIyQk1Vd2ttVXRNX0VlOXlBM1B0VF9keFVaOEhhRWU1UkxXMzFSdA?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "News12 | New Jersey",
+      "author": null,
+      "date": "2025-12-15",
+      "category": "news",
+      "excerpt": "'It's been really hard, it's really bad,' Family of Isabella Salas speaks out for first time since fatal hit-and-run 7h ago](https://newjersey.news12.com/family-of-isabella-salas-speaks-out-for-first-time-since-fatal-hit-and-run) 'Our hearts are theirs.' Local knitting group dedicates memorial to Cranford hit-and-run victims 9h...",
       "lines": [
         "all"
       ],
@@ -1633,6 +1717,20 @@
       "date": "2025-11-24",
       "category": "news",
       "excerpt": "Slimy and stinky: EPA investigates industrial pollution in Hillside 7h ago](https://newjersey.news12.com/slimy-and-stinky-epa-investigates-industrial-pollution-in-hillside) Fairview man faces additional sexual assault charges 9h ago](https://newjersey.news12.com/fairview-man-faces-additional-sexual-assault-charges) Thousands of fans line up in Asbury Park for Survivor 50 Challenge 12h...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "news12-new-jersey-port-authority-raises-path-2025-11-14",
+      "title": "Port Authority raises PATH fares, promises improvements",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOQWJVcGdwWUp4VmtMNUw5OU54djFqSnpPV2x5dEJ2Sy1zNGQwLWJwYWhNSHY0OF9pTV9TYVhzV2ljTHpvVFJuWFliY0lCa0FmRFJCR2lCZzRXdzI2QUxIZVdZV1hFOVRvUV9nR1hZY3RvSllhRHdYTmI5WTV1OURJVmNBQllzUHlrSktN?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "News12 | New Jersey",
+      "author": null,
+      "date": "2025-11-14",
+      "category": "news",
+      "excerpt": "'It's been really hard, it's really bad,' Family of Isabella Salas speaks out for first time since fatal hit-and-run 7h ago](https://newjersey.news12.com/family-of-isabella-salas-speaks-out-for-first-time-since-fatal-hit-and-run) 'Our hearts are theirs.' Local knitting group dedicates memorial to Cranford hit-and-run victims 9h...",
       "lines": [
         "all"
       ],
@@ -1871,6 +1969,20 @@
       "date": "2025-09-25",
       "category": "news",
       "excerpt": "Portal Bridge ‘cutover’ project to impact NJ Transit services. Here’s what it means for you. yesterday](https://newjersey.news12.com/portal-bridge-cutover-project-to-impact-nj-transit-services-heres-what-it-means-for-you) Appeals court temporarily releases Gateway Tunnel Project funding yesterday](https://newjersey.news12.com/appeals-court-temporarily-releases-gateway-tunnel-project-funding) NJ...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "news12-new-jersey-port-authority-preps-for-2025-09-08",
+      "title": "Port Authority preps for FIFA World Cup months ahead of the tournament",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPRG9qUFQ2aUpuV3Rwbkg4WFg3NjctZTVtZ1NtUmhTYmdFNUtzb2VDcXh3R2xVbFFGTkc3Q2NZYXRSTC11MTNUcDIweDBSeXl3MkJDTE50TVR3bzlxbUN0aEQwUXNrVmhnNng0YjFvLWxTUXBwd0VvdkNKVk1jNFNuUm45MGZNSkFGY0tKNzh2TUZlcHdMdlRNOWlQTU92bTRm?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "source": "News12 | New Jersey",
+      "author": null,
+      "date": "2025-09-08",
+      "category": "news",
+      "excerpt": "Portal Bridge cutover begins, bringing major NJ Transit service changes 12h ago](https://newjersey.news12.com/portal-bridge-cutover-begins-bringing-major-nj-transit-service-changes) Portal Bridge ‘cutover’ project to impact NJ Transit services. Here’s what it means for you. 2ds...",
       "lines": [
         "all"
       ],
