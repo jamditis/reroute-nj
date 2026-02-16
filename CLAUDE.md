@@ -307,5 +307,21 @@ The scraper does `git pull --rebase` before pushing to handle remote divergence 
 - **CSS:** 1 file (~3,449 lines)
 - **Translation files:** 11 JSON (~548 keys each)
 - **Data files:** 3 JSON (111 articles + 28 citations + source registry)
-- **Test files:** 14 in `tests/` (948+ checks)
+- **Test files:** 15 in `tests/` (985+ checks)
 - **Python scripts:** 4 in `tools/` (~3,849 lines total) + 1 JSON config
+
+## Lessons learned
+
+### i18n dual-source English is a recurring bug factory (Feb 14-16, 2026)
+
+English translations live in two places: `translations/en.json` (source of truth) and the hardcoded `EN` object in `js/i18n.js` (runtime fallback). This has caused three bugs in three days:
+
+- **Feb 14-15:** New `coverage.*` keys added to en.json but not the `EN` object. English pages showed raw keys like `coverage.page_of`.
+- **Feb 16:** `widget.html` set `window._T = {}` for English, which is truthy. `i18n.js` checks `if (!window._T)` and skipped loading `EN`. NJ101.5 traffic page embed showed raw keys like `js.schedule_changes`.
+
+**Rules to prevent recurrence:**
+
+1. **When adding keys to en.json that will be used by `t()` calls in JS**, also add them to the `EN` object in `i18n.js`. Template-only keys (titles, hero text, meta descriptions used by generate-pages.py) don't need to be in `EN`.
+2. **Never set `window._T` to `{}` or any truthy value** before `i18n.js` loads, unless you're providing a complete translation object. An empty object blocks the `EN` fallback.
+3. **Run `node tests/test-i18n-sync.js`** after any translation or i18n change. This test suite validates all three layers: EN object parsing, t() call resolution, and widget.html translation loading.
+4. **The `t()` function returns the raw key string on failure.** If you see dot-notation strings in the UI (like `js.schedule_changes`), it means `window._T` doesn't have that key path.
