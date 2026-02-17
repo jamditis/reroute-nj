@@ -57,8 +57,8 @@ tools/
   generate-pages.py       — Static page generator for translations (1788 lines)
   validate-data.py        — Data integrity and source verification checks
   validate-research-pipeline.py — Source registry schema and freshness validator
-  scrape-coverage.py      — Automated article discovery (RSS + Google News, 1154 lines)
-  scrape-config.json      — Scraper source URLs, feeds, Google News query, and classification keywords
+  scrape-coverage.py      — Automated article discovery (GDELT + RSS, stdlib only, ~550 lines)
+  scrape-config.json      — Scraper config: GDELT queries, RSS feeds, keyword maps
 tests/                    — 14 test suites with 948+ automated checks
 docs/plans/               — Implementation design docs (SEO, embed system)
 .github/
@@ -294,10 +294,10 @@ The scraper does `git pull --rebase` before pushing to handle remote divergence 
 | Regenerate specific languages | `python3 tools/generate-pages.py es zh ko` |
 | Validate sources | `python3 tools/validate-research-pipeline.py --check-urls` |
 | Validate data | `python3 tools/validate-data.py` |
-| Run coverage scraper | `~/.claude/workstation/venv/bin/python3 tools/scrape-coverage.py` |
-| Scraper dry run | `~/.claude/workstation/venv/bin/python3 tools/scrape-coverage.py --dry-run` |
-| Verify existing articles | `~/.claude/workstation/venv/bin/python3 tools/scrape-coverage.py --verify` |
-| Check article links | `~/.claude/workstation/venv/bin/python3 tools/scrape-coverage.py --check-links` |
+| Run coverage scraper | `python3 tools/scrape-coverage.py` |
+| Scraper dry run | `python3 tools/scrape-coverage.py --dry-run` |
+| Verify existing articles | `python3 tools/scrape-coverage.py --verify` |
+| Check article links | `python3 tools/scrape-coverage.py --check-links` |
 | Deploy | Push to `main` (GitHub Pages auto-deploys via `.github/workflows/static.yml`) |
 
 ## File counts

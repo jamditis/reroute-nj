@@ -1,5 +1,12 @@
 {
-  "firecrawl_api_key_cmd": "pass show claude/api/firecrawl",
+  "gdelt_queries": [
+    "(\"portal bridge\" OR \"portal north bridge\")",
+    "(\"nj transit\" (cutover OR diversion OR \"service change\"))",
+    "(\"nj transit\" (\"service reduction\" OR \"schedule change\") 2026)",
+    "(\"portal bridge\" (hoboken OR \"penn station\" OR commut))"
+  ],
+  "gdelt_timespan": "7d",
+  "gdelt_max_records": 75,
   "official_sources": [
     {
       "id": "njtransit-portalcutover",
@@ -39,6 +46,14 @@
       "format": "rss"
     },
     {
+      "id": "amtrak-media",
+      "url": "https://media.amtrak.com/feed/",
+      "source_name": "Amtrak Media",
+      "category": "official",
+      "format": "rss",
+      "filter_keywords": ["portal", "portal bridge", "portal north", "gateway", "northeast corridor"]
+    },
+    {
       "id": "njdotcom",
       "url": "https://nj.com/arc/outboundfeeds/rss/",
       "source_name": "NJ.com",
@@ -55,7 +70,35 @@
       "filter_keywords": ["portal bridge", "portal north", "nj transit", "cutover"]
     }
   ],
-  "google_news_query": "\"portal bridge\" OR \"portal north bridge\" NJ Transit",
+  "known_outlets": [
+    "nj.com",
+    "northjersey.com",
+    "gothamist.com",
+    "nytimes.com",
+    "wnyc.org",
+    "nj1015.com",
+    "pix11.com",
+    "abc7ny.com",
+    "politico.com",
+    "njspotlightnews.org",
+    "tapinto.net",
+    "patch.com",
+    "njbiz.com",
+    "hobokengirl.com",
+    "themontclairgirl.com",
+    "newjersey.news12.com",
+    "cbsnews.com",
+    "nbcnewyork.com",
+    "fox5ny.com",
+    "silive.com",
+    "dailyrecord.com",
+    "app.com",
+    "6sqft.com",
+    "roi-nj.com",
+    "dailyvoice.com",
+    "trains.com",
+    "lackawannacoalition.org"
+  ],
   "line_keywords": {
     "montclair-boonton": ["montclair", "boonton", "montclair-boonton", "midtown direct"],
     "morris-essex": ["morris", "essex", "morristown", "gladstone", "morris & essex", "morris and essex"],
@@ -69,7 +112,6 @@
     "analysis": ["analysis", "explainer", "guide", "what to know", "what you need to know", "breakdown", "deep dive"],
     "community": ["tapinto", "patch.com", "hobokengirl", "montclairgirl", "your commute", "your town", "local"]
   },
-  "search_result_limit": 10,
   "telegram_chat_id": null,
   "log_file": "/home/jamditis/.claude/workstation/logs/reroute-scrape.log"
 }
