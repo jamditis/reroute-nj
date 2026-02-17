@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-17T23:11:36Z",
+  "lastUpdated": "2026-02-17T23:15:58Z",
   "articles": [
     {
       "id": "cbs-news-portal-bridge-construction-creates-2026-02-17",
@@ -1318,6 +1318,20 @@
       "direction": "both"
     },
     {
+      "id": "fox-5-new-york-transit-encouraging-riders-2026-02-13",
+      "title": "NJ Transit encouraging riders to work from home during month - long repairs",
+      "url": "https://www.fox5ny.com/news/nj-transit-commute-travel-train-repairs-schedule",
+      "source": "Fox 5 New York",
+      "author": null,
+      "date": "2026-02-13",
+      "category": "news",
+      "excerpt": "NJ Transit is encouraging riders to work from home while month-long repairs get underway.",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
       "id": "njbiz-portal-cutover-2026-02-12",
       "title": "Portal North Bridge cutover to disrupt NJ Transit service",
       "url": "https://njbiz.com/portal-north-bridge-cutover-nj-transit-amtrak/",
@@ -1474,6 +1488,20 @@
         "all"
       ],
       "direction": "nj-to-nyc"
+    },
+    {
+      "id": "patch-transit-service-cuts-2026-02-12",
+      "title": "NJ Transit Service Cuts Will Bring 18K More People To Hoboken Daily , Says Concerned Councilman",
+      "url": "https://patch.com/new-jersey/hoboken/nj-transit-changes-bring-18k-more-people-hoboken-says-concerned-councilman",
+      "source": "Patch",
+      "author": null,
+      "date": "2026-02-12",
+      "category": "community",
+      "excerpt": "When NJ Transit cuts service, thousands more people will stop in Hoboken instead of NYC each day. The council president has asked for help.",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
     },
     {
       "id": "northjersey-its-going-2026-02-11",
@@ -2377,6 +2405,20 @@
       "excerpt": "'Out of money, out of options.' Jefferson School District facing cuts 7h ago](https://newjersey.news12.com/out-of-money-out-of-options-jefferson-school-district-facing-cuts) Jersey Proud: 2 kids in South Jersey helped firefighters during a snowstorm 7h ago](https://newjersey.news12.com/jersey-proud-2-kids-in-south-jersey-helped-firefighters-during-a-snowstorm) Officials: Lithium-ion batteries...",
       "lines": [
         "montclair-boonton"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "njtransit-dec-2025-104727-2025-12-17",
+      "title": "Dec 17, 2025 10:47:27 AM",
+      "url": "https://www.njtransit.com/node/2023763",
+      "source": "NJ Transit",
+      "author": null,
+      "date": "2025-12-17",
+      "category": "official",
+      "excerpt": "New Jersey Public Transportation Corporation - The Way To Go",
+      "lines": [
+        "all"
       ],
       "direction": "both"
     },
