@@ -35,7 +35,7 @@ The cutover is caused by Amtrak transferring the first of two tracks from the 11
 
 ## Blog
 
-The blog index is at [blog.html](https://reroutenj.org/blog.html). Individual posts live at `blog/{slug}.html` (e.g., [Why we built Reroute NJ](https://reroutenj.org/blog/why-we-built-reroute-nj.html)). Both the index and posts are translated into all 11 languages.
+The blog index is at [blog.html](https://reroutenj.org/blog.html). Individual posts live at `blog/{slug}.html`. Current posts: [The cutover starts today](https://reroutenj.org/blog/cutover-begins.html), [The new embed system](https://reroutenj.org/blog/new-embed-system.html), [Why we built Reroute NJ](https://reroutenj.org/blog/why-we-built-reroute-nj.html). Both the index and posts are translated into all 11 languages.
 
 ## Embeds for publishers
 

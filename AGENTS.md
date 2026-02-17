@@ -21,23 +21,23 @@ js/shared.js            — Shared globals: esc(), countdown, date constants, a1
 js/line-data.js         — LINE_DATA and LINE_ORDER globals (shared data model)
 js/app.js               — Line guide logic (~1081 lines, IIFE)
 js/compare.js           — Comparison tool logic (~722 lines, IIFE)
-js/coverage.js          — Coverage feed logic (~240 lines, IIFE)
+js/coverage.js          — Coverage feed logic (~380 lines, IIFE)
 js/map.js               — Leaflet map logic (~418 lines, IIFE)
 js/cards.js             — Card rendering + Canvas PNG export (~593 lines, IIFE)
 js/embed.js             — Embed configurator logic (~786 lines, IIFE)
 js/widget.js            — Standalone script-tag embed library (~163 lines, IIFE)
 css/styles.css          — All styles, CSS custom properties
 img/                    — Favicon, OG image, screenshot
-data/coverage.json      — Curated article data (37 articles)
+data/coverage.json      — Curated article data (111 articles)
 data/sources.json       — Citation database (28 verified claims with source links)
 data/source-registry.json — Source freshness tracking and verification windows
-translations/en.json    — English source strings (~457 keys)
+translations/en.json    — English source strings (~548 keys)
 translations/{lang}.json — 10 language files (es, zh, tl, ko, pt, gu, hi, it, ar, pl)
-tools/generate-pages.py — Generates translated HTML from templates + JSON (~1556 lines)
+tools/generate-pages.py — Generates translated HTML from templates + JSON (~1788 lines)
 tools/validate-data.py  — Data integrity and source verification checks
 tools/validate-research-pipeline.py — Source registry schema and freshness validator
-tests/                  — 14 test files with 698+ checks (run with node tests/test-*.js)
-{lang}/                 — Generated translated pages (80 total, 8 pages × 10 languages)
+tests/                  — 14 test files with 948+ checks (run with node tests/test-*.js)
+{lang}/                 — Generated translated pages (90 total, 9 pages × 10 languages)
 ```
 
 ## Rules
@@ -75,14 +75,15 @@ To add or modify line data, edit the `LINE_DATA` object directly. The UI generat
 
 ## Translation system
 
-All 8 pages (plus 2 blog posts) are translated into 10 languages using a hybrid approach:
+All 9 pages (7 tool pages + 2 blog posts) are translated into 10 languages using a hybrid approach:
 
 - **Build time:** `tools/generate-pages.py` reads English HTML templates and swaps static text with translated strings from `translations/{lang}.json`. Output goes to `{lang}/` directories (e.g., `es/index.html`).
 - **Runtime:** `js/i18n.js` loads `window._T` (injected by the generator) for JS-driven UI strings like station impacts, route cards, and comparison results.
+- **JSON-LD:** `translate_jsonld()` translates structured data (WebSite, FAQPage, BreadcrumbList, CollectionPage, Article) per-language with localized URLs. Translation keys are under `schema.*`.
 
 ### Translation keys
 
-Keys use dot notation organized by page: `index.*`, `compare.*`, `coverage.*`, `map.*`, `embed.*`, `blog.*` (index), `blog_post.*` (first article), `blog_post_embed.*` (second article), `common.*`, `meta.*`.
+Keys use dot notation organized by page: `index.*`, `compare.*`, `coverage.*`, `map.*`, `embed.*`, `blog.*` (index), `blog_post.*` (first article), `blog_post_embed.*` (second article), `common.*`, `meta.*`, `schema.*` (JSON-LD structured data).
 
 ### Adding content to translated pages
 

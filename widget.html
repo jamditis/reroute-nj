@@ -79,7 +79,8 @@
       function fetchTranslations(callback) {
         var lang = getParam("lang");
         if (!lang || lang === "en") {
-          window._T = {};
+          // Don't set window._T here — let i18n.js set it to the
+          // built-in EN object so t() lookups work for English.
           callback();
           return;
         }
@@ -103,15 +104,15 @@
                 }
               }
             } catch (e) {
-              window._T = {};
+              // Leave _T unset so i18n.js loads English as fallback
             }
-          } else {
-            window._T = {};
           }
+          // If _T wasn't populated (parse error or non-200), i18n.js
+          // will set it to the built-in EN object as fallback.
           callback();
         };
         xhr.onerror = function () {
-          window._T = {};
+          // Leave _T unset so i18n.js loads English as fallback
           callback();
         };
         xhr.send();

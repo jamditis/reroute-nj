@@ -46,8 +46,10 @@ var ENGLISH_BASE_PAGES = [
   "map.html",
   "embed.html",
   "blog.html",
+  "blog/cutover-begins.html",
   "blog/why-we-built-reroute-nj.html",
-  "blog/new-embed-system.html"
+  "blog/new-embed-system.html",
+  "about.html"
 ];
 
 var UTILITY_PAGES = [
@@ -150,13 +152,13 @@ if (sitemapRaw) {
   });
 
   if (missingEnglish.length === 0) {
-    pass("2. Contains URLs for all 8 English base pages", ENGLISH_BASE_PAGES.join(", "));
+    pass("2. Contains URLs for all 10 English base pages", ENGLISH_BASE_PAGES.join(", "));
   } else {
-    fail("2. Contains URLs for all 8 English base pages", "Missing: " + missingEnglish.join(", "));
+    fail("2. Contains URLs for all 10 English base pages", "Missing: " + missingEnglish.join(", "));
   }
 }
 
-// ── Test 3: Contains URLs for all 10 languages x 8 pages = 80 translated pages ──
+// ── Test 3: Contains URLs for all 10 languages x 10 pages = 100 translated pages ──
 
 if (sitemapRaw) {
   var missingTranslated = [];
@@ -171,9 +173,9 @@ if (sitemapRaw) {
   });
 
   if (missingTranslated.length === 0) {
-    pass("3. Contains URLs for all 80 translated pages (10 langs x 8 pages)", "All 80 translated URLs present");
+    pass("3. Contains URLs for all 100 translated pages (10 langs x 10 pages)", "All 100 translated URLs present");
   } else {
-    fail("3. Contains URLs for all 80 translated pages (10 langs x 8 pages)",
+    fail("3. Contains URLs for all 100 translated pages (10 langs x 10 pages)",
       missingTranslated.length + " missing:\n    " + missingTranslated.join("\n    "));
   }
 }
@@ -182,9 +184,9 @@ if (sitemapRaw) {
 
 if (sitemapRaw) {
   var totalUrls = locUrls.length;
-  // Expected: 9 English + 90 translated + 2 utility (card.html, widget.html) = 101
-  var expectedMin = 99;
-  var expectedMax = 103;
+  // Expected: 10 English + 100 translated + 2 utility (card.html, widget.html) = 112
+  var expectedMin = 110;
+  var expectedMax = 114;
 
   if (totalUrls >= expectedMin && totalUrls <= expectedMax) {
     pass("4. Total URL count is approximately 90", totalUrls + " URLs found (expected " + expectedMin + "-" + expectedMax + ")");

@@ -22,10 +22,11 @@ PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TRANSLATIONS_DIR = os.path.join(PROJECT_ROOT, "translations")
 
 # Pages to generate
-PAGES = ["index.html", "compare.html", "coverage.html", "map.html", "embed.html", "blog.html", "blog/why-we-built-reroute-nj.html", "blog/new-embed-system.html", "about.html"]
+PAGES = ["index.html", "compare.html", "coverage.html", "map.html", "embed.html", "blog.html", "blog/cutover-begins.html", "blog/why-we-built-reroute-nj.html", "blog/new-embed-system.html", "about.html"]
 
 # Map page filenames to translation key prefixes (when different from filename stem)
 PAGE_KEY_MAP = {
+    "blog/cutover-begins.html": "blog_post_cutover",
     "blog/why-we-built-reroute-nj.html": "blog_post",
     "blog/new-embed-system.html": "blog_post_embed",
 }
@@ -256,6 +257,7 @@ def replace_footer(html, translations, page_key):
             "blog": ' <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">{embed_gh}</a>.',
             "blog_post": ' <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">{embed_gh}</a>.',
             "blog_post_embed": ' <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">{embed_gh}</a>.',
+            "blog_post_cutover": ' <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">{embed_gh}</a>.',
             "about": ' <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">{embed_gh}</a>.',
         }
         idx = get_translation(translations, "common.footer_disclaimer_index") or "Information is based on official announcements and may change. Always verify with"
@@ -738,6 +740,7 @@ def replace_page_specific_content(html, translations, page_key):
             ("coverage.category_label", "Category"),
             ("coverage.line_label", "Line"),
             ("coverage.direction_label", "Direction"),
+            ("coverage.sort_label", "Sort"),
             ("coverage.search_label", "Search"),
         ]:
             translated = get_translation(translations, key)
@@ -767,6 +770,16 @@ def replace_page_specific_content(html, translations, page_key):
             ("coverage.dir_nj_nyc", "NJ to NYC"),
             ("coverage.dir_nyc_nj", "NYC to NJ"),
             ("coverage.dir_both", "Both directions"),
+        ]:
+            translated = get_translation(translations, key)
+            if translated:
+                html = html.replace(f">{eng_text}</option>", f">{translated}</option>")
+
+        # Sort options
+        for key, eng_text in [
+            ("coverage.sort_newest", "Newest first"),
+            ("coverage.sort_relevance", "Most relevant"),
+            ("coverage.sort_oldest", "Oldest first"),
         ]:
             translated = get_translation(translations, key)
             if translated:
@@ -1175,6 +1188,26 @@ def replace_page_specific_content(html, translations, page_key):
                 f'>{post2_excerpt}</p>'
             )
 
+        # Post 3 card (cutover begins post)
+        post3_title = get_translation(translations, "blog.post3_title")
+        if post3_title:
+            html = html.replace(">The cutover starts today</h2>", f">{post3_title}</h2>")
+
+        post3_date = get_translation(translations, "blog.post3_date")
+        if post3_date:
+            html = html.replace(">February 15, 2026</time>", f">{post3_date}</time>")
+
+        post3_excerpt = get_translation(translations, "blog.post3_excerpt")
+        if post3_excerpt:
+            html = html.replace(
+                ">The Portal North Bridge cutover starts today. Here's what NJ Transit riders need to know and how Reroute NJ can help for the next four weeks.</p>",
+                f'>{post3_excerpt}</p>'
+            )
+            html = html.replace(
+                ">The Portal North Bridge cutover starts today. Here&#x27;s what NJ Transit riders need to know and how Reroute NJ can help for the next four weeks.</p>",
+                f'>{post3_excerpt}</p>'
+            )
+
     elif page_key == "blog_post":
         # Blog post: "Why we built Reroute NJ"
         # Back/footer nav links
@@ -1396,6 +1429,140 @@ def replace_page_specific_content(html, translations, page_key):
                 f'>{cta.replace("→", "&rarr;")}</a>'
             )
 
+    elif page_key == "blog_post_cutover":
+        # Blog post: "The cutover starts today"
+        # Back/footer nav links
+        all_posts = get_translation(translations, "blog.all_posts")
+        if all_posts:
+            html = html.replace(">&larr; All posts</a>", f">&larr; {all_posts}</a>")
+        back_all = get_translation(translations, "blog.back_to_all_posts")
+        if back_all:
+            html = html.replace(">&larr; Back to all posts</a>", f">&larr; {back_all}</a>")
+
+        heading = get_translation(translations, "blog_post_cutover.heading")
+        if heading:
+            html = html.replace(">The cutover starts today</h1>", f">{heading}</h1>")
+
+        by_prefix = get_translation(translations, "blog_post_cutover.by_prefix")
+        if by_prefix:
+            html = html.replace(">By Joe Amditis</span>", f">{by_prefix} Joe Amditis</span>")
+
+        date = get_translation(translations, "blog_post_cutover.date")
+        if date:
+            html = html.replace(">February 15, 2026</time>", f">{date}</time>")
+
+        # Intro paragraphs
+        intro_p1 = get_translation(translations, "blog_post_cutover.intro_p1")
+        if intro_p1:
+            html = html.replace(
+                "<p>The Portal North Bridge cutover is happening. Starting today, February 15, Amtrak is connecting the new bridge to the Northeast Corridor, and NJ Transit service will be disrupted for four weeks. Every rail line except the Atlantic City Rail Line is affected.</p>",
+                f"<p>{intro_p1}</p>"
+            )
+
+        intro_p2 = get_translation(translations, "blog_post_cutover.intro_p2")
+        if intro_p2:
+            html = html.replace(
+                "<p>If you ride NJ Transit into New York, your commute changes today. This post covers what you need to know and how Reroute NJ can help you figure out the specifics.</p>",
+                f"<p>{intro_p2}</p>"
+            )
+
+        # Section headings
+        for key, eng_text in [
+            ("blog_post_cutover.h2_need_to_know", "What you need to know"),
+            ("blog_post_cutover.h2_how_helps", "How Reroute NJ helps"),
+            ("blog_post_cutover.h2_languages", "Available in 11 languages"),
+        ]:
+            translated = get_translation(translations, key)
+            if translated:
+                html = html.replace(f"<h2>{eng_text}</h2>", f"<h2>{translated}</h2>")
+
+        # Need to know paragraph
+        need_to_know_p = get_translation(translations, "blog_post_cutover.need_to_know_p")
+        if need_to_know_p:
+            html = html.replace(
+                "<p>The cutover runs from February 15 through March 15, 2026. During this period, roughly half of all NJ Transit trains between New Jersey and New York Penn Station will be cut. The impact depends on your line:</p>",
+                f"<p>{need_to_know_p}</p>"
+            )
+
+        # Need to know list items
+        ntk_items = {
+            "blog_post_cutover.ntk_hoboken": '<strong>Montclair-Boonton and Morris &amp; Essex lines</strong> are diverted to Hoboken Terminal instead of New York Penn Station. From Hoboken, you transfer to PATH, ferry, or bus to reach Manhattan.',
+            "blog_post_cutover.ntk_reduced": '<strong>Northeast Corridor and North Jersey Coast Line</strong> continue to New York Penn Station but with reduced frequency. Fewer trains, longer waits.',
+            "blog_post_cutover.ntk_newark": '<strong>Raritan Valley Line</strong> loses all one-seat rides to Penn Station. Trains terminate at Newark Penn Station. Transfer to Northeast Corridor or PATH from there.',
+        }
+        for key, eng_text in ntk_items.items():
+            translated = get_translation(translations, key)
+            if translated:
+                html = html.replace(f"<li>{eng_text}</li>", f"<li>{translated}</li>")
+
+        # How helps intro
+        how_helps_intro = get_translation(translations, "blog_post_cutover.how_helps_intro")
+        if how_helps_intro:
+            html = html.replace(
+                "<p>We built five tools to help you navigate the next four weeks:</p>",
+                f"<p>{how_helps_intro}</p>"
+            )
+
+        # Tool description paragraphs
+        tool_items = {
+            "blog_post_cutover.tool_line_guide": '<strong><a href="../index.html">Line guide</a></strong> &mdash; Select your line and station to see exactly how your commute changes, what alternative routes are available, and what tickets you need.',
+            "blog_post_cutover.tool_compare": '<strong><a href="../compare.html">Commute comparison</a></strong> &mdash; Pick your NJ station and your Manhattan destination, then see every route option side by side with travel times, costs, and transfer details.',
+            "blog_post_cutover.tool_coverage": '<strong><a href="../coverage.html">News coverage</a></strong> &mdash; Reporting about the cutover from local and regional news sources, updated throughout the day. Filter by source, line, or category.',
+            "blog_post_cutover.tool_map": '<strong><a href="../map.html">Interactive map</a></strong> &mdash; All five affected lines rendered on a map with station markers, transfer points, and the Portal Bridge location.',
+            "blog_post_cutover.tool_embed": '<strong><a href="../embed.html">Embed and share</a></strong> &mdash; Embed codes and tools for newsrooms and publishers who want to put these resources on their own sites.',
+        }
+        for key, eng_text in tool_items.items():
+            translated = get_translation(translations, key)
+            if translated:
+                html = html.replace(f"<p>{eng_text}</p>", f"<p>{translated}</p>")
+
+        # Languages paragraph
+        languages_p = get_translation(translations, "blog_post_cutover.languages_p")
+        if languages_p:
+            html = html.replace(
+                "<p>Every page on Reroute NJ is available in English, Spanish, Chinese, Tagalog, Korean, Portuguese, Gujarati, Hindi, Italian, Arabic, and Polish. These are the most commonly spoken languages in New Jersey. Each language has its own complete set of translated pages with navigation, labels, descriptions, and metadata. Station names and line names stay in English because that's what's on the signs.</p>",
+                f"<p>{languages_p}</p>"
+            )
+            html = html.replace(
+                "<p>Every page on Reroute NJ is available in English, Spanish, Chinese, Tagalog, Korean, Portuguese, Gujarati, Hindi, Italian, Arabic, and Polish. These are the most commonly spoken languages in New Jersey. Each language has its own complete set of translated pages with navigation, labels, descriptions, and metadata. Station names and line names stay in English because that&#x27;s what&#x27;s on the signs.</p>",
+                f"<p>{languages_p}</p>"
+            )
+
+        # Support note (deemphasized)
+        support_p = get_translation(translations, "blog_post_cutover.support_p")
+        if support_p:
+            html = html.replace(
+                '<p class="blog-support-note" style="font-size: 0.85rem; color: var(--text-muted); margin-top: 2rem;">Reroute NJ is free, open source, and community-supported. If you find it useful, share it with someone who rides NJ Transit or <a href="https://github.com/sponsors/jamditis" target="_blank" rel="noopener">support the project</a>.</p>',
+                f'<p class="blog-support-note" style="font-size: 0.85rem; color: var(--text-muted); margin-top: 2rem;">{support_p}</p>'
+            )
+
+        # Closing paragraphs
+        closing_p1 = get_translation(translations, "blog_post_cutover.closing_p1")
+        if closing_p1:
+            html = html.replace(
+                "<p>This disruption is temporary. The new Portal North Bridge will replace a 115-year-old bottleneck that has caused cascading delays across the Northeast Corridor for decades. Four weeks of pain for years of better service.</p>",
+                f"<p>{closing_p1}</p>"
+            )
+
+        closing_p2 = get_translation(translations, "blog_post_cutover.closing_p2")
+        if closing_p2:
+            html = html.replace(
+                "<p>Plan ahead, leave early, and be patient with each other on the platforms. We'll get through it.</p>",
+                f"<p>{closing_p2}</p>"
+            )
+            html = html.replace(
+                "<p>Plan ahead, leave early, and be patient with each other on the platforms. We&#x27;ll get through it.</p>",
+                f"<p>{closing_p2}</p>"
+            )
+
+        # CTA button
+        cta = get_translation(translations, "blog_post_cutover.cta")
+        if cta:
+            html = html.replace(
+                '>Plan your commute &rarr;</a>',
+                f'>{cta.replace("→", "&rarr;")}</a>'
+            )
+
     elif page_key == "blog_post_embed":
         # Blog post: "New: embed Reroute NJ on your website"
         # Back/footer nav links
@@ -1563,6 +1730,135 @@ def replace_page_specific_content(html, translations, page_key):
     return html
 
 
+def translate_jsonld(html, translations, page_key, lang, page_name):
+    """Translate JSON-LD structured data blocks for the target language.
+
+    Finds each <script type="application/ld+json"> block, parses the JSON,
+    translates fields based on @type, updates URLs with language prefix,
+    and replaces the block in the HTML.
+    """
+    pattern = re.compile(
+        r'(<script type="application/ld\+json">\s*)(.*?)(</script>)',
+        re.DOTALL
+    )
+
+    def replace_block(match):
+        prefix = match.group(1)
+        raw_json = match.group(2)
+        suffix = match.group(3)
+
+        try:
+            data = json.loads(raw_json)
+        except json.JSONDecodeError:
+            return match.group(0)  # Leave malformed blocks untouched
+
+        schema_type = data.get("@type", "")
+
+        if schema_type == "WebSite":
+            desc = get_translation(translations, "schema.site_description")
+            if desc:
+                data["description"] = desc
+
+        elif schema_type == "FAQPage":
+            entities = data.get("mainEntity", [])
+            for i, entity in enumerate(entities):
+                q_key = f"schema.faq_q{i + 1}"
+                a_key = f"schema.faq_a{i + 1}"
+                q = get_translation(translations, q_key)
+                a = get_translation(translations, a_key)
+                if q:
+                    entity["name"] = q
+                if a and "acceptedAnswer" in entity:
+                    entity["acceptedAnswer"]["text"] = a
+
+        elif schema_type == "BreadcrumbList":
+            items = data.get("itemListElement", [])
+            for item in items:
+                pos = item.get("position", 0)
+                if pos == 1:
+                    # Home breadcrumb — URL stays as site root
+                    continue
+                if pos == 2:
+                    # Second-level breadcrumb
+                    if len(items) == 3:
+                        # 3-level breadcrumb (blog posts): pos 2 is always "Blog"
+                        bc = get_translation(translations, "schema.breadcrumb_blog")
+                    else:
+                        # 2-level breadcrumb: pos 2 is the page itself
+                        bc = get_translation(translations, f"schema.breadcrumb_{page_key}")
+                    if bc:
+                        item["name"] = bc
+                    # Update URL if present
+                    if "item" in item:
+                        item["item"] = item["item"].replace(
+                            "https://reroutenj.org/",
+                            f"https://reroutenj.org/{lang}/"
+                        )
+                elif pos == 3:
+                    # Third-level breadcrumb (blog post title)
+                    bc = get_translation(translations, f"schema.breadcrumb_{page_key}")
+                    if bc:
+                        item["name"] = bc
+
+        elif schema_type == "CollectionPage":
+            name = get_translation(translations, "schema.collection_name")
+            desc = get_translation(translations, "schema.collection_description")
+            if name:
+                data["name"] = name
+            if desc:
+                data["description"] = desc
+            # Update page URL
+            if "url" in data:
+                data["url"] = data["url"].replace(
+                    "https://reroutenj.org/",
+                    f"https://reroutenj.org/{lang}/"
+                )
+            # Translate item list entries
+            main_entity = data.get("mainEntity", {})
+            if main_entity.get("@type") == "ItemList":
+                for item in main_entity.get("itemListElement", []):
+                    item_key = f"schema.collection_item{item.get('position', 0)}"
+                    item_name = get_translation(translations, item_key)
+                    if item_name:
+                        item["name"] = item_name
+                    if "url" in item:
+                        item["url"] = item["url"].replace(
+                            "https://reroutenj.org/",
+                            f"https://reroutenj.org/{lang}/"
+                        )
+
+        elif schema_type == "Article":
+            # Determine which article (blog_post, blog_post_embed, or blog_post_cutover)
+            if page_key == "blog_post":
+                art_prefix = "article1"
+            elif page_key == "blog_post_embed":
+                art_prefix = "article2"
+            elif page_key == "blog_post_cutover":
+                art_prefix = "article3"
+            else:
+                art_prefix = None
+
+            if art_prefix:
+                headline = get_translation(translations, f"schema.{art_prefix}_headline")
+                desc = get_translation(translations, f"schema.{art_prefix}_description")
+                if headline:
+                    data["headline"] = headline
+                if desc:
+                    data["description"] = desc
+                # Update mainEntityOfPage URL
+                mep = data.get("mainEntityOfPage", {})
+                if "@id" in mep:
+                    mep["@id"] = mep["@id"].replace(
+                        "https://reroutenj.org/",
+                        f"https://reroutenj.org/{lang}/"
+                    )
+
+        new_json = json.dumps(data, ensure_ascii=False, indent=4)
+        return prefix + new_json + "\n  " + suffix
+
+    return pattern.sub(replace_block, html)
+
+
 def generate_page(page_name, lang, translations):
     """Generate a single translated page."""
     src_path = os.path.join(PROJECT_ROOT, page_name)
@@ -1593,6 +1889,9 @@ def generate_page(page_name, lang, translations):
 
     # 4. Replace page-specific content
     html = replace_page_specific_content(html, translations, page_key)
+
+    # 4.5. Translate JSON-LD structured data
+    html = translate_jsonld(html, translations, page_key, lang, page_name)
 
     # 5. Inject translations for JS runtime
     html = inject_translations_script(html, translations, page_name)

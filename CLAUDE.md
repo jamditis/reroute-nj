@@ -21,6 +21,7 @@ map.html                  — Interactive Leaflet map
 embed.html                — Embed & share configurator
 blog.html                 — Blog index (lists posts)
 blog/                     — Blog posts (individual articles)
+  cutover-begins.html
   why-we-built-reroute-nj.html
   new-embed-system.html
 card.html                 — Info card renderer (URL params → card)
@@ -29,42 +30,42 @@ robots.txt                — Crawler guidance + AI bot allowances
 sitemap.xml               — All 90 pages with hreflang cross-refs
 llms.txt                  — AI search engine discoverability
 js/
-  i18n.js                 — Runtime translation loader (105 lines)
+  i18n.js                 — Runtime translation loader (128 lines)
   shared.js               — Shared globals: esc(), countdown, dates, a11y (191 lines)
   line-data.js            — LINE_DATA and LINE_ORDER globals (245 lines)
   app.js                  — Line guide logic (IIFE, 1081 lines)
   compare.js              — Comparison tool (IIFE, 722 lines)
-  coverage.js             — Coverage feed (IIFE, 240 lines)
+  coverage.js             — Coverage feed (IIFE, 380 lines)
   map.js                  — Leaflet map logic (IIFE, 427 lines)
   cards.js                — Card rendering + Canvas PNG export (IIFE, 593 lines)
   embed.js                — Embed configurator logic (IIFE, 786 lines)
   widget.js               — Standalone script-tag embed library (IIFE, 163 lines)
 css/
-  styles.css              — All styles, CSS custom properties in :root (3295 lines)
+  styles.css              — All styles, CSS custom properties in :root (3449 lines)
 img/
   favicon.svg             — SVG favicon
   og-image.png            — OpenGraph social preview image
   screenshot.png          — README screenshot
 data/
-  coverage.json           — Article metadata (24 articles, auto-updated by scraper)
+  coverage.json           — Article metadata (111 articles, auto-updated by scraper)
   sources.json            — Citation database (28 verified claims with source links)
   source-registry.json    — Source freshness tracking and verification windows
 translations/
-  en.json                 — English source strings (~300 keys)
+  en.json                 — English source strings (~548 keys)
   {lang}.json             — 10 translated language files
 tools/
-  generate-pages.py       — Static page generator for translations (1556 lines)
+  generate-pages.py       — Static page generator for translations (1788 lines)
   validate-data.py        — Data integrity and source verification checks
   validate-research-pipeline.py — Source registry schema and freshness validator
   scrape-coverage.py      — Automated article discovery (GDELT + RSS, stdlib only, ~550 lines)
   scrape-config.json      — Scraper config: GDELT queries, RSS feeds, keyword maps
-tests/                    — 14 test suites with 698+ automated checks
+tests/                    — 14 test suites with 948+ automated checks
 docs/plans/               — Implementation design docs (SEO, embed system)
 .github/
   workflows/static.yml    — GitHub Pages deployment
   ISSUE_TEMPLATE/         — Bug report, data correction, feature request, content suggestion
   pull_request_template.md
-{lang}/                   — Generated translated pages (80 total, 8 pages × 10 languages)
+{lang}/                   — Generated translated pages (100 total, 10 pages × 10 languages)
 ```
 
 ### Script load order
@@ -121,22 +122,24 @@ English (`en`), Spanish (`es`), Chinese Simplified (`zh`), Tagalog (`tl`), Korea
 
 ### SEO in the translation pipeline
 
-`generate-pages.py` handles four SEO-related replacements on every translated page:
+`generate-pages.py` handles five SEO-related replacements on every translated page:
 
 - **`replace_meta_description()`** — Swaps `<meta name="description">`, `og:description`, and `twitter:description` with translated values from `meta.{page}_description` and `meta.{page}_og_description` keys
 - **`fix_og_url()`** — Rewrites `og:url` to point to the translated page (e.g., `https://reroutenj.org/es/index.html`)
 - **`add_canonical()`** — Replaces or inserts `<link rel="canonical">` pointing to the translated page's own URL
 - **`add_hreflang_tags()`** — Adds `<link rel="alternate" hreflang="...">` tags for all 11 languages + x-default
+- **`translate_jsonld()`** — Translates JSON-LD structured data (WebSite, FAQPage, BreadcrumbList, CollectionPage, Article) using `schema.*` keys, with language-prefixed URLs
 
-These run after `replace_meta()` in the `generate_page()` function. If a translation key is missing, the English value passes through unchanged.
+These run in the `generate_page()` function pipeline. If a translation key is missing, the English value passes through unchanged.
 
 ### Key rules for translations
 
-- **Keys use dot notation** organized by page: `index.*`, `compare.*`, `coverage.*`, `map.*`, `embed.*`, `blog.*` (index), `blog_post.*` (first article), `blog_post_embed.*` (second article), `common.*`, `meta.*`
+- **Keys use dot notation** organized by page: `index.*`, `compare.*`, `coverage.*`, `map.*`, `embed.*`, `blog.*` (index), `blog_post.*` (first article), `blog_post_embed.*` (second article), `common.*`, `meta.*`, `schema.*` (JSON-LD structured data)
 - **Station names, line names, and place names stay in English** — they're proper nouns on physical signage
 - **HTML markup in translations** — Translation values can contain `<strong>`, `<a>`, `<code>` tags
 - **HTML entities must match exactly** — The generator uses `str.replace()`, so `&hellip;` and `…` are different strings. Match what's in the source HTML.
 - **Blog post pages use `PAGE_KEY_MAP`** — Maps page filenames to translation key prefixes:
+  - `blog/cutover-begins.html` → `blog_post_cutover`
   - `blog/why-we-built-reroute-nj.html` → `blog_post`
   - `blog/new-embed-system.html` → `blog_post_embed`
   - Add new blog posts to both `PAGES` and `PAGE_KEY_MAP` in generate-pages.py.
@@ -147,7 +150,7 @@ These run after `replace_meta()` in the `generate_page()` function. If a transla
 1. Add key to `translations/en.json`
 2. Add replacement logic in `tools/generate-pages.py` (in `replace_page_specific_content()` under the correct page's `if/elif` block)
 3. Add translated values to all 10 language files: es, zh, tl, ko, pt, gu, hi, it, ar, pl
-4. Run `python3 tools/generate-pages.py` to regenerate all 80 pages
+4. Run `python3 tools/generate-pages.py` to regenerate all 100 pages
 5. Spot-check at least 2 languages for correct output
 
 ### Adding a new blog post
@@ -208,7 +211,7 @@ Four output formats: iframe embed, script tag, PNG download, self-contained HTML
 - **`robots.txt`** — Allows all crawlers; explicit AI bot allowances (GPTBot, ClaudeBot, PerplexityBot, Google-Extended)
 - **`sitemap.xml`** — 90 pages with `xhtml:link` hreflang cross-references for 11 languages
 - **`llms.txt`** — Structured overview for AI search tools following the [llms.txt standard](https://llmstxt.org)
-- **JSON-LD structured data** — WebSite, FAQPage, Article, and BreadcrumbList schemas
+- **JSON-LD structured data** — WebSite, FAQPage, Article, BreadcrumbList, and CollectionPage schemas, translated per-language with localized URLs
 - **Canonical tags** — Self-referencing on every page (English and translated)
 - **Translated meta descriptions** — Each language has its own meta/OG tags
 
@@ -245,6 +248,41 @@ Also verify manually:
 7. After translation changes, check 2+ translated pages for untranslated English
 8. After data changes, verify card.html and widget.html render correctly with URL params
 
+## Coverage scraper
+
+The scraper (`tools/scrape-coverage.py`) runs 4x daily via cron (00:10, 06:10, 12:10, 18:10) during the cutover period (Feb 15 – Mar 15). It uses the workstation venv (`~/.claude/workstation/venv/bin/python3`).
+
+### What it does each run
+
+1. **Checks official sources** — scrapes NJ Transit and Amtrak pages via Firecrawl, hashes content, compares to previous hash. Changes are logged to `~/.claude/workstation/reroute-snapshots/changelog.log` (no Telegram alert).
+2. **Discovers new articles** — polls RSS feeds (NJ Transit, NJ.com, Gothamist) and Google News, scrapes candidates, validates relevance, deduplicates by URL.
+3. **Commits and pushes** — auto-commits `data/coverage.json` and `data/source-registry.json`, pulls with rebase, then pushes.
+
+### Notification policy
+
+Telegram alerts go to Joe's phone — use them only for errors.
+
+| Event | Action |
+|-------|--------|
+| Official source content changed | Log to `changelog.log` + scraper log |
+| New articles found | Log only |
+| Metadata corrections | Log only |
+| Git push failure | Telegram alert |
+| Scraper crash | Telegram alert |
+
+### Key paths
+
+| Path | Purpose |
+|------|---------|
+| `~/.claude/workstation/logs/reroute-scrape.log` | Scraper log (all runs) |
+| `~/.claude/workstation/reroute-snapshots/` | Official source content snapshots + hashes |
+| `~/.claude/workstation/reroute-snapshots/changelog.log` | Append-only log of official source changes |
+| `tools/scrape-config.json` | Source URLs, RSS feeds, keywords, classification rules |
+
+### Git push handling
+
+The scraper does `git pull --rebase` before pushing to handle remote divergence from PRs or manual commits. If rebase conflicts occur (rare — only data files change), the push fails and sends a Telegram alert.
+
 ## Common tasks
 
 | Task | Command |
@@ -259,14 +297,31 @@ Also verify manually:
 | Run coverage scraper | `python3 tools/scrape-coverage.py` |
 | Scraper dry run | `python3 tools/scrape-coverage.py --dry-run` |
 | Verify existing articles | `python3 tools/scrape-coverage.py --verify` |
+| Check article links | `python3 tools/scrape-coverage.py --check-links` |
 | Deploy | Push to `main` (GitHub Pages auto-deploys via `.github/workflows/static.yml`) |
 
 ## File counts
 
-- **HTML pages:** 101 total (9 English base + 2 blog posts + 90 translated)
-- **JS files:** 10 in `js/` (~4,553 lines total)
-- **CSS:** 1 file (~3,295 lines)
-- **Translation files:** 11 JSON (~457 keys each)
-- **Data files:** 3 JSON (24 articles + 28 citations + source registry)
-- **Test files:** 14 in `tests/` (698+ checks)
-- **Python scripts:** 4 in `tools/` (~3,492 lines total) + 1 JSON config
+- **HTML pages:** 112 total (7 English base + 3 blog posts + 2 utility + 100 translated)
+- **JS files:** 10 in `js/` (~4,716 lines total)
+- **CSS:** 1 file (~3,449 lines)
+- **Translation files:** 11 JSON (~548 keys each)
+- **Data files:** 3 JSON (111 articles + 28 citations + source registry)
+- **Test files:** 15 in `tests/` (985+ checks)
+- **Python scripts:** 4 in `tools/` (~3,849 lines total) + 1 JSON config
+
+## Lessons learned
+
+### i18n dual-source English is a recurring bug factory (Feb 14-16, 2026)
+
+English translations live in two places: `translations/en.json` (source of truth) and the hardcoded `EN` object in `js/i18n.js` (runtime fallback). This has caused three bugs in three days:
+
+- **Feb 14-15:** New `coverage.*` keys added to en.json but not the `EN` object. English pages showed raw keys like `coverage.page_of`.
+- **Feb 16:** `widget.html` set `window._T = {}` for English, which is truthy. `i18n.js` checks `if (!window._T)` and skipped loading `EN`. NJ101.5 traffic page embed showed raw keys like `js.schedule_changes`.
+
+**Rules to prevent recurrence:**
+
+1. **When adding keys to en.json that will be used by `t()` calls in JS**, also add them to the `EN` object in `i18n.js`. Template-only keys (titles, hero text, meta descriptions used by generate-pages.py) don't need to be in `EN`.
+2. **Never set `window._T` to `{}` or any truthy value** before `i18n.js` loads, unless you're providing a complete translation object. An empty object blocks the `EN` fallback.
+3. **Run `node tests/test-i18n-sync.js`** after any translation or i18n change. This test suite validates all three layers: EN object parsing, t() call resolution, and widget.html translation loading.
+4. **The `t()` function returns the raw key string on failure.** If you see dot-notation strings in the UI (like `js.schedule_changes`), it means `window._T` doesn't have that key path.

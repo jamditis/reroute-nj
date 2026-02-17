@@ -32,11 +32,21 @@
     both: "Both directions",
   };
 
+  var CATEGORY_WEIGHT = {
+    official: 5,
+    news: 4,
+    analysis: 3,
+    opinion: 2,
+    community: 1,
+  };
+
   // =========================================================================
   // STATE
   // =========================================================================
   var articles = [];
   var searchTimer = null;
+  var currentPage = 1;
+  var ITEMS_PER_PAGE = 15;
 
   // =========================================================================
   // DOM
@@ -48,6 +58,9 @@
   var $filterLine = document.getElementById("filter-line");
   var $filterDirection = document.getElementById("filter-direction");
   var $filterSearch = document.getElementById("filter-search");
+  var $filterSort = document.getElementById("filter-sort");
+  var $pagination = document.getElementById("coverage-pagination");
+  var $resultCount = document.getElementById("coverage-result-count");
 
   // =========================================================================
   // DATA LOADING
@@ -85,6 +98,8 @@
     wrapper.appendChild(p);
     $feed.textContent = "";
     $feed.appendChild(wrapper);
+    $pagination.innerHTML = "";
+    $resultCount.textContent = "";
   }
 
   // =========================================================================
@@ -131,6 +146,44 @@
   }
 
   // =========================================================================
+  // SORTING
+  // =========================================================================
+  function getRelevanceScore(article) {
+    var catScore = CATEGORY_WEIGHT[article.category] || 1;
+    var now = new Date();
+    var articleDate = new Date(article.date);
+    var daysDiff = Math.max(0, (now - articleDate) / (1000 * 60 * 60 * 24));
+    var recencyScore = Math.max(0, 10 - daysDiff * 0.3);
+    var scopeScore = 0;
+    for (var i = 0; i < article.lines.length; i++) {
+      if (article.lines[i] === "all") { scopeScore = 2; break; }
+      scopeScore += 1;
+    }
+    return catScore * 3 + recencyScore + scopeScore;
+  }
+
+  function sortArticles(filtered) {
+    var sortMode = $filterSort.value;
+    if (sortMode === "relevance") {
+      filtered.sort(function (a, b) {
+        var sa = getRelevanceScore(a);
+        var sb = getRelevanceScore(b);
+        if (sb !== sa) return sb - sa;
+        return a.date < b.date ? 1 : a.date > b.date ? -1 : 0;
+      });
+    } else if (sortMode === "oldest") {
+      filtered.sort(function (a, b) {
+        return a.date < b.date ? -1 : a.date > b.date ? 1 : 0;
+      });
+    } else {
+      filtered.sort(function (a, b) {
+        return a.date < b.date ? 1 : a.date > b.date ? -1 : 0;
+      });
+    }
+    return filtered;
+  }
+
+  // =========================================================================
   // RENDERING
   // All dynamic text from article data passes through esc() before insertion.
   // =========================================================================
@@ -143,19 +196,101 @@
         '<div class="empty-icon">&#x1F4F0;</div>' +
         "<p>" + t("coverage.no_articles") + "</p>" +
         "</div>";
+      $pagination.innerHTML = "";
+      $resultCount.textContent = "";
       return;
     }
 
-    // Sort newest first
-    filtered.sort(function (a, b) {
-      return a.date < b.date ? 1 : a.date > b.date ? -1 : 0;
-    });
+    sortArticles(filtered);
+
+    var totalPages = Math.ceil(filtered.length / ITEMS_PER_PAGE);
+    if (currentPage > totalPages) currentPage = totalPages;
+    if (currentPage < 1) currentPage = 1;
+
+    var startIdx = (currentPage - 1) * ITEMS_PER_PAGE;
+    var endIdx = Math.min(startIdx + ITEMS_PER_PAGE, filtered.length);
+    var pageItems = filtered.slice(startIdx, endIdx);
+
+    // Result count
+    var showingText = t("coverage.showing") || "Showing";
+    var ofText = t("coverage.of") || "of";
+    var articlesText = t("coverage.articles_count") || "articles";
+    $resultCount.textContent = showingText + " " + (startIdx + 1) + "\u2013" + endIdx + " " + ofText + " " + filtered.length + " " + articlesText;
 
     var html = "";
-    for (var i = 0; i < filtered.length; i++) {
-      html += renderCard(filtered[i]);
+    for (var i = 0; i < pageItems.length; i++) {
+      html += renderCard(pageItems[i]);
     }
     $feed.innerHTML = html;
+
+    renderPagination(totalPages, filtered.length);
+  }
+
+  function renderPagination(totalPages, totalItems) {
+    if (totalPages <= 1) {
+      $pagination.innerHTML = "";
+      return;
+    }
+
+    var prevLabel = t("coverage.prev") || "Previous";
+    var nextLabel = t("coverage.next") || "Next";
+    var pageLabel = t("coverage.page") || "Page";
+    var pageOfLabel = (t("coverage.page_of") || "Page {current} of {total}")
+      .replace("{current}", currentPage)
+      .replace("{total}", totalPages);
+
+    var html = '<nav class="pagination-nav" role="navigation" aria-label="' + esc(t("coverage.pagination_label") || "Article pagination") + '">';
+
+    html += '<button class="pagination-btn pagination-prev" type="button"' +
+      (currentPage <= 1 ? ' disabled aria-disabled="true"' : "") +
+      ' aria-label="' + esc(t("coverage.go_prev") || "Go to previous page") + '">' +
+      '<span class="pagination-arrow" aria-hidden="true">\u2190</span> ' +
+      '<span class="pagination-btn-text">' + esc(prevLabel) + '</span>' +
+      "</button>";
+
+    html += '<span class="pagination-info" role="status" aria-live="polite" aria-atomic="true">' +
+      esc(pageOfLabel) +
+      "</span>";
+
+    html += '<button class="pagination-btn pagination-next" type="button"' +
+      (currentPage >= totalPages ? ' disabled aria-disabled="true"' : "") +
+      ' aria-label="' + esc(t("coverage.go_next") || "Go to next page") + '">' +
+      '<span class="pagination-btn-text">' + esc(nextLabel) + '</span>' +
+      ' <span class="pagination-arrow" aria-hidden="true">\u2192</span>' +
+      "</button>";
+
+    html += "</nav>";
+    $pagination.innerHTML = html;
+
+    var prevBtn = $pagination.querySelector(".pagination-prev");
+    var nextBtn = $pagination.querySelector(".pagination-next");
+    if (prevBtn) {
+      prevBtn.addEventListener("click", function () {
+        if (currentPage > 1) {
+          currentPage--;
+          renderFeed();
+          scrollToFeed("next");
+        }
+      });
+    }
+    if (nextBtn) {
+      nextBtn.addEventListener("click", function () {
+        if (currentPage < totalPages) {
+          currentPage++;
+          renderFeed();
+          scrollToFeed("prev");
+        }
+      });
+    }
+  }
+
+  function scrollToFeed(focusTarget) {
+    var filtersEl = document.getElementById("coverage-filters");
+    if (filtersEl) {
+      filtersEl.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+    // Move focus to the feed region so screen readers announce new content
+    $feed.focus({ preventScroll: true });
   }
 
   function renderCard(article) {
@@ -208,12 +343,16 @@
   // EVENT LISTENERS
   // =========================================================================
   function onFilterChange() {
+    currentPage = 1;
     renderFeed();
   }
 
   function onSearchInput() {
     if (searchTimer) clearTimeout(searchTimer);
-    searchTimer = setTimeout(renderFeed, 200);
+    searchTimer = setTimeout(function () {
+      currentPage = 1;
+      renderFeed();
+    }, 200);
   }
 
   // =========================================================================
@@ -227,6 +366,7 @@
     $filterCategory.addEventListener("change", onFilterChange);
     $filterLine.addEventListener("change", onFilterChange);
     $filterDirection.addEventListener("change", onFilterChange);
+    $filterSort.addEventListener("change", onFilterChange);
     $filterSearch.addEventListener("input", onSearchInput);
 
     loadData();

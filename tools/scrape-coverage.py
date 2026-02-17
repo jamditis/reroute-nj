@@ -166,6 +166,20 @@ def is_excluded_url(url):
     return False
 
 
+def check_url_status(url, timeout=10):
+    """HEAD request to verify URL returns 200. Returns (status_code, final_url) or (None, None) on error."""
+    try:
+        req = Request(url, method="HEAD", headers={"User-Agent": USER_AGENT})
+        resp = urlopen(req, timeout=timeout)
+        return resp.status, resp.url
+    except HTTPError as e:
+        return e.code, url
+    except Exception as e:
+        logging.warning("URL check failed for %s: %s", url, e)
+        return None, None
+
+
+
 def extract_date_from_url(url):
     """Try to extract date from URL path like /2026/02/13/..."""
     match = re.search(r"/(\d{4})/(\d{2})/(\d{2})/", url)
@@ -756,6 +770,11 @@ def git_commit_and_push(message):
             ["git", "commit", "-m", message],
             cwd=PROJECT_DIR, check=True, capture_output=True, timeout=30,
         )
+        # Pull with rebase before pushing to handle remote divergence
+        subprocess.run(
+            ["git", "pull", "--rebase", "origin", "main"],
+            cwd=PROJECT_DIR, check=True, capture_output=True, text=True, timeout=60,
+        )
         result = subprocess.run(
             ["git", "push", "origin", "main"],
             cwd=PROJECT_DIR, check=True, capture_output=True, text=True, timeout=60,
@@ -941,11 +960,7 @@ def run_discover(config, dry_run=False):
     )
     git_commit_and_push(commit_msg)
 
-    # Telegram notification
-    summary = ["Reroute NJ: added %d new article(s)" % len(new_articles)]
-    for a in new_articles[:5]:
-        summary.append("- %s: %s" % (a["source"], a["title"][:60]))
-    send_telegram("\n".join(summary))
+    logging.info("Added %d article(s) and pushed to remote.", len(new_articles))
 
     return len(new_articles)
 
@@ -1034,8 +1049,41 @@ def run_verify(dry_run=False):
     commit_msg = "Fix metadata for %d coverage article(s)\n\nVerified against source pages." % applied
     git_commit_and_push(commit_msg)
 
-    send_telegram("Reroute NJ: corrected metadata for %d article(s)" % applied)
+    logging.info("Corrected metadata for %d article(s).", applied)
     return applied
+
+
+def run_check_links():
+    """Check HTTP status of all article URLs in coverage.json."""
+    coverage_data = load_coverage()
+    articles = coverage_data.get("articles", [])
+    total = len(articles)
+    broken = []
+    ok = 0
+
+    for i, article in enumerate(articles):
+        url = article["url"]
+        logging.info("[%d/%d] Checking %s", i + 1, total, article["id"])
+
+        status, final_url = check_url_status(url)
+
+        if status == 200:
+            ok += 1
+        elif status is not None:
+            broken.append({"id": article["id"], "url": url, "status": status})
+            logging.warning("  BROKEN: HTTP %d", status)
+        else:
+            broken.append({"id": article["id"], "url": url, "status": "error"})
+            logging.warning("  ERROR: could not connect")
+
+    logging.info("Link check: %d OK, %d broken out of %d total", ok, len(broken), total)
+
+    if broken:
+        print("\nBroken links:")
+        for b in broken:
+            print("  %s: HTTP %s -- %s" % (b["id"], b["status"], b["url"]))
+
+    return len(broken)
 
 
 # ---------------------------------------------------------------------------
@@ -1050,10 +1098,17 @@ def main():
                         help="Verify existing articles instead of discovering new ones")
     parser.add_argument("--dry-run", action="store_true",
                         help="Show changes without writing files")
+    parser.add_argument("--check-links", action="store_true",
+                        help="Check HTTP status of all article URLs")
     args = parser.parse_args()
 
     setup_logging()
     logging.info("=== Scraper run started (GDELT + RSS) ===")
+
+    if args.check_links:
+        count = run_check_links()
+        logging.info("=== Link check finished. %d broken. ===", count)
+        sys.exit(1 if count > 0 else 0)
 
     config = load_config()
 

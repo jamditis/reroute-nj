@@ -345,17 +345,17 @@
       '<div class="impact-body">' +
       '<div class="before-after">' +
       '<div class="before">' +
-      "<h4>" + t("js.before_normal") + "</h4>" +
+      "<h3>" + t("js.before_normal") + "</h3>" +
       '<div class="route-flow">' + beforeFlow + "</div>" +
       '<p class="route-note">' + beforeNote + "</p>" +
       "</div>" +
       '<div class="after">' +
-      "<h4>" + t("js.during_cutover") + "</h4>" +
+      "<h3>" + t("js.during_cutover") + "</h3>" +
       '<div class="route-flow">' + afterFlow + "</div>" +
       '<p class="route-note">' + afterNote + "</p>" +
       "</div>" +
       "</div>" +
-      '<div class="key-changes"><h4>' + t("js.what_you_need_to_know") + '</h4><ul>' +
+      '<div class="key-changes"><h3>' + t("js.what_you_need_to_know") + '</h3><ul>' +
       changes.map(function (c) { return "<li>" + esc(c) + "</li>"; }).join("") +
       "</ul></div>" +
       savingsHtml +
@@ -422,17 +422,17 @@
       '<div class="impact-body">' +
       '<div class="before-after">' +
       '<div class="before">' +
-      "<h4>" + t("js.before_normal") + "</h4>" +
+      "<h3>" + t("js.before_normal") + "</h3>" +
       '<div class="route-flow">' + beforeFlow + "</div>" +
       '<p class="route-note">' + line.trainsBefore + " daily trains on " + esc(line.name) + ".</p>" +
       "</div>" +
       '<div class="after">' +
-      "<h4>" + t("js.during_cutover_short") + "</h4>" +
+      "<h3>" + t("js.during_cutover_short") + "</h3>" +
       '<div class="route-flow">' + afterFlow + "</div>" +
       '<p class="route-note">Same ' + (isReverse ? "origin" : "destination") + ", fewer trains (" + line.trainsAfter + " daily). Expect delays from single-track operations at the Portal Bridge.</p>" +
       "</div>" +
       "</div>" +
-      '<div class="key-changes"><h4>' + t("js.what_you_need_to_know") + '</h4><ul>' +
+      '<div class="key-changes"><h3>' + t("js.what_you_need_to_know") + '</h3><ul>' +
       changes.map(function (c) { return "<li>" + c + "</li>"; }).join("") +
       "</ul></div>" +
       '<div class="weekend-note"><strong>Tip:</strong> Your route doesn\'t change, but your schedule does. Download the temporary schedule PDF from <a href="https://www.njtransit.com/portalcutover" target="_blank" rel="noopener">njtransit.com/portalcutover</a> and find your specific trains.</div>' +
@@ -509,17 +509,17 @@
       '<div class="impact-body">' +
       '<div class="before-after">' +
       '<div class="before">' +
-      "<h4>Before (normal one-seat ride)</h4>" +
+      "<h3>Before (normal one-seat ride)</h3>" +
       '<div class="route-flow">' + beforeFlow + "</div>" +
       '<p class="route-note">' + beforeNote + "</p>" +
       "</div>" +
       '<div class="after">' +
-      "<h4>" + t("js.during_cutover_short") + "</h4>" +
+      "<h3>" + t("js.during_cutover_short") + "</h3>" +
       '<div class="route-flow">' + afterFlow + "</div>" +
       '<p class="route-note">' + afterNote + "</p>" +
       "</div>" +
       "</div>" +
-      '<div class="key-changes"><h4>' + t("js.what_you_need_to_know") + '</h4><ul>' +
+      '<div class="key-changes"><h3>' + t("js.what_you_need_to_know") + '</h3><ul>' +
       changes.map(function (c) { return "<li>" + esc(c) + "</li>"; }).join("") +
       "</ul></div>" +
       '<div class="weekend-note"><strong>Alternative:</strong> If you can drive to Newark Penn Station, you can skip the Raritan Valley Line entirely and take an NEC train directly (reduced but still running). Or consider NJ Transit bus service as a backup — some routes serve the Raritan Valley corridor.</div>' +
