@@ -254,9 +254,11 @@ The scraper (`tools/scrape-coverage.py`) runs 4x daily via cron (00:10, 06:10, 1
 
 ### What it does each run
 
-1. **Checks official sources** — scrapes NJ Transit and Amtrak pages via Firecrawl, hashes content, compares to previous hash. Changes are logged to `~/.claude/workstation/reroute-snapshots/changelog.log` (no Telegram alert).
-2. **Discovers new articles** — polls RSS feeds (NJ Transit, NJ.com, Gothamist) and Google News, scrapes candidates, validates relevance, deduplicates by URL.
+1. **Checks official sources** — fetches NJ Transit and Amtrak pages, hashes content, compares to previous hash. Changes are logged to `~/.claude/workstation/reroute-snapshots/changelog.log` (no Telegram alert).
+2. **Discovers new articles** — polls RSS feeds (NJ Transit, NJ.com, Gothamist), GDELT DOC 2.0 API, and Google News. Uses stdlib `html.parser.HTMLParser` (MetaExtractor) for metadata extraction. Validates relevance, deduplicates by URL.
 3. **Commits and pushes** — auto-commits `data/coverage.json` and `data/source-registry.json`, pulls with rebase, then pushes.
+
+**Dependencies:** stdlib only (no Firecrawl, no external scraping services). Uses `urllib.request` for HTTP and `html.parser` for HTML metadata extraction.
 
 ### Notification policy
 

@@ -761,6 +761,7 @@ def validate_article(article):
 
 def git_commit_and_push(message):
     """Commit coverage changes and push to main."""
+    stashed = False
     try:
         subprocess.run(
             ["git", "add", "data/coverage.json", "data/source-registry.json"],
@@ -770,6 +771,12 @@ def git_commit_and_push(message):
             ["git", "commit", "-m", message],
             cwd=PROJECT_DIR, check=True, capture_output=True, timeout=30,
         )
+        # Stash any unrelated dirty files so rebase can proceed
+        stash_result = subprocess.run(
+            ["git", "stash", "push", "--quiet", "-m", "scraper-auto-stash"],
+            cwd=PROJECT_DIR, capture_output=True, text=True, timeout=30,
+        )
+        stashed = stash_result.returncode == 0
         # Pull with rebase before pushing to handle remote divergence
         subprocess.run(
             ["git", "pull", "--rebase", "origin", "main"],
@@ -785,6 +792,12 @@ def git_commit_and_push(message):
         logging.error("Git failed: %s %s", e.stdout, e.stderr)
         send_telegram("Reroute NJ scraper: git push failed.\n%s" % e.stderr)
         return False
+    finally:
+        if stashed:
+            subprocess.run(
+                ["git", "stash", "pop", "--quiet"],
+                cwd=PROJECT_DIR, capture_output=True, timeout=30,
+            )
 
 
 # ---------------------------------------------------------------------------
