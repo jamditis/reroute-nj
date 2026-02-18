@@ -333,15 +333,17 @@ def add_hreflang_tags(html, page_name):
         return html
 
     tags = []
+    # index.html at the root redirects to / on GitHub Pages — use the canonical URL
+    en_url = "https://reroutenj.org/" if page_name == "index.html" else f"https://reroutenj.org/{page_name}"
     for lang in ALL_LANGS:
         if lang == "en":
-            url = f"https://reroutenj.org/{page_name}"
+            url = en_url
         else:
             url = f"https://reroutenj.org/{lang}/{page_name}"
         tags.append(f'  <link rel="alternate" hreflang="{lang}" href="{url}">')
 
     # Add x-default pointing to English
-    tags.append(f'  <link rel="alternate" hreflang="x-default" href="https://reroutenj.org/{page_name}">')
+    tags.append(f'  <link rel="alternate" hreflang="x-default" href="{en_url}">')
 
     hreflang_block = "\n".join(tags)
 
