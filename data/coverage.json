@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-17T23:15:58Z",
+  "lastUpdated": "2026-02-18T05:10:45Z",
   "articles": [
     {
       "id": "cbs-news-portal-bridge-construction-creates-2026-02-17",
@@ -464,6 +464,34 @@
       "direction": "both"
     },
     {
+      "id": "theguardian-com-manhattan-commuters-urged-2026-02-17",
+      "title": "Manhattan commuters urged to work from home for weeks amid rail upgrade",
+      "url": "https://www.theguardian.com/us-news/2026/feb/17/new-jersey-transit-delays-manhattan-commuters",
+      "source": "theguardian.com",
+      "author": null,
+      "date": "2026-02-17",
+      "category": "news",
+      "excerpt": "Extensive works on key bridge in New Jersey – part of $16bn Gateway project – will disrupt rail services into New York",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "abc7-commuter-alert-some-2026-02-17",
+      "title": "Commuter Alert : Some NJ Transit trains diverted to Hoboken due to Portal Bridge cutover project",
+      "url": "https://abc7ny.com/post/nj-transit-trains-diverted-hoboken-due-portal-bridge-cutover-project/18611337/",
+      "source": "ABC7 New York",
+      "author": null,
+      "date": "2026-02-17",
+      "category": "news",
+      "excerpt": "The Portal Bridge cutover means service disruptions for NJ Transit and Amtrak commuters over the next four weeks. Some trains are diverted to Hoboken for the start of this temporary weekday schedule.",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
       "id": "travel-and-tour-world-massive-service-disruptions-ahead-2026-02-16",
       "title": "Massive Service Disruptions Ahead as NJ Transit and Amtrak Riders Face Major Changes with New Portal Bridge Construction – What You Need to Know!",
       "url": "https://news.google.com/rss/articles/CBMimwJBVV95cUxNbldTRlpESXByTkxUaFQ2VmpjRTE1Z0sxVjk1UmZjeG5HSEp4MGc4Mm90Z0Q2WWhBMWZwLUtjVGtDandOYTV6bmJlMW5VTW9TMVFpbWNvaU1jNV9OV3FsWUxOYzBLc09mZWU2WTl1WVUwbkYtV2M4U0JGcGNzdm91dHZhNTdfRVJuOWwzRmd0R2hzOFgxMWEtaHJJTEFpbUxjaS1kSlhNVlR3MWNWeWRTTi1LUUdibVpRNDNLWUMxVV8xSHRGZHBidmVtY3VKb2FESXRoN0JVaktLaFRWTnFpRWlmcWhES2FHSHFIblhfRlh6cGV6Qk9FanFtc1ZIV0NsczVwV3lGMzlyV1ZIMHdSU1FtaFlhQ0hpaXFr?oc=5&hl=en-US&gl=US&ceid=US:en",
@@ -682,6 +710,20 @@
       "date": "2026-02-16",
       "category": "news",
       "excerpt": "A big construction project is about to have a big effect on traffic in and out of NYC. It’s related to construction on the new Portal Bridge over the Hackensack River, which has been a problem for years whenever it gets stuck. NJ Transit says nearly every rail line will see changes, and Amtrak will also be disrupted. NBC New York’s Romney Smith reports. NJ Transit and Amtrak are warning its...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "yahoo-com-portal-bridge-cutover-begins-2026-02-16",
+      "title": "Portal Bridge cutover begins , impacting NJ Transit , Amtrak commuters",
+      "url": "https://www.yahoo.com/news/articles/portal-bridge-cutover-begins-impacting-122018640.html",
+      "source": "yahoo.com",
+      "author": null,
+      "date": "2026-02-16",
+      "category": "news",
+      "excerpt": "Starting Sunday, all rail lines except the Atlantic City Rail Line will experience temporary service adjustments during the cutover to the new Portal Bridge.",
       "lines": [
         "all"
       ],
