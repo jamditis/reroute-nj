@@ -1,6 +1,20 @@
 {
-  "lastUpdated": "2026-02-18T05:10:45Z",
+  "lastUpdated": "2026-02-18T17:13:46Z",
   "articles": [
+    {
+      "id": "yahoo-com-transit-urges-commuters-2026-02-18",
+      "title": "NJ Transit urges commuters to  work from home  during Portal Bridge cutover project",
+      "url": "https://www.yahoo.com/news/articles/nj-transit-suggests-commuters-home-125159792.html",
+      "source": "yahoo.com",
+      "author": null,
+      "date": "2026-02-18",
+      "category": "news",
+      "excerpt": "As the Portal Bridge cutover project continues, NJ Transit officials have now asked people to work from home if possible.",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
     {
       "id": "cbs-news-portal-bridge-construction-creates-2026-02-17",
       "title": "Portal Bridge construction creates headaches for NJ Transit riders",
