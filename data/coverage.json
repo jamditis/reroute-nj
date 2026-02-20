@@ -1,6 +1,20 @@
 {
-  "lastUpdated": "2026-02-19T23:11:56Z",
+  "lastUpdated": "2026-02-20T17:13:07Z",
   "articles": [
+    {
+      "id": "dailyprincetonian-com-gateway-tunnel-project-construction-2026-02-20",
+      "title": "Gateway tunnel project construction to disrupt spring break travel",
+      "url": "https://www.dailyprincetonian.com/article/2026/02/princeton-news-broadfocus-gateway-project-construction-disrupts-spring-break-travel",
+      "source": "dailyprincetonian.com",
+      "author": null,
+      "date": "2026-02-20",
+      "category": "news",
+      "excerpt": "Major construction on the Gateway tunnel project began this week, triggering a month-long reduction in rail service that may cause significant delays for students traveling during spring break.",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
     {
       "id": "njdotcom-heres-when-bridge-work-2026-02-19",
       "title": "Here’s when bridge work that has caused NJ Transit commuters headaches this week should be completed",
@@ -10,6 +24,34 @@
       "date": "2026-02-19",
       "category": "news",
       "excerpt": "After the first three days of a 53% service reduction, Amtrak and NJ Transit officials provided commuters with an update on the Portal Bridge North track cutover which is the cause of the reductions.",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "nydailynews-com-transit-and-amtrak-2026-02-19",
+      "title": "NJ Transit and Amtrak bridge work on schedule amid service cuts",
+      "url": "https://www.nydailynews.com/2026/02/19/nj-transit-amtrak-bridge-work-on-schedule/",
+      "source": "nydailynews.com",
+      "author": null,
+      "date": "2026-02-19",
+      "category": "news",
+      "excerpt": "Commutes between Gotham and the Garden State have been in disarray this week as NJ Transit and Amtrak crews work to transfer a track from the old Portal Bridge in the New Jersey Meadowlands to the …",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "aol-com-amtrak-transit-officials-2026-02-19",
+      "title": "Amtrak , NJ Transit officials give update on Portal Bridge construction project",
+      "url": "https://www.aol.com/articles/amtrak-nj-transit-officials-portal-223415440.html",
+      "source": "aol.com",
+      "author": "AOL",
+      "date": "2026-02-19",
+      "category": "news",
+      "excerpt": "Officials say the new Portal Bridge construction is on schedule.",
       "lines": [
         "all"
       ],
