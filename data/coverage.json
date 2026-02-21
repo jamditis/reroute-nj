@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-21T17:13:58Z",
+  "lastUpdated": "2026-02-21T23:12:25Z",
   "articles": [
     {
       "id": "njtransit-feb-2026-111038-2026-02-21",
@@ -10,6 +10,20 @@
       "date": "2026-02-21",
       "category": "official",
       "excerpt": "New Jersey Public Transportation Corporation - The Way To Go",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "zeenews-india-com-freedom-from-rounds-2026-02-21",
+      "title": "Freedom from rounds of govt offices ; 75 govt services now available for just Rs 30 at 7 , 000 centres across Delhi",
+      "url": "https://zeenews.india.com/india/delhi-cm-rekha-gupta-launches-cm-jan-sunwai-portal-e-district-ews-admissions-platform-2026-3019333.html",
+      "source": "zeenews.india.com",
+      "author": null,
+      "date": "2026-02-21",
+      "category": "news",
+      "excerpt": "Delhi Chief Minister Rekha Gupta on Saturday inaugurated the CM Jan Sunwai Portal and app, e-District services via CSC, and an online EWS/DG/CWSN admissions platform. These Digital India-inspired initiatives aim to make government services transparent, accessible, and corruption-free for Delhi residents.",
       "lines": [
         "all"
       ],
