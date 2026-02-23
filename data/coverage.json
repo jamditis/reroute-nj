@@ -1,6 +1,34 @@
 {
-  "lastUpdated": "2026-02-21T23:12:25Z",
+  "lastUpdated": "2026-02-23T23:13:27Z",
   "articles": [
+    {
+      "id": "gothamist-transit-light-rail-2026-02-23",
+      "title": "NJ Transit light rail resumes, but trains and buses remain suspended",
+      "url": "https://gothamist.com/news/nj-transit-light-rail-resumes-but-trains-and-buses-remain-suspended",
+      "source": "Gothamist",
+      "author": null,
+      "date": "2026-02-23",
+      "category": "news",
+      "excerpt": "Newark Light Rail and River LINE restart Monday afternoon. Most rail and bus service still halted after the blizzard.",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "enr-com-gateway-tunnel-construction-cleared-2026-02-23",
+      "title": "Gateway Tunnel Construction Cleared to Resume Amid Ongoing White House Attacks",
+      "url": "https://www.enr.com/articles/62559-gateway-tunnel-construction-cleared-to-resume-amid-ongoing-white-house-attacks",
+      "source": "enr.com",
+      "author": null,
+      "date": "2026-02-23",
+      "category": "news",
+      "excerpt": "Federal funds are flowing again to the $16-billion Hudson Tunnel Project, with work set to resume Monday, Feb. 23, weather permitting.",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
     {
       "id": "njtransit-feb-2026-111038-2026-02-21",
       "title": "Feb 21, 2026 11:10:38 AM",
