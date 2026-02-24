@@ -1,6 +1,34 @@
 {
-  "lastUpdated": "2026-02-23T23:13:27Z",
+  "lastUpdated": "2026-02-24T17:12:13Z",
   "articles": [
+    {
+      "id": "yahoo-com-transit-running-partial-2026-02-24",
+      "title": "NJ Transit running partial service ; most power back for customers after blizzard",
+      "url": "https://www.yahoo.com/news/articles/nj-transit-running-partial-most-105437997.html",
+      "source": "yahoo.com",
+      "author": null,
+      "date": "2026-02-24",
+      "category": "news",
+      "excerpt": "A limited President's Day holiday schedule was expected to run and customers should check their train's schedule before leaving.",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "abc7-blizzard-transit-2026-02-24",
+      "title": "NJ blizzard : NJ Transit running partial service ; most power back for customers",
+      "url": "https://abc7ny.com/post/nj-blizzard-transit-running-partial-service-most-power-back-customers/18643154/",
+      "source": "ABC7 New York",
+      "author": null,
+      "date": "2026-02-24",
+      "category": "news",
+      "excerpt": "A limited President's Day holiday schedule was expected to run and customers should check their train's schedule before leaving.",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
     {
       "id": "gothamist-transit-light-rail-2026-02-23",
       "title": "NJ Transit light rail resumes, but trains and buses remain suspended",
