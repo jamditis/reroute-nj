@@ -1,6 +1,34 @@
 {
-  "lastUpdated": "2026-02-24T17:12:13Z",
+  "lastUpdated": "2026-02-27T23:10:32Z",
   "articles": [
+    {
+      "id": "njdotcom-fire-path-hoboken-2026-02-27",
+      "title": "Fire at PATH Hoboken station shuts down service through rush hour",
+      "url": "https://www.nj.com/news/2026/02/fire-at-path-hoboken-station-shuts-down-service-through-rush-hour.html",
+      "source": "NJ.com",
+      "author": null,
+      "date": "2026-02-27",
+      "category": "news",
+      "excerpt": "A morning track fire in PATH's Hoboken station has suspended service to and from Hoboken for repairs. NJ Transit and ferries are honoring PATH fare cards.",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "njdotcom-blizzard-cost-day-2026-02-27",
+      "title": "Blizzard cost a day of work on bridge project that’s upending NJ Transit commute",
+      "url": "https://www.nj.com/news/2026/02/blizzard-cost-a-day-of-work-on-bridge-project-thats-upending-nj-transit-commute.html",
+      "source": "NJ.com",
+      "author": null,
+      "date": "2026-02-27",
+      "category": "news",
+      "excerpt": "Monday's blizzard put most of New Jersey at a standstill.",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
     {
       "id": "yahoo-com-transit-running-partial-2026-02-24",
       "title": "NJ Transit running partial service ; most power back for customers after blizzard",
