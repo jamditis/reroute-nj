@@ -389,6 +389,26 @@ def replace_hamburger_label(html, translations, page_key):
     return html
 
 
+def replace_hoboken_banner(html, translations):
+    """Replace Hoboken PATH banner text with translations."""
+    title = get_translation(translations, "common.hoboken_banner_title")
+    details = get_translation(translations, "common.hoboken_banner_details")
+    link_text = get_translation(translations, "common.hoboken_banner_link")
+    if title:
+        html = html.replace('<strong>PATH Alert:</strong>', f'<strong>{title}</strong>')
+    if details:
+        html = html.replace(
+            'Hoboken PATH service was suspended Feb 27 due to a tunnel fire and has resumed with delays. Riders transferring at Hoboken should allow extra time.',
+            details
+        )
+    if link_text:
+        html = html.replace(
+            'More info &rarr;',
+            link_text + ' &rarr;'
+        )
+    return html
+
+
 def replace_page_specific_content(html, translations, page_key):
     """Replace page-specific static content using translation keys."""
     if page_key == "index":
@@ -1888,6 +1908,7 @@ def generate_page(page_name, lang, translations):
     html = replace_meta_description(html, translations, page_key)
     html = fix_og_url(html, lang, page_name)
     html = add_canonical(html, lang, page_name)
+    html = replace_hoboken_banner(html, translations)
 
     # 4. Replace page-specific content
     html = replace_page_specific_content(html, translations, page_key)

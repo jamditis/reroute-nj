@@ -51,7 +51,10 @@
     "phase2_expected": "Fase 2 prevista",
     "nav_blog": "Blog",
     "menu": "Menu",
-    "nav_about": "Info"
+    "nav_about": "Info",
+    "hoboken_banner_title": "Avviso PATH:",
+    "hoboken_banner_details": "Il servizio PATH a Hoboken è stato sospeso il 27 febbraio a causa di un incendio in galleria ed è ripreso con ritardi. I passeggeri in transito a Hoboken dovrebbero prevedere tempo extra.",
+    "hoboken_banner_link": "Maggiori informazioni"
   },
   "index": {
     "title": "Reroute NJ — Guida al passaggio del Portal Bridge",

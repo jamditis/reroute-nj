@@ -51,7 +51,10 @@
     "phase2_expected": "चरण 2 अपेक्षित",
     "nav_blog": "ब्लॉग",
     "menu": "मेन्यू",
-    "nav_about": "परिचय"
+    "nav_about": "परिचय",
+    "hoboken_banner_title": "PATH अलर्ट:",
+    "hoboken_banner_details": "हॉबोकेन PATH सेवा 27 फरवरी को सुरंग में आग लगने के कारण निलंबित कर दी गई थी और देरी के साथ फिर से शुरू हो गई है। हॉबोकेन में ट्रांसफर करने वाले यात्रियों को अतिरिक्त समय रखना चाहिए।",
+    "hoboken_banner_link": "अधिक जानकारी"
   },
   "index": {
     "title": "Reroute NJ — Portal Bridge कटओवर गाइड",

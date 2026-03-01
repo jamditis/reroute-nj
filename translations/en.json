@@ -51,7 +51,10 @@
     "remaining_phase1": "remaining in Phase 1",
     "phase1_complete": "Phase 1 complete",
     "phase2_expected": "Phase 2 expected",
-    "menu": "Menu"
+    "menu": "Menu",
+    "hoboken_banner_title": "PATH Alert:",
+    "hoboken_banner_details": "Hoboken PATH service was suspended Feb 27 due to a tunnel fire and has resumed with delays. Riders transferring at Hoboken should allow extra time.",
+    "hoboken_banner_link": "More info"
   },
   "index": {
     "title": "Reroute NJ — Navigate the Portal Bridge cutover",
