@@ -51,7 +51,10 @@
     "phase2_expected": "Phase 2 inaasahan",
     "nav_blog": "Blog",
     "menu": "Menu",
-    "nav_about": "Tungkol"
+    "nav_about": "Tungkol",
+    "hoboken_banner_title": "PATH Alerto:",
+    "hoboken_banner_details": "Ang serbisyo ng PATH sa Hoboken ay nasuspinde noong Feb 27 dahil sa sunog sa tunel at nagpatuloy na may mga pagkaantala. Ang mga pasaherong naglilipat sa Hoboken ay dapat magdagdag ng oras.",
+    "hoboken_banner_link": "Higit pang impormasyon"
   },
   "index": {
     "title": "Reroute NJ — Gabay sa Portal Bridge cutover",

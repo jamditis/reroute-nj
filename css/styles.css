@@ -201,6 +201,31 @@ input:focus-visible,
   font-weight: 700;
 }
 
+/* Hoboken PATH banner */
+
+.hoboken-banner {
+  background: #d32f2f;
+  color: #fff;
+  padding: 0.6rem 1rem;
+  font-size: 0.85rem;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.hoboken-banner strong {
+  font-weight: 700;
+}
+
+.hoboken-banner a {
+  color: #fff;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.hoboken-banner a:hover {
+  opacity: 0.9;
+}
+
 /* Main */
 
 main.container {
@@ -2905,6 +2930,11 @@ body[data-contrast="high"] .alert-banner {
   border: 2px solid #ff0;
 }
 
+body[data-contrast="high"] .hoboken-banner {
+  background: #000;
+  border: 2px solid #ff0;
+}
+
 body[data-contrast="high"] .tagline {
   opacity: 1;
 }
@@ -2929,6 +2959,7 @@ body[data-view="simplified"] #secaucus,
 body[data-view="simplified"] #timeline,
 body[data-view="simplified"] #resources,
 body[data-view="simplified"] .alert-banner,
+body[data-view="simplified"] .hoboken-banner,
 body[data-view="simplified"] #for-publishers,
 body[data-view="simplified"] #custom-branding,
 body[data-view="simplified"] #contribute,

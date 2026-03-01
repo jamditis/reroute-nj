@@ -51,7 +51,10 @@
     "phase2_expected": "المرحلة 2 متوقعة",
     "nav_blog": "المدونة",
     "menu": "القائمة",
-    "nav_about": "حول"
+    "nav_about": "حول",
+    "hoboken_banner_title": "تنبيه PATH:",
+    "hoboken_banner_details": "تم تعليق خدمة PATH في هوبوكين في 27 فبراير بسبب حريق في النفق واستُؤنفت مع تأخيرات. يجب على الركاب المنتقلين في هوبوكين تخصيص وقت إضافي.",
+    "hoboken_banner_link": "مزيد من المعلومات"
   },
   "index": {
     "title": "Reroute NJ — دليل تحويل Portal Bridge",

@@ -51,7 +51,10 @@
     "phase2_expected": "第二阶段预计",
     "nav_blog": "博客",
     "menu": "菜单",
-    "nav_about": "关于"
+    "nav_about": "关于",
+    "hoboken_banner_title": "PATH 警报：",
+    "hoboken_banner_details": "霍博肯PATH服务于2月27日因隧道火灾暂停，目前已恢复运行但存在延误。在霍博肯换乘的乘客请预留额外时间。",
+    "hoboken_banner_link": "更多信息"
   },
   "index": {
     "title": "Reroute NJ — Portal Bridge转换指南",
