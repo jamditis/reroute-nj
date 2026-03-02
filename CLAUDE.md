@@ -72,7 +72,8 @@ tools/
 tests/                    — 14 test suites with 948+ automated checks
 docs/plans/               — Implementation design docs (SEO, embed system)
 .github/
-  workflows/static.yml    — GitHub Pages deployment
+  workflows/static.yml    — (disabled — GitHub Actions suspended)
+deploy.sh                 — Cloudflare Pages deploy script (Montclair account)
   ISSUE_TEMPLATE/         — Bug report, data correction, feature request, content suggestion
   pull_request_template.md
 {lang}/                   — Generated translated pages (100 total, 10 pages × 10 languages)
@@ -310,7 +311,7 @@ The scraper does `git pull --rebase` before pushing to handle remote divergence 
 | Scraper dry run | `python3 tools/scrape-coverage.py --dry-run` |
 | Verify existing articles | `python3 tools/scrape-coverage.py --verify` |
 | Check article links | `python3 tools/scrape-coverage.py --check-links` |
-| Deploy | Push to `main` (GitHub Pages auto-deploys via `.github/workflows/static.yml`) |
+| Deploy | `bash deploy.sh` (Cloudflare Pages direct upload, Montclair account) |
 
 ## File counts
 
