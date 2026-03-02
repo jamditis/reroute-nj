@@ -15,7 +15,7 @@ body:
     attributes:
       label: Page URL
       description: Which page were you on?
-      placeholder: "https://jamditis.github.io/reroute-nj/"
+      placeholder: "https://reroutenj.org/"
     validations:
       required: false
   - type: dropdown
