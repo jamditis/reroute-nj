@@ -1,6 +1,20 @@
 {
-  "lastUpdated": "2026-03-02T12:00:00Z",
+  "lastUpdated": "2026-03-03T23:13:14Z",
   "articles": [
+    {
+      "id": "amtrak-progress-continues-portal-2026-03-03",
+      "title": "Progress Continues of Portal North Bridge Cutover",
+      "url": "https://media.amtrak.com/2026/03/progress-continues-of-portal-north-bridge-cutover/",
+      "source": "Amtrak Media",
+      "author": "Jason Abrams",
+      "date": "2026-03-03",
+      "category": "official",
+      "excerpt": "NJ TRANSIT and Amtrak are replacing the 116-year-old Portal Bridge over the Hackensack River in New Jersey with a higher bridge, called Portal North Bridge, that will not have to open and close for river traffic. Beginning February 2026, Amtrak began to “cutover” or transfer one track of rail service from the existing bridge to the new Bridge, which will advance long-term reliability and capacity...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
     {
       "id": "njdotcom-fire-path-hoboken-2026-02-27",
       "title": "Fire at PATH Hoboken station shuts down service through rush hour",
