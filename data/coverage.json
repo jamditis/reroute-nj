@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-05T05:10:39Z",
+  "lastUpdated": "2026-03-05T17:10:37Z",
   "articles": [
     {
       "id": "njdotcom-supreme-court-rules-2026-03-05",
@@ -24,6 +24,20 @@
       "date": "2026-03-05",
       "category": "news",
       "excerpt": "Service between Hoboken and both 33rd Street and World Trade Center is suspended Wednesday evening, with NJ Transit and ferries cross-honoring fares.",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "njdotcom-transit-service-halted-2026-03-05",
+      "title": "NJ Transit service halted after body found near train tracks",
+      "url": "https://www.nj.com/union/2026/03/nj-transit-service-halted-after-body-found-near-train-tracks.html",
+      "source": "NJ.com",
+      "author": null,
+      "date": "2026-03-05",
+      "category": "news",
+      "excerpt": "The body was found west of Plainfield Station in Union County.",
       "lines": [
         "all"
       ],
