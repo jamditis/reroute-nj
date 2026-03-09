@@ -1,6 +1,20 @@
 {
-  "lastUpdated": "2026-03-08T22:10:41Z",
+  "lastUpdated": "2026-03-09T16:10:34Z",
   "articles": [
+    {
+      "id": "njdotcom-man-fatally-struck-2026-03-09",
+      "title": "Man fatally struck by NJ Transit bus",
+      "url": "https://www.nj.com/news/2026/03/man-fatally-struck-by-nj-transit-bus.html",
+      "source": "NJ.com",
+      "author": null,
+      "date": "2026-03-09",
+      "category": "news",
+      "excerpt": "The pedestrian was struck Sunday evening.",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
     {
       "id": "njdotcom-new-89unit-luxury-apartment-2026-03-08",
       "title": "New 89-unit luxury apartment complex proposed near key NJ Transit station",
