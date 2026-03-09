@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-09T16:10:34Z",
+  "lastUpdated": "2026-03-09T22:10:32Z",
   "articles": [
     {
       "id": "njdotcom-man-fatally-struck-2026-03-09",
@@ -10,6 +10,20 @@
       "date": "2026-03-09",
       "category": "news",
       "excerpt": "The pedestrian was struck Sunday evening.",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "yahoo-com-after-weeks-disruptions-2026-03-09",
+      "title": "After weeks of disruptions for Amtrak and NJ Transit commuters , here when the latest bridge work will be finished",
+      "url": "https://www.yahoo.com/news/articles/nj-transit-amtrak-commuters-normal-183315363.html",
+      "source": "yahoo.com",
+      "author": null,
+      "date": "2026-03-09",
+      "category": "news",
+      "excerpt": "This week will answer the question on the minds of NJ Transit commuters- will I get my regular train schedules back? It all hinges on finishing work on this bridge this week,",
       "lines": [
         "all"
       ],
