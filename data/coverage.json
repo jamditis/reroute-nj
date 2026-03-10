@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-10T16:10:38Z",
+  "lastUpdated": "2026-03-10T22:10:36Z",
   "articles": [
     {
       "id": "njdotcom-transit-riders-face-2026-03-10",
@@ -10,6 +10,20 @@
       "date": "2026-03-10",
       "category": "news",
       "excerpt": "NJ Transit trains in and out of NYC have 60 minute delays due to Amtrak issues.",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "njdotcom-transit-riders-face-2026-03-10-issue-continues-html",
+      "title": "NJ Transit riders face 45-minute delays as Amtrak issue continues",
+      "url": "https://www.nj.com/news/2026/03/nj-transit-riders-face-45-minute-delays-as-amtrak-issue-continues.html",
+      "source": "NJ.com",
+      "author": null,
+      "date": "2026-03-10",
+      "category": "news",
+      "excerpt": "An ongoing Amtrak signal problem is causing delays on NJ Transit and Amtrak trains running between New York and Newark.",
       "lines": [
         "all"
       ],
