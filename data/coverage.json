@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-11T16:10:41Z",
+  "lastUpdated": "2026-03-11T22:12:02Z",
   "articles": [
     {
       "id": "njdotcom-dozens-passengers-evacuate-2026-03-11",
@@ -26,6 +26,20 @@
       "excerpt": "Gov. Mikie Sherrill's proposed state budget adds $125 million to NJ Transit's operating budget. But not everyone is happy with where the cash is coming from.",
       "lines": [
         "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "njdotcom-transit-service-stopped-2026-03-11",
+      "title": "NJ Transit service stopped because of a police investigation",
+      "url": "https://www.nj.com/hunterdon/2026/03/nj-transit-service-stopped-because-of-a-police-investigation.html",
+      "source": "NJ.com",
+      "author": null,
+      "date": "2026-03-11",
+      "category": "news",
+      "excerpt": "The suspension affects a part of the Raritan Valley Line in Hunterdon County.",
+      "lines": [
+        "raritan-valley"
       ],
       "direction": "both"
     },
