@@ -1,6 +1,20 @@
 {
-  "lastUpdated": "2026-03-10T22:10:36Z",
+  "lastUpdated": "2026-03-11T04:10:39Z",
   "articles": [
+    {
+      "id": "njdotcom-dozens-passengers-evacuate-2026-03-11",
+      "title": "Dozens of passengers evacuate NJ Transit bus that caught fire after hitting a pothole",
+      "url": "https://www.nj.com/essex/2026/03/dozens-of-passengers-evacuate-nj-transit-bus-that-caught-fire-after-hitting-a-pothole.html",
+      "source": "NJ.com",
+      "author": null,
+      "date": "2026-03-11",
+      "category": "news",
+      "excerpt": "No passengers were injured during the incident.",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
     {
       "id": "njdotcom-transit-riders-face-2026-03-10",
       "title": "NJ Transit riders face 60-minute delays due to Amtrak issue",
