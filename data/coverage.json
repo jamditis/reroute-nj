@@ -1,6 +1,62 @@
 {
-  "lastUpdated": "2026-03-11T22:12:02Z",
+  "lastUpdated": "2026-03-12T22:10:48Z",
   "articles": [
+    {
+      "id": "amtrak-transit-and-amtrak-2026-03-12",
+      "title": "NJ TRANSIT and Amtrak Prepare to Open First Track on New Portal North Bridge",
+      "url": "https://media.amtrak.com/2026/03/nj-transit-and-amtrak-prepare-to-open-first-track-on-new-portal-north-bridge/",
+      "source": "Amtrak Media",
+      "author": "Jason Abrams",
+      "date": "2026-03-12",
+      "category": "official",
+      "excerpt": "Ceremonial First Train Ride Over the New Bridge Marks Major Milestone For Service Reliability on Northeast Corridor; Second Track To Be Cutover in the Fall KEARNY, NJ — New Jersey Governor Mikie Sherrill, NJ TRANSIT and Amtrak celebrated a major milestone at the Portal North Bridge in Kearny by riding a ceremonial train over the bridge, which will have one track officially go into passenger...",
+      "lines": [
+        "northeast-corridor"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "gothamist-transit-opens-new-2026-03-12",
+      "title": "NJ Transit opens new bridge over Hackensack River, enabling faster train speeds",
+      "url": "https://gothamist.com/news/nj-transit-opens-new-bridge-over-hackensack-river-enabling-faster-train-speeds",
+      "source": "Gothamist",
+      "author": null,
+      "date": "2026-03-12",
+      "category": "news",
+      "excerpt": "The new structure replaces the 116-year-old Portal Bridge, which had to swing open every time boats passed by in a maneuver that caused delays for train riders.",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "jdsupra-com-new-jersey-governor-mikie-2026-03-12",
+      "title": "New Jersey Governor Mikie Sherrill First Budget Address for FY2027 : Key Highlights | McCarter & English , LLP",
+      "url": "https://www.jdsupra.com/legalnews/new-jersey-governor-mikie-sherrill-s-6829889/",
+      "source": "jdsupra.com",
+      "author": null,
+      "date": "2026-03-12",
+      "category": "news",
+      "excerpt": "Governor Mikie Sherrill presented her first budget address, outlining a proposed $60.7 billion Fiscal Year 2027 budget for New Jersey. The proposal...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "yahoo-com-gateway-project-moves-forward-2026-03-12",
+      "title": "Gateway Project moves forward as NJ Transit nears completion of Portal Bridge track work",
+      "url": "https://www.yahoo.com/news/articles/gateway-project-moves-forward-nj-101952695.html",
+      "source": "yahoo.com",
+      "author": null,
+      "date": "2026-03-12",
+      "category": "news",
+      "excerpt": "On Monday, the new track is expected to be open to riders and schedules return to some sense of normalcy -- at least for now.",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
     {
       "id": "njdotcom-dozens-passengers-evacuate-2026-03-11",
       "title": "Dozens of passengers evacuate NJ Transit bus that caught fire after hitting a pothole",
