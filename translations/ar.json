@@ -23,7 +23,9 @@
     "about_description": "منهجيتنا: كيف يُنتج Reroute NJ الترجمات ويتحقق من بيانات النقل ويلتزم بمعايير إمكانية الوصول.",
     "about_og_description": "كيف يُنتج Reroute NJ الترجمات ويتحقق من بيانات النقل ويلتزم بمعايير إمكانية الوصول.",
     "blog_post_cutover_description": "يبدأ تحويل Portal North Bridge في 15 فبراير 2026. إليك ما يحتاج ركاب NJ Transit معرفته وكيف يمكن لـ Reroute NJ المساعدة خلال الأسابيع الأربعة القادمة.",
-    "blog_post_cutover_og_description": "يبدأ تحويل Portal North Bridge اليوم. ما يحتاج ركاب NJ Transit معرفته خلال الأسابيع الأربعة القادمة."
+    "blog_post_cutover_og_description": "يبدأ تحويل Portal North Bridge اليوم. ما يحتاج ركاب NJ Transit معرفته خلال الأسابيع الأربعة القادمة.",
+    "bridge_opens_description": "المرحلة 1 من تحويل Portal North Bridge مكتملة. تستأنف جداول NJ Transit العادية في 15 مارس، ويدخل أول مسار على الجسر الجديد الخدمة في 16 مارس.",
+    "bridge_opens_og_description": "المرحلة 1 مكتملة. تستأنف جداول NJ Transit العادية في 15 مارس، أول مسار على الجسر الجديد يدخل الخدمة في 16 مارس."
   },
   "common": {
     "skip_to_main": "انتقل إلى المحتوى الرئيسي",
@@ -56,8 +58,8 @@
   "index": {
     "title": "Reroute NJ — دليل تحويل Portal Bridge",
     "tagline": "دليل تحويل Portal Bridge",
-    "alert_phase1": "المرحلة 1:",
-    "alert_details": "15 فبراير – 15 مارس 2026 · جميع الخطوط متأثرة باستثناء Atlantic City · تخفيض 50% في الخدمة بين Newark و Secaucus",
+    "alert_phase1": "المرحلة 1 مكتملة!",
+    "alert_details": "استُئنفت جداول NJ Transit العادية في 15 مارس · أول مسار على Portal North Bridge الجديد يدخل الخدمة في 16 مارس · المرحلة 2 (المسار الثاني) متوقعة في خريف 2026",
     "your_station": "محطتك",
     "choose_station": "اختر محطتك…",
     "direction_label": "اتجاه السفر",
@@ -146,8 +148,8 @@
     "tl_tickets_desc": "يجب على ركاب Midtown Direct البدء بشراء اشتراكات Hoboken الشهرية (صالحة للسفر إلى Penn Station من 1–15 فبراير).",
     "tl_start_title": "بدء المرحلة 1",
     "tl_start_desc": "تبدأ الجداول المؤقتة. قطارات Midtown Direct في أيام العمل تُحوَّل إلى Hoboken. عمليات المسار المفرد بين Newark و Secaucus.",
-    "tl_end_title": "نهاية المرحلة 1 (متوقعة)",
-    "tl_end_desc": "تستأنف الجداول العادية، بشرط إتمام اختبارات السلامة. يدخل أول مسار على Portal North Bridge الجديد الخدمة.",
+    "tl_end_title": "المرحلة 1 مكتملة",
+    "tl_end_desc": "استُئنفت جداول NJ Transit العادية. أول مسار على Portal North Bridge الجديد يدخل خدمة الركاب في 16 مارس.",
     "tl_phase2_title": "المرحلة 2",
     "tl_phase2_desc": "تحويل المسار الثاني. يُتوقع اضطرابات مماثلة في الخدمة. المواعيد لم تُحدد بعد. بعدها يُقاعد جسر Portal القديم نهائياً.",
     "resources_title": "الموارد الرسمية",
@@ -423,7 +425,10 @@
     "back_to_all_posts": "العودة إلى جميع المقالات",
     "post3_title": "التحويل يبدأ اليوم",
     "post3_date": "15 فبراير 2026",
-    "post3_excerpt": "يبدأ تحويل Portal North Bridge اليوم. ما يحتاج ركاب NJ Transit معرفته وكيف يمكن لـ Reroute NJ المساعدة خلال الأسابيع الأربعة القادمة."
+    "post3_excerpt": "يبدأ تحويل Portal North Bridge اليوم. ما يحتاج ركاب NJ Transit معرفته وكيف يمكن لـ Reroute NJ المساعدة خلال الأسابيع الأربعة القادمة.",
+    "post4_title": "Portal North Bridge الجديد مفتوح",
+    "post4_date": "13 مارس 2026",
+    "post4_excerpt": "المرحلة 1 مكتملة. تستأنف جداول NJ Transit العادية في 15 مارس ويدخل أول مسار على الجسر الجديد الخدمة في 16 مارس. إليك ما يعنيه ذلك للركاب."
   },
   "blog_post": {
     "title": "لماذا أنشأنا Reroute NJ — Reroute NJ",
@@ -609,6 +614,32 @@
     "breadcrumb_blog_post_cutover": "التحويل يبدأ اليوم",
     "article3_headline": "التحويل يبدأ اليوم",
     "article3_description": "يبدأ تحويل Portal North Bridge اليوم. ما يحتاج ركاب NJ Transit معرفته خلال الأسابيع الأربعة القادمة.",
-    "collection_item3": "التحويل يبدأ اليوم"
+    "collection_item3": "التحويل يبدأ اليوم",
+    "article4_headline": "Portal North Bridge الجديد مفتوح",
+    "article4_description": "المرحلة 1 من تحويل Portal North Bridge مكتملة. تستأنف جداول NJ Transit العادية في 15 مارس، ويدخل أول مسار على الجسر الجديد الخدمة في 16 مارس."
+  },
+  "blog_post_bridge": {
+    "title": "Portal North Bridge الجديد مفتوح — Reroute NJ",
+    "tagline": "المرحلة 1 مكتملة",
+    "heading": "Portal North Bridge الجديد مفتوح",
+    "by_prefix": "بقلم",
+    "date": "13 مارس 2026",
+    "intro_p1": "انتهى الانتظار. في 12 مارس، قامت الحاكمة Mikie Sherrill ومسؤولون من NJ Transit وAmtrak بأول رحلة احتفالية عبر Portal North Bridge الجديد. بدءاً من الاثنين 16 مارس، يدخل أول مسار على الجسر الجديد خدمة الركاب المنتظمة. تستأنف جداول NJ Transit العادية يوم الأحد 15 مارس.",
+    "intro_p2": "المرحلة 1 من التحويل مكتملة. بعد أربعة أسابيع من الخدمة المخفضة، وتحويلات Hoboken، والعمليات بمسار واحد بين Newark وSecaucus، يمكن للركاب العودة إلى رحلاتهم الاعتيادية.",
+    "h2_what_means": "ماذا يعني هذا للركاب",
+    "what_means_intro": "بدءاً من الأحد 15 مارس، تنتهي جداول التحويل المؤقتة. إليك ما يتغير:",
+    "wm_hoboken": "<strong>خطوط Montclair-Boonton وMorris & Essex</strong> تعود إلى New York Penn Station. لا مزيد من تحويلات Hoboken.",
+    "wm_full_service": "<strong>Northeast Corridor وNorth Jersey Coast Line</strong> تستأنفان كامل وتيرة الخدمة.",
+    "wm_raritan": "<strong>Raritan Valley Line</strong> تستعيد الرحلات المباشرة إلى Penn Station.",
+    "what_means_p2": "يوم الاثنين 16 مارس، تبدأ القطارات المتجهة غرباً باستخدام أول مسار على Portal North Bridge الجديد. تستمر القطارات المتجهة شرقاً على الجسر القديم حتى المرحلة 2 في الخريف.",
+    "h2_new_bridge": "ما هو الجسر الجديد؟",
+    "new_bridge_p": "Portal North Bridge هو جسر حديث عالي المستوى ثابت البحر يرتفع 50 قدماً فوق Hackensack River. يحل محل Portal Bridge البالغ من العمر 116 عاماً، وهو جسر متأرجح كان يجب فتحه لحركة القوارب عشرات المرات كل عام — وكثيراً ما كان يعلق. الجسر الجديد يزيل هذه المشكلة تماماً. يمكن للقطارات السفر بسرعة تصل إلى 90 ميلاً في الساعة، مقارنة بـ 60 ميلاً في الساعة على الهيكل القديم.",
+    "new_bridge_p2": "المشروع الذي تبلغ تكلفته 2.3 مليار دولار هو أول تحويل جسر رئيسي يُنجز على Northeast Corridor وقطعة حاسمة من برنامج Gateway Program الأوسع.",
+    "h2_what_next": "ما الذي سيأتي بعد ذلك",
+    "what_next_p1": "هذه ليست النهاية. المرحلة 2 ستنقل المسار الثاني إلى الجسر الجديد، المتوقعة في خريف 2026. وهذا يعني جولة أخرى من تغييرات الجداول المؤقتة وتخفيضات الخدمة. Reroute NJ سيكون هنا لذلك أيضاً.",
+    "what_next_p2": "بمجرد أن يكون كلا المسارين على الجسر الجديد، سيتم إيقاف Portal Bridge الأصلي من عام 1910 بشكل دائم وتفكيكه في 2027.",
+    "closing": "أربعة أسابيع من التعطيل مقابل عقود من خدمة أفضل وأسرع وأكثر موثوقية. كان الأمر يستحق ذلك.",
+    "support_p": "Reroute NJ مجاني ومفتوح المصدر ومدعوم من المجتمع. إذا وجدته مفيداً، شاركه مع شخص يركب NJ Transit أو <a href=\"https://github.com/sponsors/jamditis\" target=\"_blank\" rel=\"noopener\">ادعم المشروع</a>.",
+    "cta": "شاهد التغطية الإخبارية الكاملة →"
   }
 }

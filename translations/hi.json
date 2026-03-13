@@ -23,7 +23,9 @@
     "about_description": "हमारी कार्यप्रणाली: Reroute NJ कैसे अनुवाद तैयार करता है, ट्रांजिट डेटा सत्यापित करता है और एक्सेसिबिलिटी मानकों को पूरा करता है.",
     "about_og_description": "Reroute NJ कैसे अनुवाद तैयार करता है, ट्रांजिट डेटा सत्यापित करता है और एक्सेसिबिलिटी मानकों को पूरा करता है.",
     "blog_post_cutover_description": "Portal North Bridge कटओवर 15 फरवरी, 2026 से शुरू हो रहा है। NJ Transit यात्रियों को क्या जानना चाहिए और अगले चार सप्ताह में Reroute NJ कैसे मदद कर सकता है।",
-    "blog_post_cutover_og_description": "Portal North Bridge कटओवर आज से शुरू हो रहा है। अगले चार सप्ताह के लिए NJ Transit यात्रियों को क्या जानना चाहिए।"
+    "blog_post_cutover_og_description": "Portal North Bridge कटओवर आज से शुरू हो रहा है। अगले चार सप्ताह के लिए NJ Transit यात्रियों को क्या जानना चाहिए।",
+    "bridge_opens_description": "Portal North Bridge कटओवर का चरण 1 पूर्ण हो गया है। सामान्य NJ Transit शेड्यूल 15 मार्च से फिर से शुरू होते हैं, और नए पुल पर पहला ट्रैक 16 मार्च को सेवा में आता है।",
+    "bridge_opens_og_description": "चरण 1 पूर्ण। सामान्य NJ Transit शेड्यूल 15 मार्च से फिर से शुरू, नए पुल पर पहला ट्रैक 16 मार्च को सेवा में।"
   },
   "common": {
     "skip_to_main": "मुख्य सामग्री पर जाएं",
@@ -56,8 +58,8 @@
   "index": {
     "title": "Reroute NJ — Portal Bridge कटओवर गाइड",
     "tagline": "Portal Bridge कटओवर गाइड",
-    "alert_phase1": "चरण 1:",
-    "alert_details": "15 फ़र – 15 मार्च 2026 · Atlantic City को छोड़कर सभी लाइनें प्रभावित · Newark और Secaucus के बीच 50% सेवा कटौती",
+    "alert_phase1": "चरण 1 पूर्ण!",
+    "alert_details": "सामान्य NJ Transit शेड्यूल 15 मार्च से फिर से शुरू · नए Portal North Bridge पर पहला ट्रैक 16 मार्च को सेवा में · चरण 2 (दूसरा ट्रैक) पतझड़ 2026 में अपेक्षित",
     "your_station": "आपका स्टेशन",
     "choose_station": "अपना स्टेशन चुनें…",
     "direction_label": "यात्रा की दिशा",
@@ -146,8 +148,8 @@
     "tl_tickets_desc": "Midtown Direct यात्रियों को Hoboken मासिक पास खरीदना शुरू करना चाहिए (1–15 फरवरी के बीच Penn Station यात्रा के लिए मान्य)।",
     "tl_start_title": "चरण 1 शुरू",
     "tl_start_desc": "अस्थायी समय सारणी लागू। Midtown Direct कार्यदिवस ट्रेनें Hoboken की ओर मोड़ी गईं। Newark और Secaucus के बीच सिंगल-ट्रैक संचालन।",
-    "tl_end_title": "चरण 1 समाप्त (अपेक्षित)",
-    "tl_end_desc": "सामान्य समय सारणी फिर से शुरू, सुरक्षा परीक्षण पूरा होने पर। नए Portal North Bridge पर पहला ट्रैक सेवा में आता है।",
+    "tl_end_title": "चरण 1 पूर्ण",
+    "tl_end_desc": "सामान्य NJ Transit शेड्यूल फिर से शुरू हो गए। नए Portal North Bridge पर पहला ट्रैक 16 मार्च को यात्री सेवा में प्रवेश करता है।",
     "tl_phase2_title": "चरण 2",
     "tl_phase2_desc": "दूसरे ट्रैक का कटओवर। इसी तरह की सेवा बाधाएं अपेक्षित। तारीखें TBA। इसके बाद, पुराना Portal Bridge स्थायी रूप से सेवानिवृत्त।",
     "resources_title": "आधिकारिक संसाधन",
@@ -423,7 +425,10 @@
     "back_to_all_posts": "सभी लेखों पर वापस जाएं",
     "post3_title": "कटओवर आज से शुरू",
     "post3_date": "15 फरवरी, 2026",
-    "post3_excerpt": "Portal North Bridge कटओवर आज से शुरू हो रहा है। NJ Transit यात्रियों को क्या जानना चाहिए और अगले चार सप्ताह में Reroute NJ कैसे मदद कर सकता है।"
+    "post3_excerpt": "Portal North Bridge कटओवर आज से शुरू हो रहा है। NJ Transit यात्रियों को क्या जानना चाहिए और अगले चार सप्ताह में Reroute NJ कैसे मदद कर सकता है।",
+    "post4_title": "नया Portal North Bridge खुल गया है",
+    "post4_date": "13 मार्च, 2026",
+    "post4_excerpt": "चरण 1 पूर्ण हो गया है। सामान्य NJ Transit शेड्यूल 15 मार्च से फिर से शुरू होते हैं और नए पुल पर पहला ट्रैक 16 मार्च को सेवा में आता है। यात्रियों के लिए इसका क्या मतलब है।"
   },
   "blog_post": {
     "title": "हमने Reroute NJ क्यों बनाया — Reroute NJ",
@@ -609,6 +614,32 @@
     "breadcrumb_blog_post_cutover": "कटओवर आज से शुरू",
     "article3_headline": "कटओवर आज से शुरू",
     "article3_description": "Portal North Bridge कटओवर आज से शुरू हो रहा है। अगले चार सप्ताह के लिए NJ Transit यात्रियों को क्या जानना चाहिए।",
-    "collection_item3": "कटओवर आज से शुरू"
+    "collection_item3": "कटओवर आज से शुरू",
+    "article4_headline": "नया Portal North Bridge खुल गया है",
+    "article4_description": "Portal North Bridge कटओवर का चरण 1 पूर्ण हो गया है। सामान्य NJ Transit शेड्यूल 15 मार्च से फिर से शुरू होते हैं, और नए पुल पर पहला ट्रैक 16 मार्च को सेवा में आता है।"
+  },
+  "blog_post_bridge": {
+    "title": "नया Portal North Bridge खुल गया है — Reroute NJ",
+    "tagline": "चरण 1 पूर्ण",
+    "heading": "नया Portal North Bridge खुल गया है",
+    "by_prefix": "द्वारा",
+    "date": "13 मार्च, 2026",
+    "intro_p1": "इंतज़ार खत्म हुआ। 12 मार्च को, गवर्नर Mikie Sherrill और NJ Transit तथा Amtrak के अधिकारियों ने नए Portal North Bridge पर पहली औपचारिक ट्रेन की सवारी की। सोमवार, 16 मार्च से, नए पुल पर पहला ट्रैक नियमित यात्री सेवा में प्रवेश करता है। सामान्य NJ Transit शेड्यूल रविवार, 15 मार्च से फिर से शुरू होते हैं।",
+    "intro_p2": "चरण 1 पूर्ण हो गया है। चार सप्ताह की कम सेवा, Hoboken डायवर्जन, और Newark तथा Secaucus के बीच सिंगल-ट्रैक संचालन के बाद, यात्री अपनी सामान्य यात्रा पर लौट सकते हैं।",
+    "h2_what_means": "यात्रियों के लिए इसका क्या मतलब है",
+    "what_means_intro": "रविवार, 15 मार्च से, अस्थायी कटओवर शेड्यूल समाप्त होते हैं। यहां क्या बदलता है:",
+    "wm_hoboken": "<strong>Montclair-Boonton और Morris & Essex लाइनें</strong> New York Penn Station पर लौटती हैं। अब Hoboken डायवर्जन नहीं।",
+    "wm_full_service": "<strong>Northeast Corridor और North Jersey Coast Line</strong> पूर्ण सेवा आवृत्ति फिर से शुरू करती हैं।",
+    "wm_raritan": "<strong>Raritan Valley Line</strong> Penn Station तक वन-सीट राइड बहाल करती है।",
+    "what_means_p2": "सोमवार, 16 मार्च को, पश्चिम दिशा की ट्रेनें नए Portal North Bridge पर पहले ट्रैक का उपयोग शुरू करती हैं। पूर्व दिशा की ट्रेनें पतझड़ में चरण 2 तक पुराने पुल पर जारी रहती हैं।",
+    "h2_new_bridge": "नया पुल क्या है?",
+    "new_bridge_p": "Portal North Bridge एक आधुनिक, ऊंचे स्तर का, फिक्स्ड-स्पैन पुल है जो Hackensack River के ऊपर 50 फीट ऊंचा उठता है। यह 116 वर्ष पुराने Portal Bridge की जगह लेता है, एक स्विंग ब्रिज जिसे साल में दर्जनों बार नाव यातायात के लिए खोलना पड़ता था — और अक्सर फंस जाता था। नया पुल इस समस्या को पूरी तरह समाप्त करता है। ट्रेनें 90 mph तक की गति से चल सकती हैं, पुरानी संरचना पर 60 mph की तुलना में।",
+    "new_bridge_p2": "$2.3 बिलियन की इस परियोजना Northeast Corridor पर पूरा हुआ पहला प्रमुख पुल कटओवर है और बड़े Gateway Program का एक महत्वपूर्ण हिस्सा है।",
+    "h2_what_next": "आगे क्या है",
+    "what_next_p1": "यह अंत नहीं है। चरण 2 में दूसरे ट्रैक को नए पुल पर ले जाया जाएगा, जो पतझड़ 2026 में अपेक्षित है। इसका मतलब है अस्थायी शेड्यूल परिवर्तन और सेवा कटौती का एक और दौर। Reroute NJ उसके लिए भी यहां होगा।",
+    "what_next_p2": "जब दोनों ट्रैक नए पुल पर आ जाएंगे, तो मूल 1910 का Portal Bridge स्थायी रूप से सेवानिवृत्त हो जाएगा और 2027 में ध्वस्त किया जाएगा।",
+    "closing": "दशकों की बेहतर, तेज़, अधिक विश्वसनीय सेवा के लिए चार सप्ताह की बाधा। यह इसके लायक था।",
+    "support_p": "Reroute NJ मुफ्त, ओपन सोर्स और समुदाय-समर्थित है। यदि आपको यह उपयोगी लगता है, तो इसे किसी NJ Transit यात्री के साथ साझा करें या <a href=\"https://github.com/sponsors/jamditis\" target=\"_blank\" rel=\"noopener\">परियोजना का समर्थन करें</a>।",
+    "cta": "पूरा समाचार कवरेज देखें →"
   }
 }
