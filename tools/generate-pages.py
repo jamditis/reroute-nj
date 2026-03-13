@@ -22,10 +22,11 @@ PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TRANSLATIONS_DIR = os.path.join(PROJECT_ROOT, "translations")
 
 # Pages to generate
-PAGES = ["index.html", "compare.html", "coverage.html", "map.html", "embed.html", "blog.html", "blog/cutover-begins.html", "blog/why-we-built-reroute-nj.html", "blog/new-embed-system.html", "about.html"]
+PAGES = ["index.html", "compare.html", "coverage.html", "map.html", "embed.html", "blog.html", "blog/bridge-opens.html", "blog/cutover-begins.html", "blog/why-we-built-reroute-nj.html", "blog/new-embed-system.html", "about.html"]
 
 # Map page filenames to translation key prefixes (when different from filename stem)
 PAGE_KEY_MAP = {
+    "blog/bridge-opens.html": "blog_post_bridge",
     "blog/cutover-begins.html": "blog_post_cutover",
     "blog/why-we-built-reroute-nj.html": "blog_post",
     "blog/new-embed-system.html": "blog_post_embed",
@@ -258,6 +259,7 @@ def replace_footer(html, translations, page_key):
             "blog_post": ' <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">{embed_gh}</a>.',
             "blog_post_embed": ' <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">{embed_gh}</a>.',
             "blog_post_cutover": ' <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">{embed_gh}</a>.',
+            "blog_post_bridge": ' <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">{embed_gh}</a>.',
             "about": ' <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">{embed_gh}</a>.',
         }
         idx = get_translation(translations, "common.footer_disclaimer_index") or "Information is based on official announcements and may change. Always verify with"
@@ -396,10 +398,10 @@ def replace_page_specific_content(html, translations, page_key):
         phase1 = get_translation(translations, "index.alert_phase1")
         details = get_translation(translations, "index.alert_details")
         if phase1:
-            html = html.replace('<strong>Phase 1:</strong>', f'<strong>{phase1}</strong>')
+            html = html.replace('<strong>Phase 1 complete!</strong>', f'<strong>{phase1}</strong>')
         if details:
             html = html.replace(
-                'Feb 15 – Mar 15, 2026 &middot; All lines affected except Atlantic City &middot; 50% service reduction between Newark &amp; Secaucus',
+                'Regular NJ Transit schedules resumed Mar 15 &middot; First track on the new Portal North Bridge enters service Mar 16 &middot; Phase 2 (second track) expected Fall 2026',
                 details.replace("&", "&amp;").replace("·", "&middot;")
             )
 
@@ -669,8 +671,8 @@ def replace_page_specific_content(html, translations, page_key):
              "index.tl_tickets_desc", "Midtown Direct riders should start buying Hoboken monthly passes (valid for Penn Station travel Feb 1–15)."),
             ("index.tl_start_title", "Phase 1 begins",
              "index.tl_start_desc", "Temporary schedules take effect. Midtown Direct weekday trains diverted to Hoboken. Single-track operation between Newark and Secaucus."),
-            ("index.tl_end_title", "Phase 1 ends (expected)",
-             "index.tl_end_desc", "Regular schedules resume, subject to completion of safety testing. First track on the new Portal North Bridge enters service."),
+            ("index.tl_end_title", "Phase 1 complete",
+             "index.tl_end_desc", "Regular NJ Transit schedules resumed. First track on the new Portal North Bridge enters passenger service March 16."),
             ("index.tl_phase2_title", "Phase 2",
              "index.tl_phase2_desc", "Second track cutover. Similar service disruptions expected. Dates TBA. After this, the old Portal Bridge is permanently retired."),
         ]
@@ -1210,6 +1212,26 @@ def replace_page_specific_content(html, translations, page_key):
                 f'>{post3_excerpt}</p>'
             )
 
+        # Post 4 card (bridge opens post)
+        post4_title = get_translation(translations, "blog.post4_title")
+        if post4_title:
+            html = html.replace(">The new Portal North Bridge is open</h2>", f">{post4_title}</h2>")
+
+        post4_date = get_translation(translations, "blog.post4_date")
+        if post4_date:
+            html = html.replace(">March 13, 2026</time>", f">{post4_date}</time>")
+
+        post4_excerpt = get_translation(translations, "blog.post4_excerpt")
+        if post4_excerpt:
+            html = html.replace(
+                ">Phase 1 is complete. Regular NJ Transit schedules resume March 15 and the first track on the new bridge enters service March 16. Here's what it means for riders.</p>",
+                f'>{post4_excerpt}</p>'
+            )
+            html = html.replace(
+                ">Phase 1 is complete. Regular NJ Transit schedules resume March 15 and the first track on the new bridge enters service March 16. Here&#x27;s what it means for riders.</p>",
+                f'>{post4_excerpt}</p>'
+            )
+
     elif page_key == "blog_post":
         # Blog post: "Why we built Reroute NJ"
         # Back/footer nav links
@@ -1428,6 +1450,134 @@ def replace_page_specific_content(html, translations, page_key):
         if cta:
             html = html.replace(
                 '>Plan your commute &rarr;</a>',
+                f'>{cta.replace("→", "&rarr;")}</a>'
+            )
+
+    elif page_key == "blog_post_bridge":
+        # Blog post: "The new Portal North Bridge is open"
+        # Back/footer nav links
+        all_posts = get_translation(translations, "blog.all_posts")
+        if all_posts:
+            html = html.replace(">&larr; All posts</a>", f">&larr; {all_posts}</a>")
+        back_all = get_translation(translations, "blog.back_to_all_posts")
+        if back_all:
+            html = html.replace(">&larr; Back to all posts</a>", f">&larr; {back_all}</a>")
+
+        heading = get_translation(translations, "blog_post_bridge.heading")
+        if heading:
+            html = html.replace(">The new Portal North Bridge is open</h1>", f">{heading}</h1>")
+
+        by_prefix = get_translation(translations, "blog_post_bridge.by_prefix")
+        if by_prefix:
+            html = html.replace(">By Joe Amditis</span>", f">{by_prefix} Joe Amditis</span>")
+
+        date = get_translation(translations, "blog_post_bridge.date")
+        if date:
+            html = html.replace(">March 13, 2026</time>", f">{date}</time>")
+
+        # Intro paragraphs
+        intro_p1 = get_translation(translations, "blog_post_bridge.intro_p1")
+        if intro_p1:
+            html = html.replace(
+                "<p>The wait is over. On March 12, Governor Mikie Sherrill and officials from NJ Transit and Amtrak rode the first ceremonial train across the new Portal North Bridge. Starting Monday, March 16, the first track on the new bridge enters regular passenger service. Regular NJ Transit schedules resume Sunday, March 15.</p>",
+                f"<p>{intro_p1}</p>"
+            )
+
+        intro_p2 = get_translation(translations, "blog_post_bridge.intro_p2")
+        if intro_p2:
+            html = html.replace(
+                "<p>Phase 1 of the cutover is complete. After four weeks of reduced service, Hoboken diversions, and single-track operations between Newark and Secaucus, riders can return to their normal commutes.</p>",
+                f"<p>{intro_p2}</p>"
+            )
+
+        # Section headings
+        for key, eng_text in [
+            ("blog_post_bridge.h2_what_means", "What this means for riders"),
+            ("blog_post_bridge.h2_new_bridge", "What is the new bridge?"),
+            ("blog_post_bridge.h2_what_next", "What comes next"),
+        ]:
+            translated = get_translation(translations, key)
+            if translated:
+                html = html.replace(f"<h2>{eng_text}</h2>", f"<h2>{translated}</h2>")
+
+        # What means intro
+        what_means_intro = get_translation(translations, "blog_post_bridge.what_means_intro")
+        if what_means_intro:
+            html = html.replace(
+                "<p>Starting Sunday, March 15, the temporary cutover schedules end. Here is what changes:</p>",
+                f"<p>{what_means_intro}</p>"
+            )
+
+        # What means list items
+        wm_items = {
+            "blog_post_bridge.wm_hoboken": '<strong>Montclair-Boonton and Morris &amp; Essex lines</strong> return to New York Penn Station. No more Hoboken diversions.',
+            "blog_post_bridge.wm_full_service": '<strong>Northeast Corridor and North Jersey Coast Line</strong> resume full service frequency.',
+            "blog_post_bridge.wm_raritan": '<strong>Raritan Valley Line</strong> restores one-seat rides to Penn Station.',
+        }
+        for key, eng_text in wm_items.items():
+            translated = get_translation(translations, key)
+            if translated:
+                html = html.replace(f"<li>{eng_text}</li>", f"<li>{translated}</li>")
+
+        # What means p2
+        what_means_p2 = get_translation(translations, "blog_post_bridge.what_means_p2")
+        if what_means_p2:
+            html = html.replace(
+                "<p>On Monday, March 16, westbound trains begin using the first track on the new Portal North Bridge. Eastbound trains continue on the old bridge until Phase 2 in the fall.</p>",
+                f"<p>{what_means_p2}</p>"
+            )
+
+        # New bridge paragraphs
+        new_bridge_p = get_translation(translations, "blog_post_bridge.new_bridge_p")
+        if new_bridge_p:
+            html = html.replace(
+                '<p>The Portal North Bridge is a modern, high-level, fixed-span bridge that rises 50 feet over the Hackensack River. It replaces the 116-year-old Portal Bridge, a swing bridge that had to open for boat traffic dozens of times each year &mdash; and frequently got stuck. The new bridge eliminates that problem entirely. Trains can travel up to 90 mph, compared to 60 mph on the old structure.</p>',
+                f"<p>{new_bridge_p}</p>"
+            )
+
+        new_bridge_p2 = get_translation(translations, "blog_post_bridge.new_bridge_p2")
+        if new_bridge_p2:
+            html = html.replace(
+                "<p>The $2.3 billion project is the first major bridge cutover completed on the Northeast Corridor and a critical piece of the larger Gateway Program.</p>",
+                f"<p>{new_bridge_p2}</p>"
+            )
+
+        # What next paragraphs
+        what_next_p1 = get_translation(translations, "blog_post_bridge.what_next_p1")
+        if what_next_p1:
+            html = html.replace(
+                "<p>This is not the end. Phase 2 will move the second track onto the new bridge, expected in fall 2026. That means another round of temporary schedule changes and service reductions. Reroute NJ will be here for that, too.</p>",
+                f"<p>{what_next_p1}</p>"
+            )
+
+        what_next_p2 = get_translation(translations, "blog_post_bridge.what_next_p2")
+        if what_next_p2:
+            html = html.replace(
+                "<p>Once both tracks are on the new bridge, the original 1910 Portal Bridge will be permanently retired and dismantled in 2027.</p>",
+                f"<p>{what_next_p2}</p>"
+            )
+
+        # Closing
+        closing = get_translation(translations, "blog_post_bridge.closing")
+        if closing:
+            html = html.replace(
+                "<p>Four weeks of disruption for decades of better, faster, more reliable service. It was worth it.</p>",
+                f"<p>{closing}</p>"
+            )
+
+        # Support note
+        support_p = get_translation(translations, "blog_post_bridge.support_p")
+        if support_p:
+            html = html.replace(
+                '<p class="blog-support-note" style="font-size: 0.85rem; color: var(--text-muted); margin-top: 2rem;">Reroute NJ is free, open source, and community-supported. If you find it useful, share it with someone who rides NJ Transit or <a href="https://github.com/sponsors/jamditis" target="_blank" rel="noopener">support the project</a>.</p>',
+                f'<p class="blog-support-note" style="font-size: 0.85rem; color: var(--text-muted); margin-top: 2rem;">{support_p}</p>'
+            )
+
+        # CTA button
+        cta = get_translation(translations, "blog_post_bridge.cta")
+        if cta:
+            html = html.replace(
+                '>See full news coverage &rarr;</a>',
                 f'>{cta.replace("→", "&rarr;")}</a>'
             )
 
@@ -1830,13 +1980,15 @@ def translate_jsonld(html, translations, page_key, lang, page_name):
                         )
 
         elif schema_type == "Article":
-            # Determine which article (blog_post, blog_post_embed, or blog_post_cutover)
+            # Determine which article (blog_post, blog_post_embed, blog_post_cutover, or blog_post_bridge)
             if page_key == "blog_post":
                 art_prefix = "article1"
             elif page_key == "blog_post_embed":
                 art_prefix = "article2"
             elif page_key == "blog_post_cutover":
                 art_prefix = "article3"
+            elif page_key == "blog_post_bridge":
+                art_prefix = "article4"
             else:
                 art_prefix = None
 
