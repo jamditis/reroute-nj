@@ -201,6 +201,17 @@ input:focus-visible,
   font-weight: 700;
 }
 
+.phase-banner {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
 /* Main */
 
 main.container {
@@ -2903,6 +2914,12 @@ body[data-contrast="high"] .pagination-info {
 body[data-contrast="high"] .alert-banner {
   background: #000;
   border: 2px solid #ff0;
+}
+
+body[data-contrast="high"] .phase-banner {
+  background: #000;
+  border: 2px solid #ff0;
+  color: #ff0;
 }
 
 
