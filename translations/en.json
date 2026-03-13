@@ -24,8 +24,8 @@
     "about_og_description": "How we produce translations, verify transit data, and prioritize accessibility and accuracy.",
     "blog_post_cutover_description": "The Portal North Bridge cutover starts February 15, 2026. Here's what NJ Transit riders need to know and how Reroute NJ can help for the next four weeks.",
     "blog_post_cutover_og_description": "The Portal North Bridge cutover starts today. What NJ Transit riders need to know for the next four weeks.",
-    "bridge_opens_description": "Phase 1 of the Portal North Bridge cutover is complete. Regular NJ Transit schedules resume March 15, and the first track on the new bridge enters service March 16.",
-    "bridge_opens_og_description": "Phase 1 complete. Regular NJ Transit schedules resume March 15, first track on the new bridge enters service March 16."
+    "blog_post_bridge_description": "Phase 1 of the Portal North Bridge cutover is complete. Regular NJ Transit schedules resume March 15, and the first track on the new bridge enters service March 16.",
+    "blog_post_bridge_og_description": "Phase 1 complete. Regular NJ Transit schedules resume March 15, first track on the new bridge enters service March 16."
   },
   "common": {
     "skip_to_main": "Skip to main content",
@@ -585,6 +585,7 @@
     "article2_headline": "New: embed Reroute NJ on your website",
     "article2_description": "Four embed formats, a visual configurator, and PNG export for newsrooms covering the Portal Bridge cutover.",
     "breadcrumb_blog_post_cutover": "The cutover starts today",
+    "breadcrumb_blog_post_bridge": "The new Portal North Bridge is open",
     "article3_headline": "The cutover starts today",
     "article3_description": "The Portal North Bridge cutover starts today. What NJ Transit riders need to know for the next four weeks.",
     "collection_item3": "The cutover starts today",

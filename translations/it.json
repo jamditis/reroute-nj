@@ -24,8 +24,8 @@
     "about_og_description": "Come Reroute NJ produce le traduzioni, verifica i dati del trasporto e soddisfa gli standard di accessibilità.",
     "blog_post_cutover_description": "Il passaggio del Portal North Bridge inizia il 15 febbraio 2026. Ecco cosa devono sapere i passeggeri NJ Transit e come Reroute NJ può aiutare nelle prossime quattro settimane.",
     "blog_post_cutover_og_description": "Il passaggio del Portal North Bridge inizia oggi. Cosa devono sapere i passeggeri NJ Transit per le prossime quattro settimane.",
-    "bridge_opens_description": "La Fase 1 del passaggio del Portal North Bridge è completata. Gli orari regolari NJ Transit riprendono il 15 marzo e il primo binario sul nuovo ponte entra in servizio il 16 marzo.",
-    "bridge_opens_og_description": "Fase 1 completata. Gli orari regolari NJ Transit riprendono il 15 marzo, il primo binario sul nuovo ponte entra in servizio il 16 marzo."
+    "blog_post_bridge_description": "La Fase 1 del passaggio del Portal North Bridge è completata. Gli orari regolari NJ Transit riprendono il 15 marzo e il primo binario sul nuovo ponte entra in servizio il 16 marzo.",
+    "blog_post_bridge_og_description": "Fase 1 completata. Gli orari regolari NJ Transit riprendono il 15 marzo, il primo binario sul nuovo ponte entra in servizio il 16 marzo."
   },
   "common": {
     "skip_to_main": "Vai al contenuto principale",
@@ -612,6 +612,7 @@
     "article2_headline": "Nuovo: incorpora Reroute NJ sul tuo sito web",
     "article2_description": "Quattro formati di incorporamento, un configuratore visivo e l'esportazione PNG per le redazioni che coprono il passaggio del Portal Bridge.",
     "breadcrumb_blog_post_cutover": "Il passaggio inizia oggi",
+    "breadcrumb_blog_post_bridge": "Il nuovo Portal North Bridge è aperto",
     "article3_headline": "Il passaggio inizia oggi",
     "article3_description": "Il passaggio del Portal North Bridge inizia oggi. Cosa devono sapere i passeggeri NJ Transit per le prossime quattro settimane.",
     "collection_item3": "Il passaggio inizia oggi",

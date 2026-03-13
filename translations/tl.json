@@ -24,8 +24,8 @@
     "about_og_description": "Paano kami gumagawa ng mga pagsasalin, bine-verify ang datos ng transit, at inuuna ang accessibility at katumpakan.",
     "blog_post_cutover_description": "Ang Portal North Bridge cutover ay nagsisimula sa Pebrero 15, 2026. Narito ang kailangan malaman ng mga pasahero ng NJ Transit at kung paano makakatulong ang Reroute NJ sa susunod na apat na linggo.",
     "blog_post_cutover_og_description": "Ang Portal North Bridge cutover ay nagsisimula ngayon. Ang kailangan malaman ng mga pasahero ng NJ Transit sa susunod na apat na linggo.",
-    "bridge_opens_description": "Kumpleto na ang Phase 1 ng Portal North Bridge cutover. Ang regular na iskedyul ng NJ Transit ay magbabalik sa Marso 15, at ang unang track sa bagong tulay ay magsisimula sa serbisyo sa Marso 16.",
-    "bridge_opens_og_description": "Kumpleto na ang Phase 1. Ang regular na iskedyul ng NJ Transit ay magbabalik sa Marso 15, ang unang track sa bagong tulay ay magsisimula sa serbisyo sa Marso 16."
+    "blog_post_bridge_description": "Kumpleto na ang Phase 1 ng Portal North Bridge cutover. Ang regular na iskedyul ng NJ Transit ay magbabalik sa Marso 15, at ang unang track sa bagong tulay ay magsisimula sa serbisyo sa Marso 16.",
+    "blog_post_bridge_og_description": "Kumpleto na ang Phase 1. Ang regular na iskedyul ng NJ Transit ay magbabalik sa Marso 15, ang unang track sa bagong tulay ay magsisimula sa serbisyo sa Marso 16."
   },
   "common": {
     "skip_to_main": "Pumunta sa pangunahing nilalaman",
@@ -585,6 +585,7 @@
     "article2_headline": "Bago: i-embed ang Reroute NJ sa iyong website",
     "article2_description": "Apat na embed format, visual configurator, at PNG export para sa mga newsroom na sumasaklaw sa Portal Bridge cutover.",
     "breadcrumb_blog_post_cutover": "Nagsimula na ang cutover ngayon",
+    "breadcrumb_blog_post_bridge": "Bukas na ang bagong Portal North Bridge",
     "article3_headline": "Nagsimula na ang cutover ngayon",
     "article3_description": "Ang Portal North Bridge cutover ay nagsisimula ngayon. Ang kailangan malaman ng mga pasahero ng NJ Transit sa susunod na apat na linggo.",
     "collection_item3": "Nagsimula na ang cutover ngayon",

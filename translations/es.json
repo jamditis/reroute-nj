@@ -24,8 +24,8 @@
     "about_og_description": "Cómo producimos traducciones, verificamos datos de tránsito y priorizamos la accesibilidad y la precisión.",
     "blog_post_cutover_description": "El cambio del Portal North Bridge comienza el 15 de febrero de 2026. Esto es lo que los pasajeros de NJ Transit necesitan saber y cómo Reroute NJ puede ayudar durante las próximas cuatro semanas.",
     "blog_post_cutover_og_description": "El cambio del Portal North Bridge comienza hoy. Lo que los pasajeros de NJ Transit necesitan saber durante las próximas cuatro semanas.",
-    "bridge_opens_description": "La Fase 1 de la transición del Portal North Bridge está completa. Los horarios regulares de NJ Transit se reanudan el 15 de marzo y la primera vía del nuevo puente entra en servicio el 16 de marzo.",
-    "bridge_opens_og_description": "Fase 1 completada. Los horarios regulares de NJ Transit se reanudan el 15 de marzo, la primera vía del nuevo puente entra en servicio el 16 de marzo."
+    "blog_post_bridge_description": "La Fase 1 de la transición del Portal North Bridge está completa. Los horarios regulares de NJ Transit se reanudan el 15 de marzo y la primera vía del nuevo puente entra en servicio el 16 de marzo.",
+    "blog_post_bridge_og_description": "Fase 1 completada. Los horarios regulares de NJ Transit se reanudan el 15 de marzo, la primera vía del nuevo puente entra en servicio el 16 de marzo."
   },
   "common": {
     "skip_to_main": "Ir al contenido principal",
@@ -585,6 +585,7 @@
     "article2_headline": "Nuevo: incrusta Reroute NJ en tu sitio web",
     "article2_description": "Cuatro formatos de incrustación, un configurador visual y exportación PNG para redacciones que cubren el cambio del Portal Bridge.",
     "breadcrumb_blog_post_cutover": "El cambio comienza hoy",
+    "breadcrumb_blog_post_bridge": "El nuevo Portal North Bridge está abierto",
     "article3_headline": "El cambio comienza hoy",
     "article3_description": "El cambio del Portal North Bridge comienza hoy. Lo que los pasajeros de NJ Transit necesitan saber durante las próximas cuatro semanas.",
     "collection_item3": "El cambio comienza hoy",

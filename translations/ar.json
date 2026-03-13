@@ -24,8 +24,8 @@
     "about_og_description": "كيف يُنتج Reroute NJ الترجمات ويتحقق من بيانات النقل ويلتزم بمعايير إمكانية الوصول.",
     "blog_post_cutover_description": "يبدأ تحويل Portal North Bridge في 15 فبراير 2026. إليك ما يحتاج ركاب NJ Transit معرفته وكيف يمكن لـ Reroute NJ المساعدة خلال الأسابيع الأربعة القادمة.",
     "blog_post_cutover_og_description": "يبدأ تحويل Portal North Bridge اليوم. ما يحتاج ركاب NJ Transit معرفته خلال الأسابيع الأربعة القادمة.",
-    "bridge_opens_description": "المرحلة 1 من تحويل Portal North Bridge مكتملة. تستأنف جداول NJ Transit العادية في 15 مارس، ويدخل أول مسار على الجسر الجديد الخدمة في 16 مارس.",
-    "bridge_opens_og_description": "المرحلة 1 مكتملة. تستأنف جداول NJ Transit العادية في 15 مارس، أول مسار على الجسر الجديد يدخل الخدمة في 16 مارس."
+    "blog_post_bridge_description": "المرحلة 1 من تحويل Portal North Bridge مكتملة. تستأنف جداول NJ Transit العادية في 15 مارس، ويدخل أول مسار على الجسر الجديد الخدمة في 16 مارس.",
+    "blog_post_bridge_og_description": "المرحلة 1 مكتملة. تستأنف جداول NJ Transit العادية في 15 مارس، أول مسار على الجسر الجديد يدخل الخدمة في 16 مارس."
   },
   "common": {
     "skip_to_main": "انتقل إلى المحتوى الرئيسي",
@@ -612,6 +612,7 @@
     "article2_headline": "جديد: ضمّن Reroute NJ في موقعك الإلكتروني",
     "article2_description": "أربعة تنسيقات تضمين، ومُكوِّن مرئي، وتصدير PNG لغرف الأخبار التي تغطي تحويل Portal Bridge.",
     "breadcrumb_blog_post_cutover": "التحويل يبدأ اليوم",
+    "breadcrumb_blog_post_bridge": "Portal North Bridge الجديد مفتوح",
     "article3_headline": "التحويل يبدأ اليوم",
     "article3_description": "يبدأ تحويل Portal North Bridge اليوم. ما يحتاج ركاب NJ Transit معرفته خلال الأسابيع الأربعة القادمة.",
     "collection_item3": "التحويل يبدأ اليوم",

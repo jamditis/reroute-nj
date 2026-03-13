@@ -24,8 +24,8 @@
     "about_og_description": "Como produzimos traduções, verificamos dados de trânsito e priorizamos acessibilidade e precisão.",
     "blog_post_cutover_description": "A transição do Portal North Bridge começa em 15 de fevereiro de 2026. O que os passageiros do NJ Transit precisam saber e como o Reroute NJ pode ajudar nas próximas quatro semanas.",
     "blog_post_cutover_og_description": "A transição do Portal North Bridge começa hoje. O que os passageiros do NJ Transit precisam saber nas próximas quatro semanas.",
-    "bridge_opens_description": "A Fase 1 da transição da Portal North Bridge está concluída. Os horários regulares do NJ Transit são retomados em 15 de março e a primeira via na nova ponte entra em serviço em 16 de março.",
-    "bridge_opens_og_description": "Fase 1 concluída. Horários regulares do NJ Transit retomados em 15 de março, primeira via na nova ponte em serviço em 16 de março."
+    "blog_post_bridge_description": "A Fase 1 da transição da Portal North Bridge está concluída. Os horários regulares do NJ Transit são retomados em 15 de março e a primeira via na nova ponte entra em serviço em 16 de março.",
+    "blog_post_bridge_og_description": "Fase 1 concluída. Horários regulares do NJ Transit retomados em 15 de março, primeira via na nova ponte em serviço em 16 de março."
   },
   "common": {
     "skip_to_main": "Pular para o conteúdo principal",
@@ -585,6 +585,7 @@
     "article2_headline": "Novo: incorpore o Reroute NJ no seu site",
     "article2_description": "Quatro formatos de incorporação, um configurador visual e exportação PNG para redações cobrindo a transição do Portal Bridge.",
     "breadcrumb_blog_post_cutover": "A transição começa hoje",
+    "breadcrumb_blog_post_bridge": "A nova Portal North Bridge está aberta",
     "article3_headline": "A transição começa hoje",
     "article3_description": "A transição do Portal North Bridge começa hoje. O que os passageiros do NJ Transit precisam saber nas próximas quatro semanas.",
     "collection_item3": "A transição começa hoje",

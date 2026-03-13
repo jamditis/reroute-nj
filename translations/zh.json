@@ -24,8 +24,8 @@
     "about_og_description": "我们如何制作翻译、验证交通数据，以及为什么我们优先考虑无障碍性和准确性。",
     "blog_post_cutover_description": "Portal North Bridge转换于2026年2月15日开始。以下是NJ Transit乘客需要了解的信息，以及Reroute NJ在未来四周内如何提供帮助。",
     "blog_post_cutover_og_description": "Portal North Bridge转换从今天开始。NJ Transit乘客在未来四周需要了解的信息。",
-    "bridge_opens_description": "Portal North Bridge转换的第一阶段已完成。NJ Transit常规时刻表于3月15日恢复，新桥的第一条轨道于3月16日投入使用。",
-    "bridge_opens_og_description": "第一阶段已完成。NJ Transit常规时刻表于3月15日恢复，新桥的第一条轨道于3月16日投入使用。"
+    "blog_post_bridge_description": "Portal North Bridge转换的第一阶段已完成。NJ Transit常规时刻表于3月15日恢复，新桥的第一条轨道于3月16日投入使用。",
+    "blog_post_bridge_og_description": "第一阶段已完成。NJ Transit常规时刻表于3月15日恢复，新桥的第一条轨道于3月16日投入使用。"
   },
   "common": {
     "skip_to_main": "跳到主要内容",
@@ -585,6 +585,7 @@
     "article2_headline": "新功能：在您的网站上嵌入Reroute NJ",
     "article2_description": "四种嵌入格式、一个可视化配置器和PNG导出，为报道Portal Bridge切换的新闻编辑室提供。",
     "breadcrumb_blog_post_cutover": "转换从今天开始",
+    "breadcrumb_blog_post_bridge": "新Portal North Bridge已开通",
     "article3_headline": "转换从今天开始",
     "article3_description": "Portal North Bridge转换从今天开始。NJ Transit乘客在未来四周需要了解的信息。",
     "collection_item3": "转换从今天开始",

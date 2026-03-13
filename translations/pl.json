@@ -24,8 +24,8 @@
     "about_og_description": "Jak Reroute NJ tworzy tłumaczenia, weryfikuje dane transportowe i spełnia standardy dostępności.",
     "blog_post_cutover_description": "Przebudowa Portal North Bridge rozpoczyna się 15 lutego 2026. Oto co pasażerowie NJ Transit muszą wiedzieć i jak Reroute NJ może pomóc przez następne cztery tygodnie.",
     "blog_post_cutover_og_description": "Przebudowa Portal North Bridge zaczyna się dziś. Co pasażerowie NJ Transit muszą wiedzieć na następne cztery tygodnie.",
-    "bridge_opens_description": "Faza 1 przebudowy Portal North Bridge jest zakończona. Regularne rozkłady NJ Transit wznawiają się 15 marca, a pierwszy tor na nowym moście wchodzi do użytku 16 marca.",
-    "bridge_opens_og_description": "Faza 1 zakończona. Regularne rozkłady NJ Transit wznawiają się 15 marca, pierwszy tor na nowym moście wchodzi do użytku 16 marca."
+    "blog_post_bridge_description": "Faza 1 przebudowy Portal North Bridge jest zakończona. Regularne rozkłady NJ Transit wznawiają się 15 marca, a pierwszy tor na nowym moście wchodzi do użytku 16 marca.",
+    "blog_post_bridge_og_description": "Faza 1 zakończona. Regularne rozkłady NJ Transit wznawiają się 15 marca, pierwszy tor na nowym moście wchodzi do użytku 16 marca."
   },
   "common": {
     "skip_to_main": "Przejdź do głównej treści",
@@ -585,6 +585,7 @@
     "article2_headline": "Nowość: osadź Reroute NJ na swojej stronie",
     "article2_description": "Cztery formaty osadzania, wizualny konfigurator i eksport PNG dla redakcji relacjonujących zmianę Portal Bridge.",
     "breadcrumb_blog_post_cutover": "Przebudowa zaczyna się dziś",
+    "breadcrumb_blog_post_bridge": "Nowy Portal North Bridge jest otwarty",
     "article3_headline": "Przebudowa zaczyna się dziś",
     "article3_description": "Przebudowa Portal North Bridge zaczyna się dziś. Co pasażerowie NJ Transit muszą wiedzieć na następne cztery tygodnie.",
     "collection_item3": "Przebudowa zaczyna się dziś",

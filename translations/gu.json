@@ -24,8 +24,8 @@
     "about_og_description": "Reroute NJ કેવી રીતે અનુવાદો બનાવે છે, ટ્રાન્ઝિટ ડેટા ચકાસે છે અને ઍક્સેસિબિલિટી ધોરણો પૂરા કરે છે.",
     "blog_post_cutover_description": "Portal North Bridge કટઓવર 15 ફેબ્રુઆરી, 2026 ના રોજ શરૂ થાય છે. NJ Transit મુસાફરોએ શું જાણવું જોઈએ અને આગામી ચાર અઠવાડિયા માટે Reroute NJ કેવી રીતે મદદ કરી શકે.",
     "blog_post_cutover_og_description": "Portal North Bridge કટઓવર આજે શરૂ થાય છે. આગામી ચાર અઠવાડિયા માટે NJ Transit મુસાફરોએ શું જાણવું જોઈએ.",
-    "bridge_opens_description": "Portal North Bridge કટઓવરનો ફેઝ 1 પૂર્ણ છે. NJ Transit ના નિયમિત સમયપત્રક 15 માર્ચે ફરી શરૂ થાય છે, અને નવા પુલ પર પ્રથમ ટ્રેક 16 માર્ચે સેવામાં આવે છે.",
-    "bridge_opens_og_description": "ફેઝ 1 પૂર્ણ. NJ Transit ના નિયમિત સમયપત્રક 15 માર્ચે ફરી શરૂ, નવા પુલ પર પ્રથમ ટ્રેક 16 માર્ચે સેવામાં."
+    "blog_post_bridge_description": "Portal North Bridge કટઓવરનો ફેઝ 1 પૂર્ણ છે. NJ Transit ના નિયમિત સમયપત્રક 15 માર્ચે ફરી શરૂ થાય છે, અને નવા પુલ પર પ્રથમ ટ્રેક 16 માર્ચે સેવામાં આવે છે.",
+    "blog_post_bridge_og_description": "ફેઝ 1 પૂર્ણ. NJ Transit ના નિયમિત સમયપત્રક 15 માર્ચે ફરી શરૂ, નવા પુલ પર પ્રથમ ટ્રેક 16 માર્ચે સેવામાં."
   },
   "common": {
     "skip_to_main": "મુખ્ય સામગ્રી પર જાઓ",
@@ -585,6 +585,7 @@
     "article2_headline": "નવું: તમારી વેબસાઇટ પર Reroute NJ એમ્બેડ કરો",
     "article2_description": "Portal Bridge કટઓવર આવરી લેતા ન્યૂઝરૂમ માટે ચાર એમ્બેડ ફોર્મેટ, વિઝ્યુઅલ કૉન્ફિગ્યુરેટર અને PNG એક્સપોર્ટ.",
     "breadcrumb_blog_post_cutover": "કટઓવર આજે શરૂ થાય છે",
+    "breadcrumb_blog_post_bridge": "નવો Portal North Bridge ખુલ્લો છે",
     "article3_headline": "કટઓવર આજે શરૂ થાય છે",
     "article3_description": "Portal North Bridge કટઓવર આજે શરૂ થાય છે. આગામી ચાર અઠવાડિયા માટે NJ Transit મુસાફરોએ શું જાણવું જોઈએ.",
     "collection_item3": "કટઓવર આજે શરૂ થાય છે",

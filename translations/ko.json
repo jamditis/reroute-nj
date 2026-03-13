@@ -24,8 +24,8 @@
     "about_og_description": "번역 제작, 교통 데이터 검증, 접근성과 정확성을 우선시하는 방법.",
     "blog_post_cutover_description": "Portal North Bridge 전환이 2026년 2월 15일에 시작됩니다. NJ Transit 승객들이 알아야 할 것과 앞으로 4주간 Reroute NJ가 어떻게 도울 수 있는지 알아보세요.",
     "blog_post_cutover_og_description": "Portal North Bridge 전환이 오늘 시작됩니다. 앞으로 4주간 NJ Transit 승객들이 알아야 할 사항.",
-    "bridge_opens_description": "Portal North Bridge 전환 1단계가 완료되었습니다. NJ Transit 정규 시간표가 3월 15일에 재개되고 새 다리의 첫 번째 선로가 3월 16일에 운행을 시작합니다.",
-    "bridge_opens_og_description": "1단계 완료. NJ Transit 정규 시간표 3월 15일 재개, 새 다리 첫 번째 선로 3월 16일 운행 개시."
+    "blog_post_bridge_description": "Portal North Bridge 전환 1단계가 완료되었습니다. NJ Transit 정규 시간표가 3월 15일에 재개되고 새 다리의 첫 번째 선로가 3월 16일에 운행을 시작합니다.",
+    "blog_post_bridge_og_description": "1단계 완료. NJ Transit 정규 시간표 3월 15일 재개, 새 다리 첫 번째 선로 3월 16일 운행 개시."
   },
   "common": {
     "skip_to_main": "본문으로 건너뛰기",
@@ -585,6 +585,7 @@
     "article2_headline": "새 기능: 웹사이트에 Reroute NJ 삽입",
     "article2_description": "Portal Bridge 전환을 보도하는 뉴스룸을 위한 4가지 삽입 형식, 시각적 구성 도구 및 PNG 내보내기.",
     "breadcrumb_blog_post_cutover": "전환이 오늘 시작됩니다",
+    "breadcrumb_blog_post_bridge": "새 Portal North Bridge가 개통되었습니다",
     "article3_headline": "전환이 오늘 시작됩니다",
     "article3_description": "Portal North Bridge 전환이 오늘 시작됩니다. 앞으로 4주간 NJ Transit 승객들이 알아야 할 사항.",
     "collection_item3": "전환이 오늘 시작됩니다",
