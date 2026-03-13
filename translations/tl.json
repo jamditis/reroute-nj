@@ -23,7 +23,9 @@
     "about_description": "Paano gumagawa ang Reroute NJ ng mga pagsasalin sa 11 wika, bine-verify ang datos ng transit, at inuuna ang accessibility at katumpakan kaysa estilo.",
     "about_og_description": "Paano kami gumagawa ng mga pagsasalin, bine-verify ang datos ng transit, at inuuna ang accessibility at katumpakan.",
     "blog_post_cutover_description": "Ang Portal North Bridge cutover ay nagsisimula sa Pebrero 15, 2026. Narito ang kailangan malaman ng mga pasahero ng NJ Transit at kung paano makakatulong ang Reroute NJ sa susunod na apat na linggo.",
-    "blog_post_cutover_og_description": "Ang Portal North Bridge cutover ay nagsisimula ngayon. Ang kailangan malaman ng mga pasahero ng NJ Transit sa susunod na apat na linggo."
+    "blog_post_cutover_og_description": "Ang Portal North Bridge cutover ay nagsisimula ngayon. Ang kailangan malaman ng mga pasahero ng NJ Transit sa susunod na apat na linggo.",
+    "bridge_opens_description": "Kumpleto na ang Phase 1 ng Portal North Bridge cutover. Ang regular na iskedyul ng NJ Transit ay magbabalik sa Marso 15, at ang unang track sa bagong tulay ay magsisimula sa serbisyo sa Marso 16.",
+    "bridge_opens_og_description": "Kumpleto na ang Phase 1. Ang regular na iskedyul ng NJ Transit ay magbabalik sa Marso 15, ang unang track sa bagong tulay ay magsisimula sa serbisyo sa Marso 16."
   },
   "common": {
     "skip_to_main": "Pumunta sa pangunahing nilalaman",
@@ -56,8 +58,8 @@
   "index": {
     "title": "Reroute NJ — Gabay sa Portal Bridge cutover",
     "tagline": "Gabay sa Portal Bridge cutover",
-    "alert_phase1": "Phase 1:",
-    "alert_details": "Feb 15 – Mar 15, 2026 · Lahat ng linya apektado maliban sa Atlantic City · 50% pagbawas ng serbisyo sa pagitan ng Newark at Secaucus",
+    "alert_phase1": "Kumpleto na ang Phase 1!",
+    "alert_details": "Naibalik na ang regular na iskedyul ng NJ Transit noong Mar 15 · Ang unang track sa bagong Portal North Bridge ay magsisimula sa serbisyo sa Mar 16 · Phase 2 (pangalawang track) inaasahan sa taglagas ng 2026",
     "your_station": "Ang iyong istasyon",
     "choose_station": "Piliin ang iyong istasyon…",
     "direction_label": "Direksyon ng biyahe",
@@ -146,8 +148,8 @@
     "tl_tickets_desc": "Ang mga sakay ng Midtown Direct ay dapat magsimulang bumili ng Hoboken monthly pass (valid para sa biyahe sa Penn Station mula Feb 1–15).",
     "tl_start_title": "Nagsimula ang Phase 1",
     "tl_start_desc": "Nagsimula ang pansamantalang iskedyul. Ang Midtown Direct weekday na tren ay na-divert sa Hoboken. Single-track na operasyon sa pagitan ng Newark at Secaucus.",
-    "tl_end_title": "Nagtapos ang Phase 1 (inaasahan)",
-    "tl_end_desc": "Bumalik ang regular na iskedyul, depende sa pagkumpleto ng safety testing. Ang unang track sa bagong Portal North Bridge ay nag-umpisa nang gamitin.",
+    "tl_end_title": "Kumpleto na ang Phase 1",
+    "tl_end_desc": "Naibalik na ang regular na iskedyul ng NJ Transit. Ang unang track sa bagong Portal North Bridge ay magsisimula sa serbisyo ng pasahero sa Marso 16.",
     "tl_phase2_title": "Phase 2",
     "tl_phase2_desc": "Cutover ng pangalawang track. Inaasahan ang katulad na pagkaantala sa serbisyo. Mga petsa TBA. Pagkatapos nito, permanenteng itinapon na ang lumang Portal Bridge.",
     "resources_title": "Mga opisyal na mapagkukunan",
@@ -423,7 +425,10 @@
     "back_to_all_posts": "Bumalik sa lahat ng post",
     "post3_title": "Nagsimula na ang cutover ngayon",
     "post3_date": "Pebrero 15, 2026",
-    "post3_excerpt": "Ang Portal North Bridge cutover ay nagsisimula ngayon. Narito ang kailangan malaman ng mga pasahero ng NJ Transit at kung paano makakatulong ang Reroute NJ sa susunod na apat na linggo."
+    "post3_excerpt": "Ang Portal North Bridge cutover ay nagsisimula ngayon. Narito ang kailangan malaman ng mga pasahero ng NJ Transit at kung paano makakatulong ang Reroute NJ sa susunod na apat na linggo.",
+    "post4_title": "Bukas na ang bagong Portal North Bridge",
+    "post4_date": "Marso 13, 2026",
+    "post4_excerpt": "Kumpleto na ang Phase 1. Ang regular na iskedyul ng NJ Transit ay magbabalik sa Marso 15 at ang unang track sa bagong tulay ay magsisimula sa serbisyo sa Marso 16. Narito ang ibig sabihin nito para sa mga pasahero."
   },
   "blog_post": {
     "title": "Bakit ginawa namin ang Reroute NJ — Reroute NJ",
@@ -582,7 +587,9 @@
     "breadcrumb_blog_post_cutover": "Nagsimula na ang cutover ngayon",
     "article3_headline": "Nagsimula na ang cutover ngayon",
     "article3_description": "Ang Portal North Bridge cutover ay nagsisimula ngayon. Ang kailangan malaman ng mga pasahero ng NJ Transit sa susunod na apat na linggo.",
-    "collection_item3": "Nagsimula na ang cutover ngayon"
+    "collection_item3": "Nagsimula na ang cutover ngayon",
+    "article4_headline": "Bukas na ang bagong Portal North Bridge",
+    "article4_description": "Kumpleto na ang Phase 1 ng Portal North Bridge cutover. Ang regular na iskedyul ng NJ Transit ay magbabalik sa Marso 15, at ang unang track sa bagong tulay ay magsisimula sa serbisyo sa Marso 16."
   },
   "blog_post_cutover": {
     "title": "Nagsimula na ang cutover ngayon — Reroute NJ",
@@ -610,5 +617,29 @@
     "closing_p1": "Ang pagkaantalang ito ay pansamantala. Ang bagong Portal North Bridge ay papalitan ang isang 115-taong-gulang na bottleneck na nagdudulot ng sunud-sunod na pagkaantala sa Northeast Corridor sa loob ng mga dekada. Apat na linggo ng hirap kapalit ng mga taon ng mas magandang serbisyo.",
     "closing_p2": "Mag-plano nang maaga, umalis nang maaga, at magpasensya sa isa't isa sa mga platform. Malalampasan natin ito.",
     "cta": "Planuhin ang iyong biyahe →"
+  },
+  "blog_post_bridge": {
+    "title": "Bukas na ang bagong Portal North Bridge — Reroute NJ",
+    "tagline": "Kumpleto na ang Phase 1",
+    "heading": "Bukas na ang bagong Portal North Bridge",
+    "by_prefix": "Ni",
+    "date": "Marso 13, 2026",
+    "intro_p1": "Tapos na ang paghihintay. Noong Marso 12, si Gobernador Mikie Sherrill at mga opisyal mula sa NJ Transit at Amtrak ay sumakay sa unang seremonyal na tren sa bagong Portal North Bridge. Simula Lunes, Marso 16, ang unang track sa bagong tulay ay magsisimula sa regular na serbisyo ng pasahero. Ang regular na iskedyul ng NJ Transit ay magbabalik sa Linggo, Marso 15.",
+    "intro_p2": "Kumpleto na ang Phase 1 ng cutover. Pagkatapos ng apat na linggo ng pinababang serbisyo, mga paglilipat sa Hoboken, at single-track na operasyon sa pagitan ng Newark at Secaucus, maaari nang bumalik ang mga pasahero sa kanilang normal na biyahe.",
+    "h2_what_means": "Ano ang ibig sabihin nito para sa mga pasahero",
+    "what_means_intro": "Simula Linggo, Marso 15, matatapos na ang pansamantalang iskedyul ng cutover. Narito ang mga pagbabago:",
+    "wm_hoboken": "<strong>Ang mga linya ng Montclair-Boonton at Morris & Essex</strong> ay babalik sa New York Penn Station. Wala nang mga paglilipat sa Hoboken.",
+    "wm_full_service": "<strong>Northeast Corridor at North Jersey Coast Line</strong> ay magbabalik sa buong frequency ng serbisyo.",
+    "wm_raritan": "<strong>Raritan Valley Line</strong> ay magbabalik ng direktang biyahe sa Penn Station.",
+    "what_means_p2": "Sa Lunes, Marso 16, ang mga tren na pakanluran ay magsisimulang gumamit ng unang track sa bagong Portal North Bridge. Ang mga tren na pasilangan ay patuloy na gagamit ng lumang tulay hanggang sa Phase 2 sa taglagas.",
+    "h2_new_bridge": "Ano ang bagong tulay?",
+    "new_bridge_p": "Ang Portal North Bridge ay isang moderno, mataas na antas, fixed-span na tulay na tumataas ng 50 talampakan sa ibabaw ng Hackensack River. Pinapalitan nito ang 116-taong-gulang na Portal Bridge, isang swing bridge na kailangang buksan para sa trapiko ng barko nang dose-dosenang beses bawat taon — at madalas na nasisira. Ganap na inaalis ng bagong tulay ang problemang iyon. Ang mga tren ay maaaring bumiyahe ng hanggang 90 mph, kumpara sa 60 mph sa lumang istruktura.",
+    "new_bridge_p2": "Ang proyektong nagkakahalaga ng $2.3 bilyon ay ang unang malaking pagpapalit ng tulay na nakumpleto sa Northeast Corridor at isang kritikal na bahagi ng mas malaking Gateway Program.",
+    "h2_what_next": "Ano ang susunod",
+    "what_next_p1": "Hindi pa ito ang katapusan. Ang Phase 2 ay maglilipat ng pangalawang track sa bagong tulay, inaasahan sa taglagas ng 2026. Ibig sabihin nito ay isa pang round ng pansamantalang pagbabago sa iskedyul at pagbabawas ng serbisyo. Narito rin ang Reroute NJ para doon.",
+    "what_next_p2": "Kapag pareho nang track ay nasa bagong tulay na, ang orihinal na Portal Bridge mula 1910 ay permanenteng ireretiro at tatanggalin sa 2027.",
+    "closing": "Apat na linggo ng abala para sa mga dekada ng mas mahusay, mas mabilis, at mas maaasahang serbisyo. Sulit ito.",
+    "support_p": "Ang Reroute NJ ay libre, open source, at sinusuportahan ng komunidad. Kung nakakatulong ito sa iyo, ibahagi ito sa isang taong sumasakay ng NJ Transit o <a href=\"https://github.com/sponsors/jamditis\" target=\"_blank\" rel=\"noopener\">suportahan ang proyekto</a>.",
+    "cta": "Tingnan ang buong coverage ng balita →"
   }
 }
