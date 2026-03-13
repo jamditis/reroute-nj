@@ -5,7 +5,7 @@
   <!-- English: index.html (homepage) -->
   <url>
     <loc>https://reroutenj.org/</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/"/>
@@ -25,7 +25,7 @@
   <!-- English: compare.html -->
   <url>
     <loc>https://reroutenj.org/compare.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/compare.html"/>
@@ -45,7 +45,7 @@
   <!-- English: coverage.html -->
   <url>
     <loc>https://reroutenj.org/coverage.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/coverage.html"/>
@@ -65,7 +65,7 @@
   <!-- English: map.html -->
   <url>
     <loc>https://reroutenj.org/map.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/map.html"/>
@@ -85,7 +85,7 @@
   <!-- English: embed.html -->
   <url>
     <loc>https://reroutenj.org/embed.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/embed.html"/>
@@ -105,7 +105,7 @@
   <!-- English: blog.html (blog index) -->
   <url>
     <loc>https://reroutenj.org/blog.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/blog.html"/>
@@ -125,7 +125,7 @@
   <!-- English: blog/why-we-built-reroute-nj.html -->
   <url>
     <loc>https://reroutenj.org/blog/why-we-built-reroute-nj.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/blog/why-we-built-reroute-nj.html"/>
@@ -145,7 +145,7 @@
   <!-- English: blog/new-embed-system.html -->
   <url>
     <loc>https://reroutenj.org/blog/new-embed-system.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/blog/new-embed-system.html"/>
@@ -205,13 +205,13 @@
   <!-- Embed utility pages (no translations, loaded inside iframes) -->
   <url>
     <loc>https://reroutenj.org/card.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://reroutenj.org/widget.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
@@ -219,7 +219,7 @@
   <!-- Spanish (es) -->
   <url>
     <loc>https://reroutenj.org/es/index.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/"/>
@@ -237,7 +237,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/es/compare.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/compare.html"/>
@@ -255,7 +255,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/es/coverage.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/coverage.html"/>
@@ -273,7 +273,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/es/map.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/map.html"/>
@@ -291,7 +291,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/es/embed.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/embed.html"/>
@@ -309,7 +309,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/es/blog.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/blog.html"/>
@@ -327,7 +327,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/es/blog/why-we-built-reroute-nj.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/blog/why-we-built-reroute-nj.html"/>
@@ -345,7 +345,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/es/blog/new-embed-system.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/blog/new-embed-system.html"/>
@@ -401,7 +401,7 @@
   <!-- Chinese (zh) -->
   <url>
     <loc>https://reroutenj.org/zh/index.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/"/>
@@ -419,7 +419,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/zh/compare.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/compare.html"/>
@@ -437,7 +437,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/zh/coverage.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/coverage.html"/>
@@ -455,7 +455,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/zh/map.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/map.html"/>
@@ -473,7 +473,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/zh/embed.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/embed.html"/>
@@ -491,7 +491,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/zh/blog.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/blog.html"/>
@@ -509,7 +509,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/zh/blog/why-we-built-reroute-nj.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/blog/why-we-built-reroute-nj.html"/>
@@ -527,7 +527,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/zh/blog/new-embed-system.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/blog/new-embed-system.html"/>
@@ -583,7 +583,7 @@
   <!-- Tagalog (tl) -->
   <url>
     <loc>https://reroutenj.org/tl/index.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/"/>
@@ -601,7 +601,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/tl/compare.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/compare.html"/>
@@ -619,7 +619,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/tl/coverage.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/coverage.html"/>
@@ -637,7 +637,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/tl/map.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/map.html"/>
@@ -655,7 +655,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/tl/embed.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/embed.html"/>
@@ -673,7 +673,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/tl/blog.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/blog.html"/>
@@ -691,7 +691,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/tl/blog/why-we-built-reroute-nj.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/blog/why-we-built-reroute-nj.html"/>
@@ -709,7 +709,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/tl/blog/new-embed-system.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/blog/new-embed-system.html"/>
@@ -765,7 +765,7 @@
   <!-- Korean (ko) -->
   <url>
     <loc>https://reroutenj.org/ko/index.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/"/>
@@ -783,7 +783,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/ko/compare.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/compare.html"/>
@@ -801,7 +801,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/ko/coverage.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/coverage.html"/>
@@ -819,7 +819,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/ko/map.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/map.html"/>
@@ -837,7 +837,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/ko/embed.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/embed.html"/>
@@ -855,7 +855,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/ko/blog.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/blog.html"/>
@@ -873,7 +873,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/ko/blog/why-we-built-reroute-nj.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/blog/why-we-built-reroute-nj.html"/>
@@ -891,7 +891,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/ko/blog/new-embed-system.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/blog/new-embed-system.html"/>
@@ -947,7 +947,7 @@
   <!-- Portuguese (pt) -->
   <url>
     <loc>https://reroutenj.org/pt/index.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/"/>
@@ -965,7 +965,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/pt/compare.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/compare.html"/>
@@ -983,7 +983,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/pt/coverage.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/coverage.html"/>
@@ -1001,7 +1001,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/pt/map.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/map.html"/>
@@ -1019,7 +1019,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/pt/embed.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/embed.html"/>
@@ -1037,7 +1037,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/pt/blog.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/blog.html"/>
@@ -1055,7 +1055,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/pt/blog/why-we-built-reroute-nj.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/blog/why-we-built-reroute-nj.html"/>
@@ -1073,7 +1073,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/pt/blog/new-embed-system.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/blog/new-embed-system.html"/>
@@ -1129,7 +1129,7 @@
   <!-- Gujarati (gu) -->
   <url>
     <loc>https://reroutenj.org/gu/index.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/"/>
@@ -1147,7 +1147,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/gu/compare.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/compare.html"/>
@@ -1165,7 +1165,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/gu/coverage.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/coverage.html"/>
@@ -1183,7 +1183,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/gu/map.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/map.html"/>
@@ -1201,7 +1201,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/gu/embed.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/embed.html"/>
@@ -1219,7 +1219,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/gu/blog.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/blog.html"/>
@@ -1237,7 +1237,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/gu/blog/why-we-built-reroute-nj.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/blog/why-we-built-reroute-nj.html"/>
@@ -1255,7 +1255,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/gu/blog/new-embed-system.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/blog/new-embed-system.html"/>
@@ -1311,7 +1311,7 @@
   <!-- Hindi (hi) -->
   <url>
     <loc>https://reroutenj.org/hi/index.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/"/>
@@ -1329,7 +1329,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/hi/compare.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/compare.html"/>
@@ -1347,7 +1347,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/hi/coverage.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/coverage.html"/>
@@ -1365,7 +1365,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/hi/map.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/map.html"/>
@@ -1383,7 +1383,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/hi/embed.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/embed.html"/>
@@ -1401,7 +1401,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/hi/blog.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/blog.html"/>
@@ -1419,7 +1419,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/hi/blog/why-we-built-reroute-nj.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/blog/why-we-built-reroute-nj.html"/>
@@ -1437,7 +1437,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/hi/blog/new-embed-system.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/blog/new-embed-system.html"/>
@@ -1493,7 +1493,7 @@
   <!-- Italian (it) -->
   <url>
     <loc>https://reroutenj.org/it/index.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/"/>
@@ -1511,7 +1511,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/it/compare.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/compare.html"/>
@@ -1529,7 +1529,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/it/coverage.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/coverage.html"/>
@@ -1547,7 +1547,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/it/map.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/map.html"/>
@@ -1565,7 +1565,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/it/embed.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/embed.html"/>
@@ -1583,7 +1583,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/it/blog.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/blog.html"/>
@@ -1601,7 +1601,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/it/blog/why-we-built-reroute-nj.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/blog/why-we-built-reroute-nj.html"/>
@@ -1619,7 +1619,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/it/blog/new-embed-system.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/blog/new-embed-system.html"/>
@@ -1675,7 +1675,7 @@
   <!-- Arabic (ar) -->
   <url>
     <loc>https://reroutenj.org/ar/index.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/"/>
@@ -1693,7 +1693,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/ar/compare.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/compare.html"/>
@@ -1711,7 +1711,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/ar/coverage.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/coverage.html"/>
@@ -1729,7 +1729,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/ar/map.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/map.html"/>
@@ -1747,7 +1747,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/ar/embed.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/embed.html"/>
@@ -1765,7 +1765,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/ar/blog.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/blog.html"/>
@@ -1783,7 +1783,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/ar/blog/why-we-built-reroute-nj.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/blog/why-we-built-reroute-nj.html"/>
@@ -1801,7 +1801,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/ar/blog/new-embed-system.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/blog/new-embed-system.html"/>
@@ -1857,7 +1857,7 @@
   <!-- Polish (pl) -->
   <url>
     <loc>https://reroutenj.org/pl/index.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/"/>
@@ -1875,7 +1875,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/pl/compare.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/compare.html"/>
@@ -1893,7 +1893,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/pl/coverage.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/coverage.html"/>
@@ -1911,7 +1911,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/pl/map.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/map.html"/>
@@ -1929,7 +1929,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/pl/embed.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/embed.html"/>
@@ -1947,7 +1947,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/pl/blog.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/blog.html"/>
@@ -1965,7 +1965,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/pl/blog/why-we-built-reroute-nj.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/blog/why-we-built-reroute-nj.html"/>
@@ -1983,7 +1983,7 @@
   </url>
   <url>
     <loc>https://reroutenj.org/pl/blog/new-embed-system.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/blog/new-embed-system.html"/>
@@ -2039,7 +2039,7 @@
   <!-- English: about.html -->
   <url>
     <loc>https://reroutenj.org/about.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://reroutenj.org/about.html"/>
