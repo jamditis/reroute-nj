@@ -394,6 +394,22 @@ def replace_hamburger_label(html, translations, page_key):
 def replace_page_specific_content(html, translations, page_key):
     """Replace page-specific static content using translation keys."""
     if page_key == "index":
+        # Phase banner injection
+        phase_banner = get_translation(translations, "common.phase_banner")
+        if phase_banner:
+            html = html.replace(
+                '<main class="container" id="main-content">',
+                f'<main class="container" id="main-content">\n    <div class="phase-banner">{phase_banner}</div>'
+            )
+
+        # SEO summary
+        seo_summary = get_translation(translations, "index.seo_summary")
+        if seo_summary:
+            html = html.replace(
+                "During the Phase 1 cutover (February 15 – March 15, 2026), NJ Transit rail service was reduced by approximately 50% as Amtrak connected the new Portal North Bridge. This tool shows how each line and station was affected. Phase 2 is expected fall 2026.",
+                seo_summary
+            )
+
         # Alert banner
         phase1 = get_translation(translations, "index.alert_phase1")
         details = get_translation(translations, "index.alert_details")
@@ -706,6 +722,14 @@ def replace_page_specific_content(html, translations, page_key):
                 html = html.replace(f"<span>{eng_desc}</span>", f"<span>{desc}</span>")
 
     elif page_key == "compare":
+        # Phase banner injection
+        phase_banner = get_translation(translations, "common.phase_banner")
+        if phase_banner:
+            html = html.replace(
+                '<main class="container" id="main-content">',
+                f'<main class="container" id="main-content">\n    <div class="phase-banner">{phase_banner}</div>'
+            )
+
         # Hero section
         for key, eng_text in [
             ("compare.hero_title", "How does your commute change?"),
@@ -790,6 +814,14 @@ def replace_page_specific_content(html, translations, page_key):
                 html = html.replace(f">{eng_text}</option>", f">{translated}</option>")
 
     elif page_key == "map":
+        # Phase banner injection
+        phase_banner = get_translation(translations, "common.phase_banner")
+        if phase_banner:
+            html = html.replace(
+                '<main class="container" id="main-content">',
+                f'<main class="container" id="main-content">\n    <div class="phase-banner">{phase_banner}</div>'
+            )
+
         for key, eng_text in [
             ("map.hero_title", "Portal Bridge cutover map"),
             ("map.hero_desc", "See the geography of the cutover: the Portal Bridge location, affected stations, key transfer hubs, and alternative routes."),
