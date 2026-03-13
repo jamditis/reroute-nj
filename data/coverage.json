@@ -1,6 +1,104 @@
 {
-  "lastUpdated": "2026-03-12T22:10:48Z",
+  "lastUpdated": "2026-03-13T00:53:43Z",
   "articles": [
+    {
+      "id": "njtransit-transit-and-amtrak-prepare-2026-03-12",
+      "title": "NJ TRANSIT and Amtrak Prepare to Open First Track on New Portal North Bridge",
+      "url": "https://www.njtransit.com/press-releases/nj-transit-and-amtrak-prepare-open-first-track-new-portal-north-bridge",
+      "source": "NJ Transit",
+      "author": null,
+      "date": "2026-03-12",
+      "category": "official",
+      "excerpt": "NJ Transit and Amtrak celebrated the completion of Phase 1 cutover with a ceremonial first train ride. One track officially opens for passenger service on Monday, March 16. Regular NJ Transit schedules resume Sunday, March 15.",
+      "lines": [
+        "northeast-corridor"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "cbsnews-sherrill-ceremonial-first-train-2026-03-12",
+      "title": "Gov. Mikie Sherrill takes ceremonial first train ride over new Portal North Bridge",
+      "url": "https://www.cbsnews.com/newyork/news/portal-north-bridge-ceremonial-first-train-ride/",
+      "source": "CBS New York",
+      "author": "Elijah Westbrook and Nick Caloway",
+      "date": "2026-03-12",
+      "category": "news",
+      "excerpt": "New Jersey's governor participated in a ceremonial maiden voyage across the replacement for the aging 116-year-old Portal Bridge. Service fully begins this Sunday.",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "abc7ny-ceremonial-train-ride-phase-1-2026-03-12",
+      "title": "Ceremonial train ride marks completion of Phase 1 of Portal Bridge changeover",
+      "url": "https://abc7ny.com/post/gateway-tunnel-project-moves-forward-nj-transit-nears-completion-portal-bridge-track-work/18705508/",
+      "source": "ABC7 New York",
+      "author": null,
+      "date": "2026-03-12",
+      "category": "news",
+      "excerpt": "Phase one of the Portal North Bridge cutover is now complete, allowing NJ Transit to resume normal schedules starting Monday. Governor Sherrill and transit officials participated in a ceremonial ride across the new bridge.",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "news12nj-first-train-over-portal-bridge-2026-03-12",
+      "title": "News 12 rides first train over new Portal Bridge",
+      "url": "https://newjersey.news12.com/commuters-set-to-celebrate-first-trip-on-new-portal-north-bridge-after-weeks-of-service-changes",
+      "source": "News12 | New Jersey",
+      "author": "Tom Krosnowski",
+      "date": "2026-03-12",
+      "category": "news",
+      "excerpt": "News 12 traveled aboard the inaugural passenger train crossing the new Portal Bridge. The modern bridge allows trains to travel up to 90 mph and eliminates delays from marine traffic openings that plagued the 116-year-old structure.",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "thedigestonline-first-ride-portal-bridge-2026-03-12",
+      "title": "First Ride Across the New Portal Bridge Marks Major Milestone for NJ Transit Commuters",
+      "url": "https://thedigestonline.com/news/portal-bridge-phase-1-complete-nj-transit/",
+      "source": "The Digest Online",
+      "author": null,
+      "date": "2026-03-12",
+      "category": "news",
+      "excerpt": "Phase one of the Portal North Bridge project is complete, with Governor Sherrill taking a ceremonial first train ride. Starting Monday, regular NJ Transit service resumes on the new bridge, ending weeks of construction delays.",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "trains-com-ceremonial-train-portal-north-2026-03-12",
+      "title": "Ceremonial train is first to cross New Jersey's Portal North Bridge",
+      "url": "https://www.trains.com/pro/passenger/ceremonial-train-is-first-to-cross-new-jerseys-portal-north-bridge-with-video/",
+      "source": "Trains Magazine",
+      "author": "David Lassen",
+      "date": "2026-03-12",
+      "category": "news",
+      "excerpt": "NJ Transit's America 250 locomotive led a ceremonial inaugural crossing of the newly completed Portal North Bridge, marking a major milestone in regional rail transit development.",
+      "lines": [
+        "northeast-corridor"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "iheart-new-portal-bridge-first-time-2026-03-12",
+      "title": "New Portal North Bridge Being Used For First Time Today",
+      "url": "https://wnnj.iheart.com/content/2026-03-12-new-portal-bridge-being-used-for-first-time-today/",
+      "source": "103.7 NNJ (iHeartRadio)",
+      "author": null,
+      "date": "2026-03-12",
+      "category": "news",
+      "excerpt": "The new Portal North Bridge officially opened for ceremonial use, with Governor Sherrill aboard the first NJ Transit train. This $2.3 billion structure replaces a 116-year-old bridge and is expected to reduce delays for commuters.",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
     {
       "id": "amtrak-transit-and-amtrak-2026-03-12",
       "title": "NJ TRANSIT and Amtrak Prepare to Open First Track on New Portal North Bridge",
@@ -30,20 +128,6 @@
       "direction": "both"
     },
     {
-      "id": "jdsupra-com-new-jersey-governor-mikie-2026-03-12",
-      "title": "New Jersey Governor Mikie Sherrill First Budget Address for FY2027 : Key Highlights | McCarter & English , LLP",
-      "url": "https://www.jdsupra.com/legalnews/new-jersey-governor-mikie-sherrill-s-6829889/",
-      "source": "jdsupra.com",
-      "author": null,
-      "date": "2026-03-12",
-      "category": "news",
-      "excerpt": "Governor Mikie Sherrill presented her first budget address, outlining a proposed $60.7 billion Fiscal Year 2027 budget for New Jersey. The proposal...",
-      "lines": [
-        "all"
-      ],
-      "direction": "both"
-    },
-    {
       "id": "yahoo-com-gateway-project-moves-forward-2026-03-12",
       "title": "Gateway Project moves forward as NJ Transit nears completion of Portal Bridge track work",
       "url": "https://www.yahoo.com/news/articles/gateway-project-moves-forward-nj-101952695.html",
@@ -54,6 +138,20 @@
       "excerpt": "On Monday, the new track is expected to be open to riders and schedules return to some sense of normalcy -- at least for now.",
       "lines": [
         "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "gottheimer-portal-north-bridge-milestone-2026-03-12",
+      "title": "Gottheimer Marks Major Milestone as Rail Service Begins on New Portal North Bridge",
+      "url": "https://gottheimer.house.gov/posts/release-big-day-gottheimer-marks-major-milestone-as-rail-service-begins-on-new-portal-north-bridge-funding-by-bipartisan-infrastructure-bill-he-helped-write-negotiate-and-pass",
+      "source": "Office of Rep. Josh Gottheimer",
+      "author": null,
+      "date": "2026-03-12",
+      "category": "official",
+      "excerpt": "Congressman Gottheimer celebrated the start of rail operations on the new Portal North Bridge, funded through the Bipartisan Infrastructure Bill, which will serve over 200,000 daily NJ Transit and Amtrak riders with faster, more reliable service.",
+      "lines": [
+        "northeast-corridor"
       ],
       "direction": "both"
     },
@@ -264,6 +362,20 @@
       "excerpt": "NEW YORK — Amtrak has scheduled a week of urgent track repairs at New York’s Penn Station to coincide with the final week of the current service changes accommodating the Portal Bridge cutover, NorthJersey.com reports.\r\n\r\nThe work is scheduled to begin March 9 and end March 15, the same day that work is slated to be completed on the cutover of",
       "lines": [
         "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "njbiz-portal-north-bridge-cutover-photos-2026-03-04",
+      "title": "Portal North Bridge cutover work in action (photos)",
+      "url": "https://njbiz.com/portal-north-bridge-cutover-northeast-corridor/",
+      "source": "NJBIZ",
+      "author": "Matthew Fazelpoor",
+      "date": "2026-03-04",
+      "category": "news",
+      "excerpt": "Crews are completing a historic track cutover, shifting one rail line from the aging Portal Bridge to the new Portal North Bridge over the Hackensack River. This marks the first major bridge cutover on the Northeast Corridor.",
+      "lines": [
+        "northeast-corridor"
       ],
       "direction": "both"
     },

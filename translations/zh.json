@@ -23,7 +23,9 @@
     "about_description": "Reroute NJ 如何制作11种语言的翻译、验证交通数据，以及为什么我们将无障碍性和准确性放在风格之上。",
     "about_og_description": "我们如何制作翻译、验证交通数据，以及为什么我们优先考虑无障碍性和准确性。",
     "blog_post_cutover_description": "Portal North Bridge转换于2026年2月15日开始。以下是NJ Transit乘客需要了解的信息，以及Reroute NJ在未来四周内如何提供帮助。",
-    "blog_post_cutover_og_description": "Portal North Bridge转换从今天开始。NJ Transit乘客在未来四周需要了解的信息。"
+    "blog_post_cutover_og_description": "Portal North Bridge转换从今天开始。NJ Transit乘客在未来四周需要了解的信息。",
+    "blog_post_bridge_description": "Portal North Bridge转换的第一阶段已完成。NJ Transit常规时刻表于3月15日恢复，新桥的第一条轨道于3月16日投入使用。",
+    "blog_post_bridge_og_description": "第一阶段已完成。NJ Transit常规时刻表于3月15日恢复，新桥的第一条轨道于3月16日投入使用。"
   },
   "common": {
     "skip_to_main": "跳到主要内容",
@@ -56,8 +58,8 @@
   "index": {
     "title": "Reroute NJ — Portal Bridge转换指南",
     "tagline": "Portal Bridge转换指南",
-    "alert_phase1": "第一阶段：",
-    "alert_details": "2026年2月15日至3月15日 · 除Atlantic City外所有线路受影响 · Newark和Secaucus之间服务减少50%",
+    "alert_phase1": "第一阶段已完成！",
+    "alert_details": "NJ Transit常规时刻表已于3月15日恢复 · 新Portal North Bridge第一条轨道于3月16日投入使用 · 第二阶段（第二条轨道）预计2026年秋季",
     "your_station": "你的车站",
     "choose_station": "选择你的车站…",
     "direction_label": "出行方向",
@@ -146,8 +148,8 @@
     "tl_tickets_desc": "Midtown Direct乘客应开始购买Hoboken月票（2月1日至15日期间同样适用于Penn Station出行）。",
     "tl_start_title": "第一阶段开始",
     "tl_start_desc": "临时时刻表生效。Midtown Direct工作日列车改道至Hoboken。Newark和Secaucus之间启用单线运营。",
-    "tl_end_title": "第一阶段结束（预计）",
-    "tl_end_desc": "正常时刻表恢复，取决于安全测试的完成情况。新Portal North Bridge的第一条轨道投入使用。",
+    "tl_end_title": "第一阶段已完成",
+    "tl_end_desc": "NJ Transit常规时刻表已恢复。新Portal North Bridge第一条轨道于3月16日投入客运服务。",
     "tl_phase2_title": "第二阶段",
     "tl_phase2_desc": "第二条轨道转换。预计会有类似的服务中断。日期待定。此后，旧Portal Bridge将永久退役。",
     "resources_title": "官方资源",
@@ -423,7 +425,10 @@
     "back_to_all_posts": "返回所有文章",
     "post3_title": "转换从今天开始",
     "post3_date": "2026年2月15日",
-    "post3_excerpt": "Portal North Bridge转换从今天开始。以下是NJ Transit乘客需要了解的信息，以及Reroute NJ在未来四周内如何提供帮助。"
+    "post3_excerpt": "Portal North Bridge转换从今天开始。以下是NJ Transit乘客需要了解的信息，以及Reroute NJ在未来四周内如何提供帮助。",
+    "post4_title": "新Portal North Bridge已开通",
+    "post4_date": "2026年3月13日",
+    "post4_excerpt": "第一阶段已完成。NJ Transit常规时刻表于3月15日恢复，新桥的第一条轨道于3月16日投入使用。以下是对乘客的影响。"
   },
   "blog_post": {
     "title": "我们为什么创建Reroute NJ — Reroute NJ",
@@ -580,9 +585,12 @@
     "article2_headline": "新功能：在您的网站上嵌入Reroute NJ",
     "article2_description": "四种嵌入格式、一个可视化配置器和PNG导出，为报道Portal Bridge切换的新闻编辑室提供。",
     "breadcrumb_blog_post_cutover": "转换从今天开始",
+    "breadcrumb_blog_post_bridge": "新Portal North Bridge已开通",
     "article3_headline": "转换从今天开始",
     "article3_description": "Portal North Bridge转换从今天开始。NJ Transit乘客在未来四周需要了解的信息。",
-    "collection_item3": "转换从今天开始"
+    "collection_item3": "转换从今天开始",
+    "article4_headline": "新Portal North Bridge已开通",
+    "article4_description": "Portal North Bridge转换的第一阶段已完成。NJ Transit常规时刻表于3月15日恢复，新桥的第一条轨道于3月16日投入使用。"
   },
   "blog_post_cutover": {
     "title": "转换从今天开始 — Reroute NJ",
@@ -610,5 +618,29 @@
     "closing_p1": "这次中断是暂时的。新的Portal North Bridge将取代一个已经造成Northeast Corridor连锁延误数十年的115年老瓶颈。四周的不便换来多年更好的服务。",
     "closing_p2": "提前规划，早点出门，在站台上对彼此多些耐心。我们会一起度过这段时期。",
     "cta": "规划你的通勤 →"
+  },
+  "blog_post_bridge": {
+    "title": "新Portal North Bridge已开通 — Reroute NJ",
+    "tagline": "第一阶段已完成",
+    "heading": "新Portal North Bridge已开通",
+    "by_prefix": "作者",
+    "date": "2026年3月13日",
+    "intro_p1": "等待结束了。3月12日，州长Mikie Sherrill与NJ Transit和Amtrak的官员乘坐了第一列仪式列车穿越新Portal North Bridge。从3月16日星期一起，新桥的第一条轨道投入常规客运服务。NJ Transit常规时刻表于3月15日星期日恢复。",
+    "intro_p2": "转换的第一阶段已完成。经过四周的减少服务、Hoboken改道和Newark与Secaucus之间的单线运营后，乘客可以恢复正常通勤。",
+    "h2_what_means": "这对乘客意味着什么",
+    "what_means_intro": "从3月15日星期日起，临时转换时刻表结束。以下是变化内容：",
+    "wm_hoboken": "<strong>Montclair-Boonton和Morris &amp; Essex线路</strong>恢复前往New York Penn Station。不再改道至Hoboken。",
+    "wm_full_service": "<strong>Northeast Corridor和North Jersey Coast Line</strong>恢复全频次服务。",
+    "wm_raritan": "<strong>Raritan Valley Line</strong>恢复直达Penn Station的一站式服务。",
+    "what_means_p2": "3月16日星期一，西行列车开始使用新Portal North Bridge的第一条轨道。东行列车继续使用旧桥，直到秋季的第二阶段。",
+    "h2_new_bridge": "新桥是什么？",
+    "new_bridge_p": "Portal North Bridge是一座现代化的高架固定桥，高出Hackensack River 50英尺。它取代了有116年历史的Portal Bridge——一座每年需要为船舶通行开启数十次的旋转桥，而且经常卡住。新桥完全消除了这个问题。列车可以以90 mph的速度通行，而旧桥仅为60 mph。",
+    "new_bridge_p2": "这个耗资23亿美元的项目是Northeast Corridor上首个完成的重大桥梁更替，也是Gateway Program的关键组成部分。",
+    "h2_what_next": "接下来是什么",
+    "what_next_p1": "这还没有结束。第二阶段将把第二条轨道转移到新桥上，预计在2026年秋季。届时将会有另一轮临时时刻表调整和服务减少。Reroute NJ届时也会继续提供帮助。",
+    "what_next_p2": "一旦两条轨道都转移到新桥上，1910年建造的原Portal Bridge将永久退役，并于2027年拆除。",
+    "closing": "四周的中断换来数十年更好、更快、更可靠的服务。这是值得的。",
+    "support_p": "Reroute NJ是免费的、开源的、由社区支持的项目。如果你觉得有用，请分享给乘坐NJ Transit的人，或<a href=\"https://github.com/sponsors/jamditis\" target=\"_blank\" rel=\"noopener\">支持本项目</a>。",
+    "cta": "查看完整新闻报道 →"
   }
 }

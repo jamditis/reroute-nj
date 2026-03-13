@@ -23,7 +23,9 @@
     "about_description": "Reroute NJ가 11개 언어로 번역을 제작하고, 교통 데이터를 검증하며, 스타일보다 접근성과 정확성을 우선시하는 방법.",
     "about_og_description": "번역 제작, 교통 데이터 검증, 접근성과 정확성을 우선시하는 방법.",
     "blog_post_cutover_description": "Portal North Bridge 전환이 2026년 2월 15일에 시작됩니다. NJ Transit 승객들이 알아야 할 것과 앞으로 4주간 Reroute NJ가 어떻게 도울 수 있는지 알아보세요.",
-    "blog_post_cutover_og_description": "Portal North Bridge 전환이 오늘 시작됩니다. 앞으로 4주간 NJ Transit 승객들이 알아야 할 사항."
+    "blog_post_cutover_og_description": "Portal North Bridge 전환이 오늘 시작됩니다. 앞으로 4주간 NJ Transit 승객들이 알아야 할 사항.",
+    "blog_post_bridge_description": "Portal North Bridge 전환 1단계가 완료되었습니다. NJ Transit 정규 시간표가 3월 15일에 재개되고 새 다리의 첫 번째 선로가 3월 16일에 운행을 시작합니다.",
+    "blog_post_bridge_og_description": "1단계 완료. NJ Transit 정규 시간표 3월 15일 재개, 새 다리 첫 번째 선로 3월 16일 운행 개시."
   },
   "common": {
     "skip_to_main": "본문으로 건너뛰기",
@@ -56,8 +58,8 @@
   "index": {
     "title": "Reroute NJ — Portal Bridge 전환 안내",
     "tagline": "Portal Bridge 전환 안내",
-    "alert_phase1": "1단계:",
-    "alert_details": "2026년 2월 15일 – 3월 15일 · Atlantic City를 제외한 모든 노선 영향 · Newark와 Secaucus 사이 50% 운행 감소",
+    "alert_phase1": "1단계 완료!",
+    "alert_details": "3월 15일부터 NJ Transit 정규 시간표 재개 · 새 Portal North Bridge 첫 번째 선로 3월 16일 운행 개시 · 2단계 (두 번째 선로) 2026년 가을 예정",
     "your_station": "내 역",
     "choose_station": "역을 선택하세요…",
     "direction_label": "이동 방향",
@@ -146,8 +148,8 @@
     "tl_tickets_desc": "Midtown Direct 이용자는 Hoboken 정기권을 구매해야 합니다 (2월 1~15일 Penn Station 여행에도 유효).",
     "tl_start_title": "1단계 시작",
     "tl_start_desc": "임시 시간표가 적용됩니다. Midtown Direct 평일 열차가 Hoboken으로 우회됩니다. Newark와 Secaucus 사이 단선 운행.",
-    "tl_end_title": "1단계 종료 (예정)",
-    "tl_end_desc": "안전 테스트 완료에 따라 정상 시간표가 재개됩니다. 새 Portal North Bridge의 첫 번째 선로가 운행에 들어갑니다.",
+    "tl_end_title": "1단계 완료",
+    "tl_end_desc": "NJ Transit 정규 시간표가 재개되었습니다. 새 Portal North Bridge의 첫 번째 선로가 3월 16일에 여객 운행을 시작합니다.",
     "tl_phase2_title": "2단계",
     "tl_phase2_desc": "두 번째 선로 전환. 유사한 서비스 중단이 예상됩니다. 날짜 미정. 이후 구 Portal Bridge가 영구 퇴역합니다.",
     "resources_title": "공식 자료",
@@ -423,7 +425,10 @@
     "back_to_all_posts": "모든 글로 돌아가기",
     "post3_title": "전환이 오늘 시작됩니다",
     "post3_date": "2026년 2월 15일",
-    "post3_excerpt": "Portal North Bridge 전환이 오늘 시작됩니다. NJ Transit 승객들이 알아야 할 것과 앞으로 4주간 Reroute NJ가 어떻게 도울 수 있는지 알아보세요."
+    "post3_excerpt": "Portal North Bridge 전환이 오늘 시작됩니다. NJ Transit 승객들이 알아야 할 것과 앞으로 4주간 Reroute NJ가 어떻게 도울 수 있는지 알아보세요.",
+    "post4_title": "새 Portal North Bridge가 개통되었습니다",
+    "post4_date": "2026년 3월 13일",
+    "post4_excerpt": "1단계가 완료되었습니다. NJ Transit 정규 시간표가 3월 15일에 재개되고 새 다리의 첫 번째 선로가 3월 16일에 운행을 시작합니다. 승객들에게 어떤 의미인지 알아보세요."
   },
   "blog_post": {
     "title": "Reroute NJ를 만든 이유 — Reroute NJ",
@@ -580,9 +585,12 @@
     "article2_headline": "새 기능: 웹사이트에 Reroute NJ 삽입",
     "article2_description": "Portal Bridge 전환을 보도하는 뉴스룸을 위한 4가지 삽입 형식, 시각적 구성 도구 및 PNG 내보내기.",
     "breadcrumb_blog_post_cutover": "전환이 오늘 시작됩니다",
+    "breadcrumb_blog_post_bridge": "새 Portal North Bridge가 개통되었습니다",
     "article3_headline": "전환이 오늘 시작됩니다",
     "article3_description": "Portal North Bridge 전환이 오늘 시작됩니다. 앞으로 4주간 NJ Transit 승객들이 알아야 할 사항.",
-    "collection_item3": "전환이 오늘 시작됩니다"
+    "collection_item3": "전환이 오늘 시작됩니다",
+    "article4_headline": "새 Portal North Bridge가 개통되었습니다",
+    "article4_description": "Portal North Bridge 전환 1단계가 완료되었습니다. NJ Transit 정규 시간표가 3월 15일에 재개되고 새 다리의 첫 번째 선로가 3월 16일에 운행을 시작합니다."
   },
   "blog_post_cutover": {
     "title": "전환이 오늘 시작됩니다 — Reroute NJ",
@@ -610,5 +618,29 @@
     "closing_p1": "이 중단은 일시적입니다. 새 Portal North Bridge는 수십 년간 Northeast Corridor에서 연쇄 지연을 초래해 온 115년 된 병목 구간을 대체합니다. 더 나은 서비스를 위한 4주간의 고통입니다.",
     "closing_p2": "미리 계획하고, 일찍 출발하고, 플랫폼에서 서로 인내심을 가지세요. 함께 해낼 수 있습니다.",
     "cta": "통근 계획하기 →"
+  },
+  "blog_post_bridge": {
+    "title": "새 Portal North Bridge가 개통되었습니다 — Reroute NJ",
+    "tagline": "1단계 완료",
+    "heading": "새 Portal North Bridge가 개통되었습니다",
+    "by_prefix": "작성자",
+    "date": "2026년 3월 13일",
+    "intro_p1": "기다림이 끝났습니다. 3월 12일, Mikie Sherrill 주지사와 NJ Transit 및 Amtrak 관계자들이 새 Portal North Bridge를 횡단하는 첫 기념 열차에 탑승했습니다. 3월 16일 월요일부터 새 다리의 첫 번째 선로가 정규 여객 운행을 시작합니다. NJ Transit 정규 시간표는 3월 15일 일요일에 재개됩니다.",
+    "intro_p2": "1단계 전환이 완료되었습니다. 4주간의 감축 운행, Hoboken 우회, Newark와 Secaucus 사이의 단선 운행을 거쳐 승객들은 정상적인 통근으로 돌아갈 수 있습니다.",
+    "h2_what_means": "승객들에게 어떤 의미인가",
+    "what_means_intro": "3월 15일 일요일부터 임시 전환 시간표가 종료됩니다. 변경 사항은 다음과 같습니다:",
+    "wm_hoboken": "<strong>Montclair-Boonton 및 Morris &amp; Essex 노선</strong>이 New York Penn Station으로 복귀합니다. 더 이상 Hoboken 우회 없음.",
+    "wm_full_service": "<strong>Northeast Corridor 및 North Jersey Coast Line</strong>이 전체 운행 빈도를 재개합니다.",
+    "wm_raritan": "<strong>Raritan Valley Line</strong>이 Penn Station까지 환승 없는 직행 운행을 복원합니다.",
+    "what_means_p2": "3월 16일 월요일부터 서행 열차가 새 Portal North Bridge의 첫 번째 선로를 사용하기 시작합니다. 동행 열차는 가을 2단계까지 기존 다리에서 계속 운행합니다.",
+    "h2_new_bridge": "새 다리란?",
+    "new_bridge_p": "Portal North Bridge는 Hackensack River 위 50피트 높이의 현대식 고가 고정 교량입니다. 연간 수십 차례 선박 통행을 위해 개폐해야 했고 자주 고장이 났던 116년 된 Portal Bridge 선회교를 대체합니다. 새 다리는 그 문제를 완전히 해결합니다. 열차는 기존 구조물의 시속 60마일 대비 최대 시속 90마일로 운행할 수 있습니다.",
+    "new_bridge_p2": "23억 달러 규모의 이 프로젝트는 Northeast Corridor에서 완공된 첫 번째 주요 교량 전환이며 대규모 Gateway Program의 핵심 요소입니다.",
+    "h2_what_next": "앞으로의 계획",
+    "what_next_p1": "이것이 끝이 아닙니다. 2단계에서 두 번째 선로를 새 다리로 이전할 예정이며, 2026년 가을로 예상됩니다. 이는 또 다른 임시 시간표 변경과 운행 감축을 의미합니다. Reroute NJ는 그때도 함께할 것입니다.",
+    "what_next_p2": "두 선로가 모두 새 다리로 이전되면, 1910년 원래의 Portal Bridge는 영구적으로 퇴역하고 2027년에 해체됩니다.",
+    "closing": "수십 년간의 더 빠르고, 더 안정적인 서비스를 위한 4주간의 불편이었습니다. 그만한 가치가 있었습니다.",
+    "support_p": "Reroute NJ는 무료이며, 오픈 소스이고, 커뮤니티가 지원합니다. 유용하다면 NJ Transit을 이용하는 분께 공유하거나 <a href=\"https://github.com/sponsors/jamditis\" target=\"_blank\" rel=\"noopener\">프로젝트를 후원</a>해 주세요.",
+    "cta": "전체 뉴스 보도 보기 →"
   }
 }

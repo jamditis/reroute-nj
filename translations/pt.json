@@ -23,7 +23,9 @@
     "about_description": "Como o Reroute NJ produz traduções em 11 idiomas, verifica dados de trânsito e prioriza acessibilidade e precisão acima do estilo.",
     "about_og_description": "Como produzimos traduções, verificamos dados de trânsito e priorizamos acessibilidade e precisão.",
     "blog_post_cutover_description": "A transição do Portal North Bridge começa em 15 de fevereiro de 2026. O que os passageiros do NJ Transit precisam saber e como o Reroute NJ pode ajudar nas próximas quatro semanas.",
-    "blog_post_cutover_og_description": "A transição do Portal North Bridge começa hoje. O que os passageiros do NJ Transit precisam saber nas próximas quatro semanas."
+    "blog_post_cutover_og_description": "A transição do Portal North Bridge começa hoje. O que os passageiros do NJ Transit precisam saber nas próximas quatro semanas.",
+    "blog_post_bridge_description": "A Fase 1 da transição da Portal North Bridge está concluída. Os horários regulares do NJ Transit são retomados em 15 de março e a primeira via na nova ponte entra em serviço em 16 de março.",
+    "blog_post_bridge_og_description": "Fase 1 concluída. Horários regulares do NJ Transit retomados em 15 de março, primeira via na nova ponte em serviço em 16 de março."
   },
   "common": {
     "skip_to_main": "Pular para o conteúdo principal",
@@ -56,8 +58,8 @@
   "index": {
     "title": "Reroute NJ — Guia da transição do Portal Bridge",
     "tagline": "Guia da transição do Portal Bridge",
-    "alert_phase1": "Fase 1:",
-    "alert_details": "15 fev – 15 mar 2026 · Todas as linhas afetadas exceto Atlantic City · 50% de redução de serviço entre Newark e Secaucus",
+    "alert_phase1": "Fase 1 concluída!",
+    "alert_details": "Horários regulares do NJ Transit retomados em 15 de março · Primeira via na nova Portal North Bridge entra em serviço em 16 de março · Fase 2 (segunda via) prevista para outono de 2026",
     "your_station": "Sua estação",
     "choose_station": "Escolha sua estação…",
     "direction_label": "Direção de viagem",
@@ -146,8 +148,8 @@
     "tl_tickets_desc": "Passageiros do Midtown Direct devem começar a comprar passes mensais de Hoboken (válidos para viagens a Penn Station de 1 a 15 de fev).",
     "tl_start_title": "Fase 1 começa",
     "tl_start_desc": "Horários temporários entram em vigor. Trens Midtown Direct de dias úteis desviados para Hoboken. Operação em via única entre Newark e Secaucus.",
-    "tl_end_title": "Fase 1 termina (previsão)",
-    "tl_end_desc": "Horários regulares são retomados, sujeito à conclusão de testes de segurança. A primeira via na nova Portal North Bridge entra em operação.",
+    "tl_end_title": "Fase 1 concluída",
+    "tl_end_desc": "Horários regulares do NJ Transit retomados. A primeira via na nova Portal North Bridge entra em serviço de passageiros em 16 de março.",
     "tl_phase2_title": "Fase 2",
     "tl_phase2_desc": "Transição da segunda via. Interrupções de serviço semelhantes são esperadas. Datas a definir. Após isso, a antiga Portal Bridge será aposentada permanentemente.",
     "resources_title": "Recursos oficiais",
@@ -423,7 +425,10 @@
     "back_to_all_posts": "Voltar para todos os artigos",
     "post3_title": "A transição começa hoje",
     "post3_date": "15 de fevereiro de 2026",
-    "post3_excerpt": "A transição do Portal North Bridge começa hoje. O que os passageiros do NJ Transit precisam saber e como o Reroute NJ pode ajudar nas próximas quatro semanas."
+    "post3_excerpt": "A transição do Portal North Bridge começa hoje. O que os passageiros do NJ Transit precisam saber e como o Reroute NJ pode ajudar nas próximas quatro semanas.",
+    "post4_title": "A nova Portal North Bridge está aberta",
+    "post4_date": "13 de março de 2026",
+    "post4_excerpt": "A Fase 1 está concluída. Os horários regulares do NJ Transit são retomados em 15 de março e a primeira via na nova ponte entra em serviço em 16 de março. Veja o que isso significa para os passageiros."
   },
   "blog_post": {
     "title": "Por que construímos o Reroute NJ — Reroute NJ",
@@ -580,9 +585,12 @@
     "article2_headline": "Novo: incorpore o Reroute NJ no seu site",
     "article2_description": "Quatro formatos de incorporação, um configurador visual e exportação PNG para redações cobrindo a transição do Portal Bridge.",
     "breadcrumb_blog_post_cutover": "A transição começa hoje",
+    "breadcrumb_blog_post_bridge": "A nova Portal North Bridge está aberta",
     "article3_headline": "A transição começa hoje",
     "article3_description": "A transição do Portal North Bridge começa hoje. O que os passageiros do NJ Transit precisam saber nas próximas quatro semanas.",
-    "collection_item3": "A transição começa hoje"
+    "collection_item3": "A transição começa hoje",
+    "article4_headline": "A nova Portal North Bridge está aberta",
+    "article4_description": "A Fase 1 da transição da Portal North Bridge está concluída. Os horários regulares do NJ Transit são retomados em 15 de março e a primeira via na nova ponte entra em serviço em 16 de março."
   },
   "blog_post_cutover": {
     "title": "A transição começa hoje — Reroute NJ",
@@ -610,5 +618,29 @@
     "closing_p1": "Essa interrupção é temporária. A nova Portal North Bridge vai substituir um gargalo de 115 anos que causou atrasos em cascata no Northeast Corridor por décadas. Quatro semanas de dificuldade para anos de serviço melhor.",
     "closing_p2": "Planeje com antecedência, saia mais cedo e tenha paciência uns com os outros nas plataformas. Vamos superar isso juntos.",
     "cta": "Planeje seu trajeto →"
+  },
+  "blog_post_bridge": {
+    "title": "A nova Portal North Bridge está aberta — Reroute NJ",
+    "tagline": "Fase 1 concluída",
+    "heading": "A nova Portal North Bridge está aberta",
+    "by_prefix": "Por",
+    "date": "13 de março de 2026",
+    "intro_p1": "A espera acabou. Em 12 de março, a Governadora Mikie Sherrill e representantes do NJ Transit e da Amtrak fizeram a primeira viagem cerimonial na nova Portal North Bridge. A partir de segunda-feira, 16 de março, a primeira via na nova ponte entra em serviço regular de passageiros. Os horários regulares do NJ Transit são retomados no domingo, 15 de março.",
+    "intro_p2": "A Fase 1 da transição está concluída. Após quatro semanas de serviço reduzido, desvios para Hoboken e operação em via única entre Newark e Secaucus, os passageiros podem voltar às suas viagens normais.",
+    "h2_what_means": "O que isso significa para os passageiros",
+    "what_means_intro": "A partir de domingo, 15 de março, os horários temporários de transição terminam. Veja o que muda:",
+    "wm_hoboken": "<strong>Linhas Montclair-Boonton e Morris &amp; Essex</strong> retornam para New York Penn Station. Sem mais desvios para Hoboken.",
+    "wm_full_service": "<strong>Northeast Corridor e North Jersey Coast Line</strong> retomam a frequência total de serviço.",
+    "wm_raritan": "<strong>Raritan Valley Line</strong> restaura viagens diretas para Penn Station.",
+    "what_means_p2": "Na segunda-feira, 16 de março, os trens no sentido oeste começam a usar a primeira via na nova Portal North Bridge. Os trens no sentido leste continuam na ponte antiga até a Fase 2 no outono.",
+    "h2_new_bridge": "O que é a nova ponte?",
+    "new_bridge_p": "A Portal North Bridge é uma ponte moderna, elevada e fixa que se eleva 15 metros sobre o Hackensack River. Ela substitui a Portal Bridge de 116 anos, uma ponte giratória que precisava abrir para o tráfego de barcos dezenas de vezes por ano — e frequentemente ficava travada. A nova ponte elimina esse problema completamente. Os trens podem trafegar a até 145 km/h, comparado com 97 km/h na estrutura antiga.",
+    "new_bridge_p2": "O projeto de US$ 2,3 bilhões é a primeira grande transição de ponte concluída no Northeast Corridor e uma peça essencial do maior Gateway Program.",
+    "h2_what_next": "O que vem a seguir",
+    "what_next_p1": "Isso não é o fim. A Fase 2 moverá a segunda via para a nova ponte, prevista para o outono de 2026. Isso significa outra rodada de alterações temporárias de horários e reduções de serviço. O Reroute NJ estará aqui para isso também.",
+    "what_next_p2": "Quando ambas as vias estiverem na nova ponte, a Portal Bridge original de 1910 será permanentemente aposentada e desmontada em 2027.",
+    "closing": "Quatro semanas de transtorno por décadas de serviço melhor, mais rápido e mais confiável. Valeu a pena.",
+    "support_p": "O Reroute NJ é gratuito, de código aberto e apoiado pela comunidade. Se você acha útil, compartilhe com alguém que usa o NJ Transit ou <a href=\"https://github.com/sponsors/jamditis\" target=\"_blank\" rel=\"noopener\">apoie o projeto</a>.",
+    "cta": "Ver toda a cobertura de notícias →"
   }
 }

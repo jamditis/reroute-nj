@@ -23,7 +23,9 @@
     "about_description": "Nasza metodologia: jak Reroute NJ tworzy tłumaczenia, weryfikuje dane transportowe i spełnia standardy dostępności.",
     "about_og_description": "Jak Reroute NJ tworzy tłumaczenia, weryfikuje dane transportowe i spełnia standardy dostępności.",
     "blog_post_cutover_description": "Przebudowa Portal North Bridge rozpoczyna się 15 lutego 2026. Oto co pasażerowie NJ Transit muszą wiedzieć i jak Reroute NJ może pomóc przez następne cztery tygodnie.",
-    "blog_post_cutover_og_description": "Przebudowa Portal North Bridge zaczyna się dziś. Co pasażerowie NJ Transit muszą wiedzieć na następne cztery tygodnie."
+    "blog_post_cutover_og_description": "Przebudowa Portal North Bridge zaczyna się dziś. Co pasażerowie NJ Transit muszą wiedzieć na następne cztery tygodnie.",
+    "blog_post_bridge_description": "Faza 1 przebudowy Portal North Bridge jest zakończona. Regularne rozkłady NJ Transit wznawiają się 15 marca, a pierwszy tor na nowym moście wchodzi do użytku 16 marca.",
+    "blog_post_bridge_og_description": "Faza 1 zakończona. Regularne rozkłady NJ Transit wznawiają się 15 marca, pierwszy tor na nowym moście wchodzi do użytku 16 marca."
   },
   "common": {
     "skip_to_main": "Przejdź do głównej treści",
@@ -56,8 +58,8 @@
   "index": {
     "title": "Reroute NJ — Przewodnik po zmianie Portal Bridge",
     "tagline": "Przewodnik po zmianie Portal Bridge",
-    "alert_phase1": "Faza 1:",
-    "alert_details": "15 lut – 15 mar 2026 · Wszystkie linie dotknięte oprócz Atlantic City · 50% redukcja usług między Newark a Secaucus",
+    "alert_phase1": "Faza 1 zakończona!",
+    "alert_details": "Regularne rozkłady NJ Transit wznowione 15 marca · Pierwszy tor na nowym Portal North Bridge wchodzi do użytku 16 marca · Faza 2 (drugi tor) planowana na jesień 2026",
     "your_station": "Twoja stacja",
     "choose_station": "Wybierz swoją stację…",
     "direction_label": "Kierunek podróży",
@@ -146,8 +148,8 @@
     "tl_tickets_desc": "Podróżni Midtown Direct powinni zacząć kupować bilety miesięczne Hoboken (ważne na podróże do Penn Station 1–15 lutego).",
     "tl_start_title": "Początek Fazy 1",
     "tl_start_desc": "Wchodzą w życie tymczasowe rozkłady. Pociągi Midtown Direct w dni robocze przekierowane do Hoboken. Ruch jednym torem między Newark a Secaucus.",
-    "tl_end_title": "Koniec Fazy 1 (planowany)",
-    "tl_end_desc": "Powrót do normalnych rozkładów, zależnie od zakończenia testów bezpieczeństwa. Pierwszy tor na nowym Portal North Bridge wchodzi do użytku.",
+    "tl_end_title": "Faza 1 zakończona",
+    "tl_end_desc": "Regularne rozkłady NJ Transit zostały wznowione. Pierwszy tor na nowym Portal North Bridge wchodzi do użytku pasażerskiego 16 marca.",
     "tl_phase2_title": "Faza 2",
     "tl_phase2_desc": "Zmiana drugiego toru. Podobne zakłócenia w usługach. Daty do ogłoszenia. Po tym stary Portal Bridge zostanie na stałe wycofany.",
     "resources_title": "Oficjalne zasoby",
@@ -423,7 +425,10 @@
     "back_to_all_posts": "Wróć do wszystkich wpisów",
     "post3_title": "Przebudowa zaczyna się dziś",
     "post3_date": "15 lutego 2026",
-    "post3_excerpt": "Przebudowa Portal North Bridge rozpoczyna się dziś. Oto co pasażerowie NJ Transit muszą wiedzieć i jak Reroute NJ może pomóc przez następne cztery tygodnie."
+    "post3_excerpt": "Przebudowa Portal North Bridge rozpoczyna się dziś. Oto co pasażerowie NJ Transit muszą wiedzieć i jak Reroute NJ może pomóc przez następne cztery tygodnie.",
+    "post4_title": "Nowy Portal North Bridge jest otwarty",
+    "post4_date": "13 marca 2026",
+    "post4_excerpt": "Faza 1 zakończona. Regularne rozkłady NJ Transit wznawiają się 15 marca, a pierwszy tor na nowym moście wchodzi do użytku 16 marca. Oto co to oznacza dla pasażerów."
   },
   "blog_post": {
     "title": "Dlaczego stworzyliśmy Reroute NJ — Reroute NJ",
@@ -580,9 +585,12 @@
     "article2_headline": "Nowość: osadź Reroute NJ na swojej stronie",
     "article2_description": "Cztery formaty osadzania, wizualny konfigurator i eksport PNG dla redakcji relacjonujących zmianę Portal Bridge.",
     "breadcrumb_blog_post_cutover": "Przebudowa zaczyna się dziś",
+    "breadcrumb_blog_post_bridge": "Nowy Portal North Bridge jest otwarty",
     "article3_headline": "Przebudowa zaczyna się dziś",
     "article3_description": "Przebudowa Portal North Bridge zaczyna się dziś. Co pasażerowie NJ Transit muszą wiedzieć na następne cztery tygodnie.",
-    "collection_item3": "Przebudowa zaczyna się dziś"
+    "collection_item3": "Przebudowa zaczyna się dziś",
+    "article4_headline": "Nowy Portal North Bridge jest otwarty",
+    "article4_description": "Faza 1 przebudowy Portal North Bridge jest zakończona. Regularne rozkłady NJ Transit wznawiają się 15 marca, a pierwszy tor na nowym moście wchodzi do użytku 16 marca."
   },
   "blog_post_cutover": {
     "title": "Przebudowa zaczyna się dziś — Reroute NJ",
@@ -610,5 +618,29 @@
     "closing_p1": "To zakłócenie jest tymczasowe. Nowy Portal North Bridge zastąpi 115-letnie wąskie gardło, które powodowało kaskadowe opóźnienia na Northeast Corridor przez dziesięciolecia. Cztery tygodnie utrudnień za lata lepszej obsługi.",
     "closing_p2": "Planuj z wyprzedzeniem, wyjedź wcześniej i bądźcie cierpliwi wobec siebie nawzajem na peronach. Damy radę.",
     "cta": "Zaplanuj swój dojazd →"
+  },
+  "blog_post_bridge": {
+    "title": "Nowy Portal North Bridge jest otwarty — Reroute NJ",
+    "tagline": "Faza 1 zakończona",
+    "heading": "Nowy Portal North Bridge jest otwarty",
+    "by_prefix": "Autor",
+    "date": "13 marca 2026",
+    "intro_p1": "Czekanie dobiegło końca. 12 marca gubernator Mikie Sherrill oraz przedstawiciele NJ Transit i Amtrak przejechali pierwszym uroczystym pociągiem przez nowy Portal North Bridge. Od poniedziałku 16 marca pierwszy tor na nowym moście wchodzi do regularnej służby pasażerskiej. Regularne rozkłady NJ Transit wznawiają się w niedzielę 15 marca.",
+    "intro_p2": "Faza 1 przebudowy jest zakończona. Po czterech tygodniach ograniczonej obsługi, przekierowań do Hoboken i ruchu jednotorowego między Newark a Secaucus, pasażerowie mogą wrócić do swoich normalnych dojazdów.",
+    "h2_what_means": "Co to oznacza dla pasażerów",
+    "what_means_intro": "Od niedzieli 15 marca tymczasowe rozkłady przebudowy kończą się. Oto co się zmienia:",
+    "wm_hoboken": "<strong>Linie Montclair-Boonton i Morris &amp; Essex</strong> wracają na New York Penn Station. Koniec przekierowań do Hoboken.",
+    "wm_full_service": "<strong>Northeast Corridor i North Jersey Coast Line</strong> wznawiają pełną częstotliwość obsługi.",
+    "wm_raritan": "<strong>Raritan Valley Line</strong> przywraca bezpośrednie połączenia do Penn Station.",
+    "what_means_p2": "W poniedziałek 16 marca pociągi w kierunku zachodnim zaczynają korzystać z pierwszego toru na nowym Portal North Bridge. Pociągi w kierunku wschodnim kontynuują na starym moście do Fazy 2 jesienią.",
+    "h2_new_bridge": "Czym jest nowy most?",
+    "new_bridge_p": "Portal North Bridge to nowoczesny, wysoko położony most o stałej konstrukcji, który wznosi się 50 stóp nad Hackensack River. Zastępuje 116-letni Portal Bridge, most obrotowy, który musiał się otwierać dla ruchu łodzi dziesiątki razy rocznie — i często się zacinał. Nowy most całkowicie eliminuje ten problem. Pociągi mogą jeździć z prędkością do 90 mph, w porównaniu z 60 mph na starej konstrukcji.",
+    "new_bridge_p2": "Projekt o wartości 2,3 miliarda dolarów to pierwsza ukończona poważna przebudowa mostu na Northeast Corridor i kluczowy element większego Gateway Program.",
+    "h2_what_next": "Co dalej",
+    "what_next_p1": "To nie koniec. Faza 2 przeniesie drugi tor na nowy most, planowana jest na jesień 2026. To oznacza kolejną rundę tymczasowych zmian rozkładów i ograniczeń obsługi. Reroute NJ będzie tu również wtedy.",
+    "what_next_p2": "Gdy oba tory znajdą się na nowym moście, oryginalny Portal Bridge z 1910 roku zostanie trwale wycofany i rozebrany w 2027 roku.",
+    "closing": "Cztery tygodnie utrudnień za dekady lepszej, szybszej i bardziej niezawodnej obsługi. Było warto.",
+    "support_p": "Reroute NJ jest darmowy, open source i wspierany przez społeczność. Jeśli uważasz go za przydatny, podziel się nim z kimś, kto jeździ NJ Transit, lub <a href=\"https://github.com/sponsors/jamditis\" target=\"_blank\" rel=\"noopener\">wesprzyj projekt</a>.",
+    "cta": "Zobacz pełne wiadomości →"
   }
 }
