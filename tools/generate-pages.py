@@ -1943,6 +1943,12 @@ def translate_jsonld(html, translations, page_key, lang, page_name):
             if desc:
                 data["description"] = desc
 
+        elif schema_type == "WebApplication":
+            # Reuse site_description for translated pages; English text is the default
+            desc = get_translation(translations, "schema.site_description")
+            if desc:
+                data["description"] = desc
+
         elif schema_type == "FAQPage":
             entities = data.get("mainEntity", [])
             for i, entity in enumerate(entities):
