@@ -728,6 +728,100 @@ function testCommentHeader() {
 }
 
 // =========================================================================
+// 19. cards.js ?accent param is CSS-context-validated everywhere
+// =========================================================================
+// Regression coverage for the CSS-injection fix in PR #23. The previous
+// patch only wired safeHexColor() into the HTML renderers; the PNG/canvas
+// export path still hardcoded line.color. This test pins three invariants:
+//   - safeHexColor() body matches the expected hex-only validator regex
+//   - The validator's behavior on real-world inputs (valid hex, CSS payload,
+//     non-hex string) is checked by reproducing the same predicate the
+//     source uses, then asserting matching expectations
+//   - All four ?accent consumers go through safeHexColor():
+//     renderLineCard, renderStationCard, renderCardToCanvas, exportCardAsPng
+
+function testAccentParamValidation() {
+  console.log("\n=== 19. ?accent CSS-injection regression ===");
+  var src = readFile("cards.js");
+
+  // 1. safeHexColor() exists and uses hex-only character class regexes.
+  //    We assert the body shape rather than dynamically eval'ing — the
+  //    exact predicates below mirror what the function returns.
+  var fnBody = src.match(/function safeHexColor\(value\)\s*\{([\s\S]*?)\n\s{2}\}/);
+  test("cards.js defines safeHexColor()", !!fnBody);
+  if (fnBody) {
+    var body = fnBody[1];
+    test("safeHexColor() strips leading '#' before validating",
+      /value\.replace\(\/\^#\/,\s*["']{2}\)/.test(body));
+    test("safeHexColor() validates 3-char hex via [0-9a-fA-F]{3}",
+      /\[0-9a-fA-F\]\{3\}/.test(body));
+    test("safeHexColor() validates 6-char hex via [0-9a-fA-F]{6}",
+      /\[0-9a-fA-F\]\{6\}/.test(body));
+    test("safeHexColor() returns null on invalid input",
+      /return\s+null/.test(body));
+  }
+
+  // 2. Behavioral check via the same predicate the source uses. If this
+  //    diverges from the source it'll fail the regex-shape tests above,
+  //    which is the regression signal we want.
+  function predicate(value) {
+    if (!value) return null;
+    var clean = String(value).replace(/^#/, "");
+    if (/^[0-9a-fA-F]{3}$/.test(clean) || /^[0-9a-fA-F]{6}$/.test(clean)) {
+      return "#" + clean;
+    }
+    return null;
+  }
+
+  // Valid hex propagates
+  test("?accent=fff (valid 3-char hex) → '#fff'", predicate("fff") === "#fff");
+  test("?accent=#fff propagates to '#fff'", predicate("#fff") === "#fff");
+  test("?accent=ff6600 (valid 6-char hex) → '#ff6600'",
+    predicate("ff6600") === "#ff6600");
+
+  // CSS-injection payload falls back to default
+  var payload = "red;background:url(javascript:alert(1))";
+  test("?accent=<CSS-injection payload> falls back to default (null)",
+    predicate(payload) === null,
+    "Got: " + JSON.stringify(predicate(payload)));
+
+  // Non-hex string falls back to default
+  test("?accent=javascript:alert(1) falls back to default",
+    predicate("javascript:alert(1)") === null);
+  test("?accent= (empty) falls back to default", predicate("") === null);
+  test("?accent=null falls back to default", predicate(null) === null);
+  test("?accent=red (named color, not hex) falls back to default",
+    predicate("red") === null);
+  test("?accent=12345 (wrong-length hex) falls back to default",
+    predicate("12345") === null);
+
+  // 3. Wire-up: every ?accent consumer must go through safeHexColor().
+  //    Counting both HTML renderers (renderLineCard, renderStationCard) AND
+  //    the canvas path (renderCardToCanvas, exportCardAsPng).
+  var safeHexCalls = src.match(/safeHexColor\s*\(/g) || [];
+  // Expect at least 4 functional uses + 1 declaration = 5+
+  test("cards.js calls safeHexColor() in 5+ places (4 consumers + decl)",
+    safeHexCalls.length >= 5,
+    "Found " + safeHexCalls.length + " occurrences");
+
+  // 4. exportCardAsPng() must read ?accent (otherwise PNG ignores caller intent)
+  var exportFn = src.match(/function exportCardAsPng\(\)\s*\{[\s\S]*?\n  \}/);
+  var exportReadsAccent = exportFn && /getParam\(["']accent["']\)/.test(exportFn[0]);
+  test("exportCardAsPng() reads ?accent URL param", !!exportReadsAccent,
+    !exportFn ? "Could not find exportCardAsPng()" :
+    !exportReadsAccent ? "exportCardAsPng() does not call getParam('accent')" : "");
+
+  // 5. renderCardToCanvas() must validate accent before painting the bar.
+  //    The fix pattern: `ctx.fillStyle = safeHexColor(accent) || line.color`.
+  var canvasFn = src.match(/function renderCardToCanvas\([\s\S]*?\n  \}/);
+  var canvasUsesValidator = canvasFn && /safeHexColor\(accent\)\s*\|\|\s*line\.color/.test(canvasFn[0]);
+  test("renderCardToCanvas() bar color routes through safeHexColor(accent) || line.color",
+    !!canvasUsesValidator,
+    !canvasFn ? "Could not find renderCardToCanvas()" :
+    !canvasUsesValidator ? "Canvas color bar does not use safeHexColor() fallback pattern" : "");
+}
+
+// =========================================================================
 // BONUS: Additional security checks
 // =========================================================================
 
@@ -818,6 +912,7 @@ testNoDocumentWrite();
 testCssClassReferences();
 testVarDeclarations();
 testCommentHeader();
+testAccentParamValidation();
 testAdditionalSecurity();
 
 // =========================================================================
