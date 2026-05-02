@@ -1,8 +1,18 @@
 # Copilot review instructions — reroute-nj
 
-Project context, architecture, conventions, and the translation system live in [CLAUDE.md](../CLAUDE.md). Read that for everything Copilot needs to understand the codebase. This file lists *only* the bug classes that have already shipped to production and are worth named attention on every PR.
+Project context, architecture, and the translation system live in [CLAUDE.md](../CLAUDE.md). Both this file and CLAUDE.md are read by Copilot code review (cap ~4,000 chars each). This file lists the rules worth named attention on every PR.
 
-## What to flag in reviews
+## Global rules to flag
+
+These are Joe's user-level conventions. They live in `~/.claude/CLAUDE.md`, which Copilot's PR review bot does *not* read — so they're restated here so the bot enforces them on this repo's PRs.
+
+- **Sentence case** in headings, UI text, and identifiers. Title Case is a regression.
+- **No emojis** in source code, log messages, comments, commits, PR bodies, or any output. Plain text only.
+- **No AI attribution.** Never include "Generated with Claude Code", `Co-Authored-By: Claude` trailers, or any AI/model/company attribution in PRs, commits, code, or any committed file.
+- **Banned words** (delete or replace): *comprehensive, sophisticated, robust, transformative, leveraging, seamlessly, innovative, cutting-edge, state-of-the-art, holistic, synergy, ecosystem, paradigm, empower*. Suggest alternatives that say what's actually meant.
+- **Every HTML page must have an SVG favicon and full OG/Twitter meta tags.** (This repo is a static site with many HTML pages.)
+
+## Project-specific bug classes to flag
 
 1. **XSS via innerHTML.** All user-facing or data-driven strings inserted into the DOM must go through `esc()` from `js/shared.js`. Never use `innerHTML` with unsanitized data. Enforced by `tests/test-js-integrity.js`.
 
