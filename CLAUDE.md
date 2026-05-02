@@ -62,10 +62,10 @@ tools/
 tests/                    — 14 test suites with 948+ automated checks
 docs/plans/               — Implementation design docs (SEO, embed system)
 .github/
-  workflows/static.yml    — (disabled — GitHub Actions suspended)
-deploy.sh                 — Cloudflare Pages deploy script (Montclair account)
   ISSUE_TEMPLATE/         — Bug report, data correction, feature request, content suggestion
+  copilot-instructions.md — Reviewer guidance for the Copilot PR review bot
   pull_request_template.md
+deploy.sh                 — Cloudflare Pages deploy script (Montclair account)
 {lang}/                   — Generated translated pages (100 total, 10 pages × 10 languages)
 ```
 
