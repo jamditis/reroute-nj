@@ -15,6 +15,18 @@
     return div.innerHTML;
   }
 
+  // Validate a hex color value for safe use in CSS style attributes.
+  // Returns the validated "#RRGGBB" or "#RGB" string, or null if invalid.
+  // This prevents CSS injection via the ?accent URL param.
+  function safeHexColor(value) {
+    if (!value) return null;
+    var clean = value.replace(/^#/, "");
+    if (/^[0-9a-fA-F]{3}$/.test(clean) || /^[0-9a-fA-F]{6}$/.test(clean)) {
+      return "#" + clean;
+    }
+    return null;
+  }
+
   function getParam(name) {
     var match = window.location.search.match(new RegExp("[?&]" + name + "=([^&]*)"));
     return match ? decodeURIComponent(match[1]) : null;
@@ -125,8 +137,7 @@
     var line = LINE_DATA[lineId];
     if (!line) return renderSummaryCard();
 
-    var accent = getParam("accent");
-    var barColor = accent ? "#" + accent.replace(/^#/, "") : line.color;
+    var barColor = safeHexColor(getParam("accent")) || line.color;
     var badgeClass = line.impactLevel === "severe" ? "badge-severe" : "badge-moderate";
     var alts = getAlternatives(line.impactType);
 
@@ -174,8 +185,7 @@
     }
     if (!station) return renderLineCard(lineId);
 
-    var accent = getParam("accent");
-    var barColor = accent ? "#" + accent.replace(/^#/, "") : line.color;
+    var barColor = safeHexColor(getParam("accent")) || line.color;
     var badgeClass = line.impactLevel === "severe" ? "badge-severe" : "badge-moderate";
     var alts = getAlternatives(line.impactType);
 
