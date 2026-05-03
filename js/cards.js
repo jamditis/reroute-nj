@@ -2,8 +2,13 @@
 // Renders line cards, station cards, and summary cards from URL params.
 // Loaded by card.html. Depends on LINE_DATA and LINE_ORDER from line-data.js.
 //
-// Security note: All URL param values are sanitized via esc() (textContent-based
-// HTML entity encoding) before DOM insertion. LINE_DATA is trusted static data.
+// Security note: URL param safety depends on the destination context.
+// Values used inside HTML text are sanitized via esc() (textContent-based
+// HTML entity encoding) before DOM insertion. Values used inside CSS
+// contexts (e.g. style="background:..." attributes, canvas fillStyle)
+// require CSS-context-aware validation — esc() does NOT defend against
+// CSS injection. See safeHexColor() for the ?accent validator.
+// LINE_DATA is trusted static data.
 
 (function () {
   "use strict";
@@ -13,6 +18,18 @@
     var div = document.createElement("div");
     div.textContent = String(str);
     return div.innerHTML;
+  }
+
+  // Validate a hex color value for safe use in CSS style attributes.
+  // Returns the validated "#RRGGBB" or "#RGB" string, or null if invalid.
+  // This prevents CSS injection via the ?accent URL param.
+  function safeHexColor(value) {
+    if (!value) return null;
+    var clean = value.replace(/^#/, "");
+    if (/^[0-9a-fA-F]{3}$/.test(clean) || /^[0-9a-fA-F]{6}$/.test(clean)) {
+      return "#" + clean;
+    }
+    return null;
   }
 
   function getParam(name) {
@@ -125,8 +142,7 @@
     var line = LINE_DATA[lineId];
     if (!line) return renderSummaryCard();
 
-    var accent = getParam("accent");
-    var barColor = accent ? "#" + accent.replace(/^#/, "") : line.color;
+    var barColor = safeHexColor(getParam("accent")) || line.color;
     var badgeClass = line.impactLevel === "severe" ? "badge-severe" : "badge-moderate";
     var alts = getAlternatives(line.impactType);
 
@@ -174,8 +190,7 @@
     }
     if (!station) return renderLineCard(lineId);
 
-    var accent = getParam("accent");
-    var barColor = accent ? "#" + accent.replace(/^#/, "") : line.color;
+    var barColor = safeHexColor(getParam("accent")) || line.color;
     var badgeClass = line.impactLevel === "severe" ? "badge-severe" : "badge-moderate";
     var alts = getAlternatives(line.impactType);
 
@@ -261,7 +276,7 @@
     return lines.length;
   }
 
-  function renderCardToCanvas(type, lineId, stationId, theme) {
+  function renderCardToCanvas(type, lineId, stationId, theme, accent) {
     var isDark = theme === "dark";
     var isSummary = type === "summary" || (!lineId && type !== "station");
     var width = 600;
@@ -289,8 +304,9 @@
       return renderSummaryToCanvas(ctx, canvas, isDark, textColor, subtextColor, bodyColor, width, height, pad);
     }
 
-    // Color bar
-    ctx.fillStyle = line.color;
+    // Color bar — validate ?accent override (mirror of HTML renderers);
+    // safeHexColor() returns null on invalid input, so fall back to line.color.
+    ctx.fillStyle = safeHexColor(accent) || line.color;
     ctx.fillRect(0, 0, width, 8);
 
     var curY = 8 + pad;
@@ -510,13 +526,17 @@
     var lineId = getParam("line");
     var stationId = getParam("station");
     var theme = getParam("theme");
+    // Validate ?accent here so PNG output matches the HTML preview.
+    // safeHexColor() returns null on invalid input; renderCardToCanvas()
+    // falls back to line.color when accent is null/invalid.
+    var accent = safeHexColor(getParam("accent"));
 
     // Validate lineId
     if (lineId && !LINE_DATA[lineId]) {
       lineId = null;
     }
 
-    var canvas = renderCardToCanvas(type, lineId, stationId, theme);
+    var canvas = renderCardToCanvas(type, lineId, stationId, theme, accent);
     var filename;
     if (type === "station" && lineId && stationId) {
       filename = "reroute-nj-station-" + stationId + ".png";
