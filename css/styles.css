@@ -2938,15 +2938,9 @@ body[data-contrast="high"] .a11y-btn[aria-pressed="true"] {
   border-color: #ff0;
 }
 
-body[data-contrast="high"] .coverage-cat,
-body[data-contrast="high"] .coverage-cat-news,
-body[data-contrast="high"] .coverage-cat-opinion,
-body[data-contrast="high"] .coverage-cat-analysis,
-body[data-contrast="high"] .coverage-cat-official,
-body[data-contrast="high"] .coverage-cat-community {
+body[data-contrast="high"] .coverage-cat {
   background: #000;
   color: #fff;
-  border: 1px solid #000;
 }
 
 body[data-contrast="high"] .brand span {
