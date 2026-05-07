@@ -2914,6 +2914,7 @@ body[data-contrast="high"] .pagination-info {
 body[data-contrast="high"] .alert-banner {
   background: #000;
   border: 2px solid #ff0;
+  color: #ff0;
 }
 
 body[data-contrast="high"] .phase-banner {
@@ -2935,6 +2936,21 @@ body[data-contrast="high"] .a11y-btn[aria-pressed="true"] {
   background: #ff0;
   color: #000;
   border-color: #ff0;
+}
+
+body[data-contrast="high"] .coverage-cat,
+body[data-contrast="high"] .coverage-cat-news,
+body[data-contrast="high"] .coverage-cat-opinion,
+body[data-contrast="high"] .coverage-cat-analysis,
+body[data-contrast="high"] .coverage-cat-official,
+body[data-contrast="high"] .coverage-cat-community {
+  background: #000;
+  color: #fff;
+  border: 1px solid #000;
+}
+
+body[data-contrast="high"] .brand span {
+  color: #ff0;
 }
 
 /* =======================================================================
@@ -3008,7 +3024,7 @@ body[data-view="simplified"] .brand {
 .seo-summary {
   font-size: 1.05rem;
   line-height: 1.6;
-  color: var(--text-secondary, #555);
+  color: var(--text-light);
   margin-bottom: 1.5rem;
   max-width: 680px;
 }
