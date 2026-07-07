@@ -5,7 +5,7 @@
 **Free tools to help NJ Transit riders navigate the Portal North Bridge cutover**
 
 [![Live site](https://img.shields.io/badge/live_site-reroutenj.org-1a3a5c?style=for-the-badge)](https://reroutenj.org)
-[![Phase 1](https://img.shields.io/badge/phase_1-Feb_15_--_Mar_15,_2026-e87722?style=for-the-badge)](#timeline)
+[![Phase 1](https://img.shields.io/badge/phase_1-complete-0a8f4f?style=for-the-badge)](#timeline)
 [![Lines covered](https://img.shields.io/badge/lines_covered-5-0a8f4f?style=for-the-badge)](#lines-covered)
 [![Languages](https://img.shields.io/badge/languages-11-6b4fbb?style=for-the-badge)](#translations)
 
@@ -138,10 +138,12 @@ To add a new language, create `translations/{code}.json` following the structure
 
 | Phase | Dates | Status |
 |-------|-------|--------|
-| **Phase 1** | Feb 15 – Mar 15, 2026 | Current |
+| **Phase 1** | Feb 15 – Mar 15, 2026 | Complete |
 | **Phase 2** | Fall 2026 (estimated) | Planned |
 
-Phase 1 covers the initial Portal North Bridge cutover with 50% service reduction through the Hudson tunnels. Phase 2 will address the second major service change when construction enters the next stage.
+Phase 1 covered the initial Portal North Bridge cutover with 50% service reduction through the Hudson tunnels. Regular NJ Transit schedules resumed March 15, 2026, and the first track on the new bridge entered service March 16. Phase 2 will address the second major service change when construction enters the next stage.
+
+The live site computes this status from the current date (`js/shared.js`), so the tools already show "Phase 1 complete · Phase 2 expected Fall 2026."
 
 ## Running locally
 
