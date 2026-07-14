@@ -613,11 +613,17 @@ test(34, "Official NJ Transit source articles exist in coverage data", function 
   return true;
 });
 
-test(35, "Article dates are within a reasonable range around the cutover period", function () {
-  // Expect articles to be dated between 2025-10-01 and 2026-04-30
-  // (covers pre-announcement through the aftermath period)
-  var rangeStart = new Date("2025-10-01");
-  var rangeEnd = new Date("2026-04-30");
+test(35, "Article dates fall between the background-context floor and today", function () {
+  // Lower bound is a floor for legitimate background/context coverage: the oldest
+  // Portal Bridge pieces date to 2023-08-18, so anything before 2023 is almost
+  // certainly a typo. Upper bound is dynamic (today plus a small buffer) so the
+  // check does not go stale as the corpus grows, while still catching far-future
+  // date typos (e.g. a 2027 mistake).
+  var rangeStart = new Date("2023-01-01");
+  var rangeEnd = new Date();
+  rangeEnd.setDate(rangeEnd.getDate() + 7);
+  var startStr = rangeStart.toISOString().slice(0, 10);
+  var endStr = rangeEnd.toISOString().slice(0, 10);
   var problems = [];
   for (var i = 0; i < articles.length; i++) {
     var art = articles[i];
@@ -632,7 +638,7 @@ test(35, "Article dates are within a reasonable range around the cutover period"
     }
     if (d < rangeStart || d > rangeEnd) {
       problems.push(
-        "Article '" + art.id + "' date " + art.date + " is outside expected range (2025-10-01 to 2026-04-30)"
+        "Article '" + art.id + "' date " + art.date + " is outside expected range (" + startStr + " to " + endStr + ")"
       );
     }
   }
