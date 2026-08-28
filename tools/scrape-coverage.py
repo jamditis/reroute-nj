@@ -21,6 +21,8 @@ import subprocess
 import sys
 import logging
 import argparse
+import stat
+import tempfile
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
@@ -92,8 +94,8 @@ def load_coverage():
         return json.load(f)
 
 
-def save_coverage(data):
-    with open(COVERAGE_FILE, "w") as f:
+def write_json(path, data):
+    with open(path, "w") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
         f.write("\n")
 
@@ -103,10 +105,12 @@ def load_registry():
         return json.load(f)
 
 
-def save_registry(data):
-    with open(REGISTRY_FILE, "w") as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
-        f.write("\n")
+class PublicationError(RuntimeError):
+    """Raised when coverage data cannot be safely published."""
+
+
+class PostPushError(PublicationError):
+    """Raised when cleanup fails after the remote publication succeeds."""
 
 
 # ---------------------------------------------------------------------------
@@ -756,13 +760,126 @@ def validate_article(article):
 
 
 # ---------------------------------------------------------------------------
-# Git
+# Publication & Git
 # ---------------------------------------------------------------------------
+
+def validate_staged_publication(coverage_path, registry_path):
+    """Validate staged coverage and registry files as one publication."""
+    commands = [
+        [
+            sys.executable,
+            str(SCRIPT_DIR / "validate-data.py"),
+            "--quick",
+            "--coverage-file",
+            str(coverage_path),
+        ],
+        [
+            sys.executable,
+            str(SCRIPT_DIR / "validate-research-pipeline.py"),
+            "--coverage-file",
+            str(coverage_path),
+            "--registry-file",
+            str(registry_path),
+        ],
+    ]
+
+    for command in commands:
+        result = subprocess.run(
+            command,
+            cwd=PROJECT_DIR,
+            capture_output=True,
+            text=True,
+            timeout=60,
+        )
+        if result.returncode != 0:
+            output = (result.stdout + "\n" + result.stderr).strip()
+            raise PublicationError(
+                "Staged coverage validation failed (%s):\n%s"
+                % (Path(command[1]).name, output[-1000:])
+            )
+
+
+def snapshot_live_files():
+    """Return the current content and mode for every live publication target."""
+    return {
+        COVERAGE_FILE: {
+            "content": COVERAGE_FILE.read_bytes(),
+            "mode": stat.S_IMODE(COVERAGE_FILE.stat().st_mode),
+        },
+        REGISTRY_FILE: {
+            "content": REGISTRY_FILE.read_bytes(),
+            "mode": stat.S_IMODE(REGISTRY_FILE.stat().st_mode),
+        },
+    }
+
+
+def restore_live_files(snapshots):
+    """Atomically restore live publication targets from saved bytes."""
+    errors = []
+    for target, snapshot in snapshots.items():
+        restore_path = None
+        try:
+            with tempfile.NamedTemporaryFile(
+                mode="wb", delete=False, dir=target.parent, prefix=".coverage-restore-"
+            ) as restore_file:
+                restore_file.write(snapshot["content"])
+                restore_path = Path(restore_file.name)
+            os.chmod(restore_path, snapshot["mode"])
+            os.replace(restore_path, target)
+        except Exception as error:
+            errors.append("%s: %s" % (target, error))
+        finally:
+            if restore_path and restore_path.exists():
+                restore_path.unlink()
+
+    if errors:
+        raise PublicationError("Could not restore live data files: %s" % "; ".join(errors))
+
+
+def publish_data_files(coverage_data, registry_data):
+    """Validate both staged files before replacing either live target."""
+    snapshots = snapshot_live_files()
+
+    with tempfile.TemporaryDirectory(
+        dir=DATA_DIR, prefix=".coverage-publication-"
+    ) as staging_dir:
+        staging_path = Path(staging_dir)
+        staged_coverage = staging_path / COVERAGE_FILE.name
+        staged_registry = staging_path / REGISTRY_FILE.name
+
+        write_json(staged_coverage, coverage_data)
+        write_json(staged_registry, registry_data)
+        os.chmod(staged_coverage, snapshots[COVERAGE_FILE]["mode"])
+        os.chmod(staged_registry, snapshots[REGISTRY_FILE]["mode"])
+        validate_staged_publication(staged_coverage, staged_registry)
+
+        try:
+            os.replace(staged_coverage, COVERAGE_FILE)
+            os.replace(staged_registry, REGISTRY_FILE)
+        except Exception as error:
+            restore_live_files(snapshots)
+            raise PublicationError(
+                "Could not replace live coverage data; prior files restored: %s" % error
+            )
+
+    return snapshots
+
 
 def git_commit_and_push(message):
     """Commit coverage changes and push to main."""
     stashed = False
+    succeeded = False
+    rollback_head = None
     try:
+        head_result = subprocess.run(
+            ["git", "rev-parse", "HEAD"],
+            cwd=PROJECT_DIR,
+            check=True,
+            capture_output=True,
+            text=True,
+            timeout=30,
+        )
+        rollback_head = head_result.stdout.strip()
         subprocess.run(
             ["git", "add", "data/coverage.json", "data/source-registry.json"],
             cwd=PROJECT_DIR, check=True, capture_output=True, timeout=30,
@@ -772,14 +889,32 @@ def git_commit_and_push(message):
             cwd=PROJECT_DIR, check=True, capture_output=True, timeout=30,
         )
         # Stash any unrelated dirty files so rebase can proceed
-        stash_result = subprocess.run(
-            ["git", "stash", "push", "--quiet", "-m", "scraper-auto-stash"],
-            cwd=PROJECT_DIR, capture_output=True, text=True, timeout=30,
+        status_result = subprocess.run(
+            ["git", "status", "--porcelain", "--untracked-files=no"],
+            cwd=PROJECT_DIR, check=True, capture_output=True, text=True, timeout=30,
         )
-        stashed = stash_result.returncode == 0
-        # Pull with rebase before pushing to handle remote divergence
+        if status_result.stdout.strip():
+            subprocess.run(
+                ["git", "stash", "push", "--quiet", "-m", "scraper-auto-stash"],
+                cwd=PROJECT_DIR, check=True, capture_output=True, text=True, timeout=30,
+            )
+            stashed = True
+        # Fetch first so every later rollback preserves the new remote head.
         subprocess.run(
-            ["git", "pull", "--rebase", "origin", "main"],
+            ["git", "fetch", "origin", "main"],
+            cwd=PROJECT_DIR, check=True, capture_output=True, text=True, timeout=60,
+        )
+        remote_result = subprocess.run(
+            ["git", "rev-parse", "origin/main"],
+            cwd=PROJECT_DIR,
+            check=True,
+            capture_output=True,
+            text=True,
+            timeout=30,
+        )
+        rollback_head = remote_result.stdout.strip()
+        subprocess.run(
+            ["git", "rebase", "origin/main"],
             cwd=PROJECT_DIR, check=True, capture_output=True, text=True, timeout=60,
         )
         result = subprocess.run(
@@ -787,17 +922,85 @@ def git_commit_and_push(message):
             cwd=PROJECT_DIR, check=True, capture_output=True, text=True, timeout=60,
         )
         logging.info("Git push: %s", result.stdout.strip() or "OK")
-        return True
-    except subprocess.CalledProcessError as e:
-        logging.error("Git failed: %s %s", e.stdout, e.stderr)
-        send_telegram("Reroute NJ scraper: git push failed.\n%s" % e.stderr)
-        return False
+        succeeded = True
+    except (subprocess.SubprocessError, OSError) as error:
+        stdout = getattr(error, "stdout", "") or ""
+        stderr = getattr(error, "stderr", "") or str(error)
+        logging.error("Git failed: %s %s", stdout, stderr)
+        send_telegram("Reroute NJ scraper: git push failed.\n%s" % stderr)
+        if rollback_head:
+            try:
+                abort_active_rebase()
+                subprocess.run(
+                    ["git", "reset", "--mixed", rollback_head],
+                    cwd=PROJECT_DIR,
+                    check=True,
+                    capture_output=True,
+                    text=True,
+                    timeout=30,
+                )
+            except (subprocess.SubprocessError, OSError) as rollback_error:
+                raise PublicationError(
+                    "Git publication failed and its local commit could not be withdrawn: %s"
+                    % rollback_error
+                )
     finally:
         if stashed:
+            try:
+                subprocess.run(
+                    ["git", "stash", "pop", "--quiet"],
+                    cwd=PROJECT_DIR, check=True, capture_output=True, timeout=30,
+                )
+            except (subprocess.SubprocessError, OSError) as error:
+                stdout = getattr(error, "stdout", "") or ""
+                stderr = getattr(error, "stderr", "") or str(error)
+                logging.error("Git stash restore failed: %s %s", stdout, stderr)
+                send_telegram("Reroute NJ scraper: git stash restore failed.")
+                if succeeded:
+                    raise PostPushError(
+                        "Git push succeeded, but unrelated changes could not be restored"
+                    )
+
+    return succeeded
+
+
+def abort_active_rebase():
+    """Abort a failed pull rebase before withdrawing its publication commit."""
+    for rebase_dir in ("rebase-merge", "rebase-apply"):
+        path_result = subprocess.run(
+            ["git", "rev-parse", "--git-path", rebase_dir],
+            cwd=PROJECT_DIR,
+            check=True,
+            capture_output=True,
+            text=True,
+            timeout=30,
+        )
+        if Path(path_result.stdout.strip()).exists():
             subprocess.run(
-                ["git", "stash", "pop", "--quiet"],
-                cwd=PROJECT_DIR, capture_output=True, timeout=30,
+                ["git", "rebase", "--abort"],
+                cwd=PROJECT_DIR,
+                check=True,
+                capture_output=True,
+                text=True,
+                timeout=30,
             )
+            return
+
+
+def publish_and_push(coverage_data, registry_data, message):
+    """Publish validated files and restore them if Git publication fails."""
+    snapshots = publish_data_files(coverage_data, registry_data)
+    try:
+        if git_commit_and_push(message):
+            return
+    except PostPushError:
+        raise
+    except Exception:
+        restore_live_files(snapshots)
+        raise
+
+    restore_live_files(snapshots)
+    raise PublicationError("Git publication failed; prior data files restored")
 
 
 # ---------------------------------------------------------------------------
@@ -852,7 +1055,7 @@ def run_discover(config, dry_run=False):
                 "official-alerts",
                 "secondary-news-coverage",
             ])
-            save_registry(registry)
+            publish_data_files(coverage_data, registry)
         return 0
 
     # 4. Scrape each candidate for metadata/excerpt
@@ -943,8 +1146,6 @@ def run_discover(config, dry_run=False):
     coverage_data["articles"].extend(new_articles)
     coverage_data["articles"].sort(key=lambda a: a["date"], reverse=True)
     coverage_data["lastUpdated"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-    save_coverage(coverage_data)
-
     # Update registry
     registry = load_registry()
     update_registry_timestamps(registry, [
@@ -952,18 +1153,6 @@ def run_discover(config, dry_run=False):
         "official-alerts",
         "secondary-news-coverage",
     ])
-    save_registry(registry)
-
-    # Run validation
-    try:
-        result = subprocess.run(
-            [sys.executable, str(SCRIPT_DIR / "validate-data.py"), "--quick"],
-            cwd=PROJECT_DIR, capture_output=True, text=True, timeout=60,
-        )
-        if result.returncode != 0:
-            logging.warning("Validation issues:\n%s", result.stdout[-500:])
-    except Exception as e:
-        logging.warning("Validation failed: %s", e)
 
     # Commit
     titles = [a["title"][:60] for a in new_articles[:3]]
@@ -971,7 +1160,7 @@ def run_discover(config, dry_run=False):
         len(new_articles),
         "\n".join("- %s" % t for t in titles),
     )
-    git_commit_and_push(commit_msg)
+    publish_and_push(coverage_data, registry, commit_msg)
 
     logging.info("Added %d article(s) and pushed to remote.", len(new_articles))
 
@@ -1057,10 +1246,8 @@ def run_verify(dry_run=False):
 
     coverage_data["articles"].sort(key=lambda a: a["date"], reverse=True)
     coverage_data["lastUpdated"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-    save_coverage(coverage_data)
-
     commit_msg = "Fix metadata for %d coverage article(s)\n\nVerified against source pages." % applied
-    git_commit_and_push(commit_msg)
+    publish_and_push(coverage_data, load_registry(), commit_msg)
 
     logging.info("Corrected metadata for %d article(s).", applied)
     return applied

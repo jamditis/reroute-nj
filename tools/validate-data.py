@@ -12,6 +12,7 @@ Usage:
 """
 
 import json
+import argparse
 import os
 import re
 import sys
@@ -670,7 +671,19 @@ def validate_html_sources_section(result):
 # ─── Main ─────────────────────────────────────────────────────────────────────
 
 def main():
-    quick = "--quick" in sys.argv
+    global COVERAGE_FILE
+
+    parser = argparse.ArgumentParser(description="Validate Reroute NJ data")
+    parser.add_argument("--quick", action="store_true", help="Skip network checks")
+    parser.add_argument("--fix", action="store_true", help="Auto-fix where supported")
+    parser.add_argument(
+        "--coverage-file",
+        type=Path,
+        default=COVERAGE_FILE,
+        help="Coverage JSON file to validate",
+    )
+    args = parser.parse_args()
+    COVERAGE_FILE = args.coverage_file
 
     print("="*60)
     print("REROUTE NJ — DATA VALIDATION PIPELINE")

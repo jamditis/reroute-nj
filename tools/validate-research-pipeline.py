@@ -160,10 +160,12 @@ def main():
     parser = argparse.ArgumentParser(description="Validate source and coverage research pipeline data")
     parser.add_argument("--check-urls", action="store_true", help="Probe source registry URLs with HEAD requests")
     parser.add_argument("--timeout", type=float, default=8.0, help="Network timeout for URL checks")
+    parser.add_argument("--coverage-file", default="data/coverage.json", help="Coverage JSON file to validate")
+    parser.add_argument("--registry-file", default="data/source-registry.json", help="Source registry JSON file to validate")
     args = parser.parse_args()
 
-    registry = load_json("data/source-registry.json")
-    coverage = load_json("data/coverage.json")
+    registry = load_json(args.registry_file)
+    coverage = load_json(args.coverage_file)
 
     errors = []
     warnings = []
