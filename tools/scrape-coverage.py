@@ -869,6 +869,105 @@ def publish_data_files(coverage_data, registry_data):
     return snapshots
 
 
+def publish_registry_file(registry_data):
+    """Validate the live coverage with a new registry, then replace only the registry."""
+    snapshots = snapshot_live_files()
+
+    with tempfile.TemporaryDirectory(
+        dir=DATA_DIR, prefix=".coverage-registry-publication-"
+    ) as staging_dir:
+        staging_path = Path(staging_dir)
+        staged_coverage = staging_path / COVERAGE_FILE.name
+        staged_registry = staging_path / REGISTRY_FILE.name
+        staged_coverage.write_bytes(snapshots[COVERAGE_FILE]["content"])
+        write_json(staged_registry, registry_data)
+        os.chmod(staged_coverage, snapshots[COVERAGE_FILE]["mode"])
+        os.chmod(staged_registry, snapshots[REGISTRY_FILE]["mode"])
+        validate_staged_publication(staged_coverage, staged_registry)
+
+        if COVERAGE_FILE.read_bytes() != snapshots[COVERAGE_FILE]["content"]:
+            raise PublicationError(
+                "Coverage changed during registry publication; registry not replaced"
+            )
+        try:
+            os.replace(staged_registry, REGISTRY_FILE)
+        except Exception as error:
+            restore_live_files({REGISTRY_FILE: snapshots[REGISTRY_FILE]})
+            raise PublicationError(
+                "Could not replace the source registry; prior file restored: %s" % error
+            )
+
+
+def status_paths(status_output):
+    """Return tracked paths from Git porcelain output."""
+    paths = []
+    for line in status_output.splitlines():
+        if len(line) < 4:
+            continue
+        path = line[3:]
+        if " -> " in path:
+            path = path.rsplit(" -> ", 1)[1]
+        paths.append(path.strip('"'))
+    return paths
+
+
+def publication_remote_status(publication_head):
+    """Return True, False, or None when the remote publication state is unknown."""
+    try:
+        subprocess.run(
+            ["git", "fetch", "origin", "main"],
+            cwd=PROJECT_DIR,
+            check=True,
+            capture_output=True,
+            text=True,
+            timeout=60,
+        )
+        result = subprocess.run(
+            ["git", "merge-base", "--is-ancestor", publication_head, "origin/main"],
+            cwd=PROJECT_DIR,
+            capture_output=True,
+            text=True,
+            timeout=30,
+        )
+    except (subprocess.SubprocessError, OSError):
+        return None
+    if result.returncode == 0:
+        return True
+    if result.returncode == 1:
+        return False
+    return None
+
+
+def rebase_retained_commits(remote_head, preserve_local_data):
+    """Place preexisting local commits on the fetched remote after publication rollback."""
+    try:
+        subprocess.run(
+            ["git", "rebase", remote_head],
+            cwd=PROJECT_DIR,
+            check=True,
+            capture_output=True,
+            text=True,
+            timeout=60,
+        )
+    except (subprocess.SubprocessError, OSError) as error:
+        abort_active_rebase()
+        state = "local data" if preserve_local_data else "remote data"
+        raise PublicationError(
+            "Could not retain local commits on top of origin/main while preserving %s: %s"
+            % (state, error)
+        )
+
+    result = subprocess.run(
+        ["git", "rev-parse", "HEAD"],
+        cwd=PROJECT_DIR,
+        check=True,
+        capture_output=True,
+        text=True,
+        timeout=30,
+    )
+    return result.stdout.strip()
+
+
 def git_commit_and_push(message):
     """Commit coverage changes and push to main."""
     stashed = False
@@ -877,6 +976,9 @@ def git_commit_and_push(message):
     remote_head = None
     rebase_succeeded = False
     preserve_local_data = True
+    publication_committed = False
+    publication_head = None
+    push_attempted = False
     try:
         head_result = subprocess.run(
             ["git", "rev-parse", "HEAD"],
@@ -887,6 +989,24 @@ def git_commit_and_push(message):
             timeout=30,
         )
         initial_head = head_result.stdout.strip()
+        status_result = subprocess.run(
+            ["git", "status", "--porcelain", "--untracked-files=no"],
+            cwd=PROJECT_DIR, check=True, capture_output=True, text=True, timeout=30,
+        )
+        publication_paths = {"data/coverage.json", "data/source-registry.json"}
+        unrelated_paths = [
+            path for path in status_paths(status_result.stdout)
+            if path not in publication_paths
+        ]
+        if unrelated_paths:
+            subprocess.run(
+                [
+                    "git", "stash", "push", "--quiet", "-m", "scraper-auto-stash",
+                    "--", *unrelated_paths,
+                ],
+                cwd=PROJECT_DIR, check=True, capture_output=True, text=True, timeout=30,
+            )
+            stashed = True
         subprocess.run(
             ["git", "add", "data/coverage.json", "data/source-registry.json"],
             cwd=PROJECT_DIR, check=True, capture_output=True, timeout=30,
@@ -903,17 +1023,16 @@ def git_commit_and_push(message):
             ],
             cwd=PROJECT_DIR, check=True, capture_output=True, timeout=30,
         )
-        # Stash any unrelated dirty files so rebase can proceed
-        status_result = subprocess.run(
-            ["git", "status", "--porcelain", "--untracked-files=no"],
-            cwd=PROJECT_DIR, check=True, capture_output=True, text=True, timeout=30,
+        publication_committed = True
+        publication_result = subprocess.run(
+            ["git", "rev-parse", "HEAD"],
+            cwd=PROJECT_DIR,
+            check=True,
+            capture_output=True,
+            text=True,
+            timeout=30,
         )
-        if status_result.stdout.strip():
-            subprocess.run(
-                ["git", "stash", "push", "--quiet", "-m", "scraper-auto-stash"],
-                cwd=PROJECT_DIR, check=True, capture_output=True, text=True, timeout=30,
-            )
-            stashed = True
+        publication_head = publication_result.stdout.strip()
         # Fetch first so a failed publication can retain the remote data files.
         subprocess.run(
             ["git", "fetch", "origin", "main"],
@@ -956,6 +1075,16 @@ def git_commit_and_push(message):
             cwd=PROJECT_DIR, check=True, capture_output=True, text=True, timeout=60,
         )
         rebase_succeeded = True
+        publication_result = subprocess.run(
+            ["git", "rev-parse", "HEAD"],
+            cwd=PROJECT_DIR,
+            check=True,
+            capture_output=True,
+            text=True,
+            timeout=30,
+        )
+        publication_head = publication_result.stdout.strip()
+        push_attempted = True
         result = subprocess.run(
             ["git", "push", "origin", "main"],
             cwd=PROJECT_DIR, check=True, capture_output=True, text=True, timeout=60,
@@ -966,12 +1095,27 @@ def git_commit_and_push(message):
         stdout = getattr(error, "stdout", "") or ""
         stderr = getattr(error, "stderr", "") or str(error)
         logging.error("Git failed: %s %s", stdout, stderr)
+        if push_attempted and publication_head:
+            remote_status = publication_remote_status(publication_head)
+            if remote_status is True:
+                logging.warning(
+                    "Git reported a push error, but origin/main contains the publication commit"
+                )
+                succeeded = True
+                return True
+            if remote_status is None:
+                send_telegram(
+                    "Reroute NJ scraper: push result is unknown; local publication retained."
+                )
+                raise PostPushError(
+                    "Git push failed and remote state is unknown; local publication retained"
+                )
         send_telegram("Reroute NJ scraper: git push failed.\n%s" % stderr)
         if initial_head:
             try:
                 abort_active_rebase()
                 rollback_head = initial_head
-                if rebase_succeeded:
+                if publication_committed and rebase_succeeded:
                     parent_result = subprocess.run(
                         ["git", "rev-parse", "HEAD^"],
                         cwd=PROJECT_DIR,
@@ -981,14 +1125,43 @@ def git_commit_and_push(message):
                         timeout=30,
                     )
                     rollback_head = parent_result.stdout.strip()
-                subprocess.run(
-                    ["git", "reset", "--mixed", rollback_head],
-                    cwd=PROJECT_DIR,
-                    check=True,
-                    capture_output=True,
-                    text=True,
-                    timeout=30,
-                )
+                if publication_committed:
+                    subprocess.run(
+                        ["git", "reset", "--mixed", rollback_head],
+                        cwd=PROJECT_DIR,
+                        check=True,
+                        capture_output=True,
+                        text=True,
+                        timeout=30,
+                    )
+                    if remote_head and not rebase_succeeded:
+                        subprocess.run(
+                            [
+                                "git", "restore", "--source", initial_head,
+                                "--worktree", "--", "data/coverage.json",
+                                "data/source-registry.json",
+                            ],
+                            cwd=PROJECT_DIR,
+                            check=True,
+                            capture_output=True,
+                            text=True,
+                            timeout=30,
+                        )
+                        rollback_head = rebase_retained_commits(
+                            remote_head, preserve_local_data
+                        )
+                else:
+                    subprocess.run(
+                        [
+                            "git", "restore", "--staged", "--",
+                            "data/coverage.json", "data/source-registry.json",
+                        ],
+                        cwd=PROJECT_DIR,
+                        check=True,
+                        capture_output=True,
+                        text=True,
+                        timeout=30,
+                    )
                 if remote_head:
                     data_source = (
                         rollback_head if preserve_local_data else remote_head
@@ -1140,7 +1313,7 @@ def run_discover(config, dry_run=False):
                 "official-alerts",
                 "secondary-news-coverage",
             ])
-            publish_data_files(coverage_data, registry)
+            publish_registry_file(registry)
         return 0
 
     # 4. Scrape each candidate for metadata/excerpt

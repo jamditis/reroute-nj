@@ -150,6 +150,8 @@ class PublicationTests(unittest.TestCase):
                 return subprocess.CompletedProcess(command, 0, stdout="")
             if command[:3] == ["git", "push", "origin"]:
                 raise subprocess.CalledProcessError(1, command, stderr="push rejected")
+            if command[:3] == ["git", "merge-base", "--is-ancestor"]:
+                return subprocess.CompletedProcess(command, 1, stdout="")
             if command[:3] == ["git", "rev-parse", "--git-path"]:
                 path = self.data_dir / command[-1]
                 return subprocess.CompletedProcess(command, 0, stdout=str(path) + "\n")
@@ -211,9 +213,132 @@ class PublicationTests(unittest.TestCase):
             commands,
         )
         self.assertIn(
-            ["git", "stash", "push", "--quiet", "-m", "scraper-auto-stash"],
+            [
+                "git", "stash", "push", "--quiet", "-m", "scraper-auto-stash",
+                "--", "unrelated-notes.txt",
+            ],
             commands,
         )
+
+    def test_commit_setup_failure_restores_unrelated_index(self):
+        work = self.data_dir / "index-work"
+        work.mkdir()
+        self.run_git(work, "init", "--initial-branch=main")
+        self.run_git(work, "config", "user.name", "Scraper test")
+        self.run_git(work, "config", "user.email", "scraper@example.com")
+        (work / "data").mkdir()
+        (work / "data" / "coverage.json").write_text('{"version":"old"}\n')
+        (work / "data" / "source-registry.json").write_text('{"version":"old"}\n')
+        (work / "staged.txt").write_text("old\n")
+        self.run_git(work, "add", ".")
+        self.run_git(work, "commit", "-m", "base")
+
+        (work / "staged.txt").write_text("staged change\n")
+        self.run_git(work, "add", "staged.txt")
+        (work / "data" / "coverage.json").write_text('{"version":"new"}\n')
+        hook = work / ".git" / "hooks" / "pre-commit"
+        hook.write_text("#!/bin/sh\nexit 1\n")
+        hook.chmod(0o755)
+
+        original_project = SCRAPER.PROJECT_DIR
+        SCRAPER.PROJECT_DIR = work
+        try:
+            with mock.patch.object(SCRAPER, "send_telegram"):
+                self.assertFalse(SCRAPER.git_commit_and_push("scraper publication"))
+        finally:
+            SCRAPER.PROJECT_DIR = original_project
+
+        status = self.run_git(work, "status", "--porcelain").stdout.splitlines()
+        self.assertIn("M  staged.txt", status)
+
+    def test_errored_push_keeps_publication_when_origin_has_commit(self):
+        commands = []
+
+        def accepted_push(command, **kwargs):
+            commands.append(command)
+            if command[:3] == ["git", "rev-parse", "HEAD"]:
+                head_reads = sum(
+                    1 for seen in commands if seen[:3] == ["git", "rev-parse", "HEAD"]
+                )
+                value = "old-head" if head_reads == 1 else "publication-head"
+                return subprocess.CompletedProcess(command, 0, stdout=value + "\n")
+            if command[:3] == ["git", "status", "--porcelain"]:
+                return subprocess.CompletedProcess(command, 0, stdout="")
+            if command[:3] == ["git", "rev-parse", "origin/main"]:
+                return subprocess.CompletedProcess(command, 0, stdout="publication-head\n")
+            if command[:3] == ["git", "diff", "--quiet"]:
+                return subprocess.CompletedProcess(command, 0, stdout="")
+            if command[:3] == ["git", "push", "origin"]:
+                raise subprocess.TimeoutExpired(command, 60)
+            if command[:3] == ["git", "merge-base", "--is-ancestor"]:
+                return subprocess.CompletedProcess(command, 0, stdout="")
+            return subprocess.CompletedProcess(command, 0, stdout="")
+
+        with mock.patch.object(SCRAPER.subprocess, "run", side_effect=accepted_push):
+            with mock.patch.object(SCRAPER, "send_telegram"):
+                self.assertTrue(SCRAPER.git_commit_and_push("test publication"))
+
+        self.assertNotIn(["git", "reset", "--mixed", "old-head"], commands)
+
+    def test_errored_push_with_unknown_remote_keeps_local_publication(self):
+        commands = []
+        fetch_count = 0
+
+        def unknown_push(command, **kwargs):
+            nonlocal fetch_count
+            commands.append(command)
+            if command[:3] == ["git", "rev-parse", "HEAD"]:
+                head_reads = sum(
+                    1 for seen in commands if seen[:3] == ["git", "rev-parse", "HEAD"]
+                )
+                value = "old-head" if head_reads == 1 else "publication-head"
+                return subprocess.CompletedProcess(command, 0, stdout=value + "\n")
+            if command[:3] == ["git", "status", "--porcelain"]:
+                return subprocess.CompletedProcess(command, 0, stdout="")
+            if command[:3] == ["git", "fetch", "origin"]:
+                fetch_count += 1
+                if fetch_count > 1:
+                    raise subprocess.TimeoutExpired(command, 60)
+                return subprocess.CompletedProcess(command, 0, stdout="")
+            if command[:3] == ["git", "rev-parse", "origin/main"]:
+                return subprocess.CompletedProcess(command, 0, stdout="remote-head\n")
+            if command[:3] == ["git", "diff", "--quiet"]:
+                return subprocess.CompletedProcess(command, 0, stdout="")
+            if command[:3] == ["git", "push", "origin"]:
+                raise subprocess.TimeoutExpired(command, 60)
+            return subprocess.CompletedProcess(command, 0, stdout="")
+
+        with mock.patch.object(SCRAPER.subprocess, "run", side_effect=unknown_push):
+            with mock.patch.object(SCRAPER, "send_telegram"):
+                with self.assertRaisesRegex(SCRAPER.PostPushError, "remote state is unknown"):
+                    SCRAPER.git_commit_and_push("test publication")
+
+        self.assertFalse(any(command[:2] == ["git", "reset"] for command in commands))
+
+    def test_registry_only_publication_does_not_rewrite_coverage(self):
+        changed_coverage = {"version": "changed-during-discovery"}
+        registry = {
+            "entries": [
+                {"id": "official-cutover-portal-page", "lastVerified": "old"},
+                {"id": "official-alerts", "lastVerified": "old"},
+                {"id": "secondary-news-coverage", "lastVerified": "old"},
+            ]
+        }
+        self.coverage_file.write_text(json.dumps(changed_coverage))
+
+        with mock.patch.object(SCRAPER, "load_coverage", return_value={"articles": []}):
+            with mock.patch.object(SCRAPER, "poll_rss_feeds", return_value=[]):
+                with mock.patch.object(SCRAPER, "discover_via_gdelt", return_value=[]):
+                    with mock.patch.object(SCRAPER, "load_registry", return_value=registry):
+                        with mock.patch.object(SCRAPER, "validate_staged_publication"):
+                            SCRAPER.run_discover({}, dry_run=False)
+
+        self.assertEqual(
+            changed_coverage,
+            json.loads(self.coverage_file.read_text()),
+        )
+        published_registry = json.loads(self.registry_file.read_text())
+        self.assertNotEqual(self.old_registry, published_registry)
 
     def test_failed_push_preserves_remote_data_and_preexisting_local_work(self):
         remote = self.data_dir / "remote.git"
@@ -317,6 +442,69 @@ class PublicationTests(unittest.TestCase):
         status = self.run_git(work, "status", "--porcelain").stdout.splitlines()
         self.assertIn("M  staged.txt", status)
         self.assertIn(" M notes.txt", status)
+
+    def test_rebase_conflict_replays_unrelated_commits_before_restoring_remote_data(self):
+        remote = self.data_dir / "conflict-remote.git"
+        seed = self.data_dir / "conflict-seed"
+        work = self.data_dir / "conflict-work"
+        remote.mkdir()
+        self.run_git(remote, "init", "--bare", "--initial-branch=main")
+        self.run_git(self.data_dir, "clone", str(remote), str(seed))
+        self.run_git(seed, "config", "user.name", "Scraper test")
+        self.run_git(seed, "config", "user.email", "scraper@example.com")
+        (seed / "data").mkdir()
+        (seed / "data" / "coverage.json").write_text('{"version":"base"}\n')
+        (seed / "data" / "source-registry.json").write_text('{"version":"base"}\n')
+        self.run_git(seed, "add", ".")
+        self.run_git(seed, "commit", "-m", "base")
+        self.run_git(seed, "push", "origin", "main")
+
+        self.run_git(self.data_dir, "clone", str(remote), str(work))
+        self.run_git(work, "config", "user.name", "Scraper test")
+        self.run_git(work, "config", "user.email", "scraper@example.com")
+        (work / "local.txt").write_text("retain me\n")
+        self.run_git(work, "add", "local.txt")
+        self.run_git(work, "commit", "-m", "preexisting local commit")
+
+        (seed / "data" / "coverage.json").write_text('{"version":"remote"}\n')
+        (seed / "data" / "source-registry.json").write_text('{"version":"remote"}\n')
+        self.run_git(seed, "add", "data")
+        self.run_git(seed, "commit", "-m", "remote data update")
+        self.run_git(seed, "push", "origin", "main")
+
+        hook = remote / "hooks" / "pre-receive"
+        hook.write_text("#!/bin/sh\nexit 1\n")
+        hook.chmod(0o755)
+        (work / "data" / "coverage.json").write_text('{"version":"scraper"}\n')
+        (work / "data" / "source-registry.json").write_text('{"version":"scraper"}\n')
+
+        original_project = SCRAPER.PROJECT_DIR
+        SCRAPER.PROJECT_DIR = work
+        try:
+            with mock.patch.object(SCRAPER, "send_telegram"):
+                with self.assertRaisesRegex(
+                    SCRAPER.PublicationRollbackError,
+                    "fetched remote data preserved",
+                ):
+                    SCRAPER.git_commit_and_push("scraper publication")
+        finally:
+            SCRAPER.PROJECT_DIR = original_project
+
+        remote_head = self.run_git(work, "rev-parse", "origin/main").stdout.strip()
+        local_head = self.run_git(work, "rev-parse", "HEAD").stdout.strip()
+        self.run_git(work, "merge-base", "--is-ancestor", remote_head, local_head)
+        self.assertEqual(
+            "preexisting local commit",
+            self.run_git(work, "log", "-1", "--format=%s").stdout.strip(),
+        )
+        self.assertNotIn(
+            "scraper publication",
+            self.run_git(work, "log", "--format=%s").stdout.splitlines(),
+        )
+        self.assertEqual(
+            {"version": "remote"},
+            json.loads((work / "data" / "coverage.json").read_text()),
+        )
 
     def test_remote_rollback_is_not_overwritten_by_prior_snapshot(self):
         remote_coverage = {"version": "remote-coverage"}
