@@ -113,6 +113,10 @@ class PostPushError(PublicationError):
     """Raised when cleanup fails after the remote publication succeeds."""
 
 
+class PublicationRollbackError(PublicationError):
+    """Raised after a failed Git publication restores its selected data state."""
+
+
 # ---------------------------------------------------------------------------
 # Telegram notifications
 # ---------------------------------------------------------------------------
@@ -869,7 +873,10 @@ def git_commit_and_push(message):
     """Commit coverage changes and push to main."""
     stashed = False
     succeeded = False
-    rollback_head = None
+    initial_head = None
+    remote_head = None
+    rebase_succeeded = False
+    preserve_local_data = True
     try:
         head_result = subprocess.run(
             ["git", "rev-parse", "HEAD"],
@@ -879,13 +886,21 @@ def git_commit_and_push(message):
             text=True,
             timeout=30,
         )
-        rollback_head = head_result.stdout.strip()
+        initial_head = head_result.stdout.strip()
         subprocess.run(
             ["git", "add", "data/coverage.json", "data/source-registry.json"],
             cwd=PROJECT_DIR, check=True, capture_output=True, timeout=30,
         )
         subprocess.run(
-            ["git", "commit", "-m", message],
+            [
+                "git",
+                "commit",
+                "-m",
+                message,
+                "--",
+                "data/coverage.json",
+                "data/source-registry.json",
+            ],
             cwd=PROJECT_DIR, check=True, capture_output=True, timeout=30,
         )
         # Stash any unrelated dirty files so rebase can proceed
@@ -899,7 +914,7 @@ def git_commit_and_push(message):
                 cwd=PROJECT_DIR, check=True, capture_output=True, text=True, timeout=30,
             )
             stashed = True
-        # Fetch first so every later rollback preserves the new remote head.
+        # Fetch first so a failed publication can retain the remote data files.
         subprocess.run(
             ["git", "fetch", "origin", "main"],
             cwd=PROJECT_DIR, check=True, capture_output=True, text=True, timeout=60,
@@ -912,11 +927,35 @@ def git_commit_and_push(message):
             text=True,
             timeout=30,
         )
-        rollback_head = remote_result.stdout.strip()
+        remote_head = remote_result.stdout.strip()
+        local_data_result = subprocess.run(
+            [
+                "git",
+                "diff",
+                "--quiet",
+                "%s...%s" % (remote_head, initial_head),
+                "--",
+                "data/coverage.json",
+                "data/source-registry.json",
+            ],
+            cwd=PROJECT_DIR,
+            capture_output=True,
+            text=True,
+            timeout=30,
+        )
+        if local_data_result.returncode not in (0, 1):
+            raise subprocess.CalledProcessError(
+                local_data_result.returncode,
+                local_data_result.args,
+                output=local_data_result.stdout,
+                stderr=local_data_result.stderr,
+            )
+        preserve_local_data = local_data_result.returncode == 1
         subprocess.run(
             ["git", "rebase", "origin/main"],
             cwd=PROJECT_DIR, check=True, capture_output=True, text=True, timeout=60,
         )
+        rebase_succeeded = True
         result = subprocess.run(
             ["git", "push", "origin", "main"],
             cwd=PROJECT_DIR, check=True, capture_output=True, text=True, timeout=60,
@@ -928,9 +967,20 @@ def git_commit_and_push(message):
         stderr = getattr(error, "stderr", "") or str(error)
         logging.error("Git failed: %s %s", stdout, stderr)
         send_telegram("Reroute NJ scraper: git push failed.\n%s" % stderr)
-        if rollback_head:
+        if initial_head:
             try:
                 abort_active_rebase()
+                rollback_head = initial_head
+                if rebase_succeeded:
+                    parent_result = subprocess.run(
+                        ["git", "rev-parse", "HEAD^"],
+                        cwd=PROJECT_DIR,
+                        check=True,
+                        capture_output=True,
+                        text=True,
+                        timeout=30,
+                    )
+                    rollback_head = parent_result.stdout.strip()
                 subprocess.run(
                     ["git", "reset", "--mixed", rollback_head],
                     cwd=PROJECT_DIR,
@@ -939,16 +989,46 @@ def git_commit_and_push(message):
                     text=True,
                     timeout=30,
                 )
+                if remote_head:
+                    data_source = (
+                        rollback_head if preserve_local_data else remote_head
+                    )
+                    subprocess.run(
+                        [
+                            "git",
+                            "restore",
+                            "--source",
+                            data_source,
+                            "--worktree",
+                            "--",
+                            "data/coverage.json",
+                            "data/source-registry.json",
+                        ],
+                        cwd=PROJECT_DIR,
+                        check=True,
+                        capture_output=True,
+                        text=True,
+                        timeout=30,
+                    )
             except (subprocess.SubprocessError, OSError) as rollback_error:
                 raise PublicationError(
                     "Git publication failed and its local commit could not be withdrawn: %s"
                     % rollback_error
                 )
+            if remote_head:
+                preserved_state = (
+                    "preexisting local data"
+                    if preserve_local_data
+                    else "fetched remote data"
+                )
+                raise PublicationRollbackError(
+                    "Git publication failed; %s preserved" % preserved_state
+                )
     finally:
         if stashed:
             try:
                 subprocess.run(
-                    ["git", "stash", "pop", "--quiet"],
+                    ["git", "stash", "pop", "--quiet", "--index"],
                     cwd=PROJECT_DIR, check=True, capture_output=True, timeout=30,
                 )
             except (subprocess.SubprocessError, OSError) as error:
@@ -975,7 +1055,10 @@ def abort_active_rebase():
             text=True,
             timeout=30,
         )
-        if Path(path_result.stdout.strip()).exists():
+        rebase_path = Path(path_result.stdout.strip())
+        if not rebase_path.is_absolute():
+            rebase_path = PROJECT_DIR / rebase_path
+        if rebase_path.exists():
             subprocess.run(
                 ["git", "rebase", "--abort"],
                 cwd=PROJECT_DIR,
@@ -994,6 +1077,8 @@ def publish_and_push(coverage_data, registry_data, message):
         if git_commit_and_push(message):
             return
     except PostPushError:
+        raise
+    except PublicationRollbackError:
         raise
     except Exception:
         restore_live_files(snapshots)
