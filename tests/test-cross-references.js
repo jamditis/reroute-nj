@@ -320,10 +320,11 @@ console.log("======================================================\n");
     hubs[hub].push(lineId);
   });
 
-  // Check that each hub appears in app.js
+  // Hubs appear in route copy (app.js or English runtime strings).
+  var enJsSrc = JSON.stringify(loadJSON("translations/en.json").js || {});
   Object.keys(hubs).forEach(function (hubName) {
-    if (appSrc.indexOf(hubName) === -1) {
-      issues.push("Hub '" + hubName + "' (used by " + hubs[hubName].join(", ") + ") not found in app.js");
+    if (appSrc.indexOf(hubName) === -1 && enJsSrc.indexOf(hubName) === -1) {
+      issues.push("Hub '" + hubName + "' (used by " + hubs[hubName].join(", ") + ") not found in app.js or translations/en.json");
     }
   });
 

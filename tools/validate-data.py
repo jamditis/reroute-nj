@@ -629,6 +629,28 @@ def validate_sources_json(result):
         except (ValueError, TypeError):
             result.warn("Cannot parse lastVerified date in sources.json")
 
+    stale_claims = []
+    for cid, claim in claims.items():
+        raw = claim.get("lastVerified", "")
+        if not raw or claim.get("status") != "verified":
+            continue
+        try:
+            cdate = datetime.fromisoformat(str(raw).replace("Z", "+00:00")).replace(tzinfo=None)
+        except (ValueError, TypeError):
+            continue
+        if (datetime.now() - cdate).days > 90:
+            stale_claims.append(cid)
+    if stale_claims:
+        preview = ", ".join(stale_claims[:8])
+        extra = "" if len(stale_claims) <= 8 else f" (+{len(stale_claims) - 8} more)"
+        result.warn(
+            f"{len(stale_claims)} verified claim(s) last checked more than 90 days ago: "
+            + preview
+            + extra
+        )
+    else:
+        result.ok("No verified claims older than 90 days")
+
     # Cross-reference: check that LINE_DATA source URLs match sources.json
     line_data = parse_line_data()
     for lid in line_data:

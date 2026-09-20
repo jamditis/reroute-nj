@@ -1,5 +1,5 @@
 {
-  "lastVerified": "2026-02-14T00:00:00Z",
+  "lastVerified": "2026-09-20T00:00:00Z",
   "sources": {
     "njtransit-portal-cutover": {
       "title": "Portal Bridge Cutover: What It Means For You",
@@ -357,11 +357,11 @@
       "lastVerified": "2026-02-14"
     },
     "fare-data": {
-      "claim": "Zone-based monthly pass prices for Penn Station and Hoboken destinations",
-      "sources": ["njtransit-fares"],
+      "claim": "Hoboken monthly and one-way tickets cost less than Penn Station NY tickets. NJ Transit says riders can save up to 25% per trip, and PATH/ferry from Hoboken is cross-honored. Exact dollar fares must be checked at njtransit.com after the July 1, 2026 increase.",
+      "sources": ["njtransit-fares", "njtransit-portal-cutover"],
       "status": "verified",
-      "lastVerified": "2026-02-14",
-      "note": "Fare data should be reverified after July 1, 2026 (next scheduled 3% increase)"
+      "lastVerified": "2026-09-20",
+      "note": "Dollar amounts are omitted from the impact card until post-July-1 official zone fares are recorded."
     },
     "station-list-montclair-boonton": {
       "claim": "24 stations on Montclair-Boonton Line (10 Montclair branch, 14 Boonton branch)",

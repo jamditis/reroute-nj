@@ -1,5 +1,5 @@
 {
-  "source": "NJ Transit rail GTFS (stops.txt + shapes.txt). Downloaded from https://www.njtransit.com/rail_data.zip on 2026-09-20. Portal North Bridge is the NEC shape point over the Hackensack River. Old Portal Bridge coordinates are the 1910 swing span (south of the new alignment).",
+  "source": "NJ Transit rail GTFS (stops.txt + shapes.txt). Downloaded from https://www.njtransit.com/rail_data.zip on 2026-09-20. Portal North Bridge is the NEC shape point over the Hackensack River. Old Portal Bridge is ~150 m toward Newark on that same alignment.",
   "generated": "2026-09-20",
   "portal": {
     "lat": 40.74564,
@@ -7,8 +7,8 @@
     "name": "Portal North Bridge"
   },
   "oldPortal": {
-    "lat": 40.72833,
-    "lng": -74.11722,
+    "lat": 40.74462,
+    "lng": -74.1217,
     "name": "Old Portal Bridge"
   },
   "hubs": [
@@ -229,6 +229,18 @@
       "lat": 40.782743,
       "lng": -74.198451,
       "line": "montclair-boonton"
+    },
+    {
+      "name": "Mount Tabor",
+      "lat": 40.875904,
+      "lng": -74.481915,
+      "line": "morris-essex"
+    },
+    {
+      "name": "Morris Plains",
+      "lat": 40.828637,
+      "lng": -74.478197,
+      "line": "morris-essex"
     },
     {
       "name": "Morristown",

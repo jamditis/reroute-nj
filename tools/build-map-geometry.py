@@ -2,12 +2,14 @@
 """Build data/map-geometry.json from an NJ Transit rail GTFS feed.
 
 Usage:
-  python3 tools/build-map-geometry.py /path/to/gtfs-dir
+  python3 tools/build-map-geometry.py /path/to/gtfs-dir [--feed-date YYYY-MM-DD]
 
 Expects stops.txt, trips.txt, stop_times.txt, and shapes.txt.
 
 The committed JSON is the runtime source. Re-run this when NJ Transit
 publishes a new rail GTFS if station coordinates or alignments change.
+`--feed-date` is the day the GTFS zip was downloaded. `generated` is the
+day this script writes the JSON.
 """
 from __future__ import annotations
 
@@ -17,6 +19,7 @@ import math
 import os
 import sys
 from collections import defaultdict
+from datetime import date
 
 
 # Display name, GTFS stop_name, line id
@@ -46,7 +49,9 @@ STATIONS = [
     ("Glen Ridge", "GLEN RIDGE", "montclair-boonton"),
     ("Bloomfield", "BLOOMFIELD", "montclair-boonton"),
     ("Watsessing Avenue", "WATSESSING AVENUE", "montclair-boonton"),
-    # Morris & Essex — Morristown
+    # Morris & Essex — Morristown (west of Morristown retained on the shape)
+    ("Mount Tabor", "MOUNT TABOR", "morris-essex"),
+    ("Morris Plains", "MORRIS PLAINS", "morris-essex"),
     ("Morristown", "MORRISTOWN", "morris-essex"),
     ("Convent Station", "CONVENT", "morris-essex"),
     ("Madison", "MADISON", "morris-essex"),
@@ -142,10 +147,6 @@ ROUTE_TARGETS = {
     "16": ("HIGH BRIDGE", "NEWARK PENN STATION", "raritan-valley", "rvl"),
 }
 
-# 1910 swing bridge (south of the new Portal North alignment).
-OLD_PORTAL = {"lat": 40.72833, "lng": -74.11722, "name": "Old Portal Bridge"}
-
-
 def nearest_idx(seq, target):
     return min(range(len(seq)), key=lambda i: dist2(seq[i], target))
 
@@ -165,6 +166,46 @@ def dist2(a, b):
     dx = (a[1] - b[1]) * math.cos(lat) * 111320
     dy = (a[0] - b[0]) * 110540
     return dx * dx + dy * dy
+
+
+def walk_toward(seq, i0, i1, meters):
+    """Walk along seq from i0 toward i1 until about `meters` have elapsed."""
+    if not seq or i0 == i1:
+        return seq[i0]
+    step = 1 if i1 > i0 else -1
+    travelled = 0.0
+    i = i0
+    while i != i1:
+        nxt = i + step
+        d = math.sqrt(dist2(seq[i], seq[nxt]))
+        if travelled + d >= meters:
+            return seq[nxt]
+        travelled += d
+        i = nxt
+    return seq[i1]
+
+
+def parse_args(argv):
+    gtfs = None
+    feed_date = None
+    args = argv[1:]
+    i = 0
+    while i < len(args):
+        if args[i] == "--feed-date":
+            if i + 1 >= len(args):
+                raise SystemExit("usage: --feed-date YYYY-MM-DD")
+            feed_date = args[i + 1]
+            i += 2
+            continue
+        if args[i].startswith("-"):
+            raise SystemExit("unknown option " + args[i])
+        gtfs = args[i]
+        i += 1
+    if not gtfs:
+        gtfs = "/tmp/reroute-nj-research/gtfs"
+    if not feed_date:
+        feed_date = date.today().isoformat()
+    return gtfs, feed_date
 
 
 def perpendicular_m(p, a, b):
@@ -210,7 +251,8 @@ def load_csv(path):
 
 
 def main():
-    gtfs = sys.argv[1] if len(sys.argv) > 1 else "/tmp/reroute-nj-research/gtfs"
+    gtfs, feed_date = parse_args(sys.argv)
+    generated = date.today().isoformat()
     out_path = os.path.join(
         os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
         "data",
@@ -407,17 +449,31 @@ def main():
         "name": "Portal North Bridge",
     }
 
+    # 1910 swing span sits immediately south of Portal North Bridge at the
+    # same Hackensack crossing. Wikipedia's infobox (40.75361, -74.09472) is
+    # too coarse to plot; snap ~150 m toward Newark along the NEC shape.
+    portal_idx = nearest_idx(corridor_raw, (plat, plng))
+    newark_idx = nearest_idx(corridor_raw, newark)
+    old_lat, old_lng = walk_toward(corridor_raw, portal_idx, newark_idx, 150)
+    old_portal = {
+        "lat": round(old_lat, 5),
+        "lng": round(old_lng, 5),
+        "name": "Old Portal Bridge",
+    }
+
     hoboken = (hubs[0]["lat"], hubs[0]["lng"])
     geo = {
         "source": (
             "NJ Transit rail GTFS (stops.txt + shapes.txt). "
-            "Downloaded from https://www.njtransit.com/rail_data.zip on 2026-09-20. "
+            "Downloaded from https://www.njtransit.com/rail_data.zip on "
+            + feed_date
+            + ". "
             "Portal North Bridge is the NEC shape point over the Hackensack River. "
-            "Old Portal Bridge coordinates are the 1910 swing span (south of the new alignment)."
+            "Old Portal Bridge is ~150 m toward Newark on that same alignment."
         ),
-        "generated": "2026-09-20",
+        "generated": generated,
         "portal": portal,
-        "oldPortal": OLD_PORTAL,
+        "oldPortal": old_portal,
         "hubs": hubs,
         "stations": stations,
         "routes": routes,

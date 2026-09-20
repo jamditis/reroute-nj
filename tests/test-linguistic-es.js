@@ -795,6 +795,8 @@ UNTRANSLATED_ENGLISH.forEach(function (check) {
     if (/<code>/.test(entry.value)) return;
 
     var text = stripHtml(entry.value);
+    // Runtime interpolation tokens are not Spanish copy.
+    text = text.replace(/\{(station|line|hub|branch)\}/g, "");
     // Remove known English proper nouns before checking
     text = text.replace(/Old Portal Bridge/g, "");
     text = text.replace(/Portal\s+(North\s+)?Bridge/g, "");
