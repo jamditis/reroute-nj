@@ -256,7 +256,11 @@
     "cutover_item4": "Los trenes Midtown Direct de días laborables se desvían a Hoboken (11 oct – 15 nov, 2026); los fines de semana siguen a Penn Station NY",
     "download_png": "Descargar PNG",
     "download_pdf": "Descargar PDF",
-    "export_note": "Descarga un mapa dibujado de las rutas. No es una fotografía de una estación ni una captura de teselas del mapa."
+    "export_note": "Descarga un mapa dibujado de las rutas. No es una fotografía de una estación ni una captura de teselas del mapa.",
+    "seo_summary": "Mapa interactivo del corte de la fase 2 de Portal North Bridge (11 oct – 15 nov, 2026): geometría ferroviaria del GTFS de NJ Transit, el cruce del río Hackensack en Kearny, estaciones afectadas, centros de transbordo y alternativas PATH, ferry y bus.",
+    "filter_aria": "Filtrar el mapa por línea",
+    "canvas_aria": "Mapa interactivo de estaciones y rutas del corte de Portal Bridge",
+    "legend_old_portal": "Antiguo Portal Bridge"
   },
   "embed": {
     "title": "Insertar y republicar — Reroute NJ",
@@ -433,7 +437,10 @@
     "map_transfer_hub": "Centro de transbordo",
     "map_path_ferry_bus": "PATH / ferry / bus 126",
     "map_single_track": "Zona de vía única",
-    "map_export_footer": "Reroute NJ · reroutenj.org · Geometría ferroviaria del GTFS de NJ Transit. Herramienta comunitaria independiente."
+    "map_export_footer": "Reroute NJ · reroutenj.org · Geometría ferroviaria del GTFS de NJ Transit. Herramienta comunitaria independiente.",
+    "map_load_error": "No se pudo cargar la geometría ferroviaria. Actualiza la página o abre el sitio por http (python3 -m http.server 8000).",
+    "map_popup_portal": "Río Hackensack, Kearny NJ<br>Operación de vía única entre Newark Penn y Secaucus durante el corte de la fase 2 (11 oct – 15 nov, 2026).",
+    "map_popup_old": "Puente giratorio de 1910. Se retira cuando el segundo riel pasa a Portal North Bridge."
   },
   "blog": {
     "title": "Blog — Reroute NJ",

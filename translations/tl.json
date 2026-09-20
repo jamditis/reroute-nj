@@ -256,7 +256,11 @@
     "cutover_item4": "Ang weekday Midtown Direct ay inililihis sa Hoboken (Oct 11 – Nov 15, 2026); sa weekend ay patuloy pa rin papuntang Penn Station NY",
     "download_png": "I-download ang PNG",
     "download_pdf": "I-download ang PDF",
-    "export_note": "Nagda-download ng iginuhit na mapa ng mga ruta. Hindi ito litrato ng istasyon o screenshot ng map tiles."
+    "export_note": "Nagda-download ng iginuhit na mapa ng mga ruta. Hindi ito litrato ng istasyon o screenshot ng map tiles.",
+    "seo_summary": "Interactive na mapa ng Phase 2 cutover ng Portal North Bridge (Okt 11 – Nob 15, 2026): rail geometry mula sa NJ Transit GTFS, tawiran sa Hackensack River sa Kearny, apektadong istasyon, transfer hubs, at PATH, ferry, at bus.",
+    "filter_aria": "I-filter ang mapa ayon sa linya",
+    "canvas_aria": "Interactive na mapa ng mga istasyon at ruta ng Portal Bridge cutover",
+    "legend_old_portal": "Lumang Portal Bridge"
   },
   "embed": {
     "title": "I-embed at i-republish — Reroute NJ",
@@ -433,7 +437,10 @@
     "map_transfer_hub": "Sentro ng transfer",
     "map_path_ferry_bus": "PATH / ferry / bus 126",
     "map_single_track": "Sona ng iisang riles",
-    "map_export_footer": "Reroute NJ · reroutenj.org · Rail geometry mula sa NJ Transit GTFS. Independent community tool."
+    "map_export_footer": "Reroute NJ · reroutenj.org · Rail geometry mula sa NJ Transit GTFS. Independent community tool.",
+    "map_load_error": "Hindi ma-load ang rail geometry. I-refresh ang page, o buksan ang site sa http (python3 -m http.server 8000).",
+    "map_popup_portal": "Hackensack River, Kearny NJ<br>Isang riles sa pagitan ng Newark Penn at Secaucus sa Phase 2 cutover (Okt 11 – Nob 15, 2026).",
+    "map_popup_old": "1910 swing span. Ireretiro pagkatapos lumipat ang pangalawang riles sa Portal North Bridge."
   },
   "blog": {
     "title": "Blog — Reroute NJ",

@@ -851,6 +851,27 @@ def replace_page_specific_content(html, translations, page_key):
                 "Downloads a drawn map of the routes. This is not a photograph of a station or a screenshot of map tiles.",
                 export_note
             )
+        seo_summary = get_translation(translations, "map.seo_summary")
+        if seo_summary:
+            html = html.replace(
+                "Interactive map of the Portal North Bridge Phase 2 cutover (Oct 11 – Nov 15, 2026): rail geometry from NJ Transit GTFS, the Hackensack River crossing in Kearny, affected stations, transfer hubs, and PATH, ferry, and bus alternatives.",
+                seo_summary
+            )
+        filter_aria = get_translation(translations, "map.filter_aria")
+        if filter_aria:
+            html = html.replace('aria-label="Filter map by line"', f'aria-label="{filter_aria}"')
+        canvas_aria = get_translation(translations, "map.canvas_aria")
+        if canvas_aria:
+            html = html.replace(
+                'aria-label="Interactive map showing Portal Bridge cutover stations and routes"',
+                f'aria-label="{canvas_aria}"'
+            )
+        old_portal = get_translation(translations, "map.legend_old_portal")
+        if old_portal:
+            html = html.replace(
+                '></span> Old Portal Bridge</div>',
+                f'></span> {old_portal}</div>'
+            )
 
         # Legend items
         legend_portal = get_translation(translations, "map.legend_portal_bridge")

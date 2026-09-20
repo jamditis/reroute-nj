@@ -256,7 +256,11 @@
     "cutover_item4": "I treni Midtown Direct feriali sono dirottati a Hoboken (11 ott – 15 nov, 2026); i weekend restano per Penn Station NY",
     "download_png": "Scarica PNG",
     "download_pdf": "Scarica PDF",
-    "export_note": "Scarica una mappa disegnata delle linee. Non è una fotografia di una stazione né uno screenshot delle tile della mappa."
+    "export_note": "Scarica una mappa disegnata delle linee. Non è una fotografia di una stazione né uno screenshot delle tile della mappa.",
+    "seo_summary": "Mappa interattiva del taglio di fase 2 di Portal North Bridge (11 ott – 15 nov, 2026): geometria ferroviaria dal GTFS di NJ Transit, l'attraversamento del fiume Hackensack a Kearny, stazioni interessate, hub di trasferimento e alternative PATH, traghetto e bus.",
+    "filter_aria": "Filtra la mappa per linea",
+    "canvas_aria": "Mappa interattiva delle stazioni e delle linee del taglio Portal Bridge",
+    "legend_old_portal": "Vecchio Portal Bridge"
   },
   "embed": {
     "title": "Incorpora e ripubblica — Reroute NJ",
@@ -433,7 +437,10 @@
     "map_transfer_hub": "Hub di trasferimento",
     "map_path_ferry_bus": "PATH / traghetto / bus 126",
     "map_single_track": "Zona a binario unico",
-    "map_export_footer": "Reroute NJ · reroutenj.org · Geometria ferroviaria dal GTFS di NJ Transit. Strumento comunitario indipendente."
+    "map_export_footer": "Reroute NJ · reroutenj.org · Geometria ferroviaria dal GTFS di NJ Transit. Strumento comunitario indipendente.",
+    "map_load_error": "Impossibile caricare la geometria ferroviaria. Aggiorna la pagina o apri il sito via http (python3 -m http.server 8000).",
+    "map_popup_portal": "Hackensack River, Kearny NJ<br>Esercizio a binario unico tra Newark Penn e Secaucus nel taglio di fase 2 (11 ott – 15 nov, 2026).",
+    "map_popup_old": "Campata girevole del 1910. Fuori servizio dopo il trasferimento del secondo binario su Portal North Bridge."
   },
   "blog": {
     "title": "Blog — Reroute NJ",

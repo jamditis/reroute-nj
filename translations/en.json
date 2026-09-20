@@ -256,7 +256,11 @@
     "cutover_item4": "Weekday Midtown Direct trains diverted to Hoboken (Oct 11 – Nov 15, 2026); weekends still run to Penn Station NY",
     "download_png": "Download PNG",
     "download_pdf": "Download PDF",
-    "export_note": "Downloads a drawn map of the routes. This is not a photograph of a station or a screenshot of map tiles."
+    "export_note": "Downloads a drawn map of the routes. This is not a photograph of a station or a screenshot of map tiles.",
+    "seo_summary": "Interactive map of the Portal North Bridge Phase 2 cutover (Oct 11 – Nov 15, 2026): rail geometry from NJ Transit GTFS, the Hackensack River crossing in Kearny, affected stations, transfer hubs, and PATH, ferry, and bus alternatives.",
+    "filter_aria": "Filter map by line",
+    "canvas_aria": "Interactive map showing Portal Bridge cutover stations and routes",
+    "legend_old_portal": "Old Portal Bridge"
   },
   "embed": {
     "title": "Embed & republish — Reroute NJ",
@@ -495,7 +499,10 @@
     "map_transfer_hub": "Transfer hub",
     "map_path_ferry_bus": "PATH / ferry / bus 126",
     "map_single_track": "Single-track zone",
-    "map_export_footer": "Reroute NJ · reroutenj.org · Rail geometry from NJ Transit GTFS. Independent community tool."
+    "map_export_footer": "Reroute NJ · reroutenj.org · Rail geometry from NJ Transit GTFS. Independent community tool.",
+    "map_load_error": "The map could not load rail geometry. Refresh the page, or open this site over http (python3 -m http.server 8000).",
+    "map_popup_portal": "Hackensack River, Kearny NJ<br>Single-track operations between Newark Penn and Secaucus during the Phase 2 cutover (Oct 11 – Nov 15, 2026).",
+    "map_popup_old": "1910 swing span. Retired after the second track moves to Portal North Bridge."
   },
   "blog_post_embed": {
     "title": "New: embed Reroute NJ on your website — Reroute NJ",

@@ -256,7 +256,11 @@
     "cutover_item4": "工作日Midtown Direct列车改至Hoboken（2026年10月11日 – 11月15日）；周末仍开往Penn Station NY",
     "download_png": "下载PNG",
     "download_pdf": "下载PDF",
-    "export_note": "下载的是绘制的路线图。这不是车站照片，也不是地图瓦片截图。"
+    "export_note": "下载的是绘制的路线图。这不是车站照片，也不是地图瓦片截图。",
+    "seo_summary": "Portal North Bridge 第二阶段转换（2026年10月11日–11月15日）交互地图：NJ Transit GTFS 铁路几何、Kearny 的 Hackensack 河交叉、受影响车站、换乘枢纽，以及 PATH、渡轮和巴士备选。",
+    "filter_aria": "按线路筛选地图",
+    "canvas_aria": "显示 Portal Bridge 转换车站和线路的交互地图",
+    "legend_old_portal": "旧 Portal Bridge"
   },
   "embed": {
     "title": "嵌入和转载 — Reroute NJ",
@@ -433,7 +437,10 @@
     "map_transfer_hub": "换乘枢纽",
     "map_path_ferry_bus": "PATH / 渡轮 / 巴士 126",
     "map_single_track": "单线区段",
-    "map_export_footer": "Reroute NJ · reroutenj.org · 铁路几何来自 NJ Transit GTFS。独立社区工具。"
+    "map_export_footer": "Reroute NJ · reroutenj.org · 铁路几何来自 NJ Transit GTFS。独立社区工具。",
+    "map_load_error": "无法加载铁路几何。请刷新页面，或通过 http 打开本站（python3 -m http.server 8000）。",
+    "map_popup_portal": "Hackensack River，Kearny NJ<br>第二阶段转换期间（2026年10月11日–11月15日）Newark Penn 与 Secaucus 之间单线运行。",
+    "map_popup_old": "1910 年旋转桥。第二条轨道迁至 Portal North Bridge 后退役。"
   },
   "blog": {
     "title": "博客 — Reroute NJ",

@@ -256,7 +256,11 @@
     "cutover_item4": "કાર્યદિવસોમાં Midtown Direct ટ્રેનો Hoboken લઈ જવાય છે (11 ઓક્ટ – 15 નવ, 2026); સપ્તાહાંત હજુ Penn Station NY જાય છે",
     "download_png": "PNG ડાઉનલોડ કરો",
     "download_pdf": "PDF ડાઉનલોડ કરો",
-    "export_note": "રૂટનો દોરેલો નકશો ડાઉનલોડ થાય છે. આ સ્ટેશનનો ફોટો કે મેપ ટાઇલનો સ્ક્રીનશોટ નથી."
+    "export_note": "રૂટનો દોરેલો નકશો ડાઉનલોડ થાય છે. આ સ્ટેશનનો ફોટો કે મેપ ટાઇલનો સ્ક્રીનશોટ નથી.",
+    "seo_summary": "Portal North Bridge ફેઝ 2 કટઓવર (11 ઑક્ટ – 15 નવ, 2026)નો ઇન્ટરેક્ટિવ નકશો: NJ Transit GTFS રેલ ભૂમિતિ, Kearnyમાં Hackensack નદી ક્રોસિંગ, અસરગ્રસ્ત સ્ટેશન, ટ્રાન્સફર હબ અને PATH, ફેરી અને બસ વિકલ્પો.",
+    "filter_aria": "લાઇન પ્રમાણે નકશો ફિલ્ટર કરો",
+    "canvas_aria": "Portal Bridge કટઓવર સ્ટેશન અને રૂટનો ઇન્ટરેક્ટિવ નકશો",
+    "legend_old_portal": "જૂનું Portal Bridge"
   },
   "embed": {
     "title": "એમ્બેડ અને રિપબ્લિશ — Reroute NJ",
@@ -433,7 +437,10 @@
     "map_transfer_hub": "ટ્રાન્સફર હબ",
     "map_path_ferry_bus": "PATH / ફેરી / બસ 126",
     "map_single_track": "એક-ટ્રેક વિસ્તાર",
-    "map_export_footer": "Reroute NJ · reroutenj.org · રેલ ભૂમિતિ NJ Transit GTFSમાંથી. સ્વતંત્ર સમુદાય સાધન."
+    "map_export_footer": "Reroute NJ · reroutenj.org · રેલ ભૂમિતિ NJ Transit GTFSમાંથી. સ્વતંત્ર સમુદાય સાધન.",
+    "map_load_error": "રેલ ભૂમિતિ લોડ થઈ શકી નહીં. પેજ રિફ્રેશ કરો, અથવા http પર ખોલો (python3 -m http.server 8000).",
+    "map_popup_portal": "Hackensack River, Kearny NJ<br>ફેઝ 2 કટઓવર (11 ઑક્ટ – 15 નવ, 2026) દરમિયાન Newark Penn અને Secaucus વચ્ચે એક ટ્રેક.",
+    "map_popup_old": "1910 સ્વિંગ સ્પાન. બીજી પાટી Portal North Bridge પર જાય ત્યારે નિવૃત્ત."
   },
   "blog": {
     "title": "બ્લોગ — Reroute NJ",

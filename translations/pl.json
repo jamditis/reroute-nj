@@ -256,7 +256,11 @@
     "cutover_item4": "W dni powszednie pociągi Midtown Direct kierowane do Hoboken (11 paź – 15 lis, 2026); w weekendy nadal do Penn Station NY",
     "download_png": "Pobierz PNG",
     "download_pdf": "Pobierz PDF",
-    "export_note": "Pobiera narysowaną mapę linii. To nie jest zdjęcie stacji ani zrzut kafelków mapy."
+    "export_note": "Pobiera narysowaną mapę linii. To nie jest zdjęcie stacji ani zrzut kafelków mapy.",
+    "seo_summary": "Interaktywna mapa przerwy fazy 2 Portal North Bridge (11 paź – 15 lis 2026): geometria torów z GTFS NJ Transit, skrzyżowanie rzeki Hackensack w Kearny, stacje objęte zmianą, węzły przesiadkowe oraz PATH, prom i autobus.",
+    "filter_aria": "Filtruj mapę według linii",
+    "canvas_aria": "Interaktywna mapa stacji i tras przerwy Portal Bridge",
+    "legend_old_portal": "Stary Portal Bridge"
   },
   "embed": {
     "title": "Osadź i udostępnij — Reroute NJ",
@@ -433,7 +437,10 @@
     "map_transfer_hub": "Węzeł przesiadkowy",
     "map_path_ferry_bus": "PATH / prom / autobus 126",
     "map_single_track": "Strefa jednotorowa",
-    "map_export_footer": "Reroute NJ · reroutenj.org · Geometria torów z GTFS NJ Transit. Niezależne narzędzie społecznościowe."
+    "map_export_footer": "Reroute NJ · reroutenj.org · Geometria torów z GTFS NJ Transit. Niezależne narzędzie społecznościowe.",
+    "map_load_error": "Nie udało się wczytać geometrii torów. Odśwież stronę albo otwórz witrynę przez http (python3 -m http.server 8000).",
+    "map_popup_portal": "Hackensack River, Kearny NJ<br>Ruch jednotorowy między Newark Penn a Secaucus w fazie 2 (11 paź – 15 lis 2026).",
+    "map_popup_old": "Przęsło obrotowe z 1910. Wycofane po przeniesieniu drugiego toru na Portal North Bridge."
   },
   "blog": {
     "title": "Blog — Reroute NJ",

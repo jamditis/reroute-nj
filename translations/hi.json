@@ -256,7 +256,11 @@
     "cutover_item4": "सप्ताह के दिनों में Midtown Direct ट्रेनें Hoboken भेजी जाती हैं (11 अक्टू – 15 नव, 2026); सप्ताहांत अभी भी Penn Station NY जाते हैं",
     "download_png": "PNG डाउनलोड करें",
     "download_pdf": "PDF डाउनलोड करें",
-    "export_note": "यह रूटों का बनाया गया नक्शा डाउनलोड करता है। यह स्टेशन की तस्वीर या मैप टाइल का स्क्रीनशॉट नहीं है।"
+    "export_note": "यह रूटों का बनाया गया नक्शा डाउनलोड करता है। यह स्टेशन की तस्वीर या मैप टाइल का स्क्रीनशॉट नहीं है।",
+    "seo_summary": "Portal North Bridge चरण 2 कटओवर (11 अक्टू – 15 नव, 2026) का इंटरैक्टिव मानचित्र: NJ Transit GTFS रेल ज्यामिति, Kearny में Hackensack नदी क्रॉसिंग, प्रभावित स्टेशन, ट्रांसफर हब, और PATH, फेरी व बस विकल्प.",
+    "filter_aria": "लाइन के अनुसार मानचित्र फ़िल्टर करें",
+    "canvas_aria": "Portal Bridge कटओवर स्टेशन और मार्गों का इंटरैक्टिव मानचित्र",
+    "legend_old_portal": "पुराना Portal Bridge"
   },
   "embed": {
     "title": "एम्बेड और रिपब्लिश — Reroute NJ",
@@ -433,7 +437,10 @@
     "map_transfer_hub": "ट्रांसफर हब",
     "map_path_ferry_bus": "PATH / फेरी / बस 126",
     "map_single_track": "एक-पटरी क्षेत्र",
-    "map_export_footer": "Reroute NJ · reroutenj.org · रेल ज्यामिति NJ Transit GTFS से. स्वतंत्र सामुदायिक उपकरण."
+    "map_export_footer": "Reroute NJ · reroutenj.org · रेल ज्यामिति NJ Transit GTFS से. स्वतंत्र सामुदायिक उपकरण.",
+    "map_load_error": "रेल ज्यामिति लोड नहीं हो सकी. पेज रिफ्रेश करें, या http पर खोलें (python3 -m http.server 8000).",
+    "map_popup_portal": "Hackensack River, Kearny NJ<br>चरण 2 कटओवर (11 अक्टू – 15 नव, 2026) में Newark Penn और Secaucus के बीच एक पटरी.",
+    "map_popup_old": "1910 स्विंग स्पैन. दूसरी पटरी Portal North Bridge पर जाने के बाद सेवा से हटेगी."
   },
   "blog": {
     "title": "ब्लॉग — Reroute NJ",

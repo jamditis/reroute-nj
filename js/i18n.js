@@ -80,7 +80,10 @@
       "map_transfer_hub": "Transfer hub",
       "map_path_ferry_bus": "PATH / ferry / bus 126",
       "map_single_track": "Single-track zone",
-      "map_export_footer": "Reroute NJ \u00b7 reroutenj.org \u00b7 Rail geometry from NJ Transit GTFS. Independent community tool."
+      "map_export_footer": "Reroute NJ \u00b7 reroutenj.org \u00b7 Rail geometry from NJ Transit GTFS. Independent community tool.",
+      "map_load_error": "The map could not load rail geometry. Refresh the page, or open this site over http (python3 -m http.server 8000).",
+      "map_popup_portal": "Hackensack River, Kearny NJ<br>Single-track operations between Newark Penn and Secaucus during the Phase 2 cutover (Oct 11 \u2013 Nov 15, 2026).",
+      "map_popup_old": "1910 swing span. Retired after the second track moves to Portal North Bridge."
     },
     "compare": {
       "your_normal_commute": "Your normal commute",

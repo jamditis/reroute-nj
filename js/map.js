@@ -98,9 +98,7 @@
 
     L.marker([portal.lat, portal.lng], { icon: portalIcon })
       .bindPopup(
-        "<strong>Portal North Bridge</strong><br>" +
-          "Hackensack River, Kearny NJ<br>" +
-          "Single-track operations between Newark Penn and Secaucus during the Phase 2 cutover (Oct 11 \u2013 Nov 15, 2026)."
+        "<strong>Portal North Bridge</strong><br>" + t("js.map_popup_portal")
       )
       .addTo(layers["portal-bridge"]);
 
@@ -122,8 +120,7 @@
         fillOpacity: 1,
       })
         .bindPopup(
-          "<strong>Old Portal Bridge</strong><br>" +
-            "1910 swing span. Retired after the second track moves to Portal North Bridge."
+          "<strong>" + t("js.map_old_portal") + "</strong><br>" + t("js.map_popup_old")
         )
         .addTo(layers["portal-bridge"]);
     }
@@ -502,7 +499,7 @@
     var el = document.getElementById("map");
     if (!el) return;
     el.innerHTML =
-      '<p class="map-load-error">The map could not load rail geometry. Refresh the page, or open this site over http (python3 -m http.server 8000).</p>';
+      '<p class="map-load-error">' + esc(t("js.map_load_error")) + "</p>";
   }
 
   function init() {
