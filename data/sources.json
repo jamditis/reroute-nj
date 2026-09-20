@@ -6,7 +6,7 @@
       "url": "https://www.njtransit.com/portalcutover",
       "publisher": "NJ Transit",
       "type": "official",
-      "accessed": "2026-02-14",
+      "accessed": "2026-09-20",
       "supports": [
         "cutover-dates",
         "train-counts",
@@ -15,7 +15,8 @@
         "temporary-schedules",
         "flexpass",
         "weekend-service",
-        "presidents-day-schedule"
+        "presidents-day-schedule",
+        "phase2-expected"
       ]
     },
     "njtransit-press-release": {
@@ -212,18 +213,31 @@
         "gateway-program",
         "construction-timeline"
       ]
+    },
+    "njtransit-press-release-phase2": {
+      "title": "Portal North Bridge Enters Final Phase of Construction as Work Begins to Put the Final Track into Service",
+      "url": "https://www.njtransit.com/press-releases/portal-north-bridge-enters-final-phase-construction-work-begins-put-final-track",
+      "publisher": "NJ Transit",
+      "type": "official",
+      "accessed": "2026-09-20",
+      "supports": [
+        "phase2-expected",
+        "cutover-dates",
+        "train-counts",
+        "hoboken-diversion"
+      ]
     }
   },
   "claims": {
     "cutover-dates": {
       "claim": "Phase 2 of the Portal Bridge cutover runs from October 11 to November 15, 2026 (schedules in effect Oct 11; regular service resumes Nov 15 subject to testing)",
-      "sources": ["njtransit-portal-cutover", "njtransit-press-release", "amtrak-press-release"],
+      "sources": ["njtransit-portal-cutover", "njtransit-press-release-phase2"],
       "status": "verified",
       "lastVerified": "2026-09-20"
     },
     "train-counts": {
       "claim": "Phase 2 weekday train count reductions: M-B 64→60, M&E 148→139, NEC 133→113, NJCL 99→87, RVL 51→50",
-      "sources": ["njtransit-portal-cutover", "njtransit-press-release"],
+      "sources": ["njtransit-portal-cutover", "njtransit-press-release-phase2"],
       "status": "verified",
       "lastVerified": "2026-09-20"
     },
@@ -308,9 +322,9 @@
     },
     "phase2-expected": {
       "claim": "Phase 2 (second track cutover) runs Oct 11 – Nov 15, 2026",
-      "sources": ["njtransit-press-release", "amtrak-press-release", "gateway-program"],
+      "sources": ["njtransit-press-release-phase2", "njtransit-portal-cutover"],
       "status": "verified",
-      "lastVerified": "2026-02-14"
+      "lastVerified": "2026-09-20"
     },
     "gateway-program": {
       "claim": "Portal North Bridge is a milestone of the Gateway Program",

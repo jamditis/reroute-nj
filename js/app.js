@@ -73,11 +73,22 @@
     );
   }
 
+  var EXTRA_NOTE_KEYS = {
+    "montclair-boonton": ["js.extra_mb_0", "js.extra_mb_1"],
+    "morris-essex": ["js.extra_me_0", "js.extra_me_1"],
+    "north-jersey-coast": ["js.extra_njcl_0"],
+    "raritan-valley": ["js.extra_rvl_0"],
+  };
+
   function makeExtraNotes(line) {
     if (!line.extraNotes || !line.extraNotes.length) return "";
+    var keys = EXTRA_NOTE_KEYS[currentLineId] || [];
     var items = line.extraNotes
-      .map(function (n) {
-        return "<li>" + esc(n) + "</li>";
+      .map(function (n, i) {
+        var key = keys[i];
+        var text = key ? t(key) : n;
+        if (!text || text === key) text = n;
+        return "<li>" + esc(text) + "</li>";
       })
       .join("");
     return '<div class="extra-notes"><ul>' + items + "</ul></div>";
@@ -403,8 +414,8 @@
     var isReverse = currentDirection === "nyc-to-nj";
     var changes = [
       isReverse
-        ? "Your evening train from Penn Station New York to " + esc(station.name) + " still runs — but there are fewer of them. " + esc(line.name) + " is reduced from " + line.trainsBefore + " to " + line.trainsAfter + " daily trains."
-        : "Your train still goes to Penn Station New York — but there are fewer of them. " + esc(line.name) + " is reduced from " + line.trainsBefore + " to " + line.trainsAfter + " daily trains.",
+        ? "Your evening train from Penn Station New York to " + esc(station.name) + " still runs — but there are fewer of them. " + esc(line.name) + " is reduced from " + line.trainsBefore + " to " + line.trainsAfter + " weekday trains."
+        : "Your train still goes to Penn Station New York — but there are fewer of them. " + esc(line.name) + " is reduced from " + line.trainsBefore + " to " + line.trainsAfter + " weekday trains.",
       "Single-track operation between Newark and Secaucus means delays of 15–30+ minutes are common, especially during peak hours.",
       "Check the temporary schedule carefully. Your specific train may be eliminated or retimed.",
       "No ticket changes needed — buy your normal Penn Station tickets.",
@@ -458,12 +469,12 @@
       '<div class="before">' +
       "<h3>" + t("js.before_normal") + "</h3>" +
       '<div class="route-flow">' + beforeFlow + "</div>" +
-      '<p class="route-note">' + line.trainsBefore + " daily trains on " + esc(line.name) + ".</p>" +
+      '<p class="route-note">' + line.trainsBefore + " weekday trains on " + esc(line.name) + ".</p>" +
       "</div>" +
       '<div class="after">' +
       "<h3>" + t("js.during_cutover_short") + "</h3>" +
       '<div class="route-flow">' + afterFlow + "</div>" +
-      '<p class="route-note">Same ' + (isReverse ? "origin" : "destination") + ", fewer trains (" + line.trainsAfter + " daily). Expect delays from single-track operations at the Portal Bridge.</p>" +
+      '<p class="route-note">Same ' + (isReverse ? "origin" : "destination") + ", fewer trains (" + line.trainsAfter + " weekday). Expect delays from single-track operations at the Portal Bridge.</p>" +
       "</div>" +
       "</div>" +
       '<div class="key-changes"><h3>' + t("js.what_you_need_to_know") + '</h3><ul>' +
@@ -712,7 +723,7 @@
         true,
         [
           { label: "Destination", value: "Penn Station New York (unchanged)" },
-          { label: "Service level", value: line.trainsBefore + " → " + line.trainsAfter + " daily trains" },
+          { label: "Service level", value: line.trainsBefore + " → " + line.trainsAfter + " weekday trains" },
           { label: "Extra time", value: "15–30+ min delays likely during peak" },
           { label: "Tickets", value: "No change — buy regular Penn Station tickets" },
         ],
@@ -741,7 +752,7 @@
           { label: "Transfer at", value: "Newark Penn Station" },
           { label: "Then take", value: "Northeast Corridor train to Penn Station NY" },
           { label: "NEC travel time", value: "~20 min (Newark Penn → Penn Station NY)" },
-          { label: "NEC frequency", value: "Reduced — 112 daily trains (down from 133)" },
+          { label: "NEC frequency", value: "Reduced — 113 weekday trains (down from 133)" },
           { label: "Tickets", value: "Your existing ticket/pass should cover the transfer" },
         ],
         "Most direct option. Cross-platform transfer at Newark Penn to an NEC train.",

@@ -34,6 +34,7 @@
   var map = null;
   var layers = {};
   var altLayer = null;
+  var currentFilter = "all";
 
   function geometryUrl() {
     var base = window.BASE_PATH || "";
@@ -211,9 +212,12 @@
     if (bounds.length) {
       map.fitBounds(bounds, { padding: [24, 24], maxZoom: 11 });
     }
+    setFilter(currentFilter);
   }
 
   function setFilter(filter) {
+    currentFilter = filter;
+    if (!map) return;
     Object.keys(layers).forEach(function (key) {
       if (filter === "all") {
         map.addLayer(layers[key]);

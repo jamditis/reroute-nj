@@ -255,7 +255,8 @@
     "cutover_item3": "تشغيل بمسار واحد بين Newark Penn وSecaucus في كل تحويل (أقل بنحو 50% من القطارات عبر ممر Portal)",
     "cutover_item4": "تُحوَّل قطارات Midtown Direct في أيام الأسبوع إلى Hoboken (11 أكتوبر – 15 نوفمبر 2026)؛ عطلة نهاية الأسبوع ما زالت إلى Penn Station NY",
     "download_png": "تنزيل PNG",
-    "download_pdf": "تنزيل PDF"
+    "download_pdf": "تنزيل PDF",
+    "export_note": "ينزّل خريطة مرسومة للخطوط. ليست صورة لمحطة ولا لقطة لبلاط الخريطة."
   },
   "embed": {
     "title": "تضمين وإعادة نشر — Reroute NJ",
@@ -417,7 +418,13 @@
     "transfer": "انتقال",
     "walk_subway": "مشي/مترو",
     "arrive": "الوصول",
-    "choose_station": "اختر محطتك…"
+    "choose_station": "اختر محطتك…",
+    "extra_mb_0": "يوم الاثنين 12 أكتوبر يعمل وفق جدول أيام العمل لفترة التحويل.",
+    "extra_mb_1": "لأكتوبر ونوفمبر، اشترِ تذاكر Hoboken الشهرية أو الأسبوعية أو FLEXPASS عبر Newark Broad St. صالحة إلى Penn Station NY من 1–10 أكتوبر و15–30 نوفمبر، وتُقبل من Hoboken في أيام العمل من 11 أكتوبر إلى 14 نوفمبر.",
+    "extra_me_0": "يوم الاثنين 12 أكتوبر يعمل وفق جدول أيام العمل لفترة التحويل.",
+    "extra_me_1": "في عطلة نهاية الأسبوع تكون وصلات Hoboken لخط Morristown Line في Secaucus Junction وليس في Newark Broad Street.",
+    "extra_njcl_0": "أعمال Brielle Bridge، 11–25 أكتوبر: لا قطارات بين Manasquan وBay Head. الحافلات تحل محل القطارات في Bay Head وPoint Pleasant، مع وصلة سكك حديدية في Manasquan.",
+    "extra_rvl_0": "السبت 7 نوفمبر: الحافلات تحل محل القطارات بين Cranford وNewark بسبب أعمال مسار Conrail."
   },
   "blog": {
     "title": "مدونة — Reroute NJ",
@@ -586,7 +593,10 @@
     "li_schedules_change": "<strong>الجداول تتغير.</strong> قد تعدّل NJ Transit الخدمة أثناء التحويل بناءً على أنماط الركوب. نراقب التغييرات أربع مرات يومياً، لكن قد يكون هناك تأخير بين التحديث الرسمي وانعكاسه على موقعنا.",
     "li_translation_errors": "<strong>قد تحتوي الترجمات على أخطاء.</strong> بينما نعمل على جعل الترجمات طبيعية ودقيقة، نعتمد على الترجمة بمساعدة الذكاء الاصطناعي. إذا وجدت خطأ في أي لغة، يرجى <a href=\"https://github.com/jamditis/reroute-nj/issues/new\" target=\"_blank\" rel=\"noopener\">الإبلاغ عنه</a> وسنصلحه.",
     "mistakes_p2": "هذا مشروع مستقل. نحن غير تابعين لـ NJ Transit أو Amtrak أو أي وكالة حكومية. تحقق دائماً من معلومات السفر المهمة على <a href=\"https://www.njtransit.com/portalcutover\" target=\"_blank\" rel=\"noopener\">njtransit.com</a> قبل السفر.",
-    "cta": "خطط لرحلتك &rarr;"
+    "cta": "خطط لرحلتك &rarr;",
+    "h2_signage": "كيف نطابق لافتات المحطات",
+    "signage_p1": "درسنا معايير الرسوم في NJ Transit (Helvetica لتعريف المحطات)، ونظام ألوان الخطوط لعام 1999، ورموز 2003 للركاب محدودي الإنجليزية، والخرائط المنشورة، وقيم GTFS <code>route_color</code>. لا نعيد نشر صور المحطات أو اللافتات. نعيد إنشاء الإشارات التي يستخدمها الركاب أصلاً: ألوان الخطوط الرسمية، وأسماء المحطات بالإنجليزية، ووجهات مثل HOBOKEN وNEW YORK بنفس أسلوب الحروف في لافتات الرصيف والقطار.",
+    "signage_p2": "Montclair-Boonton هو لون السلمون/المرجان في الخرائط الحالية وGTFS (<code>#E66859</code>) وليس الأرجواني. الأرجواني هو Pascack Valley Line. اللون الخطأ يوجّه الركاب محدودي الإنجليزية إلى إشارة بصرية خاطئة. النص على تلك الألوان يُغمَّق أو يُحوَّل إلى أسود أو أبيض ليستوفي تباين WCAG AA."
   },
   "schema": {
     "site_description": "أدوات المرحلة 2 لـ Portal North Bridge لركاب NJ Transit (11 أكتوبر – 15 نوفمبر 2026).",

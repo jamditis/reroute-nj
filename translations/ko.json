@@ -255,7 +255,8 @@
     "cutover_item3": "각 전환 동안 Newark Penn과 Secaucus 사이 단선 운행(Portal 구간 열차 약 50% 감소)",
     "cutover_item4": "평일 Midtown Direct 열차는 Hoboken으로 우회(2026년 10월 11일 – 11월 15일); 주말은 계속 Penn Station NY로 운행",
     "download_png": "PNG 다운로드",
-    "download_pdf": "PDF 다운로드"
+    "download_pdf": "PDF 다운로드",
+    "export_note": "그린 노선도를 다운로드합니다. 역 사진이나 지도 타일 스크린샷이 아닙니다."
   },
   "embed": {
     "title": "임베드 및 재게시 — Reroute NJ",
@@ -417,7 +418,13 @@
     "transfer": "환승",
     "walk_subway": "도보/지하철",
     "arrive": "도착",
-    "choose_station": "역을 선택하세요…"
+    "choose_station": "역을 선택하세요…",
+    "extra_mb_0": "10월 12일 월요일은 평일 전환 시각표를 따릅니다.",
+    "extra_mb_1": "10월과 11월에는 Newark Broad St를 경유하는 Hoboken 월간·주간·FLEXPASS 승차권을 사세요. 10월 1–10일과 11월 15–30일에는 Penn Station NY까지 유효하고, 10월 11일–11월 14일 평일에는 Hoboken에서 환승이 인정됩니다.",
+    "extra_me_0": "10월 12일 월요일은 평일 전환 시각표를 따릅니다.",
+    "extra_me_1": "주말 Hoboken 연결은 Morristown Line의 경우 Newark Broad Street가 아니라 Secaucus Junction입니다.",
+    "extra_njcl_0": "Brielle Bridge 공사, 10월 11–25일: Manasquan과 Bay Head 사이 열차 없음. Bay Head와 Point Pleasant는 버스로 대체되며 Manasquan에서 철도로 연결됩니다.",
+    "extra_rvl_0": "11월 7일 토요일: Conrail 선로 공사로 Cranford–Newark 구간은 버스로 대체됩니다."
   },
   "blog": {
     "title": "Blog — Reroute NJ",
@@ -559,7 +566,10 @@
     "li_schedules_change": "<strong>시간표는 변경됩니다.</strong> NJ Transit은 전환 기간 동안 이용 패턴에 따라 서비스를 조정할 수 있습니다. 하루 4회 변경을 모니터링하지만, 공식 업데이트와 사이트 반영 사이에 지연이 있을 수 있습니다.",
     "li_translation_errors": "<strong>번역에 오류가 있을 수 있습니다.</strong> 번역을 자연스럽고 정확하게 만들기 위해 노력하지만 AI 지원 번역에 의존합니다. 어떤 언어에서든 오류를 발견하면 <a href=\"https://github.com/jamditis/reroute-nj/issues/new\" target=\"_blank\" rel=\"noopener\">신고해 주세요</a>. 수정하겠습니다.",
     "mistakes_p2": "이것은 독립 프로젝트입니다. NJ Transit, Amtrak 또는 정부 기관과 관련이 없습니다. 여행 전 반드시 <a href=\"https://www.njtransit.com/portalcutover\" target=\"_blank\" rel=\"noopener\">njtransit.com</a>에서 중요한 여행 정보를 확인하세요.",
-    "cta": "통근 계획하기 &rarr;"
+    "cta": "통근 계획하기 &rarr;",
+    "h2_signage": "역 안내판을 어떻게 맞추는가",
+    "signage_p1": "NJ Transit 그래픽 표준(역 식별의 Helvetica), 1999년 노선 색, 영어가 제한된 승객을 위한 2003년 노선 기호, 공개 철도 지도, NJ Transit GTFS <code>route_color</code>를 조사했습니다. 역이나 안내판 사진은 다시 게시하지 않습니다. 승객이 이미 쓰는 단서인 공식 노선 색, 영어 역명, HOBOKEN·NEW YORK 같은 목적지 글자를 승강장·열차 안내판과 같은 서체로 재현합니다.",
+    "signage_p2": "Montclair-Boonton은 현재 지도와 GTFS의 살몬/코랄(<code>#E66859</code>)이지 보라색이 아닙니다. 보라색은 Pascack Valley Line입니다. 색이 틀리면 영어가 제한된 승객이 잘못된 시각 단서를 따릅니다. 그 색 위의 글자는 WCAG AA를 위해 어둡게 하거나 검정/흰색으로 바꿉니다."
   },
   "schema": {
     "site_description": "NJ Transit 승객을 위한 Portal North Bridge 2단계 전환 도구(2026년 10월 11일 – 11월 15일).",

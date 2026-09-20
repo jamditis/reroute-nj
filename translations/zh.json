@@ -255,7 +255,8 @@
     "cutover_item3": "每次转换期间Newark Penn与Secaucus之间单线运行（Portal走廊列车约减少50%）",
     "cutover_item4": "工作日Midtown Direct列车改至Hoboken（2026年10月11日 – 11月15日）；周末仍开往Penn Station NY",
     "download_png": "下载PNG",
-    "download_pdf": "下载PDF"
+    "download_pdf": "下载PDF",
+    "export_note": "下载的是绘制的路线图。这不是车站照片，也不是地图瓦片截图。"
   },
   "embed": {
     "title": "嵌入和转载 — Reroute NJ",
@@ -417,7 +418,13 @@
     "transfer": "换乘",
     "walk_subway": "步行/地铁",
     "arrive": "到达",
-    "choose_station": "选择你的车站…"
+    "choose_station": "选择你的车站…",
+    "extra_mb_0": "10月12日星期一按工作日转换时刻表运行。",
+    "extra_mb_1": "10月和11月请购买经 Newark Broad St 前往 Hoboken 的月票、周票或 FLEXPASS。这些票在10月1–10日和11月15–30日可前往 Penn Station NY，并在10月11日至11月14日的工作日从 Hoboken 联程认可。",
+    "extra_me_0": "10月12日星期一按工作日转换时刻表运行。",
+    "extra_me_1": "周末前往 Hoboken 的 Morristown Line 换乘在 Secaucus Junction，而不是 Newark Broad Street。",
+    "extra_njcl_0": "Brielle Bridge 施工，10月11–25日：Manasquan 与 Bay Head 之间无列车。Bay Head 和 Point Pleasant 改乘巴士，并在 Manasquan 接铁路。",
+    "extra_rvl_0": "11月7日星期六：因 Conrail 轨道工程，Cranford 与 Newark 之间改乘巴士。"
   },
   "blog": {
     "title": "博客 — Reroute NJ",
@@ -559,7 +566,10 @@
     "li_schedules_change": "<strong>时刻表会变化。</strong>NJ Transit可能根据客流情况在转换期间调整服务。我们每天监控变化四次，但官方更新与我们网站反映之间可能存在延迟。",
     "li_translation_errors": "<strong>翻译可能存在错误。</strong>虽然我们致力于使翻译自然准确，但我们依赖AI辅助翻译。如果您在任何语言中发现错误，请<a href=\"https://github.com/jamditis/reroute-nj/issues/new\" target=\"_blank\" rel=\"noopener\">报告</a>，我们会修正。",
     "mistakes_p2": "这是一个独立项目。我们与NJ Transit、Amtrak或任何政府机构无关。出行前请务必在<a href=\"https://www.njtransit.com/portalcutover\" target=\"_blank\" rel=\"noopener\">njtransit.com</a>验证重要的出行信息。",
-    "cta": "规划您的通勤 &rarr;"
+    "cta": "规划您的通勤 &rarr;",
+    "h2_signage": "我们如何对应车站标识",
+    "signage_p1": "我们研究了 NJ Transit 图形标准（车站识别使用 Helvetica）、1999 年线路颜色、2003 年面向英语能力有限乘客的线路符号、已公布的铁路地图，以及 NJ Transit GTFS 的 <code>route_color</code>。我们不转载车站或标识照片。我们再现乘客已经使用的线索：官方线路颜色、英文站名，以及与站台和列车标识相同字体风格的 HOBOKEN、NEW YORK 等终点。",
+    "signage_p2": "Montclair-Boonton 使用现行地图和 GTFS 中的鲑鱼/珊瑚色（<code>#E66859</code>），不是紫色。紫色是 Pascack Valley Line。用错颜色会把英语能力有限的乘客导向错误视觉线索。这些颜色上的文字会加深，或改为黑/白，以满足 WCAG AA 对比度。"
   },
   "schema": {
     "site_description": "NJ Transit乘客的Portal North Bridge第二阶段转换工具（2026年10月11日至11月15日）。",

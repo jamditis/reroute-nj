@@ -255,7 +255,8 @@
     "cutover_item3": "Operação de via única entre Newark Penn e Secaucus em cada corte (cerca de 50% menos trens no corredor Portal)",
     "cutover_item4": "Trens Midtown Direct em dias úteis desviam para Hoboken (11 out – 15 nov, 2026); fins de semana seguem para Penn Station NY",
     "download_png": "Baixar PNG",
-    "download_pdf": "Baixar PDF"
+    "download_pdf": "Baixar PDF",
+    "export_note": "Baixa um mapa desenhado das rotas. Não é uma fotografia de estação nem um print das peças do mapa."
   },
   "embed": {
     "title": "Incorporar e republicar — Reroute NJ",
@@ -417,7 +418,13 @@
     "transfer": "Transferência",
     "walk_subway": "A pé/metrô",
     "arrive": "Chegada",
-    "choose_station": "Escolha sua estação…"
+    "choose_station": "Escolha sua estação…",
+    "extra_mb_0": "Segunda-feira, 12 de outubro, segue o horário de dias úteis do corte.",
+    "extra_mb_1": "Para outubro e novembro, compre passes mensais, semanais ou FLEXPASS para Hoboken via Newark Broad St. Valem para Penn Station NY de 1–10 de out e 15–30 de nov, e são honrados a partir de Hoboken em dias úteis de 11 de out a 14 de nov.",
+    "extra_me_0": "Segunda-feira, 12 de outubro, segue o horário de dias úteis do corte.",
+    "extra_me_1": "Nos fins de semana, as conexões para Hoboken da Morristown Line são em Secaucus Junction, não em Newark Broad Street.",
+    "extra_njcl_0": "Obra da Brielle Bridge, 11–25 de out: sem trens entre Manasquan e Bay Head. Ônibus substituem trens em Bay Head e Point Pleasant, com conexão ferroviária em Manasquan.",
+    "extra_rvl_0": "Sábado, 7 de novembro: ônibus substituem trens entre Cranford e Newark por obras de via da Conrail."
   },
   "blog": {
     "title": "Blog — Reroute NJ",
@@ -559,7 +566,10 @@
     "li_schedules_change": "<strong>Horários mudam.</strong> A NJ Transit pode ajustar o serviço durante a transição com base nos padrões de uso. Monitoramos mudanças quatro vezes por dia, mas pode haver atraso entre uma atualização oficial e seu reflexo no nosso site.",
     "li_translation_errors": "<strong>As traduções podem ter erros.</strong> Embora trabalhemos para que as traduções sejam naturais e precisas, dependemos de tradução assistida por IA. Se encontrar um erro em qualquer idioma, por favor <a href=\"https://github.com/jamditis/reroute-nj/issues/new\" target=\"_blank\" rel=\"noopener\">reporte</a> e corrigiremos.",
     "mistakes_p2": "Este é um projeto independente. Não somos afiliados à NJ Transit, Amtrak ou qualquer agência governamental. Sempre verifique informações críticas de viagem em <a href=\"https://www.njtransit.com/portalcutover\" target=\"_blank\" rel=\"noopener\">njtransit.com</a> antes de viajar.",
-    "cta": "Planeje seu trajeto &rarr;"
+    "cta": "Planeje seu trajeto &rarr;",
+    "h2_signage": "Como acompanhamos a sinalização das estações",
+    "signage_p1": "Estudamos as normas gráficas da NJ Transit (Helvetica na identificação das estações), o sistema de cores de 1999, os símbolos de 2003 para passageiros com inglês limitado, os mapas ferroviários publicados e os valores GTFS <code>route_color</code>. Não republicamos fotografias de estações ou placas. Recriamos as pistas que os passageiros já usam: cores oficiais das linhas, nomes de estação em inglês e destinos como HOBOKEN e NEW YORK no mesmo estilo de letra das placas da plataforma e do trem.",
+    "signage_p2": "Montclair-Boonton é o salmão/coral dos mapas atuais e do GTFS (<code>#E66859</code>), não o roxo. O roxo é a Pascack Valley Line. A cor errada levaria passageiros com inglês limitado à pista visual errada. O texto nessas cores é escurecido ou passa a preto ou branco para cumprir WCAG AA."
   },
   "schema": {
     "site_description": "Ferramentas da fase 2 da Portal North Bridge para passageiros da NJ Transit (11 out – 15 nov, 2026).",

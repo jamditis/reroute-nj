@@ -833,6 +833,8 @@ def replace_page_specific_content(html, translations, page_key):
             ("map.filter_transfer_hubs", "Transfer hubs"),
             ("map.legend_title", "Legend"),
             ("map.about_title", "About the Portal Bridge"),
+            ("map.download_png", "Download PNG"),
+            ("map.download_pdf", "Download PDF"),
         ]:
             translated = get_translation(translations, key)
             if translated:
@@ -842,6 +844,12 @@ def replace_page_specific_content(html, translations, page_key):
             html = html.replace(
                 "The Portal Bridge spans the Hackensack River in Kearny, NJ, between Newark and Secaucus. It is the single most critical piece of infrastructure on the Northeast Corridor between New York and Washington, D.C.",
                 about_desc
+            )
+        export_note = get_translation(translations, "map.export_note")
+        if export_note:
+            html = html.replace(
+                "Downloads a drawn map of the routes. This is not a photograph of a station or a screenshot of map tiles.",
+                export_note
             )
 
         # Legend items

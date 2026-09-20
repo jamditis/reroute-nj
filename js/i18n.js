@@ -65,7 +65,13 @@
       "transfer": "Transfer",
       "walk_subway": "Walk/subway",
       "arrive": "Arrive",
-      "choose_station": "Choose your station\u2026"
+      "choose_station": "Choose your station\u2026",
+      "extra_mb_0": "Monday, October 12 runs the weekday cutover schedule.",
+      "extra_mb_1": "For October and November, buy Hoboken monthly, weekly, or FLEXPASS tickets via Newark Broad St. They are valid to Penn Station NY on Oct 1\u201310 and Nov 15\u201330, and cross-honored from Hoboken on weekdays Oct 11\u2013Nov 14.",
+      "extra_me_0": "Monday, October 12 runs the weekday cutover schedule.",
+      "extra_me_1": "Weekend Hoboken connections to the Morristown Line are at Secaucus Junction instead of Newark Broad Street.",
+      "extra_njcl_0": "Brielle Bridge work, Oct 11\u201325: no trains between Manasquan and Bay Head. Buses replace trains at Bay Head and Point Pleasant, with a rail connection at Manasquan.",
+      "extra_rvl_0": "Saturday, November 7: buses replace trains between Cranford and Newark for Conrail track work."
     },
     "compare": {
       "your_normal_commute": "Your normal commute",

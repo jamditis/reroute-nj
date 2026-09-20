@@ -8,9 +8,21 @@
       "sourceType": "official",
       "verificationMethod": "manual",
       "verificationWindowHours": 24,
-      "lastVerified": "2026-03-12T22:10:48Z",
+      "lastVerified": "2026-09-20T00:00:00Z",
       "urls": [
         "https://www.njtransit.com/portalcutover"
+      ]
+    },
+    {
+      "id": "official-phase2-final-track",
+      "claimArea": "cutover-policy",
+      "claim": "Phase 2 dates, weekday train counts, and ticket rules for the second-track cutover",
+      "sourceType": "official",
+      "verificationMethod": "manual",
+      "verificationWindowHours": 24,
+      "lastVerified": "2026-09-20T00:00:00Z",
+      "urls": [
+        "https://www.njtransit.com/press-releases/portal-north-bridge-enters-final-phase-construction-work-begins-put-final-track"
       ]
     },
     {

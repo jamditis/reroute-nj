@@ -568,10 +568,11 @@
     var lineId = getParam("line");
     var stationId = getParam("station");
     var theme = getParam("theme");
+    var accent = safeHexColor(getParam("accent"));
     if (lineId && !LINE_DATA[lineId]) {
       lineId = null;
     }
-    var canvas = renderCardToCanvas(type, lineId, stationId, theme);
+    var canvas = renderCardToCanvas(type, lineId, stationId, theme, accent);
     var filename;
     if (type === "station" && lineId && stationId) {
       filename = "reroute-nj-station-" + stationId + ".pdf";

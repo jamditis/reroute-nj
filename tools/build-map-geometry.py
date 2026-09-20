@@ -146,6 +146,20 @@ ROUTE_TARGETS = {
 OLD_PORTAL = {"lat": 40.72833, "lng": -74.11722, "name": "Old Portal Bridge"}
 
 
+def nearest_idx(seq, target):
+    return min(range(len(seq)), key=lambda i: dist2(seq[i], target))
+
+
+def crop_to_terminals(raw, origin_pt, dest_pt):
+    """Keep only the shape between two stops. GTFS shapes often continue past dest."""
+    if len(raw) < 2:
+        return raw
+    i0, i1 = nearest_idx(raw, origin_pt), nearest_idx(raw, dest_pt)
+    if i0 > i1:
+        i0, i1 = i1, i0
+    return raw[i0 : i1 + 1]
+
+
 def dist2(a, b):
     lat = (a[0] + b[0]) / 2 * math.pi / 180
     dx = (a[1] - b[1]) * math.cos(lat) * 111320
@@ -344,9 +358,19 @@ def main():
     for sid in shape_pts:
         shape_pts[sid].sort()
 
+    terminals = {}
+    for origin, dest, line, branch in ROUTE_TARGETS.values():
+        terminals[(line, branch)] = (
+            (by_name[origin]["lat"], by_name[origin]["lng"]),
+            (by_name[dest]["lat"], by_name[dest]["lng"]),
+        )
+
     routes = []
     for (line, branch), (sid, _n) in sorted(best.items()):
         raw = [(lat, lng) for _seq, lat, lng in shape_pts[sid]]
+        ends = terminals.get((line, branch))
+        if ends:
+            raw = crop_to_terminals(raw, ends[0], ends[1])
         simp = douglas_peucker(raw, 70)
         if len(simp) > 160:
             simp = douglas_peucker(raw, 120)
@@ -364,10 +388,7 @@ def main():
     newark = (by_name["NEWARK PENN STATION"]["lat"], by_name["NEWARK PENN STATION"]["lng"])
     secaucus = (by_name["SECAUCUS LOWER LEVEL"]["lat"], by_name["SECAUCUS LOWER LEVEL"]["lng"])
 
-    def nearest_idx(target):
-        return min(range(len(nec_raw)), key=lambda i: dist2(nec_raw[i], target))
-
-    i0, i1 = nearest_idx(newark), nearest_idx(secaucus)
+    i0, i1 = nearest_idx(nec_raw, newark), nearest_idx(nec_raw, secaucus)
     if i0 > i1:
         i0, i1 = i1, i0
     corridor_raw = nec_raw[i0 : i1 + 1]
