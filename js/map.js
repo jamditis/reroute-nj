@@ -401,14 +401,10 @@
 
     ctx.fillStyle = "#1a2332";
     ctx.font = "700 32px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif";
-    ctx.fillText("Portal North Bridge cutover map", 48, 48);
+    ctx.fillText(t("js.map_export_title"), 48, 48);
     ctx.font = "16px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif";
     ctx.fillStyle = "#4a5568";
-    ctx.fillText(
-      "Phase 2 \u00b7 Oct 11 \u2013 Nov 15, 2026 \u00b7 Single track Newark Penn\u2013Secaucus",
-      48,
-      76
-    );
+    ctx.fillText(t("js.map_export_phase"), 48, 76);
 
     var legendX = width - 250;
     var legendY = 110;
@@ -420,7 +416,7 @@
 
     ctx.fillStyle = "#1a2332";
     ctx.font = "700 14px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif";
-    ctx.fillText("Legend", legendX, legendY);
+    ctx.fillText(t("js.map_legend"), legendX, legendY);
     legendY += 28;
 
     function legendDot(color, label, r) {
@@ -435,11 +431,11 @@
     }
 
     legendDot("#e03030", "Portal North Bridge", 7);
-    legendDot("#6b7280", "Old Portal Bridge", 5);
+    legendDot("#6b7280", t("js.map_old_portal"), 5);
     Object.keys(LINE_LABELS).forEach(function (id) {
       legendDot(LINE_COLORS[id], LINE_LABELS[id], 5);
     });
-    legendDot("#1a3a5c", "Transfer hub", 6);
+    legendDot("#1a3a5c", t("js.map_transfer_hub"), 6);
 
     ctx.setLineDash([6, 6]);
     ctx.beginPath();
@@ -450,7 +446,7 @@
     ctx.stroke();
     ctx.setLineDash([]);
     ctx.fillStyle = "#1a2332";
-    ctx.fillText("PATH / ferry / bus 126", legendX + 24, legendY);
+    ctx.fillText(t("js.map_path_ferry_bus"), legendX + 24, legendY);
     legendY += 26;
 
     ctx.setLineDash([5, 5]);
@@ -462,12 +458,12 @@
     ctx.stroke();
     ctx.setLineDash([]);
     ctx.fillStyle = "#1a2332";
-    ctx.fillText("Single-track zone", legendX + 24, legendY);
+    ctx.fillText(t("js.map_single_track"), legendX + 24, legendY);
 
     ctx.fillStyle = "#6b7280";
     ctx.font = "11px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif";
     ctx.fillText(
-      "Reroute NJ \u00b7 reroutenj.org \u00b7 Rail geometry from NJ Transit GTFS. Independent community tool.",
+      t("js.map_export_footer"),
       48,
       height - 20
     );

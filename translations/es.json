@@ -425,7 +425,15 @@
     "extra_me_1": "Los fines de semana, las conexiones a Hoboken de la Morristown Line son en Secaucus Junction, no en Newark Broad Street.",
     "extra_njcl_0": "Obra del Brielle Bridge, 11–25 de oct: no hay trenes entre Manasquan y Bay Head. Autobuses reemplazan trenes en Bay Head y Point Pleasant, con conexión ferroviaria en Manasquan.",
     "extra_rvl_0": "Sábado 7 de noviembre: autobuses reemplazan trenes entre Cranford y Newark por obras de vía de Conrail.",
-    "extra_nec_0": "NJ Transit añadió viajes lanzadera Secaucus–Penn Station NY para que los pasajeros de Main, Bergen, Pascack Valley y Port Jervis mantengan sus conexiones a New York."
+    "extra_nec_0": "NJ Transit añadió viajes lanzadera Secaucus–Penn Station NY para que los pasajeros de Main, Bergen, Pascack Valley y Port Jervis mantengan sus conexiones a New York.",
+    "map_export_title": "Mapa del corte Portal North Bridge",
+    "map_export_phase": "Fase 2 · 11 oct – 15 nov, 2026 · Vía única Newark Penn–Secaucus",
+    "map_legend": "Leyenda",
+    "map_old_portal": "Antiguo Portal Bridge",
+    "map_transfer_hub": "Centro de transbordo",
+    "map_path_ferry_bus": "PATH / ferry / bus 126",
+    "map_single_track": "Zona de vía única",
+    "map_export_footer": "Reroute NJ · reroutenj.org · Geometría ferroviaria del GTFS de NJ Transit. Herramienta comunitaria independiente."
   },
   "blog": {
     "title": "Blog — Reroute NJ",

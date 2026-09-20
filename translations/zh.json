@@ -425,7 +425,15 @@
     "extra_me_1": "周末前往 Hoboken 的 Morristown Line 换乘在 Secaucus Junction，而不是 Newark Broad Street。",
     "extra_njcl_0": "Brielle Bridge 施工，10月11–25日：Manasquan 与 Bay Head 之间无列车。Bay Head 和 Point Pleasant 改乘巴士，并在 Manasquan 接铁路。",
     "extra_rvl_0": "11月7日星期六：因 Conrail 轨道工程，Cranford 与 Newark 之间改乘巴士。",
-    "extra_nec_0": "NJ Transit 增加了 Secaucus–Penn Station NY 接驳班次，使 Main、Bergen、Pascack Valley 和 Port Jervis 乘客仍能前往 New York。"
+    "extra_nec_0": "NJ Transit 增加了 Secaucus–Penn Station NY 接驳班次，使 Main、Bergen、Pascack Valley 和 Port Jervis 乘客仍能前往 New York。",
+    "map_export_title": "Portal North Bridge 转换地图",
+    "map_export_phase": "第二阶段 · 2026年10月11日–11月15日 · Newark Penn–Secaucus 单线",
+    "map_legend": "图例",
+    "map_old_portal": "旧 Portal Bridge",
+    "map_transfer_hub": "换乘枢纽",
+    "map_path_ferry_bus": "PATH / 渡轮 / 巴士 126",
+    "map_single_track": "单线区段",
+    "map_export_footer": "Reroute NJ · reroutenj.org · 铁路几何来自 NJ Transit GTFS。独立社区工具。"
   },
   "blog": {
     "title": "博客 — Reroute NJ",

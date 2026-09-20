@@ -1,5 +1,5 @@
 {
-  "lastVerified": "2026-09-20T00:00:00Z",
+  "lastVerified": "2026-02-14T00:00:00Z",
   "sources": {
     "njtransit-portal-cutover": {
       "title": "Portal Bridge Cutover: What It Means For You",
@@ -223,7 +223,18 @@
       "supports": [
         "phase2-expected",
         "cutover-dates",
+        "hoboken-diversion"
+      ]
+    },
+    "njtransit-phase2-briefing": {
+      "title": "Portal Cutover Briefing Document (Sept 17, 2026)",
+      "url": "https://content.njtransit.com/sites/default/files/marketing/website/pdf/portal/Portal%20Cutover%20Briefing%20Document%20091726.pdf",
+      "publisher": "NJ Transit",
+      "type": "official",
+      "accessed": "2026-09-20",
+      "supports": [
         "train-counts",
+        "cutover-dates",
         "hoboken-diversion"
       ]
     }
@@ -237,7 +248,7 @@
     },
     "train-counts": {
       "claim": "Phase 2 weekday train count reductions: M-B 64→60, M&E 148→139, NEC 133→113, NJCL 99→87, RVL 51→50",
-      "sources": ["njtransit-portal-cutover", "njtransit-press-release-phase2"],
+      "sources": ["njtransit-phase2-briefing", "njtransit-portal-cutover"],
       "status": "verified",
       "lastVerified": "2026-09-20"
     },

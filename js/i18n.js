@@ -72,7 +72,15 @@
       "extra_me_1": "Weekend Hoboken connections to the Morristown Line are at Secaucus Junction instead of Newark Broad Street.",
       "extra_njcl_0": "Brielle Bridge work, Oct 11\u201325: no trains between Manasquan and Bay Head. Buses replace trains at Bay Head and Point Pleasant, with a rail connection at Manasquan.",
       "extra_nec_0": "NJ Transit added Secaucus\u2013Penn Station NY shuttle trips so Main, Bergen, Pascack Valley, and Port Jervis riders keep their New York connections.",
-      "extra_rvl_0": "Saturday, November 7: buses replace trains between Cranford and Newark for Conrail track work."
+      "extra_rvl_0": "Saturday, November 7: buses replace trains between Cranford and Newark for Conrail track work.",
+      "map_export_title": "Portal North Bridge cutover map",
+      "map_export_phase": "Phase 2 \u00b7 Oct 11 \u2013 Nov 15, 2026 \u00b7 Single track Newark Penn\u2013Secaucus",
+      "map_legend": "Legend",
+      "map_old_portal": "Old Portal Bridge",
+      "map_transfer_hub": "Transfer hub",
+      "map_path_ferry_bus": "PATH / ferry / bus 126",
+      "map_single_track": "Single-track zone",
+      "map_export_footer": "Reroute NJ \u00b7 reroutenj.org \u00b7 Rail geometry from NJ Transit GTFS. Independent community tool."
     },
     "compare": {
       "your_normal_commute": "Your normal commute",

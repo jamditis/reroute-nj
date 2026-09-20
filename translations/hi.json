@@ -425,7 +425,15 @@
     "extra_me_1": "सप्ताहांत में Morristown Line की Hoboken कनेक्शन Newark Broad Street की जगह Secaucus Junction पर है।",
     "extra_njcl_0": "Brielle Bridge कार्य, 11–25 अक्टू: Manasquan और Bay Head के बीच ट्रेन नहीं। Bay Head और Point Pleasant पर बस ट्रेन की जगह लेती है, Manasquan पर रेल कनेक्शन के साथ।",
     "extra_rvl_0": "शनिवार, 7 नवंबर: Conrail ट्रैक कार्य के लिए Cranford और Newark के बीच बस ट्रेन की जगह लेती है।",
-    "extra_nec_0": "NJ Transit ने Secaucus–Penn Station NY शटल जोड़ी ताकि Main, Bergen, Pascack Valley और Port Jervis सवार New York कनेक्शन बनाए रखें।"
+    "extra_nec_0": "NJ Transit ने Secaucus–Penn Station NY शटल जोड़ी ताकि Main, Bergen, Pascack Valley और Port Jervis सवार New York कनेक्शन बनाए रखें।",
+    "map_export_title": "Portal North Bridge कटओवर मानचित्र",
+    "map_export_phase": "चरण 2 · 11 अक्टू – 15 नव, 2026 · Newark Penn–Secaucus एक पटरी",
+    "map_legend": "संकेत सूची",
+    "map_old_portal": "पुराना Portal Bridge",
+    "map_transfer_hub": "ट्रांसफर हब",
+    "map_path_ferry_bus": "PATH / फेरी / बस 126",
+    "map_single_track": "एक-पटरी क्षेत्र",
+    "map_export_footer": "Reroute NJ · reroutenj.org · रेल ज्यामिति NJ Transit GTFS से. स्वतंत्र सामुदायिक उपकरण."
   },
   "blog": {
     "title": "ब्लॉग — Reroute NJ",

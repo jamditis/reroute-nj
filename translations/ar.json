@@ -425,7 +425,15 @@
     "extra_me_1": "في عطلة نهاية الأسبوع تكون وصلات Hoboken لخط Morristown Line في Secaucus Junction وليس في Newark Broad Street.",
     "extra_njcl_0": "أعمال Brielle Bridge، 11–25 أكتوبر: لا قطارات بين Manasquan وBay Head. الحافلات تحل محل القطارات في Bay Head وPoint Pleasant، مع وصلة سكك حديدية في Manasquan.",
     "extra_rvl_0": "السبت 7 نوفمبر: الحافلات تحل محل القطارات بين Cranford وNewark بسبب أعمال مسار Conrail.",
-    "extra_nec_0": "أضافت NJ Transit رحلات مكوكية Secaucus–Penn Station NY حتى يحتفظ ركاب Main وBergen وPascack Valley وPort Jervis بوصلاتهم إلى New York."
+    "extra_nec_0": "أضافت NJ Transit رحلات مكوكية Secaucus–Penn Station NY حتى يحتفظ ركاب Main وBergen وPascack Valley وPort Jervis بوصلاتهم إلى New York.",
+    "map_export_title": "خريطة تحويل Portal North Bridge",
+    "map_export_phase": "المرحلة 2 · 11 أكتوبر – 15 نوفمبر 2026 · مسار واحد Newark Penn–Secaucus",
+    "map_legend": "مفتاح الخريطة",
+    "map_old_portal": "جسر Portal القديم",
+    "map_transfer_hub": "محور تحويل",
+    "map_path_ferry_bus": "PATH / العبّارة / الحافلة 126",
+    "map_single_track": "منطقة المسار الواحد",
+    "map_export_footer": "Reroute NJ · reroutenj.org · هندسة السكك من NJ Transit GTFS. أداة مجتمعية مستقلة."
   },
   "blog": {
     "title": "مدونة — Reroute NJ",
