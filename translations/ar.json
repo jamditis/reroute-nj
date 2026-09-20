@@ -56,7 +56,9 @@
     "nav_about": "حول",
     "phase_banner": "تحويل المرحلة 2: 11 أكتوبر – 15 نوفمبر 2026. قطارات Midtown Direct في أيام الأسبوع تذهب إلى Hoboken. تحقق دائماً من njtransit.com/portalcutover.",
     "remaining_phase2": "متبقية في المرحلة 2",
-    "phase2_complete": "اكتملت المرحلة 2 · تعود الجداول العادية في 15 نوفمبر، رهناً بالاختبار"
+    "phase2_complete": "اكتملت المرحلة 2 · تعود الجداول العادية في 15 نوفمبر، رهناً بالاختبار",
+    "footer_map_basemap_pre": "بلاط خريطة الأساس &copy; Esri, HERE, Garmin, &copy;",
+    "footer_map_basemap_post": "المساهمون، وGIS User Community."
   },
   "index": {
     "title": "Reroute NJ — موارد تحويل Portal North Bridge",
@@ -256,7 +258,7 @@
     "cutover_item4": "تُحوَّل قطارات Midtown Direct في أيام الأسبوع إلى Hoboken (11 أكتوبر – 15 نوفمبر 2026)؛ عطلة نهاية الأسبوع ما زالت إلى Penn Station NY",
     "download_png": "تنزيل PNG",
     "download_pdf": "تنزيل PDF",
-    "export_note": "ينزّل خريطة مرسومة للخطوط. ليست صورة لمحطة ولا لقطة لبلاط الخريطة.",
+    "export_note": "ينزّل خريطة السكك على خريطة أساس فاتحة. ليست صورة لمحطة.",
     "seo_summary": "خريطة تفاعلية لتحويل المرحلة 2 من Portal North Bridge (11 أكتوبر – 15 نوفمبر 2026): هندسة السكك من NJ Transit GTFS، عبور نهر Hackensack في Kearny، المحطات المتأثرة، محاور التحويل، وبدائل PATH والعبّارة والحافلة.",
     "filter_aria": "تصفية الخريطة حسب الخط",
     "canvas_aria": "خريطة تفاعلية لمحطات ومسارات تحويل Portal Bridge",
@@ -500,7 +502,10 @@
     "ticket_flexpass_0": "تقدم NJ Transit <strong>FLEXPASS</strong> (تذكرة 20 رحلة بخصم 15%). لركاب Midtown Direct اشترِ FLEXPASS من/إلى Hoboken لأكتوبر ونوفمبر.",
     "ticket_flexpass_1": "خيار جيد إذا سافرت بانتظام لكنك لا تحتاج بطاقة شهرية كاملة خلال القطع.",
     "ticket_flexpass_2": "راجع <a href=\"https://www.njtransit.com/portalcutover\" target=\"_blank\" rel=\"noopener\">njtransit.com/portalcutover</a> لأسعار وشراء FLEXPASS.",
-    "savings_unverified": "تذاكر Hoboken أرخص من Penn Station. تقول NJ Transit إن الركاب قد يوفّرون حتى 25% لكل رحلة، ويُعترف بـ PATH/العبّارة من Hoboken."
+    "savings_unverified": "تذاكر Hoboken أرخص من Penn Station. تقول NJ Transit إن الركاب قد يوفّرون حتى 25% لكل رحلة، ويُعترف بـ PATH/العبّارة من Hoboken.",
+    "map_basemap_credit": "البلاط © Esri, HERE, Garmin, © مساهمو OpenStreetMap, GIS User Community",
+    "map_export_preparing": "جارٍ تجهيز تنزيل الخريطة.",
+    "map_export_incomplete": "تعذر تحميل بعض بلاطات الخلفية. خطوط السكك موجودة في الملف."
   },
   "blog": {
     "title": "مدونة — Reroute NJ",

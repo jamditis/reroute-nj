@@ -56,7 +56,9 @@
     "nav_about": "Tungkol",
     "phase_banner": "Phase 2 cutover: Oct 11 – Nov 15, 2026. Ang weekday Midtown Direct ay papuntang Hoboken. I-verify palagi sa njtransit.com/portalcutover.",
     "remaining_phase2": "natitira sa Phase 2",
-    "phase2_complete": "Tapos na ang Phase 2 · Babalik ang regular na iskedyul sa Nov 15, subject sa testing"
+    "phase2_complete": "Tapos na ang Phase 2 · Babalik ang regular na iskedyul sa Nov 15, subject sa testing",
+    "footer_map_basemap_pre": "Mga tile ng basemap &copy; Esri, HERE, Garmin, &copy;",
+    "footer_map_basemap_post": "mga kontribyutor, at GIS User Community."
   },
   "index": {
     "title": "Reroute NJ — Mga mapagkukunan para sa Portal North Bridge cutover",
@@ -256,7 +258,7 @@
     "cutover_item4": "Ang weekday Midtown Direct ay inililihis sa Hoboken (Oct 11 – Nov 15, 2026); sa weekend ay patuloy pa rin papuntang Penn Station NY",
     "download_png": "I-download ang PNG",
     "download_pdf": "I-download ang PDF",
-    "export_note": "Nagda-download ng iginuhit na mapa ng mga ruta. Hindi ito litrato ng istasyon o screenshot ng map tiles.",
+    "export_note": "Dina-download ang mapa ng riles sa isang light basemap. Hindi ito litrato ng istasyon.",
     "seo_summary": "Interactive na mapa ng Phase 2 cutover ng Portal North Bridge (Okt 11 – Nob 15, 2026): rail geometry mula sa NJ Transit GTFS, tawiran sa Hackensack River sa Kearny, apektadong istasyon, transfer hubs, at PATH, ferry, at bus.",
     "filter_aria": "I-filter ang mapa ayon sa linya",
     "canvas_aria": "Interactive na mapa ng mga istasyon at ruta ng Portal Bridge cutover",
@@ -500,7 +502,10 @@
     "ticket_flexpass_0": "Nag-aalok ang NJ Transit ng <strong>FLEXPASS</strong> (20-trip ticket na may 15% diskwento). Para sa Midtown Direct, bumili ng FLEXPASS papunta/mula Hoboken para sa Oktubre at Nobyembre.",
     "ticket_flexpass_1": "Magandang opsyon kung regular kang sumasakay pero hindi kailangan ng buong monthly pass sa cutover.",
     "ticket_flexpass_2": "Tingnan ang <a href=\"https://www.njtransit.com/portalcutover\" target=\"_blank\" rel=\"noopener\">njtransit.com/portalcutover</a> para sa presyo at pagbili ng FLEXPASS.",
-    "savings_unverified": "Mas mura ang ticket papuntang Hoboken kaysa Penn Station. Sabi ng NJ Transit, hanggang 25% ang matitipid sa bawat biyahe, at tinatanggap ang PATH/ferry mula Hoboken."
+    "savings_unverified": "Mas mura ang ticket papuntang Hoboken kaysa Penn Station. Sabi ng NJ Transit, hanggang 25% ang matitipid sa bawat biyahe, at tinatanggap ang PATH/ferry mula Hoboken.",
+    "map_basemap_credit": "Tiles © Esri, HERE, Garmin, © mga kontribyutor ng OpenStreetMap, GIS User Community",
+    "map_export_preparing": "Inihahanda ang download ng mapa.",
+    "map_export_incomplete": "Hindi na-load ang ilang background tile. Nandiyan pa rin ang mga riles sa file."
   },
   "blog": {
     "title": "Blog — Reroute NJ",

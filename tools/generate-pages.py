@@ -253,7 +253,7 @@ def replace_footer(html, translations, page_key):
             "index": ' {idx} <a href="https://www.njtransit.com/portalcutover" target="_blank" rel="noopener">njtransit.com</a> {idx_after}',
             "compare": ' {idx} <a href="https://www.njtransit.com/portalcutover" target="_blank" rel="noopener">njtransit.com</a> {idx_after}',
             "coverage": ' {cov} <a href="https://www.njtransit.com/portalcutover" target="_blank" rel="noopener">njtransit.com</a> {cov_after}',
-            "map": ' {map_data} <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>. {map_tiles} <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>.',
+            "map": ' {map_basemap_pre} <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> {map_basemap_post}',
             "embed": ' <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">{embed_gh}</a>.',
             "blog": ' <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">{embed_gh}</a>.',
             "blog_post": ' <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">{embed_gh}</a>.',
@@ -268,6 +268,8 @@ def replace_footer(html, translations, page_key):
         cov_after = get_translation(translations, "common.footer_disclaimer_coverage_after") or "before traveling."
         map_data = get_translation(translations, "common.footer_disclaimer_map") or "Map data &copy; contributors of"
         map_tiles = get_translation(translations, "common.footer_disclaimer_map_tiles") or "Tiles &copy;"
+        map_basemap_pre = get_translation(translations, "common.footer_map_basemap_pre") or "Basemap tiles &copy; Esri, HERE, Garmin, &copy;"
+        map_basemap_post = get_translation(translations, "common.footer_map_basemap_post") or "contributors, and the GIS User Community."
         embed_gh = get_translation(translations, "common.footer_disclaimer_embed") or "View source on GitHub"
 
         tail_template = tail_map.get(page_key, tail_map["index"])
@@ -275,6 +277,7 @@ def replace_footer(html, translations, page_key):
             idx=idx, idx_after=idx_after,
             cov=cov, cov_after=cov_after,
             map_data=map_data, map_tiles=map_tiles,
+            map_basemap_pre=map_basemap_pre, map_basemap_post=map_basemap_post,
             embed_gh=embed_gh,
         )
 
@@ -848,7 +851,7 @@ def replace_page_specific_content(html, translations, page_key):
         export_note = get_translation(translations, "map.export_note")
         if export_note:
             html = html.replace(
-                "Downloads a drawn map of the routes. This is not a photograph of a station or a screenshot of map tiles.",
+                "Downloads the rail map on a light basemap. This is not a photograph of a station.",
                 export_note
             )
         seo_summary = get_translation(translations, "map.seo_summary")

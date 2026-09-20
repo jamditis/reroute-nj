@@ -56,7 +56,9 @@
     "nav_about": "Sobre",
     "phase_banner": "Corte da fase 2: 11 out – 15 nov, 2026. Trens Midtown Direct em dias úteis vão para Hoboken. Sempre verifique em njtransit.com/portalcutover.",
     "remaining_phase2": "restantes na fase 2",
-    "phase2_complete": "Fase 2 concluída · Horários regulares retomam em 15 nov, sujeito a testes"
+    "phase2_complete": "Fase 2 concluída · Horários regulares retomam em 15 nov, sujeito a testes",
+    "footer_map_basemap_pre": "Tiles do mapa-base &copy; Esri, HERE, Garmin, &copy;",
+    "footer_map_basemap_post": "colaboradores, e GIS User Community."
   },
   "index": {
     "title": "Reroute NJ — Recursos da transição do Portal North Bridge",
@@ -256,7 +258,7 @@
     "cutover_item4": "Trens Midtown Direct em dias úteis desviam para Hoboken (11 out – 15 nov, 2026); fins de semana seguem para Penn Station NY",
     "download_png": "Baixar PNG",
     "download_pdf": "Baixar PDF",
-    "export_note": "Baixa um mapa desenhado das rotas. Não é uma fotografia de estação nem um print das peças do mapa.",
+    "export_note": "Baixa o mapa ferroviário sobre um mapa-base claro. Não é uma fotografia de estação.",
     "seo_summary": "Mapa interativo do corte da fase 2 da Portal North Bridge (11 out – 15 nov, 2026): geometria ferroviária do GTFS da NJ Transit, o cruzamento do rio Hackensack em Kearny, estações afetadas, hubs de transferência e alternativas PATH, balsa e ônibus.",
     "filter_aria": "Filtrar o mapa por linha",
     "canvas_aria": "Mapa interativo das estações e rotas do corte da Portal Bridge",
@@ -500,7 +502,10 @@
     "ticket_flexpass_0": "A NJ Transit oferece um <strong>FLEXPASS</strong> (bilhete de 20 viagens com 15% de desconto). Para passageiros Midtown Direct, compre FLEXPASS de/para Hoboken para outubro e novembro.",
     "ticket_flexpass_1": "Boa opção se você viaja com regularidade mas não precisa de um passe mensal completo durante o corte.",
     "ticket_flexpass_2": "Consulte <a href=\"https://www.njtransit.com/portalcutover\" target=\"_blank\" rel=\"noopener\">njtransit.com/portalcutover</a> para preços e compra do FLEXPASS.",
-    "savings_unverified": "Bilhetes para Hoboken custam menos do que os de Penn Station. A NJ Transit diz que os passageiros podem economizar até 25% por viagem, e PATH/ferry a partir de Hoboken é honrado."
+    "savings_unverified": "Bilhetes para Hoboken custam menos do que os de Penn Station. A NJ Transit diz que os passageiros podem economizar até 25% por viagem, e PATH/ferry a partir de Hoboken é honrado.",
+    "map_basemap_credit": "Tiles © Esri, HERE, Garmin, © colaboradores do OpenStreetMap, GIS User Community",
+    "map_export_preparing": "Preparando o download do mapa.",
+    "map_export_incomplete": "Algumas tiles de fundo não carregaram. As linhas ferroviárias estão no arquivo."
   },
   "blog": {
     "title": "Blog — Reroute NJ",

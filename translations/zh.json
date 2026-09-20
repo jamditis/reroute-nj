@@ -56,7 +56,9 @@
     "nav_about": "关于",
     "phase_banner": "第二阶段转换：2026年10月11日至11月15日。工作日Midtown Direct列车改至Hoboken。请务必在njtransit.com/portalcutover核实。",
     "remaining_phase2": "第二阶段剩余",
-    "phase2_complete": "第二阶段已完成 · 常规时刻表于11月15日恢复，需完成测试"
+    "phase2_complete": "第二阶段已完成 · 常规时刻表于11月15日恢复，需完成测试",
+    "footer_map_basemap_pre": "底图图块 &copy; Esri, HERE, Garmin, &copy;",
+    "footer_map_basemap_post": "贡献者，以及 GIS User Community。"
   },
   "index": {
     "title": "Reroute NJ — Portal North Bridge转换资源",
@@ -256,7 +258,7 @@
     "cutover_item4": "工作日Midtown Direct列车改至Hoboken（2026年10月11日 – 11月15日）；周末仍开往Penn Station NY",
     "download_png": "下载PNG",
     "download_pdf": "下载PDF",
-    "export_note": "下载的是绘制的路线图。这不是车站照片，也不是地图瓦片截图。",
+    "export_note": "下载浅色底图上的铁路线地图。这不是车站照片。",
     "seo_summary": "Portal North Bridge 第二阶段转换（2026年10月11日–11月15日）交互地图：NJ Transit GTFS 铁路几何、Kearny 的 Hackensack 河交叉、受影响车站、换乘枢纽，以及 PATH、渡轮和巴士备选。",
     "filter_aria": "按线路筛选地图",
     "canvas_aria": "显示 Portal Bridge 转换车站和线路的交互地图",
@@ -500,7 +502,10 @@
     "ticket_flexpass_0": "NJ Transit 提供 <strong>FLEXPASS</strong>（20次票，九五折）。Midtown Direct 乘客请购买10月和11月往返 Hoboken 的 FLEXPASS。",
     "ticket_flexpass_1": "如果你经常坐车，但不需要切换期间的全月月票，这是合适的选择。",
     "ticket_flexpass_2": "请到 <a href=\"https://www.njtransit.com/portalcutover\" target=\"_blank\" rel=\"noopener\">njtransit.com/portalcutover</a> 查看 FLEXPASS 价格和购买方式。",
-    "savings_unverified": "Hoboken 车票比 Penn Station 车票便宜。NJ Transit 称乘客每程最多可省 25%，且从 Hoboken 乘坐 PATH/渡轮可联程认可。"
+    "savings_unverified": "Hoboken 车票比 Penn Station 车票便宜。NJ Transit 称乘客每程最多可省 25%，且从 Hoboken 乘坐 PATH/渡轮可联程认可。",
+    "map_basemap_credit": "图块 © Esri, HERE, Garmin, © OpenStreetMap 贡献者, GIS User Community",
+    "map_export_preparing": "正在准备地图下载。",
+    "map_export_incomplete": "部分背景图块未能加载。铁路线已包含在文件中。"
   },
   "blog": {
     "title": "博客 — Reroute NJ",

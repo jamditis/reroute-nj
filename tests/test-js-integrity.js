@@ -915,16 +915,26 @@ testCommentHeader();
 testAccentParamValidation();
 testAdditionalSecurity();
 
-(function testMapTilesAreKeylessOsm() {
-  console.log("\n=== Map tiles use keyless OpenStreetMap ===");
+(function testMapTilesAreKeylessLightGray() {
+  console.log("\n=== Map tiles use a keyless light basemap ===");
   var src = readFile("map.js");
   test(
     "map.js does not load CARTO basemaps.cartocdn.com tiles",
     src.indexOf("basemaps.cartocdn.com") === -1
   );
   test(
-    "map.js loads OpenStreetMap raster tiles",
-    src.indexOf("tile.openstreetmap.org") !== -1
+    "map.js loads a keyless Esri light-gray basemap",
+    src.indexOf("World_Light_Gray_Base") !== -1
+  );
+  test(
+    "map.js composites basemap tiles into PNG/PDF export",
+    src.indexOf("function drawBasemapTiles") !== -1
+  );
+  test(
+    "map export credits sit on an opaque panel with AA text",
+    src.indexOf('ctx.fillRect(0, height - 58, width, 58)') !== -1 &&
+      src.indexOf('ctx.fillStyle = "#1a2332"') !== -1 &&
+      !/fillStyle = "#6b7280";\s*ctx\.font = "11px/.test(src)
   );
 })();
 
