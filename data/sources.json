@@ -26,14 +26,11 @@
       "type": "official",
       "accessed": "2026-02-14",
       "supports": [
-        "cutover-dates",
-        "train-counts",
         "hoboken-diversion",
         "cross-honoring",
         "single-track-operations",
         "40000-man-hours",
-        "workers-per-shift",
-        "phase2-expected"
+        "workers-per-shift"
       ]
     },
     "amtrak-press-release": {
@@ -43,13 +40,11 @@
       "type": "official",
       "accessed": "2026-02-14",
       "supports": [
-        "cutover-dates",
         "bridge-age",
         "gateway-program",
         "single-track-operations",
         "40000-man-hours",
-        "workers-per-shift",
-        "phase2-expected"
+        "workers-per-shift"
       ]
     },
     "njtransit-travel-alerts": {

@@ -475,7 +475,7 @@
       '<div class="after">' +
       "<h3>" + t("js.during_cutover_short") + "</h3>" +
       '<div class="route-flow">' + afterFlow + "</div>" +
-      '<p class="route-note">Same ' + (isReverse ? "origin" : "destination") + ", fewer trains (" + line.trainsAfter + " weekday). Expect delays from single-track operations at the Portal Bridge.</p>" +
+      '<p class="route-note">Same ' + (isReverse ? "origin" : "destination") + ", fewer trains (" + line.trainsAfter + " weekday trains). Expect delays from single-track operations at the Portal Bridge.</p>" +
       "</div>" +
       "</div>" +
       '<div class="key-changes"><h3>' + t("js.what_you_need_to_know") + '</h3><ul>' +
