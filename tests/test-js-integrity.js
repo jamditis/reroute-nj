@@ -915,6 +915,19 @@ testCommentHeader();
 testAccentParamValidation();
 testAdditionalSecurity();
 
+(function testMapTilesAreKeylessOsm() {
+  console.log("\n=== Map tiles use keyless OpenStreetMap ===");
+  var src = readFile("map.js");
+  test(
+    "map.js does not load CARTO basemaps.cartocdn.com tiles",
+    src.indexOf("basemaps.cartocdn.com") === -1
+  );
+  test(
+    "map.js loads OpenStreetMap raster tiles",
+    src.indexOf("tile.openstreetmap.org") !== -1
+  );
+})();
+
 // =========================================================================
 // SUMMARY
 // =========================================================================
