@@ -16,7 +16,7 @@ var cssPath = path.resolve(__dirname, "..", "css", "styles.css");
 var htmlPath = path.resolve(__dirname, "..", "index.html");
 var lineDataPath = path.resolve(__dirname, "..", "js", "line-data.js");
 
-var css = fs.readFileSync(cssPath, "utf8");
+var css = require("./read-styles")(cssPath);
 var html = fs.readFileSync(htmlPath, "utf8");
 var lineDataSrc = fs.readFileSync(lineDataPath, "utf8");
 
