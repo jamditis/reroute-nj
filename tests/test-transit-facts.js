@@ -211,24 +211,24 @@ test(10, "Raritan Valley impactType is 'newark-termination'", function () {
   return true;
 });
 
-test(11, "NEC trains before: 133, after: 112", function () {
+test(11, "NEC trains before: 133, after: 113", function () {
   var nec = LINE_DATA["northeast-corridor"];
   if (nec.trainsBefore !== 133) {
     return "trainsBefore: expected 133, got " + nec.trainsBefore;
   }
-  if (nec.trainsAfter !== 112) {
-    return "trainsAfter: expected 112, got " + nec.trainsAfter;
+  if (nec.trainsAfter !== 113) {
+    return "trainsAfter: expected 113, got " + nec.trainsAfter;
   }
   return true;
 });
 
-test(12, "NJCL trains before: 109, after: 92", function () {
+test(12, "NJCL trains before: 99, after: 87", function () {
   var njcl = LINE_DATA["north-jersey-coast"];
-  if (njcl.trainsBefore !== 109) {
-    return "trainsBefore: expected 109, got " + njcl.trainsBefore;
+  if (njcl.trainsBefore !== 99) {
+    return "trainsBefore: expected 99, got " + njcl.trainsBefore;
   }
-  if (njcl.trainsAfter !== 92) {
-    return "trainsAfter: expected 92, got " + njcl.trainsAfter;
+  if (njcl.trainsAfter !== 87) {
+    return "trainsAfter: expected 87, got " + njcl.trainsAfter;
   }
   return true;
 });
@@ -357,28 +357,28 @@ test(22, "RVL has one branch", function () {
 
 console.log("\n=== Date Verification ===\n");
 
-test(23, "CUTOVER_START is Feb 15, 2026", function () {
+test(23, "CUTOVER_START is Oct 11, 2026", function () {
   if (!CUTOVER_START) return "Could not parse CUTOVER_START from shared.js";
   var y = CUTOVER_START.getFullYear();
   var m = CUTOVER_START.getMonth(); // 0-indexed
   var d = CUTOVER_START.getDate();
-  if (y !== 2026 || m !== 1 || d !== 15) {
+  if (y !== 2026 || m !== 9 || d !== 11) {
     return (
-      "Expected 2026-02-15, got " +
+      "Expected 2026-10-11, got " +
       y + "-" + String(m + 1).padStart(2, "0") + "-" + String(d).padStart(2, "0")
     );
   }
   return true;
 });
 
-test(24, "CUTOVER_END is Mar 15, 2026", function () {
+test(24, "CUTOVER_END is Nov 15, 2026", function () {
   if (!CUTOVER_END) return "Could not parse CUTOVER_END from shared.js";
   var y = CUTOVER_END.getFullYear();
   var m = CUTOVER_END.getMonth();
   var d = CUTOVER_END.getDate();
-  if (y !== 2026 || m !== 2 || d !== 15) {
+  if (y !== 2026 || m !== 10 || d !== 15) {
     return (
-      "Expected 2026-03-15, got " +
+      "Expected 2026-11-15, got " +
       y + "-" + String(m + 1).padStart(2, "0") + "-" + String(d).padStart(2, "0")
     );
   }

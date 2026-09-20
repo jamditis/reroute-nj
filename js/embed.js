@@ -50,7 +50,9 @@
   var $pngMsg = document.getElementById("cfg-png-msg");
   var $htmlMsg = document.getElementById("cfg-html-msg");
   var $downloadPng = document.getElementById("cfg-download-png");
+  var $downloadPdf = document.getElementById("cfg-download-pdf");
   var $downloadHtml = document.getElementById("cfg-download-html");
+  var $pdfMsg = document.getElementById("cfg-pdf-msg");
 
   // =========================================================================
   // TOOL MAP — maps tool IDs to HTML page names
@@ -316,11 +318,15 @@
     if (isCard) {
       $pngMsg.textContent = "Click the button below to export the info card as a PNG image.";
       $downloadPng.classList.remove("hidden");
+      if ($pdfMsg) $pdfMsg.textContent = "Click the button below to export the info card as a PDF.";
+      if ($downloadPdf) $downloadPdf.classList.remove("hidden");
       $htmlMsg.textContent = "Click the button below to download a self-contained HTML file of the info card.";
       $downloadHtml.classList.remove("hidden");
     } else {
       $pngMsg.textContent = "PNG download is only available for info cards.";
       $downloadPng.classList.add("hidden");
+      if ($pdfMsg) $pdfMsg.textContent = "PDF download is only available for info cards.";
+      if ($downloadPdf) $downloadPdf.classList.add("hidden");
       $htmlMsg.textContent = "HTML download is only available for info cards.";
       $downloadHtml.classList.add("hidden");
     }
@@ -419,6 +425,20 @@
     }
   }
 
+  function downloadPdf() {
+    if (state.embedType !== "card") return;
+    try {
+      var iframeWin = $iframe.contentWindow;
+      if (iframeWin && typeof iframeWin.exportCardAsPdf === "function") {
+        iframeWin.exportCardAsPdf();
+      } else {
+        alert("PDF export is not available. The card page may still be loading.");
+      }
+    } catch (e) {
+      alert("Unable to export PDF. This may be a cross-origin restriction when previewing locally.");
+    }
+  }
+
   // =========================================================================
   // HTML DOWNLOAD
   // =========================================================================
@@ -473,11 +493,11 @@
       before: "Before",
       during: "During",
       your_alternatives: "Your alternatives",
-      date_range: "Feb 15 \u2013 Mar 15, 2026",
+      date_range: "Oct 11 \u2013 Nov 15, 2026",
       plan_your_commute: "Plan your commute",
       full_details: "Full details",
       summary_title: "Portal Bridge cutover",
-      summary_desc: "Five NJ Transit lines affected from Feb 15 \u2013 Mar 15, 2026. Service reduced while the new Portal North Bridge is connected.",
+      summary_desc: "Five NJ Transit lines affected from Oct 11 \u2013 Nov 15, 2026. Service reduced while the second track moves onto Portal North Bridge.",
       suspended: "Suspended",
       zone: "Zone",
       powered_by: "Powered by Reroute NJ \u00B7 reroutenj.org"
@@ -764,6 +784,7 @@
     });
 
     $downloadPng.addEventListener("click", downloadPng);
+    if ($downloadPdf) $downloadPdf.addEventListener("click", downloadPdf);
     $downloadHtml.addEventListener("click", downloadHtml);
   }
 

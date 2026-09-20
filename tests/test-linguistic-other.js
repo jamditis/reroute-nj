@@ -1373,12 +1373,12 @@ LANGUAGES_UNDER_TEST.forEach(function (lang) {
 });
 
 // ---------------------------------------------------------------------------
-// CROSS-4: Transit numbers preserved (133, 112, 109, 92)
+// CROSS-4: Transit numbers preserved (133, 113, 99, 87)
 // ---------------------------------------------------------------------------
 
 console.log("\n--- CROSS-4: Transit numbers preserved across all 5 languages ---");
 
-var TRANSIT_NUMBERS = ["133", "112", "109", "92"];
+var TRANSIT_NUMBERS = ["133", "113", "99", "87"];
 
 LANGUAGES_UNDER_TEST.forEach(function (lang) {
   if (!flatTranslations[lang]) return;

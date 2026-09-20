@@ -22,15 +22,17 @@
       "days": "days",
       "day": "day",
       "remaining_phase1": "remaining in Phase 1",
+      "remaining_phase2": "remaining in Phase 2",
       "phase1_complete": "Phase 1 complete",
-      "phase2_expected": "Phase 2 expected"
+      "phase2_expected": "Phase 2 expected",
+      "phase2_complete": "Phase 2 complete \u00b7 Regular schedules resume Nov 15, subject to testing"
     },
     "js": {
       "major_changes": "MAJOR CHANGES",
       "schedule_changes": "SCHEDULE CHANGES",
       "before_normal": "Before (normal service)",
-      "during_cutover": "During cutover (weekdays, Feb 15 \u2013 Mar 15)",
-      "during_cutover_short": "During cutover (Feb 15 \u2013 Mar 15)",
+      "during_cutover": "During cutover (weekdays, Oct 11 \u2013 Nov 14)",
+      "during_cutover_short": "During cutover (Oct 11 \u2013 Nov 15)",
       "what_you_need_to_know": "What you need to know",
       "weekends_different": "Weekends are different:",
       "weekend_service_continues": "Midtown Direct service to Penn Station NY continues on Saturday and Sunday. Buy regular Penn Station tickets for weekend travel.",

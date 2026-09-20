@@ -5,7 +5,7 @@
 **Free tools to help NJ Transit riders navigate the Portal North Bridge cutover**
 
 [![Live site](https://img.shields.io/badge/live_site-reroutenj.org-1a3a5c?style=for-the-badge)](https://reroutenj.org)
-[![Phase 1](https://img.shields.io/badge/phase_1-complete-0a8f4f?style=for-the-badge)](#timeline)
+[![Phase 2](https://img.shields.io/badge/phase_2-Oct_11–Nov_15_2026-c0392b?style=for-the-badge)](#timeline)
 [![Lines covered](https://img.shields.io/badge/lines_covered-5-0a8f4f?style=for-the-badge)](#lines-covered)
 [![Languages](https://img.shields.io/badge/languages-11-6b4fbb?style=for-the-badge)](#translations)
 
@@ -37,11 +37,11 @@ All NJ Transit rail lines affected by the Portal North Bridge cutover:
 
 | Line | Impact | What changes |
 |------|--------|--------------|
-| Montclair-Boonton | Diverted to Hoboken | All weekday Midtown Direct trains go to Hoboken instead of Penn Station NY |
-| Morris & Essex / Gladstone | Diverted to Hoboken | All weekday Midtown Direct trains go to Hoboken instead of Penn Station NY |
-| Northeast Corridor | Reduced service | 50% fewer trains between Newark and Penn Station NY |
-| North Jersey Coast | Reduced service | 50% fewer trains between Newark and Penn Station NY |
-| Raritan Valley | Newark termination | One-seat rides to Penn Station NY suspended; trains terminate at Newark Penn |
+| Montclair-Boonton | Diverted to Hoboken | Weekday Midtown Direct trains go to Hoboken (64 to 60 weekday trains). Weekends still run to Penn Station NY |
+| Morris & Essex / Gladstone | Diverted to Hoboken | Weekday Midtown Direct trains go to Hoboken (148 to 139 weekday trains). Weekends still run to Penn Station NY |
+| Northeast Corridor | Reduced service | Weekday trains 133 to 113; still run to Penn Station NY |
+| North Jersey Coast | Reduced service | Weekday trains 99 to 87. Oct 11–25 buses at Bay Head and Point Pleasant for Brielle Bridge work |
+| Raritan Valley | Newark termination | One-seat rides to Penn Station NY remain suspended; trains terminate at Newark Penn (51 to 50 weekday trains) |
 
 ## Architecture
 
@@ -139,11 +139,11 @@ To add a new language, create `translations/{code}.json` following the structure
 | Phase | Dates | Status |
 |-------|-------|--------|
 | **Phase 1** | Feb 15 – Mar 15, 2026 | Complete |
-| **Phase 2** | Fall 2026 (estimated) | Planned |
+| **Phase 2** | Oct 11 – Nov 15, 2026 | Upcoming |
 
-Phase 1 covered the initial Portal North Bridge cutover with 50% service reduction through the Hudson tunnels. Regular NJ Transit schedules resumed March 15, 2026, and the first track on the new bridge entered service March 16. Phase 2 will address the second major service change when construction enters the next stage.
+Phase 1 moved the first track onto Portal North Bridge. Regular NJ Transit schedules resumed March 15, 2026. Phase 2 moves the second track and retires the 1910 swing span. Official NJ Transit schedules start October 11. Regular schedules are expected November 15, subject to testing. Construction starts the evening of October 9.
 
-The live site computes this status from the current date (`js/shared.js`), so the tools already show "Phase 1 complete · Phase 2 expected Fall 2026."
+The live site computes this status from the current date (`js/shared.js`). Before October 11 it shows days until Phase 2. Sources: [njtransit.com/portalcutover](https://www.njtransit.com/portalcutover) and the September 17, 2026 briefing.
 
 ## Running locally
 
@@ -237,7 +237,7 @@ The site is optimized for Google search, newsroom adoption, and AI search tools 
 - [x] Translated JSON-LD structured data across all 90 translated pages
 - [x] News coverage feed with 111 articles, pagination, and relevance sorting
 - [x] WCAG AA color contrast and heading hierarchy audit
-- [ ] Phase 2 coverage when NJ Transit announces fall 2026 service changes
+- [x] Phase 2 coverage for the Oct 11 – Nov 15, 2026 second-track cutover
 - [ ] Bus bridge and shuttle information
 - [ ] Expanded ferry and PATH connection details
 

@@ -56,6 +56,33 @@
     return LINE_DATA[currentLineId];
   }
 
+  function makeStationSign(stationName, destLabel, line) {
+    return (
+      '<div class="station-sign">' +
+      '<div class="station-sign-stripe" style="background:' +
+      esc(line.color) +
+      ';"></div>' +
+      '<div class="station-sign-body">' +
+      '<div class="station-sign-name">' +
+      esc(stationName) +
+      "</div>" +
+      (destLabel
+        ? '<div class="dest-sign">' + esc(destLabel) + "</div>"
+        : "") +
+      "</div></div>"
+    );
+  }
+
+  function makeExtraNotes(line) {
+    if (!line.extraNotes || !line.extraNotes.length) return "";
+    var items = line.extraNotes
+      .map(function (n) {
+        return "<li>" + esc(n) + "</li>";
+      })
+      .join("");
+    return '<div class="extra-notes"><ul>' + items + "</ul></div>";
+  }
+
   function getStation(lineId, stationId) {
     var line = LINE_DATA[lineId];
     if (!line) return null;
@@ -72,10 +99,12 @@
     var now = new Date();
     var items = [
       { id: "tl-announce", date: new Date("2026-01-16") },
-      { id: "tl-tickets", date: new Date("2026-02-01") },
       { id: "tl-start", date: new Date("2026-02-15") },
       { id: "tl-end", date: new Date("2026-03-15") },
-      { id: "tl-phase2", date: new Date("2026-09-01") },
+      { id: "tl-phase2", date: new Date("2026-09-17") },
+      { id: "tl-tickets", date: new Date("2026-10-01") },
+      { id: "tl-p2-start", date: new Date("2026-10-11") },
+      { id: "tl-p2-end", date: new Date("2026-11-15") },
     ];
     var activeSet = false;
     for (var i = items.length - 1; i >= 0; i--) {
@@ -131,7 +160,7 @@
     $lineBadge.textContent = line.name;
     $lineBadge.className = "line-badge " + line.cssClass;
     $lineBadge.style.backgroundColor = line.color;
-    $lineBadge.style.color = "#fff";
+    $lineBadge.style.color = line.onColor || "#111";
 
     // Rebuild station dropdown
     populateStations();
@@ -292,8 +321,8 @@
       changes = [
         "Your weekday train to Penn Station New York is suspended. All weekday " + esc(line.name) + " trains now terminate at Hoboken.",
         "At Hoboken, transfer to PATH (33rd St), NY Waterway ferry (W. 39th St), or Bus 126 (Port Authority). All are cross-honored with your NJ Transit ticket.",
-        "Weekend service to Penn Station continues normally. No changes on Saturdays and Sundays. Note: Feb 16 (Presidents\u2019 Day) runs a holiday/weekend schedule with additional trains.",
-        "Buy tickets to/from Hoboken (not Penn Station) for weekday travel during Feb 15 – Mar 15.",
+        "Weekend service to Penn Station continues normally. No changes on Saturdays and Sundays. Monday, October 12 runs the weekday cutover schedule.",
+        "Buy tickets to/from Hoboken (not Penn Station) for weekday travel during Oct 11 \u2013 Nov 14.",
         "Travel before 7am or after 9am to avoid the worst crowding at Hoboken and on PATH.",
       ];
     }
@@ -336,9 +365,12 @@
       afterNote = "Then transfer to PATH, ferry, or bus to reach Manhattan. <strong>All cross-honored with your NJ Transit pass.</strong>";
     }
 
+    var destLabel = isReverse ? "TO " + station.name.toUpperCase() : "TO HOBOKEN";
+
     return (
       '<div class="impact-card severe">' +
-      '<div class="impact-header" style="background:' + line.color + '">' +
+      makeStationSign(station.name, destLabel, line) +
+      '<div class="impact-header" style="background:' + line.color + ";color:" + (line.onColor || "#111") + '">' +
       '<span class="impact-level">' + t("js.major_changes") + '</span>' +
       '<span class="impact-station">' + esc(station.name) + "</span>" +
       "</div>" +
@@ -359,6 +391,7 @@
       changes.map(function (c) { return "<li>" + esc(c) + "</li>"; }).join("") +
       "</ul></div>" +
       savingsHtml +
+      makeExtraNotes(line) +
       '<div class="weekend-note"><strong>' + t("js.weekends_different") + '</strong> ' + t("js.weekend_service_continues") + '</div>' +
       makeSourceFooter(line) +
       "</div></div>"
@@ -415,7 +448,8 @@
 
     return (
       '<div class="impact-card moderate">' +
-      '<div class="impact-header" style="background:' + line.color + '">' +
+      makeStationSign(station.name, isReverse ? "TO " + station.name.toUpperCase() : "TO NEW YORK", line) +
+      '<div class="impact-header" style="background:' + line.color + ";color:" + (line.onColor || "#111") + '">' +
       '<span class="impact-level">' + t("js.schedule_changes") + '</span>' +
       '<span class="impact-station">' + esc(station.name) + "</span>" +
       "</div>" +
@@ -435,6 +469,7 @@
       '<div class="key-changes"><h3>' + t("js.what_you_need_to_know") + '</h3><ul>' +
       changes.map(function (c) { return "<li>" + c + "</li>"; }).join("") +
       "</ul></div>" +
+      makeExtraNotes(line) +
       '<div class="weekend-note"><strong>Tip:</strong> Your route doesn\'t change, but your schedule does. Download the temporary schedule PDF from <a href="https://www.njtransit.com/portalcutover" target="_blank" rel="noopener">njtransit.com/portalcutover</a> and find your specific trains.</div>' +
       makeSourceFooter(line) +
       "</div></div>"
@@ -502,7 +537,8 @@
 
     return (
       '<div class="impact-card severe">' +
-      '<div class="impact-header" style="background:' + line.color + '">' +
+      makeStationSign(station.name, isReverse ? "TO " + station.name.toUpperCase() : "TO NEWARK", line) +
+      '<div class="impact-header" style="background:' + line.color + ";color:" + (line.onColor || "#111") + '">' +
       '<span class="impact-level">' + t("js.major_changes") + '</span>' +
       '<span class="impact-station">' + esc(station.name) + "</span>" +
       "</div>" +
@@ -522,6 +558,7 @@
       '<div class="key-changes"><h3>' + t("js.what_you_need_to_know") + '</h3><ul>' +
       changes.map(function (c) { return "<li>" + esc(c) + "</li>"; }).join("") +
       "</ul></div>" +
+      makeExtraNotes(line) +
       '<div class="weekend-note"><strong>Alternative:</strong> If you can drive to Newark Penn Station, you can skip the Raritan Valley Line entirely and take an NEC train directly (reduced but still running). Or consider NJ Transit bus service as a backup — some routes serve the Raritan Valley corridor.</div>' +
       makeSourceFooter(line) +
       "</div></div>"
@@ -923,26 +960,26 @@
     return (
       '<div class="ticket-scenarios">' +
       makeScenarioCard(t("js.monthly_pass_holders"), [
-        "<strong>Buy a monthly pass to/from Hoboken</strong> (via Newark Broad St) for February and March.",
-        "This pass works for Penn Station travel during <strong>Feb 1–15</strong> and <strong>Mar 15–31</strong> (the normal-service portions of each month).",
-        "During <strong>Feb 15 – Mar 15</strong>, your Hoboken pass is <strong>cross-honored</strong> on PATH (Hoboken \u2194 33rd St), NY Waterway ferry (Hoboken \u2194 W. 39th St), and NJ Transit Bus 126.",
+        "<strong>Buy a monthly pass to/from Hoboken</strong> (via Newark Broad St) for October and November.",
+        "This pass works for Penn Station travel during <strong>Oct 1–10</strong> and <strong>Nov 15–30</strong> (the normal-service portions of each month).",
+        "During <strong>Oct 11 – Nov 14</strong> weekdays, your Hoboken pass is <strong>cross-honored</strong> on PATH (Hoboken \u2194 33rd St), NY Waterway ferry (Hoboken \u2194 W. 39th St), and NJ Transit Bus 126.",
       ], '<p><strong>You save money.</strong> Hoboken passes cost less than Penn Station passes because Hoboken is closer. The PATH/ferry ride is included free. NJ Transit says riders can save up to 25% per trip.</p>') +
       makeScenarioCard(t("js.one_way_buyers"), [
-        "<strong>Feb 15 – Mar 15:</strong> Buy one-way tickets to/from <strong>Hoboken</strong> (not Penn Station).",
+        "<strong>Weekdays Oct 11 – Nov 14:</strong> Buy one-way tickets to/from <strong>Hoboken</strong> (not Penn Station).",
         "Your Hoboken ticket is cross-honored on PATH, ferry, and Bus 126 to reach Manhattan.",
-        "<strong>Before Feb 15 and after Mar 15:</strong> Buy regular tickets to/from Penn Station New York.",
+        "<strong>Weekends during the cutover, and Oct 1–10 / Nov 15–30:</strong> Buy tickets to/from Penn Station New York.",
       ], '<p><strong>You save money.</strong> Hoboken tickets cost less than Penn Station tickets. The PATH/ferry ride is included free.</p>') +
       makeScenarioCard(t("js.weekend_riders"), [
-        "<strong>No change.</strong> Weekend Midtown Direct trains continue to Penn Station New York.",
-        "Buy regular one-way tickets to/from <strong>Penn Station New York</strong> for Saturday and Sunday travel.",
+        "<strong>No change of destination.</strong> Weekend Midtown Direct trains continue to Penn Station New York.",
+        "Buy one-way tickets to/from <strong>Penn Station New York</strong> for Saturday and Sunday. Hoboken one-way tickets are not accepted for PSNY on weekends.",
       ]) +
       makeScenarioCard(t("js.occasional_riders"), [
-        "If you ride <strong>weekdays between Feb 15 and Mar 15</strong>: buy a ticket to <strong>Hoboken</strong>. Transfer to PATH/ferry/bus at Hoboken for free.",
+        "If you ride <strong>weekdays between Oct 11 and Nov 14</strong>: buy a ticket to <strong>Hoboken</strong>. Transfer to PATH/ferry/bus at Hoboken for free.",
         "If you ride <strong>weekends</strong> or <strong>outside the cutover dates</strong>: buy a regular ticket to <strong>Penn Station New York</strong>.",
         'When in doubt, check <a href="https://www.njtransit.com/portalcutover" target="_blank" rel="noopener">njtransit.com/portalcutover</a> or ask a conductor.',
       ]) +
       makeScenarioCard("FLEXPASS option", [
-        "NJ Transit is offering a special <strong>FLEXPASS</strong> (20-trip ticket with a 15% discount) available starting February 15.",
+        "NJ Transit is offering a <strong>FLEXPASS</strong> (20-trip ticket with a 15% discount). For Midtown Direct riders, buy FLEXPASS to/from Hoboken for October and November.",
         "Good option if you ride regularly but don't need a full monthly pass during the cutover period.",
         'Check <a href="https://www.njtransit.com/portalcutover" target="_blank" rel="noopener">njtransit.com/portalcutover</a> for FLEXPASS pricing and purchase options.',
       ]) +

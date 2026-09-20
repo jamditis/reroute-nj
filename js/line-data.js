@@ -6,8 +6,9 @@ var LINE_DATA = {
   "montclair-boonton": {
     name: "Montclair-Boonton Line",
     shortName: "Montclair-Boonton",
-    color: "#7b2d8e",
-    textColor: "#7b2d8e",
+    color: "#E66859",
+    textColor: "#9B3228",
+    onColor: "#111111",
     cssClass: "montclair-boonton",
     impactType: "hoboken-diversion",
     impactLevel: "severe",
@@ -15,10 +16,14 @@ var LINE_DATA = {
     trainsAfter: 60,
     hub: "Newark Broad St",
     summary:
-      "All weekday Midtown Direct trains diverted to Hoboken. Weekend service to Penn Station NY continues.",
+      "All weekday Midtown Direct trains diverted to Hoboken. Weekend service to Penn Station NY continues. Weekday trains: 64 to 60.",
+    extraNotes: [
+      "Monday, October 12 runs the weekday cutover schedule.",
+      "For October and November, buy Hoboken monthly, weekly, or FLEXPASS tickets via Newark Broad St. They are valid to Penn Station NY on Oct 1–10 and Nov 15–30, and cross-honored from Hoboken on weekdays Oct 11–Nov 14.",
+    ],
     sources: {
       trainCounts: "https://www.njtransit.com/portalcutover",
-      impactType: "https://www.njtransit.com/press-releases/portal-north-bridge-enters-final-phase-construction-work-begins-put-first-track",
+      impactType: "https://www.njtransit.com/press-releases/portal-north-bridge-enters-final-phase-construction-work-begins-put-final-track",
       stations: "https://www.njtransit.com/train-to?origin=Hoboken&destination=Hackettstown&line=MOBO",
     },
     branches: {
@@ -56,19 +61,24 @@ var LINE_DATA = {
   "morris-essex": {
     name: "Morris & Essex Lines",
     shortName: "Morris & Essex",
-    color: "#00a651",
-    textColor: "#007a3d",
+    color: "#08A652",
+    textColor: "#00753A",
+    onColor: "#111111",
     cssClass: "morris-essex",
     impactType: "hoboken-diversion",
     impactLevel: "severe",
-    trainsBefore: 149,
-    trainsAfter: 141,
+    trainsBefore: 148,
+    trainsAfter: 139,
     hub: "Newark Broad St",
     summary:
-      "All weekday Midtown Direct trains on the Morristown Line and Gladstone Branch diverted to Hoboken. Weekend service to Penn Station NY continues.",
+      "All weekday Midtown Direct trains on the Morristown Line and Gladstone Branch diverted to Hoboken. Weekend service to Penn Station NY continues. Weekday trains: 148 to 139.",
+    extraNotes: [
+      "Monday, October 12 runs the weekday cutover schedule.",
+      "Weekend Hoboken connections to the Morristown Line are at Secaucus Junction instead of Newark Broad Street.",
+    ],
     sources: {
       trainCounts: "https://www.njtransit.com/portalcutover",
-      impactType: "https://www.njtransit.com/press-releases/portal-north-bridge-enters-final-phase-construction-work-begins-put-first-track",
+      impactType: "https://www.njtransit.com/press-releases/portal-north-bridge-enters-final-phase-construction-work-begins-put-final-track",
       stations: "https://www.njtransit.com/train-to?origin=New+York&destination=Dover&line=MOBO",
     },
     branches: {
@@ -112,19 +122,23 @@ var LINE_DATA = {
   "northeast-corridor": {
     name: "Northeast Corridor",
     shortName: "Northeast Corridor",
-    color: "#ee3a43",
-    textColor: "#c5303a",
+    color: "#DD3439",
+    textColor: "#B42328",
+    onColor: "#ffffff",
     cssClass: "northeast-corridor",
     impactType: "reduced-service",
     impactLevel: "moderate",
     trainsBefore: 133,
-    trainsAfter: 112,
+    trainsAfter: 113,
     hub: "Newark Penn",
     summary:
-      "Trains still run to Penn Station NY, but service is reduced from 133 to 112 daily trains due to single-track operation between Newark and Secaucus.",
+      "Trains still run to Penn Station NY, but weekday service is reduced from 133 to 113 trains due to single-track operation between Newark and Secaucus.",
+    extraNotes: [
+      "NJ Transit added Secaucus–Penn Station NY shuttle trips so Main, Bergen, Pascack Valley, and Port Jervis riders keep their New York connections.",
+    ],
     sources: {
       trainCounts: "https://www.njtransit.com/portalcutover",
-      impactType: "https://www.njtransit.com/press-releases/portal-north-bridge-enters-final-phase-construction-work-begins-put-first-track",
+      impactType: "https://www.njtransit.com/press-releases/portal-north-bridge-enters-final-phase-construction-work-begins-put-final-track",
       stations: "https://www.njtransit.com/train-to?origin=Trenton&destination=New+York&line=NEC",
     },
     branches: {
@@ -152,19 +166,23 @@ var LINE_DATA = {
   "north-jersey-coast": {
     name: "North Jersey Coast Line",
     shortName: "North Jersey Coast",
-    color: "#0082c8",
-    textColor: "#006ba1",
+    color: "#03A3DF",
+    textColor: "#00719B",
+    onColor: "#111111",
     cssClass: "north-jersey-coast",
     impactType: "reduced-service",
     impactLevel: "moderate",
-    trainsBefore: 109,
-    trainsAfter: 92,
+    trainsBefore: 99,
+    trainsAfter: 87,
     hub: "Secaucus Junction",
     summary:
-      "Trains still run to Penn Station NY, but reduced from 109 to 92 daily trains. Significant schedule changes. Perth Amboy/Woodbridge riders get bus cross-honoring to Port Authority.",
+      "Trains still run to Penn Station NY, but weekday service is reduced from 99 to 87 trains. Perth Amboy and Woodbridge riders can use rail tickets on buses to Port Authority.",
+    extraNotes: [
+      "Brielle Bridge work, Oct 11–25: no trains between Manasquan and Bay Head. Buses replace trains at Bay Head and Point Pleasant, with a rail connection at Manasquan.",
+    ],
     sources: {
       trainCounts: "https://www.njtransit.com/portalcutover",
-      impactType: "https://www.njtransit.com/press-releases/portal-north-bridge-enters-final-phase-construction-work-begins-put-first-track",
+      impactType: "https://www.njtransit.com/press-releases/portal-north-bridge-enters-final-phase-construction-work-begins-put-final-track",
       stations: "https://www.njtransit.com/train-to?origin=Bay+Head&destination=New+York&line=NJCL",
     },
     branches: {
@@ -196,19 +214,23 @@ var LINE_DATA = {
   "raritan-valley": {
     name: "Raritan Valley Line",
     shortName: "Raritan Valley",
-    color: "#faa634",
-    textColor: "#8a5d00",
+    color: "#F2A537",
+    textColor: "#8A5A00",
+    onColor: "#111111",
     cssClass: "raritan-valley",
     impactType: "newark-termination",
     impactLevel: "severe",
-    trainsBefore: "All trains",
-    trainsAfter: "No one-seat rides to PSNY",
+    trainsBefore: 51,
+    trainsAfter: 50,
     hub: "Newark Penn",
     summary:
-      "All one-seat rides to Penn Station New York are suspended. All trains now originate and terminate at Newark Penn Station. Transfer to NEC at Newark Penn to reach PSNY.",
+      "All one-seat rides to Penn Station New York are suspended. Trains originate and terminate at Newark Penn Station (51 weekday trains to 50). Transfer to the Northeast Corridor at Newark Penn for PSNY.",
+    extraNotes: [
+      "Saturday, November 7: buses replace trains between Cranford and Newark for Conrail track work.",
+    ],
     sources: {
       trainCounts: "https://www.njtransit.com/portalcutover",
-      impactType: "https://www.njtransit.com/press-releases/portal-north-bridge-enters-final-phase-construction-work-begins-put-first-track",
+      impactType: "https://www.njtransit.com/press-releases/portal-north-bridge-enters-final-phase-construction-work-begins-put-final-track",
       stations: "https://www.njtransit.com/train-to?origin=High+Bridge&destination=Newark&line=RARV",
     },
     branches: {

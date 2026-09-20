@@ -1,5 +1,5 @@
 {
-  "lastVerified": "2026-02-14T00:00:00Z",
+  "lastVerified": "2026-09-20T00:00:00Z",
   "sources": {
     "njtransit-portal-cutover": {
       "title": "Portal Bridge Cutover: What It Means For You",
@@ -216,16 +216,16 @@
   },
   "claims": {
     "cutover-dates": {
-      "claim": "The Portal Bridge cutover runs from February 15 to March 15, 2026 (Phase 1)",
+      "claim": "Phase 2 of the Portal Bridge cutover runs from October 11 to November 15, 2026 (schedules in effect Oct 11; regular service resumes Nov 15 subject to testing)",
       "sources": ["njtransit-portal-cutover", "njtransit-press-release", "amtrak-press-release"],
       "status": "verified",
-      "lastVerified": "2026-02-14"
+      "lastVerified": "2026-09-20"
     },
     "train-counts": {
-      "claim": "Train count reductions: M-B 64→60, M&E 149→141, NEC 133→112, NJCL 109→92",
+      "claim": "Phase 2 weekday train count reductions: M-B 64→60, M&E 148→139, NEC 133→113, NJCL 99→87, RVL 51→50",
       "sources": ["njtransit-portal-cutover", "njtransit-press-release"],
       "status": "verified",
-      "lastVerified": "2026-02-14"
+      "lastVerified": "2026-09-20"
     },
     "hoboken-diversion": {
       "claim": "All weekday Midtown Direct trains on M-B and M&E lines diverted to Hoboken Terminal",
@@ -307,7 +307,7 @@
       "lastVerified": "2026-02-14"
     },
     "phase2-expected": {
-      "claim": "Phase 2 (second track cutover) expected Fall 2026",
+      "claim": "Phase 2 (second track cutover) runs Oct 11 – Nov 15, 2026",
       "sources": ["njtransit-press-release", "amtrak-press-release", "gateway-program"],
       "status": "verified",
       "lastVerified": "2026-02-14"

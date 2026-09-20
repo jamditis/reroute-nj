@@ -58,19 +58,19 @@
     before: "Before",
     during: "During",
     your_alternatives: "Your alternatives",
-    date_range: "Feb 15 \u2013 Mar 15, 2026",
+    date_range: "Oct 11 \u2013 Nov 15, 2026",
     plan_your_commute: "Plan your commute",
     full_details: "Full details",
     summary_title: "Portal Bridge cutover",
-    summary_desc: "Five NJ Transit lines affected from Feb 15 \u2013 Mar 15, 2026. Service reduced while the new Portal North Bridge is connected.",
+    summary_desc: "Five NJ Transit lines affected from Oct 11 \u2013 Nov 15, 2026. Service reduced while the second track moves onto Portal North Bridge.",
     suspended: "Suspended",
     zone: "Zone",
     powered_by: "Powered by Reroute NJ \u00B7 reroutenj.org",
-    "line_summary_montclair-boonton": "All weekday Midtown Direct trains diverted to Hoboken. Weekend service to Penn Station NY continues.",
-    "line_summary_morris-essex": "All weekday Midtown Direct trains on the Morristown Line and Gladstone Branch diverted to Hoboken. Weekend service to Penn Station NY continues.",
-    "line_summary_northeast-corridor": "Trains still run to Penn Station NY, but service is reduced from 133 to 112 daily trains due to single-track operation between Newark and Secaucus.",
-    "line_summary_north-jersey-coast": "Trains still run to Penn Station NY, but reduced from 109 to 92 daily trains. Significant schedule changes. Perth Amboy/Woodbridge riders get bus cross-honoring to Port Authority.",
-    "line_summary_raritan-valley": "All one-seat rides to Penn Station New York are suspended. All trains now originate and terminate at Newark Penn Station. Transfer to NEC at Newark Penn to reach PSNY."
+    "line_summary_montclair-boonton": "All weekday Midtown Direct trains diverted to Hoboken. Weekend service to Penn Station NY continues. Weekday trains: 64 to 60.",
+    "line_summary_morris-essex": "All weekday Midtown Direct trains on the Morristown Line and Gladstone Branch diverted to Hoboken. Weekend service to Penn Station NY continues. Weekday trains: 148 to 139.",
+    "line_summary_northeast-corridor": "Trains still run to Penn Station NY, but weekday service is reduced from 133 to 113 trains due to single-track operation between Newark and Secaucus.",
+    "line_summary_north-jersey-coast": "Trains still run to Penn Station NY, but weekday service is reduced from 99 to 87 trains. Perth Amboy and Woodbridge riders can use rail tickets on buses to Port Authority.",
+    "line_summary_raritan-valley": "All one-seat rides to Penn Station New York are suspended. Trains originate and terminate at Newark Penn Station (51 weekday trains to 50). Transfer to the Northeast Corridor at Newark Penn for PSNY."
   };
 
   // =========================================================================
@@ -546,25 +546,52 @@
       filename = "reroute-nj-summary.png";
     }
 
-    canvas.toBlob(function (blob) {
-      if (!blob) return;
-      var url = URL.createObjectURL(blob);
-      var a = document.createElement("a");
-      a.href = url;
-      a.download = filename;
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      setTimeout(function () { URL.revokeObjectURL(url); }, 100);
-    }, "image/png");
+    if (typeof exportCanvasPng === "function") {
+      exportCanvasPng(canvas, filename);
+    } else {
+      canvas.toBlob(function (blob) {
+        if (!blob) return;
+        var url = URL.createObjectURL(blob);
+        var a = document.createElement("a");
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        setTimeout(function () { URL.revokeObjectURL(url); }, 100);
+      }, "image/png");
+    }
   }
 
-  // Expose for PNG export and cross-frame calls
+  function exportCardAsPdf() {
+    var type = getParam("type") || "summary";
+    var lineId = getParam("line");
+    var stationId = getParam("station");
+    var theme = getParam("theme");
+    if (lineId && !LINE_DATA[lineId]) {
+      lineId = null;
+    }
+    var canvas = renderCardToCanvas(type, lineId, stationId, theme);
+    var filename;
+    if (type === "station" && lineId && stationId) {
+      filename = "reroute-nj-station-" + stationId + ".pdf";
+    } else if (type === "line" && lineId) {
+      filename = "reroute-nj-line-" + lineId + ".pdf";
+    } else {
+      filename = "reroute-nj-summary.pdf";
+    }
+    if (typeof exportCanvasPdf === "function") {
+      exportCanvasPdf(canvas, filename);
+    }
+  }
+
+  // Expose for PNG/PDF export and cross-frame calls
   window.renderLineCard = renderLineCard;
   window.renderStationCard = renderStationCard;
   window.renderSummaryCard = renderSummaryCard;
   window.renderCardToCanvas = renderCardToCanvas;
   window.exportCardAsPng = exportCardAsPng;
+  window.exportCardAsPdf = exportCardAsPdf;
 
   function init() {
     var type = getParam("type") || "summary";

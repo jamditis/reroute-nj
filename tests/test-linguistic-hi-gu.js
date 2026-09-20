@@ -845,9 +845,9 @@ console.log("=".repeat(70));
   var criticalNumbers = [
     { num: "50", context: "50% service reduction", keys: ["index.alert_details", "index.secaucus_intro"] },
     { num: "133", context: "trains before NEC", keys: ["card.line_summary_northeast-corridor"] },
-    { num: "112", context: "trains during NEC", keys: ["card.line_summary_northeast-corridor"] },
-    { num: "109", context: "trains before NJC", keys: ["card.line_summary_north-jersey-coast"] },
-    { num: "92", context: "trains during NJC", keys: ["card.line_summary_north-jersey-coast"] },
+    { num: "113", context: "trains during NEC", keys: ["card.line_summary_northeast-corridor"] },
+    { num: "99", context: "trains before NJC", keys: ["card.line_summary_north-jersey-coast"] },
+    { num: "87", context: "trains during NJC", keys: ["card.line_summary_north-jersey-coast"] },
     { num: "126", context: "Bus 126", keys: ["index.bus_title", "index.bus_step5"] },
     { num: "1910", context: "old bridge year", keys: ["map.old_bridge_item1"] },
     { num: "33", context: "33rd Street", keys: ["index.path_title"] }
@@ -901,20 +901,20 @@ console.log("=".repeat(70));
     });
   });
 
-  // Check that "4" (weeks) appears in some form
-  var hiHas4Weeks = (hiFlat["index.stat_4_weeks"] || "").match(/4|\u096A/) !== null;
-  var guHas4Weeks = (guFlat["index.stat_4_weeks"] || "").match(/4|\u0AEA/) !== null;
+  // Check that "5" (weeks) appears in some form. Key name is historical.
+  var hiHas5Weeks = (hiFlat["index.stat_4_weeks"] || "").match(/5|\u096B/) !== null;
+  var guHas5Weeks = (guFlat["index.stat_4_weeks"] || "").match(/5|\u0AEB/) !== null;
 
-  if (hiHas4Weeks) {
-    pass("Hindi: stat_4_weeks contains number 4", hiFlat["index.stat_4_weeks"]);
+  if (hiHas5Weeks) {
+    pass("Hindi: stat_4_weeks contains number 5", hiFlat["index.stat_4_weeks"]);
   } else {
-    fail("Hindi: stat_4_weeks missing number 4", hiFlat["index.stat_4_weeks"] || "(missing)");
+    fail("Hindi: stat_4_weeks missing number 5", hiFlat["index.stat_4_weeks"] || "(missing)");
   }
 
-  if (guHas4Weeks) {
-    pass("Gujarati: stat_4_weeks contains number 4", guFlat["index.stat_4_weeks"]);
+  if (guHas5Weeks) {
+    pass("Gujarati: stat_4_weeks contains number 5", guFlat["index.stat_4_weeks"]);
   } else {
-    fail("Gujarati: stat_4_weeks missing number 4", guFlat["index.stat_4_weeks"] || "(missing)");
+    fail("Gujarati: stat_4_weeks missing number 5", guFlat["index.stat_4_weeks"] || "(missing)");
   }
 
   // Check digit system consistency within each language

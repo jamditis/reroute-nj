@@ -90,7 +90,7 @@ console.log("======================================================\n");
   var testName = "1. Train counts in LINE_DATA match card translation summaries";
   var issues = [];
 
-  // NEC: 133 before, 112 after
+  // NEC: 133 before, 113 after
   var necSummary = enJSON.card["line_summary_northeast-corridor"];
   if (necSummary.indexOf(String(LINE_DATA["northeast-corridor"].trainsBefore)) === -1) {
     issues.push("NEC trainsBefore (" + LINE_DATA["northeast-corridor"].trainsBefore + ") not found in card summary");
@@ -99,7 +99,7 @@ console.log("======================================================\n");
     issues.push("NEC trainsAfter (" + LINE_DATA["northeast-corridor"].trainsAfter + ") not found in card summary");
   }
 
-  // NJCL: 109 before, 92 after
+  // NJCL: 99 before, 87 after
   var njclSummary = enJSON.card["line_summary_north-jersey-coast"];
   if (njclSummary.indexOf(String(LINE_DATA["north-jersey-coast"].trainsBefore)) === -1) {
     issues.push("NJCL trainsBefore (" + LINE_DATA["north-jersey-coast"].trainsBefore + ") not found in card summary");
@@ -201,25 +201,23 @@ console.log("======================================================\n");
   var testName = "4. Date range in translations matches CUTOVER_START/CUTOVER_END in shared.js";
   var issues = [];
 
-  // CUTOVER_START should be 2026-02-15
-  if (dates.start !== "2026-02-15T00:00:00") {
-    issues.push("CUTOVER_START is '" + dates.start + "', expected '2026-02-15T00:00:00'");
+  // CUTOVER_START should be 2026-10-11
+  if (dates.start !== "2026-10-11T00:00:00") {
+    issues.push("CUTOVER_START is '" + dates.start + "', expected '2026-10-11T00:00:00'");
   }
-  // CUTOVER_END should be 2026-03-15
-  if (dates.end !== "2026-03-15T00:00:00") {
-    issues.push("CUTOVER_END is '" + dates.end + "', expected '2026-03-15T00:00:00'");
-  }
-
-  // Translations should mention Feb 15 and Mar 15, 2026
-  var dateRange = enJSON.card.date_range; // "Feb 15 – Mar 15, 2026"
-  if (dateRange.indexOf("Feb 15") === -1 || dateRange.indexOf("Mar 15") === -1 || dateRange.indexOf("2026") === -1) {
-    issues.push("card.date_range ('" + dateRange + "') does not match expected 'Feb 15 – Mar 15, 2026'");
+  // CUTOVER_END should be 2026-11-15
+  if (dates.end !== "2026-11-15T00:00:00") {
+    issues.push("CUTOVER_END is '" + dates.end + "', expected '2026-11-15T00:00:00'");
   }
 
-  // Check index.alert_details too
+  var dateRange = enJSON.card.date_range;
+  if (dateRange.indexOf("Oct 11") === -1 || dateRange.indexOf("Nov 15") === -1 || dateRange.indexOf("2026") === -1) {
+    issues.push("card.date_range ('" + dateRange + "') does not match expected 'Oct 11 – Nov 15, 2026'");
+  }
+
   var alertDetails = enJSON.index.alert_details;
-  if (alertDetails.indexOf("Feb 15") === -1 || alertDetails.indexOf("Mar 15") === -1 || alertDetails.indexOf("2026") === -1) {
-    issues.push("index.alert_details does not contain correct date range");
+  if (alertDetails.indexOf("Oct 11") === -1 && alertDetails.indexOf("Nov 15") === -1) {
+    issues.push("index.alert_details does not contain Phase 2 dates");
   }
 
   report(testName, issues.length === 0, issues.join("; "));
@@ -700,26 +698,26 @@ console.log("======================================================\n");
 // TEST 18: Morris & Essex: 149 before, 141 after (verify consistency)
 // =========================================================================
 (function test18() {
-  var testName = "18. Morris & Essex: 149 before, 141 after (consistent across codebase)";
+  var testName = "18. Morris & Essex: 148 before, 139 after (consistent across codebase)";
   var issues = [];
 
   var me = LINE_DATA["morris-essex"];
 
-  if (me.trainsBefore !== 149) {
-    issues.push("LINE_DATA trainsBefore is " + me.trainsBefore + ", expected 149");
+  if (me.trainsBefore !== 148) {
+    issues.push("LINE_DATA trainsBefore is " + me.trainsBefore + ", expected 148");
   }
-  if (me.trainsAfter !== 141) {
-    issues.push("LINE_DATA trainsAfter is " + me.trainsAfter + ", expected 141");
+  if (me.trainsAfter !== 139) {
+    issues.push("LINE_DATA trainsAfter is " + me.trainsAfter + ", expected 139");
   }
 
   report(testName, issues.length === 0, issues.join("; "));
 })();
 
 // =========================================================================
-// TEST 19: NEC: 133 before, 112 after (verify in LINE_DATA and summary text)
+// TEST 19: NEC: 133 before, 113 after (verify in LINE_DATA and summary text)
 // =========================================================================
 (function test19() {
-  var testName = "19. NEC: 133 before, 112 after (in LINE_DATA and summaries)";
+  var testName = "19. NEC: 133 before, 113 after (in LINE_DATA and summaries)";
   var issues = [];
 
   var nec = LINE_DATA["northeast-corridor"];
@@ -727,16 +725,16 @@ console.log("======================================================\n");
   if (nec.trainsBefore !== 133) {
     issues.push("LINE_DATA trainsBefore is " + nec.trainsBefore + ", expected 133");
   }
-  if (nec.trainsAfter !== 112) {
-    issues.push("LINE_DATA trainsAfter is " + nec.trainsAfter + ", expected 112");
+  if (nec.trainsAfter !== 113) {
+    issues.push("LINE_DATA trainsAfter is " + nec.trainsAfter + ", expected 113");
   }
 
   // Check LINE_DATA summary mentions both numbers
   if (nec.summary.indexOf("133") === -1) {
     issues.push("LINE_DATA summary doesn't mention 133");
   }
-  if (nec.summary.indexOf("112") === -1) {
-    issues.push("LINE_DATA summary doesn't mention 112");
+  if (nec.summary.indexOf("113") === -1) {
+    issues.push("LINE_DATA summary doesn't mention 113");
   }
 
   // Check card translation summary mentions both numbers
@@ -744,16 +742,16 @@ console.log("======================================================\n");
   if (cardSummary.indexOf("133") === -1) {
     issues.push("Card translation summary doesn't mention 133");
   }
-  if (cardSummary.indexOf("112") === -1) {
-    issues.push("Card translation summary doesn't mention 112");
+  if (cardSummary.indexOf("113") === -1) {
+    issues.push("Card translation summary doesn't mention 113");
   }
 
   // Check cards.js defaults mention both numbers
   if (cardsSrc.indexOf("133") === -1) {
     issues.push("cards.js doesn't mention 133");
   }
-  if (cardsSrc.indexOf("112") === -1) {
-    issues.push("cards.js doesn't mention 112");
+  if (cardsSrc.indexOf("113") === -1) {
+    issues.push("cards.js doesn't mention 113");
   }
 
   // Check app.js uses these from LINE_DATA (it references line.trainsBefore/trainsAfter)
@@ -768,44 +766,44 @@ console.log("======================================================\n");
 })();
 
 // =========================================================================
-// TEST 20: NJCL: 109 before, 92 after (verify in LINE_DATA and summary text)
+// TEST 20: NJCL: 99 before, 87 after (verify in LINE_DATA and summary text)
 // =========================================================================
 (function test20() {
-  var testName = "20. NJCL: 109 before, 92 after (in LINE_DATA and summaries)";
+  var testName = "20. NJCL: 99 before, 87 after (in LINE_DATA and summaries)";
   var issues = [];
 
   var njcl = LINE_DATA["north-jersey-coast"];
 
-  if (njcl.trainsBefore !== 109) {
-    issues.push("LINE_DATA trainsBefore is " + njcl.trainsBefore + ", expected 109");
+  if (njcl.trainsBefore !== 99) {
+    issues.push("LINE_DATA trainsBefore is " + njcl.trainsBefore + ", expected 99");
   }
-  if (njcl.trainsAfter !== 92) {
-    issues.push("LINE_DATA trainsAfter is " + njcl.trainsAfter + ", expected 92");
+  if (njcl.trainsAfter !== 87) {
+    issues.push("LINE_DATA trainsAfter is " + njcl.trainsAfter + ", expected 87");
   }
 
   // Check LINE_DATA summary mentions both numbers
-  if (njcl.summary.indexOf("109") === -1) {
-    issues.push("LINE_DATA summary doesn't mention 109");
+  if (njcl.summary.indexOf("99") === -1) {
+    issues.push("LINE_DATA summary doesn't mention 99");
   }
-  if (njcl.summary.indexOf("92") === -1) {
-    issues.push("LINE_DATA summary doesn't mention 92");
+  if (njcl.summary.indexOf("87") === -1) {
+    issues.push("LINE_DATA summary doesn't mention 87");
   }
 
   // Check card translation summary mentions both numbers
   var cardSummary = enJSON.card["line_summary_north-jersey-coast"];
-  if (cardSummary.indexOf("109") === -1) {
-    issues.push("Card translation summary doesn't mention 109");
+  if (cardSummary.indexOf("99") === -1) {
+    issues.push("Card translation summary doesn't mention 99");
   }
-  if (cardSummary.indexOf("92") === -1) {
-    issues.push("Card translation summary doesn't mention 92");
+  if (cardSummary.indexOf("87") === -1) {
+    issues.push("Card translation summary doesn't mention 87");
   }
 
   // Check cards.js defaults mention both numbers
-  if (cardsSrc.indexOf("109") === -1) {
-    issues.push("cards.js doesn't mention 109");
+  if (cardsSrc.indexOf("99") === -1) {
+    issues.push("cards.js doesn't mention 99");
   }
-  if (cardsSrc.indexOf("92") === -1) {
-    issues.push("cards.js doesn't mention 92");
+  if (cardsSrc.indexOf("87") === -1) {
+    issues.push("cards.js doesn't mention 87");
   }
 
   report(testName, issues.length === 0, issues.join("; "));

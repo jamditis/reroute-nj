@@ -897,7 +897,7 @@ if (genderIssues.length === 0) {
 console.log("\n=== TEST 8: Numbers and date formats ===\n");
 
 // 8a. Transit-specific numbers must be preserved
-var TRANSIT_NUMBERS = ["133", "112", "109", "92", "126", "1910", "115", "50"];
+var TRANSIT_NUMBERS = ["133", "113", "99", "87", "126", "1910", "115", "50"];
 var numberIssues = [];
 
 Object.keys(enFlat).forEach(function (key) {

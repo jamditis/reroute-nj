@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.2.0] - 2026-09-20
+
+### Added
+- GTFS-based interactive map geometry (`data/map-geometry.json`) built from NJ Transit rail shapes
+- Map PNG and PDF downloads drawn from that geometry (not photographs or map-tile screenshots)
+- Helvetica-style station identification on line-guide cards: English names, official line-color stripe, destination labels
+- About page section describing signage research and the no-photograph policy
+
+### Changed
+- Phase 2 is the current cutover: Oct 11 – Nov 15, 2026 (work starts the evening of Oct 9; regular schedules expected Nov 15, subject to testing)
+- Weekday train counts from the official briefing PDF: Montclair-Boonton 64→60, Morris & Essex 148→139, Northeast Corridor 133→113, North Jersey Coast 99→87, Raritan Valley 51→50
+- Montclair-Boonton line color is GTFS coral `#E66859` (purple is Pascack Valley)
+- Tickets, Brielle Bridge buses (Oct 11–25), and Raritan Valley Cranford–Newark buses (Nov 7) match njtransit.com/portalcutover
+- Translations, tests, and sources updated for Phase 2 dates and counts
+
 ## [2.1.2] - 2026-02-14
 
 ### Added
