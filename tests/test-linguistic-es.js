@@ -795,8 +795,16 @@ UNTRANSLATED_ENGLISH.forEach(function (check) {
     if (/<code>/.test(entry.value)) return;
 
     var text = stripHtml(entry.value);
+    // Runtime interpolation tokens are not Spanish copy.
+    text = text.replace(/\{(station|line|hub|branch)\}/g, "");
     // Remove known English proper nouns before checking
+    text = text.replace(/Old Portal Bridge/g, "");
     text = text.replace(/Portal\s+(North\s+)?Bridge/g, "");
+    text = text.replace(/Brielle Bridge/g, "");
+    text = text.replace(/Hackensack River/g, "");
+    text = text.replace(/Montclair-Boonton Line/g, "");
+    text = text.replace(/North Jersey Coast Line/g, "");
+    text = text.replace(/Raritan Valley Line/g, "");
     text = text.replace(/Penn Station/g, "");
     text = text.replace(/Hoboken Terminal/g, "");
     text = text.replace(/NJ Transit/g, "");
@@ -897,7 +905,7 @@ if (genderIssues.length === 0) {
 console.log("\n=== TEST 8: Numbers and date formats ===\n");
 
 // 8a. Transit-specific numbers must be preserved
-var TRANSIT_NUMBERS = ["133", "112", "109", "92", "126", "1910", "115", "50"];
+var TRANSIT_NUMBERS = ["133", "113", "99", "87", "126", "1910", "115", "50"];
 var numberIssues = [];
 
 Object.keys(enFlat).forEach(function (key) {

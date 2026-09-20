@@ -732,9 +732,9 @@ if (fullWidthIssues.length === 0) {
 // 6b: Transit-specific numbers preserved from English
 var transitNumbers = {
   "133": "NEC trains before",
-  "112": "NEC trains during",
-  "109": "NJCL trains before",
-  "92": "NJCL trains during",
+  "113": "NEC trains during",
+  "99": "NJCL trains before",
+  "87": "NJCL trains during",
   "50": "service reduction percentage",
   "126": "Bus 126",
   "1910": "old bridge year",

@@ -398,15 +398,15 @@ def replace_page_specific_content(html, translations, page_key):
         phase_banner = get_translation(translations, "common.phase_banner")
         if phase_banner:
             html = html.replace(
-                '<main class="container" id="main-content">',
-                f'<main class="container" id="main-content">\n    <div class="phase-banner">{phase_banner}</div>'
+                "Phase 2 cutover: Oct 11 – Nov 15, 2026. Weekday Midtown Direct trains go to Hoboken. Always verify with njtransit.com/portalcutover.",
+                phase_banner
             )
 
         # SEO summary
         seo_summary = get_translation(translations, "index.seo_summary")
         if seo_summary:
             html = html.replace(
-                "During the Phase 1 cutover (February 15 – March 15, 2026), NJ Transit rail service was reduced by approximately 50% as Amtrak connected the new Portal North Bridge. This tool shows how each line and station was affected. Phase 2 is expected fall 2026.",
+                "During the Phase 2 cutover (October 11 – November 15, 2026), NJ Transit operates on a single track between Newark and Secaucus while Amtrak connects the second track of Portal North Bridge. This tool shows how each line and station is affected. Station names stay in English, matching platform signs.",
                 seo_summary
             )
 
@@ -414,10 +414,10 @@ def replace_page_specific_content(html, translations, page_key):
         phase1 = get_translation(translations, "index.alert_phase1")
         details = get_translation(translations, "index.alert_details")
         if phase1:
-            html = html.replace('<strong>Phase 1 complete!</strong>', f'<strong>{phase1}</strong>')
+            html = html.replace('<strong>Phase 2 starts Oct 11.</strong>', f'<strong>{phase1}</strong>')
         if details:
             html = html.replace(
-                'Regular NJ Transit schedules resumed Mar 15 &middot; First track on the new Portal North Bridge enters service Mar 16 &middot; Phase 2 (second track) expected Fall 2026',
+                'Weekday Midtown Direct trains go to Hoboken through Nov 14 &middot; About 50% fewer trains through the Portal corridor &middot; Regular NJ Transit schedules expected Nov 15, subject to testing &middot; Verify at njtransit.com/portalcutover',
                 details.replace("&", "&amp;").replace("·", "&middot;")
             )
 
@@ -496,7 +496,7 @@ def replace_page_specific_content(html, translations, page_key):
 
         # Section descriptions
         for key, eng_text in [
-            ("index.cutover_summary_desc", "Starting February 15, the Portal North Bridge connection will reduce NJ Transit service for four weeks. Select your line and station above to see exactly what changes for you."),
+            ("index.cutover_summary_desc", "Starting October 11, the second Portal North Bridge track connection reduces NJ Transit service for five weeks. Select your line and station above to see exactly what changes for you."),
             ("index.hoboken_terminal_desc", "If your line is diverted to Hoboken, you may be arriving at Hoboken Terminal for the first time. Here's how to get from your train to PATH, the ferry, or Bus 126."),
             ("index.compare_callout_desc", "Our commute comparison tool shows you every route to your Manhattan destination with visual time breakdowns, so you can pick the fastest option for where you're actually going."),
         ]:
@@ -513,9 +513,9 @@ def replace_page_specific_content(html, translations, page_key):
         stat_weeks = get_translation(translations, "index.stat_4_weeks")
         stat_dates = get_translation(translations, "index.stat_dates")
         if stat_weeks:
-            html = html.replace('>4 weeks<', f'>{stat_weeks}<')
+            html = html.replace('>5 weeks<', f'>{stat_weeks}<')
         if stat_dates:
-            html = html.replace('>Feb 15 &ndash; Mar 15<', f'>{stat_dates}<')
+            html = html.replace('>Oct 11 &ndash; Nov 15<', f'>{stat_dates}<')
 
         # Line badge default
         line_badge = get_translation(translations, "index.line_badge_default")
@@ -684,13 +684,17 @@ def replace_page_specific_content(html, translations, page_key):
             ("index.tl_announce_title", "Cutover announced",
              "index.tl_announce_desc", "NJ Transit and Amtrak announce the Portal North Bridge cutover schedule and temporary service changes."),
             ("index.tl_tickets_title", "New ticket rules begin",
-             "index.tl_tickets_desc", "Midtown Direct riders should start buying Hoboken monthly passes (valid for Penn Station travel Feb 1–15)."),
+             "index.tl_tickets_desc", "Midtown Direct riders should buy Hoboken monthly, weekly, or FLEXPASS tickets for October and November (valid to Penn Station NY Oct 1–10 and Nov 15–30)."),
             ("index.tl_start_title", "Phase 1 begins",
              "index.tl_start_desc", "Temporary schedules take effect. Midtown Direct weekday trains diverted to Hoboken. Single-track operation between Newark and Secaucus."),
             ("index.tl_end_title", "Phase 1 complete",
              "index.tl_end_desc", "Regular NJ Transit schedules resumed. First track on the new Portal North Bridge enters passenger service March 16."),
-            ("index.tl_phase2_title", "Phase 2",
-             "index.tl_phase2_desc", "Second track cutover. Similar service disruptions expected. Dates TBA. After this, the old Portal Bridge is permanently retired."),
+            ("index.tl_phase2_title", "Phase 2 announced",
+             "index.tl_phase2_desc", "NJ Transit and Amtrak publish Phase 2 schedules and ticket rules for the second-track cutover."),
+            ("index.tl_p2_start_title", "Phase 2 begins",
+             "index.tl_p2_start_desc", "Temporary schedules take effect. Weekday Midtown Direct trains diverted to Hoboken. Single-track operation between Newark and Secaucus."),
+            ("index.tl_p2_end_title", "Regular schedules resume",
+             "index.tl_p2_end_desc", "NJ Transit regular schedules resume, subject to safety testing. Full normal service is expected November 16."),
         ]
         for title_key, eng_title, desc_key, eng_desc in tl_events:
             title = get_translation(translations, title_key)
@@ -705,7 +709,7 @@ def replace_page_specific_content(html, translations, page_key):
             ("index.res_cutover_title", "NJ Transit cutover page",
              "index.res_cutover_desc", "Official schedules, maps, and FAQs"),
             ("index.res_schedules_title", "Temporary train schedules",
-             "index.res_schedules_desc", "Line-by-line PDF schedules for Feb 15 – Mar 15"),
+             "index.res_schedules_desc", "Line-by-line PDF schedules for Oct 11 – Nov 15"),
             ("index.res_alerts_title", "Real-time travel alerts",
              "index.res_alerts_desc", "Live service status and delay notifications"),
             ("index.res_path_title", "PATH train schedules",
@@ -726,8 +730,8 @@ def replace_page_specific_content(html, translations, page_key):
         phase_banner = get_translation(translations, "common.phase_banner")
         if phase_banner:
             html = html.replace(
-                '<main class="container" id="main-content">',
-                f'<main class="container" id="main-content">\n    <div class="phase-banner">{phase_banner}</div>'
+                "Phase 2 cutover: Oct 11 – Nov 15, 2026. Weekday Midtown Direct trains go to Hoboken. Always verify with njtransit.com/portalcutover.",
+                phase_banner
             )
 
         # Hero section
@@ -818,17 +822,19 @@ def replace_page_specific_content(html, translations, page_key):
         phase_banner = get_translation(translations, "common.phase_banner")
         if phase_banner:
             html = html.replace(
-                '<main class="container" id="main-content">',
-                f'<main class="container" id="main-content">\n    <div class="phase-banner">{phase_banner}</div>'
+                "Phase 2 cutover: Oct 11 – Nov 15, 2026. Weekday Midtown Direct trains go to Hoboken. Always verify with njtransit.com/portalcutover.",
+                phase_banner
             )
 
         for key, eng_text in [
             ("map.hero_title", "Portal Bridge cutover map"),
-            ("map.hero_desc", "See the geography of the cutover: the Portal Bridge location, affected stations, key transfer hubs, and alternative routes."),
+            ("map.hero_desc", "Rail lines follow published NJ Transit shapes, not straight lines between stations. Station names stay in English, as they appear on platform signs."),
             ("map.filter_all", "All"),
             ("map.filter_transfer_hubs", "Transfer hubs"),
             ("map.legend_title", "Legend"),
             ("map.about_title", "About the Portal Bridge"),
+            ("map.download_png", "Download PNG"),
+            ("map.download_pdf", "Download PDF"),
         ]:
             translated = get_translation(translations, key)
             if translated:
@@ -838,6 +844,33 @@ def replace_page_specific_content(html, translations, page_key):
             html = html.replace(
                 "The Portal Bridge spans the Hackensack River in Kearny, NJ, between Newark and Secaucus. It is the single most critical piece of infrastructure on the Northeast Corridor between New York and Washington, D.C.",
                 about_desc
+            )
+        export_note = get_translation(translations, "map.export_note")
+        if export_note:
+            html = html.replace(
+                "Downloads a drawn map of the routes. This is not a photograph of a station or a screenshot of map tiles.",
+                export_note
+            )
+        seo_summary = get_translation(translations, "map.seo_summary")
+        if seo_summary:
+            html = html.replace(
+                "Interactive map of the Portal North Bridge Phase 2 cutover (Oct 11 – Nov 15, 2026): rail geometry from NJ Transit GTFS, the Hackensack River crossing in Kearny, affected stations, transfer hubs, and PATH, ferry, and bus alternatives.",
+                seo_summary
+            )
+        filter_aria = get_translation(translations, "map.filter_aria")
+        if filter_aria:
+            html = html.replace('aria-label="Filter map by line"', f'aria-label="{filter_aria}"')
+        canvas_aria = get_translation(translations, "map.canvas_aria")
+        if canvas_aria:
+            html = html.replace(
+                'aria-label="Interactive map showing Portal Bridge cutover stations and routes"',
+                f'aria-label="{canvas_aria}"'
+            )
+        old_portal = get_translation(translations, "map.legend_old_portal")
+        if old_portal:
+            html = html.replace(
+                '></span> Old Portal Bridge</div>',
+                f'></span> {old_portal}</div>'
             )
 
         # Legend items
@@ -862,7 +895,7 @@ def replace_page_specific_content(html, translations, page_key):
         ]:
             translated = get_translation(translations, key)
             if translated:
-                html = html.replace(f"<h4>{eng_text}</h4>", f"<h4>{translated}</h4>")
+                html = html.replace(f"<h3>{eng_text}</h3>", f"<h3>{translated}</h3>")
 
         # Bridge card list items
         bridge_items = {
@@ -874,10 +907,10 @@ def replace_page_specific_content(html, translations, page_key):
             "map.new_bridge_item2": 'Fixed-span design &mdash; never opens, never gets stuck',
             "map.new_bridge_item3": '50 feet higher than the old bridge, allowing boats to pass underneath',
             "map.new_bridge_item4": 'Part of the larger Gateway Program to modernize the corridor',
-            "map.cutover_item1": '<strong>Phase 1</strong> (Feb 15 &ndash; Mar 15, 2026): First track transferred to new bridge',
-            "map.cutover_item2": 'Requires single-track operations between Newark and Secaucus',
-            "map.cutover_item3": '50% service reduction across all lines',
-            "map.cutover_item4": '<strong>Phase 2</strong> (Fall 2026): Second track transferred, old bridge retired',
+            "map.cutover_item1": '<strong>Phase 1</strong> (Feb 15 &ndash; Mar 15, 2026): First track transferred to the new bridge',
+            "map.cutover_item2": '<strong>Phase 2</strong> (Oct 11 &ndash; Nov 15, 2026): Second track transferred; old swing bridge retired after this work',
+            "map.cutover_item3": 'Single-track operations between Newark Penn and Secaucus during each cutover (about 50% fewer trains through the Portal corridor)',
+            "map.cutover_item4": 'Weekday Midtown Direct trains diverted to Hoboken (Oct 11 – Nov 15, 2026); weekends still run to Penn Station NY',
         }
         for key, eng_text in bridge_items.items():
             translated = get_translation(translations, key)
@@ -998,6 +1031,7 @@ def replace_page_specific_content(html, translations, page_key):
             ("embed.cfg_tab_iframe", "Iframe"),
             ("embed.cfg_tab_script", "Script tag"),
             ("embed.cfg_tab_png", "Download PNG"),
+            ("embed.cfg_tab_pdf", "Download PDF"),
             ("embed.cfg_tab_html", "Download HTML"),
         ]:
             translated = get_translation(translations, key)
@@ -1021,6 +1055,15 @@ def replace_page_specific_content(html, translations, page_key):
         dl_png = get_translation(translations, "embed.cfg_download_png")
         if dl_png:
             html = html.replace('>Download PNG</button>', f'>{dl_png}</button>')
+        pdf_msg = get_translation(translations, "embed.cfg_pdf_msg")
+        if pdf_msg:
+            html = html.replace(
+                "Click the button below to export the info card as a PDF.",
+                pdf_msg
+            )
+        dl_pdf = get_translation(translations, "embed.cfg_download_pdf")
+        if dl_pdf:
+            html = html.replace('>Download PDF</button>', f'>{dl_pdf}</button>')
 
         html_msg = get_translation(translations, "embed.cfg_html_msg")
         if html_msg:
@@ -1845,6 +1888,7 @@ def replace_page_specific_content(html, translations, page_key):
         # H2 headings
         h2_map = [
             ("about.h2_translations", "How we produce translations"),
+            ("about.h2_signage", "How we match station signage"),
             ("about.h2_verification", "How we verify transit data"),
             ("about.h2_accessibility", "Our accessibility standards"),
             ("about.h2_philosophy", "Why we built it this way"),
@@ -1861,6 +1905,8 @@ def replace_page_specific_content(html, translations, page_key):
             "about.translations_p2": 'Translations are produced with the help of AI language models and reviewed for natural phrasing and accuracy. Each language gets its own complete set of HTML pages with translated navigation, labels, headings, descriptions, accessibility text, and metadata. This is not a browser auto-translate overlay &mdash; every translated page is a standalone document that works without JavaScript if necessary.',
             "about.translations_rules": "We follow specific rules about what gets translated and what doesn't:",
             "about.translations_fidelity": 'This is a deliberate choice: fidelity to what riders actually see and hear at the station matters more than linguistic consistency. A Spanish-speaking commuter looking at their phone needs to read "Tome el tren a Hoboken Terminal" &mdash; not "Tome el tren a Terminal de Hoboken" &mdash; because the sign above the platform says "Hoboken Terminal."',
+            "about.signage_p1": 'We studied NJ Transit graphics standards (Helvetica on station identification), the 1999 line-color system, the 2003 line symbols for limited-English riders, published rail maps, and the NJ Transit GTFS <code>route_color</code> values. We do not republish photographs of stations or signs. We recreate the cues riders already use: official line colors, English station names, and destination labels such as HOBOKEN and NEW YORK in the same lettering style as platform and train signs.',
+            "about.signage_p2": 'Montclair-Boonton is the salmon/coral used on current maps and GTFS (<code>#E66859</code>), not purple. Purple is the Pascack Valley Line. Using the wrong color would send limited-English riders to the wrong visual cue. Text on those colors is darkened or switched to black or white so contrast still meets WCAG AA.',
             "about.verification_p1": 'Every claim on this site &mdash; train counts, schedule changes, fare information, transfer directions &mdash; is traceable to an official source. We maintain a <a href="https://github.com/jamditis/reroute-nj/blob/main/data/sources.json" target="_blank" rel="noopener">citation database</a> linking 28 specific claims to the official NJ Transit, Amtrak, PATH, and NY Waterway pages they come from.',
             "about.verification_intro": "Our verification process:",
             "about.accessibility_p1": 'Accessibility is not a feature we added &mdash; it\'s a constraint we designed around. The site meets WCAG 2.1 AA, the international standard for web accessibility.',

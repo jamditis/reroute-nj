@@ -18,7 +18,7 @@ var RTL_LANGUAGES = ["ar"];
 var LTR_LANGUAGES = LANGUAGES.filter(function (l) { return RTL_LANGUAGES.indexOf(l) === -1; });
 
 // Transit-specific numbers that must be preserved across translations
-var TRANSIT_NUMBERS = ["133", "112", "109", "92"];
+var TRANSIT_NUMBERS = ["133", "113", "99", "87"];
 
 // HTML tags that commonly appear in translation values
 var HTML_TAG_RE = /<(strong|a|code|em|br)\b[^>]*>/g;
@@ -40,6 +40,11 @@ var PROPER_NOUN_KEYS = [
   "map.legend_title",
   "map.legend_portal_bridge",
   "map.legend_transfer_hub",
+  "map.legend_old_portal",
+  "js.map_popup_portal_loc",
+  "js.map_old_portal",
+  "embed.cfg_tab_pdf",
+  "embed.cfg_download_pdf",
   "embed.cfg_tab_iframe",
   "embed.cfg_type_card",
   "embed.cfg_type_widget",
@@ -447,7 +452,7 @@ LANGUAGES.forEach(function (lang) {
 // TEST 9: Transit-specific numbers preserved
 // ---------------------------------------------------------------------------
 
-console.log("\n--- Test 9: Transit-specific numbers preserved (133, 112, 109, 92) ---");
+console.log("\n--- Test 9: Transit-specific numbers preserved (133, 113, 99, 87) ---");
 
 LANGUAGES.forEach(function (lang) {
   if (lang === "en" || !flatTranslations[lang]) return;

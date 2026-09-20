@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Interactive map — Reroute NJ</title>
-  <meta name="description" content="Interactive map of the Portal Bridge cutover showing affected stations, transfer points, and alternative routes.">
+  <meta name="description" content="Interactive map of the Portal North Bridge Phase 2 cutover with NJ Transit rail geometry, stations, and transfer hubs.">
   <meta property="og:title" content="Interactive map — Reroute NJ">
-  <meta property="og:description" content="Interactive map of the Portal Bridge cutover showing affected stations, transfer points, and alternative routes.">
+  <meta property="og:description" content="Map of the Portal Bridge Phase 2 cutover showing rail lines, stations, and the Hackensack River crossing.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://reroutenj.org/map.html">
   <meta property="og:image" content="https://reroutenj.org/img/og-image.png">
@@ -14,7 +14,7 @@
   <meta property="og:image:height" content="1080">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Interactive map — Reroute NJ">
-  <meta name="twitter:description" content="Interactive map of the Portal Bridge cutover showing affected stations, transfer points, and alternative routes.">
+  <meta name="twitter:description" content="Map of the Portal Bridge Phase 2 cutover showing rail lines, stations, and the Hackensack River crossing.">
   <meta name="twitter:image" content="https://reroutenj.org/img/og-image.png">
   <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
   <link rel="canonical" href="https://reroutenj.org/map.html">
@@ -38,7 +38,7 @@
     "@type": "WebSite",
     "name": "Reroute NJ",
     "url": "https://reroutenj.org",
-    "description": "Portal North Bridge cutover resources for NJ Transit riders. Phase 1 archive and Phase 2 preparation.",
+    "description": "Portal North Bridge Phase 2 cutover tools for NJ Transit riders (Oct 11 – Nov 15, 2026).",
     "publisher": {
       "@type": "Organization",
       "name": "Reroute NJ",
@@ -190,14 +190,20 @@
   </nav>
 
   <main class="container" id="main-content">
-    <div class="phase-banner">This data reflects the Phase 1 cutover (Feb 15 – Mar 15, 2026). Phase 2 details will be added when announced.</div>
+    <div class="phase-banner">Phase 2 cutover: Oct 11 – Nov 15, 2026. Weekday Midtown Direct trains go to Hoboken. Always verify with njtransit.com/portalcutover.</div>
 
-    <p class="seo-summary">Interactive map showing the Portal Bridge location over the Hackensack River in Kearny, NJ, all affected NJ Transit stations, key transfer hubs (Hoboken Terminal, Secaucus Junction, Newark Penn), and alternative transit routes during the Feb 15 – Mar 15, 2026 cutover.</p>
+    <p class="seo-summary">Interactive map of the Portal North Bridge Phase 2 cutover (Oct 11 – Nov 15, 2026): rail geometry from NJ Transit GTFS, the Hackensack River crossing in Kearny, affected stations, transfer hubs, and PATH, ferry, and bus alternatives.</p>
 
     <section class="compare-hero">
       <h1>Portal Bridge cutover map</h1>
-      <p>See the geography of the cutover: the Portal Bridge location, affected stations, key transfer hubs, and alternative routes.</p>
+      <p>Rail lines follow published NJ Transit shapes, not straight lines between stations. Station names stay in English, as they appear on platform signs.</p>
     </section>
+
+    <div class="map-export-bar">
+      <button class="share-btn" id="map-download-png" type="button">Download PNG</button>
+      <button class="share-btn" id="map-download-pdf" type="button">Download PDF</button>
+      <p class="map-export-note">Downloads a drawn map of the routes. This is not a photograph of a station or a screenshot of map tiles.</p>
+    </div>
 
     <div class="map-filter-bar" id="map-filters" role="group" aria-label="Filter map by line">
       <button class="map-filter-btn active" data-filter="all" aria-pressed="true">All</button>
@@ -214,12 +220,13 @@
     <div class="map-legend">
       <div class="legend-title">Legend</div>
       <div class="legend-items">
-        <div class="legend-item"><span class="legend-dot" style="background:#e03030;"></span> Portal Bridge</div>
-        <div class="legend-item"><span class="legend-dot" style="background:#7b2d8e;"></span> Montclair-Boonton</div>
-        <div class="legend-item"><span class="legend-dot" style="background:#00a651;"></span> Morris &amp; Essex</div>
-        <div class="legend-item"><span class="legend-dot" style="background:#ee3a43;"></span> Northeast Corridor</div>
-        <div class="legend-item"><span class="legend-dot" style="background:#0082c8;"></span> North Jersey Coast</div>
-        <div class="legend-item"><span class="legend-dot" style="background:#faa634;"></span> Raritan Valley</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#e03030;"></span> Portal North Bridge</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#6b7280;"></span> Old Portal Bridge</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#E66859;"></span> Montclair-Boonton</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#08A652;"></span> Morris &amp; Essex</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#DD3439;"></span> Northeast Corridor</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#03A3DF;"></span> North Jersey Coast</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#F2A537;"></span> Raritan Valley</div>
         <div class="legend-item"><span class="legend-dot" style="background:#1a3a5c; border: 2px solid #fff; box-shadow: 0 0 0 1px #1a3a5c;"></span> Transfer hub</div>
       </div>
     </div>
@@ -251,10 +258,10 @@
         <div class="secaucus-card">
           <h3>The cutover</h3>
           <ul>
-            <li><strong>Phase 1</strong> (Feb 15 &ndash; Mar 15, 2026): First track transferred to new bridge</li>
-            <li>Requires single-track operations between Newark and Secaucus</li>
-            <li>50% service reduction across all lines</li>
-            <li><strong>Phase 2</strong> (Fall 2026): Second track transferred, old bridge retired</li>
+            <li><strong>Phase 1</strong> (Feb 15 &ndash; Mar 15, 2026): First track transferred to the new bridge</li>
+            <li><strong>Phase 2</strong> (Oct 11 &ndash; Nov 15, 2026): Second track transferred; old swing bridge retired after this work</li>
+            <li>Single-track operations between Newark Penn and Secaucus during each cutover (about 50% fewer trains through the Portal corridor)</li>
+            <li>Weekday Midtown Direct trains diverted to Hoboken (Oct 11 – Nov 15, 2026); weekends still run to Penn Station NY</li>
           </ul>
         </div>
       </div>

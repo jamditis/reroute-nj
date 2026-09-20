@@ -57,11 +57,18 @@
   --warning-bg: #fff8e1;
   --danger: #c62828;
   --danger-bg: #fce4ec;
-  --line-montclair-boonton: #7b2d8e;
-  --line-morris-essex: #007a3d;
-  --line-northeast-corridor: #c5303a;
-  --line-north-jersey-coast: #006ba1;
-  --line-raritan-valley: #8a5d00;
+  --line-montclair-boonton: #E66859;
+  --line-morris-essex: #08A652;
+  --line-northeast-corridor: #DD3439;
+  --line-north-jersey-coast: #03A3DF;
+  --line-raritan-valley: #F2A537;
+  --line-montclair-boonton-text: #9B3228;
+  --line-morris-essex-text: #00753A;
+  --line-northeast-corridor-text: #B42328;
+  --line-north-jersey-coast-text: #00719B;
+  --line-raritan-valley-text: #8A5A00;
+  --sign-bg: #111111;
+  --sign-fg: #ffffff;
   --radius: 8px;
   --radius-lg: 12px;
   --shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
@@ -260,8 +267,142 @@ main.container {
 }
 
 .line-badge.montclair-boonton {
-  background: #7b2d8e;
+  background: var(--line-montclair-boonton);
+  color: #111;
+}
+
+.line-btn[data-line="montclair-boonton"].active {
+  background: var(--line-montclair-boonton);
+  border-color: var(--line-montclair-boonton);
+  color: #111;
+  box-shadow: none;
+}
+
+.line-btn[data-line="morris-essex"].active {
+  background: var(--line-morris-essex);
+  border-color: var(--line-morris-essex);
+  color: #111;
+  box-shadow: none;
+}
+
+.line-btn[data-line="northeast-corridor"].active {
+  background: var(--line-northeast-corridor);
+  border-color: var(--line-northeast-corridor);
   color: #fff;
+  box-shadow: none;
+}
+
+.line-btn[data-line="north-jersey-coast"].active {
+  background: var(--line-north-jersey-coast);
+  border-color: var(--line-north-jersey-coast);
+  color: #111;
+  box-shadow: none;
+}
+
+.line-btn[data-line="raritan-valley"].active {
+  background: var(--line-raritan-valley);
+  border-color: var(--line-raritan-valley);
+  color: #111;
+  box-shadow: none;
+}
+
+/* Platform-style station name: Helvetica, English, color stripe.
+   Recreates what riders see on canopy/platform identification.
+   Not a photograph. */
+.station-sign {
+  font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+  background: var(--sign-bg);
+  color: var(--sign-fg);
+  padding: 0;
+  margin: 0 0 1rem;
+}
+
+.station-sign-stripe {
+  height: 10px;
+}
+
+.station-sign-body {
+  padding: 0.85rem 1rem 1rem;
+}
+
+.station-sign-name {
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.15;
+}
+
+.dest-sign {
+  display: inline-block;
+  margin-top: 0.5rem;
+  background: #fff;
+  color: #111;
+  font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.28rem 0.55rem;
+}
+
+.path-sign {
+  background: #0039a6;
+  color: #fff;
+}
+
+.map-export-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  margin: 0 0 1rem;
+}
+
+.map-export-bar .share-btn,
+.map-export-bar button {
+  min-height: 44px;
+}
+
+.map-export-note {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  flex: 1 1 12rem;
+}
+
+.map-label-portal {
+  background: #e03030;
+  color: #fff;
+  font-weight: 700;
+  font-size: 10px;
+  padding: 3px 8px;
+  white-space: nowrap;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+}
+
+.map-load-error {
+  padding: 1.5rem;
+  color: var(--text);
+}
+
+.extra-notes {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  border-left: 4px solid var(--primary);
+  background: var(--bg);
+  font-size: 0.9rem;
+}
+
+body[data-contrast="high"] .station-sign {
+  background: #000;
+  color: #fff;
+  border: 2px solid #ff0;
+}
+
+body[data-contrast="high"] .dest-sign {
+  background: #ff0;
+  color: #000;
 }
 
 .line-nav {

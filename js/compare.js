@@ -112,7 +112,7 @@
     "montclair-boonton": {
       name: "Montclair-Boonton Line",
       shortName: "Montclair-Boonton",
-      color: "#7b2d8e",
+      color: "#E66859",
       impactType: "hoboken-diversion",
       hubName: "Hoboken",
       branches: { montclair: "Montclair branch", boonton: "Boonton branch" },
@@ -144,7 +144,7 @@
     "morris-essex": {
       name: "Morris & Essex Lines",
       shortName: "Morris & Essex",
-      color: "#00a651",
+      color: "#08A652",
       impactType: "hoboken-diversion",
       hubName: "Hoboken",
       branches: { morristown: "Morristown Line", gladstone: "Gladstone Branch" },
@@ -181,7 +181,7 @@
     "northeast-corridor": {
       name: "Northeast Corridor",
       shortName: "Northeast Corridor",
-      color: "#ee3a43",
+      color: "#DD3439",
       impactType: "reduced-service",
       hubName: "Penn Station NY",
       branches: { nec: "Northeast Corridor" },
@@ -206,7 +206,7 @@
     "north-jersey-coast": {
       name: "North Jersey Coast Line",
       shortName: "North Jersey Coast",
-      color: "#0082c8",
+      color: "#03A3DF",
       impactType: "reduced-service",
       hubName: "Penn Station NY",
       branches: { njcl: "North Jersey Coast Line" },
@@ -234,7 +234,7 @@
     "raritan-valley": {
       name: "Raritan Valley Line",
       shortName: "Raritan Valley",
-      color: "#faa634",
+      color: "#F2A537",
       impactType: "newark-termination",
       hubName: "Newark Penn",
       branches: { rvl: "Raritan Valley Line" },
@@ -584,7 +584,7 @@
     // Header
     $resultsHeader.innerHTML =
       '<h2>' + esc(currentStation.name) + " \u2192 " + esc(currentDest.name) + "</h2>" +
-      '<p class="results-subtitle">' + esc(line.name) + ' &middot; Cutover options (Feb 15 – Mar 15)</p>';
+      '<p class="results-subtitle">' + esc(line.name) + ' &middot; Cutover options (Oct 11 \u2013 Nov 15)</p>';
 
     // Normal commute reference
     var normalTotal = currentStation.normalTimeToPenn + currentDest.fromPennNY;

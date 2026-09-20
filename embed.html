@@ -37,7 +37,7 @@
     "@type": "WebSite",
     "name": "Reroute NJ",
     "url": "https://reroutenj.org",
-    "description": "Free tools to help NJ Transit riders navigate the Portal North Bridge cutover (Feb 15 – Mar 15, 2026)",
+    "description": "Portal North Bridge Phase 2 cutover tools for NJ Transit riders (Oct 11 – Nov 15, 2026).",
     "publisher": {
       "@type": "Organization",
       "name": "Reroute NJ",
@@ -230,6 +230,7 @@
             <button class="cfg-tab active" role="tab" aria-selected="true" aria-controls="cfg-panel-iframe" id="cfg-tab-iframe" data-tab="iframe" type="button">Iframe</button>
             <button class="cfg-tab" role="tab" aria-selected="false" aria-controls="cfg-panel-script" id="cfg-tab-script" data-tab="script" type="button">Script tag</button>
             <button class="cfg-tab" role="tab" aria-selected="false" aria-controls="cfg-panel-png" id="cfg-tab-png" data-tab="png" type="button">Download PNG</button>
+            <button class="cfg-tab" role="tab" aria-selected="false" aria-controls="cfg-panel-pdf" id="cfg-tab-pdf" data-tab="pdf" type="button">Download PDF</button>
             <button class="cfg-tab" role="tab" aria-selected="false" aria-controls="cfg-panel-html" id="cfg-tab-html" data-tab="html" type="button">Download HTML</button>
           </div>
           <!-- Iframe panel -->
@@ -253,6 +254,13 @@
             <div class="cfg-download-area" id="cfg-png-area">
               <p class="cfg-download-msg" id="cfg-png-msg">Click the button below to export the info card as a PNG image.</p>
               <button class="share-btn cfg-download-btn" id="cfg-download-png" type="button">Download PNG</button>
+            </div>
+          </div>
+          <!-- PDF panel -->
+          <div class="cfg-panel hidden" role="tabpanel" id="cfg-panel-pdf" aria-labelledby="cfg-tab-pdf">
+            <div class="cfg-download-area" id="cfg-pdf-area">
+              <p class="cfg-download-msg" id="cfg-pdf-msg">Click the button below to export the info card as a PDF.</p>
+              <button class="share-btn cfg-download-btn" id="cfg-download-pdf" type="button">Download PDF</button>
             </div>
           </div>
           <!-- HTML download panel -->

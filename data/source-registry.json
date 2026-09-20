@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-12T22:10:48Z",
+  "updatedAt": "2026-09-20T00:00:00Z",
   "entries": [
     {
       "id": "official-cutover-portal-page",
@@ -8,9 +8,33 @@
       "sourceType": "official",
       "verificationMethod": "manual",
       "verificationWindowHours": 24,
-      "lastVerified": "2026-03-12T22:10:48Z",
+      "lastVerified": "2026-09-20T00:00:00Z",
       "urls": [
         "https://www.njtransit.com/portalcutover"
+      ]
+    },
+    {
+      "id": "official-phase2-final-track",
+      "claimArea": "cutover-policy",
+      "claim": "Phase 2 dates, Midtown Direct Hoboken diversions, and ticket rules for the second-track cutover",
+      "sourceType": "official",
+      "verificationMethod": "manual",
+      "verificationWindowHours": 24,
+      "lastVerified": "2026-09-20T00:00:00Z",
+      "urls": [
+        "https://www.njtransit.com/press-releases/portal-north-bridge-enters-final-phase-construction-work-begins-put-final-track"
+      ]
+    },
+    {
+      "id": "official-phase2-briefing",
+      "claimArea": "service-frequency",
+      "claim": "Phase 2 weekday train counts from the Sept 17 2026 briefing document",
+      "sourceType": "official",
+      "verificationMethod": "manual",
+      "verificationWindowHours": 24,
+      "lastVerified": "2026-09-20T00:00:00Z",
+      "urls": [
+        "https://content.njtransit.com/sites/default/files/marketing/website/pdf/portal/Portal%20Cutover%20Briefing%20Document%20091726.pdf"
       ]
     },
     {

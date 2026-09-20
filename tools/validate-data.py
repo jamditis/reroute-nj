@@ -96,17 +96,18 @@ KNOWN_IMPACTS = {
     "raritan-valley": "newark-termination",
 }
 
-# Verified train counts (from NJ Transit official announcements, Jan 2026)
+# Verified weekday train counts (NJ Transit Phase 2 briefing, Sept 2026)
 VERIFIED_TRAIN_COUNTS = {
     "montclair-boonton": {"before": 64, "after": 60},
-    "morris-essex": {"before": 149, "after": 141},
-    "northeast-corridor": {"before": 133, "after": 112},
-    "north-jersey-coast": {"before": 109, "after": 92},
+    "morris-essex": {"before": 148, "after": 139},
+    "northeast-corridor": {"before": 133, "after": 113},
+    "north-jersey-coast": {"before": 99, "after": 87},
+    "raritan-valley": {"before": 51, "after": 50},
 }
 
-# Cutover dates (verified from Amtrak/NJ Transit press releases)
-CUTOVER_START = datetime(2026, 2, 15)
-CUTOVER_END = datetime(2026, 3, 15)
+# Cutover dates (njtransit.com/portalcutover, Sept 17 2026 briefing)
+CUTOVER_START = datetime(2026, 10, 11)
+CUTOVER_END = datetime(2026, 11, 15)
 
 # ─── Helpers ──────────────────────────────────────────────────────────────────
 
@@ -294,19 +295,19 @@ def validate_cutover_dates(result):
 
     if start_match:
         start_str = start_match.group(1)
-        if "2026-02-15" in start_str:
+        if "2026-10-11" in start_str:
             result.ok(f"CUTOVER_START = {start_str} (correct)")
         else:
-            result.error(f"CUTOVER_START = {start_str} (should be 2026-02-15)")
+            result.error(f"CUTOVER_START = {start_str} (should be 2026-10-11)")
     else:
         result.error("CUTOVER_START not found in shared.js")
 
     if end_match:
         end_str = end_match.group(1)
-        if "2026-03-15" in end_str:
+        if "2026-11-15" in end_str:
             result.ok(f"CUTOVER_END = {end_str} (correct)")
         else:
-            result.error(f"CUTOVER_END = {end_str} (should be 2026-03-15)")
+            result.error(f"CUTOVER_END = {end_str} (should be 2026-11-15)")
     else:
         result.error("CUTOVER_END not found in shared.js")
 
@@ -627,6 +628,28 @@ def validate_sources_json(result):
                 result.ok(f"Sources verified {days_old} day(s) ago")
         except (ValueError, TypeError):
             result.warn("Cannot parse lastVerified date in sources.json")
+
+    stale_claims = []
+    for cid, claim in claims.items():
+        raw = claim.get("lastVerified", "")
+        if not raw or claim.get("status") != "verified":
+            continue
+        try:
+            cdate = datetime.fromisoformat(str(raw).replace("Z", "+00:00")).replace(tzinfo=None)
+        except (ValueError, TypeError):
+            continue
+        if (datetime.now() - cdate).days > 90:
+            stale_claims.append(cid)
+    if stale_claims:
+        preview = ", ".join(stale_claims[:8])
+        extra = "" if len(stale_claims) <= 8 else f" (+{len(stale_claims) - 8} more)"
+        result.warn(
+            f"{len(stale_claims)} verified claim(s) last checked more than 90 days ago: "
+            + preview
+            + extra
+        )
+    else:
+        result.ok("No verified claims older than 90 days")
 
     # Cross-reference: check that LINE_DATA source URLs match sources.json
     line_data = parse_line_data()

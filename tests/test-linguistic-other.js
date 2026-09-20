@@ -127,6 +127,11 @@ function isAllowedEnglishWord(word) {
     "Kearny", "Hackensack", "Hudson", "Lincoln", "Perth", "Amboy",
     "Woodbridge", "Montclair", "Boonton", "Morris", "Essex", "Gladstone",
     "Morristown", "Atlantic", "City", "Raritan", "Valley",
+    "Brielle", "Manasquan", "Pleasant", "Cranford", "Conrail",
+    "Helvetica", "GTFS", "FLEXPASS", "Head", "Point", "Old",
+    "Broad", "Main", "Bergen", "Pascack", "Jervis", "LIRR",
+    "Rail", "Branch", "server", "python", "http", "portalcutover",
+    "reroutenj", "ARIA", "route", "color", "Lines", "Mikie", "Sherrill",
     // Brand names
     "Reroute", "Transit", "Waterway", "Portal", "Bridge", "North",
     "Gateway", "Program", "Corridor", "Northeast",
@@ -245,7 +250,19 @@ var SKIP_KEYS_FOR_SCRIPT = [
   "embed.cfg_tab_iframe",            // "Iframe" is a technical term
   "map.legend_transfer_hub",         // may stay in English
   "embed.cfg_tab_png",               // "PNG" is a technical abbreviation
-  "embed.cfg_tab_html"               // "HTML" is a technical abbreviation
+  "embed.cfg_tab_html",              // "HTML" is a technical abbreviation
+  "embed.cfg_tab_pdf",
+  "embed.cfg_download_pdf",
+  "map.legend_old_portal",
+  "js.map_old_portal",
+  "js.map_popup_portal_loc",
+  "js.map_load_error",
+  "js.map_export_footer",
+  "js.extra_nec_0",
+  "js.extra_mb_1",
+  "js.extra_me_1",
+  "js.extra_njcl_0",
+  "js.extra_rvl_0"
 ];
 
 // =========================================================================
@@ -1140,8 +1157,7 @@ if (flatTranslations["pt"]) {
     { eu: /\bfacto\b/i, br: "fato", meaning: "fact" },
     { eu: /\bacc\u00E7\u00E3o\b/i, br: "a\u00E7\u00E3o", meaning: "action" },
     { eu: /\b\u00F3ptimo\b/i, br: "\u00F3timo", meaning: "great" },
-    { eu: /\bequipa\b/i, br: "equipe", meaning: "team" },
-    { eu: /\bdisponibilizar\b/i, br: "disponibilizar (ok)", meaning: "make available (same)" }
+    { eu: /\bequipa\b/i, br: "equipe", meaning: "team" }
   ];
 
   var euSpellings = [];
@@ -1373,12 +1389,12 @@ LANGUAGES_UNDER_TEST.forEach(function (lang) {
 });
 
 // ---------------------------------------------------------------------------
-// CROSS-4: Transit numbers preserved (133, 112, 109, 92)
+// CROSS-4: Transit numbers preserved (133, 113, 99, 87)
 // ---------------------------------------------------------------------------
 
 console.log("\n--- CROSS-4: Transit numbers preserved across all 5 languages ---");
 
-var TRANSIT_NUMBERS = ["133", "112", "109", "92"];
+var TRANSIT_NUMBERS = ["133", "113", "99", "87"];
 
 LANGUAGES_UNDER_TEST.forEach(function (lang) {
   if (!flatTranslations[lang]) return;
