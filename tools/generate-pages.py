@@ -1031,6 +1031,7 @@ def replace_page_specific_content(html, translations, page_key):
             ("embed.cfg_tab_iframe", "Iframe"),
             ("embed.cfg_tab_script", "Script tag"),
             ("embed.cfg_tab_png", "Download PNG"),
+            ("embed.cfg_tab_pdf", "Download PDF"),
             ("embed.cfg_tab_html", "Download HTML"),
         ]:
             translated = get_translation(translations, key)
@@ -1054,6 +1055,15 @@ def replace_page_specific_content(html, translations, page_key):
         dl_png = get_translation(translations, "embed.cfg_download_png")
         if dl_png:
             html = html.replace('>Download PNG</button>', f'>{dl_png}</button>')
+        pdf_msg = get_translation(translations, "embed.cfg_pdf_msg")
+        if pdf_msg:
+            html = html.replace(
+                "Click the button below to export the info card as a PDF.",
+                pdf_msg
+            )
+        dl_pdf = get_translation(translations, "embed.cfg_download_pdf")
+        if dl_pdf:
+            html = html.replace('>Download PDF</button>', f'>{dl_pdf}</button>')
 
         html_msg = get_translation(translations, "embed.cfg_html_msg")
         if html_msg:

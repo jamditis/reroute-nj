@@ -350,7 +350,10 @@
     "fork_step1": "<a href=\"https://github.com/jamditis/reroute-nj\" target=\"_blank\" rel=\"noopener\">GitHub રિપોઝિટરી</a>ને તમારી સંસ્થાના એકાઉન્ટમાં ફોર્ક કરો.",
     "fork_step3": "બ્રાન્ડ નામ, લોગો અને ફૂટર ક્રેડિટ તમારા પોતાના સાથે બદલો.",
     "fork_step4": "GitHub Pages, Netlify, Vercel અથવા તમારા પોતાના સર્વર પર ડિપ્લોય કરો. બિલ્ડ સ્ટેપની જરૂર નથી.",
-    "contribute_intro": "Reroute NJ એક સામુદાયિક પ્રોજેક્ટ છે. તમે કેવી રીતે મદદ કરી શકો તે અહીં છે."
+    "contribute_intro": "Reroute NJ એક સામુદાયિક પ્રોજેક્ટ છે. તમે કેવી રીતે મદદ કરી શકો તે અહીં છે.",
+    "cfg_tab_pdf": "PDF ડાઉનલોડ કરો",
+    "cfg_pdf_msg": "માહિતી કાર્ડને PDF તરીકે નિકાસ કરવા નીચેનું બટન ક્લિક કરો.",
+    "cfg_download_pdf": "PDF ડાઉનલોડ કરો"
   },
   "card": {
     "impact_hoboken_diversion": "Hoboken તરફ વાળવામાં આવ્યું",
@@ -451,7 +454,17 @@
     "hub_path_33": "Hobokenથી PATH",
     "hub_ferry_39": "Hobokenથી NY Waterway",
     "hub_pabt": "Hobokenથી બસ 126",
-    "hub_wtc": "Newarkથી PATH"
+    "hub_wtc": "Newarkથી PATH",
+    "embed_png_msg": "માહિતી કાર્ડને PNG તરીકે નિકાસ કરવા નીચેનું બટન ક્લિક કરો.",
+    "embed_pdf_msg": "માહિતી કાર્ડને PDF તરીકે નિકાસ કરવા નીચેનું બટન ક્લિક કરો.",
+    "embed_html_msg": "માહિતી કાર્ડની સ્વતંત્ર HTML ફાઇલ ડાઉનલોડ કરવા નીચેનું બટન ક્લિક કરો.",
+    "embed_png_only": "PNG ડાઉનલોડ ફક્ત માહિતી કાર્ડ માટે ઉપલબ્ધ છે.",
+    "embed_pdf_only": "PDF ડાઉનલોડ ફક્ત માહિતી કાર્ડ માટે ઉપલબ્ધ છે.",
+    "embed_html_only": "HTML ડાઉનલોડ ફક્ત માહિતી કાર્ડ માટે ઉપલબ્ધ છે.",
+    "embed_png_unavailable": "PNG નિકાસ ઉપલબ્ધ નથી. કાર્ડ પેજ હજુ લોડ થઈ રહ્યું હોઈ શકે.",
+    "embed_pdf_unavailable": "PDF નિકાસ ઉપલબ્ધ નથી. કાર્ડ પેજ હજુ લોડ થઈ રહ્યું હોઈ શકે.",
+    "embed_png_cors": "PNG નિકાસ થઈ શક્યું નહીં. સ્થાનિક પ્રિવ્યૂમાં ક્રોસ-ઑરિજિન મર્યાદા હોઈ શકે.",
+    "embed_pdf_cors": "PDF નિકાસ થઈ શક્યું નહીં. સ્થાનિક પ્રિવ્યૂમાં ક્રોસ-ઑરિજિન મર્યાદા હોઈ શકે."
   },
   "blog": {
     "title": "બ્લોગ — Reroute NJ",

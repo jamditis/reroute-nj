@@ -350,7 +350,10 @@
     "fork_step1": "I-fork ang <a href=\"https://github.com/jamditis/reroute-nj\" target=\"_blank\" rel=\"noopener\">GitHub repository</a> sa account ng iyong organisasyon.",
     "fork_step3": "Palitan ang brand name, logo, at footer credit ng iyong sarili.",
     "fork_step4": "I-deploy sa GitHub Pages, Netlify, Vercel, o sa sarili mong server. Hindi kailangan ng build step.",
-    "contribute_intro": "Ang Reroute NJ ay isang community project. Narito kung paano ka makakatulong."
+    "contribute_intro": "Ang Reroute NJ ay isang community project. Narito kung paano ka makakatulong.",
+    "cfg_tab_pdf": "I-download ang PDF",
+    "cfg_pdf_msg": "I-click ang button sa ibaba para i-export ang info card bilang PDF.",
+    "cfg_download_pdf": "I-download ang PDF"
   },
   "card": {
     "impact_hoboken_diversion": "Na-divert sa Hoboken",
@@ -451,7 +454,17 @@
     "hub_path_33": "PATH mula Hoboken",
     "hub_ferry_39": "NY Waterway mula Hoboken",
     "hub_pabt": "Bus 126 mula Hoboken",
-    "hub_wtc": "PATH mula Newark"
+    "hub_wtc": "PATH mula Newark",
+    "embed_png_msg": "I-click ang button sa ibaba para i-export ang info card bilang PNG.",
+    "embed_pdf_msg": "I-click ang button sa ibaba para i-export ang info card bilang PDF.",
+    "embed_html_msg": "I-click ang button sa ibaba para i-download ang self-contained HTML file ng info card.",
+    "embed_png_only": "Available lang ang PNG download para sa info cards.",
+    "embed_pdf_only": "Available lang ang PDF download para sa info cards.",
+    "embed_html_only": "Available lang ang HTML download para sa info cards.",
+    "embed_png_unavailable": "Hindi available ang PNG export. Maaaring naglo-load pa ang card page.",
+    "embed_pdf_unavailable": "Hindi available ang PDF export. Maaaring naglo-load pa ang card page.",
+    "embed_png_cors": "Hindi ma-export ang PNG. Maaaring cross-origin restriction ito sa local preview.",
+    "embed_pdf_cors": "Hindi ma-export ang PDF. Maaaring cross-origin restriction ito sa local preview."
   },
   "blog": {
     "title": "Blog — Reroute NJ",

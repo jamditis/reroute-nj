@@ -350,7 +350,10 @@
     "fork_step1": "<a href=\"https://github.com/jamditis/reroute-nj\" target=\"_blank\" rel=\"noopener\">GitHub रिपॉजिटरी</a> को अपनी संस्था के खाते में फोर्क करें।",
     "fork_step3": "ब्रांड नाम, लोगो और फुटर क्रेडिट अपने से बदलें।",
     "fork_step4": "GitHub Pages, Netlify, Vercel या अपने सर्वर पर डिप्लॉय करें। बिल्ड स्टेप की जरूरत नहीं।",
-    "contribute_intro": "Reroute NJ एक सामुदायिक प्रोजेक्ट है। यहाँ बताया गया है कि आप कैसे मदद कर सकते हैं।"
+    "contribute_intro": "Reroute NJ एक सामुदायिक प्रोजेक्ट है। यहाँ बताया गया है कि आप कैसे मदद कर सकते हैं।",
+    "cfg_tab_pdf": "PDF डाउनलोड करें",
+    "cfg_pdf_msg": "जानकारी कार्ड को PDF के रूप में निर्यात करने के लिए नीचे बटन पर क्लिक करें.",
+    "cfg_download_pdf": "PDF डाउनलोड करें"
   },
   "card": {
     "impact_hoboken_diversion": "Hoboken की ओर मोड़ा गया",
@@ -451,7 +454,17 @@
     "hub_path_33": "Hoboken से PATH",
     "hub_ferry_39": "Hoboken से NY Waterway",
     "hub_pabt": "Hoboken से बस 126",
-    "hub_wtc": "Newark से PATH"
+    "hub_wtc": "Newark से PATH",
+    "embed_png_msg": "जानकारी कार्ड को PNG के रूप में निर्यात करने के लिए नीचे बटन पर क्लिक करें.",
+    "embed_pdf_msg": "जानकारी कार्ड को PDF के रूप में निर्यात करने के लिए नीचे बटन पर क्लिक करें.",
+    "embed_html_msg": "जानकारी कार्ड की स्वतंत्र HTML फ़ाइल डाउनलोड करने के लिए नीचे बटन पर क्लिक करें.",
+    "embed_png_only": "PNG डाउनलोड केवल जानकारी कार्ड के लिए उपलब्ध है.",
+    "embed_pdf_only": "PDF डाउनलोड केवल जानकारी कार्ड के लिए उपलब्ध है.",
+    "embed_html_only": "HTML डाउनलोड केवल जानकारी कार्ड के लिए उपलब्ध है.",
+    "embed_png_unavailable": "PNG निर्यात उपलब्ध नहीं है. कार्ड पेज अभी लोड हो रहा हो सकता है.",
+    "embed_pdf_unavailable": "PDF निर्यात उपलब्ध नहीं है. कार्ड पेज अभी लोड हो रहा हो सकता है.",
+    "embed_png_cors": "PNG निर्यात नहीं हो सका. स्थानीय पूर्वावलोकन में क्रॉस-ऑरिजिन रोक हो सकती है.",
+    "embed_pdf_cors": "PDF निर्यात नहीं हो सका. स्थानीय पूर्वावलोकन में क्रॉस-ऑरिजिन रोक हो सकती है."
   },
   "blog": {
     "title": "ब्लॉग — Reroute NJ",

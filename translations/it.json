@@ -350,7 +350,10 @@
     "fork_step1": "Fai il fork del <a href=\"https://github.com/jamditis/reroute-nj\" target=\"_blank\" rel=\"noopener\">repository GitHub</a> nell'account della tua organizzazione.",
     "fork_step3": "Sostituisci il nome del brand, il logo e il credito nel footer con i tuoi.",
     "fork_step4": "Distribuisci su GitHub Pages, Netlify, Vercel o il tuo server. Nessun passaggio di build necessario.",
-    "contribute_intro": "Reroute NJ è un progetto comunitario. Ecco come puoi aiutare."
+    "contribute_intro": "Reroute NJ è un progetto comunitario. Ecco come puoi aiutare.",
+    "cfg_tab_pdf": "Scarica PDF",
+    "cfg_pdf_msg": "Fai clic sul pulsante sotto per esportare la scheda informativa come PDF.",
+    "cfg_download_pdf": "Scarica PDF"
   },
   "card": {
     "impact_hoboken_diversion": "Deviato su Hoboken",
@@ -451,7 +454,17 @@
     "hub_path_33": "PATH da Hoboken",
     "hub_ferry_39": "NY Waterway da Hoboken",
     "hub_pabt": "Bus 126 da Hoboken",
-    "hub_wtc": "PATH da Newark"
+    "hub_wtc": "PATH da Newark",
+    "embed_png_msg": "Fai clic sul pulsante sotto per esportare la scheda informativa come immagine PNG.",
+    "embed_pdf_msg": "Fai clic sul pulsante sotto per esportare la scheda informativa come PDF.",
+    "embed_html_msg": "Fai clic sul pulsante sotto per scaricare un file HTML autonomo della scheda informativa.",
+    "embed_png_only": "Il download PNG è disponibile solo per le schede informative.",
+    "embed_pdf_only": "Il download PDF è disponibile solo per le schede informative.",
+    "embed_html_only": "Il download HTML è disponibile solo per le schede informative.",
+    "embed_png_unavailable": "Esportazione PNG non disponibile. La pagina della scheda potrebbe essere ancora in caricamento.",
+    "embed_pdf_unavailable": "Esportazione PDF non disponibile. La pagina della scheda potrebbe essere ancora in caricamento.",
+    "embed_png_cors": "Impossibile esportare PNG. Potrebbe essere una restrizione cross-origin in anteprima locale.",
+    "embed_pdf_cors": "Impossibile esportare PDF. Potrebbe essere una restrizione cross-origin in anteprima locale."
   },
   "blog": {
     "title": "Blog — Reroute NJ",

@@ -350,7 +350,10 @@
     "fork_step1": "انسخ <a href=\"https://github.com/jamditis/reroute-nj\" target=\"_blank\" rel=\"noopener\">مستودع GitHub</a> إلى حساب مؤسستك.",
     "fork_step3": "استبدل اسم العلامة التجارية والشعار ورصيد التذييل بعلامتك الخاصة.",
     "fork_step4": "انشر على GitHub Pages أو Netlify أو Vercel أو خادمك الخاص. لا حاجة لخطوة بناء.",
-    "contribute_intro": "Reroute NJ مشروع مجتمعي. إليك كيف يمكنك المساعدة."
+    "contribute_intro": "Reroute NJ مشروع مجتمعي. إليك كيف يمكنك المساعدة.",
+    "cfg_tab_pdf": "تنزيل PDF",
+    "cfg_pdf_msg": "انقر الزر أدناه لتصدير بطاقة المعلومات كملف PDF.",
+    "cfg_download_pdf": "تنزيل PDF"
   },
   "card": {
     "impact_hoboken_diversion": "محوّل إلى Hoboken",
@@ -451,7 +454,17 @@
     "hub_path_33": "PATH من Hoboken",
     "hub_ferry_39": "NY Waterway من Hoboken",
     "hub_pabt": "الحافلة 126 من Hoboken",
-    "hub_wtc": "PATH من Newark"
+    "hub_wtc": "PATH من Newark",
+    "embed_png_msg": "انقر الزر أدناه لتصدير بطاقة المعلومات كصورة PNG.",
+    "embed_pdf_msg": "انقر الزر أدناه لتصدير بطاقة المعلومات كملف PDF.",
+    "embed_html_msg": "انقر الزر أدناه لتنزيل ملف HTML مستقل لبطاقة المعلومات.",
+    "embed_png_only": "تنزيل PNG متاح لبطاقات المعلومات فقط.",
+    "embed_pdf_only": "تنزيل PDF متاح لبطاقات المعلومات فقط.",
+    "embed_html_only": "تنزيل HTML متاح لبطاقات المعلومات فقط.",
+    "embed_png_unavailable": "تصدير PNG غير متاح. قد تكون صفحة البطاقة ما زالت تُحمَّل.",
+    "embed_pdf_unavailable": "تصدير PDF غير متاح. قد تكون صفحة البطاقة ما زالت تُحمَّل.",
+    "embed_png_cors": "تعذر تصدير PNG. قد يكون ذلك قيد مصدر مشترك عند المعاينة محلياً.",
+    "embed_pdf_cors": "تعذر تصدير PDF. قد يكون ذلك قيد مصدر مشترك عند المعاينة محلياً."
   },
   "blog": {
     "title": "مدونة — Reroute NJ",

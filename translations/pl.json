@@ -350,7 +350,10 @@
     "fork_step1": "Zforkuj <a href=\"https://github.com/jamditis/reroute-nj\" target=\"_blank\" rel=\"noopener\">repozytorium GitHub</a> na konto swojej organizacji.",
     "fork_step3": "Zamień nazwę marki, logo i stopkę na własne.",
     "fork_step4": "Wdróż na GitHub Pages, Netlify, Vercel lub własny serwer. Nie wymaga kroku budowania.",
-    "contribute_intro": "Reroute NJ to projekt społeczności. Oto jak możesz pomóc."
+    "contribute_intro": "Reroute NJ to projekt społeczności. Oto jak możesz pomóc.",
+    "cfg_tab_pdf": "Pobierz PDF",
+    "cfg_pdf_msg": "Kliknij przycisk poniżej, aby wyeksportować kartę informacyjną jako PDF.",
+    "cfg_download_pdf": "Pobierz PDF"
   },
   "card": {
     "impact_hoboken_diversion": "Przekierowany do Hoboken",
@@ -451,7 +454,17 @@
     "hub_path_33": "PATH z Hoboken",
     "hub_ferry_39": "NY Waterway z Hoboken",
     "hub_pabt": "Autobus 126 z Hoboken",
-    "hub_wtc": "PATH z Newark"
+    "hub_wtc": "PATH z Newark",
+    "embed_png_msg": "Kliknij przycisk poniżej, aby wyeksportować kartę informacyjną jako obraz PNG.",
+    "embed_pdf_msg": "Kliknij przycisk poniżej, aby wyeksportować kartę informacyjną jako PDF.",
+    "embed_html_msg": "Kliknij przycisk poniżej, aby pobrać samodzielny plik HTML karty informacyjnej.",
+    "embed_png_only": "Pobieranie PNG jest dostępne tylko dla kart informacyjnych.",
+    "embed_pdf_only": "Pobieranie PDF jest dostępne tylko dla kart informacyjnych.",
+    "embed_html_only": "Pobieranie HTML jest dostępne tylko dla kart informacyjnych.",
+    "embed_png_unavailable": "Eksport PNG jest niedostępny. Strona karty może się jeszcze ładować.",
+    "embed_pdf_unavailable": "Eksport PDF jest niedostępny. Strona karty może się jeszcze ładować.",
+    "embed_png_cors": "Nie udało się wyeksportować PNG. To może być ograniczenie cross-origin przy podglądzie lokalnym.",
+    "embed_pdf_cors": "Nie udało się wyeksportować PDF. To może być ograniczenie cross-origin przy podglądzie lokalnym."
   },
   "blog": {
     "title": "Blog — Reroute NJ",

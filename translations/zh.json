@@ -350,7 +350,10 @@
     "fork_step1": "将<a href=\"https://github.com/jamditis/reroute-nj\" target=\"_blank\" rel=\"noopener\">GitHub仓库</a>分叉到您组织的账户。",
     "fork_step3": "替换品牌名称、logo和页脚署名为您自己的。",
     "fork_step4": "部署到GitHub Pages、Netlify、Vercel或您自己的服务器。无需构建步骤。",
-    "contribute_intro": "Reroute NJ是一个社区项目。以下是您可以帮助的方式。"
+    "contribute_intro": "Reroute NJ是一个社区项目。以下是您可以帮助的方式。",
+    "cfg_tab_pdf": "下载PDF",
+    "cfg_pdf_msg": "点击下方按钮将信息卡导出为 PDF。",
+    "cfg_download_pdf": "下载PDF"
   },
   "card": {
     "impact_hoboken_diversion": "改道至Hoboken",
@@ -451,7 +454,17 @@
     "hub_path_33": "从 Hoboken 出发的 PATH",
     "hub_ferry_39": "从 Hoboken 出发的 NY Waterway",
     "hub_pabt": "从 Hoboken 出发的巴士 126",
-    "hub_wtc": "从 Newark 出发的 PATH"
+    "hub_wtc": "从 Newark 出发的 PATH",
+    "embed_png_msg": "点击下方按钮将信息卡导出为 PNG 图片。",
+    "embed_pdf_msg": "点击下方按钮将信息卡导出为 PDF。",
+    "embed_html_msg": "点击下方按钮下载信息卡的独立 HTML 文件。",
+    "embed_png_only": "PNG 下载仅适用于信息卡。",
+    "embed_pdf_only": "PDF 下载仅适用于信息卡。",
+    "embed_html_only": "HTML 下载仅适用于信息卡。",
+    "embed_png_unavailable": "无法导出 PNG。卡片页面可能仍在加载。",
+    "embed_pdf_unavailable": "无法导出 PDF。卡片页面可能仍在加载。",
+    "embed_png_cors": "无法导出 PNG。本地预览时可能是跨源限制。",
+    "embed_pdf_cors": "无法导出 PDF。本地预览时可能是跨源限制。"
   },
   "blog": {
     "title": "博客 — Reroute NJ",

@@ -316,18 +316,18 @@
     // Update download availability
     var isCard = state.embedType === "card";
     if (isCard) {
-      $pngMsg.textContent = "Click the button below to export the info card as a PNG image.";
+      $pngMsg.textContent = t("js.embed_png_msg");
       $downloadPng.classList.remove("hidden");
-      if ($pdfMsg) $pdfMsg.textContent = "Click the button below to export the info card as a PDF.";
+      if ($pdfMsg) $pdfMsg.textContent = t("js.embed_pdf_msg");
       if ($downloadPdf) $downloadPdf.classList.remove("hidden");
-      $htmlMsg.textContent = "Click the button below to download a self-contained HTML file of the info card.";
+      $htmlMsg.textContent = t("js.embed_html_msg");
       $downloadHtml.classList.remove("hidden");
     } else {
-      $pngMsg.textContent = "PNG download is only available for info cards.";
+      $pngMsg.textContent = t("js.embed_png_only");
       $downloadPng.classList.add("hidden");
-      if ($pdfMsg) $pdfMsg.textContent = "PDF download is only available for info cards.";
+      if ($pdfMsg) $pdfMsg.textContent = t("js.embed_pdf_only");
       if ($downloadPdf) $downloadPdf.classList.add("hidden");
-      $htmlMsg.textContent = "HTML download is only available for info cards.";
+      $htmlMsg.textContent = t("js.embed_html_only");
       $downloadHtml.classList.add("hidden");
     }
   }
@@ -418,10 +418,10 @@
       if (iframeWin && typeof iframeWin.exportCardAsPng === "function") {
         iframeWin.exportCardAsPng();
       } else {
-        alert("PNG export is not available. The card page may still be loading.");
+        alert(t("js.embed_png_unavailable"));
       }
     } catch (e) {
-      alert("Unable to export PNG. This may be a cross-origin restriction when previewing locally.");
+      alert(t("js.embed_png_cors"));
     }
   }
 
@@ -432,10 +432,10 @@
       if (iframeWin && typeof iframeWin.exportCardAsPdf === "function") {
         iframeWin.exportCardAsPdf();
       } else {
-        alert("PDF export is not available. The card page may still be loading.");
+        alert(t("js.embed_pdf_unavailable"));
       }
     } catch (e) {
-      alert("Unable to export PDF. This may be a cross-origin restriction when previewing locally.");
+      alert(t("js.embed_pdf_cors"));
     }
   }
 

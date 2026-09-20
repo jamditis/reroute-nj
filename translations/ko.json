@@ -350,7 +350,10 @@
     "fork_step1": "<a href=\"https://github.com/jamditis/reroute-nj\" target=\"_blank\" rel=\"noopener\">GitHub 저장소</a>를 조직의 계정으로 포크하세요.",
     "fork_step3": "브랜드 이름, 로고, 푸터 크레딧을 자신의 것으로 교체하세요.",
     "fork_step4": "GitHub Pages, Netlify, Vercel 또는 자체 서버에 배포하세요. 빌드 단계가 필요 없습니다.",
-    "contribute_intro": "Reroute NJ는 커뮤니티 프로젝트입니다. 다음과 같이 도움을 줄 수 있습니다."
+    "contribute_intro": "Reroute NJ는 커뮤니티 프로젝트입니다. 다음과 같이 도움을 줄 수 있습니다.",
+    "cfg_tab_pdf": "PDF 다운로드",
+    "cfg_pdf_msg": "아래 버튼을 눌러 정보 카드를 PDF로 보내세요.",
+    "cfg_download_pdf": "PDF 다운로드"
   },
   "card": {
     "impact_hoboken_diversion": "Hoboken으로 우회",
@@ -451,7 +454,17 @@
     "hub_path_33": "Hoboken에서 출발하는 PATH",
     "hub_ferry_39": "Hoboken에서 출발하는 NY Waterway",
     "hub_pabt": "Hoboken에서 출발하는 버스 126",
-    "hub_wtc": "Newark에서 출발하는 PATH"
+    "hub_wtc": "Newark에서 출발하는 PATH",
+    "embed_png_msg": "아래 버튼을 눌러 정보 카드를 PNG 이미지로 보내세요.",
+    "embed_pdf_msg": "아래 버튼을 눌러 정보 카드를 PDF로 보내세요.",
+    "embed_html_msg": "아래 버튼을 눌러 정보 카드의 독립 HTML 파일을 다운로드하세요.",
+    "embed_png_only": "PNG 다운로드는 정보 카드에서만 사용할 수 있습니다.",
+    "embed_pdf_only": "PDF 다운로드는 정보 카드에서만 사용할 수 있습니다.",
+    "embed_html_only": "HTML 다운로드는 정보 카드에서만 사용할 수 있습니다.",
+    "embed_png_unavailable": "PNG를 보낼 수 없습니다. 카드 페이지가 아직 로딩 중일 수 있습니다.",
+    "embed_pdf_unavailable": "PDF를 보낼 수 없습니다. 카드 페이지가 아직 로딩 중일 수 있습니다.",
+    "embed_png_cors": "PNG를 보낼 수 없습니다. 로컬 미리보기에서 교차 출처 제한일 수 있습니다.",
+    "embed_pdf_cors": "PDF를 보낼 수 없습니다. 로컬 미리보기에서 교차 출처 제한일 수 있습니다."
   },
   "blog": {
     "title": "Blog — Reroute NJ",

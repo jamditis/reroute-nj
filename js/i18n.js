@@ -94,7 +94,17 @@
       "hub_path_33": "PATH from Hoboken",
       "hub_ferry_39": "NY Waterway from Hoboken",
       "hub_pabt": "Bus 126 from Hoboken",
-      "hub_wtc": "PATH from Newark"
+      "hub_wtc": "PATH from Newark",
+      "embed_png_msg": "Click the button below to export the info card as a PNG image.",
+      "embed_pdf_msg": "Click the button below to export the info card as a PDF.",
+      "embed_html_msg": "Click the button below to download a self-contained HTML file of the info card.",
+      "embed_png_only": "PNG download is only available for info cards.",
+      "embed_pdf_only": "PDF download is only available for info cards.",
+      "embed_html_only": "HTML download is only available for info cards.",
+      "embed_png_unavailable": "PNG export is not available. The card page may still be loading.",
+      "embed_pdf_unavailable": "PDF export is not available. The card page may still be loading.",
+      "embed_png_cors": "Unable to export PNG. This may be a cross-origin restriction when previewing locally.",
+      "embed_pdf_cors": "Unable to export PDF. This may be a cross-origin restriction when previewing locally."
     },
     "compare": {
       "your_normal_commute": "Your normal commute",

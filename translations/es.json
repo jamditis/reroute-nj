@@ -350,7 +350,10 @@
     "fork_step1": "Bifurca el <a href=\"https://github.com/jamditis/reroute-nj\" target=\"_blank\" rel=\"noopener\">repositorio de GitHub</a> a la cuenta de tu organización.",
     "fork_step3": "Reemplaza el nombre de la marca, el logo y el crédito del pie de página con los tuyos.",
     "fork_step4": "Despliega en GitHub Pages, Netlify, Vercel o tu propio servidor. No se necesita compilación.",
-    "contribute_intro": "Reroute NJ es un proyecto comunitario. Así puedes ayudar."
+    "contribute_intro": "Reroute NJ es un proyecto comunitario. Así puedes ayudar.",
+    "cfg_tab_pdf": "Descargar PDF",
+    "cfg_pdf_msg": "Haz clic en el botón de abajo para exportar la tarjeta informativa como PDF.",
+    "cfg_download_pdf": "Descargar PDF"
   },
   "card": {
     "impact_hoboken_diversion": "Desviado a Hoboken",
@@ -451,7 +454,17 @@
     "hub_path_33": "PATH desde Hoboken",
     "hub_ferry_39": "NY Waterway desde Hoboken",
     "hub_pabt": "Bus 126 desde Hoboken",
-    "hub_wtc": "PATH desde Newark"
+    "hub_wtc": "PATH desde Newark",
+    "embed_png_msg": "Haz clic en el botón de abajo para exportar la tarjeta informativa como imagen PNG.",
+    "embed_pdf_msg": "Haz clic en el botón de abajo para exportar la tarjeta informativa como PDF.",
+    "embed_html_msg": "Haz clic en el botón de abajo para descargar un archivo HTML autónomo de la tarjeta informativa.",
+    "embed_png_only": "La descarga PNG solo está disponible para tarjetas informativas.",
+    "embed_pdf_only": "La descarga PDF solo está disponible para tarjetas informativas.",
+    "embed_html_only": "La descarga HTML solo está disponible para tarjetas informativas.",
+    "embed_png_unavailable": "La exportación PNG no está disponible. La página de la tarjeta puede estar cargando.",
+    "embed_pdf_unavailable": "La exportación PDF no está disponible. La página de la tarjeta puede estar cargando.",
+    "embed_png_cors": "No se pudo exportar PNG. Puede ser una restricción de origen cruzado al previsualizar en local.",
+    "embed_pdf_cors": "No se pudo exportar PDF. Puede ser una restricción de origen cruzado al previsualizar en local."
   },
   "blog": {
     "title": "Blog — Reroute NJ",

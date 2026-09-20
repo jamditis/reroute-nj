@@ -350,7 +350,10 @@
     "fork_step1": "Faça fork do <a href=\"https://github.com/jamditis/reroute-nj\" target=\"_blank\" rel=\"noopener\">repositório GitHub</a> para a conta da sua organização.",
     "fork_step3": "Substitua o nome da marca, logo e crédito do rodapé pelos seus.",
     "fork_step4": "Implante no GitHub Pages, Netlify, Vercel ou seu próprio servidor. Sem etapa de build.",
-    "contribute_intro": "Reroute NJ é um projeto comunitário. Veja como você pode ajudar."
+    "contribute_intro": "Reroute NJ é um projeto comunitário. Veja como você pode ajudar.",
+    "cfg_tab_pdf": "Baixar PDF",
+    "cfg_pdf_msg": "Clique no botão abaixo para exportar o cartão de informações como PDF.",
+    "cfg_download_pdf": "Baixar PDF"
   },
   "card": {
     "impact_hoboken_diversion": "Desviado para Hoboken",
@@ -451,7 +454,17 @@
     "hub_path_33": "PATH a partir de Hoboken",
     "hub_ferry_39": "NY Waterway a partir de Hoboken",
     "hub_pabt": "Ônibus 126 a partir de Hoboken",
-    "hub_wtc": "PATH a partir de Newark"
+    "hub_wtc": "PATH a partir de Newark",
+    "embed_png_msg": "Clique no botão abaixo para exportar o cartão de informações como imagem PNG.",
+    "embed_pdf_msg": "Clique no botão abaixo para exportar o cartão de informações como PDF.",
+    "embed_html_msg": "Clique no botão abaixo para baixar um arquivo HTML autônomo do cartão de informações.",
+    "embed_png_only": "O download PNG só está disponível para cartões de informações.",
+    "embed_pdf_only": "O download PDF só está disponível para cartões de informações.",
+    "embed_html_only": "O download HTML só está disponível para cartões de informações.",
+    "embed_png_unavailable": "A exportação PNG não está disponível. A página do cartão ainda pode estar carregando.",
+    "embed_pdf_unavailable": "A exportação PDF não está disponível. A página do cartão ainda pode estar carregando.",
+    "embed_png_cors": "Não foi possível exportar PNG. Pode ser uma restrição de origem cruzada na prévia local.",
+    "embed_pdf_cors": "Não foi possível exportar PDF. Pode ser uma restrição de origem cruzada na prévia local."
   },
   "blog": {
     "title": "Blog — Reroute NJ",
