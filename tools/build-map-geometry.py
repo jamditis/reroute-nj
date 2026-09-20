@@ -369,7 +369,10 @@ def main():
     for (line, branch), (sid, _n) in sorted(best.items()):
         raw = [(lat, lng) for _seq, lat, lng in shape_pts[sid]]
         ends = terminals.get((line, branch))
-        if ends:
+        # Only RVL GTFS shapes continue past the displayed dest (Newark Penn
+        # on to Penn Station NY). Cropping every line would cut the Morristown
+        # Line at Morristown and drop Morris Plains and Mount Tabor.
+        if ends and line == "raritan-valley":
             raw = crop_to_terminals(raw, ends[0], ends[1])
         simp = douglas_peucker(raw, 70)
         if len(simp) > 160:
