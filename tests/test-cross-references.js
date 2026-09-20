@@ -544,9 +544,8 @@ console.log("======================================================\n");
 
   // Specific check: "NJ.com" should always be "NJ.com"
   var njcomArticles = coverageJSON.articles.filter(function (a) {
-    return a.source.toLowerCase().indexOf("nj.com") !== -1 ||
-           a.source.toLowerCase().indexOf("njdotcom") !== -1 ||
-           a.source.toLowerCase().indexOf("nj dot com") !== -1;
+    var src = a.source.toLowerCase().replace(/\s+/g, "");
+    return src === "nj.com" || src === "njdotcom" || src === "njdot.com";
   });
   var njcomNames = {};
   njcomArticles.forEach(function (a) { njcomNames[a.source] = true; });

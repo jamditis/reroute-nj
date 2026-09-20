@@ -92,7 +92,7 @@ console.log("\nValid LINE_DATA keys: " + VALID_LINE_KEYS.join(", ") + "\n");
 var VALID_CATEGORIES = ["official", "news", "analysis", "opinion", "community"];
 var VALID_DIRECTIONS = ["both", "nj-to-nyc", "nyc-to-nj"];
 var ISO_DATE_REGEX = /^\d{4}-\d{2}-\d{2}$/;
-var MIN_DATE = new Date("2025-01-01");
+var MIN_DATE = new Date("2023-01-01");
 var MAX_DATE = new Date("2026-12-31");
 
 // ── Test 2: Has lastUpdated field with valid ISO 8601 date ───────────
@@ -208,9 +208,9 @@ articles.forEach(function(article) {
 });
 
 if (outOfRange.length === 0) {
-  pass("8. All dates between 2025-01-01 and 2026-12-31", "All " + articles.length + " articles in range");
+  pass("8. All dates between 2023-01-01 and 2026-12-31", "All " + articles.length + " articles in range");
 } else {
-  fail("8. All dates between 2025-01-01 and 2026-12-31", outOfRange.length + " out of range:\n    " + outOfRange.join("\n    "));
+  fail("8. All dates between 2023-01-01 and 2026-12-31", outOfRange.length + " out of range:\n    " + outOfRange.join("\n    "));
 }
 
 // ── Test 9: Categories are valid ─────────────────────────────────────

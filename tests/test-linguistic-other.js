@@ -1157,8 +1157,7 @@ if (flatTranslations["pt"]) {
     { eu: /\bfacto\b/i, br: "fato", meaning: "fact" },
     { eu: /\bacc\u00E7\u00E3o\b/i, br: "a\u00E7\u00E3o", meaning: "action" },
     { eu: /\b\u00F3ptimo\b/i, br: "\u00F3timo", meaning: "great" },
-    { eu: /\bequipa\b/i, br: "equipe", meaning: "team" },
-    { eu: /\bdisponibilizar\b/i, br: "disponibilizar (ok)", meaning: "make available (same)" }
+    { eu: /\bequipa\b/i, br: "equipe", meaning: "team" }
   ];
 
   var euSpellings = [];
