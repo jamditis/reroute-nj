@@ -178,6 +178,29 @@ PAGES.forEach(function (pageName) {
 });
 
 // =========================================================================
+// TEST 7b: og:image.png is 1200x630 and markup matches
+// =========================================================================
+console.log("\n--- Test 7b: og:image dimensions ---");
+(function testOgImageSize() {
+  var imgPath = path.join(ROOT, "img", "og-image.png");
+  var buf = fs.readFileSync(imgPath);
+  var width = buf.readUInt32BE(16);
+  var height = buf.readUInt32BE(20);
+  assert(width === 1200 && height === 630, "img/og-image.png is 1200x630 (got " + width + "x" + height + ")");
+
+  PAGES.forEach(function (pageName) {
+    if (isExempt(pageName)) return;
+    var html = pageContents[pageName];
+    if (html.indexOf("img/og-image.png") === -1) return;
+    var hasW = /property=["']og:image:width["'][^>]*content=["']1200["']/i.test(html) ||
+      /content=["']1200["'][^>]*property=["']og:image:width["']/i.test(html);
+    var hasH = /property=["']og:image:height["'][^>]*content=["']630["']/i.test(html) ||
+      /content=["']630["'][^>]*property=["']og:image:height["']/i.test(html);
+    assert(hasW && hasH, "og:image:width=1200 and og:image:height=630", pageName);
+  });
+})();
+
+// =========================================================================
 // TEST 8: Twitter card tags (twitter:card, twitter:title, twitter:description)
 // =========================================================================
 console.log("\n--- Test 8: Twitter card tags ---");
