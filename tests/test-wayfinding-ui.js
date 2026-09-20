@@ -65,6 +65,31 @@ check("mobile menu supports Escape and an explicit controlled element", function
   assert(shared.indexOf('event.key === "Escape"') !== -1);
   assert(shared.indexOf('toggle.setAttribute("aria-controls", menu.id)') !== -1);
 });
+check("downloaded HTML card CSS matches the card.html preview stylesheet", function () {
+  var cardHtml = fs.readFileSync(path.join(root, "card.html"), "utf8");
+  var embedSrc = fs.readFileSync(path.join(root, "js/embed.js"), "utf8");
+  var styleMatch = cardHtml.match(/<style>\n([\s\S]*?)\n {2}<\/style>/);
+  assert(styleMatch, "card.html has an inline stylesheet");
+  var start = embedSrc.indexOf("'  <style>\\n' +");
+  var end = embedSrc.indexOf("'  </style>\\n' +", start);
+  assert(start !== -1 && end !== -1, "downloadHtml inlines a stylesheet");
+  var chunk = embedSrc.slice(start + "'  <style>\\n' +".length, end);
+  var lines = [];
+  var re = /'((?:\\'|[^'])*)\\n'\s*\+/g;
+  var match;
+  while ((match = re.exec(chunk))) {
+    lines.push(match[1].replace(/\\'/g, "'").replace(/\\\\/g, "\\"));
+  }
+  function normalize(css) {
+    return css.replace(/\r\n/g, "\n").replace(/[ \t]+$/gm, "").trim();
+  }
+  assert.strictEqual(normalize(lines.join("\n")), normalize(styleMatch[1]));
+  assert(embedSrc.indexOf('class="card-attribution"') !== -1);
+  assert(embedSrc.indexOf('style="text-align:center;padding:8px 0;font-size:0.7rem;color:#9eaab8;"') === -1);
+  assert(styleMatch[1].indexOf("background: #155e59") !== -1);
+  assert(styleMatch[1].indexOf("min-height: 44px") !== -1);
+  assert(styleMatch[1].indexOf("@media print") !== -1);
+});
 check("CSS loader rejects missing, cyclic, and remote imports", function () {
   var dir = fs.mkdtempSync(path.join(os.tmpdir(), "rnj-css-"));
   try {

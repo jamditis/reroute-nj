@@ -15,7 +15,7 @@ Use sentence-case headings. Keep actual station names and existing translated te
 - `css/foundation.css` is the previous stylesheet, preserved byte for byte. It retains component, embed, responsive, accessibility, and print contracts.
 - `css/styles.css` imports that local foundation and defines the wayfinding tokens, composition, and component treatments. Existing English and translated HTML entry points still load the same stylesheet URL. There is one additional local, cacheable CSS request; no build step or third-party dependency.
 - The wayfinding IIFE at the end of `js/shared.js` moves existing DOM nodes instead of regenerating them. Existing IDs, event listeners, panel logic, translated text, and source order remain intact. Embedded renderers are excluded.
-- `card.html` retains its standalone inline stylesheet and receives a matching visual treatment. Canvas PNG/PDF export layouts and calculations are unchanged.
+- `card.html` retains its standalone inline stylesheet and receives a matching visual treatment. Download HTML inlines that same stylesheet so the self-contained artifact matches the preview. Canvas PNG/PDF export layouts and calculations are unchanged.
 - `tests/read-styles.js` resolves local CSS imports for the existing integrity and accessibility tests. Their assertions remain unchanged.
 
 ## Page composition
