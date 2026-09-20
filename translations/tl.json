@@ -440,7 +440,18 @@
     "map_export_footer": "Reroute NJ · reroutenj.org · Rail geometry mula sa NJ Transit GTFS. Independent community tool.",
     "map_load_error": "Hindi ma-load ang rail geometry. I-refresh ang page, o buksan ang site sa http (python3 -m http.server 8000).",
     "map_popup_portal": "Hackensack River, Kearny NJ<br>Isang riles sa pagitan ng Newark Penn at Secaucus sa Phase 2 cutover (Okt 11 – Nob 15, 2026).",
-    "map_popup_old": "1910 swing span. Ireretiro pagkatapos lumipat ang pangalawang riles sa Portal North Bridge."
+    "map_popup_old": "1910 swing span. Ireretiro pagkatapos lumipat ang pangalawang riles sa Portal North Bridge.",
+    "map_plan_commute": "Planuhin ang biyahe",
+    "map_loading_alert": "Naglo-load pa ang datos ng mapa. Subukan ulit sa ilang sandali.",
+    "hub_hoboken": "NJ Transit, PATH, ferry, Bus 126",
+    "hub_newark_penn": "NJ Transit, PATH, mga bus",
+    "hub_secaucus": "Estasyon ng transfer ng NJ Transit",
+    "hub_nyp": "NJ Transit, Amtrak, LIRR, subway",
+    "hub_newark_broad": "Hub ng Morris & Essex at Montclair-Boonton",
+    "hub_path_33": "PATH mula Hoboken",
+    "hub_ferry_39": "NY Waterway mula Hoboken",
+    "hub_pabt": "Bus 126 mula Hoboken",
+    "hub_wtc": "PATH mula Newark"
   },
   "blog": {
     "title": "Blog — Reroute NJ",

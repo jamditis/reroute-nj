@@ -440,7 +440,18 @@
     "map_export_footer": "Reroute NJ · reroutenj.org · Geometria ferroviaria dal GTFS di NJ Transit. Strumento comunitario indipendente.",
     "map_load_error": "Impossibile caricare la geometria ferroviaria. Aggiorna la pagina o apri il sito via http (python3 -m http.server 8000).",
     "map_popup_portal": "Hackensack River, Kearny NJ<br>Esercizio a binario unico tra Newark Penn e Secaucus nel taglio di fase 2 (11 ott – 15 nov, 2026).",
-    "map_popup_old": "Campata girevole del 1910. Fuori servizio dopo il trasferimento del secondo binario su Portal North Bridge."
+    "map_popup_old": "Campata girevole del 1910. Fuori servizio dopo il trasferimento del secondo binario su Portal North Bridge.",
+    "map_plan_commute": "Pianifica il tragitto",
+    "map_loading_alert": "I dati della mappa sono ancora in caricamento. Riprova tra un attimo.",
+    "hub_hoboken": "NJ Transit, PATH, traghetto, bus 126",
+    "hub_newark_penn": "NJ Transit, PATH, bus",
+    "hub_secaucus": "Stazione di trasferimento NJ Transit",
+    "hub_nyp": "NJ Transit, Amtrak, LIRR, metro",
+    "hub_newark_broad": "Hub Morris & Essex e Montclair-Boonton",
+    "hub_path_33": "PATH da Hoboken",
+    "hub_ferry_39": "NY Waterway da Hoboken",
+    "hub_pabt": "Bus 126 da Hoboken",
+    "hub_wtc": "PATH da Newark"
   },
   "blog": {
     "title": "Blog — Reroute NJ",

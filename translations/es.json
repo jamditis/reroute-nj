@@ -440,7 +440,18 @@
     "map_export_footer": "Reroute NJ · reroutenj.org · Geometría ferroviaria del GTFS de NJ Transit. Herramienta comunitaria independiente.",
     "map_load_error": "No se pudo cargar la geometría ferroviaria. Actualiza la página o abre el sitio por http (python3 -m http.server 8000).",
     "map_popup_portal": "Río Hackensack, Kearny NJ<br>Operación de vía única entre Newark Penn y Secaucus durante el corte de la fase 2 (11 oct – 15 nov, 2026).",
-    "map_popup_old": "Puente giratorio de 1910. Se retira cuando el segundo riel pasa a Portal North Bridge."
+    "map_popup_old": "Puente giratorio de 1910. Se retira cuando el segundo riel pasa a Portal North Bridge.",
+    "map_plan_commute": "Planifica tu viaje",
+    "map_loading_alert": "Los datos del mapa aún se están cargando. Inténtalo en un momento.",
+    "hub_hoboken": "NJ Transit, PATH, ferry, bus 126",
+    "hub_newark_penn": "NJ Transit, PATH, autobuses",
+    "hub_secaucus": "Estación de transbordo de NJ Transit",
+    "hub_nyp": "NJ Transit, Amtrak, LIRR, metro",
+    "hub_newark_broad": "Hub de Morris & Essex y Montclair-Boonton",
+    "hub_path_33": "PATH desde Hoboken",
+    "hub_ferry_39": "NY Waterway desde Hoboken",
+    "hub_pabt": "Bus 126 desde Hoboken",
+    "hub_wtc": "PATH desde Newark"
   },
   "blog": {
     "title": "Blog — Reroute NJ",

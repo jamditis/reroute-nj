@@ -440,7 +440,18 @@
     "map_export_footer": "Reroute NJ · reroutenj.org · 铁路几何来自 NJ Transit GTFS。独立社区工具。",
     "map_load_error": "无法加载铁路几何。请刷新页面，或通过 http 打开本站（python3 -m http.server 8000）。",
     "map_popup_portal": "Hackensack River，Kearny NJ<br>第二阶段转换期间（2026年10月11日–11月15日）Newark Penn 与 Secaucus 之间单线运行。",
-    "map_popup_old": "1910 年旋转桥。第二条轨道迁至 Portal North Bridge 后退役。"
+    "map_popup_old": "1910 年旋转桥。第二条轨道迁至 Portal North Bridge 后退役。",
+    "map_plan_commute": "规划你的通勤",
+    "map_loading_alert": "地图数据仍在加载。请稍后再试。",
+    "hub_hoboken": "NJ Transit、PATH、渡轮、巴士 126",
+    "hub_newark_penn": "NJ Transit、PATH、巴士",
+    "hub_secaucus": "NJ Transit 换乘站",
+    "hub_nyp": "NJ Transit、Amtrak、LIRR、地铁",
+    "hub_newark_broad": "Morris & Essex 与 Montclair-Boonton 枢纽",
+    "hub_path_33": "从 Hoboken 出发的 PATH",
+    "hub_ferry_39": "从 Hoboken 出发的 NY Waterway",
+    "hub_pabt": "从 Hoboken 出发的巴士 126",
+    "hub_wtc": "从 Newark 出发的 PATH"
   },
   "blog": {
     "title": "博客 — Reroute NJ",

@@ -440,7 +440,18 @@
     "map_export_footer": "Reroute NJ · reroutenj.org · રેલ ભૂમિતિ NJ Transit GTFSમાંથી. સ્વતંત્ર સમુદાય સાધન.",
     "map_load_error": "રેલ ભૂમિતિ લોડ થઈ શકી નહીં. પેજ રિફ્રેશ કરો, અથવા http પર ખોલો (python3 -m http.server 8000).",
     "map_popup_portal": "Hackensack River, Kearny NJ<br>ફેઝ 2 કટઓવર (11 ઑક્ટ – 15 નવ, 2026) દરમિયાન Newark Penn અને Secaucus વચ્ચે એક ટ્રેક.",
-    "map_popup_old": "1910 સ્વિંગ સ્પાન. બીજી પાટી Portal North Bridge પર જાય ત્યારે નિવૃત્ત."
+    "map_popup_old": "1910 સ્વિંગ સ્પાન. બીજી પાટી Portal North Bridge પર જાય ત્યારે નિવૃત્ત.",
+    "map_plan_commute": "તમારી મુસાફરી યોજો",
+    "map_loading_alert": "નકશાનો ડેટા હજુ લોડ થઈ રહ્યો છે. થોડી વારે ફરી પ્રયાસ કરો.",
+    "hub_hoboken": "NJ Transit, PATH, ફેરી, બસ 126",
+    "hub_newark_penn": "NJ Transit, PATH, બસો",
+    "hub_secaucus": "NJ Transit ટ્રાન્સફર સ્ટેશન",
+    "hub_nyp": "NJ Transit, Amtrak, LIRR, સબવે",
+    "hub_newark_broad": "Morris & Essex અને Montclair-Boonton હબ",
+    "hub_path_33": "Hobokenથી PATH",
+    "hub_ferry_39": "Hobokenથી NY Waterway",
+    "hub_pabt": "Hobokenથી બસ 126",
+    "hub_wtc": "Newarkથી PATH"
   },
   "blog": {
     "title": "બ્લોગ — Reroute NJ",

@@ -440,7 +440,18 @@
     "map_export_footer": "Reroute NJ · reroutenj.org · Geometria torów z GTFS NJ Transit. Niezależne narzędzie społecznościowe.",
     "map_load_error": "Nie udało się wczytać geometrii torów. Odśwież stronę albo otwórz witrynę przez http (python3 -m http.server 8000).",
     "map_popup_portal": "Hackensack River, Kearny NJ<br>Ruch jednotorowy między Newark Penn a Secaucus w fazie 2 (11 paź – 15 lis 2026).",
-    "map_popup_old": "Przęsło obrotowe z 1910. Wycofane po przeniesieniu drugiego toru na Portal North Bridge."
+    "map_popup_old": "Przęsło obrotowe z 1910. Wycofane po przeniesieniu drugiego toru na Portal North Bridge.",
+    "map_plan_commute": "Zaplanuj dojazd",
+    "map_loading_alert": "Dane mapy wciąż się ładują. Spróbuj za chwilę.",
+    "hub_hoboken": "NJ Transit, PATH, prom, autobus 126",
+    "hub_newark_penn": "NJ Transit, PATH, autobusy",
+    "hub_secaucus": "Stacja przesiadkowa NJ Transit",
+    "hub_nyp": "NJ Transit, Amtrak, LIRR, metro",
+    "hub_newark_broad": "Węzeł Morris & Essex i Montclair-Boonton",
+    "hub_path_33": "PATH z Hoboken",
+    "hub_ferry_39": "NY Waterway z Hoboken",
+    "hub_pabt": "Autobus 126 z Hoboken",
+    "hub_wtc": "PATH z Newark"
   },
   "blog": {
     "title": "Blog — Reroute NJ",

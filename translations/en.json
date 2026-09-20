@@ -502,7 +502,18 @@
     "map_export_footer": "Reroute NJ · reroutenj.org · Rail geometry from NJ Transit GTFS. Independent community tool.",
     "map_load_error": "The map could not load rail geometry. Refresh the page, or open this site over http (python3 -m http.server 8000).",
     "map_popup_portal": "Hackensack River, Kearny NJ<br>Single-track operations between Newark Penn and Secaucus during the Phase 2 cutover (Oct 11 – Nov 15, 2026).",
-    "map_popup_old": "1910 swing span. Retired after the second track moves to Portal North Bridge."
+    "map_popup_old": "1910 swing span. Retired after the second track moves to Portal North Bridge.",
+    "map_plan_commute": "Plan your commute",
+    "map_loading_alert": "Map data is still loading. Try again in a moment.",
+    "hub_hoboken": "NJ Transit, PATH, ferry, Bus 126",
+    "hub_newark_penn": "NJ Transit, PATH, buses",
+    "hub_secaucus": "NJ Transit transfer station",
+    "hub_nyp": "NJ Transit, Amtrak, LIRR, subway",
+    "hub_newark_broad": "Morris & Essex and Montclair-Boonton hub",
+    "hub_path_33": "PATH from Hoboken",
+    "hub_ferry_39": "NY Waterway from Hoboken",
+    "hub_pabt": "Bus 126 from Hoboken",
+    "hub_wtc": "PATH from Newark"
   },
   "blog_post_embed": {
     "title": "New: embed Reroute NJ on your website — Reroute NJ",

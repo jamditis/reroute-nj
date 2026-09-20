@@ -440,7 +440,18 @@
     "map_export_footer": "Reroute NJ · reroutenj.org · 철도 형상은 NJ Transit GTFS. 독립 커뮤니티 도구.",
     "map_load_error": "철도 형상을 불러올 수 없습니다. 페이지를 새로고침하거나 http로 여세요 (python3 -m http.server 8000).",
     "map_popup_portal": "Hackensack River, Kearny NJ<br>2단계 전환(2026년 10월 11일–11월 15일) 동안 Newark Penn–Secaucus 단선 운행.",
-    "map_popup_old": "1910년 회전교. 두 번째 선로가 Portal North Bridge로 이전한 뒤 폐지."
+    "map_popup_old": "1910년 회전교. 두 번째 선로가 Portal North Bridge로 이전한 뒤 폐지.",
+    "map_plan_commute": "출퇴근 계획하기",
+    "map_loading_alert": "지도 데이터를 아직 불러오는 중입니다. 잠시 후 다시 시도하세요.",
+    "hub_hoboken": "NJ Transit, PATH, 페리, 버스 126",
+    "hub_newark_penn": "NJ Transit, PATH, 버스",
+    "hub_secaucus": "NJ Transit 환승역",
+    "hub_nyp": "NJ Transit, Amtrak, LIRR, 지하철",
+    "hub_newark_broad": "Morris & Essex 및 Montclair-Boonton 허브",
+    "hub_path_33": "Hoboken에서 출발하는 PATH",
+    "hub_ferry_39": "Hoboken에서 출발하는 NY Waterway",
+    "hub_pabt": "Hoboken에서 출발하는 버스 126",
+    "hub_wtc": "Newark에서 출발하는 PATH"
   },
   "blog": {
     "title": "Blog — Reroute NJ",

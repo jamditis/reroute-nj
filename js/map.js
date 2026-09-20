@@ -66,6 +66,13 @@
     return LINE_LABELS[lineId] || lineId;
   }
 
+  function hubDescription(h) {
+    var key = "js.hub_" + String(h.id || "").replace(/-/g, "_");
+    var text = t(key);
+    if (!text || text === key) return h.desc || "";
+    return text;
+  }
+
   function addGeometryToMap(data) {
     geometry = data;
 
@@ -166,7 +173,9 @@
           ';font-weight:700;">' +
           esc(linePopupLabel(s.line)) +
           "</span><br>" +
-          '<a href="index.html">Plan your commute \u2192</a>'
+          '<a href="index.html">' +
+          esc(t("js.map_plan_commute")) +
+          " \u2192</a>"
       );
       marker.addTo(layers[s.line]);
     });
@@ -179,7 +188,12 @@
         weight: 2,
         fillOpacity: 0.95,
       })
-        .bindPopup("<strong>" + esc(h.name) + "</strong><br>" + esc(h.desc))
+        .bindPopup(
+          "<strong>" +
+            esc(h.name) +
+            "</strong><br>" +
+            esc(hubDescription(h))
+        )
         .addTo(layers["transfer-hubs"]);
     });
 
@@ -475,7 +489,7 @@
 
     function canvasOrAlert() {
       if (!geometry) {
-        window.alert("Map data is still loading. Try again in a moment.");
+        window.alert(t("js.map_loading_alert"));
         return null;
       }
       return renderExportCanvas(geometry);
