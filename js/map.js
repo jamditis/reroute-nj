@@ -630,7 +630,9 @@
     ctx.fillStyle = "#1a2332";
     ctx.fillText(t("js.map_single_track"), legendX + 24, legendY);
 
-    ctx.fillStyle = "#6b7280";
+    ctx.fillStyle = "#ffffff";
+    ctx.fillRect(0, height - 58, width, 58);
+    ctx.fillStyle = "#1a2332";
     ctx.font = "11px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif";
     ctx.fillText(
       t("js.map_basemap_credit"),
