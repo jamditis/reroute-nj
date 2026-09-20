@@ -69,7 +69,7 @@ function readFile(filename) {
 }
 
 function readCss() {
-  return fs.readFileSync(CSS_FILE, "utf8");
+  return require("./read-styles")(CSS_FILE);
 }
 
 // =========================================================================

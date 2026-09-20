@@ -66,6 +66,35 @@
     .theme-dark .summary-moderate { background: #4a3c0a; color: #fbbf24; }
     .summary-trains { font-size: 0.75rem; color: #73849a; white-space: nowrap; }
     .theme-dark .summary-trains { color: #9eaab8; }
+    /* Compact wayfinding card. Accent/line stripes keep their existing meaning. */
+    body { background: #f5f5f0; color: #202c2b; }
+    .card { border: 1px solid #ccd3cc; border-radius: 6px; box-shadow: none; }
+    .card-color-bar { height: 5px; }
+    .card-body { padding: 22px; }
+    .card-line-name, .card-station-name { letter-spacing: -.025em; line-height: 1.25; }
+    .card-summary { color: #53615e; line-height: 1.7; }
+    .card-line-context, .card-stat-label, .card-dates, .summary-trains { color: #5c6865; }
+    .card-badge, .summary-impact { border-radius: 3px; text-transform: none; letter-spacing: 0; }
+    .card-stats { border-block: 1px solid #e0e5de; padding-block: 14px; }
+    .card-stat { text-align: start; }
+    .card-stat-value { font-variant-numeric: tabular-nums; letter-spacing: -.025em; }
+    .card-stat-label { text-transform: none; letter-spacing: 0; }
+    .card-alt-item { padding-block: 8px; }
+    .card-cta { min-height: 44px; display: inline-flex; align-items: center; padding: 10px 16px; background: #155e59; color: #fff; border-radius: 4px; }
+    .card-cta:hover { background: #182c2b; }
+    .card-cta:focus-visible, .card-attribution a:focus-visible { outline: 3px solid #155e59; outline-offset: 3px; }
+    .card-attribution { color: #5c6865; }
+    .card-attribution a { color: #155e59; display: inline-flex; align-items: center; min-height: 44px; text-decoration: underline; text-underline-offset: 3px; }
+    .summary-line { border-radius: 4px; background: #eef1eb; }
+    .theme-dark .card { border-color: #53615e; }
+    .theme-dark .card-attribution, .theme-dark .card-attribution a { color: #c9ddd7; }
+    .theme-dark .card-stats { border-color: #53615e; }
+    .theme-dark .card-cta { background: #c9ddd7; color: #182c2b; }
+    .theme-dark .card-cta:hover { background: #fff; }
+    .theme-dark .card-cta:focus-visible, .theme-dark .card-attribution a:focus-visible { outline-color: #fff; }
+    @media (max-width: 360px) { .card-body { padding: 16px; } .summary-line { flex-wrap: wrap; } }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+    @media print { body { background: #fff; padding: 0; } .card { max-width: none; box-shadow: none; break-inside: avoid; } .card-cta { color: #000; background: #fff; border: 1px solid #000; } }
   </style>
 </head>
 <body>

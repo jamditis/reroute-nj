@@ -512,7 +512,9 @@
 
     var htmlLang = PAGE_LANG || "en";
 
-    // Self-contained HTML with all CSS, data, and rendering logic inlined
+    // Self-contained HTML with all CSS, data, and rendering logic inlined.
+    // The <style> block must stay identical to card.html so Download HTML
+    // matches the configurator preview. tests/test-wayfinding-ui.js compares them.
     var html = '<!DOCTYPE html>\n' +
       '<html lang="' + esc(htmlLang) + '">\n' +
       '<head>\n' +
@@ -523,36 +525,51 @@
       '    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }\n' +
       '    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f8f9fb; color: #1a2332; line-height: 1.5; padding: 12px; }\n' +
       '    body.theme-dark { background: #1a2332; color: #e8ecf1; }\n' +
+      '\n' +
       '    .card { background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); overflow: hidden; max-width: 480px; margin: 0 auto; }\n' +
       '    .theme-dark .card { background: #243044; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }\n' +
+      '\n' +
       '    .card-color-bar { height: 6px; }\n' +
       '    .card-body { padding: 16px 20px; }\n' +
+      '\n' +
       '    .card-line-name { font-size: 1.15rem; font-weight: 700; margin-bottom: 4px; }\n' +
       '    .card-station-name { font-size: 1.3rem; font-weight: 700; margin-bottom: 2px; }\n' +
       '    .card-line-context { font-size: 0.8rem; color: #73849a; margin-bottom: 8px; }\n' +
       '    .theme-dark .card-line-context { color: #9eaab8; }\n' +
+      '\n' +
       '    .card-badge { display: inline-block; padding: 3px 10px; border-radius: 100px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 10px; }\n' +
       '    .badge-severe { background: #fde8e8; color: #c41e1e; }\n' +
       '    .badge-moderate { background: #fff3cd; color: #856404; }\n' +
       '    .theme-dark .badge-severe { background: #4a1c1c; color: #f87171; }\n' +
       '    .theme-dark .badge-moderate { background: #4a3c0a; color: #fbbf24; }\n' +
+      '\n' +
       '    .card-summary { font-size: 0.85rem; color: #4a5568; margin-bottom: 12px; line-height: 1.55; }\n' +
       '    .theme-dark .card-summary { color: #b0bec5; }\n' +
+      '\n' +
       '    .card-stats { display: flex; gap: 16px; margin-bottom: 12px; }\n' +
       '    .card-stat { text-align: center; flex: 1; }\n' +
       '    .card-stat-value { font-size: 1.4rem; font-weight: 700; }\n' +
       '    .card-stat-label { font-size: 0.7rem; color: #73849a; text-transform: uppercase; letter-spacing: 0.04em; }\n' +
       '    .theme-dark .card-stat-label { color: #9eaab8; }\n' +
+      '\n' +
       '    .card-alternatives { margin-bottom: 12px; }\n' +
       '    .card-alternatives h4 { font-size: 0.8rem; font-weight: 600; margin-bottom: 6px; color: #4a5568; }\n' +
       '    .theme-dark .card-alternatives h4 { color: #9eaab8; }\n' +
       '    .card-alt-item { font-size: 0.8rem; padding: 4px 0; border-bottom: 1px solid #f0f2f5; }\n' +
       '    .card-alt-item:last-child { border-bottom: none; }\n' +
       '    .theme-dark .card-alt-item { border-bottom-color: #2d3e54; }\n' +
+      '\n' +
       '    .card-dates { font-size: 0.75rem; color: #73849a; margin-bottom: 12px; }\n' +
       '    .theme-dark .card-dates { color: #9eaab8; }\n' +
+      '\n' +
       '    .card-cta { display: inline-block; padding: 8px 16px; background: #e87722; color: #fff; text-decoration: none; border-radius: 6px; font-size: 0.8rem; font-weight: 600; }\n' +
       '    .card-cta:hover { background: #d06a1e; }\n' +
+      '\n' +
+      '    .card-attribution { text-align: center; padding: 8px 0; font-size: 0.7rem; color: #9eaab8; }\n' +
+      '    .card-attribution a { color: #9eaab8; text-decoration: none; }\n' +
+      '    .card-attribution a:hover { color: #e87722; }\n' +
+      '\n' +
+      '    /* Summary card grid */\n' +
       '    .summary-grid { display: grid; gap: 8px; }\n' +
       '    .summary-line { display: flex; align-items: center; gap: 10px; padding: 10px 12px; background: #f8f9fb; border-radius: 8px; }\n' +
       '    .theme-dark .summary-line { background: #1a2332; }\n' +
@@ -565,11 +582,40 @@
       '    .theme-dark .summary-moderate { background: #4a3c0a; color: #fbbf24; }\n' +
       '    .summary-trains { font-size: 0.75rem; color: #73849a; white-space: nowrap; }\n' +
       '    .theme-dark .summary-trains { color: #9eaab8; }\n' +
+      '    /* Compact wayfinding card. Accent/line stripes keep their existing meaning. */\n' +
+      '    body { background: #f5f5f0; color: #202c2b; }\n' +
+      '    .card { border: 1px solid #ccd3cc; border-radius: 6px; box-shadow: none; }\n' +
+      '    .card-color-bar { height: 5px; }\n' +
+      '    .card-body { padding: 22px; }\n' +
+      '    .card-line-name, .card-station-name { letter-spacing: -.025em; line-height: 1.25; }\n' +
+      '    .card-summary { color: #53615e; line-height: 1.7; }\n' +
+      '    .card-line-context, .card-stat-label, .card-dates, .summary-trains { color: #5c6865; }\n' +
+      '    .card-badge, .summary-impact { border-radius: 3px; text-transform: none; letter-spacing: 0; }\n' +
+      '    .card-stats { border-block: 1px solid #e0e5de; padding-block: 14px; }\n' +
+      '    .card-stat { text-align: start; }\n' +
+      '    .card-stat-value { font-variant-numeric: tabular-nums; letter-spacing: -.025em; }\n' +
+      '    .card-stat-label { text-transform: none; letter-spacing: 0; }\n' +
+      '    .card-alt-item { padding-block: 8px; }\n' +
+      '    .card-cta { min-height: 44px; display: inline-flex; align-items: center; padding: 10px 16px; background: #155e59; color: #fff; border-radius: 4px; }\n' +
+      '    .card-cta:hover { background: #182c2b; }\n' +
+      '    .card-cta:focus-visible, .card-attribution a:focus-visible { outline: 3px solid #155e59; outline-offset: 3px; }\n' +
+      '    .card-attribution { color: #5c6865; }\n' +
+      '    .card-attribution a { color: #155e59; display: inline-flex; align-items: center; min-height: 44px; text-decoration: underline; text-underline-offset: 3px; }\n' +
+      '    .summary-line { border-radius: 4px; background: #eef1eb; }\n' +
+      '    .theme-dark .card { border-color: #53615e; }\n' +
+      '    .theme-dark .card-attribution, .theme-dark .card-attribution a { color: #c9ddd7; }\n' +
+      '    .theme-dark .card-stats { border-color: #53615e; }\n' +
+      '    .theme-dark .card-cta { background: #c9ddd7; color: #182c2b; }\n' +
+      '    .theme-dark .card-cta:hover { background: #fff; }\n' +
+      '    .theme-dark .card-cta:focus-visible, .theme-dark .card-attribution a:focus-visible { outline-color: #fff; }\n' +
+      '    @media (max-width: 360px) { .card-body { padding: 16px; } .summary-line { flex-wrap: wrap; } }\n' +
+      '    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }\n' +
+      '    @media print { body { background: #fff; padding: 0; } .card { max-width: none; box-shadow: none; break-inside: avoid; } .card-cta { color: #000; background: #fff; border: 1px solid #000; } }\n' +
       '  </style>\n' +
       '</head>\n' +
       '<body' + bodyClass + '>\n' +
       '  <div id="card-root"></div>\n' +
-      '  <div style="text-align:center;padding:8px 0;font-size:0.7rem;color:#9eaab8;">Powered by <a href="https://reroutenj.org" target="_blank" rel="noopener" style="color:#9eaab8;text-decoration:none;">Reroute NJ</a></div>\n' +
+      '  <div class="card-attribution">Powered by <a href="https://reroutenj.org" target="_blank" rel="noopener">Reroute NJ</a></div>\n' +
       '  <script>\n' +
       '    var LINE_DATA = ' + JSON.stringify(dataObj) + ';\n' +
       '    var LINE_ORDER = ' + JSON.stringify(orderArr) + ';\n' +

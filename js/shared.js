@@ -316,3 +316,179 @@ function exportCanvasPdf(canvas, filename) {
   var pdf = concat(bodyParts.concat([ascii(xref), ascii(trailer)]));
   downloadBlob(new Blob([pdf], { type: "application/pdf" }), filename);
 }
+
+// =========================================================================
+// WAYFINDING LAYOUT
+// Progressive enhancement only: keep existing IDs, listeners, translated text,
+// and source order. No transit data or route-calculation logic lives here.
+// =========================================================================
+(function () {
+  "use strict";
+
+  // Capture the translated placeholder before app.js replaces the badge with
+  // the active line name. All templates load shared.js after the page markup.
+  var initialBadge = document.getElementById("line-badge");
+  var initialLineLabel = initialBadge ? initialBadge.textContent : "";
+
+  function initWayfinding() {
+    var main = document.getElementById("main-content");
+    var header = document.querySelector(".header");
+    if (!main || !header || document.body.classList.contains("embed-mode")) return;
+    if (main.getAttribute("data-wayfinding") === "ready") return;
+    main.setAttribute("data-wayfinding", "ready");
+
+    var current = document.querySelector('.tool-nav-link[aria-current="page"]');
+    var summary = main.querySelector(".seo-summary");
+    var phase = main.querySelector(".phase-banner");
+    var hero = main.querySelector(".compare-hero, .coverage-hero, .embed-hero");
+
+    function responsiveDisclosure(details) {
+      if (!window.matchMedia) { details.open = true; return; }
+      var wide = window.matchMedia("(min-width: 769px)");
+      var wasOpen;
+      function syncDisclosure() { details.open = wide.matches; }
+      window.addEventListener("beforeprint", function () {
+        wasOpen = details.open;
+        details.open = true;
+      });
+      window.addEventListener("afterprint", function () {
+        if (typeof wasOpen === "boolean") details.open = wasOpen;
+      });
+      syncDisclosure();
+      if (wide.addEventListener) wide.addEventListener("change", syncDisclosure);
+      else if (wide.addListener) wide.addListener(syncDisclosure);
+    }
+
+    // Keep the full service notice available without making phone users scroll
+    // past it on every visit. Labels come from the existing translated HTML.
+    var alert = document.querySelector(".alert-banner .container");
+    var alertTitle = alert && alert.querySelector("strong");
+    if (alert && alertTitle) {
+      var notice = document.createElement("details");
+      notice.className = "service-notice";
+      var noticeTitle = document.createElement("summary");
+      noticeTitle.appendChild(alertTitle);
+      var noticeBody = document.createElement("div");
+      while (alert.firstChild) noticeBody.appendChild(alert.firstChild);
+      notice.appendChild(noticeTitle);
+      notice.appendChild(noticeBody);
+      alert.appendChild(notice);
+      responsiveDisclosure(notice);
+      // The line guide repeats this same phase notice in the page body.
+      if (phase) { phase.parentNode.removeChild(phase); phase = null; }
+    }
+
+    // Index previously had no H1. Reuse its translated navigation label.
+    if (summary || hero) {
+      var intro = document.createElement("div");
+      intro.className = "site-intro";
+      var copy = document.createElement("div");
+      copy.className = "site-intro-copy";
+      main.insertBefore(intro, main.firstChild);
+      intro.appendChild(copy);
+      if (hero) {
+        copy.appendChild(hero);
+      } else if (!main.querySelector("h1") && current) {
+        var title = document.createElement("h1");
+        title.textContent = current.textContent;
+        copy.appendChild(title);
+      }
+      if (summary) {
+        var contextTitle = main.querySelector(".cutover-summary h3");
+        if (!hero && contextTitle) {
+          var context = document.createElement("details");
+          context.className = "intro-context";
+          var contextLabel = document.createElement("summary");
+          contextLabel.textContent = contextTitle.textContent;
+          context.appendChild(contextLabel);
+          context.appendChild(summary);
+          copy.appendChild(context);
+          responsiveDisclosure(context);
+        } else {
+          copy.appendChild(summary);
+        }
+      }
+      if (phase) intro.appendChild(phase);
+    }
+
+    var controls = main.querySelector(".control-panel");
+    var tabs = main.querySelector(".tool-tabs");
+    if (controls && tabs) {
+      var workspace = document.createElement("div");
+      workspace.className = "journey-workspace";
+      main.insertBefore(workspace, controls);
+      workspace.appendChild(controls);
+      var answers = document.createElement("div");
+      answers.className = "journey-answers";
+      workspace.appendChild(answers);
+      answers.appendChild(tabs);
+      var panels = main.querySelectorAll(".tool-panel");
+      for (var i = 0; i < panels.length; i++) answers.appendChild(panels[i]);
+
+      var lineNav = controls.querySelector(".line-nav");
+      if (lineNav && lineNav.getAttribute("aria-label")) {
+        var label = document.createElement("h2");
+        label.className = "control-title";
+        label.textContent = initialLineLabel || lineNav.getAttribute("aria-label");
+        label.id = "line-selection-heading";
+        lineNav.setAttribute("aria-labelledby", label.id);
+        lineNav.parentNode.insertBefore(label, lineNav);
+      }
+
+      // The original label points to a nonexistent select. The direction
+      // buttons already have a labelled group; retain the visible label.
+      var directionLabel = controls.querySelector('label[for="direction-select"]');
+      if (directionLabel) {
+        var directionText = document.createElement("p");
+        directionText.className = "direction-label";
+        directionText.textContent = directionLabel.textContent;
+        directionLabel.parentNode.replaceChild(directionText, directionLabel);
+      }
+
+      // Long reference sections remain on the page, with direct jump links.
+      var sections = main.querySelectorAll(".info-section[id]");
+      var jumps = document.createElement("nav");
+      jumps.className = "page-jumps";
+      if (current) jumps.setAttribute("aria-label", current.textContent);
+      for (var j = 0; j < sections.length; j++) {
+        var heading = sections[j].querySelector("h2");
+        if (!heading) continue;
+        var link = document.createElement("a");
+        link.setAttribute("href", "#" + sections[j].id);
+        link.textContent = heading.textContent;
+        jumps.appendChild(link);
+      }
+      if (jumps.firstChild) main.insertBefore(jumps, workspace.nextSibling);
+    }
+
+    var steps = main.querySelectorAll(".input-step");
+    if (steps.length) {
+      var inputs = document.createElement("div");
+      inputs.className = "compare-inputs";
+      main.insertBefore(inputs, steps[0]);
+      for (var k = 0; k < steps.length; k++) inputs.appendChild(steps[k]);
+    }
+
+    // Mobile navigation has an explicit target and a predictable Escape key.
+    var nav = document.querySelector(".tool-nav");
+    var menu = nav && nav.querySelector(".container");
+    var toggle = nav && nav.querySelector(".hamburger-btn");
+    if (menu && toggle) {
+      menu.id = "site-tool-links";
+      toggle.setAttribute("aria-controls", menu.id);
+      nav.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && nav.classList.contains("open")) {
+          nav.classList.remove("open");
+          toggle.setAttribute("aria-expanded", "false");
+          toggle.focus();
+        }
+      });
+    }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initWayfinding);
+  } else {
+    initWayfinding();
+  }
+})();
