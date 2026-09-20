@@ -56,7 +56,9 @@
     "nav_about": "परिचय",
     "phase_banner": "चरण 2 कटओवर: 11 अक्टू – 15 नव, 2026. सप्ताह के दिनों में Midtown Direct ट्रेनें Hoboken जाती हैं. हमेशा njtransit.com/portalcutover पर जाँच करें.",
     "remaining_phase2": "चरण 2 में शेष",
-    "phase2_complete": "चरण 2 पूरा · नियमित समयसारणी 15 नव को फिर शुरू, परीक्षण के अधीन"
+    "phase2_complete": "चरण 2 पूरा · नियमित समयसारणी 15 नव को फिर शुरू, परीक्षण के अधीन",
+    "footer_map_basemap_pre": "बेसमैप टाइल &copy; Esri, HERE, Garmin, &copy;",
+    "footer_map_basemap_post": "योगदानकर्ता, और GIS User Community."
   },
   "index": {
     "title": "Reroute NJ — Portal North Bridge कटओवर संसाधन",
@@ -256,7 +258,7 @@
     "cutover_item4": "सप्ताह के दिनों में Midtown Direct ट्रेनें Hoboken भेजी जाती हैं (11 अक्टू – 15 नव, 2026); सप्ताहांत अभी भी Penn Station NY जाते हैं",
     "download_png": "PNG डाउनलोड करें",
     "download_pdf": "PDF डाउनलोड करें",
-    "export_note": "यह रूटों का बनाया गया नक्शा डाउनलोड करता है। यह स्टेशन की तस्वीर या मैप टाइल का स्क्रीनशॉट नहीं है।",
+    "export_note": "हल्के बेसमैप पर रेल मानचित्र डाउनलोड होता है। यह स्टेशन की तस्वीर नहीं है।",
     "seo_summary": "Portal North Bridge चरण 2 कटओवर (11 अक्टू – 15 नव, 2026) का इंटरैक्टिव मानचित्र: NJ Transit GTFS रेल ज्यामिति, Kearny में Hackensack नदी क्रॉसिंग, प्रभावित स्टेशन, ट्रांसफर हब, और PATH, फेरी व बस विकल्प.",
     "filter_aria": "लाइन के अनुसार मानचित्र फ़िल्टर करें",
     "canvas_aria": "Portal Bridge कटओवर स्टेशन और मार्गों का इंटरैक्टिव मानचित्र",
@@ -500,7 +502,10 @@
     "ticket_flexpass_0": "NJ Transit <strong>FLEXPASS</strong> देता है (20 यात्राओं का टिकट, 15% छूट)। Midtown Direct यात्रियों के लिए अक्टूबर-नवंबर Hoboken FLEXPASS खरीदें।",
     "ticket_flexpass_1": "अगर आप नियमित यात्रा करते हैं लेकिन कटओवर में पूरे मासिक पास की ज़रूरत नहीं, तो यह अच्छा विकल्प है।",
     "ticket_flexpass_2": "FLEXPASS कीमत और खरीद के लिए <a href=\"https://www.njtransit.com/portalcutover\" target=\"_blank\" rel=\"noopener\">njtransit.com/portalcutover</a> देखें।",
-    "savings_unverified": "Hoboken टिकट Penn Station से सस्ते हैं। NJ Transit कहता है कि यात्री प्रति यात्रा 25% तक बचा सकते हैं, और Hoboken से PATH/फेरी क्रॉस-हॉनर है।"
+    "savings_unverified": "Hoboken टिकट Penn Station से सस्ते हैं। NJ Transit कहता है कि यात्री प्रति यात्रा 25% तक बचा सकते हैं, और Hoboken से PATH/फेरी क्रॉस-हॉनर है।",
+    "map_basemap_credit": "टाइल © Esri, HERE, Garmin, © OpenStreetMap योगदानकर्ता, GIS User Community",
+    "map_export_preparing": "मानचित्र डाउनलोड तैयार हो रहा है।",
+    "map_export_incomplete": "कुछ बैकग्राउंड टाइल लोड नहीं हुईं। रेल लाइनें फ़ाइल में हैं।"
   },
   "blog": {
     "title": "ब्लॉग — Reroute NJ",

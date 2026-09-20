@@ -56,7 +56,9 @@
     "nav_about": "소개",
     "phase_banner": "2단계 전환: 2026년 10월 11일 – 11월 15일. 평일 Midtown Direct 열차는 Hoboken으로 갑니다. njtransit.com/portalcutover에서 확인하세요.",
     "remaining_phase2": "2단계 남은 기간",
-    "phase2_complete": "2단계 완료 · 정규 시각표는 11월 15일 재개(시험 완료 시)"
+    "phase2_complete": "2단계 완료 · 정규 시각표는 11월 15일 재개(시험 완료 시)",
+    "footer_map_basemap_pre": "배경 지도 타일 &copy; Esri, HERE, Garmin, &copy;",
+    "footer_map_basemap_post": "기여자 및 GIS User Community."
   },
   "index": {
     "title": "Reroute NJ — Portal North Bridge 전환 자료",
@@ -256,7 +258,7 @@
     "cutover_item4": "평일 Midtown Direct 열차는 Hoboken으로 우회(2026년 10월 11일 – 11월 15일); 주말은 계속 Penn Station NY로 운행",
     "download_png": "PNG 다운로드",
     "download_pdf": "PDF 다운로드",
-    "export_note": "그린 노선도를 다운로드합니다. 역 사진이나 지도 타일 스크린샷이 아닙니다.",
+    "export_note": "밝은 배경 지도 위의 철도 노선도를 다운로드합니다. 역 사진이 아닙니다.",
     "seo_summary": "Portal North Bridge 2단계 전환(2026년 10월 11일–11월 15일) 대화형 지도: NJ Transit GTFS 철도 형상, Kearny의 Hackensack 강 교차, 영향 역, 환승 허브, PATH·페리·버스 대안.",
     "filter_aria": "노선별로 지도 필터",
     "canvas_aria": "Portal Bridge 전환 역과 노선을 보여 주는 대화형 지도",
@@ -500,7 +502,10 @@
     "ticket_flexpass_0": "NJ Transit는 <strong>FLEXPASS</strong>(20회권, 15% 할인)를 제공합니다. Midtown Direct 승객은 10월·11월 Hoboken 구간 FLEXPASS를 사세요.",
     "ticket_flexpass_1": "자주 타지만 전환 기간에 월간권 전체가 필요 없다면 좋은 선택입니다.",
     "ticket_flexpass_2": "FLEXPASS 요금과 구매는 <a href=\"https://www.njtransit.com/portalcutover\" target=\"_blank\" rel=\"noopener\">njtransit.com/portalcutover</a>에서 확인하세요.",
-    "savings_unverified": "Hoboken 승차권이 Penn Station보다 저렴합니다. NJ Transit는 여행당 최대 25%를 아낄 수 있고, Hoboken에서 PATH/페리 환승이 인정된다고 안내합니다."
+    "savings_unverified": "Hoboken 승차권이 Penn Station보다 저렴합니다. NJ Transit는 여행당 최대 25%를 아낄 수 있고, Hoboken에서 PATH/페리 환승이 인정된다고 안내합니다.",
+    "map_basemap_credit": "타일 © Esri, HERE, Garmin, © OpenStreetMap 기여자, GIS User Community",
+    "map_export_preparing": "지도 다운로드를 준비하는 중입니다.",
+    "map_export_incomplete": "일부 배경 타일을 불러오지 못했습니다. 철도 노선은 파일에 있습니다."
   },
   "blog": {
     "title": "Blog — Reroute NJ",

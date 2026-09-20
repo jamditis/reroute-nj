@@ -56,7 +56,9 @@
     "menu": "Menu",
     "phase_banner": "Phase 2 cutover: Oct 11 – Nov 15, 2026. Weekday Midtown Direct trains go to Hoboken. Always verify with njtransit.com/portalcutover.",
     "remaining_phase2": "remaining in Phase 2",
-    "phase2_complete": "Phase 2 complete · Regular schedules resume Nov 15, subject to testing"
+    "phase2_complete": "Phase 2 complete · Regular schedules resume Nov 15, subject to testing",
+    "footer_map_basemap_pre": "Basemap tiles &copy; Esri, HERE, Garmin, &copy;",
+    "footer_map_basemap_post": "contributors, and the GIS User Community."
   },
   "index": {
     "title": "Reroute NJ — Portal North Bridge cutover resources",
@@ -256,7 +258,7 @@
     "cutover_item4": "Weekday Midtown Direct trains diverted to Hoboken (Oct 11 – Nov 15, 2026); weekends still run to Penn Station NY",
     "download_png": "Download PNG",
     "download_pdf": "Download PDF",
-    "export_note": "Downloads a drawn map of the routes. This is not a photograph of a station or a screenshot of map tiles.",
+    "export_note": "Downloads the rail map on a light basemap. This is not a photograph of a station.",
     "seo_summary": "Interactive map of the Portal North Bridge Phase 2 cutover (Oct 11 – Nov 15, 2026): rail geometry from NJ Transit GTFS, the Hackensack River crossing in Kearny, affected stations, transfer hubs, and PATH, ferry, and bus alternatives.",
     "filter_aria": "Filter map by line",
     "canvas_aria": "Interactive map showing Portal Bridge cutover stations and routes",
@@ -562,7 +564,10 @@
     "ticket_flexpass_0": "NJ Transit is offering a <strong>FLEXPASS</strong> (20-trip ticket with a 15% discount). For Midtown Direct riders, buy FLEXPASS to/from Hoboken for October and November.",
     "ticket_flexpass_1": "Good option if you ride regularly but do not need a full monthly pass during the cutover period.",
     "ticket_flexpass_2": "Check <a href=\"https://www.njtransit.com/portalcutover\" target=\"_blank\" rel=\"noopener\">njtransit.com/portalcutover</a> for FLEXPASS pricing and purchase options.",
-    "savings_unverified": "Hoboken tickets cost less than Penn Station tickets. NJ Transit says riders can save up to 25% per trip, and PATH/ferry from Hoboken is cross-honored."
+    "savings_unverified": "Hoboken tickets cost less than Penn Station tickets. NJ Transit says riders can save up to 25% per trip, and PATH/ferry from Hoboken is cross-honored.",
+    "map_basemap_credit": "Tiles © Esri, HERE, Garmin, © OpenStreetMap contributors, GIS User Community",
+    "map_export_preparing": "Preparing the map download.",
+    "map_export_incomplete": "Some background tiles did not load. The rail lines are in the file."
   },
   "blog_post_embed": {
     "title": "New: embed Reroute NJ on your website — Reroute NJ",

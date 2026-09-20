@@ -1,7 +1,7 @@
 // Reroute NJ — Interactive map
 // Leaflet for the live view. Geometry comes from data/map-geometry.json
-// (NJ Transit rail GTFS shapes and stops). PNG/PDF export draws the same
-// geometry to a canvas so tile CORS cannot block a download.
+// (NJ Transit rail GTFS shapes and stops). PNG/PDF export composites
+// keyless Esri World Light Gray tiles, then draws the same rail geometry.
 
 (function () {
   "use strict";
@@ -78,11 +78,24 @@
 
     map = L.map("map").setView([40.74, -74.15], 9);
 
-    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      attribution:
-        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-      maxZoom: 19,
-    }).addTo(map);
+    L.tileLayer(
+      "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}",
+      {
+        attribution:
+          'Tiles &copy; Esri, HERE, Garmin, &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, GIS User Community',
+        maxZoom: 16,
+        crossOrigin: true,
+      }
+    ).addTo(map);
+    L.tileLayer(
+      "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer/tile/{z}/{y}/{x}",
+      {
+        attribution: "",
+        maxZoom: 16,
+        crossOrigin: true,
+        opacity: 0.9,
+      }
+    ).addTo(map);
 
     layers = {
       "portal-bridge": L.layerGroup(),
@@ -153,9 +166,18 @@
 
     data.routes.forEach(function (route) {
       L.polyline(route.coords, {
+        color: "#ffffff",
+        weight: 7,
+        opacity: 0.95,
+        lineJoin: "round",
+        lineCap: "round",
+      }).addTo(layers[route.line]);
+      L.polyline(route.coords, {
         color: LINE_COLORS[route.line],
-        weight: 3,
-        opacity: 0.85,
+        weight: 4,
+        opacity: 1,
+        lineJoin: "round",
+        lineCap: "round",
       }).addTo(layers[route.line]);
     });
 
@@ -318,9 +340,14 @@
     var scale = Math.min(innerW / spanX, innerH / spanY);
     var ox = padL + (innerW - spanX * scale) / 2;
     var oy = padT + (innerH - spanY * scale) / 2;
-    return function (lat, lng) {
-      var p = mercator(lat, lng);
-      return [ox + (p[0] - minX) * scale, oy + (p[1] - minY) * scale];
+    return {
+      xy: function (lat, lng) {
+        var p = mercator(lat, lng);
+        return [ox + (p[0] - minX) * scale, oy + (p[1] - minY) * scale];
+      },
+      scale: scale,
+      minX: minX,
+      minY: minY,
     };
   }
 
@@ -343,7 +370,130 @@
     ctx.restore();
   }
 
-  function renderExportCanvas(data) {
+  function latLngToTile(lat, lng, z) {
+    var m = mercator(lat, lng);
+    var n = Math.pow(2, z);
+    return [m[0] * n, m[1] * n];
+  }
+
+  function sinh(x) {
+    return (Math.exp(x) - Math.exp(-x)) / 2;
+  }
+
+  function tileNWLatLng(tx, ty, z) {
+    var n = Math.pow(2, z);
+    var lng = (tx / n) * 360 - 180;
+    var mY = ty / n;
+    var latRad = Math.atan(sinh(Math.PI * (1 - 2 * mY)));
+    return [latRad * 180 / Math.PI, lng];
+  }
+
+  function esriTileUrl(kind, z, tx, ty) {
+    var svc =
+      kind === "ref"
+        ? "Canvas/World_Light_Gray_Reference"
+        : "Canvas/World_Light_Gray_Base";
+    return (
+      "https://server.arcgisonline.com/ArcGIS/rest/services/" +
+      svc +
+      "/MapServer/tile/" +
+      z +
+      "/" +
+      ty +
+      "/" +
+      tx
+    );
+  }
+
+  function loadTileImage(url, done) {
+    var img = new Image();
+    img.crossOrigin = "anonymous";
+    img.onload = function () {
+      done(img);
+    };
+    img.onerror = function () {
+      done(null);
+    };
+    img.src = url;
+  }
+
+  function drawBasemapTiles(ctx, proj, pts, done) {
+    var z = Math.round(Math.log(proj.scale / 256) / Math.LN2);
+    if (!(z >= 0)) z = 8;
+    if (z < 7) z = 7;
+    if (z > 12) z = 12;
+
+    var lats = [];
+    var lngs = [];
+    var i;
+    for (i = 0; i < pts.length; i++) {
+      lats.push(pts[i][0]);
+      lngs.push(pts[i][1]);
+    }
+    var nw = latLngToTile(Math.max.apply(null, lats), Math.min.apply(null, lngs), z);
+    var se = latLngToTile(Math.min.apply(null, lats), Math.max.apply(null, lngs), z);
+    var x0 = Math.floor(nw[0]) - 1;
+    var y0 = Math.floor(nw[1]) - 1;
+    var x1 = Math.floor(se[0]) + 1;
+    var y1 = Math.floor(se[1]) + 1;
+    var nWorld = Math.pow(2, z);
+    if (x0 < 0) x0 = 0;
+    if (y0 < 0) y0 = 0;
+    if (x1 > nWorld - 1) x1 = nWorld - 1;
+    if (y1 > nWorld - 1) y1 = nWorld - 1;
+    if (x1 - x0 > 9) x1 = x0 + 9;
+    if (y1 - y0 > 9) y1 = y0 + 9;
+
+    var jobs = [];
+    var tx;
+    var ty;
+    for (ty = y0; ty <= y1; ty++) {
+      for (tx = x0; tx <= x1; tx++) {
+        jobs.push({ kind: "base", z: z, tx: tx, ty: ty });
+        jobs.push({ kind: "ref", z: z, tx: tx, ty: ty });
+      }
+    }
+
+    var remaining = jobs.length;
+    if (!remaining) {
+      done();
+      return;
+    }
+    var settled = false;
+    var loaded = [];
+    function paintTile(job, img) {
+      var nwLL = tileNWLatLng(job.tx, job.ty, job.z);
+      var seLL = tileNWLatLng(job.tx + 1, job.ty + 1, job.z);
+      var p0 = proj.xy(nwLL[0], nwLL[1]);
+      var p1 = proj.xy(seLL[0], seLL[1]);
+      ctx.drawImage(img, p0[0], p0[1], p1[0] - p0[0], p1[1] - p0[1]);
+    }
+    function finish() {
+      if (settled) return;
+      settled = true;
+      var i;
+      for (i = 0; i < loaded.length; i++) {
+        if (loaded[i].kind === "base") paintTile(loaded[i].job, loaded[i].img);
+      }
+      for (i = 0; i < loaded.length; i++) {
+        if (loaded[i].kind === "ref") paintTile(loaded[i].job, loaded[i].img);
+      }
+      done(loaded.length < jobs.length);
+    }
+    setTimeout(finish, 15000);
+
+    jobs.forEach(function (job) {
+      loadTileImage(esriTileUrl(job.kind, job.z, job.tx, job.ty), function (img) {
+        if (img && !settled) {
+          loaded.push({ kind: job.kind, job: job, img: img });
+        }
+        remaining -= 1;
+        if (remaining <= 0) finish();
+      });
+    });
+  }
+
+  function renderExportCanvas(data, done) {
     var width = 1600;
     var height = 1200;
     var canvas = document.createElement("canvas");
@@ -351,11 +501,14 @@
     canvas.height = height;
     var ctx = canvas.getContext("2d");
 
-    ctx.fillStyle = "#f4f1ea";
+    ctx.fillStyle = "#e8e8e4";
     ctx.fillRect(0, 0, width, height);
 
-    var toXY = projectFit(collectPoints(data), width, height, 48, 110, 280, 56);
+    var pts = collectPoints(data);
+    var proj = projectFit(pts, width, height, 48, 110, 280, 56);
+    var toXY = proj.xy;
 
+    function drawOverlay() {
     if (data.alternatives) {
       data.alternatives.forEach(function (alt) {
         drawPolyline(ctx, toXY, alt.coords, "#4b5d73", 2, [6, 6]);
@@ -363,7 +516,8 @@
     }
 
     data.routes.forEach(function (route) {
-      drawPolyline(ctx, toXY, route.coords, LINE_COLORS[route.line], 3.5, null);
+      drawPolyline(ctx, toXY, route.coords, "#ffffff", 8, null);
+      drawPolyline(ctx, toXY, route.coords, LINE_COLORS[route.line], 4.5, null);
     });
 
     if (data.cutoverCorridor) {
@@ -479,12 +633,21 @@
     ctx.fillStyle = "#6b7280";
     ctx.font = "11px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif";
     ctx.fillText(
+      t("js.map_basemap_credit"),
+      48,
+      height - 36
+    );
+    ctx.fillText(
       t("js.map_export_footer"),
       48,
       height - 20
     );
+    }
 
-    return canvas;
+    drawBasemapTiles(ctx, proj, pts, function (incomplete) {
+      drawOverlay();
+      done(canvas, { incomplete: !!incomplete });
+    });
   }
 
   function initExports() {
@@ -492,24 +655,40 @@
     var pdfBtn = document.getElementById("map-download-pdf");
     if (!pngBtn && !pdfBtn) return;
 
-    function canvasOrAlert() {
+    function setExportStatus(msg) {
+      var el = document.getElementById("map-export-status");
+      if (el) el.textContent = msg || "";
+    }
+
+    function runExport(kind) {
       if (!geometry) {
         window.alert(t("js.map_loading_alert"));
-        return null;
+        return;
       }
-      return renderExportCanvas(geometry);
+      setExportStatus(t("js.map_export_preparing"));
+      renderExportCanvas(geometry, function (canvas, info) {
+        if (!canvas) return;
+        if (info && info.incomplete) {
+          setExportStatus(t("js.map_export_incomplete"));
+        } else {
+          setExportStatus("");
+        }
+        if (kind === "png") {
+          exportCanvasPng(canvas, "reroute-nj-phase2-map.png");
+        } else {
+          exportCanvasPdf(canvas, "reroute-nj-phase2-map.pdf");
+        }
+      });
     }
 
     if (pngBtn) {
       pngBtn.addEventListener("click", function () {
-        var canvas = canvasOrAlert();
-        if (canvas) exportCanvasPng(canvas, "reroute-nj-phase2-map.png");
+        runExport("png");
       });
     }
     if (pdfBtn) {
       pdfBtn.addEventListener("click", function () {
-        var canvas = canvasOrAlert();
-        if (canvas) exportCanvasPdf(canvas, "reroute-nj-phase2-map.pdf");
+        runExport("pdf");
       });
     }
   }
