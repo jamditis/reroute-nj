@@ -442,7 +442,6 @@
     "map_single_track": "Zona a binario unico",
     "map_export_footer": "Reroute NJ · reroutenj.org · Geometria ferroviaria dal GTFS di NJ Transit. Strumento comunitario indipendente.",
     "map_load_error": "Impossibile caricare la geometria ferroviaria. Aggiorna la pagina o apri il sito via http (python3 -m http.server 8000).",
-    "map_popup_portal": "Hackensack River, Kearny NJ<br>Esercizio a binario unico tra Newark Penn e Secaucus nel taglio di fase 2 (11 ott – 15 nov, 2026).",
     "map_popup_old": "Campata girevole del 1910. Fuori servizio dopo il trasferimento del secondo binario su Portal North Bridge.",
     "map_plan_commute": "Pianifica il tragitto",
     "map_loading_alert": "I dati della mappa sono ancora in caricamento. Riprova tra un attimo.",
@@ -464,7 +463,9 @@
     "embed_png_unavailable": "Esportazione PNG non disponibile. La pagina della scheda potrebbe essere ancora in caricamento.",
     "embed_pdf_unavailable": "Esportazione PDF non disponibile. La pagina della scheda potrebbe essere ancora in caricamento.",
     "embed_png_cors": "Impossibile esportare PNG. Potrebbe essere una restrizione cross-origin in anteprima locale.",
-    "embed_pdf_cors": "Impossibile esportare PDF. Potrebbe essere una restrizione cross-origin in anteprima locale."
+    "embed_pdf_cors": "Impossibile esportare PDF. Potrebbe essere una restrizione cross-origin in anteprima locale.",
+    "map_popup_portal_loc": "Hackensack River, Kearny NJ",
+    "map_popup_portal_ops": "Esercizio a binario unico tra Newark Penn e Secaucus nel taglio di fase 2 (11 ott – 15 nov, 2026)."
   },
   "blog": {
     "title": "Blog — Reroute NJ",

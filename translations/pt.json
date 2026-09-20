@@ -442,7 +442,6 @@
     "map_single_track": "Zona de via única",
     "map_export_footer": "Reroute NJ · reroutenj.org · Geometria ferroviária do GTFS da NJ Transit. Ferramenta comunitária independente.",
     "map_load_error": "Não foi possível carregar a geometria ferroviária. Atualize a página ou abra o site por http (python3 -m http.server 8000).",
-    "map_popup_portal": "Rio Hackensack, Kearny NJ<br>Operação de via única entre Newark Penn e Secaucus no corte da fase 2 (11 out – 15 nov, 2026).",
     "map_popup_old": "Vão giratório de 1910. Sai de serviço depois que a segunda via vai para Portal North Bridge.",
     "map_plan_commute": "Planeje sua viagem",
     "map_loading_alert": "Os dados do mapa ainda estão carregando. Tente de novo em um instante.",
@@ -464,7 +463,9 @@
     "embed_png_unavailable": "A exportação PNG não está disponível. A página do cartão ainda pode estar carregando.",
     "embed_pdf_unavailable": "A exportação PDF não está disponível. A página do cartão ainda pode estar carregando.",
     "embed_png_cors": "Não foi possível exportar PNG. Pode ser uma restrição de origem cruzada na prévia local.",
-    "embed_pdf_cors": "Não foi possível exportar PDF. Pode ser uma restrição de origem cruzada na prévia local."
+    "embed_pdf_cors": "Não foi possível exportar PDF. Pode ser uma restrição de origem cruzada na prévia local.",
+    "map_popup_portal_loc": "Rio Hackensack, Kearny NJ",
+    "map_popup_portal_ops": "Operação de via única entre Newark Penn e Secaucus no corte da fase 2 (11 out – 15 nov, 2026)."
   },
   "blog": {
     "title": "Blog — Reroute NJ",

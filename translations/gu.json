@@ -442,7 +442,6 @@
     "map_single_track": "એક-ટ્રેક વિસ્તાર",
     "map_export_footer": "Reroute NJ · reroutenj.org · રેલ ભૂમિતિ NJ Transit GTFSમાંથી. સ્વતંત્ર સમુદાય સાધન.",
     "map_load_error": "રેલ ભૂમિતિ લોડ થઈ શકી નહીં. પેજ રિફ્રેશ કરો, અથવા http પર ખોલો (python3 -m http.server 8000).",
-    "map_popup_portal": "Hackensack River, Kearny NJ<br>ફેઝ 2 કટઓવર (11 ઑક્ટ – 15 નવ, 2026) દરમિયાન Newark Penn અને Secaucus વચ્ચે એક ટ્રેક.",
     "map_popup_old": "1910 સ્વિંગ સ્પાન. બીજી પાટી Portal North Bridge પર જાય ત્યારે નિવૃત્ત.",
     "map_plan_commute": "તમારી મુસાફરી યોજો",
     "map_loading_alert": "નકશાનો ડેટા હજુ લોડ થઈ રહ્યો છે. થોડી વારે ફરી પ્રયાસ કરો.",
@@ -464,7 +463,9 @@
     "embed_png_unavailable": "PNG નિકાસ ઉપલબ્ધ નથી. કાર્ડ પેજ હજુ લોડ થઈ રહ્યું હોઈ શકે.",
     "embed_pdf_unavailable": "PDF નિકાસ ઉપલબ્ધ નથી. કાર્ડ પેજ હજુ લોડ થઈ રહ્યું હોઈ શકે.",
     "embed_png_cors": "PNG નિકાસ થઈ શક્યું નહીં. સ્થાનિક પ્રિવ્યૂમાં ક્રોસ-ઑરિજિન મર્યાદા હોઈ શકે.",
-    "embed_pdf_cors": "PDF નિકાસ થઈ શક્યું નહીં. સ્થાનિક પ્રિવ્યૂમાં ક્રોસ-ઑરિજિન મર્યાદા હોઈ શકે."
+    "embed_pdf_cors": "PDF નિકાસ થઈ શક્યું નહીં. સ્થાનિક પ્રિવ્યૂમાં ક્રોસ-ઑરિજિન મર્યાદા હોઈ શકે.",
+    "map_popup_portal_loc": "Hackensack River, Kearny NJ",
+    "map_popup_portal_ops": "ફેઝ 2 કટઓવર (11 ઑક્ટ – 15 નવ, 2026) દરમિયાન Newark Penn અને Secaucus વચ્ચે એક ટ્રેક."
   },
   "blog": {
     "title": "બ્લોગ — Reroute NJ",

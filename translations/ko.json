@@ -442,7 +442,6 @@
     "map_single_track": "단선 구간",
     "map_export_footer": "Reroute NJ · reroutenj.org · 철도 형상은 NJ Transit GTFS. 독립 커뮤니티 도구.",
     "map_load_error": "철도 형상을 불러올 수 없습니다. 페이지를 새로고침하거나 http로 여세요 (python3 -m http.server 8000).",
-    "map_popup_portal": "Hackensack River, Kearny NJ<br>2단계 전환(2026년 10월 11일–11월 15일) 동안 Newark Penn–Secaucus 단선 운행.",
     "map_popup_old": "1910년 회전교. 두 번째 선로가 Portal North Bridge로 이전한 뒤 폐지.",
     "map_plan_commute": "출퇴근 계획하기",
     "map_loading_alert": "지도 데이터를 아직 불러오는 중입니다. 잠시 후 다시 시도하세요.",
@@ -464,7 +463,9 @@
     "embed_png_unavailable": "PNG를 보낼 수 없습니다. 카드 페이지가 아직 로딩 중일 수 있습니다.",
     "embed_pdf_unavailable": "PDF를 보낼 수 없습니다. 카드 페이지가 아직 로딩 중일 수 있습니다.",
     "embed_png_cors": "PNG를 보낼 수 없습니다. 로컬 미리보기에서 교차 출처 제한일 수 있습니다.",
-    "embed_pdf_cors": "PDF를 보낼 수 없습니다. 로컬 미리보기에서 교차 출처 제한일 수 있습니다."
+    "embed_pdf_cors": "PDF를 보낼 수 없습니다. 로컬 미리보기에서 교차 출처 제한일 수 있습니다.",
+    "map_popup_portal_loc": "Hackensack River, Kearny NJ",
+    "map_popup_portal_ops": "2단계 전환(2026년 10월 11일–11월 15일) 동안 Newark Penn–Secaucus 단선 운행."
   },
   "blog": {
     "title": "Blog — Reroute NJ",

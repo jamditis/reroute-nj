@@ -442,7 +442,6 @@
     "map_single_track": "Strefa jednotorowa",
     "map_export_footer": "Reroute NJ · reroutenj.org · Geometria torów z GTFS NJ Transit. Niezależne narzędzie społecznościowe.",
     "map_load_error": "Nie udało się wczytać geometrii torów. Odśwież stronę albo otwórz witrynę przez http (python3 -m http.server 8000).",
-    "map_popup_portal": "Hackensack River, Kearny NJ<br>Ruch jednotorowy między Newark Penn a Secaucus w fazie 2 (11 paź – 15 lis 2026).",
     "map_popup_old": "Przęsło obrotowe z 1910. Wycofane po przeniesieniu drugiego toru na Portal North Bridge.",
     "map_plan_commute": "Zaplanuj dojazd",
     "map_loading_alert": "Dane mapy wciąż się ładują. Spróbuj za chwilę.",
@@ -464,7 +463,9 @@
     "embed_png_unavailable": "Eksport PNG jest niedostępny. Strona karty może się jeszcze ładować.",
     "embed_pdf_unavailable": "Eksport PDF jest niedostępny. Strona karty może się jeszcze ładować.",
     "embed_png_cors": "Nie udało się wyeksportować PNG. To może być ograniczenie cross-origin przy podglądzie lokalnym.",
-    "embed_pdf_cors": "Nie udało się wyeksportować PDF. To może być ograniczenie cross-origin przy podglądzie lokalnym."
+    "embed_pdf_cors": "Nie udało się wyeksportować PDF. To może być ograniczenie cross-origin przy podglądzie lokalnym.",
+    "map_popup_portal_loc": "Hackensack River, Kearny NJ",
+    "map_popup_portal_ops": "Ruch jednotorowy między Newark Penn a Secaucus w fazie 2 (11 paź – 15 lis 2026)."
   },
   "blog": {
     "title": "Blog — Reroute NJ",

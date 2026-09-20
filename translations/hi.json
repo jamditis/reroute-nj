@@ -442,7 +442,6 @@
     "map_single_track": "एक-पटरी क्षेत्र",
     "map_export_footer": "Reroute NJ · reroutenj.org · रेल ज्यामिति NJ Transit GTFS से. स्वतंत्र सामुदायिक उपकरण.",
     "map_load_error": "रेल ज्यामिति लोड नहीं हो सकी. पेज रिफ्रेश करें, या http पर खोलें (python3 -m http.server 8000).",
-    "map_popup_portal": "Hackensack River, Kearny NJ<br>चरण 2 कटओवर (11 अक्टू – 15 नव, 2026) में Newark Penn और Secaucus के बीच एक पटरी.",
     "map_popup_old": "1910 स्विंग स्पैन. दूसरी पटरी Portal North Bridge पर जाने के बाद सेवा से हटेगी.",
     "map_plan_commute": "अपनी यात्रा योजना बनाएँ",
     "map_loading_alert": "मानचित्र डेटा अभी लोड हो रहा है. थोड़ी देर बाद फिर कोशिश करें.",
@@ -464,7 +463,9 @@
     "embed_png_unavailable": "PNG निर्यात उपलब्ध नहीं है. कार्ड पेज अभी लोड हो रहा हो सकता है.",
     "embed_pdf_unavailable": "PDF निर्यात उपलब्ध नहीं है. कार्ड पेज अभी लोड हो रहा हो सकता है.",
     "embed_png_cors": "PNG निर्यात नहीं हो सका. स्थानीय पूर्वावलोकन में क्रॉस-ऑरिजिन रोक हो सकती है.",
-    "embed_pdf_cors": "PDF निर्यात नहीं हो सका. स्थानीय पूर्वावलोकन में क्रॉस-ऑरिजिन रोक हो सकती है."
+    "embed_pdf_cors": "PDF निर्यात नहीं हो सका. स्थानीय पूर्वावलोकन में क्रॉस-ऑरिजिन रोक हो सकती है.",
+    "map_popup_portal_loc": "Hackensack River, Kearny NJ",
+    "map_popup_portal_ops": "चरण 2 कटओवर (11 अक्टू – 15 नव, 2026) में Newark Penn और Secaucus के बीच एक पटरी."
   },
   "blog": {
     "title": "ब्लॉग — Reroute NJ",

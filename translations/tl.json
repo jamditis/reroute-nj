@@ -442,7 +442,6 @@
     "map_single_track": "Sona ng iisang riles",
     "map_export_footer": "Reroute NJ · reroutenj.org · Rail geometry mula sa NJ Transit GTFS. Independent community tool.",
     "map_load_error": "Hindi ma-load ang rail geometry. I-refresh ang page, o buksan ang site sa http (python3 -m http.server 8000).",
-    "map_popup_portal": "Hackensack River, Kearny NJ<br>Isang riles sa pagitan ng Newark Penn at Secaucus sa Phase 2 cutover (Okt 11 – Nob 15, 2026).",
     "map_popup_old": "1910 swing span. Ireretiro pagkatapos lumipat ang pangalawang riles sa Portal North Bridge.",
     "map_plan_commute": "Planuhin ang biyahe",
     "map_loading_alert": "Naglo-load pa ang datos ng mapa. Subukan ulit sa ilang sandali.",
@@ -464,7 +463,9 @@
     "embed_png_unavailable": "Hindi available ang PNG export. Maaaring naglo-load pa ang card page.",
     "embed_pdf_unavailable": "Hindi available ang PDF export. Maaaring naglo-load pa ang card page.",
     "embed_png_cors": "Hindi ma-export ang PNG. Maaaring cross-origin restriction ito sa local preview.",
-    "embed_pdf_cors": "Hindi ma-export ang PDF. Maaaring cross-origin restriction ito sa local preview."
+    "embed_pdf_cors": "Hindi ma-export ang PDF. Maaaring cross-origin restriction ito sa local preview.",
+    "map_popup_portal_loc": "Hackensack River, Kearny NJ",
+    "map_popup_portal_ops": "Isang riles sa pagitan ng Newark Penn at Secaucus sa Phase 2 cutover (Okt 11 – Nob 15, 2026)."
   },
   "blog": {
     "title": "Blog — Reroute NJ",

@@ -105,7 +105,10 @@
 
     L.marker([portal.lat, portal.lng], { icon: portalIcon })
       .bindPopup(
-        "<strong>Portal North Bridge</strong><br>" + t("js.map_popup_portal")
+        "<strong>Portal North Bridge</strong><br>" +
+          esc(t("js.map_popup_portal_loc")) +
+          "<br>" +
+          esc(t("js.map_popup_portal_ops"))
       )
       .addTo(layers["portal-bridge"]);
 
@@ -127,7 +130,10 @@
         fillOpacity: 1,
       })
         .bindPopup(
-          "<strong>" + t("js.map_old_portal") + "</strong><br>" + t("js.map_popup_old")
+          "<strong>" +
+            esc(t("js.map_old_portal")) +
+            "</strong><br>" +
+            esc(t("js.map_popup_old"))
         )
         .addTo(layers["portal-bridge"]);
     }

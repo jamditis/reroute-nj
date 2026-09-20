@@ -504,7 +504,6 @@
     "map_single_track": "Single-track zone",
     "map_export_footer": "Reroute NJ · reroutenj.org · Rail geometry from NJ Transit GTFS. Independent community tool.",
     "map_load_error": "The map could not load rail geometry. Refresh the page, or open this site over http (python3 -m http.server 8000).",
-    "map_popup_portal": "Hackensack River, Kearny NJ<br>Single-track operations between Newark Penn and Secaucus during the Phase 2 cutover (Oct 11 – Nov 15, 2026).",
     "map_popup_old": "1910 swing span. Retired after the second track moves to Portal North Bridge.",
     "map_plan_commute": "Plan your commute",
     "map_loading_alert": "Map data is still loading. Try again in a moment.",
@@ -526,7 +525,9 @@
     "embed_png_unavailable": "PNG export is not available. The card page may still be loading.",
     "embed_pdf_unavailable": "PDF export is not available. The card page may still be loading.",
     "embed_png_cors": "Unable to export PNG. This may be a cross-origin restriction when previewing locally.",
-    "embed_pdf_cors": "Unable to export PDF. This may be a cross-origin restriction when previewing locally."
+    "embed_pdf_cors": "Unable to export PDF. This may be a cross-origin restriction when previewing locally.",
+    "map_popup_portal_loc": "Hackensack River, Kearny NJ",
+    "map_popup_portal_ops": "Single-track operations between Newark Penn and Secaucus during the Phase 2 cutover (Oct 11 – Nov 15, 2026)."
   },
   "blog_post_embed": {
     "title": "New: embed Reroute NJ on your website — Reroute NJ",

@@ -442,7 +442,6 @@
     "map_single_track": "منطقة المسار الواحد",
     "map_export_footer": "Reroute NJ · reroutenj.org · هندسة السكك من NJ Transit GTFS. أداة مجتمعية مستقلة.",
     "map_load_error": "تعذر تحميل هندسة السكك. حدّث الصفحة أو افتح الموقع عبر http (python3 -m http.server 8000).",
-    "map_popup_portal": "نهر Hackensack، Kearny NJ<br>تشغيل بمسار واحد بين Newark Penn وSecaucus خلال تحويل المرحلة 2 (11 أكتوبر – 15 نوفمبر 2026).",
     "map_popup_old": "مجاز دوّار من عام 1910. يُحال إلى التقاعد بعد انتقال المسار الثاني إلى Portal North Bridge.",
     "map_plan_commute": "خطط لرحلتك",
     "map_loading_alert": "بيانات الخريطة ما زالت تُحمَّل. حاول مرة أخرى بعد لحظة.",
@@ -464,7 +463,9 @@
     "embed_png_unavailable": "تصدير PNG غير متاح. قد تكون صفحة البطاقة ما زالت تُحمَّل.",
     "embed_pdf_unavailable": "تصدير PDF غير متاح. قد تكون صفحة البطاقة ما زالت تُحمَّل.",
     "embed_png_cors": "تعذر تصدير PNG. قد يكون ذلك قيد مصدر مشترك عند المعاينة محلياً.",
-    "embed_pdf_cors": "تعذر تصدير PDF. قد يكون ذلك قيد مصدر مشترك عند المعاينة محلياً."
+    "embed_pdf_cors": "تعذر تصدير PDF. قد يكون ذلك قيد مصدر مشترك عند المعاينة محلياً.",
+    "map_popup_portal_loc": "نهر Hackensack، Kearny NJ",
+    "map_popup_portal_ops": "تشغيل بمسار واحد بين Newark Penn وSecaucus خلال تحويل المرحلة 2 (11 أكتوبر – 15 نوفمبر 2026)."
   },
   "blog": {
     "title": "مدونة — Reroute NJ",

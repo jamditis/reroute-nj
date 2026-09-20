@@ -442,7 +442,6 @@
     "map_single_track": "单线区段",
     "map_export_footer": "Reroute NJ · reroutenj.org · 铁路几何来自 NJ Transit GTFS。独立社区工具。",
     "map_load_error": "无法加载铁路几何。请刷新页面，或通过 http 打开本站（python3 -m http.server 8000）。",
-    "map_popup_portal": "Hackensack River，Kearny NJ<br>第二阶段转换期间（2026年10月11日–11月15日）Newark Penn 与 Secaucus 之间单线运行。",
     "map_popup_old": "1910 年旋转桥。第二条轨道迁至 Portal North Bridge 后退役。",
     "map_plan_commute": "规划你的通勤",
     "map_loading_alert": "地图数据仍在加载。请稍后再试。",
@@ -464,7 +463,9 @@
     "embed_png_unavailable": "无法导出 PNG。卡片页面可能仍在加载。",
     "embed_pdf_unavailable": "无法导出 PDF。卡片页面可能仍在加载。",
     "embed_png_cors": "无法导出 PNG。本地预览时可能是跨源限制。",
-    "embed_pdf_cors": "无法导出 PDF。本地预览时可能是跨源限制。"
+    "embed_pdf_cors": "无法导出 PDF。本地预览时可能是跨源限制。",
+    "map_popup_portal_loc": "Hackensack River，Kearny NJ",
+    "map_popup_portal_ops": "第二阶段转换期间（2026年10月11日–11月15日）Newark Penn 与 Secaucus 之间单线运行。"
   },
   "blog": {
     "title": "博客 — Reroute NJ",
