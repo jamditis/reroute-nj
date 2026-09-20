@@ -76,6 +76,7 @@
   var EXTRA_NOTE_KEYS = {
     "montclair-boonton": ["js.extra_mb_0", "js.extra_mb_1"],
     "morris-essex": ["js.extra_me_0", "js.extra_me_1"],
+    "northeast-corridor": ["js.extra_nec_0"],
     "north-jersey-coast": ["js.extra_njcl_0"],
     "raritan-valley": ["js.extra_rvl_0"],
   };

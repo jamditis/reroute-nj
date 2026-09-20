@@ -71,6 +71,7 @@
       "extra_me_0": "Monday, October 12 runs the weekday cutover schedule.",
       "extra_me_1": "Weekend Hoboken connections to the Morristown Line are at Secaucus Junction instead of Newark Broad Street.",
       "extra_njcl_0": "Brielle Bridge work, Oct 11\u201325: no trains between Manasquan and Bay Head. Buses replace trains at Bay Head and Point Pleasant, with a rail connection at Manasquan.",
+      "extra_nec_0": "NJ Transit added Secaucus\u2013Penn Station NY shuttle trips so Main, Bergen, Pascack Valley, and Port Jervis riders keep their New York connections.",
       "extra_rvl_0": "Saturday, November 7: buses replace trains between Cranford and Newark for Conrail track work."
     },
     "compare": {
