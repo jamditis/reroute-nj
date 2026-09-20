@@ -874,7 +874,7 @@ def replace_page_specific_content(html, translations, page_key):
         ]:
             translated = get_translation(translations, key)
             if translated:
-                html = html.replace(f"<h4>{eng_text}</h4>", f"<h4>{translated}</h4>")
+                html = html.replace(f"<h3>{eng_text}</h3>", f"<h3>{translated}</h3>")
 
         # Bridge card list items
         bridge_items = {
