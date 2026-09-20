@@ -260,7 +260,7 @@
     "seo_summary": "خريطة تفاعلية لتحويل المرحلة 2 من Portal North Bridge (11 أكتوبر – 15 نوفمبر 2026): هندسة السكك من NJ Transit GTFS، عبور نهر Hackensack في Kearny، المحطات المتأثرة، محاور التحويل، وبدائل PATH والعبّارة والحافلة.",
     "filter_aria": "تصفية الخريطة حسب الخط",
     "canvas_aria": "خريطة تفاعلية لمحطات ومسارات تحويل Portal Bridge",
-    "legend_old_portal": "جسر Portal القديم"
+    "legend_old_portal": "Old Portal Bridge"
   },
   "embed": {
     "title": "تضمين وإعادة نشر — Reroute NJ",
@@ -436,7 +436,7 @@
     "map_export_title": "خريطة تحويل Portal North Bridge",
     "map_export_phase": "المرحلة 2 · 11 أكتوبر – 15 نوفمبر 2026 · مسار واحد Newark Penn–Secaucus",
     "map_legend": "مفتاح الخريطة",
-    "map_old_portal": "جسر Portal القديم",
+    "map_old_portal": "Old Portal Bridge",
     "map_transfer_hub": "محور تحويل",
     "map_path_ferry_bus": "PATH / العبّارة / الحافلة 126",
     "map_single_track": "منطقة المسار الواحد",
@@ -464,7 +464,7 @@
     "embed_pdf_unavailable": "تصدير PDF غير متاح. قد تكون صفحة البطاقة ما زالت تُحمَّل.",
     "embed_png_cors": "تعذر تصدير PNG. قد يكون ذلك قيد مصدر مشترك عند المعاينة محلياً.",
     "embed_pdf_cors": "تعذر تصدير PDF. قد يكون ذلك قيد مصدر مشترك عند المعاينة محلياً.",
-    "map_popup_portal_loc": "نهر Hackensack، Kearny NJ",
+    "map_popup_portal_loc": "Hackensack River, Kearny NJ",
     "map_popup_portal_ops": "تشغيل بمسار واحد بين Newark Penn وSecaucus خلال تحويل المرحلة 2 (11 أكتوبر – 15 نوفمبر 2026)."
   },
   "blog": {

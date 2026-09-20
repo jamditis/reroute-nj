@@ -260,7 +260,7 @@
     "seo_summary": "Interactive na mapa ng Phase 2 cutover ng Portal North Bridge (Okt 11 – Nob 15, 2026): rail geometry mula sa NJ Transit GTFS, tawiran sa Hackensack River sa Kearny, apektadong istasyon, transfer hubs, at PATH, ferry, at bus.",
     "filter_aria": "I-filter ang mapa ayon sa linya",
     "canvas_aria": "Interactive na mapa ng mga istasyon at ruta ng Portal Bridge cutover",
-    "legend_old_portal": "Lumang Portal Bridge"
+    "legend_old_portal": "Old Portal Bridge"
   },
   "embed": {
     "title": "I-embed at i-republish — Reroute NJ",
@@ -436,7 +436,7 @@
     "map_export_title": "Mapa ng cutover ng Portal North Bridge",
     "map_export_phase": "Phase 2 · Okt 11 – Nob 15, 2026 · Isang riles Newark Penn–Secaucus",
     "map_legend": "Alamat",
-    "map_old_portal": "Lumang Portal Bridge",
+    "map_old_portal": "Old Portal Bridge",
     "map_transfer_hub": "Sentro ng transfer",
     "map_path_ferry_bus": "PATH / ferry / bus 126",
     "map_single_track": "Sona ng iisang riles",

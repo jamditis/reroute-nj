@@ -896,7 +896,8 @@ if (parseFloat(possessiveRatio) <= 3.0) {
 var identicalKeys = [];
 var properNounKeys = [
   "meta.lang", "meta.dir", "meta.label",
-  "card.powered_by", "blog.title"
+  "card.powered_by", "blog.title",
+  "js.map_popup_portal_loc", "js.map_old_portal", "map.legend_old_portal"
 ];
 
 for (var key in enFlat) {

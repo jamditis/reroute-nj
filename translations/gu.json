@@ -260,7 +260,7 @@
     "seo_summary": "Portal North Bridge ફેઝ 2 કટઓવર (11 ઑક્ટ – 15 નવ, 2026)નો ઇન્ટરેક્ટિવ નકશો: NJ Transit GTFS રેલ ભૂમિતિ, Kearnyમાં Hackensack નદી ક્રોસિંગ, અસરગ્રસ્ત સ્ટેશન, ટ્રાન્સફર હબ અને PATH, ફેરી અને બસ વિકલ્પો.",
     "filter_aria": "લાઇન પ્રમાણે નકશો ફિલ્ટર કરો",
     "canvas_aria": "Portal Bridge કટઓવર સ્ટેશન અને રૂટનો ઇન્ટરેક્ટિવ નકશો",
-    "legend_old_portal": "જૂનું Portal Bridge"
+    "legend_old_portal": "Old Portal Bridge"
   },
   "embed": {
     "title": "એમ્બેડ અને રિપબ્લિશ — Reroute NJ",
@@ -436,7 +436,7 @@
     "map_export_title": "Portal North Bridge કટઓવર નકશો",
     "map_export_phase": "તબક્કો 2 · 11 ઑક્ટ – 15 નવ, 2026 · Newark Penn–Secaucus એક ટ્રેક",
     "map_legend": "સૂચિ",
-    "map_old_portal": "જૂનું Portal Bridge",
+    "map_old_portal": "Old Portal Bridge",
     "map_transfer_hub": "ટ્રાન્સફર હબ",
     "map_path_ferry_bus": "PATH / ફેરી / બસ 126",
     "map_single_track": "એક-ટ્રેક વિસ્તાર",

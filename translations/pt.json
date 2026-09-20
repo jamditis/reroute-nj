@@ -260,7 +260,7 @@
     "seo_summary": "Mapa interativo do corte da fase 2 da Portal North Bridge (11 out – 15 nov, 2026): geometria ferroviária do GTFS da NJ Transit, o cruzamento do rio Hackensack em Kearny, estações afetadas, hubs de transferência e alternativas PATH, balsa e ônibus.",
     "filter_aria": "Filtrar o mapa por linha",
     "canvas_aria": "Mapa interativo das estações e rotas do corte da Portal Bridge",
-    "legend_old_portal": "Antiga Portal Bridge"
+    "legend_old_portal": "Old Portal Bridge"
   },
   "embed": {
     "title": "Incorporar e republicar — Reroute NJ",
@@ -436,7 +436,7 @@
     "map_export_title": "Mapa do corte Portal North Bridge",
     "map_export_phase": "Fase 2 · 11 out – 15 nov, 2026 · Via única Newark Penn–Secaucus",
     "map_legend": "Legenda",
-    "map_old_portal": "Antiga Portal Bridge",
+    "map_old_portal": "Old Portal Bridge",
     "map_transfer_hub": "Hub de transferência",
     "map_path_ferry_bus": "PATH / balsa / ônibus 126",
     "map_single_track": "Zona de via única",
@@ -464,7 +464,7 @@
     "embed_pdf_unavailable": "A exportação PDF não está disponível. A página do cartão ainda pode estar carregando.",
     "embed_png_cors": "Não foi possível exportar PNG. Pode ser uma restrição de origem cruzada na prévia local.",
     "embed_pdf_cors": "Não foi possível exportar PDF. Pode ser uma restrição de origem cruzada na prévia local.",
-    "map_popup_portal_loc": "Rio Hackensack, Kearny NJ",
+    "map_popup_portal_loc": "Hackensack River, Kearny NJ",
     "map_popup_portal_ops": "Operação de via única entre Newark Penn e Secaucus no corte da fase 2 (11 out – 15 nov, 2026)."
   },
   "blog": {

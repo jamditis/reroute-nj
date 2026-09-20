@@ -796,7 +796,13 @@ UNTRANSLATED_ENGLISH.forEach(function (check) {
 
     var text = stripHtml(entry.value);
     // Remove known English proper nouns before checking
+    text = text.replace(/Old Portal Bridge/g, "");
     text = text.replace(/Portal\s+(North\s+)?Bridge/g, "");
+    text = text.replace(/Brielle Bridge/g, "");
+    text = text.replace(/Hackensack River/g, "");
+    text = text.replace(/Montclair-Boonton Line/g, "");
+    text = text.replace(/North Jersey Coast Line/g, "");
+    text = text.replace(/Raritan Valley Line/g, "");
     text = text.replace(/Penn Station/g, "");
     text = text.replace(/Hoboken Terminal/g, "");
     text = text.replace(/NJ Transit/g, "");

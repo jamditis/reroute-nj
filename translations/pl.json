@@ -260,7 +260,7 @@
     "seo_summary": "Interaktywna mapa przerwy fazy 2 Portal North Bridge (11 paź – 15 lis 2026): geometria torów z GTFS NJ Transit, skrzyżowanie rzeki Hackensack w Kearny, stacje objęte zmianą, węzły przesiadkowe oraz PATH, prom i autobus.",
     "filter_aria": "Filtruj mapę według linii",
     "canvas_aria": "Interaktywna mapa stacji i tras przerwy Portal Bridge",
-    "legend_old_portal": "Stary Portal Bridge"
+    "legend_old_portal": "Old Portal Bridge"
   },
   "embed": {
     "title": "Osadź i udostępnij — Reroute NJ",
@@ -436,7 +436,7 @@
     "map_export_title": "Mapa przerwy Portal North Bridge",
     "map_export_phase": "Faza 2 · 11 paź – 15 lis 2026 · Jeden tor Newark Penn–Secaucus",
     "map_legend": "Legenda",
-    "map_old_portal": "Stary Portal Bridge",
+    "map_old_portal": "Old Portal Bridge",
     "map_transfer_hub": "Węzeł przesiadkowy",
     "map_path_ferry_bus": "PATH / prom / autobus 126",
     "map_single_track": "Strefa jednotorowa",

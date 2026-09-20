@@ -260,7 +260,7 @@
     "seo_summary": "Portal North Bridge 第二阶段转换（2026年10月11日–11月15日）交互地图：NJ Transit GTFS 铁路几何、Kearny 的 Hackensack 河交叉、受影响车站、换乘枢纽，以及 PATH、渡轮和巴士备选。",
     "filter_aria": "按线路筛选地图",
     "canvas_aria": "显示 Portal Bridge 转换车站和线路的交互地图",
-    "legend_old_portal": "旧 Portal Bridge"
+    "legend_old_portal": "Old Portal Bridge"
   },
   "embed": {
     "title": "嵌入和转载 — Reroute NJ",
@@ -436,7 +436,7 @@
     "map_export_title": "Portal North Bridge 转换地图",
     "map_export_phase": "第二阶段 · 2026年10月11日–11月15日 · Newark Penn–Secaucus 单线",
     "map_legend": "图例",
-    "map_old_portal": "旧 Portal Bridge",
+    "map_old_portal": "Old Portal Bridge",
     "map_transfer_hub": "换乘枢纽",
     "map_path_ferry_bus": "PATH / 渡轮 / 巴士 126",
     "map_single_track": "单线区段",
@@ -464,7 +464,7 @@
     "embed_pdf_unavailable": "无法导出 PDF。卡片页面可能仍在加载。",
     "embed_png_cors": "无法导出 PNG。本地预览时可能是跨源限制。",
     "embed_pdf_cors": "无法导出 PDF。本地预览时可能是跨源限制。",
-    "map_popup_portal_loc": "Hackensack River，Kearny NJ",
+    "map_popup_portal_loc": "Hackensack River, Kearny NJ",
     "map_popup_portal_ops": "第二阶段转换期间（2026年10月11日–11月15日）Newark Penn 与 Secaucus 之间单线运行。"
   },
   "blog": {

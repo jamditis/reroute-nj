@@ -186,6 +186,9 @@ var SKIP_SCRIPT_CHECK_KEYS = [
   "index.terminal_hudson_river",
   "coverage.dir_nj_nyc", "coverage.dir_nyc_nj",
   "map.legend_portal_bridge",
+  "map.legend_old_portal",
+  "js.map_popup_portal_loc",
+  "js.map_old_portal",
   "embed.cfg_tab_iframe",
   "card.date_range",
   "card.powered_by"

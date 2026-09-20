@@ -260,7 +260,7 @@
     "seo_summary": "Portal North Bridge 2단계 전환(2026년 10월 11일–11월 15일) 대화형 지도: NJ Transit GTFS 철도 형상, Kearny의 Hackensack 강 교차, 영향 역, 환승 허브, PATH·페리·버스 대안.",
     "filter_aria": "노선별로 지도 필터",
     "canvas_aria": "Portal Bridge 전환 역과 노선을 보여 주는 대화형 지도",
-    "legend_old_portal": "구 Portal Bridge"
+    "legend_old_portal": "Old Portal Bridge"
   },
   "embed": {
     "title": "임베드 및 재게시 — Reroute NJ",
@@ -436,7 +436,7 @@
     "map_export_title": "Portal North Bridge 전환 지도",
     "map_export_phase": "2단계 · 2026년 10월 11일–11월 15일 · Newark Penn–Secaucus 단선",
     "map_legend": "범례",
-    "map_old_portal": "구 Portal Bridge",
+    "map_old_portal": "Old Portal Bridge",
     "map_transfer_hub": "환승 허브",
     "map_path_ferry_bus": "PATH / 페리 / 버스 126",
     "map_single_track": "단선 구간",
