@@ -505,7 +505,7 @@
     ctx.fillRect(0, 0, width, height);
 
     var pts = collectPoints(data);
-    var proj = projectFit(pts, width, height, 48, 110, 280, 56);
+    var proj = projectFit(pts, width, height, 48, 110, 280, 80);
     var toXY = proj.xy;
 
     function drawOverlay() {
