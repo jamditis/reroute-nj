@@ -426,7 +426,7 @@
     ];
 
     if (currentLineId === "north-jersey-coast" && (station.id === "perth-amboy" || station.id === "woodbridge")) {
-      changes.push("Perth Amboy and Woodbridge riders: your rail pass or ticket is cross-honored on NJ Transit buses from Perth Amboy or Woodbridge to the Port Authority Bus Terminal.");
+      changes.push("Perth Amboy and Woodbridge riders: Your rail pass or ticket is cross-honored on NJ Transit buses from Perth Amboy or Woodbridge to the Port Authority Bus Terminal.");
     }
 
     var beforeFlow, afterFlow;
@@ -952,7 +952,7 @@
     } else if (line.impactType === "reduced-service") {
       $ticketsIntro.innerHTML =
         "<h2>" + t("js.what_ticket") + "</h2>" +
-        "<p>Good news for " + esc(line.name) + " riders: your tickets mostly stay the same.</p>";
+        "<p>Good news for " + esc(line.name) + " riders: Your tickets mostly stay the same.</p>";
       $ticketsContent.innerHTML = renderReducedServiceTickets(line);
     } else if (line.impactType === "newark-termination") {
       $ticketsIntro.innerHTML =
