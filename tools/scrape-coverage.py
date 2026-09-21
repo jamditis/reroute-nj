@@ -174,6 +174,19 @@ def is_excluded_url(url):
     return False
 
 
+def is_relevant_article(title, excerpt):
+    """Return whether a candidate is specifically about the Portal cutover."""
+    text = ("%s %s" % (title, excerpt)).lower()
+    if any(term in text for term in (
+        "portal bridge", "portal north", "portal cutover", "bridge cutover"
+    )):
+        return True
+    return "cutover" in text and any(term in text for term in (
+        "nj transit", "njtransit", "amtrak", "northeast corridor",
+        "newark", "secaucus",
+    ))
+
+
 def check_url_status(url, timeout=10):
     """HEAD request to verify URL returns 200. Returns (status_code, final_url) or (None, None) on error."""
     try:
@@ -1351,6 +1364,10 @@ def run_discover(config, dry_run=False):
             excerpt = scraped["excerpt"]
         if not excerpt:
             excerpt = candidate.get("description", "")
+
+        if not is_relevant_article(title, excerpt):
+            logging.info("Skipping unrelated candidate: %s", title[:100])
+            continue
 
         # Author
         author = None

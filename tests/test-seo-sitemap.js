@@ -49,6 +49,8 @@ var ENGLISH_BASE_PAGES = [
   "blog/cutover-begins.html",
   "blog/why-we-built-reroute-nj.html",
   "blog/new-embed-system.html",
+  "blog/bridge-opens.html",
+  "blog/phase-2-starts-october-11.html",
   "about.html"
 ];
 
@@ -131,7 +133,7 @@ if (sitemapRaw) {
   }
 }
 
-// ── Test 2: Contains URLs for all 8 English base pages ──────────────
+// ── Test 2: Contains URLs for all English content pages ─────────────
 
 if (sitemapRaw) {
   var missingEnglish = [];
@@ -152,13 +154,13 @@ if (sitemapRaw) {
   });
 
   if (missingEnglish.length === 0) {
-    pass("2. Contains URLs for all 10 English base pages", ENGLISH_BASE_PAGES.join(", "));
+    pass("2. Contains URLs for all 12 English content pages", ENGLISH_BASE_PAGES.join(", "));
   } else {
-    fail("2. Contains URLs for all 10 English base pages", "Missing: " + missingEnglish.join(", "));
+    fail("2. Contains URLs for all 12 English content pages", "Missing: " + missingEnglish.join(", "));
   }
 }
 
-// ── Test 3: Contains URLs for all 10 languages x 10 pages = 100 translated pages ──
+// ── Test 3: Contains URLs for all 10 languages x 12 pages = 120 translated pages ──
 
 if (sitemapRaw) {
   var missingTranslated = [];
@@ -173,25 +175,24 @@ if (sitemapRaw) {
   });
 
   if (missingTranslated.length === 0) {
-    pass("3. Contains URLs for all 100 translated pages (10 langs x 10 pages)", "All 100 translated URLs present");
+    pass("3. Contains URLs for all 120 translated pages (10 langs x 12 pages)", "All 120 translated URLs present");
   } else {
-    fail("3. Contains URLs for all 100 translated pages (10 langs x 10 pages)",
+    fail("3. Contains URLs for all 120 translated pages (10 langs x 12 pages)",
       missingTranslated.length + " missing:\n    " + missingTranslated.join("\n    "));
   }
 }
 
-// ── Test 4: Total URL count is approximately 90 ─────────────────────
+// ── Test 4: Total URL count matches content and utility pages ───────
 
 if (sitemapRaw) {
   var totalUrls = locUrls.length;
-  // Expected: 11 English tool/about/blog pages + 110 translated + card.html + widget.html = 123
-  var expectedMin = 120;
-  var expectedMax = 126;
+  var expectedMin = 134;
+  var expectedMax = 134;
 
   if (totalUrls >= expectedMin && totalUrls <= expectedMax) {
-    pass("4. Total URL count is approximately 90", totalUrls + " URLs found (expected " + expectedMin + "-" + expectedMax + ")");
+    pass("4. Total URL count matches the 134 HTML pages", totalUrls + " URLs found");
   } else {
-    fail("4. Total URL count is approximately 90", totalUrls + " URLs found (expected " + expectedMin + "-" + expectedMax + ")");
+    fail("4. Total URL count matches the 134 HTML pages", totalUrls + " URLs found (expected 134)");
   }
 }
 
@@ -356,7 +357,10 @@ if (sitemapRaw) {
 if (sitemapRaw) {
   var blogPages = [
     "blog/why-we-built-reroute-nj.html",
-    "blog/new-embed-system.html"
+    "blog/new-embed-system.html",
+    "blog/bridge-opens.html",
+    "blog/cutover-begins.html",
+    "blog/phase-2-starts-october-11.html"
   ];
   var missingBlogPrefix = [];
 

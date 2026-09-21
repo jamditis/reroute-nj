@@ -22,10 +22,11 @@ PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TRANSLATIONS_DIR = os.path.join(PROJECT_ROOT, "translations")
 
 # Pages to generate
-PAGES = ["index.html", "compare.html", "coverage.html", "map.html", "embed.html", "blog.html", "blog/bridge-opens.html", "blog/cutover-begins.html", "blog/why-we-built-reroute-nj.html", "blog/new-embed-system.html", "about.html"]
+PAGES = ["index.html", "compare.html", "coverage.html", "map.html", "embed.html", "blog.html", "blog/phase-2-starts-october-11.html", "blog/bridge-opens.html", "blog/cutover-begins.html", "blog/why-we-built-reroute-nj.html", "blog/new-embed-system.html", "about.html"]
 
 # Map page filenames to translation key prefixes (when different from filename stem)
 PAGE_KEY_MAP = {
+    "blog/phase-2-starts-october-11.html": "blog_post_phase2",
     "blog/bridge-opens.html": "blog_post_bridge",
     "blog/cutover-begins.html": "blog_post_cutover",
     "blog/why-we-built-reroute-nj.html": "blog_post",
@@ -260,6 +261,7 @@ def replace_footer(html, translations, page_key):
             "blog_post_embed": ' <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">{embed_gh}</a>.',
             "blog_post_cutover": ' <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">{embed_gh}</a>.',
             "blog_post_bridge": ' <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">{embed_gh}</a>.',
+            "blog_post_phase2": ' <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">{embed_gh}</a>.',
             "about": ' <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">{embed_gh}</a>.',
         }
         idx = get_translation(translations, "common.footer_disclaimer_index") or "Information is based on official announcements and may change. Always verify with"
@@ -368,6 +370,9 @@ def replace_hamburger_label(html, translations, page_key):
         "blog": "common.menu",
         "blog_post": "common.menu",
         "blog_post_embed": "common.menu",
+        "blog_post_cutover": "common.menu",
+        "blog_post_bridge": "common.menu",
+        "blog_post_phase2": "common.menu",
         "about": "about.hamburger_label",
     }
     eng_map = {
@@ -379,6 +384,9 @@ def replace_hamburger_label(html, translations, page_key):
         "blog": "Menu",
         "blog_post": "Menu",
         "blog_post_embed": "Menu",
+        "blog_post_cutover": "Menu",
+        "blog_post_bridge": "Menu",
+        "blog_post_phase2": "Menu",
         "about": "About",
     }
     key = label_map.get(page_key)
@@ -1310,6 +1318,22 @@ def replace_page_specific_content(html, translations, page_key):
                 f'>{post4_excerpt}</p>'
             )
 
+        # Post 5 card (Phase 2 rider guide)
+        post5_title = get_translation(translations, "blog.post5_title")
+        if post5_title:
+            html = html.replace(">Phase 2 starts October 11: what riders need to know</h2>", f">{post5_title}</h2>")
+
+        post5_date = get_translation(translations, "blog.post5_date")
+        if post5_date:
+            html = html.replace(">September 21, 2026</time>", f">{post5_date}</time>")
+
+        post5_excerpt = get_translation(translations, "blog.post5_excerpt")
+        if post5_excerpt:
+            html = html.replace(
+                ">Five weeks of temporary NJ Transit schedules start October 11. Here are the Hoboken diversions, ticket rules, and steps to take before you travel.</p>",
+                f">{post5_excerpt}</p>"
+            )
+
     elif page_key == "blog_post":
         # Blog post: "Why we built Reroute NJ"
         # Back/footer nav links
@@ -1659,6 +1683,59 @@ def replace_page_specific_content(html, translations, page_key):
                 f'>{cta.replace("→", "&rarr;")}</a>'
             )
 
+    elif page_key == "blog_post_phase2":
+        # Blog post: "Phase 2 starts October 11"
+        all_posts = get_translation(translations, "blog.all_posts")
+        if all_posts:
+            html = html.replace(">&larr; All posts</a>", f">&larr; {all_posts}</a>")
+        back_all = get_translation(translations, "blog.back_to_all_posts")
+        if back_all:
+            html = html.replace(">&larr; Back to all posts</a>", f">&larr; {back_all}</a>")
+
+        replacements = {
+            "heading": ("<h1>Phase 2 starts October 11: what riders need to know</h1>", "h1"),
+            "intro_p1": ("<p>Phase 2 of the Portal North Bridge cutover starts Sunday, October 11. For about five weeks, NJ Transit will use temporary schedules while Amtrak connects the final track to the new bridge.</p>", "p"),
+            "intro_p2": ("<p>The work begins October 9. Regular NJ Transit schedules are expected to return Sunday, November 15, subject to safety testing. Nearly every rail line will have a schedule change during this period.</p>", "p"),
+            "h2_changes": ("<h2>What changes for riders</h2>", "h2"),
+            "changes_intro": ("<p>Check the temporary schedule for your line before October 11. The largest changes affect these riders:</p>", "p"),
+            "change_midtown": ("<li><strong>Montclair-Boonton, Morris &amp; Essex, and Gladstone Branch riders:</strong> Weekday Midtown Direct trains will operate to and from Hoboken. Weekend Midtown Direct trains will continue to New York Penn Station.</li>", "li"),
+            "change_corridor": ("<li><strong>Northeast Corridor and North Jersey Coast Line riders:</strong> Service through the Portal corridor will be reduced. Some trains will be combined, canceled, or assigned new times and stopping patterns.</li>", "li"),
+            "change_raritan": ("<li><strong>Raritan Valley Line riders:</strong> One-seat rides to and from New York Penn Station will begin and end at Newark Penn Station during the temporary schedule period.</li>", "li"),
+            "h2_before": ("<h2>Before you travel</h2>", "h2"),
+            "before_ticket": ("<li><strong>Use the correct destination when you buy a ticket.</strong> Weekday Midtown Direct riders should buy Hoboken tickets or passes. Weekend ticket rules are different.</li>", "li"),
+            "before_cross_honoring": ("<li><strong>Use cross-honoring from Hoboken.</strong> Eligible riders can use PATH between Hoboken and 33rd Street, NJ Transit bus 126, or NY Waterway service to West 39th Street on weekdays.</li>", "li"),
+            "before_check": ('<li><strong>Check again on travel day.</strong> Temporary schedules can change. Use the NJ Transit app and the <a href="https://www.njtransit.com/portalcutover" target="_blank" rel="noopener">official Portal cutover page</a> before you leave.</li>', "li"),
+            "h2_why": ("<h2>Why the second cutover matters</h2>", "h2"),
+            "why_p1": ("<p>Crews will connect the final track, signals, switches, electrical systems, and overhead wires. When testing is complete, all rail traffic can move to the new two-track fixed bridge.</p>", "p"),
+            "why_p2": ("<p>The new bridge replaces the 116-year-old swing bridge that caused major delays when it opened for marine traffic or failed to close correctly. Phase 2 is the last major service cut needed to retire that old bridge.</p>", "p"),
+        }
+        for key, (english, tag) in replacements.items():
+            translated = get_translation(translations, f"blog_post_phase2.{key}")
+            if translated:
+                html = html.replace(english, f"<{tag}>{translated}</{tag}>")
+
+        by_prefix = get_translation(translations, "blog_post_phase2.by_prefix")
+        if by_prefix:
+            html = html.replace(">By Joe Amditis</span>", f">{by_prefix} Joe Amditis</span>")
+
+        date = get_translation(translations, "blog_post_phase2.date")
+        if date:
+            html = html.replace(">September 21, 2026</time>", f">{date}</time>")
+
+        support_p = get_translation(translations, "blog_post_phase2.support_p")
+        if support_p:
+            html = html.replace(
+                '<p class="blog-support-note" style="font-size: 0.85rem; color: var(--text-muted); margin-top: 2rem;">Reroute NJ is free, open source, and community-supported. If you find it useful, share it with someone who rides NJ Transit or <a href="https://github.com/sponsors/jamditis" target="_blank" rel="noopener">support the project</a>.</p>',
+                f'<p class="blog-support-note" style="font-size: 0.85rem; color: var(--text-muted); margin-top: 2rem;">{support_p}</p>'
+            )
+
+        cta = get_translation(translations, "blog_post_phase2.cta")
+        if cta:
+            html = html.replace(
+                '>Plan your Phase 2 commute &rarr;</a>',
+                f'>{cta.replace("→", "&rarr;")}</a>'
+            )
+
     elif page_key == "blog_post_cutover":
         # Blog post: "The cutover starts today"
         # Back/footer nav links
@@ -1933,7 +2010,7 @@ def replace_page_specific_content(html, translations, page_key):
             "about.li_everything_else": "<strong>Everything else is translated.</strong> Instructions, descriptions, labels, navigation, button text, accessibility announcements, error messages, and page metadata are all translated into each language.",
             "about.li_official_sources": '<strong>Official sources first.</strong> Train counts, diversions, cross-honoring policies, and fare information come from <a href="https://www.njtransit.com/portalcutover" target="_blank" rel="noopener">njtransit.com/portalcutover</a> and official NJ Transit press releases. We do not use secondhand reporting as a primary source for transit data.',
             "about.li_automated_validation": "<strong>Automated validation.</strong> We run 698+ automated checks across 14 test suites that verify data structure, transit facts, cross-references between pages, HTML integrity, translation completeness, and accessibility compliance. These tests run before every change is published.",
-            "about.li_automated_monitoring": "<strong>Automated monitoring.</strong> A scraper checks official NJ Transit and Amtrak pages four times a day for schedule or policy changes. When content changes, we review and update the site.",
+            "about.li_automated_monitoring": "<strong>Automated monitoring.</strong> A scraper checks official NJ Transit and Amtrak pages three times a day for schedule or policy changes. When content changes, we review and update the site.",
             "about.li_source_attribution": "<strong>Source attribution on every page.</strong> Each line guide card and commute comparison result includes links to the official sources backing its claims, so riders can verify for themselves.",
             "about.li_open_source": '<strong>Open source.</strong> The entire codebase, all data files, and all test suites are <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">public on GitHub</a>. Anyone can inspect, challenge, or correct the data.',
             "about.li_high_contrast": "<strong>High contrast mode.</strong> A toggle on every page switches to a high-contrast color scheme for riders with low vision. The setting persists across pages.",
@@ -1944,7 +2021,7 @@ def replace_page_specific_content(html, translations, page_key):
             "about.li_rtl": "<strong>Right-to-left support.</strong> The Arabic translation renders with proper right-to-left layout, text direction, and mirrored navigation.",
             "about.li_print": "<strong>Print stylesheets.</strong> Every page prints cleanly for riders who want a paper backup.",
             "about.li_travel_times": '<strong>Travel time estimates are approximations.</strong> We use published schedules and average travel times, not live data. Actual times will vary, especially during the cutover when the system is under stress.',
-            "about.li_schedules_change": "<strong>Schedules change.</strong> NJ Transit may adjust service during the cutover based on ridership patterns. We monitor for changes four times a day, but there may be a delay between an official update and our site reflecting it.",
+            "about.li_schedules_change": "<strong>Schedules change.</strong> NJ Transit may adjust service during the cutover based on ridership patterns. We monitor for changes three times a day, but there may be a delay between an official update and our site reflecting it.",
             "about.li_translation_errors": '<strong>Translations may have errors.</strong> While we work to make translations natural and accurate, we rely on AI-assisted translation. If you find an error in any language, please <a href="https://github.com/jamditis/reroute-nj/issues/new" target="_blank" rel="noopener">report it</a> and we\'ll fix it.',
         }
         for key, eng_text in li_map.items():
@@ -2067,7 +2144,7 @@ def translate_jsonld(html, translations, page_key, lang, page_name):
                         )
 
         elif schema_type == "Article":
-            # Determine which article (blog_post, blog_post_embed, blog_post_cutover, or blog_post_bridge)
+            # Select the translation keys for each blog article.
             if page_key == "blog_post":
                 art_prefix = "article1"
             elif page_key == "blog_post_embed":
@@ -2076,6 +2153,8 @@ def translate_jsonld(html, translations, page_key, lang, page_name):
                 art_prefix = "article3"
             elif page_key == "blog_post_bridge":
                 art_prefix = "article4"
+            elif page_key == "blog_post_phase2":
+                art_prefix = "article5"
             else:
                 art_prefix = None
 

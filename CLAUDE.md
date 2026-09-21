@@ -24,10 +24,12 @@ blog/                     — Blog posts (individual articles)
   cutover-begins.html
   why-we-built-reroute-nj.html
   new-embed-system.html
+  bridge-opens.html
+  phase-2-starts-october-11.html
 card.html                 — Info card renderer (URL params → card)
 widget.html               — Mini-widget renderer (URL params → tool)
 robots.txt                — Crawler guidance + AI bot allowances
-sitemap.xml               — All 90 pages with hreflang cross-refs
+sitemap.xml               — All 134 HTML pages with hreflang cross-refs
 llms.txt                  — AI search engine discoverability
 js/
   i18n.js                 — Runtime translation loader (128 lines)
@@ -47,17 +49,17 @@ img/
   og-image.png            — OpenGraph social preview image
   screenshot.png          — README screenshot
 data/
-  coverage.json           — Article metadata (111 articles, auto-updated by scraper)
+  coverage.json           — Article metadata (301 articles, auto-updated by scraper)
   sources.json            — Citation database (28 verified claims with source links)
   source-registry.json    — Source freshness tracking and verification windows
 translations/
   en.json                 — English source strings (~548 keys)
   {lang}.json             — 10 translated language files
 tools/
-  generate-pages.py       — Static page generator for translations (1788 lines)
+  generate-pages.py       — Static page generator for translations
   validate-data.py        — Data integrity and source verification checks
   validate-research-pipeline.py — Source registry schema and freshness validator
-  scrape-coverage.py      — Automated article discovery (GDELT + RSS, stdlib only, ~550 lines)
+  scrape-coverage.py      — Automated article discovery (GDELT + RSS, stdlib only)
   scrape-config.json      — Scraper config: GDELT queries, RSS feeds, keyword maps
 tests/                    — 14 test suites with 948+ automated checks
 docs/plans/               — Implementation design docs (SEO, embed system)
@@ -65,7 +67,7 @@ docs/plans/               — Implementation design docs (SEO, embed system)
   ISSUE_TEMPLATE/         — Bug report, data correction, feature request, content suggestion
   copilot-instructions.md — Reviewer guidance for the Copilot PR review bot
   pull_request_template.md
-{lang}/                   — Generated translated pages (100 total, 10 pages × 10 languages)
+{lang}/                   — Generated translated pages (120 total, 12 pages × 10 languages)
 ```
 
 ### Script load order
@@ -142,6 +144,8 @@ These run in the `generate_page()` function pipeline. If a translation key is mi
   - `blog/cutover-begins.html` → `blog_post_cutover`
   - `blog/why-we-built-reroute-nj.html` → `blog_post`
   - `blog/new-embed-system.html` → `blog_post_embed`
+  - `blog/bridge-opens.html` → `blog_post_bridge`
+  - `blog/phase-2-starts-october-11.html` → `blog_post_phase2`
   - Add new blog posts to both `PAGES` and `PAGE_KEY_MAP` in generate-pages.py.
 - **Nested pages need depth-aware asset paths** — `fix_asset_paths()` handles this automatically based on `/` count in the page name.
 
@@ -150,7 +154,7 @@ These run in the `generate_page()` function pipeline. If a translation key is mi
 1. Add key to `translations/en.json`
 2. Add replacement logic in `tools/generate-pages.py` (in `replace_page_specific_content()` under the correct page's `if/elif` block)
 3. Add translated values to all 10 language files: es, zh, tl, ko, pt, gu, hi, it, ar, pl
-4. Run `python3 tools/generate-pages.py` to regenerate all 100 pages
+4. Run `python3 tools/generate-pages.py` to regenerate all 120 pages
 5. Spot-check at least 2 languages for correct output
 
 ### Adding a new blog post
@@ -213,7 +217,7 @@ Four output formats: iframe embed, script tag, PNG download, self-contained HTML
 ## SEO and discoverability
 
 - **`robots.txt`** — Allows all crawlers; explicit AI bot allowances (GPTBot, ClaudeBot, PerplexityBot, Google-Extended)
-- **`sitemap.xml`** — 90 pages with `xhtml:link` hreflang cross-references for 11 languages
+- **`sitemap.xml`** — 134 HTML pages with `xhtml:link` hreflang cross-references for 11 languages
 - **`llms.txt`** — Structured overview for AI search tools following the [llms.txt standard](https://llmstxt.org)
 - **JSON-LD structured data** — WebSite, FAQPage, Article, BreadcrumbList, and CollectionPage schemas, translated per-language with localized URLs
 - **Canonical tags** — Self-referencing on every page (English and translated)
@@ -254,7 +258,7 @@ Also verify manually:
 
 ## Coverage scraper
 
-The scraper (`tools/scrape-coverage.py`) runs 4x daily via cron (00:10, 06:10, 12:10, 18:10) during the cutover period (Feb 15 – Mar 15). It uses the workstation venv (`~/.claude/workstation/venv/bin/python3`).
+The scraper (`tools/scrape-coverage.py`) runs locally on officejawn three times daily at 05:00, 12:00, and 18:00 America/New_York during the Phase 2 cutover period. It does not use a scheduled GitHub Actions workflow. Cron calls `tools/run-coverage-scheduled.sh`, which requires a clean `main` worktree and prevents overlapping runs. The runner uses the workstation venv (`~/.claude/workstation/venv/bin/python3`).
 
 ### What it does each run
 
@@ -308,11 +312,11 @@ The scraper does `git pull --rebase` before pushing to handle remote divergence 
 
 ## File counts
 
-- **HTML pages:** 112 total (7 English base + 3 blog posts + 2 utility + 100 translated)
+- **HTML pages:** 134 total (7 English base + 5 blog posts + 2 utility + 120 translated)
 - **JS files:** 10 in `js/` (~4,716 lines total)
 - **CSS:** 1 file (~3,449 lines)
 - **Translation files:** 11 JSON (~548 keys each)
-- **Data files:** 3 JSON (111 articles + 28 citations + source registry)
+- **Data files:** 3 JSON (301 articles + 28 citations + source registry)
 - **Test files:** 15 in `tests/` (985+ checks)
 - **Python scripts:** 4 in `tools/` (~3,849 lines total) + 1 JSON config
 

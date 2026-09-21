@@ -43,7 +43,14 @@ check("responsive, RTL, print, and assistive modes are explicit", function () {
   ["max-width: 768px", "max-width: 480px", 'dir="rtl"', 'data-contrast="high"', 'data-view="simplified"', "prefers-reduced-motion: reduce", "forced-colors: active", "@media print"].forEach(function (s) { assert(theme.indexOf(s) !== -1, s); });
 });
 check("selected lines have a non-color indicator", function () { assert(theme.indexOf('.line-btn[data-line].active::after') !== -1); });
-check("coverage dates are visible", function () { assert(/\.coverage-date\s*\{\s*display:\s*block/.test(theme)); });
+check("coverage dates are visible and emphasized on mobile", function () {
+  assert(/\.coverage-date\s*\{\s*display:\s*block/.test(theme));
+  assert(/\.coverage-date\s*\{[^}]*font-size:\s*\.85rem;[^}]*font-weight:\s*700/.test(theme));
+});
+check("simplified view preserves the brand identity", function () {
+  assert(!/data-view="simplified"[^}]*\.brand::before/.test(theme));
+  assert(!/data-view="simplified"[^}]*\.header(?:::after|-inner::after)/.test(theme));
+});
 check("layout keeps existing nodes instead of reparsing HTML", function () {
   var layout = shared.split("// WAYFINDING LAYOUT")[1];
   assert(layout); assert(!/\.innerHTML\s*=/.test(layout));

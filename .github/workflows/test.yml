@@ -43,3 +43,6 @@ jobs:
 
       - name: Validate data
         run: python3 tools/validate-data.py
+
+      - name: Test coverage relevance
+        run: python3 tests/test-scraper-relevance.py

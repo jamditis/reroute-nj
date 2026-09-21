@@ -19,6 +19,9 @@ var PAGES = [
   "blog.html",
   "blog/why-we-built-reroute-nj.html",
   "blog/new-embed-system.html",
+  "blog/bridge-opens.html",
+  "blog/cutover-begins.html",
+  "blog/phase-2-starts-october-11.html",
   "card.html",
   "widget.html"
 ];
@@ -243,6 +246,9 @@ var PAGE_SCRIPTS = {
   "blog.html": ["js/i18n.js", "js/shared.js"],
   "blog/why-we-built-reroute-nj.html": ["js/i18n.js", "js/shared.js"],
   "blog/new-embed-system.html": ["js/i18n.js", "js/shared.js"],
+  "blog/bridge-opens.html": ["js/i18n.js", "js/shared.js"],
+  "blog/cutover-begins.html": ["js/i18n.js", "js/shared.js"],
+  "blog/phase-2-starts-october-11.html": ["js/i18n.js", "js/shared.js"],
   "card.html": ["js/line-data.js", "js/cards.js"],
   "widget.html": [] // widget.html loads scripts dynamically
 };
@@ -484,7 +490,10 @@ PAGES.forEach(function (pageName) {
 console.log("\n--- Test 17: Blog pages have correct relative asset paths ---");
 var BLOG_PAGES = [
   "blog/why-we-built-reroute-nj.html",
-  "blog/new-embed-system.html"
+  "blog/new-embed-system.html",
+  "blog/bridge-opens.html",
+  "blog/cutover-begins.html",
+  "blog/phase-2-starts-october-11.html"
 ];
 
 BLOG_PAGES.forEach(function (pageName) {
