@@ -346,7 +346,7 @@ function exportCanvasPdf(canvas, filename) {
       if (!window.matchMedia) { details.open = true; return; }
       var wide = window.matchMedia("(min-width: 769px)");
       var wasOpen;
-      function syncDisclosure() { details.open = wide.matches; }
+      function syncDisclosure() { details.open = wide.matches && details.className !== "service-notice"; }
       window.addEventListener("beforeprint", function () {
         wasOpen = details.open;
         details.open = true;
@@ -491,4 +491,164 @@ function exportCanvasPdf(canvas, filename) {
   } else {
     initWayfinding();
   }
+})();
+
+// =========================================================================
+// QUIET RAIL INTERFACE
+// Reuse existing translated labels and application events. This layer changes
+// presentation only; it never calculates fares, routes, or service status.
+// =========================================================================
+(function () {
+  "use strict";
+  var script = document.currentScript;
+  var assetRoot = script && script.src ? script.src.replace(/js\/shared\.js(?:\?.*)?$/, "img/") : "img/";
+
+  function element(tag, className, text) {
+    var node = document.createElement(tag);
+    if (className) node.className = className;
+    if (text) node.textContent = text;
+    return node;
+  }
+
+  function initQuietRail() {
+    var main = document.getElementById("main-content");
+    var header = document.querySelector(".header");
+    if (!main || !header || document.body.classList.contains("embed-mode")) return;
+    if (main.getAttribute("data-rail-interface") === "ready") return;
+    main.setAttribute("data-rail-interface", "ready");
+
+    // Keep independence visible beside the brand, using the existing locale.
+    var note = element("p", "identity-note", "Reroute NJ " + t("common.footer_disclaimer"));
+    header.appendChild(note);
+
+    var controls = main.querySelector(".control-panel");
+    var answers = main.querySelector(".journey-answers");
+    var intro = main.querySelector(".site-intro");
+    var lineNav = document.getElementById("line-nav");
+    var station = document.getElementById("station-select");
+    if (!controls || !answers || !intro || !lineNav || !station || typeof LINE_DATA === "undefined") return;
+
+    main.classList.add("rail-guide");
+    var title = intro.querySelector("h1");
+    if (title) title.textContent = t("compare.hero_title");
+    var context = intro.querySelector(".intro-context");
+    if (context) main.appendChild(context);
+
+    var hero = element("section", "trip-hero");
+    var copy = element("div", "trip-hero-copy");
+    main.insertBefore(hero, main.firstChild);
+    hero.appendChild(copy);
+    copy.appendChild(intro);
+    copy.appendChild(controls);
+
+    // The illustrative crop is not a real station or service-information source.
+    var visual = element("div", "rail-visual");
+    visual.setAttribute("aria-hidden", "true");
+    var image = element("img");
+    image.src = assetRoot + "rail-platform.webp";
+    image.alt = "";
+    image.width = 258;
+    image.height = 607;
+    image.decoding = "async";
+    visual.appendChild(image);
+    hero.appendChild(visual);
+
+    var tab = document.getElementById("tab-affected");
+    var routeTab = document.getElementById("tab-routes");
+    var heading = element("h2", "trip-title", routeTab ? routeTab.textContent : t("js.planning_commute"));
+    controls.insertBefore(heading, controls.firstChild);
+
+    // A native select gives keyboard, screen-reader and mobile users the same
+    // line choices, while dispatching the original line buttons' click events.
+    var oldLabel = controls.querySelector(".control-title");
+    var select = element("select", "native-line-select");
+    select.id = "trip-line-select";
+    var label = element("label", "control-title", oldLabel ? oldLabel.textContent : lineNav.getAttribute("aria-label"));
+    label.setAttribute("for", select.id);
+    if (oldLabel) oldLabel.parentNode.removeChild(oldLabel);
+    // The original nav keeps its own accessible label while hidden.
+    lineNav.removeAttribute("aria-labelledby");
+    lineNav.parentNode.insertBefore(label, lineNav);
+    lineNav.parentNode.insertBefore(select, lineNav);
+    LINE_ORDER.forEach(function (id) {
+      var option = element("option", "", LINE_DATA[id].name);
+      option.value = id;
+      select.appendChild(option);
+    });
+    function syncLine() {
+      var active = lineNav.querySelector(".line-btn.active");
+      if (active) select.value = active.getAttribute("data-line");
+    }
+    select.addEventListener("change", function () {
+      if (!LINE_DATA[select.value]) return;
+      var button = lineNav.querySelector('[data-line="' + select.value + '"]');
+      if (button) button.click();
+    });
+    if (window.MutationObserver) {
+      new MutationObserver(syncLine).observe(lineNav, { childList: true, subtree: true, attributes: true, attributeFilter: ["class"] });
+    }
+    lineNav.addEventListener("click", syncLine);
+    // app.js initializes on DOMContentLoaded after this enhancement callback.
+    window.setTimeout(syncLine, 0);
+    controls.classList.add("native-line-ready");
+
+    answers.id = "trip-results";
+    answers.setAttribute("tabindex", "-1");
+    if (tab) answers.setAttribute("aria-labelledby", tab.id);
+    var submit = element("button", "plan-submit", tab ? tab.textContent : t("common.nav_line_guide"));
+    submit.type = "button";
+    submit.setAttribute("aria-controls", answers.id);
+    var arrow = element("span", "link-arrow", "\u2192");
+    arrow.setAttribute("aria-hidden", "true");
+    submit.appendChild(arrow);
+    station.required = true;
+    submit.addEventListener("click", function () {
+      if (!station.value) {
+        station.focus();
+        if (station.reportValidity) station.reportValidity();
+        return;
+      }
+      if (tab) tab.click();
+      answers.focus({ preventScroll: true });
+      var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      answers.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
+    });
+    controls.appendChild(submit);
+
+    // Four functional shortcuts, no marketing cards or unimplemented controls.
+    var shortcuts = element("nav", "quick-tools");
+    shortcuts.setAttribute("aria-label", t("common.nav_line_guide"));
+    var paths = [
+      "M4 7h16m-4-4 4 4-4 4M20 17H4m4-4-4 4 4 4",
+      "M3 5l6-2 6 2 6-2v16l-6 2-6-2-6 2V5Zm6-2v16m6-14v16",
+      "M4 3h12v18H4V3Zm4 5h4m-4 4h4m-4 4h4m4-9h4v14h-4",
+      "M8 8 3 12l5 4m8-8 5 4-5 4m-3-11-2 14"
+    ];
+    ["compare.html", "map.html", "coverage.html", "embed.html"].forEach(function (href, index) {
+      var original = document.querySelector('.tool-nav-link[href$="' + href + '"]');
+      if (!original) return;
+      var link = element("a", "quick-tool");
+      link.href = original.href;
+      var icon = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+      icon.setAttribute("viewBox", "0 0 24 24");
+      icon.setAttribute("fill", "none");
+      icon.setAttribute("stroke", "currentColor");
+      icon.setAttribute("stroke-width", "1.7");
+      icon.setAttribute("stroke-linecap", "round");
+      icon.setAttribute("stroke-linejoin", "round");
+      icon.setAttribute("aria-hidden", "true");
+      var path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+      path.setAttribute("d", paths[index]);
+      icon.appendChild(path);
+      link.appendChild(icon);
+      link.appendChild(element("span", "", original.textContent));
+      var next = element("span", "link-arrow", "\u2192");
+      next.setAttribute("aria-hidden", "true");
+      link.appendChild(next);
+      shortcuts.appendChild(link);
+    });
+    main.insertBefore(shortcuts, hero.nextSibling);
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", initQuietRail);
+  else initQuietRail();
 })();

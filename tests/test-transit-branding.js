@@ -39,12 +39,12 @@ check("masthead uses the actual local SVG, not the retired skewed border", funct
   assert(css.indexOf('body[data-view="simplified"] .header-inner::after') === -1);
   assert(css.indexOf('@media (max-width: 360px)') !== -1);
 });
-check("primary actions use brand blue; vivid orange is a separate identity token", function () {
+check("primary actions use forest green; agency-style ribbon tokens are absent", function () {
   var tokens = css.match(/:root\s*\{([^}]+)\}/)[1];
-  assert(tokens.indexOf("--primary: #0755b8;") !== -1);
-  assert(tokens.indexOf("--brand-ink: #071b38;") !== -1);
-  assert(tokens.indexOf("--brand-orange: #f76919;") !== -1);
-  assert(tokens.indexOf("--brand-magenta: #b51f70;") !== -1);
+  assert(tokens.indexOf("--primary: #175c50;") !== -1);
+  assert(tokens.indexOf("--brand-ink: #142b38;") !== -1);
+  assert(tokens.indexOf("--brand-green: #175c50;") !== -1);
+  assert(!/--brand-(orange|magenta|blue):/.test(tokens));
   assert(tokens.indexOf("--accent: #a3480b;") !== -1);
 });
 check("branding does not redefine official line color tokens", function () {

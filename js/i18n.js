@@ -146,6 +146,7 @@
       "embed_pdf_cors": "Unable to export PDF. This may be a cross-origin restriction when previewing locally."
     },
     "compare": {
+      "hero_title": "How does your commute change?",
       "your_normal_commute": "Your normal commute",
       "min_total": "min total",
       "vs_normal": "vs normal",
