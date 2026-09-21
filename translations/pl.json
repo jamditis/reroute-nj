@@ -712,7 +712,7 @@
     "by_prefix": "Autor",
     "date": "21 września 2026",
     "intro_p1": "Faza 2 przebudowy Portal North Bridge rozpoczyna się w niedzielę 11 października. Przez około pięć tygodni NJ Transit będzie korzystać z tymczasowych rozkładów, gdy Amtrak połączy ostatni tor z nowym mostem.",
-    "intro_p2": "Prace rozpoczną się 9 października. Powrót regularnych rozkładów NJ Transit jest planowany na niedzielę 15 listopada, pod warunkiem pomyślnych testów bezpieczeństwa. W tym okresie prawie każda linia kolejowa będzie mieć zmieniony rozkład.",
+    "intro_p2": "Prace rozpoczną się 9 października. Regularne rozkłady mają wrócić w niedzielę 15 listopada, po testach bezpieczeństwa. Dla części pasażerów zmieni się godzina odjazdu. W dni powszednie pasażerowie Midtown Direct pojadą przez Hoboken zamiast do Penn Station New York.",
     "h2_changes": "Co zmienia się dla pasażerów",
     "changes_intro": "Sprawdź tymczasowy rozkład swojej linii przed 11 października. Największe zmiany dotyczą tych pasażerów:",
     "change_midtown": "<strong>Pasażerowie Montclair-Boonton, Morris &amp; Essex i Gladstone Branch:</strong> W dni robocze pociągi Midtown Direct będą kursować do i z Hoboken. W weekendy nadal będą kursować do New York Penn Station.",
@@ -722,11 +722,17 @@
     "before_ticket": "<strong>Wybierz prawidłową stację docelową przy zakupie biletu.</strong> Pasażerowie Midtown Direct w dni robocze powinni kupować bilety lub karnety do Hoboken. W weekendy obowiązują inne zasady.",
     "before_cross_honoring": "<strong>Skorzystaj z uznawania biletów w Hoboken.</strong> Uprawnieni pasażerowie mogą w dni robocze korzystać z PATH między Hoboken i 33rd Street, NJ Transit bus 126 lub NY Waterway do West 39th Street.",
     "before_check": "<strong>Sprawdź ponownie w dniu podróży.</strong> Tymczasowe rozkłady mogą się zmieniać. Przed wyjściem sprawdź aplikację NJ Transit i <a href=\"https://www.njtransit.com/portalcutover\" target=\"_blank\" rel=\"noopener\">oficjalną stronę przebudowy Portal</a>.",
-    "h2_why": "Dlaczego drugi etap przebudowy jest ważny",
+    "h2_why": "Co ekipy zmienią na moście",
     "why_p1": "Ekipy połączą ostatni tor, sygnalizację, zwrotnice, instalacje elektryczne i sieć trakcyjną. Po zakończeniu testów cały ruch kolejowy będzie mógł przejść na nowy, stały most dwutorowy.",
     "why_p2": "Nowy most zastąpi 116-letni most obrotowy, który powodował duże opóźnienia, gdy otwierał się dla statków lub nie zamykał prawidłowo. Faza 2 jest ostatnią dużą zmianą w ruchu potrzebną do wycofania starego mostu.",
     "support_p": "Reroute NJ jest bezpłatny, ma otwarty kod i jest wspierany przez społeczność. Jeśli jest pomocny, udostępnij go pasażerowi NJ Transit lub <a href=\"https://github.com/sponsors/jamditis\" target=\"_blank\" rel=\"noopener\">wesprzyj projekt</a>.",
-    "cta": "Zaplanuj dojazd podczas Fazy 2 →"
+    "cta": "Zaplanuj dojazd podczas Fazy 2 →",
+    "h2_newsrooms": "Dla redakcji w New Jersey i Nowym Jorku",
+    "newsrooms_intro": "Lokalne redakcje w New Jersey i Nowym Jorku mogą bezpłatnie przedrukować ten artykuł lub dodać widżet Reroute NJ do swoich materiałów o zmianach w ruchu. Przy przedruku prosimy zachować nazwisko autora, Joe Amditisa, oraz link do tej strony. Przed publikacją sprawdźcie najnowsze rozkłady NJ Transit.",
+    "newsrooms_step1": "Otwórzcie <a href=\"../embed.html\">konfigurator osadzania</a>. Wybierzcie <strong>Interaktywny widżet</strong>, a następnie przewodnik po liniach, porównanie dojazdów, wiadomości lub mapę. Możecie też wskazać linię kolejową.",
+    "newsrooms_step2": "Skopiujcie kod z karty <strong>Iframe</strong>. Wklejcie go do bloku niestandardowego HTML w swoim systemie publikacji, a potem sprawdźcie podgląd na telefonie i komputerze.",
+    "newsrooms_step3": "Jeśli system blokuje iframe, dodajcie link do <a href=\"../index.html\">przewodnika po liniach</a> albo wybierzcie kartę informacyjną i pobierzcie plik PNG do artykułu lub newslettera.",
+    "newsrooms_help": "Nie trzeba zakładać konta, mieć klucza API ani płacić. Jeśli potrzebujecie pomocy, <a href=\"mailto:amditisj@montclair.edu\">napiszcie do Joego</a>."
   },
   "blog_post_cutover": {
     "title": "Przebudowa zaczyna się dziś — Reroute NJ",

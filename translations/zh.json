@@ -712,7 +712,7 @@
     "by_prefix": "作者",
     "date": "2026年9月21日",
     "intro_p1": "Portal North Bridge转换的第二阶段将于10月11日星期日开始。在大约五周内，Amtrak连接新桥的最后一条轨道期间，NJ Transit将使用临时时刻表。",
-    "intro_p2": "工程于10月9日开始。NJ Transit常规时刻表预计于11月15日星期日恢复，但须视安全测试结果而定。在此期间，几乎每条铁路线的时刻表都会调整。",
+    "intro_p2": "工程于10月9日开始。安全测试完成后，常规时刻表预计于11月15日星期日恢复。部分乘客的发车时间会改变。工作日乘坐 Midtown Direct 的乘客将经由 Hoboken，而不是 Penn Station New York。",
     "h2_changes": "乘客将遇到哪些变化",
     "changes_intro": "请在10月11日前查看您所在线路的临时时刻表。以下乘客受影响最大：",
     "change_midtown": "<strong>Montclair-Boonton、Morris &amp; Essex和Gladstone Branch乘客：</strong>工作日Midtown Direct列车将往返Hoboken。周末Midtown Direct列车将继续前往New York Penn Station。",
@@ -722,11 +722,17 @@
     "before_ticket": "<strong>购票时请选择正确的目的地。</strong>工作日Midtown Direct乘客应购买前往Hoboken的车票或通票。周末的车票规定不同。",
     "before_cross_honoring": "<strong>使用Hoboken的联程互认服务。</strong>符合条件的乘客可在工作日使用Hoboken与33rd Street之间的PATH、NJ Transit bus 126或前往West 39th Street的NY Waterway服务。",
     "before_check": "<strong>出行当天再次查看。</strong>临时时刻表可能改变。出发前请使用NJ Transit应用程序并查看<a href=\"https://www.njtransit.com/portalcutover\" target=\"_blank\" rel=\"noopener\">Portal转换官方页面</a>。",
-    "h2_why": "为什么第二阶段很重要",
+    "h2_why": "施工人员将在桥上进行什么改造",
     "why_p1": "工程人员将连接最后一条轨道、信号、道岔、电气系统和架空电线。测试完成后，所有铁路交通都可以转移到新的双轨固定桥。",
     "why_p2": "新桥取代已有116年历史的开启式旧桥。旧桥在为船只开启或无法正确关闭时会造成严重延误。第二阶段是旧桥退役前所需的最后一次重大服务调整。",
     "support_p": "Reroute NJ免费、开源，并由社区支持。如果您觉得有用，请分享给乘坐NJ Transit的人，或<a href=\"https://github.com/sponsors/jamditis\" target=\"_blank\" rel=\"noopener\">支持本项目</a>。",
-    "cta": "规划您的第二阶段通勤 →"
+    "cta": "规划您的第二阶段通勤 →",
+    "h2_newsrooms": "致新泽西州和纽约州的新闻机构",
+    "newsrooms_intro": "新泽西州和纽约州的本地新闻机构可以免费转载本文，或在有关线路切换的报道中嵌入 Reroute NJ 小组件。转载时请保留 Joe Amditis 的署名，并链接到本页面。发布前请核对 NJ Transit 的最新时刻表。",
+    "newsrooms_step1": "打开<a href=\"../embed.html\">嵌入配置器</a>。选择<strong>交互式小组件</strong>，再选择线路指南、通勤比较、新闻报道或地图。也可以指定一条铁路线路。",
+    "newsrooms_step2": "复制<strong>Iframe</strong> 标签中的代码。将其粘贴到发布系统的自定义 HTML 区块，然后在手机和电脑上预览页面。",
+    "newsrooms_step3": "如果发布系统不允许 iframe，请链接到<a href=\"../index.html\">线路指南</a>，或选择信息卡并下载 PNG 图片，用于报道或电子简报。",
+    "newsrooms_help": "无需账户、API 密钥或付费。如需帮助，请<a href=\"mailto:amditisj@montclair.edu\">给 Joe 发邮件</a>。"
   },
   "blog_post_cutover": {
     "title": "转换从今天开始 — Reroute NJ",
