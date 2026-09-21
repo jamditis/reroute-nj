@@ -550,7 +550,14 @@ def poll_rss_feeds(config, existing_urls):
             for item in items:
                 text = ("%s %s" % (item["title"], item.get("description", ""))).lower()
 
-                if filter_keywords and not any(kw in text for kw in filter_keywords):
+                keyword_match = any(kw in text for kw in filter_keywords)
+                if (
+                    filter_keywords
+                    and not keyword_match
+                    and not is_relevant_article(
+                        item["title"], item.get("description", "")
+                    )
+                ):
                     continue
 
                 url = item["url"]
@@ -909,6 +916,8 @@ def publish_registry_file(registry_data):
             raise PublicationError(
                 "Could not replace the source registry; prior file restored: %s" % error
             )
+
+    return {REGISTRY_FILE: snapshots[REGISTRY_FILE]}
 
 
 def status_paths(status_output):
@@ -1274,6 +1283,22 @@ def publish_and_push(coverage_data, registry_data, message):
     raise PublicationError("Git publication failed; prior data files restored")
 
 
+def publish_registry_and_push(registry_data, message):
+    """Publish the registry and restore it if Git publication fails."""
+    snapshots = publish_registry_file(registry_data)
+    try:
+        if git_commit_and_push(message):
+            return
+    except (PostPushError, PublicationRollbackError):
+        raise
+    except Exception:
+        restore_live_files(snapshots)
+        raise
+
+    restore_live_files(snapshots)
+    raise PublicationError("Git publication failed; prior registry restored")
+
+
 # ---------------------------------------------------------------------------
 # Registry update
 # ---------------------------------------------------------------------------
@@ -1326,7 +1351,10 @@ def run_discover(config, dry_run=False):
                 "official-alerts",
                 "secondary-news-coverage",
             ])
-            publish_registry_file(registry)
+            publish_registry_and_push(
+                registry,
+                "Refresh coverage source registry",
+            )
         return 0
 
     # 4. Scrape each candidate for metadata/excerpt

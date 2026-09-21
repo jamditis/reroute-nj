@@ -4,6 +4,7 @@
 import importlib.util
 import pathlib
 import unittest
+from unittest import mock
 
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -44,6 +45,34 @@ class RelevanceTests(unittest.TestCase):
             "NJ Transit riders face 60-minute delays",
             "An Amtrak signal issue stopped trains near New York.",
         ))
+
+    def test_rss_prefilter_keeps_contextual_cutover_story(self):
+        feed = b"""<?xml version="1.0"?>
+        <rss><channel><item>
+          <title>Five weeks of adjusted schedules</title>
+          <link>https://example.com/contextual-cutover</link>
+          <description>Amtrak cutover work will reduce Northeast Corridor service.</description>
+        </item></channel></rss>"""
+        response = mock.Mock()
+        response.read.return_value = feed
+        config = {
+            "rss_feeds": [{
+                "id": "news",
+                "url": "https://example.com/feed",
+                "source_name": "Example News",
+                "format": "rss",
+                "filter_keywords": ["portal bridge", "portal north"],
+            }]
+        }
+
+        with mock.patch.object(SCRAPER, "urlopen", return_value=response):
+            candidates = SCRAPER.poll_rss_feeds(config, set())
+
+        self.assertEqual(1, len(candidates))
+        self.assertEqual(
+            "https://example.com/contextual-cutover",
+            candidates[0]["url"],
+        )
 
 
 if __name__ == "__main__":

@@ -215,18 +215,42 @@ def replace_nav_links(html, translations):
 
 
 def replace_a11y_buttons(html, translations):
-    """Replace accessibility toggle button text."""
+    """Replace accessibility toggle button text and accessible names."""
     hc = get_translation(translations, "common.high_contrast")
     sv = get_translation(translations, "common.simplified_view")
     if hc:
         html = html.replace(
             'aria-label="Toggle high contrast">High contrast</button>',
-            f'aria-label="Toggle high contrast">{hc}</button>'
+            f'aria-label="{hc}">{hc}</button>'
         )
     if sv:
         html = html.replace(
             'aria-label="Toggle simplified view">Simplified view</button>',
-            f'aria-label="Toggle simplified view">{sv}</button>'
+            f'aria-label="{sv}">{sv}</button>'
+        )
+    return html
+
+
+def replace_common_accessible_names(html, translations):
+    """Translate labels shared by the language selector and primary navigation."""
+    site_tools = get_translation(translations, "common.site_tools")
+    menu = get_translation(translations, "common.menu")
+    language = get_translation(translations, "common.language")
+
+    if site_tools:
+        html = html.replace(
+            'aria-label="Site tools"',
+            f'aria-label="{site_tools}"',
+        )
+    if menu:
+        html = html.replace(
+            'aria-label="Toggle navigation menu"',
+            f'aria-label="{menu}"',
+        )
+    if language:
+        html = html.replace(
+            'class="lang-selector-label sr-only">Language</label>',
+            f'class="lang-selector-label sr-only">{language}</label>',
         )
     return html
 
@@ -2199,6 +2223,7 @@ def generate_page(page_name, lang, translations):
     html = replace_nav_links(html, translations)
     html = replace_hamburger_label(html, translations, page_key)
     html = replace_a11y_buttons(html, translations)
+    html = replace_common_accessible_names(html, translations)
     html = replace_footer(html, translations, page_key)
     html = replace_tagline(html, translations, page_key)
     html = replace_title(html, translations, page_key)
