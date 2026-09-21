@@ -521,7 +521,7 @@ def replace_page_specific_content(html, translations, page_key):
             ("index.cutover_summary_title", "How the cutover affects your commute"),
             ("index.hoboken_terminal_title", "Navigating Hoboken Terminal"),
             ("index.compare_callout_title", "Want to compare all your options side by side?"),
-            ("index.secaucus_title", "Secaucus Junction: the choke point"),
+            ("index.secaucus_title", "Secaucus Junction: The choke point"),
             ("index.timeline_title", "Timeline"),
             ("index.resources_title", "Official resources"),
         ]:
@@ -889,7 +889,7 @@ def replace_page_specific_content(html, translations, page_key):
         seo_summary = get_translation(translations, "map.seo_summary")
         if seo_summary:
             html = html.replace(
-                "Interactive map of the Portal North Bridge Phase 2 cutover (Oct 11 – Nov 15, 2026): rail geometry from NJ Transit GTFS, the Hackensack River crossing in Kearny, affected stations, transfer hubs, and PATH, ferry, and bus alternatives.",
+                "Interactive map of the Portal North Bridge Phase 2 cutover (Oct 11 – Nov 15, 2026): Rail geometry from NJ Transit GTFS, the Hackensack River crossing in Kearny, affected stations, transfer hubs, and PATH, ferry, and bus alternatives.",
                 seo_summary
             )
         filter_aria = get_translation(translations, "map.filter_aria")
@@ -1345,7 +1345,7 @@ def replace_page_specific_content(html, translations, page_key):
         # Post 5 card (Phase 2 rider guide)
         post5_title = get_translation(translations, "blog.post5_title")
         if post5_title:
-            html = html.replace(">Phase 2 starts October 11: what riders need to know</h2>", f">{post5_title}</h2>")
+            html = html.replace(">Phase 2 starts October 11: What riders need to know</h2>", f">{post5_title}</h2>")
 
         post5_date = get_translation(translations, "blog.post5_date")
         if post5_date:
@@ -1439,7 +1439,7 @@ def replace_page_specific_content(html, translations, page_key):
 
         # Tool description paragraphs
         tool_items = {
-            "blog_post.tool_line_guide": '<strong><a href="../index.html">Line guide</a></strong> &mdash; Select your NJ Transit line and station to see exactly how your commute changes, what alternative routes are available, and what tickets you need. Works for both directions: morning commuters heading into NYC and evening commuters heading home.',
+            "blog_post.tool_line_guide": '<strong><a href="/">Line guide</a></strong> &mdash; Select your NJ Transit line and station to see exactly how your commute changes, what alternative routes are available, and what tickets you need. Works for both directions: Morning commuters heading into NYC and evening commuters heading home.',
             "blog_post.tool_compare": '<strong><a href="../compare.html">Commute comparison</a></strong> &mdash; Pick your NJ station and your Manhattan destination, and see every route option side by side with visual time breakdowns. PATH vs. ferry vs. bus, ranked by total travel time, with cost and transfer details.',
             "blog_post.tool_coverage": '<strong><a href="../coverage.html">News coverage</a></strong> &mdash; Curated reporting about the cutover from more than a dozen regional news sources. Filter by source, line, direction, or category.',
             "blog_post.tool_map": '<strong><a href="../map.html">Interactive map</a></strong> &mdash; All five affected NJ Transit lines rendered on a map with station markers, key transfer points (Hoboken Terminal, Secaucus Junction, Newark Penn), and the Portal Bridge location over the Hackensack River.',
@@ -1567,7 +1567,7 @@ def replace_page_specific_content(html, translations, page_key):
         bigger_p3 = get_translation(translations, "blog_post.bigger_p3")
         if bigger_p3:
             html = html.replace(
-                "<p>In the meantime, we hope these tools make the next month a little easier to navigate. Plan ahead, be patient with each other on the platforms, and remember: this is temporary.</p>",
+                "<p>In the meantime, we hope these tools make the next month a little easier to navigate. Plan ahead, be patient with each other on the platforms, and remember: This is temporary.</p>",
                 f"<p>{bigger_p3}</p>"
             )
 
@@ -1716,26 +1716,27 @@ def replace_page_specific_content(html, translations, page_key):
         if back_all:
             html = html.replace(">&larr; Back to all posts</a>", f">&larr; {back_all}</a>")
 
-        replacements = {
-            "heading": ("<h1>Phase 2 starts October 11: what riders need to know</h1>", "h1"),
-            "intro_p1": ("<p>Phase 2 of the Portal North Bridge cutover starts Sunday, October 11. For about five weeks, NJ Transit will use temporary schedules while Amtrak connects the final track to the new bridge.</p>", "p"),
-            "intro_p2": ("<p>The work begins October 9. Regular NJ Transit schedules are expected to return Sunday, November 15, subject to safety testing. Nearly every rail line will have a schedule change during this period.</p>", "p"),
-            "h2_changes": ("<h2>What changes for riders</h2>", "h2"),
-            "changes_intro": ("<p>Check the temporary schedule for your line before October 11. The largest changes affect these riders:</p>", "p"),
-            "change_midtown": ("<li><strong>Montclair-Boonton, Morris &amp; Essex, and Gladstone Branch riders:</strong> Weekday Midtown Direct trains will operate to and from Hoboken. Weekend Midtown Direct trains will continue to New York Penn Station.</li>", "li"),
-            "change_corridor": ("<li><strong>Northeast Corridor and North Jersey Coast Line riders:</strong> Service through the Portal corridor will be reduced. Some trains will be combined, canceled, or assigned new times and stopping patterns.</li>", "li"),
-            "change_raritan": ("<li><strong>Raritan Valley Line riders:</strong> One-seat rides to and from New York Penn Station will begin and end at Newark Penn Station during the temporary schedule period.</li>", "li"),
-            "h2_before": ("<h2>Before you travel</h2>", "h2"),
-            "before_ticket": ("<li><strong>Use the correct destination when you buy a ticket.</strong> Weekday Midtown Direct riders should buy Hoboken tickets or passes. Weekend ticket rules are different.</li>", "li"),
-            "before_cross_honoring": ("<li><strong>Use cross-honoring from Hoboken.</strong> Eligible riders can use PATH between Hoboken and 33rd Street, NJ Transit bus 126, or NY Waterway service to West 39th Street on weekdays.</li>", "li"),
-            "before_check": ('<li><strong>Check again on travel day.</strong> Temporary schedules can change. Use the NJ Transit app and the <a href="https://www.njtransit.com/portalcutover" target="_blank" rel="noopener">official Portal cutover page</a> before you leave.</li>', "li"),
-            "h2_why": ("<h2>Why the second cutover matters</h2>", "h2"),
-            "why_p1": ("<p>Crews will connect the final track, signals, switches, electrical systems, and overhead wires. When testing is complete, all rail traffic can move to the new two-track fixed bridge.</p>", "p"),
-            "why_p2": ("<p>The new bridge replaces the 116-year-old swing bridge that caused major delays when it opened for marine traffic or failed to close correctly. Phase 2 is the last major service cut needed to retire that old bridge.</p>", "p"),
+        # Match the English template against its source strings, so edits to
+        # the post do not leave English copy in generated translations.
+        english_post = load_translations("en")["blog_post_phase2"]
+        replacement_tags = {
+            "heading": "h1",
+            "intro_p1": "p", "intro_p2": "p",
+            "h2_changes": "h2", "changes_intro": "p",
+            "change_midtown": "li", "change_corridor": "li", "change_raritan": "li",
+            "h2_before": "h2", "before_ticket": "li",
+            "before_cross_honoring": "li", "before_check": "li",
+            "h2_why": "h2", "why_p1": "p", "why_p2": "p",
+            "h2_newsrooms": "h2", "newsrooms_intro": "p",
+            "newsrooms_step1": "li", "newsrooms_step2": "li",
+            "newsrooms_step3": "li", "newsrooms_help": "p",
         }
-        for key, (english, tag) in replacements.items():
+        for key, tag in replacement_tags.items():
             translated = get_translation(translations, f"blog_post_phase2.{key}")
             if translated:
+                english = f"<{tag}>{english_post[key]}</{tag}>"
+                if english not in html:
+                    raise ValueError(f"Missing English source for blog_post_phase2.{key}")
                 html = html.replace(english, f"<{tag}>{translated}</{tag}>")
 
         by_prefix = get_translation(translations, "blog_post_phase2.by_prefix")
@@ -1895,7 +1896,7 @@ def replace_page_specific_content(html, translations, page_key):
             )
 
     elif page_key == "blog_post_embed":
-        # Blog post: "New: embed Reroute NJ on your website"
+        # Blog post: "New: Embed Reroute NJ on your website"
         # Back/footer nav links
         all_posts = get_translation(translations, "blog.all_posts")
         if all_posts:
@@ -1920,7 +1921,7 @@ def replace_page_specific_content(html, translations, page_key):
         para_map = {
             "blog_post_embed.intro_p1": "The Portal Bridge cutover starts Saturday. If you cover transit in New Jersey &mdash; or if you run a community site, town Facebook page, or commuter forum &mdash; you can now put Reroute NJ tools directly on your website.",
             "blog_post_embed.intro_p2": "We just shipped a full embed system. Four output formats, a visual configurator that builds the embed code for you, and PNG export for social media and email newsletters. Everything is free to use.",
-            "blog_post_embed.format_cards": '<strong>Info cards</strong> &mdash; Compact cards showing line impact, station details, or a full cutover summary. Drop one into an article sidebar or at the top of a liveblog. Three card types: line cards (one line\'s impact), station cards (one station\'s changes), and summary cards (all five lines at a glance).',
+            "blog_post_embed.format_cards": '<strong>Info cards</strong> &mdash; Compact cards showing line impact, station details, or a full cutover summary. Drop one into an article sidebar or at the top of a liveblog. Three card types: Line cards (one line\'s impact), station cards (one station\'s changes), and summary cards (all five lines at a glance).',
             "blog_post_embed.format_widgets": '<strong>Interactive widgets</strong> &mdash; Mini versions of the line guide, comparison tool, news feed, or map. These are live, working tools that readers can interact with inside your page. Pick a tool and it loads in an iframe sized to fit.',
             "blog_post_embed.format_full": '<strong>Full tool embeds</strong> &mdash; Any Reroute NJ page with the header and footer stripped out. Append <code>?embed=true</code> to any tool URL and it becomes embeddable. Good for dedicated cutover pages where you want to give readers the complete experience.',
             "blog_post_embed.format_script": '<strong>Script-tag embeds</strong> &mdash; A single <code>&lt;script&gt;</code> tag and a <code>&lt;div&gt;</code>. No iframe configuration needed. Add the div with data attributes for the embed type, line, and station, include the script, and it handles the rest. Works in CMSes where pasting iframe code is restricted.',
@@ -1985,7 +1986,7 @@ def replace_page_specific_content(html, translations, page_key):
         intro = get_translation(translations, "about.intro")
         if intro:
             html = html.replace(
-                "Reroute NJ gives commuters specific guidance: which train to take, which ticket to buy, where to transfer. That information has to be right. People depend on it to get to work on time. Our approach prioritizes accuracy and accessibility over everything else.",
+                "Reroute NJ gives commuters specific guidance: Which train to take, which ticket to buy, where to transfer. That information has to be right. People depend on it to get to work on time. Our approach prioritizes accuracy and accessibility over everything else.",
                 intro
             )
 
@@ -2008,8 +2009,8 @@ def replace_page_specific_content(html, translations, page_key):
             "about.translations_p1": 'Every tool on this site is available in 11 languages: English, Spanish, Chinese, Tagalog, Korean, Portuguese, Gujarati, Hindi, Italian, Arabic, and Polish. These languages were chosen because they are the most commonly spoken languages in New Jersey according to U.S. Census data.',
             "about.translations_p2": 'Translations are produced with the help of AI language models and reviewed for natural phrasing and accuracy. Each language gets its own complete set of HTML pages with translated navigation, labels, headings, descriptions, accessibility text, and metadata. This is not a browser auto-translate overlay &mdash; every translated page is a standalone document that works without JavaScript if necessary.',
             "about.translations_rules": "We follow specific rules about what gets translated and what doesn't:",
-            "about.translations_fidelity": 'This is a deliberate choice: fidelity to what riders actually see and hear at the station matters more than linguistic consistency. A Spanish-speaking commuter looking at their phone needs to read "Tome el tren a Hoboken Terminal" &mdash; not "Tome el tren a Terminal de Hoboken" &mdash; because the sign above the platform says "Hoboken Terminal."',
-            "about.signage_p1": 'We studied NJ Transit graphics standards (Helvetica on station identification), the 1999 line-color system, the 2003 line symbols for limited-English riders, published rail maps, and the NJ Transit GTFS <code>route_color</code> values. We do not republish photographs of stations or signs. We recreate the cues riders already use: official line colors, English station names, and destination labels such as HOBOKEN and NEW YORK in the same lettering style as platform and train signs.',
+            "about.translations_fidelity": 'This is a deliberate choice: Fidelity to what riders actually see and hear at the station matters more than linguistic consistency. A Spanish-speaking commuter looking at their phone needs to read "Tome el tren a Hoboken Terminal" &mdash; not "Tome el tren a Terminal de Hoboken" &mdash; because the sign above the platform says "Hoboken Terminal."',
+            "about.signage_p1": 'We studied NJ Transit graphics standards (Helvetica on station identification), the 1999 line-color system, the 2003 line symbols for limited-English riders, published rail maps, and the NJ Transit GTFS <code>route_color</code> values. We do not republish photographs of stations or signs. We recreate the cues riders already use: Official line colors, English station names, and destination labels such as HOBOKEN and NEW YORK in the same lettering style as platform and train signs.',
             "about.signage_p2": 'Montclair-Boonton is the salmon/coral used on current maps and GTFS (<code>#E66859</code>), not purple. Purple is the Pascack Valley Line. Using the wrong color would send limited-English riders to the wrong visual cue. Text on those colors is darkened or switched to black or white so contrast still meets WCAG AA.',
             "about.verification_p1": 'Every claim on this site &mdash; train counts, schedule changes, fare information, transfer directions &mdash; is traceable to an official source. We maintain a <a href="https://github.com/jamditis/reroute-nj/blob/main/data/sources.json" target="_blank" rel="noopener">citation database</a> linking 28 specific claims to the official NJ Transit, Amtrak, PATH, and NY Waterway pages they come from.',
             "about.verification_intro": "Our verification process:",

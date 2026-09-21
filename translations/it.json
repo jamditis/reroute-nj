@@ -739,7 +739,7 @@
     "by_prefix": "Di",
     "date": "21 settembre 2026",
     "intro_p1": "La Fase 2 del passaggio del Portal North Bridge inizia domenica 11 ottobre. Per circa cinque settimane, NJ Transit userà orari temporanei mentre Amtrak collega l'ultimo binario al nuovo ponte.",
-    "intro_p2": "I lavori iniziano il 9 ottobre. Gli orari regolari NJ Transit dovrebbero riprendere domenica 15 novembre, in base ai test di sicurezza. Quasi tutte le linee ferroviarie avranno modifiche agli orari durante questo periodo.",
+    "intro_p2": "I lavori iniziano il 9 ottobre. Gli orari regolari dovrebbero tornare domenica 15 novembre, dopo i test di sicurezza. Per alcuni passeggeri cambierà l’orario di partenza. Nei giorni feriali, i passeggeri di Midtown Direct passeranno da Hoboken invece che da Penn Station New York.",
     "h2_changes": "Cosa cambia per i passeggeri",
     "changes_intro": "Controlla l'orario temporaneo della tua linea prima dell'11 ottobre. I cambiamenti maggiori riguardano questi passeggeri:",
     "change_midtown": "<strong>Passeggeri di Montclair-Boonton, Morris &amp; Essex e Gladstone Branch:</strong> Nei giorni feriali, i treni Midtown Direct viaggeranno da e verso Hoboken. Nel fine settimana continueranno a servire New York Penn Station.",
@@ -749,11 +749,17 @@
     "before_ticket": "<strong>Usa la destinazione corretta quando acquisti un biglietto.</strong> I passeggeri Midtown Direct nei giorni feriali devono acquistare biglietti o abbonamenti per Hoboken. Nel fine settimana valgono regole diverse.",
     "before_cross_honoring": "<strong>Usa il cross-honoring da Hoboken.</strong> I passeggeri idonei possono usare PATH tra Hoboken e 33rd Street, NJ Transit bus 126 o NY Waterway per West 39th Street nei giorni feriali.",
     "before_check": "<strong>Controlla di nuovo il giorno del viaggio.</strong> Gli orari temporanei possono cambiare. Consulta l'app NJ Transit e la <a href=\"https://www.njtransit.com/portalcutover\" target=\"_blank\" rel=\"noopener\">pagina ufficiale del passaggio Portal</a> prima di partire.",
-    "h2_why": "Perché il secondo passaggio è importante",
+    "h2_why": "Che cosa cambierà sul ponte",
     "why_p1": "Le squadre collegheranno l'ultimo binario, i segnali, gli scambi, gli impianti elettrici e le linee aeree. Al termine dei test, tutto il traffico ferroviario potrà passare sul nuovo ponte fisso a due binari.",
     "why_p2": "Il nuovo ponte sostituisce il ponte girevole di 116 anni che causava gravi ritardi quando si apriva per il traffico marittimo o non si chiudeva correttamente. La Fase 2 è l'ultima grande modifica al servizio necessaria per ritirare il vecchio ponte.",
     "support_p": "Reroute NJ è gratuito, open source e sostenuto dalla comunità. Se ti è utile, condividilo con chi usa NJ Transit o <a href=\"https://github.com/sponsors/jamditis\" target=\"_blank\" rel=\"noopener\">sostieni il progetto</a>.",
-    "cta": "Pianifica il tuo viaggio nella Fase 2 →"
+    "cta": "Pianifica il tuo viaggio nella Fase 2 →",
+    "h2_newsrooms": "Per le redazioni del New Jersey e di New York",
+    "newsrooms_intro": "Le redazioni locali del New Jersey e di New York possono ripubblicare questo articolo o inserire un widget di Reroute NJ nella copertura del cambio di binario, gratuitamente. Se ripubblicate l’articolo, mantenete la firma di Joe Amditis e un link a questa pagina. Controllate gli orari più recenti di NJ Transit prima di pubblicare.",
+    "newsrooms_step1": "Aprite il <a href=\"../embed.html\">configuratore per incorporare i contenuti</a>. Scegliete <strong>Widget interattivo</strong>, poi la guida alle linee, il confronto dei tragitti, le notizie o la mappa. Potete anche impostare una linea ferroviaria.",
+    "newsrooms_step2": "Copiate il codice dalla scheda <strong>Iframe</strong>. Incollatelo in un blocco HTML personalizzato del vostro sistema di pubblicazione, poi controllate l’anteprima su telefono e computer.",
+    "newsrooms_step3": "Se il vostro sistema blocca gli iframe, inserite un link alla <a href=\"../index.html\">guida alle linee</a> oppure scegliete una scheda informativa e scaricate un PNG per l’articolo o la newsletter.",
+    "newsrooms_help": "Non servono un account, una chiave API o un pagamento. Se vi serve aiuto, <a href=\"mailto:amditisj@montclair.edu\">scrivete a Joe</a>."
   },
   "blog_post_bridge": {
     "title": "Il nuovo Portal North Bridge è aperto — Reroute NJ",

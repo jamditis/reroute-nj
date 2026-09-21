@@ -178,7 +178,7 @@ var LINE_DATA = {
     summary:
       "Trains still run to Penn Station NY, but weekday service is reduced from 99 to 87 trains. Perth Amboy and Woodbridge riders can use rail tickets on buses to Port Authority.",
     extraNotes: [
-      "Brielle Bridge work, Oct 11–25: no trains between Manasquan and Bay Head. Buses replace trains at Bay Head and Point Pleasant, with a rail connection at Manasquan.",
+      "Brielle Bridge work, Oct 11–25: No trains between Manasquan and Bay Head. Buses replace trains at Bay Head and Point Pleasant, with a rail connection at Manasquan.",
     ],
     sources: {
       trainCounts: "https://www.njtransit.com/portalcutover",
@@ -226,7 +226,7 @@ var LINE_DATA = {
     summary:
       "All one-seat rides to Penn Station New York are suspended. Trains originate and terminate at Newark Penn Station (51 weekday trains to 50). Transfer to the Northeast Corridor at Newark Penn for PSNY.",
     extraNotes: [
-      "Saturday, November 7: buses replace trains between Cranford and Newark for Conrail track work.",
+      "Saturday, November 7: Buses replace trains between Cranford and Newark for Conrail track work.",
     ],
     sources: {
       trainCounts: "https://www.njtransit.com/portalcutover",

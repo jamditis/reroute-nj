@@ -337,6 +337,7 @@ main.container { padding-block: 40px 72px; }
 .resource-link { border-radius: var(--radius); }
 .callout-card { background: var(--surface-quiet); color: var(--text); border-color: var(--border-light); }
 .callout-card h3, .callout-card p { color: var(--text); }
+.callout-card p { margin: 0 0 1.25rem; max-width: 52ch; }
 .callout-btn { background: var(--primary); color: #fff; }
 .callout-btn:hover { background: var(--primary-light); color: #fff; }
 .footer { background: var(--bg); padding-block: 40px; }
