@@ -157,6 +157,14 @@ python3 -m http.server 8000
 
 Open `http://localhost:8000` in your browser.
 
+## Publishing
+
+Generate translations and other derived files on the local workstation. Commit
+the generated static files with their source changes, run the checks, and push
+the verified commit to `main`. GitHub Pages publishes the repository root
+automatically. The production site does not use Cloudflare Pages or a remote
+translation build.
+
 ## Contributing
 
 There are two ways to help:

@@ -65,7 +65,6 @@ docs/plans/               — Implementation design docs (SEO, embed system)
   ISSUE_TEMPLATE/         — Bug report, data correction, feature request, content suggestion
   copilot-instructions.md — Reviewer guidance for the Copilot PR review bot
   pull_request_template.md
-deploy.sh                 — Cloudflare Pages deploy script (Montclair account)
 {lang}/                   — Generated translated pages (100 total, 10 pages × 10 languages)
 ```
 
@@ -167,6 +166,10 @@ These run in the `generate_page()` function pipeline. If a translation key is mi
 9. Run `python3 tools/generate-pages.py` to regenerate
 
 ### Regenerating pages
+
+Run translation generation and its checks on the local workstation. Commit the
+generated language directories with their source translation changes. GitHub
+Pages serves the committed static files and does not generate translations.
 
 ```bash
 python3 tools/generate-pages.py           # All languages
@@ -301,7 +304,7 @@ The scraper does `git pull --rebase` before pushing to handle remote divergence 
 | Scraper dry run | `python3 tools/scrape-coverage.py --dry-run` |
 | Verify existing articles | `python3 tools/scrape-coverage.py --verify` |
 | Check article links | `python3 tools/scrape-coverage.py --check-links` |
-| Deploy | `bash deploy.sh` (Cloudflare Pages direct upload, Montclair account) |
+| Deploy | Push the verified static output to `main`; GitHub Pages publishes it automatically |
 
 ## File counts
 
