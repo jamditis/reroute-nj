@@ -209,7 +209,7 @@ main.container { padding-block: 40px 72px; }
 .coverage-card:hover { border-color: var(--border); box-shadow: none; }
 .coverage-card-header { margin-bottom: 10px; }
 .coverage-source { background: none; color: var(--primary); padding: 0; text-transform: none; letter-spacing: 0; font-size: .8rem; }
-.coverage-date { display: block; color: var(--text-muted); font-size: .78rem; font-variant-numeric: tabular-nums; }
+.coverage-date { display: block; color: var(--text-light); font-size: .78rem; font-weight: 650; font-variant-numeric: tabular-nums; }
 .coverage-title { font-size: clamp(1.15rem, 2vw, 1.4rem); max-width: 60ch; margin-bottom: 10px; line-height: 1.35; letter-spacing: -.02em; }
 .coverage-excerpt { max-width: 88ch; font-size: .91rem; }
 .coverage-cat { text-transform: none; letter-spacing: 0; background: var(--surface-quiet); color: var(--text-light); }
@@ -345,6 +345,7 @@ main.container { padding-block: 40px 72px; }
   .coverage-filters { grid-template-columns: 1fr; padding: 18px; }
   .coverage-card-meta { flex-wrap: wrap; }
   .coverage-card-header { align-items: flex-start; }
+  .coverage-date { font-size: .85rem; font-weight: 700; }
   .coverage-title { font-size: 1.2rem; }
   .cfg-form { grid-template-columns: 1fr; padding: 18px; }
   .cfg-preview { padding: 16px; }
@@ -370,12 +371,12 @@ html[dir="rtl"] .line-btn[data-line].active { padding-left: 32px; padding-right:
 body[data-view="simplified"] .journey-workspace, body[data-view="simplified"] .compare-inputs, body[data-view="simplified"] .site-intro { display: block; }
 body[data-view="simplified"] .control-panel, body[data-view="simplified"] .input-step { margin-bottom: 24px; }
 body[data-view="simplified"] .site-intro .phase-banner { margin-top: 20px; }
-body[data-view="simplified"] .page-jumps, body[data-view="simplified"] .brand::before { display: none; }
+body[data-view="simplified"] .page-jumps { display: none; }
 body[data-view="simplified"] .line-nav { grid-template-columns: 1fr; }
 body[data-contrast="high"] { --primary: #003579; --primary-light: #003579; --primary-dark: #000; --accent: #7d3600; --accent-dark: #6b2d00; --text: #000; --text-light: #111; --text-muted: #222; --surface-quiet: #fff; --border: #000; --border-light: #444; --focus: #0050b5; }
 body[data-contrast="high"] .brand, body[data-contrast="high"] .brand span { color: #000; }
 body[data-contrast="high"] .brand::before { background-image: url("../img/logo-mono.svg"); }
-body[data-contrast="high"] .header::after, body[data-contrast="high"] .header-inner::after, body[data-view="simplified"] .header::after, body[data-view="simplified"] .header-inner::after { display: none; }
+body[data-contrast="high"] .header::after, body[data-contrast="high"] .header-inner::after { display: none; }
 body[data-contrast="high"] .alert-banner strong { color: #ff0; }
 body[data-contrast="high"] .header { background: #fff; color: #000; border-color: #000; }
 body[data-contrast="high"] .tool-nav { background: #fff; border-color: #000; }

@@ -174,6 +174,19 @@ def is_excluded_url(url):
     return False
 
 
+def is_relevant_article(title, excerpt):
+    """Return whether a candidate is specifically about the Portal cutover."""
+    text = ("%s %s" % (title, excerpt)).lower()
+    if any(term in text for term in (
+        "portal bridge", "portal north", "portal cutover", "bridge cutover"
+    )):
+        return True
+    return "cutover" in text and any(term in text for term in (
+        "nj transit", "njtransit", "amtrak", "northeast corridor",
+        "newark", "secaucus",
+    ))
+
+
 def check_url_status(url, timeout=10):
     """HEAD request to verify URL returns 200. Returns (status_code, final_url) or (None, None) on error."""
     try:
@@ -537,7 +550,14 @@ def poll_rss_feeds(config, existing_urls):
             for item in items:
                 text = ("%s %s" % (item["title"], item.get("description", ""))).lower()
 
-                if filter_keywords and not any(kw in text for kw in filter_keywords):
+                keyword_match = any(kw in text for kw in filter_keywords)
+                if (
+                    filter_keywords
+                    and not keyword_match
+                    and not is_relevant_article(
+                        item["title"], item.get("description", "")
+                    )
+                ):
                     continue
 
                 url = item["url"]
@@ -896,6 +916,8 @@ def publish_registry_file(registry_data):
             raise PublicationError(
                 "Could not replace the source registry; prior file restored: %s" % error
             )
+
+    return {REGISTRY_FILE: snapshots[REGISTRY_FILE]}
 
 
 def status_paths(status_output):
@@ -1261,6 +1283,22 @@ def publish_and_push(coverage_data, registry_data, message):
     raise PublicationError("Git publication failed; prior data files restored")
 
 
+def publish_registry_and_push(registry_data, message):
+    """Publish the registry and restore it if Git publication fails."""
+    snapshots = publish_registry_file(registry_data)
+    try:
+        if git_commit_and_push(message):
+            return
+    except (PostPushError, PublicationRollbackError):
+        raise
+    except Exception:
+        restore_live_files(snapshots)
+        raise
+
+    restore_live_files(snapshots)
+    raise PublicationError("Git publication failed; prior registry restored")
+
+
 # ---------------------------------------------------------------------------
 # Registry update
 # ---------------------------------------------------------------------------
@@ -1313,7 +1351,10 @@ def run_discover(config, dry_run=False):
                 "official-alerts",
                 "secondary-news-coverage",
             ])
-            publish_registry_file(registry)
+            publish_registry_and_push(
+                registry,
+                "Refresh coverage source registry",
+            )
         return 0
 
     # 4. Scrape each candidate for metadata/excerpt
@@ -1351,6 +1392,10 @@ def run_discover(config, dry_run=False):
             excerpt = scraped["excerpt"]
         if not excerpt:
             excerpt = candidate.get("description", "")
+
+        if not is_relevant_article(title, excerpt):
+            logging.info("Skipping unrelated candidate: %s", title[:100])
+            continue
 
         # Author
         author = None

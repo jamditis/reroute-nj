@@ -59,7 +59,7 @@
       "source_name": "NJ.com",
       "category": "news",
       "format": "rss",
-      "filter_keywords": ["portal bridge", "portal north", "nj transit", "cutover"]
+      "filter_keywords": ["portal bridge", "portal north", "portal cutover", "bridge cutover"]
     },
     {
       "id": "gothamist",
@@ -67,7 +67,7 @@
       "source_name": "Gothamist",
       "category": "news",
       "format": "rss",
-      "filter_keywords": ["portal bridge", "portal north", "nj transit", "cutover"]
+      "filter_keywords": ["portal bridge", "portal north", "portal cutover", "bridge cutover"]
     }
   ],
   "known_outlets": [

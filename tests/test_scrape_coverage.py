@@ -331,7 +331,12 @@ class PublicationTests(unittest.TestCase):
                 with mock.patch.object(SCRAPER, "discover_via_gdelt", return_value=[]):
                     with mock.patch.object(SCRAPER, "load_registry", return_value=registry):
                         with mock.patch.object(SCRAPER, "validate_staged_publication"):
-                            SCRAPER.run_discover({}, dry_run=False)
+                            with mock.patch.object(
+                                SCRAPER,
+                                "git_commit_and_push",
+                                return_value=True,
+                            ) as git_publish:
+                                SCRAPER.run_discover({}, dry_run=False)
 
         self.assertEqual(
             changed_coverage,
@@ -339,6 +344,28 @@ class PublicationTests(unittest.TestCase):
         )
         published_registry = json.loads(self.registry_file.read_text())
         self.assertNotEqual(self.old_registry, published_registry)
+        git_publish.assert_called_once_with("Refresh coverage source registry")
+
+    def test_registry_only_git_failure_restores_prior_registry(self):
+        with mock.patch.object(SCRAPER, "validate_staged_publication"):
+            with mock.patch.object(
+                SCRAPER,
+                "git_commit_and_push",
+                return_value=False,
+            ):
+                with self.assertRaisesRegex(
+                    SCRAPER.PublicationError,
+                    "prior registry restored",
+                ):
+                    SCRAPER.publish_registry_and_push(
+                        self.new_registry,
+                        "test registry publication",
+                    )
+
+        self.assertEqual(
+            self.old_registry,
+            json.loads(self.registry_file.read_text()),
+        )
 
     def test_failed_push_preserves_remote_data_and_preexisting_local_work(self):
         remote = self.data_dir / "remote.git"

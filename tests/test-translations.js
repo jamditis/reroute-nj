@@ -718,6 +718,112 @@ LANGUAGES.forEach(function (lang) {
 });
 
 // ---------------------------------------------------------------------------
+// TEST 16: Generated controls have localized accessible names
+// ---------------------------------------------------------------------------
+
+console.log("\n--- Test 16: Localized accessible names ---");
+
+var GENERATED_PAGES = [
+  "index.html",
+  "compare.html",
+  "coverage.html",
+  "map.html",
+  "embed.html",
+  "blog.html",
+  "blog/phase-2-starts-october-11.html",
+  "blog/bridge-opens.html",
+  "blog/cutover-begins.html",
+  "blog/why-we-built-reroute-nj.html",
+  "blog/new-embed-system.html",
+  "about.html"
+];
+
+LANGUAGES.forEach(function (lang) {
+  if (lang === "en" || !translations[lang]) return;
+  var common = translations[lang].common;
+  var issues = [];
+
+  GENERATED_PAGES.forEach(function (page) {
+    var filePath = path.join(PROJECT_ROOT, lang, page);
+    var html = fs.readFileSync(filePath, "utf8");
+    var expected = [
+      'aria-label="' + common.high_contrast + '"',
+      'aria-label="' + common.simplified_view + '"',
+      'aria-label="' + common.site_tools + '"',
+      'aria-label="' + common.menu + '"',
+      'class="lang-selector-label sr-only">' + common.language + '</label>'
+    ];
+
+    expected.forEach(function (label) {
+      if (html.indexOf(label) === -1) {
+        issues.push(page + " missing " + label);
+      }
+    });
+  });
+
+  if (issues.length === 0) {
+    pass("[" + lang + "] Common control names are localized on all generated pages");
+  } else {
+    fail("[" + lang + "] Missing localized control names", issues.slice(0, 10).join("; "));
+  }
+});
+
+// ---------------------------------------------------------------------------
+// TEST 17: Blog ItemList order matches rendered cards
+// ---------------------------------------------------------------------------
+
+console.log("\n--- Test 17: Blog structured-data order ---");
+
+LANGUAGES.forEach(function (lang) {
+  var filePath = lang === "en"
+    ? path.join(PROJECT_ROOT, "blog.html")
+    : path.join(PROJECT_ROOT, lang, "blog.html");
+  var html = fs.readFileSync(filePath, "utf8");
+  var cardUrls = [];
+  var cardNames = [];
+  var cardPattern = /<a href="([^"]+)" class="blog-card-link">\s*<h2>([^<]+)<\/h2>/g;
+  var cardMatch;
+  while ((cardMatch = cardPattern.exec(html)) !== null) {
+    cardUrls.push(cardMatch[1].substring(cardMatch[1].indexOf("blog/")));
+    cardNames.push(cardMatch[2]);
+  }
+
+  var collection = null;
+  var jsonPattern = /<script type="application\/ld\+json">\s*([\s\S]*?)\s*<\/script>/g;
+  var jsonMatch;
+  while ((jsonMatch = jsonPattern.exec(html)) !== null) {
+    var data = JSON.parse(jsonMatch[1]);
+    if (data["@type"] === "CollectionPage") {
+      collection = data;
+      break;
+    }
+  }
+
+  var items = collection && collection.mainEntity
+    ? collection.mainEntity.itemListElement
+    : [];
+  var schemaUrls = items.map(function (item) {
+    return item.url.substring(item.url.indexOf("blog/"));
+  });
+  var schemaNames = items.map(function (item) { return item.name; });
+  var positionsMatch = items.every(function (item, index) {
+    return item.position === index + 1;
+  });
+
+  var urlsMatch = JSON.stringify(schemaUrls) === JSON.stringify(cardUrls);
+  var namesMatch = JSON.stringify(schemaNames) === JSON.stringify(cardNames);
+  if (positionsMatch && urlsMatch && namesMatch) {
+    pass("[" + lang + "] Blog ItemList positions, URLs, and names match rendered cards");
+  } else {
+    fail(
+      "[" + lang + "] Blog ItemList does not match rendered cards",
+      "schema=" + schemaUrls.join(",") + "; cards=" + cardUrls.join(",") +
+        "; schema names=" + schemaNames.join("|") + "; card names=" + cardNames.join("|")
+    );
+  }
+});
+
+// ---------------------------------------------------------------------------
 // BONUS: Key count summary
 // ---------------------------------------------------------------------------
 

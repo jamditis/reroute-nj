@@ -62,7 +62,7 @@ reroute-nj/
 ├── card.html               # Info card renderer (URL params → card)
 ├── widget.html             # Mini-widget renderer (URL params → tool)
 ├── robots.txt              # Crawler guidance + AI bot allowances
-├── sitemap.xml             # All 90 pages with hreflang cross-references
+├── sitemap.xml             # All 134 HTML pages with hreflang cross-references
 ├── llms.txt                # AI search engine discoverability
 ├── js/
 │   ├── i18n.js             # Translation loader with t() function
@@ -93,7 +93,7 @@ reroute-nj/
 ├── tools/
 │   └── generate-pages.py   # Generates translated HTML pages from templates
 ├── tests/                  # 14 test suites with 948+ automated checks
-└── {lang}/                 # Generated translated pages (90 total, 9 pages × 10 languages)
+└── {lang}/                 # Generated translated pages (120 total, 12 pages × 10 languages)
     ├── index.html
     ├── compare.html
     ├── coverage.html
@@ -112,7 +112,7 @@ reroute-nj/
 
 ## Translations
 
-All nine pages are available in 11 languages, chosen based on [NJ Transit ridership demographics](https://www.njtransit.com/):
+All 12 content pages are available in 11 languages, chosen based on [NJ Transit ridership demographics](https://www.njtransit.com/):
 
 | Language | Code | Direction |
 |----------|------|-----------|
@@ -226,7 +226,7 @@ python3 tools/validate-research-pipeline.py --check-urls
 The site is optimized for Google search, newsroom adoption, and AI search tools (ChatGPT, Gemini, Perplexity, Claude):
 
 - **`robots.txt`** — Allows all crawlers with explicit AI bot allowances (GPTBot, ClaudeBot, PerplexityBot, Google-Extended)
-- **`sitemap.xml`** — All 90 pages with `xhtml:link` hreflang cross-references for all 11 languages
+- **`sitemap.xml`** — All 134 HTML pages with `xhtml:link` hreflang cross-references for all 11 languages
 - **`llms.txt`** — Structured overview for AI search tools following the [llms.txt standard](https://llmstxt.org)
 - **JSON-LD structured data** — WebSite, FAQPage (7 questions), Article, BreadcrumbList, and CollectionPage schemas on all pages, translated per-language with localized URLs
 - **Canonical tags** — Self-referencing canonical on every page (English and translated)
@@ -242,7 +242,7 @@ The site is optimized for Google search, newsroom adoption, and AI search tools 
 - [x] Blog with proper index + slugged post architecture
 - [x] Citation system with verifiable source links on all tools
 - [x] Automated test suite (948+ checks across 14 suites)
-- [x] Translated JSON-LD structured data across all 90 translated pages
+- [x] Translated JSON-LD structured data across all 120 translated pages
 - [x] News coverage feed with 111 articles, pagination, and relevance sorting
 - [x] WCAG AA color contrast and heading hierarchy audit
 - [x] Phase 2 coverage for the Oct 11 – Nov 15, 2026 second-track cutover

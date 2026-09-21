@@ -1,6 +1,119 @@
 {
-  "lastUpdated": "2026-03-13T00:53:43Z",
+  "lastUpdated": "2026-09-21T19:41:43Z",
   "articles": [
+    {
+      "id": "villagegreen-midtown-direct-hoboken-2026-09-18",
+      "title": "NJTransit: From Oct. 11-Nov. 14, All Midtown Direct Trains Will Operate To/From Hoboken",
+      "url": "https://villagegreennj.com/infrastructure/njtransit-from-oct-11-nov-14-all-midtown-direct-trains-will-operate-to-from-hoboken/",
+      "source": "The Village Green",
+      "author": "The Village Green",
+      "date": "2026-09-18",
+      "category": "community",
+      "excerpt": "The local guide explains the weekday Hoboken diversion, weekend Penn Station service, ticket rules, and cross-honoring for Midtown Direct riders.",
+      "lines": [
+        "montclair-boonton",
+        "morris-essex"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "roinj-final-portal-cutover-october-2026-09-18",
+      "title": "NJ Transit, Amtrak begin final Portal North Bridge cutover in October",
+      "url": "https://www.roi-nj.com/2026/09/18/transportation/nj-transit-amtrak-begin-final-portal-north-bridge-cutover-in-october/",
+      "source": "ROI-NJ",
+      "author": "Kristopher Seals",
+      "date": "2026-09-18",
+      "category": "news",
+      "excerpt": "The agencies will transfer the final track and electrical systems to the new bridge. Temporary NJ Transit schedules begin October 11 and regular schedules are expected November 15, subject to safety testing.",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "njherald-five-weeks-fall-disruptions-2026-09-17",
+      "title": "NJ Transit, Amtrak riders face 5 weeks of fall service disruptions",
+      "url": "https://www.njherald.com/story/news/transportation/2026/09/17/nj-transit-amtrak-service-disruption-portal-north-bridge/91810730007/",
+      "source": "New Jersey Herald",
+      "author": "Colleen Wilson",
+      "date": "2026-09-17",
+      "category": "analysis",
+      "excerpt": "The final cutover will connect the second track, switches, signals, and electrical systems. The report includes weekday and weekend impacts by rail line.",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "gothamist-five-weeks-schedule-changes-2026-09-17",
+      "title": "NJ Transit riders face 5 weeks of schedule changes for Portal Bridge work",
+      "url": "https://gothamist.com/news/nj-transit-riders-face-5-weeks-of-schedule-changes-for-portal-bridge-work",
+      "source": "Gothamist",
+      "author": "Giulia Heyward",
+      "date": "2026-09-17",
+      "category": "news",
+      "excerpt": "Nearly every NJ Transit rail line will have schedule changes starting October 11 as crews complete the switch to the new Portal North Bridge.",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "amtrak-final-track-cutover-2026-09-17",
+      "title": "Portal North Bridge Enters Final Phase of Construction as Work Begins to Put Final Track Into Service",
+      "url": "https://media.amtrak.com/2026/09/portal-north-bridge-enters-final-phase-of-construction-as-work-begins-to-put-final-track-into-service/",
+      "source": "Amtrak Media",
+      "author": "Jason Abrams",
+      "date": "2026-09-17",
+      "category": "official",
+      "excerpt": "Amtrak details the work needed to transfer the final track to the new bridge and the temporary service changes planned during the five-week construction period.",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "njtransit-final-track-cutover-2026-09-17",
+      "title": "Portal North Bridge Enters Final Phase of Construction as Work Begins to Put Final Track Into Service",
+      "url": "https://www.njtransit.com/press-releases/portal-north-bridge-enters-final-phase-construction-work-begins-put-final-track",
+      "source": "NJ Transit",
+      "author": null,
+      "date": "2026-09-17",
+      "category": "official",
+      "excerpt": "NJ Transit and Amtrak announced the final five-week cutover. Temporary schedules begin October 11, with regular schedules expected to resume November 15 after safety testing.",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "trains-complete-portal-north-cutover-2026-09-17",
+      "title": "NJ Transit, Amtrak prepare to complete cutover of Portal North Bridge",
+      "url": "https://www.trains.com/pro/passenger/nj-transit-amtrak-prepare-to-complete-cutover-of-portal-north-bridge/",
+      "source": "Trains Magazine",
+      "author": "David Lassen",
+      "date": "2026-09-17",
+      "category": "analysis",
+      "excerpt": "The five-week work plan will connect the second track, electrical systems, and signals while reducing NJ Transit and Amtrak service through the Portal corridor.",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "njdotcom-riders-face-five-week-service-cut-2026-09-17",
+      "title": "NJ Transit, Amtrak riders face 5-week service cut for Portal bridge work — what you need to know",
+      "url": "https://www.nj.com/news/2026/09/nj-transit-amtrak-riders-face-5-week-service-cut-for-portal-bridge-work-what-you-need-to-know.html",
+      "source": "NJ.com",
+      "author": "Larry Higgs",
+      "date": "2026-09-17",
+      "category": "analysis",
+      "excerpt": "Final work to open the full Portal North Bridge starts October 9. NJ Transit plans five weeks of reduced service, including about 50% fewer trains between Newark and Secaucus.",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
     {
       "id": "njtransit-transit-and-amtrak-prepare-2026-03-12",
       "title": "NJ TRANSIT and Amtrak Prepare to Open First Track on New Portal North Bridge",

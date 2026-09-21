@@ -36,7 +36,7 @@ check("masthead uses the actual local SVG, not the retired skewed border", funct
   assert(css.indexOf('url("../img/logo-mono.svg")') !== -1);
   assert(css.indexOf("skewY(-12deg)") === -1);
   assert(css.indexOf('body[data-contrast="high"] .header-inner::after') !== -1);
-  assert(css.indexOf('body[data-view="simplified"] .header-inner::after') !== -1);
+  assert(css.indexOf('body[data-view="simplified"] .header-inner::after') === -1);
   assert(css.indexOf('@media (max-width: 360px)') !== -1);
 });
 check("primary actions use brand blue; vivid orange is a separate identity token", function () {

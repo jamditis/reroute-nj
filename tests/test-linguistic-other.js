@@ -143,7 +143,7 @@ function isAllowedEnglishWord(word) {
     "PR", "fork", "Fork", "embed", "hreflang",
     // Place names
     "Penn", "Station", "Authority", "Port", "Bus", "Place",
-    "Street", "River", "Tunnel", "Terminal",
+    "Street", "West", "River", "Tunnel", "Terminal",
     // Names
     "Joe", "Amditis",
     // Common borrowed terms
