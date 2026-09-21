@@ -1,7 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
   <title id="title">Reroute NJ</title>
-  <rect width="64" height="64" rx="10" fill="#fff"/>
-  <path fill="#071B38" d="M18 8h21c11 0 18 7 18 17 0 9-6 15-14 17l-7-9h3c6 0 9-3 9-8s-3-8-9-8H25z"/>
-  <path fill="#F76919" d="M6 8h10c6 0 9 3 13 8l23 29H41L22 21c-2-3-4-4-7-4H6z"/>
-  <path fill="#071B38" d="M6 23h9c4 0 7 2 10 6l14 17h10v-8l12 13-12 12v-8H37L18 33c-1-1-2-2-4-2H6z"/>
+  <rect width="64" height="64" rx="12" fill="#fff"/>
+  <g transform="translate(4 0) scale(.88)">
+  <path fill="#142B38" fill-rule="evenodd" d="M32 6C20 6 14 12 14 23V41C14 48 19 52 26 52H38C45 52 50 48 50 41V23C50 12 44 6 32 6ZM22 21H42V33H22ZM22 42a3 3 0 1 0 6 0a3 3 0 1 0-6 0ZM36 42a3 3 0 1 0 6 0a3 3 0 1 0-6 0ZM28 12H36V15H28Z"/>
+  <path fill="#142B38" d="M23 53H29L19 64H12Z"/>
+  <path fill="#175C50" d="M35 53H41L45 57H30L26 61H49L52 64H23L33 53Z"/>
+  </g>
 </svg>
