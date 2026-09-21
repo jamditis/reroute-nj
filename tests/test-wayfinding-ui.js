@@ -86,7 +86,7 @@ check("downloaded HTML card CSS matches the card.html preview stylesheet", funct
   assert.strictEqual(normalize(lines.join("\n")), normalize(styleMatch[1]));
   assert(embedSrc.indexOf('class="card-attribution"') !== -1);
   assert(embedSrc.indexOf('style="text-align:center;padding:8px 0;font-size:0.7rem;color:#9eaab8;"') === -1);
-  assert(styleMatch[1].indexOf("background: #155e59") !== -1);
+  assert(styleMatch[1].indexOf("background: #0755b8") !== -1);
   assert(styleMatch[1].indexOf("min-height: 44px") !== -1);
   assert(styleMatch[1].indexOf("@media print") !== -1);
 });
