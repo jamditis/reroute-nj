@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 138" role="img" aria-labelledby="title desc">
+  <title id="title">Reroute NJ</title>
+  <desc id="desc">Independent commuter guide</desc>
+  <g transform="translate(0 8)">  <path fill="#071B38" d="M37 8H76C94 8 106 19 106 34C106 47 97 57 82 59L68 43H76C84 43 89 40 89 34C89 28 84 24 76 24H51Z"/>
+  <path fill="#F76919" d="M8 8H29C40 8 47 13 54 21L93 69H81C75 69 71 66 67 61L40 28C37 25 34 24 29 24H8Z"/>
+  <path fill="#B51F70" d="M8 28H27C37 28 43 32 49 39L85 82H73C67 82 62 79 58 74L34 47C32 44 29 43 25 43H8Z"/>
+  <path fill="#0755B8" d="M8 47H24C33 47 38 51 44 58L78 97H66C60 97 56 94 52 89L29 64C27 62 25 62 21 62H8Z"/>
+  <path fill="#071B38" d="M83 74C87 78 89 79 94 79H96V68L116 87L96 106V95H84C78 95 73 92 69 87L58 74L64 78C69 83 73 86 79 86H85L77 76Z"/></g>
+  <g fill="#071B38" font-family="Helvetica, Arial, sans-serif">
+    <text x="146" y="76" font-size="66" font-weight="700" letter-spacing="-2">Reroute NJ</text>
+    <text x="149" y="110" font-size="23" fill="#526078">Independent commuter guide</text>
+  </g>
+</svg>

@@ -288,12 +288,12 @@
     var ctx = canvas.getContext("2d");
 
     // Background
-    ctx.fillStyle = isDark ? "#1a2332" : "#ffffff";
+    ctx.fillStyle = isDark ? "#071b38" : "#ffffff";
     fillRoundRect(ctx, 0, 0, width, height, 12);
 
-    var textColor = isDark ? "#e8ecf1" : "#1a2332";
-    var subtextColor = isDark ? "#9eaab8" : "#73849a";
-    var bodyColor = isDark ? "#b0bec5" : "#4a5568";
+    var textColor = isDark ? "#e8ecf1" : "#071b38";
+    var subtextColor = isDark ? "#9eaab8" : "#526078";
+    var bodyColor = isDark ? "#b0bec5" : "#46566d";
 
     if (isSummary) {
       return renderSummaryToCanvas(ctx, canvas, isDark, textColor, subtextColor, bodyColor, width, height, pad);
