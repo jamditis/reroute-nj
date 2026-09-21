@@ -69,6 +69,11 @@ check("standalone cards need no remote stylesheet or image", function () {
   assert(card.indexOf("@media (forced-colors: active)") !== -1);
   assert(card.indexOf("body.theme-dark") !== -1);
 });
+check("dark summary rows use a light print background", function () {
+  var printRule = card.split("\n").filter(function (line) { return line.indexOf("@media print") !== -1; })[0];
+  assert(printRule);
+  assert(printRule.indexOf(".theme-dark .summary-line { background: #fff; }") !== -1);
+});
 check("social raster keeps the previously fixed 1200 by 630 dimensions", function () {
   var png = fs.readFileSync(path.join(root, "img/og-image.png"));
   assert.strictEqual(png.subarray(1, 4).toString(), "PNG");

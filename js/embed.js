@@ -572,7 +572,7 @@
       '    @media (max-width: 360px) { .card-body { padding: 16px; } .summary-line { flex-wrap: wrap; } }\n' +
       '    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }\n' +
       '    @media (forced-colors: active) { .card-attribution a::before { display: none; } .card-cta { border: 1px solid ButtonText; } }\n' +
-      '    @media print { body, body.theme-dark, .theme-dark .card { background: #fff; color: #000; padding: 0; } .card { max-width: none; break-inside: avoid; } .card-cta, .theme-dark .card-cta { color: #000; background: #fff; border: 1px solid #000; } .theme-dark .card-line-context, .theme-dark .card-stat-label, .theme-dark .card-dates, .theme-dark .summary-trains, .theme-dark .card-summary, .theme-dark .card-alternatives h4 { color: #000; } }\n' +
+      '    @media print { body, body.theme-dark, .theme-dark .card { background: #fff; color: #000; padding: 0; } .card { max-width: none; break-inside: avoid; } .theme-dark .summary-line { background: #fff; } .card-cta, .theme-dark .card-cta { color: #000; background: #fff; border: 1px solid #000; } .theme-dark .card-line-context, .theme-dark .card-stat-label, .theme-dark .card-dates, .theme-dark .summary-trains, .theme-dark .card-summary, .theme-dark .card-alternatives h4 { color: #000; } }\n' +
       '  </style>\n' +
       '</head>\n' +
       '<body' + bodyClass + '>\n' +
