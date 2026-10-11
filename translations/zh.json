@@ -27,7 +27,9 @@
     "blog_post_bridge_description": "Portal North Bridge转换的第一阶段已完成。NJ Transit常规时刻表于3月15日恢复，新桥的第一条轨道于3月16日投入使用。",
     "blog_post_bridge_og_description": "第一阶段已完成。NJ Transit常规时刻表于3月15日恢复，新桥的第一条轨道于3月16日投入使用。",
     "blog_post_phase2_description": "Portal North Bridge第二阶段于10月11日开始。查看为期五周的NJ Transit时刻表调整、前往Hoboken的改道安排、车票规定和乘客资源。",
-    "blog_post_phase2_og_description": "工程人员连接Portal North Bridge最后一条轨道期间，NJ Transit将从10月11日起实施为期五周的临时时刻表。"
+    "blog_post_phase2_og_description": "工程人员连接Portal North Bridge最后一条轨道期间，NJ Transit将从10月11日起实施为期五周的临时时刻表。",
+    "blog_post_underway_description": "第二阶段已开始。使用Reroute NJ查看您的线路、比较替代方案、关注更新，并与您的新闻机构分享免费工具。",
+    "blog_post_underway_og_description": "第二阶段正在进行。查找您的线路和车站，关注线路切换新闻，并在注明来源后免费嵌入或转载Reroute NJ工具。"
   },
   "common": {
     "skip_to_main": "跳到主要内容",
@@ -547,7 +549,10 @@
     "post4_excerpt": "第一阶段已完成。NJ Transit常规时刻表于3月15日恢复，新桥的第一条轨道于3月16日投入使用。以下是对乘客的影响。",
     "post5_title": "第二阶段10月11日开始：乘客须知",
     "post5_date": "2026年9月21日",
-    "post5_excerpt": "NJ Transit为期五周的临时时刻表将于10月11日开始。以下是前往Hoboken的改道安排、车票规定和出行前应采取的步骤。"
+    "post5_excerpt": "NJ Transit为期五周的临时时刻表将于10月11日开始。以下是前往Hoboken的改道安排、车票规定和出行前应采取的步骤。",
+    "post6_title": "第二阶段已开始：Reroute NJ如何帮助您",
+    "post6_date": "2026年10月11日",
+    "post6_excerpt": "第二阶段正在进行。了解如何使用Reroute NJ、关注变化，并为您的新闻机构提供免费的乘客工具。"
   },
   "blog_post": {
     "title": "我们为什么创建Reroute NJ — Reroute NJ",
@@ -700,8 +705,8 @@
     "faq_a7": "从Hoboken Terminal到曼哈顿有三个选择：（1）PATH到33rd Street（约15分钟，工作日7:00–9:30和16:00–19:00每6分钟一班），（2）NY Waterway渡轮到W. 39th Street（约10分钟），或（3）Bus 126到Port Authority Bus Terminal（经Lincoln Tunnel约30-45分钟）。转换期间工作日，到Hoboken的NJ Transit车票可在这些服务上联乘。 上述行程时间为估计值，不含候车和换乘时间。",
     "collection_name": "博客 — Reroute NJ",
     "collection_description": "Reroute NJ项目的更新和故事。",
-    "collection_item1": "第二阶段10月11日开始：乘客须知",
-    "collection_item2": "新Portal North Bridge已开通",
+    "collection_item1": "第二阶段已开始：Reroute NJ如何帮助您",
+    "collection_item2": "第二阶段10月11日开始：乘客须知",
     "article1_headline": "我们为什么创建Reroute NJ",
     "article1_description": "11种语言的5款免费工具，帮助NJ Transit乘客应对Portal Bridge切换（Feb 15 – Mar 15, 2026）。",
     "article2_headline": "新功能：在您的网站上嵌入Reroute NJ",
@@ -710,14 +715,18 @@
     "breadcrumb_blog_post_bridge": "新Portal North Bridge已开通",
     "article3_headline": "转换从今天开始",
     "article3_description": "Portal North Bridge转换从今天开始。NJ Transit乘客在未来四周需要了解的信息。",
-    "collection_item3": "转换从今天开始",
-    "collection_item4": "新功能：在您的网站上嵌入 Reroute NJ",
-    "collection_item5": "我们为什么创建Reroute NJ",
+    "collection_item3": "新Portal North Bridge已开通",
+    "collection_item4": "转换从今天开始",
+    "collection_item5": "新功能：在您的网站上嵌入 Reroute NJ",
     "article4_headline": "新Portal North Bridge已开通",
     "article4_description": "Portal North Bridge转换的第一阶段已完成。NJ Transit常规时刻表于3月15日恢复，新桥的第一条轨道于3月16日投入使用。",
     "breadcrumb_blog_post_phase2": "第二阶段10月11日开始：乘客须知",
     "article5_headline": "第二阶段10月11日开始：乘客须知",
-    "article5_description": "Portal North Bridge第二阶段于10月11日开始，NJ Transit将实施为期五周的临时时刻表和乘客出行调整。"
+    "article5_description": "Portal North Bridge第二阶段于10月11日开始，NJ Transit将实施为期五周的临时时刻表和乘客出行调整。",
+    "breadcrumb_blog_post_underway": "第二阶段已开始：Reroute NJ如何帮助您",
+    "article6_headline": "第二阶段已开始：Reroute NJ如何帮助您",
+    "article6_description": "第二阶段已开始。使用Reroute NJ查看您的线路、比较替代方案、关注更新，并与您的新闻机构分享免费工具。",
+    "collection_item6": "我们为什么创建Reroute NJ"
   },
   "blog_post_phase2": {
     "title": "第二阶段10月11日开始：乘客须知 — Reroute NJ",
@@ -798,5 +807,38 @@
     "closing": "四周的中断换来数十年更好、更快、更可靠的服务。这是值得的。",
     "support_p": "Reroute NJ是免费的、开源的、由社区支持的项目。如果你觉得有用，请分享给乘坐NJ Transit的人，或<a href=\"https://github.com/sponsors/jamditis\" target=\"_blank\" rel=\"noopener\">支持本项目</a>。",
     "cta": "查看完整新闻报道 →"
+  },
+  "blog_post_underway": {
+    "title": "第二阶段已开始：Reroute NJ如何帮助您 | Reroute NJ",
+    "tagline": "第二阶段正在进行",
+    "heading": "第二阶段已开始：Reroute NJ如何帮助您",
+    "by_prefix": "作者",
+    "date": "2026年10月11日",
+    "intro_p1": "Portal North Bridge线路切换的第二阶段已开始。NJ Transit临时时刻表于今天，10月11日星期日生效，Amtrak将在此期间把第二条，也是最后一条轨道连接到新桥。NJ Transit预计于11月15日星期日恢复常规时刻表，但须先完成安全测试。",
+    "intro_p2": "工作日Midtown Direct列车改道Hoboken的安排将于明天，10月12日星期一开始。周末Midtown Direct列车仍前往Penn Station New York，但时刻有所调整。出行前请查看<a href=\"https://www.njtransit.com/portalcutover\" target=\"_blank\" rel=\"noopener\">官方线路切换时刻表和车票规定</a>。",
+    "h2_what": "什么是Reroute NJ？",
+    "what_p": "<a href=\"../index.html\">Reroute NJ</a>是免费的独立线路切换指南。它汇集了线路和车站指南、换乘选择、车票信息、地图和本地报道，方便您了解行程会有哪些变化。网站提供11种语言，可直接在浏览器中使用，无需账户或下载应用程序。",
+    "why_p": "我们在第一次线路切换期间制作了这个网站，因为乘客需要在一个地方找到实用的答案：我的列车开往哪里？在哪里换乘？该买哪种车票？我也是NJ Transit的乘客。Reroute NJ源于这些相同的问题，现在我们已为第二阶段更新了网站。",
+    "h2_use": "如何使用",
+    "use_line": "<strong>先打开<a href=\"../index.html\">线路指南</a>。</strong>选择您的铁路线路和车站，查看行程中的服务变化、换乘选择和购票指南。",
+    "use_compare": "<strong>试用<a href=\"../compare.html\">通勤比较</a>。</strong>比较您平时的行程与线路切换期间的替代方案。行程时间是估算值。请查看最新时刻表，并为换乘和拥挤预留时间。",
+    "use_map": "<strong>打开<a href=\"../map.html\">地图</a>。</strong>查看桥梁、受影响的铁路线和换乘地点，了解行程在哪些位置会有变化。",
+    "use_news": "<strong>关注<a href=\"../coverage.html\">新闻报道</a>。</strong>查找有关线路切换的报道，并通过链接阅读原文。",
+    "use_language": "使用页面顶部的语言菜单切换语言。您还可以开启高对比度或简化视图，并打印指南随身携带。",
+    "h2_monitor": "我们会继续查看消息并更新",
+    "monitor_p1": "在整个第二阶段，我们会继续关注官方公告和本地报道。随着新闻发布、时刻表变化或其他进展出现，我们会更新Reroute NJ的指南和新闻列表。这包括换乘、车票规定和预计恢复常规服务时间的变化。",
+    "monitor_p2": "Reroute NJ解释线路切换安排，不会实时追踪您的列车。每次出行前，请查看NJ Transit应用程序和服务通知。如果您发现错误，或我们遗漏了某项进展，请<a href=\"mailto:amditisj@montclair.edu\">给Joe发邮件</a>，以便我们核查。",
+    "h2_coverage": "感谢帮助乘客找到网站的新闻机构",
+    "coverage_intro": "本地报道帮助更多乘客找到了Reroute NJ。感谢报道本项目并分享工具的记者和媒体：",
+    "credit_montclair": "<strong><a href=\"https://montclairlocal.news/2026/10/nj-transit-portal-bridge-cuts-return-what-montclair-boonton-line-riders-need-to-know/\" target=\"_blank\" rel=\"noopener\">Montclair Local</a>：</strong>Matt Kadosh的第二阶段指南包含有关Reroute NJ的采访，并在报道中直接嵌入了线路指南。该媒体也曾<a href=\"https://montclairlocal.news/2026/02/reroutenj-web-tool-tells-riders-how-to-work-around-portal-bridge-service-disruptions/\" target=\"_blank\" rel=\"noopener\">在第一次线路切换期间报道本工具</a>。",
+    "credit_news12": "<strong><a href=\"https://newjersey.news12.com/2026/10/05/what-to-know-before-second-portal-bridge-cutover-begins/3Mg7kB3e0dqTi63qBUX9NR\" target=\"_blank\" rel=\"noopener\">News 12 New Jersey</a>：</strong>Tom Krosnowski在10月5日的报道中采访了Joe，介绍通勤变化，并为观众提供了Reroute NJ的链接。",
+    "credit_nj1015": "<strong><a href=\"https://nj1015.com/traffic/\" target=\"_blank\" rel=\"noopener\">New Jersey 101.5</a>：</strong>该电台在第一次线路切换期间将本工具放在交通页面上，为受众提供了另一种应对服务中断、规划行程的方式。",
+    "credit_newsmachines": "<strong><a href=\"https://newsmachines.beehiiv.com/p/reroute-nj-pop-up-website-vibe-coding-en\" target=\"_blank\" rel=\"noopener\">News Machines</a>：</strong>Ulrike Langer介绍了Reroute NJ，并探讨了临时服务网站如何支持本地新闻工作。",
+    "h2_reuse": "新闻机构：免费使用这些工具",
+    "reuse_p": "所有Reroute NJ工具和组件都可以免费嵌入或转载。请注明<strong>Reroute NJ</strong>，并链接到<a href=\"https://reroutenj.org/\">reroutenj.org</a>。您也可以转载本文，请保留Joe Amditis的署名并链接到本页面。",
+    "reuse_step1": "打开<a href=\"../embed.html\">嵌入与分享</a>。选择交互式工具或信息卡，再选择所需的线路、语言和外观。",
+    "reuse_step2": "将iframe代码复制到发布系统的自定义HTML区块。在手机和电脑上预览。如果系统阻止嵌入内容，请下载PNG信息卡，或通过链接引导读者查看指南。",
+    "reuse_updates": "实时嵌入内容从Reroute NJ加载工具，读者加载时会看到我们的更新。下载的图片和HTML文件是下载时的版本，因此指南变化后请更换这些文件。无需账户、API密钥或付费。如需帮助，请<a href=\"mailto:amditisj@montclair.edu\">联系我们</a>。",
+    "cta": "查找您的线路和车站 →"
   }
 }

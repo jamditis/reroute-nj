@@ -27,7 +27,9 @@
     "blog_post_bridge_description": "Phase 1 of the Portal North Bridge cutover is complete. Regular NJ Transit schedules resume March 15, and the first track on the new bridge enters service March 16.",
     "blog_post_bridge_og_description": "Phase 1 complete. Regular NJ Transit schedules resume March 15, first track on the new bridge enters service March 16.",
     "blog_post_phase2_description": "Portal North Bridge Phase 2 starts October 11. See the five-week NJ Transit schedule changes, Hoboken diversions, ticket rules, and rider resources.",
-    "blog_post_phase2_og_description": "Five weeks of NJ Transit schedule changes start October 11 as crews connect the final Portal North Bridge track."
+    "blog_post_phase2_og_description": "Five weeks of NJ Transit schedule changes start October 11 as crews connect the final Portal North Bridge track.",
+    "blog_post_underway_description": "Phase 2 has started. Use Reroute NJ to check your line, compare alternatives, follow updates, and share free tools with your newsroom.",
+    "blog_post_underway_og_description": "Phase 2 is underway. Find your line and station, follow cutover news, and embed or republish Reroute NJ tools for free with attribution."
   },
   "common": {
     "skip_to_main": "Skip to main content",
@@ -396,7 +398,10 @@
     "post4_excerpt": "Phase 1 is complete. Regular NJ Transit schedules resume March 15 and the first track on the new bridge enters service March 16. Here's what it means for riders.",
     "post5_title": "Phase 2 starts October 11: What riders need to know",
     "post5_date": "September 21, 2026",
-    "post5_excerpt": "Five weeks of temporary NJ Transit schedules start October 11. Here are the Hoboken diversions, ticket rules, and steps to take before you travel."
+    "post5_excerpt": "Five weeks of temporary NJ Transit schedules start October 11. Here are the Hoboken diversions, ticket rules, and steps to take before you travel.",
+    "post6_title": "Phase 2 has started: How Reroute NJ can help",
+    "post6_date": "October 11, 2026",
+    "post6_excerpt": "Phase 2 is underway. Here is how to use Reroute NJ, follow changes, and bring free rider tools to your newsroom."
   },
   "blog_post": {
     "title": "Why we built Reroute NJ — Reroute NJ",
@@ -700,8 +705,8 @@
     "faq_a7": "From Hoboken Terminal, riders have three options to reach Manhattan: (1) PATH train to 33rd Street (~15 minutes, every 6 minutes on weekdays, 7–9:30 a.m. and 4–7 p.m.), (2) NY Waterway ferry to W. 39th Street (~10 minutes), or (3) Bus 126 to Port Authority Bus Terminal (~30-45 minutes via Lincoln Tunnel). NJ Transit tickets to Hoboken are cross-honored on these services on weekdays during the cutover. Travel times are estimates and exclude waiting and transfer time.",
     "collection_name": "Blog — Reroute NJ",
     "collection_description": "Updates and stories from the Reroute NJ project.",
-    "collection_item1": "Phase 2 starts October 11: What riders need to know",
-    "collection_item2": "The new Portal North Bridge is open",
+    "collection_item1": "Phase 2 has started: How Reroute NJ can help",
+    "collection_item2": "Phase 2 starts October 11: What riders need to know",
     "article1_headline": "Why we built Reroute NJ",
     "article1_description": "Five free tools in 11 languages to help NJ Transit riders navigate the Portal Bridge cutover (Feb 15 – Mar 15, 2026).",
     "article2_headline": "New: Embed Reroute NJ on your website",
@@ -710,14 +715,18 @@
     "breadcrumb_blog_post_bridge": "The new Portal North Bridge is open",
     "article3_headline": "The cutover starts today",
     "article3_description": "The Portal North Bridge cutover starts today. What NJ Transit riders need to know for the next four weeks.",
-    "collection_item3": "The cutover starts today",
-    "collection_item4": "New: Embed Reroute NJ on your website",
-    "collection_item5": "Why we built Reroute NJ",
+    "collection_item3": "The new Portal North Bridge is open",
+    "collection_item4": "The cutover starts today",
+    "collection_item5": "New: Embed Reroute NJ on your website",
     "article4_headline": "The new Portal North Bridge is open",
     "article4_description": "Phase 1 of the Portal North Bridge cutover is complete. Regular NJ Transit schedules resume March 15, and the first track on the new bridge enters service March 16.",
     "breadcrumb_blog_post_phase2": "Phase 2 starts October 11: What riders need to know",
     "article5_headline": "Phase 2 starts October 11: What riders need to know",
-    "article5_description": "Portal North Bridge Phase 2 starts October 11 with five weeks of temporary NJ Transit schedules and rider changes."
+    "article5_description": "Portal North Bridge Phase 2 starts October 11 with five weeks of temporary NJ Transit schedules and rider changes.",
+    "breadcrumb_blog_post_underway": "Phase 2 has started: How Reroute NJ can help",
+    "article6_headline": "Phase 2 has started: How Reroute NJ can help",
+    "article6_description": "Phase 2 has started. Use Reroute NJ to check your line, compare alternatives, follow updates, and share free tools with your newsroom.",
+    "collection_item6": "Why we built Reroute NJ"
   },
   "blog_post_phase2": {
     "title": "Phase 2 starts October 11: What riders need to know — Reroute NJ",
@@ -798,5 +807,38 @@
     "closing": "Four weeks of disruption for decades of better, faster, more reliable service. It was worth it.",
     "support_p": "Reroute NJ is free, open source, and community-supported. If you find it useful, share it with someone who rides NJ Transit or <a href=\"https://github.com/sponsors/jamditis\" target=\"_blank\" rel=\"noopener\">support the project</a>.",
     "cta": "See full news coverage →"
+  },
+  "blog_post_underway": {
+    "title": "Phase 2 has started: How Reroute NJ can help | Reroute NJ",
+    "tagline": "Phase 2 is underway",
+    "heading": "Phase 2 has started: How Reroute NJ can help",
+    "by_prefix": "By",
+    "date": "October 11, 2026",
+    "intro_p1": "Phase 2 of the Portal North Bridge cutover has started. Temporary NJ Transit schedules take effect today, Sunday, October 11, while Amtrak connects the second and final track to the new bridge. NJ Transit expects regular schedules to resume Sunday, November 15, subject to safety testing.",
+    "intro_p2": "Weekday Midtown Direct diversions to Hoboken begin tomorrow, Monday, October 12. Weekend Midtown Direct trains still serve Penn Station New York, with adjusted times. Check the <a href=\"https://www.njtransit.com/portalcutover\" target=\"_blank\" rel=\"noopener\">official cutover schedules and ticket rules</a> before you travel.",
+    "h2_what": "What is Reroute NJ?",
+    "what_p": "<a href=\"../index.html\">Reroute NJ</a> is a free, independent guide to the cutover. It brings line and station guidance, transfer options, ticket information, a map, and local reporting together so you can see what changes for your trip. It's available in 11 languages and works in your browser, with no account or app download.",
+    "why_p": "We made it during the first cutover because riders needed practical answers in one place: Where does my train go? Where do I transfer? Which ticket do I buy? I'm an NJ Transit rider, too. Reroute NJ grew out of those same questions, and we've updated it for this second phase.",
+    "h2_use": "How to use it",
+    "use_line": "<strong>Start with the <a href=\"../index.html\">line guide</a>.</strong> Pick your rail line and station to see the service change, transfer options, and ticket guidance for your trip.",
+    "use_compare": "<strong>Try the <a href=\"../compare.html\">commute comparison</a>.</strong> Compare your usual trip with cutover alternatives. Travel times are estimates. Check current schedules and allow time for transfers and crowding.",
+    "use_map": "<strong>Open the <a href=\"../map.html\">map</a>.</strong> See the bridge, affected rail routes, and transfer locations to understand where your trip changes.",
+    "use_news": "<strong>Follow the <a href=\"../coverage.html\">news coverage</a>.</strong> Find reporting on the cutover and follow the links to read the original stories.",
+    "use_language": "Use the language menu at the top of the page to change languages. You can also turn on high contrast or simplified view, and print a guide to take with you.",
+    "h2_monitor": "We'll keep checking and updating",
+    "monitor_p1": "We'll continue to monitor official announcements and local reporting throughout Phase 2. As news breaks, schedules change, or other developments unfold, we'll update Reroute NJ's guidance and coverage feed. That includes changes to transfers, ticket rules, and the expected return to regular service.",
+    "monitor_p2": "Reroute NJ explains the cutover; it does not track your train in real time. Check NJ Transit's app and service alerts before each trip. If you spot an error or a development we've missed, <a href=\"mailto:amditisj@montclair.edu\">email Joe</a> so we can check it.",
+    "h2_coverage": "Thanks to the newsrooms helping riders find it",
+    "coverage_intro": "Local reporting has helped more riders find Reroute NJ. Thanks to the journalists and outlets covering the project and sharing the tools:",
+    "credit_montclair": "<strong><a href=\"https://montclairlocal.news/2026/10/nj-transit-portal-bridge-cuts-return-what-montclair-boonton-line-riders-need-to-know/\" target=\"_blank\" rel=\"noopener\">Montclair Local</a>:</strong> Matt Kadosh's Phase 2 guide includes an interview about Reroute NJ and embeds the line guide directly in the story. The outlet also <a href=\"https://montclairlocal.news/2026/02/reroutenj-web-tool-tells-riders-how-to-work-around-portal-bridge-service-disruptions/\" target=\"_blank\" rel=\"noopener\">covered the tool during the first cutover</a>.",
+    "credit_news12": "<strong><a href=\"https://newjersey.news12.com/2026/10/05/what-to-know-before-second-portal-bridge-cutover-begins/3Mg7kB3e0dqTi63qBUX9NR\" target=\"_blank\" rel=\"noopener\">News 12 New Jersey</a>:</strong> Tom Krosnowski's October 5 report includes an interview with Joe about the commute changes and links viewers to Reroute NJ.",
+    "credit_nj1015": "<strong><a href=\"https://nj1015.com/traffic/\" target=\"_blank\" rel=\"noopener\">New Jersey 101.5</a>:</strong> The station put the tool on its traffic page during the first cutover, giving its audience another way to plan around the disruption.",
+    "credit_newsmachines": "<strong><a href=\"https://newsmachines.beehiiv.com/p/reroute-nj-pop-up-website-vibe-coding-en\" target=\"_blank\" rel=\"noopener\">News Machines</a>:</strong> Ulrike Langer profiled Reroute NJ and examined how a temporary service website can support local journalism.",
+    "h2_reuse": "Newsrooms: Use the tools for free",
+    "reuse_p": "All Reroute NJ tools and components are available to embed or republish for free. Please credit <strong>Reroute NJ</strong> and link to <a href=\"https://reroutenj.org/\">reroutenj.org</a>. You can also republish this post with the Joe Amditis byline and a link to this page.",
+    "reuse_step1": "Open <a href=\"../embed.html\">the embed configurator</a>. Choose an interactive tool or an info card, then select the line, language, and appearance you need.",
+    "reuse_step2": "Copy the iframe code into a custom HTML block in your publishing system. Preview it on a phone and desktop. If your system blocks embeds, download a PNG card or link readers to the guide.",
+    "reuse_updates": "Live embeds load the tools from Reroute NJ and reflect our updates when readers load them. Downloaded images and HTML files are snapshots, so replace them when the guidance changes. No account, API key, or payment is required. <a href=\"mailto:amditisj@montclair.edu\">Get in touch</a> if you need help.",
+    "cta": "Find your line and station →"
   }
 }

@@ -27,7 +27,9 @@
     "blog_post_bridge_description": "Kumpleto na ang Phase 1 ng Portal North Bridge cutover. Ang regular na iskedyul ng NJ Transit ay magbabalik sa Marso 15, at ang unang track sa bagong tulay ay magsisimula sa serbisyo sa Marso 16.",
     "blog_post_bridge_og_description": "Kumpleto na ang Phase 1. Ang regular na iskedyul ng NJ Transit ay magbabalik sa Marso 15, ang unang track sa bagong tulay ay magsisimula sa serbisyo sa Marso 16.",
     "blog_post_phase2_description": "Magsisimula ang Phase 2 ng Portal North Bridge sa Oktubre 11. Tingnan ang limang linggong pagbabago sa iskedyul ng NJ Transit, mga diversion sa Hoboken, tuntunin sa ticket, at gabay para sa pasahero.",
-    "blog_post_phase2_og_description": "Magsisimula sa Oktubre 11 ang limang linggong pansamantalang iskedyul ng NJ Transit habang ikinokonekta ng mga crew ang huling track ng Portal North Bridge."
+    "blog_post_phase2_og_description": "Magsisimula sa Oktubre 11 ang limang linggong pansamantalang iskedyul ng NJ Transit habang ikinokonekta ng mga crew ang huling track ng Portal North Bridge.",
+    "blog_post_underway_description": "Nagsimula na ang Phase 2. Gamitin ang Reroute NJ para tingnan ang iyong linya, ihambing ang mga alternatibo, sundan ang mga update, at magbahagi ng mga libreng tool sa inyong newsroom.",
+    "blog_post_underway_og_description": "Isinasagawa na ang Phase 2. Hanapin ang iyong linya at istasyon, sundan ang balita sa cutover, at i-embed o muling ilathala nang libre ang mga tool ng Reroute NJ na may pagkilala sa pinagmulan."
   },
   "common": {
     "skip_to_main": "Pumunta sa pangunahing nilalaman",
@@ -547,7 +549,10 @@
     "post4_excerpt": "Kumpleto na ang Phase 1. Ang regular na iskedyul ng NJ Transit ay magbabalik sa Marso 15 at ang unang track sa bagong tulay ay magsisimula sa serbisyo sa Marso 16. Narito ang ibig sabihin nito para sa mga pasahero.",
     "post5_title": "Magsisimula ang Phase 2 sa Oktubre 11: gabay para sa mga pasahero",
     "post5_date": "Setyembre 21, 2026",
-    "post5_excerpt": "Magsisimula sa Oktubre 11 ang limang linggong pansamantalang iskedyul ng NJ Transit. Narito ang mga diversion sa Hoboken, tuntunin sa ticket, at mga hakbang bago bumiyahe."
+    "post5_excerpt": "Magsisimula sa Oktubre 11 ang limang linggong pansamantalang iskedyul ng NJ Transit. Narito ang mga diversion sa Hoboken, tuntunin sa ticket, at mga hakbang bago bumiyahe.",
+    "post6_title": "Nagsimula na ang Phase 2: Paano makatutulong ang Reroute NJ",
+    "post6_date": "Oktubre 11, 2026",
+    "post6_excerpt": "Isinasagawa na ang Phase 2. Narito kung paano gamitin ang Reroute NJ, sundan ang mga pagbabago, at maghatid ng mga libreng tool para sa mga pasahero sa inyong newsroom."
   },
   "blog_post": {
     "title": "Bakit ginawa namin ang Reroute NJ — Reroute NJ",
@@ -700,8 +705,8 @@
     "faq_a7": "Mula Hoboken Terminal, may tatlong paraan papuntang Manhattan: (1) PATH papuntang 33rd Street (~15 minuto, bawat 6 minuto tuwing weekday, 7–9:30 a.m. at 4–7 p.m.), (2) NY Waterway ferry papuntang W. 39th Street (~10 minuto), o (3) Bus 126 papuntang Port Authority Bus Terminal (~30-45 minuto sa Lincoln Tunnel). Ang tiket ng NJ Transit papuntang Hoboken ay tinatanggap sa mga serbisyong ito tuwing weekday ng cutover. Tantya lamang ang mga oras ng biyahe at hindi kasama ang paghihintay at paglipat.",
     "collection_name": "Blog — Reroute NJ",
     "collection_description": "Mga update at kuwento mula sa proyektong Reroute NJ.",
-    "collection_item1": "Magsisimula ang Phase 2 sa Oktubre 11: gabay para sa mga pasahero",
-    "collection_item2": "Bukas na ang bagong Portal North Bridge",
+    "collection_item1": "Nagsimula na ang Phase 2: Paano makatutulong ang Reroute NJ",
+    "collection_item2": "Magsisimula ang Phase 2 sa Oktubre 11: gabay para sa mga pasahero",
     "article1_headline": "Bakit ginawa namin ang Reroute NJ",
     "article1_description": "Limang libreng tool sa 11 wika para tulungan ang mga pasahero ng NJ Transit na mag-navigate sa Portal Bridge cutover (Feb 15 – Mar 15, 2026).",
     "article2_headline": "Bago: i-embed ang Reroute NJ sa iyong website",
@@ -710,14 +715,18 @@
     "breadcrumb_blog_post_bridge": "Bukas na ang bagong Portal North Bridge",
     "article3_headline": "Nagsimula na ang cutover ngayon",
     "article3_description": "Ang Portal North Bridge cutover ay nagsisimula ngayon. Ang kailangan malaman ng mga pasahero ng NJ Transit sa susunod na apat na linggo.",
-    "collection_item3": "Nagsimula na ang cutover ngayon",
-    "collection_item4": "Bago: i-embed ang Reroute NJ sa iyong website",
-    "collection_item5": "Bakit ginawa namin ang Reroute NJ",
+    "collection_item3": "Bukas na ang bagong Portal North Bridge",
+    "collection_item4": "Nagsimula na ang cutover ngayon",
+    "collection_item5": "Bago: i-embed ang Reroute NJ sa iyong website",
     "article4_headline": "Bukas na ang bagong Portal North Bridge",
     "article4_description": "Kumpleto na ang Phase 1 ng Portal North Bridge cutover. Ang regular na iskedyul ng NJ Transit ay magbabalik sa Marso 15, at ang unang track sa bagong tulay ay magsisimula sa serbisyo sa Marso 16.",
     "breadcrumb_blog_post_phase2": "Magsisimula ang Phase 2 sa Oktubre 11: gabay para sa mga pasahero",
     "article5_headline": "Magsisimula ang Phase 2 sa Oktubre 11: gabay para sa mga pasahero",
-    "article5_description": "Magsisimula ang Phase 2 ng Portal North Bridge sa Oktubre 11, na may limang linggong pansamantalang iskedyul ng NJ Transit at mga pagbabago para sa pasahero."
+    "article5_description": "Magsisimula ang Phase 2 ng Portal North Bridge sa Oktubre 11, na may limang linggong pansamantalang iskedyul ng NJ Transit at mga pagbabago para sa pasahero.",
+    "breadcrumb_blog_post_underway": "Nagsimula na ang Phase 2: Paano makatutulong ang Reroute NJ",
+    "article6_headline": "Nagsimula na ang Phase 2: Paano makatutulong ang Reroute NJ",
+    "article6_description": "Nagsimula na ang Phase 2. Gamitin ang Reroute NJ para tingnan ang iyong linya, ihambing ang mga alternatibo, sundan ang mga update, at magbahagi ng mga libreng tool sa inyong newsroom.",
+    "collection_item6": "Bakit ginawa namin ang Reroute NJ"
   },
   "blog_post_phase2": {
     "title": "Magsisimula ang Phase 2 sa Oktubre 11: gabay para sa mga pasahero — Reroute NJ",
@@ -798,5 +807,38 @@
     "closing": "Apat na linggo ng abala para sa mga dekada ng mas mahusay, mas mabilis, at mas maaasahang serbisyo. Sulit ito.",
     "support_p": "Ang Reroute NJ ay libre, open source, at sinusuportahan ng komunidad. Kung nakakatulong ito sa iyo, ibahagi ito sa isang taong sumasakay ng NJ Transit o <a href=\"https://github.com/sponsors/jamditis\" target=\"_blank\" rel=\"noopener\">suportahan ang proyekto</a>.",
     "cta": "Tingnan ang buong coverage ng balita →"
+  },
+  "blog_post_underway": {
+    "title": "Nagsimula na ang Phase 2: Paano makatutulong ang Reroute NJ | Reroute NJ",
+    "tagline": "Isinasagawa na ang Phase 2",
+    "heading": "Nagsimula na ang Phase 2: Paano makatutulong ang Reroute NJ",
+    "by_prefix": "Ni",
+    "date": "Oktubre 11, 2026",
+    "intro_p1": "Nagsimula na ang Phase 2 ng Portal North Bridge cutover. Epektibo na ngayong Linggo, Oktubre 11, ang pansamantalang iskedyul ng NJ Transit habang ikinokonekta ng Amtrak ang ikalawa at huling track sa bagong tulay. Inaasahan ng NJ Transit na babalik ang regular na iskedyul sa Linggo, Nobyembre 15, depende sa resulta ng safety testing.",
+    "intro_p2": "Magsisimula bukas, Lunes, Oktubre 12, ang pag-iba ng ruta ng mga tren ng Midtown Direct tuwing weekday papuntang Hoboken. Sa weekend, patuloy na pupunta ang mga tren ng Midtown Direct sa Penn Station New York, pero may pagbabago sa oras. Tingnan ang <a href=\"https://www.njtransit.com/portalcutover\" target=\"_blank\" rel=\"noopener\">opisyal na iskedyul at mga tuntunin sa ticket para sa cutover</a> bago bumiyahe.",
+    "h2_what": "Ano ang Reroute NJ?",
+    "what_p": "Ang <a href=\"../index.html\">Reroute NJ</a> ay isang libre at independiyenteng gabay sa cutover. Pinagsasama nito ang gabay sa mga linya at istasyon, mga pagpipilian sa paglipat, impormasyon sa ticket, mapa, at lokal na balita para makita mo kung ano ang magbabago sa iyong biyahe. May 11 wika ito at gumagana sa iyong browser, nang walang account o kailangang i-download na app.",
+    "why_p": "Ginawa namin ito noong unang cutover dahil kailangan ng mga pasahero ng praktikal na sagot sa iisang lugar: Saan pupunta ang tren ko? Saan ako lilipat? Aling ticket ang bibilhin ko? Pasahero rin ako ng NJ Transit. Nagsimula ang Reroute NJ sa mga tanong ding iyon, at na-update na namin ito para sa ikalawang yugto.",
+    "h2_use": "Paano ito gamitin",
+    "use_line": "<strong>Magsimula sa <a href=\"../index.html\">gabay sa linya</a>.</strong> Piliin ang iyong linya ng tren at istasyon para makita ang pagbabago sa serbisyo, mga pagpipilian sa paglipat, at gabay sa ticket para sa iyong biyahe.",
+    "use_compare": "<strong>Subukan ang <a href=\"../compare.html\">paghahambing ng commute</a>.</strong> Ihambing ang karaniwan mong biyahe sa mga alternatibo habang may cutover. Tantiya lamang ang mga oras ng biyahe. Tingnan ang kasalukuyang iskedyul at maglaan ng oras para sa paglipat at siksikan.",
+    "use_map": "<strong>Buksan ang <a href=\"../map.html\">mapa</a>.</strong> Tingnan ang tulay, mga apektadong ruta ng tren, at mga lugar ng paglipat para maunawaan kung saan magbabago ang iyong biyahe.",
+    "use_news": "<strong>Sundan ang <a href=\"../coverage.html\">mga balita</a>.</strong> Humanap ng mga ulat tungkol sa cutover at sundan ang mga link para mabasa ang orihinal na mga artikulo.",
+    "use_language": "Gamitin ang menu ng wika sa itaas ng pahina para magpalit ng wika. Maaari mo ring i-on ang high contrast o pinasimpleng view, at mag-print ng gabay na madadala mo.",
+    "h2_monitor": "Patuloy kaming susuri at mag-a-update",
+    "monitor_p1": "Patuloy naming susubaybayan ang mga opisyal na anunsiyo at lokal na balita sa buong Phase 2. Kapag may bagong balita, pagbabago sa iskedyul, o iba pang pangyayari, ia-update namin ang gabay at news feed ng Reroute NJ. Kabilang dito ang mga pagbabago sa paglipat, mga tuntunin sa ticket, at inaasahang pagbabalik sa regular na serbisyo.",
+    "monitor_p2": "Ipinapaliwanag ng Reroute NJ ang cutover; hindi nito sinusubaybayan ang iyong tren sa real time. Tingnan ang NJ Transit app at mga service alert bago ang bawat biyahe. Kung may makita kang mali o pangyayaring hindi namin napansin, <a href=\"mailto:amditisj@montclair.edu\">mag-email kay Joe</a> para masuri namin ito.",
+    "h2_coverage": "Salamat sa mga newsroom na tumutulong sa mga pasahero na mahanap ito",
+    "coverage_intro": "Nakatulong ang lokal na pagbabalita para mas maraming pasahero ang makahanap ng Reroute NJ. Salamat sa mga mamamahayag at organisasyon ng balita na nag-uulat tungkol sa proyekto at nagbabahagi ng mga tool:",
+    "credit_montclair": "<strong><a href=\"https://montclairlocal.news/2026/10/nj-transit-portal-bridge-cuts-return-what-montclair-boonton-line-riders-need-to-know/\" target=\"_blank\" rel=\"noopener\">Montclair Local</a>:</strong> Kasama sa gabay ni Matt Kadosh para sa Phase 2 ang isang panayam tungkol sa Reroute NJ, at direktang naka-embed sa artikulo ang gabay sa linya. <a href=\"https://montclairlocal.news/2026/02/reroutenj-web-tool-tells-riders-how-to-work-around-portal-bridge-service-disruptions/\" target=\"_blank\" rel=\"noopener\">Iniulat din ng organisasyon ang tool noong unang cutover</a>.",
+    "credit_news12": "<strong><a href=\"https://newjersey.news12.com/2026/10/05/what-to-know-before-second-portal-bridge-cutover-begins/3Mg7kB3e0dqTi63qBUX9NR\" target=\"_blank\" rel=\"noopener\">News 12 New Jersey</a>:</strong> Kasama sa ulat ni Tom Krosnowski noong Oktubre 5 ang panayam kay Joe tungkol sa mga pagbabago sa commute, at may link ito sa Reroute NJ para sa mga manonood.",
+    "credit_nj1015": "<strong><a href=\"https://nj1015.com/traffic/\" target=\"_blank\" rel=\"noopener\">New Jersey 101.5</a>:</strong> Inilagay ng istasyon ang tool sa traffic page nito noong unang cutover, kaya may isa pang paraan ang mga tagapakinig nito para magplano sa gitna ng abala sa serbisyo.",
+    "credit_newsmachines": "<strong><a href=\"https://newsmachines.beehiiv.com/p/reroute-nj-pop-up-website-vibe-coding-en\" target=\"_blank\" rel=\"noopener\">News Machines</a>:</strong> Itinampok ni Ulrike Langer ang Reroute NJ at sinuri kung paano makatutulong sa lokal na pamamahayag ang isang pansamantalang website ng serbisyong pang-impormasyon.",
+    "h2_reuse": "Para sa mga newsroom: Gamitin nang libre ang mga tool",
+    "reuse_p": "Maaaring i-embed o muling ilathala nang libre ang lahat ng tool at bahagi ng Reroute NJ. Pakilagay ang <strong>Reroute NJ</strong> bilang pinagmulan at mag-link sa <a href=\"https://reroutenj.org/\">reroutenj.org</a>. Maaari ring muling ilathala ang post na ito kung pananatilihin ang pangalan ni Joe Amditis bilang may-akda at maglalagay ng link sa pahinang ito.",
+    "reuse_step1": "Buksan ang <a href=\"../embed.html\">I-embed at ibahagi</a>. Pumili ng interactive na tool o info card, pagkatapos ay piliin ang linya, wika, at hitsura na kailangan mo.",
+    "reuse_step2": "Kopyahin ang iframe code sa custom HTML block ng inyong publishing system. I-preview ito sa telepono at computer. Kung hinaharang ng system ang mga embed, mag-download ng PNG card o magbigay ng link sa gabay para sa mga mambabasa.",
+    "reuse_updates": "Kinukuha ng mga live embed ang mga tool mula sa Reroute NJ, kaya makikita ng mga mambabasa ang aming mga update kapag binuksan nila ang mga ito. Ang na-download na mga larawan at HTML file ay kopya ng nilalaman noong na-download ang mga ito, kaya palitan ang mga ito kapag nagbago ang gabay. Hindi kailangan ng account, API key, o bayad. <a href=\"mailto:amditisj@montclair.edu\">Makipag-ugnayan</a> kung kailangan ng tulong.",
+    "cta": "Hanapin ang iyong linya at istasyon →"
   }
 }

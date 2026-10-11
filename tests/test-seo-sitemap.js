@@ -51,6 +51,7 @@ var ENGLISH_BASE_PAGES = [
   "blog/new-embed-system.html",
   "blog/bridge-opens.html",
   "blog/phase-2-starts-october-11.html",
+  "blog/phase-2-is-underway.html",
   "about.html"
 ];
 
@@ -154,13 +155,13 @@ if (sitemapRaw) {
   });
 
   if (missingEnglish.length === 0) {
-    pass("2. Contains URLs for all 12 English content pages", ENGLISH_BASE_PAGES.join(", "));
+    pass("2. Contains URLs for all 13 English content pages", ENGLISH_BASE_PAGES.join(", "));
   } else {
-    fail("2. Contains URLs for all 12 English content pages", "Missing: " + missingEnglish.join(", "));
+    fail("2. Contains URLs for all 13 English content pages", "Missing: " + missingEnglish.join(", "));
   }
 }
 
-// ── Test 3: Contains URLs for all 10 languages x 12 pages = 120 translated pages ──
+// ── Test 3: Contains URLs for all 10 languages x 13 pages = 130 translated pages ──
 
 if (sitemapRaw) {
   var missingTranslated = [];
@@ -175,9 +176,9 @@ if (sitemapRaw) {
   });
 
   if (missingTranslated.length === 0) {
-    pass("3. Contains URLs for all 120 translated pages (10 langs x 12 pages)", "All 120 translated URLs present");
+    pass("3. Contains URLs for all 130 translated pages (10 langs x 13 pages)", "All 130 translated URLs present");
   } else {
-    fail("3. Contains URLs for all 120 translated pages (10 langs x 12 pages)",
+    fail("3. Contains URLs for all 130 translated pages (10 langs x 13 pages)",
       missingTranslated.length + " missing:\n    " + missingTranslated.join("\n    "));
   }
 }
@@ -186,13 +187,13 @@ if (sitemapRaw) {
 
 if (sitemapRaw) {
   var totalUrls = locUrls.length;
-  var expectedMin = 134;
-  var expectedMax = 134;
+  var expectedMin = 145;
+  var expectedMax = 145;
 
   if (totalUrls >= expectedMin && totalUrls <= expectedMax) {
-    pass("4. Total URL count matches the 134 HTML pages", totalUrls + " URLs found");
+    pass("4. Total URL count matches the 145 HTML pages", totalUrls + " URLs found");
   } else {
-    fail("4. Total URL count matches the 134 HTML pages", totalUrls + " URLs found (expected 134)");
+    fail("4. Total URL count matches the 145 HTML pages", totalUrls + " URLs found (expected 145)");
   }
 }
 
@@ -360,7 +361,8 @@ if (sitemapRaw) {
     "blog/new-embed-system.html",
     "blog/bridge-opens.html",
     "blog/cutover-begins.html",
-    "blog/phase-2-starts-october-11.html"
+    "blog/phase-2-starts-october-11.html",
+    "blog/phase-2-is-underway.html"
   ];
   var missingBlogPrefix = [];
 

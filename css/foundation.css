@@ -2369,9 +2369,10 @@ body[data-contrast="high"] .dest-sign {
   color: var(--text);
 }
 
-.blog-body ul {
+.blog-body ul,
+.blog-body ol {
   margin-bottom: 1.25rem;
-  padding-left: 1.5rem;
+  padding-inline-start: 1.5rem;
 }
 
 .blog-body li {

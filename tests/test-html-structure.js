@@ -22,6 +22,7 @@ var PAGES = [
   "blog/bridge-opens.html",
   "blog/cutover-begins.html",
   "blog/phase-2-starts-october-11.html",
+  "blog/phase-2-is-underway.html",
   "card.html",
   "widget.html"
 ];
@@ -249,6 +250,7 @@ var PAGE_SCRIPTS = {
   "blog/bridge-opens.html": ["js/i18n.js", "js/shared.js"],
   "blog/cutover-begins.html": ["js/i18n.js", "js/shared.js"],
   "blog/phase-2-starts-october-11.html": ["js/i18n.js", "js/shared.js"],
+  "blog/phase-2-is-underway.html": ["js/i18n.js", "js/shared.js"],
   "card.html": ["js/line-data.js", "js/cards.js"],
   "widget.html": [] // widget.html loads scripts dynamically
 };
@@ -493,7 +495,8 @@ var BLOG_PAGES = [
   "blog/new-embed-system.html",
   "blog/bridge-opens.html",
   "blog/cutover-begins.html",
-  "blog/phase-2-starts-october-11.html"
+  "blog/phase-2-starts-october-11.html",
+  "blog/phase-2-is-underway.html"
 ];
 
 BLOG_PAGES.forEach(function (pageName) {

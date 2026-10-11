@@ -27,7 +27,9 @@
     "blog_post_bridge_description": "La Fase 1 del passaggio del Portal North Bridge è completata. Gli orari regolari NJ Transit riprendono il 15 marzo e il primo binario sul nuovo ponte entra in servizio il 16 marzo.",
     "blog_post_bridge_og_description": "Fase 1 completata. Gli orari regolari NJ Transit riprendono il 15 marzo, il primo binario sul nuovo ponte entra in servizio il 16 marzo.",
     "blog_post_phase2_description": "La Fase 2 del Portal North Bridge inizia l'11 ottobre. Consulta le cinque settimane di modifiche agli orari NJ Transit, le deviazioni per Hoboken, le regole dei biglietti e le risorse per i passeggeri.",
-    "blog_post_phase2_og_description": "Cinque settimane di orari temporanei NJ Transit iniziano l'11 ottobre mentre le squadre collegano l'ultimo binario del Portal North Bridge."
+    "blog_post_phase2_og_description": "Cinque settimane di orari temporanei NJ Transit iniziano l'11 ottobre mentre le squadre collegano l'ultimo binario del Portal North Bridge.",
+    "blog_post_underway_description": "La Fase 2 è iniziata. Usa Reroute NJ per controllare la tua linea, confrontare alternative, seguire gli aggiornamenti e condividere strumenti gratuiti con la tua redazione.",
+    "blog_post_underway_og_description": "La Fase 2 è in corso. Trova la tua linea e stazione, segui le notizie e incorpora o ripubblica gratuitamente gli strumenti di Reroute NJ citando la fonte."
   },
   "common": {
     "skip_to_main": "Vai al contenuto principale",
@@ -547,7 +549,10 @@
     "post4_excerpt": "La Fase 1 è completata. Gli orari regolari NJ Transit riprendono il 15 marzo e il primo binario sul nuovo ponte entra in servizio il 16 marzo. Ecco cosa significa per i passeggeri.",
     "post5_title": "La Fase 2 inizia l'11 ottobre: cosa devono sapere i passeggeri",
     "post5_date": "21 settembre 2026",
-    "post5_excerpt": "Cinque settimane di orari temporanei NJ Transit iniziano l'11 ottobre. Ecco le deviazioni per Hoboken, le regole dei biglietti e cosa fare prima di partire."
+    "post5_excerpt": "Cinque settimane di orari temporanei NJ Transit iniziano l'11 ottobre. Ecco le deviazioni per Hoboken, le regole dei biglietti e cosa fare prima di partire.",
+    "post6_title": "La Fase 2 è iniziata: Come può aiutarti Reroute NJ",
+    "post6_date": "11 ottobre 2026",
+    "post6_excerpt": "La Fase 2 è in corso. Ecco come usare Reroute NJ, seguire i cambiamenti e portare strumenti gratuiti per i passeggeri nella tua redazione."
   },
   "blog_post": {
     "title": "Perché abbiamo creato Reroute NJ — Reroute NJ",
@@ -727,8 +732,8 @@
     "faq_a7": "Da Hoboken Terminal ci sono tre opzioni per Manhattan: (1) PATH per 33rd Street (~15 minuti, ogni 6 minuti nei giorni feriali, dalle 7:00 alle 9:30 e dalle 16:00 alle 19:00), (2) traghetto NY Waterway per W. 39th Street (~10 minuti), o (3) Bus 126 per Port Authority Bus Terminal (~30-45 minuti via Lincoln Tunnel). I biglietti NJ Transit per Hoboken sono accettati su questi servizi nei feriali del taglio. I tempi di viaggio sono stime e non includono attese e trasferimenti.",
     "collection_name": "Blog — Reroute NJ",
     "collection_description": "Aggiornamenti e storie dal progetto Reroute NJ.",
-    "collection_item1": "La Fase 2 inizia l'11 ottobre: cosa devono sapere i passeggeri",
-    "collection_item2": "Il nuovo Portal North Bridge è aperto",
+    "collection_item1": "La Fase 2 è iniziata: Come può aiutarti Reroute NJ",
+    "collection_item2": "La Fase 2 inizia l'11 ottobre: cosa devono sapere i passeggeri",
     "article1_headline": "Perché abbiamo creato Reroute NJ",
     "article1_description": "Cinque strumenti gratuiti in 11 lingue per aiutare i passeggeri NJ Transit a gestire il passaggio del Portal Bridge (Feb 15 – Mar 15, 2026).",
     "article2_headline": "Nuovo: incorpora Reroute NJ sul tuo sito web",
@@ -737,14 +742,18 @@
     "breadcrumb_blog_post_bridge": "Il nuovo Portal North Bridge è aperto",
     "article3_headline": "Il passaggio inizia oggi",
     "article3_description": "Il passaggio del Portal North Bridge inizia oggi. Cosa devono sapere i passeggeri NJ Transit per le prossime quattro settimane.",
-    "collection_item3": "Il passaggio inizia oggi",
-    "collection_item4": "Nuovo: incorpora Reroute NJ sul tuo sito web",
-    "collection_item5": "Perché abbiamo creato Reroute NJ",
+    "collection_item3": "Il nuovo Portal North Bridge è aperto",
+    "collection_item4": "Il passaggio inizia oggi",
+    "collection_item5": "Nuovo: incorpora Reroute NJ sul tuo sito web",
     "article4_headline": "Il nuovo Portal North Bridge è aperto",
     "article4_description": "La Fase 1 del passaggio del Portal North Bridge è completata. Gli orari regolari NJ Transit riprendono il 15 marzo e il primo binario sul nuovo ponte entra in servizio il 16 marzo.",
     "breadcrumb_blog_post_phase2": "La Fase 2 inizia l'11 ottobre: cosa devono sapere i passeggeri",
     "article5_headline": "La Fase 2 inizia l'11 ottobre: cosa devono sapere i passeggeri",
-    "article5_description": "La Fase 2 del Portal North Bridge inizia l'11 ottobre con cinque settimane di orari temporanei NJ Transit e cambiamenti per i passeggeri."
+    "article5_description": "La Fase 2 del Portal North Bridge inizia l'11 ottobre con cinque settimane di orari temporanei NJ Transit e cambiamenti per i passeggeri.",
+    "breadcrumb_blog_post_underway": "La Fase 2 è iniziata: Come può aiutarti Reroute NJ",
+    "article6_headline": "La Fase 2 è iniziata: Come può aiutarti Reroute NJ",
+    "article6_description": "La Fase 2 è iniziata. Usa Reroute NJ per controllare la tua linea, confrontare alternative, seguire gli aggiornamenti e condividere strumenti gratuiti con la tua redazione.",
+    "collection_item6": "Perché abbiamo creato Reroute NJ"
   },
   "blog_post_phase2": {
     "title": "La Fase 2 inizia l'11 ottobre: cosa devono sapere i passeggeri — Reroute NJ",
@@ -798,5 +807,38 @@
     "closing": "Quattro settimane di disagi per decenni di servizio migliore, più veloce e più affidabile. Ne è valsa la pena.",
     "support_p": "Reroute NJ è gratuito, open source e sostenuto dalla comunità. Se lo trovi utile, condividilo con qualcuno che viaggia con NJ Transit o <a href=\"https://github.com/sponsors/jamditis\" target=\"_blank\" rel=\"noopener\">sostieni il progetto</a>.",
     "cta": "Vedi tutta la copertura stampa →"
+  },
+  "blog_post_underway": {
+    "title": "La Fase 2 è iniziata: Come può aiutarti Reroute NJ | Reroute NJ",
+    "tagline": "La Fase 2 è in corso",
+    "heading": "La Fase 2 è iniziata: Come può aiutarti Reroute NJ",
+    "by_prefix": "Di",
+    "date": "11 ottobre 2026",
+    "intro_p1": "La Fase 2 del passaggio al Portal North Bridge è iniziata. Gli orari temporanei di NJ Transit entrano in vigore oggi, domenica 11 ottobre, mentre Amtrak collega il secondo e ultimo binario al nuovo ponte. NJ Transit prevede il ritorno agli orari regolari domenica 15 novembre, in base all’esito dei test di sicurezza.",
+    "intro_p2": "Le deviazioni dei treni Midtown Direct verso Hoboken nei giorni feriali iniziano domani, lunedì 12 ottobre. Nel fine settimana, i treni Midtown Direct continuano a servire Penn Station New York, con orari modificati. Controlla gli <a href=\"https://www.njtransit.com/portalcutover\" target=\"_blank\" rel=\"noopener\">orari ufficiali del passaggio e le regole sui biglietti</a> prima di partire.",
+    "h2_what": "Cos’è Reroute NJ?",
+    "what_p": "<a href=\"../index.html\">Reroute NJ</a> è una guida gratuita e indipendente al passaggio al nuovo ponte. Riunisce indicazioni per linea e stazione, opzioni di cambio, informazioni sui biglietti, una mappa e notizie locali, così puoi vedere cosa cambia nel tuo viaggio. È disponibile in 11 lingue e funziona nel browser, senza creare un account o scaricare un’app.",
+    "why_p": "L’abbiamo creata durante il primo passaggio perché i passeggeri avevano bisogno di risposte pratiche in un unico posto: Dove va il mio treno? Dove devo cambiare? Quale biglietto devo comprare? Anch’io viaggio con NJ Transit. Reroute NJ è nata da queste stesse domande, e l’abbiamo aggiornata per questa seconda fase.",
+    "h2_use": "Come usarla",
+    "use_line": "<strong>Inizia dalla <a href=\"../index.html\">guida alle linee</a>.</strong> Scegli la tua linea ferroviaria e la stazione per vedere le modifiche al servizio, le opzioni di cambio e le indicazioni sui biglietti per il tuo viaggio.",
+    "use_compare": "<strong>Prova il <a href=\"../compare.html\">confronto dei tragitti</a>.</strong> Confronta il tuo viaggio abituale con le alternative durante il passaggio. I tempi di viaggio sono stime. Controlla gli orari attuali e prevedi tempo per i cambi e l’affollamento.",
+    "use_map": "<strong>Apri la <a href=\"../map.html\">mappa</a>.</strong> Guarda il ponte, le tratte ferroviarie interessate e i punti di cambio per capire dove cambia il tuo viaggio.",
+    "use_news": "<strong>Segui le <a href=\"../coverage.html\">notizie</a>.</strong> Trova i servizi giornalistici sul passaggio e segui i link per leggere gli articoli originali.",
+    "use_language": "Usa il menu delle lingue in cima alla pagina per cambiare lingua. Puoi anche attivare il contrasto elevato o la visualizzazione semplificata e stampare una guida da portare con te.",
+    "h2_monitor": "Continueremo a controllare e aggiornare",
+    "monitor_p1": "Continueremo a seguire gli annunci ufficiali e le notizie locali per tutta la Fase 2. Quando ci saranno novità, modifiche agli orari o altri sviluppi, aggiorneremo le indicazioni e il feed di notizie di Reroute NJ. Questo include le modifiche ai cambi, alle regole sui biglietti e alla data prevista per il ritorno al servizio regolare.",
+    "monitor_p2": "Reroute NJ spiega il passaggio al nuovo ponte; non segue il tuo treno in tempo reale. Controlla l’app e gli avvisi di servizio di NJ Transit prima di ogni viaggio. Se trovi un errore o una novità che ci è sfuggita, <a href=\"mailto:amditisj@montclair.edu\">scrivi a Joe</a> così possiamo verificarla.",
+    "h2_coverage": "Grazie alle redazioni che aiutano i passeggeri a trovare la guida",
+    "coverage_intro": "Il giornalismo locale ha aiutato più passeggeri a trovare Reroute NJ. Grazie ai giornalisti e alle testate che parlano del progetto e condividono gli strumenti:",
+    "credit_montclair": "<strong><a href=\"https://montclairlocal.news/2026/10/nj-transit-portal-bridge-cuts-return-what-montclair-boonton-line-riders-need-to-know/\" target=\"_blank\" rel=\"noopener\">Montclair Local</a>:</strong> La guida alla Fase 2 di Matt Kadosh include un’intervista su Reroute NJ e incorpora la guida alle linee direttamente nell’articolo. La testata ha anche <a href=\"https://montclairlocal.news/2026/02/reroutenj-web-tool-tells-riders-how-to-work-around-portal-bridge-service-disruptions/\" target=\"_blank\" rel=\"noopener\">presentato lo strumento durante il primo passaggio</a>.",
+    "credit_news12": "<strong><a href=\"https://newjersey.news12.com/2026/10/05/what-to-know-before-second-portal-bridge-cutover-begins/3Mg7kB3e0dqTi63qBUX9NR\" target=\"_blank\" rel=\"noopener\">News 12 New Jersey</a>:</strong> Il servizio del 5 ottobre di Tom Krosnowski include un’intervista con Joe sui cambiamenti nei tragitti e offre agli spettatori un link a Reroute NJ.",
+    "credit_nj1015": "<strong><a href=\"https://nj1015.com/traffic/\" target=\"_blank\" rel=\"noopener\">New Jersey 101.5</a>:</strong> L’emittente ha inserito lo strumento nella sua pagina sul traffico durante il primo passaggio, dando al pubblico un altro modo per organizzare i viaggi durante l’interruzione.",
+    "credit_newsmachines": "<strong><a href=\"https://newsmachines.beehiiv.com/p/reroute-nj-pop-up-website-vibe-coding-en\" target=\"_blank\" rel=\"noopener\">News Machines</a>:</strong> Ulrike Langer ha raccontato Reroute NJ e ha esaminato come un sito temporaneo di servizio possa sostenere il giornalismo locale.",
+    "h2_reuse": "Redazioni: Usate gli strumenti gratuitamente",
+    "reuse_p": "Tutti gli strumenti e i componenti di Reroute NJ possono essere incorporati o ripubblicati gratuitamente. Vi chiediamo di citare <strong>Reroute NJ</strong> e inserire un link a <a href=\"https://reroutenj.org/\">reroutenj.org</a>. Potete anche ripubblicare questo articolo con la firma di Joe Amditis e un link a questa pagina.",
+    "reuse_step1": "Aprite <a href=\"../embed.html\">Incorpora e condividi</a>. Scegliete uno strumento interattivo o una scheda informativa, poi selezionate la linea, la lingua e l’aspetto che vi servono.",
+    "reuse_step2": "Copiate il codice iframe in un blocco HTML personalizzato del vostro sistema di pubblicazione. Controllate l’anteprima su telefono e computer. Se il sistema blocca i contenuti incorporati, scaricate una scheda PNG o inserite un link alla guida.",
+    "reuse_updates": "I contenuti incorporati dal sito caricano gli strumenti da Reroute NJ e mostrano i nostri aggiornamenti quando i lettori li aprono. Le immagini e i file HTML scaricati sono copie del momento del download, quindi sostituiteli quando cambiano le indicazioni. Non servono un account, una chiave API o un pagamento. <a href=\"mailto:amditisj@montclair.edu\">Contattateci</a> se vi serve aiuto.",
+    "cta": "Trova la tua linea e stazione →"
   }
 }

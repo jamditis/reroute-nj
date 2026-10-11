@@ -195,6 +195,8 @@ function isAllowedEnglishWord(word) {
 function extractNonProperLatinWords(str) {
   // Remove HTML tags
   var cleaned = str.replace(/<[^>]+>/g, " ");
+  // Keep the credited outlet and reporter names in their original form.
+  cleaned = cleaned.replace(/\b(?:Montclair Local|News 12 New Jersey|News Machines|Matt Kadosh|Tom Krosnowski|Ulrike Langer)\b/g, " ");
   // Remove URLs
   cleaned = cleaned.replace(/https?:\/\/[^\s"<]+/g, " ");
   // Remove email addresses

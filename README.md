@@ -62,7 +62,7 @@ reroute-nj/
 ├── card.html               # Info card renderer (URL params → card)
 ├── widget.html             # Mini-widget renderer (URL params → tool)
 ├── robots.txt              # Crawler guidance + AI bot allowances
-├── sitemap.xml             # All 134 HTML pages with hreflang cross-references
+├── sitemap.xml             # All 145 HTML pages with hreflang cross-references
 ├── llms.txt                # AI search engine discoverability
 ├── js/
 │   ├── i18n.js             # Translation loader with t() function
@@ -226,7 +226,7 @@ python3 tools/validate-research-pipeline.py --check-urls
 The site is optimized for Google search, newsroom adoption, and AI search tools (ChatGPT, Gemini, Perplexity, Claude):
 
 - **`robots.txt`** — Allows all crawlers with explicit AI bot allowances (GPTBot, ClaudeBot, PerplexityBot, Google-Extended)
-- **`sitemap.xml`** — All 134 HTML pages with `xhtml:link` hreflang cross-references for all 11 languages
+- **`sitemap.xml`** — All 145 HTML pages with `xhtml:link` hreflang cross-references for all 11 languages
 - **`llms.txt`** — Structured overview for AI search tools following the [llms.txt standard](https://llmstxt.org)
 - **JSON-LD structured data** — WebSite, FAQPage (7 questions), Article, BreadcrumbList, and CollectionPage schemas on all pages, translated per-language with localized URLs
 - **Canonical tags** — Self-referencing canonical on every page (English and translated)

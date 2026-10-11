@@ -26,10 +26,11 @@ blog/                     — Blog posts (individual articles)
   new-embed-system.html
   bridge-opens.html
   phase-2-starts-october-11.html
+  phase-2-is-underway.html
 card.html                 — Info card renderer (URL params → card)
 widget.html               — Mini-widget renderer (URL params → tool)
 robots.txt                — Crawler guidance + AI bot allowances
-sitemap.xml               — All 134 HTML pages with hreflang cross-refs
+sitemap.xml               — All 145 HTML pages with hreflang cross-refs
 llms.txt                  — AI search engine discoverability
 js/
   i18n.js                 — Runtime translation loader (128 lines)
@@ -146,6 +147,7 @@ These run in the `generate_page()` function pipeline. If a translation key is mi
   - `blog/new-embed-system.html` → `blog_post_embed`
   - `blog/bridge-opens.html` → `blog_post_bridge`
   - `blog/phase-2-starts-october-11.html` → `blog_post_phase2`
+  - `blog/phase-2-is-underway.html` → `blog_post_underway`
   - Add new blog posts to both `PAGES` and `PAGE_KEY_MAP` in generate-pages.py.
 - **Nested pages need depth-aware asset paths** — `fix_asset_paths()` handles this automatically based on `/` count in the page name.
 
@@ -217,7 +219,7 @@ Four output formats: iframe embed, script tag, PNG download, self-contained HTML
 ## SEO and discoverability
 
 - **`robots.txt`** — Allows all crawlers; explicit AI bot allowances (GPTBot, ClaudeBot, PerplexityBot, Google-Extended)
-- **`sitemap.xml`** — 134 HTML pages with `xhtml:link` hreflang cross-references for 11 languages
+- **`sitemap.xml`** — 145 HTML pages with `xhtml:link` hreflang cross-references for 11 languages
 - **`llms.txt`** — Structured overview for AI search tools following the [llms.txt standard](https://llmstxt.org)
 - **JSON-LD structured data** — WebSite, FAQPage, Article, BreadcrumbList, and CollectionPage schemas, translated per-language with localized URLs
 - **Canonical tags** — Self-referencing on every page (English and translated)
@@ -312,7 +314,7 @@ The scraper does `git pull --rebase` before pushing to handle remote divergence 
 
 ## File counts
 
-- **HTML pages:** 134 total (7 English base + 5 blog posts + 2 utility + 120 translated)
+- **HTML pages:** 145 total (7 English base + 6 blog posts + 2 utility + 130 translated)
 - **JS files:** 10 in `js/` (~4,716 lines total)
 - **CSS:** 1 file (~3,449 lines)
 - **Translation files:** 11 JSON (~548 keys each)

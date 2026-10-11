@@ -22,10 +22,11 @@ PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TRANSLATIONS_DIR = os.path.join(PROJECT_ROOT, "translations")
 
 # Pages to generate
-PAGES = ["index.html", "compare.html", "coverage.html", "map.html", "embed.html", "blog.html", "blog/phase-2-starts-october-11.html", "blog/bridge-opens.html", "blog/cutover-begins.html", "blog/why-we-built-reroute-nj.html", "blog/new-embed-system.html", "about.html"]
+PAGES = ["index.html", "compare.html", "coverage.html", "map.html", "embed.html", "blog.html", "blog/phase-2-is-underway.html", "blog/phase-2-starts-october-11.html", "blog/bridge-opens.html", "blog/cutover-begins.html", "blog/why-we-built-reroute-nj.html", "blog/new-embed-system.html", "about.html"]
 
 # Map page filenames to translation key prefixes (when different from filename stem)
 PAGE_KEY_MAP = {
+    "blog/phase-2-is-underway.html": "blog_post_underway",
     "blog/phase-2-starts-october-11.html": "blog_post_phase2",
     "blog/bridge-opens.html": "blog_post_bridge",
     "blog/cutover-begins.html": "blog_post_cutover",
@@ -286,6 +287,7 @@ def replace_footer(html, translations, page_key):
             "blog_post_cutover": ' <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">{embed_gh}</a>.',
             "blog_post_bridge": ' <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">{embed_gh}</a>.',
             "blog_post_phase2": ' <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">{embed_gh}</a>.',
+            "blog_post_underway": ' <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">{embed_gh}</a>.',
             "about": ' <a href="https://github.com/jamditis/reroute-nj" target="_blank" rel="noopener">{embed_gh}</a>.',
         }
         idx = get_translation(translations, "common.footer_disclaimer_index") or "Information is based on official announcements and may change. Always verify with"
@@ -397,6 +399,7 @@ def replace_hamburger_label(html, translations, page_key):
         "blog_post_cutover": "common.menu",
         "blog_post_bridge": "common.menu",
         "blog_post_phase2": "common.menu",
+        "blog_post_underway": "common.menu",
         "about": "about.hamburger_label",
     }
     eng_map = {
@@ -411,6 +414,7 @@ def replace_hamburger_label(html, translations, page_key):
         "blog_post_cutover": "Menu",
         "blog_post_bridge": "Menu",
         "blog_post_phase2": "Menu",
+        "blog_post_underway": "Menu",
         "about": "About",
     }
     key = label_map.get(page_key)
@@ -430,7 +434,7 @@ def replace_page_specific_content(html, translations, page_key):
     """Replace page-specific static content using translation keys."""
     # Every full-page template has the same no-JavaScript service notice.
     english = load_translations("en")
-    for key in ["service_notice_before", "service_notice_schedule", "service_notice_tickets", "service_notice_link"]:
+    for key in ["service_notice_before", "service_notice_active", "service_notice_schedule", "service_notice_tickets", "service_notice_link"]:
         source = get_translation(english, "common." + key)
         translated = get_translation(translations, "common." + key)
         if source and translated:
@@ -1360,6 +1364,13 @@ def replace_page_specific_content(html, translations, page_key):
                 f">{post5_excerpt}</p>"
             )
 
+        # Post 6 card (Phase 2 launch and project reintroduction)
+        english_blog = load_translations("en")["blog"]
+        for key, tag in [("post6_title", "h2"), ("post6_date", "time"), ("post6_excerpt", "p")]:
+            translated = get_translation(translations, f"blog.{key}")
+            if translated:
+                html = html.replace(f'>{english_blog[key]}</{tag}>', f'>{translated}</{tag}>')
+
     elif page_key == "blog_post":
         # Blog post: "Why we built Reroute NJ"
         # Back/footer nav links
@@ -1762,6 +1773,41 @@ def replace_page_specific_content(html, translations, page_key):
                 '>Plan your Phase 2 commute &rarr;</a>',
                 f'>{cta.replace("→", "&rarr;")}</a>'
             )
+
+    elif page_key == "blog_post_underway":
+        all_posts = get_translation(translations, "blog.all_posts")
+        back_all = get_translation(translations, "blog.back_to_all_posts")
+        if all_posts:
+            html = html.replace(">&larr; All posts</a>", f">&larr; {all_posts}</a>")
+        if back_all:
+            html = html.replace(">&larr; Back to all posts</a>", f">&larr; {back_all}</a>")
+
+        english_post = load_translations("en")["blog_post_underway"]
+        replacement_tags = {
+            "heading": "h1", "intro_p1": "p", "intro_p2": "p",
+            "h2_what": "h2", "what_p": "p", "why_p": "p",
+            "h2_use": "h2", "use_line": "li", "use_compare": "li",
+            "use_map": "li", "use_news": "li", "use_language": "p",
+            "h2_monitor": "h2", "monitor_p1": "p", "monitor_p2": "p",
+            "h2_coverage": "h2", "coverage_intro": "p",
+            "credit_montclair": "li", "credit_news12": "li",
+            "credit_nj1015": "li", "credit_newsmachines": "li",
+            "h2_reuse": "h2", "reuse_p": "p", "reuse_step1": "li",
+            "reuse_step2": "li", "reuse_updates": "p",
+        }
+        for key, tag in replacement_tags.items():
+            translated = get_translation(translations, f"blog_post_underway.{key}")
+            english = f"<{tag}>{english_post[key]}</{tag}>"
+            if not translated or english not in html:
+                raise ValueError(f"Missing translation or English source for blog_post_underway.{key}")
+            html = html.replace(english, f"<{tag}>{translated}</{tag}>")
+
+        by_prefix = get_translation(translations, "blog_post_underway.by_prefix")
+        date = get_translation(translations, "blog_post_underway.date")
+        cta = get_translation(translations, "blog_post_underway.cta")
+        html = html.replace(">By Joe Amditis</span>", f">{by_prefix} Joe Amditis</span>")
+        html = html.replace(">October 11, 2026</time>", f">{date}</time>")
+        html = html.replace(">Find your line and station &rarr;</a>", f'>{cta.replace("→", "&rarr;")}</a>')
 
     elif page_key == "blog_post_cutover":
         # Blog post: "The cutover starts today"
@@ -2182,6 +2228,8 @@ def translate_jsonld(html, translations, page_key, lang, page_name):
                 art_prefix = "article4"
             elif page_key == "blog_post_phase2":
                 art_prefix = "article5"
+            elif page_key == "blog_post_underway":
+                art_prefix = "article6"
             else:
                 art_prefix = None
 
