@@ -27,8 +27,8 @@
 // =========================================================================
 var PHASE1_START = new Date("2026-02-15T00:00:00");
 var PHASE1_END = new Date("2026-03-15T00:00:00");
-var CUTOVER_START = new Date("2026-10-11T00:00:00");
-var CUTOVER_END = new Date("2026-11-15T00:00:00");
+var CUTOVER_START = new Date("2026-10-11T00:00:00-04:00");
+var CUTOVER_END = new Date("2026-11-15T00:00:00-05:00");
 var PHASE2_APPROX = "Oct 11 – Nov 15, 2026";
 
 // =========================================================================
@@ -71,20 +71,54 @@ function esc(str) {
 // Looks up #countdown internally so each page just calls updateCountdown().
 // Uses only safe, pre-defined HTML fragments (no user input in innerHTML).
 // =========================================================================
+// Count New Jersey calendar days, independent of the rider's timezone and DST.
+function cutoverCalendarDay(date) {
+  // Intl support varies independently of Date support in older browsers.
+  try {
+    if (typeof Intl !== "undefined" && typeof Intl.DateTimeFormat === "function") {
+      var formatter = new Intl.DateTimeFormat("en-US", {
+        timeZone: "America/New_York", year: "numeric", month: "2-digit", day: "2-digit"
+      });
+      if (typeof formatter.formatToParts === "function") {
+        var parts = formatter.formatToParts(date);
+        var values = {};
+        parts.forEach(function (part) { values[part.type] = part.value; });
+        if (Number(values.year) > 0 && Number(values.month) > 0 && Number(values.day) > 0) {
+          return Date.UTC(Number(values.year), Number(values.month) - 1, Number(values.day)) / 86400000;
+        }
+      }
+    }
+  } catch (e) { /* Missing timezone data or incomplete Intl: use modern US rules. */ }
+
+  // Dependency-free fallback for this contemporary (2026) service calendar.
+  // Since 2007, Eastern DST runs from the second Sunday in March at 07:00 UTC
+  // to the first Sunday in November at 06:00 UTC. Never use the viewer's zone.
+  var year = date.getUTCFullYear();
+  var marchSunday = 8 + (7 - new Date(Date.UTC(year, 2, 1)).getUTCDay()) % 7;
+  var novemberSunday = 1 + (7 - new Date(Date.UTC(year, 10, 1)).getUTCDay()) % 7;
+  var dstStart = Date.UTC(year, 2, marchSunday, 7);
+  var dstEnd = Date.UTC(year, 10, novemberSunday, 6);
+  var offsetHours = date.getTime() >= dstStart && date.getTime() < dstEnd ? -4 : -5;
+  return Math.floor((date.getTime() + offsetHours * 3600000) / 86400000);
+}
+
+// Assigned once when the full-page notice is initialized. Widgets may omit it.
+var refreshServiceNotice = null;
+
 function updateCountdown() {
+  var now = new Date();
+  if (typeof refreshServiceNotice === "function") refreshServiceNotice(now);
   var el = document.getElementById("countdown");
   if (!el) return;
-  var now = new Date();
-  var msPerDay = 86400000;
   if (now < CUTOVER_START) {
-    var days = Math.ceil((CUTOVER_START - now) / msPerDay);
+    var days = cutoverCalendarDay(CUTOVER_START) - cutoverCalendarDay(now);
     el.innerHTML =
       t("common.cutover_begins_in") + ' <span class="num">' +
       days +
       "</span> " +
       (days !== 1 ? t("common.days") : t("common.day"));
   } else if (now < CUTOVER_END) {
-    var days2 = Math.ceil((CUTOVER_END - now) / msPerDay);
+    var days2 = cutoverCalendarDay(CUTOVER_END) - cutoverCalendarDay(now);
     el.innerHTML =
       '<span class="num">' +
       days2 +
@@ -346,7 +380,7 @@ function exportCanvasPdf(canvas, filename) {
       if (!window.matchMedia) { details.open = true; return; }
       var wide = window.matchMedia("(min-width: 769px)");
       var wasOpen;
-      function syncDisclosure() { details.open = wide.matches && details.className !== "service-notice"; }
+      function syncDisclosure() { details.open = wide.matches; }
       window.addEventListener("beforeprint", function () {
         wasOpen = details.open;
         details.open = true;
@@ -359,24 +393,108 @@ function exportCanvasPdf(canvas, filename) {
       else if (wide.addListener) wide.addListener(syncDisclosure);
     }
 
-    // Keep the full service notice available without making phone users scroll
-    // past it on every visit. Labels come from the existing translated HTML.
-    var alert = document.querySelector(".alert-banner .container");
-    var alertTitle = alert && alert.querySelector("strong");
-    if (alert && alertTitle) {
-      var notice = document.createElement("details");
-      notice.className = "service-notice";
-      var noticeTitle = document.createElement("summary");
-      noticeTitle.appendChild(alertTitle);
-      var noticeBody = document.createElement("div");
-      while (alert.firstChild) noticeBody.appendChild(alert.firstChild);
-      notice.appendChild(noticeTitle);
-      notice.appendChild(noticeBody);
-      alert.appendChild(notice);
-      responsiveDisclosure(notice);
-      // The line guide repeats this same phase notice in the page body.
-      if (phase) { phase.parentNode.removeChild(phase); phase = null; }
+    // Essential service changes stay visible initially on every full page, including mobile.
+    // Dates are Eastern service boundaries shared with the countdown above.
+    function noticeText(key, fallback) {
+      var translated = typeof t === "function" ? t(key) : "";
+      return translated && translated !== key ? translated : fallback;
     }
+    var banner = document.querySelector(".alert-banner");
+    if (!banner) {
+      banner = document.createElement("section");
+      header.parentNode.insertBefore(banner, header.nextSibling);
+    }
+    banner.className = "alert-banner service-update";
+    banner.id = "alert-banner";
+    banner.setAttribute("role", "region");
+    banner.setAttribute("aria-labelledby", "service-notice-title");
+    function noticeElement(tag, className, text) {
+      var node = document.createElement(tag);
+      node.className = className;
+      if (text) node.textContent = text;
+      return node;
+    }
+    while (banner.firstChild) banner.removeChild(banner.firstChild);
+    var notice = noticeElement("div", "container service-notice");
+    var marker = noticeElement("span", "service-notice-marker", "2");
+    marker.setAttribute("aria-hidden", "true");
+    notice.appendChild(marker);
+    var noticeCopy = noticeElement("div", "service-notice-copy");
+    var noticeTitle = noticeElement("h2", "");
+    noticeTitle.id = "service-notice-title";
+    noticeCopy.appendChild(noticeTitle);
+    var noticeDetails = noticeElement("div", "service-notice-details");
+    noticeDetails.id = "service-notice-details";
+    var noticeScheduleNode = noticeElement("p", "service-notice-schedule");
+    var noticeTickets = noticeElement("p", "service-notice-tickets", noticeText("common.service_notice_tickets", "Weekend tickets: Hoboken monthly/weekly passes and FLEXPASS are valid to Penn Station NY. One-way and round-trip riders need Penn Station NY tickets."));
+    noticeDetails.appendChild(noticeScheduleNode);
+    noticeCopy.appendChild(noticeDetails);
+    notice.appendChild(noticeCopy);
+    var noticeLink = noticeElement("a", "service-notice-link", noticeText("common.service_notice_link", "Check schedules and ticket rules"));
+    noticeLink.href = "https://www.njtransit.com/portalcutover";
+    noticeLink.target = "_blank";
+    noticeLink.rel = "noopener";
+    var noticeArrow = noticeElement("span", "", " \u2197");
+    noticeArrow.setAttribute("aria-hidden", "true");
+    noticeLink.appendChild(noticeArrow);
+    var noticeActions = noticeElement("div", "service-notice-actions");
+    noticeActions.appendChild(noticeLink);
+    var noticeToggle = noticeElement("button", "service-notice-toggle");
+    noticeToggle.type = "button";
+    noticeToggle.setAttribute("aria-controls", noticeDetails.id);
+    var noticeExpanded = true;
+    function setNoticeExpanded(expanded) {
+      noticeExpanded = expanded;
+      noticeDetails.hidden = !expanded;
+      noticeToggle.setAttribute("aria-expanded", String(expanded));
+      noticeToggle.textContent = expanded
+        ? noticeText("common.service_notice_collapse", "Hide service details")
+        : noticeText("common.service_notice_expand", "Show service details");
+      banner.setAttribute("data-expanded", String(expanded));
+    }
+    noticeToggle.addEventListener("click", function () { setNoticeExpanded(!noticeExpanded); });
+    setNoticeExpanded(true);
+    noticeActions.appendChild(noticeToggle);
+    notice.appendChild(noticeActions);
+    banner.appendChild(notice);
+    // Update only time-dependent text and ticket guidance. Keep the same button,
+    // detail region, focus, expansion state, and event listeners across midnight.
+    var noticePhase = "";
+    refreshServiceNotice = function (now) {
+      now = now || new Date();
+      var phaseNow = now < CUTOVER_START ? "before" : (now >= CUTOVER_END ? "after" : "active");
+      if (phaseNow === noticePhase) return;
+      noticePhase = phaseNow;
+      var afterCutover = phaseNow === "after";
+      noticeTitle.textContent = phaseNow === "before"
+        ? noticeText("common.service_notice_before", "Phase 2 starts October 11")
+        : (afterCutover
+          ? noticeText("common.service_notice_after", "Check current service before traveling")
+          : noticeText("common.service_notice_active", "Phase 2 is underway"));
+      noticeScheduleNode.textContent = afterCutover
+        ? noticeText("common.service_notice_after_details", "The published temporary schedule period has ended. Service restoration depends on safety testing. Check NJ Transit for current schedules before traveling.")
+        : noticeText("common.service_notice_schedule", "Temporary schedules begin Sunday, October 11. Weekday Midtown Direct trains divert to Hoboken from Monday, October 12 through November 13. Northeast Corridor and North Jersey Coast have fewer trains. Weekend trains still serve Penn Station NY, with adjusted times.");
+      if (afterCutover && noticeTickets.parentNode) noticeTickets.parentNode.removeChild(noticeTickets);
+      else if (!afterCutover && !noticeTickets.parentNode) noticeDetails.appendChild(noticeTickets);
+      banner.setAttribute("data-phase", phaseNow === "active" ? "active" : "inactive");
+    };
+    refreshServiceNotice();
+    // Some full pages have no page-specific countdown timer. Keep their notice
+    // current too; existing countdown timers also invoke this same guarded refresh.
+    window.setInterval(function () { refreshServiceNotice(); }, 3600000);
+    window.addEventListener("pageshow", function () { refreshServiceNotice(); });
+
+    // Print all guidance, then restore the reader's chosen screen state.
+    var noticeBeforePrint;
+    window.addEventListener("beforeprint", function () {
+      noticeBeforePrint = noticeExpanded;
+      setNoticeExpanded(true);
+    });
+    window.addEventListener("afterprint", function () {
+      if (typeof noticeBeforePrint === "boolean") setNoticeExpanded(noticeBeforePrint);
+    });
+    // Avoid repeating the same service notice beside the tool introduction.
+    if (phase) { phase.parentNode.removeChild(phase); phase = null; }
 
     // Index previously had no H1. Reuse its translated navigation label.
     if (summary || hero) {

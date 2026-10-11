@@ -121,7 +121,7 @@ console.log("======================================================\n");
   // index.html loads line-data.js which provides LINE_DATA with train counts.
   // The actual numbers appear dynamically at runtime via app.js, not hardcoded in HTML.
   // Verify: (a) index.html loads line-data.js, (b) the data is correct, (c) the
-  // "5 lines affected" and "50%" stats ARE hardcoded in the HTML.
+  // guide coverage and single-track facts appear in the HTML.
 
   // Check that index.html loads line-data.js
   if (indexHTML.indexOf("js/line-data.js") === -1) {
@@ -141,14 +141,14 @@ console.log("======================================================\n");
     issues.push("app.js does not reference line.trainsAfter");
   }
 
-  // The "5" lines affected stat
+  // The "5" lines in this guide stat
   if (indexHTML.indexOf('<span class="stat-number">5</span>') === -1) {
-    issues.push("'5 lines affected' stat not found in index.html");
+    issues.push("'5 lines in this guide' stat not found in index.html");
   }
 
-  // 50% service reduction stat
-  if (indexHTML.indexOf("50%") === -1) {
-    issues.push("'50%' service reduction not found in index.html");
+  // Current primary-source description must replace unsupported percentage.
+  if (indexHTML.indexOf('<span class="stat-number">Single track</span>') === -1) {
+    issues.push("Single-track stat not found in index.html");
   }
 
   report(testName, issues.length === 0, issues.join("; "));
@@ -202,12 +202,12 @@ console.log("======================================================\n");
   var issues = [];
 
   // CUTOVER_START should be 2026-10-11
-  if (dates.start !== "2026-10-11T00:00:00") {
-    issues.push("CUTOVER_START is '" + dates.start + "', expected '2026-10-11T00:00:00'");
+  if (dates.start !== "2026-10-11T00:00:00-04:00") {
+    issues.push("CUTOVER_START is '" + dates.start + "', expected '2026-10-11T00:00:00-04:00'");
   }
   // CUTOVER_END should be 2026-11-15
-  if (dates.end !== "2026-11-15T00:00:00") {
-    issues.push("CUTOVER_END is '" + dates.end + "', expected '2026-11-15T00:00:00'");
+  if (dates.end !== "2026-11-15T00:00:00-05:00") {
+    issues.push("CUTOVER_END is '" + dates.end + "', expected '2026-11-15T00:00:00-05:00'");
   }
 
   var dateRange = enJSON.card.date_range;
@@ -289,17 +289,17 @@ console.log("======================================================\n");
   var issues = [];
 
   var summaryDesc = enJSON.card.summary_desc;
-  // "Five NJ Transit lines affected from Feb 15 – Mar 15, 2026."
+  // "Five NJ Transit lines in this guide from Feb 15 – Mar 15, 2026."
   var numberWords = { 1: "One", 2: "Two", 3: "Three", 4: "Four", 5: "Five", 6: "Six", 7: "Seven", 8: "Eight", 9: "Nine", 10: "Ten" };
   var expectedWord = numberWords[LINE_ORDER.length];
 
-  if (expectedWord && summaryDesc.indexOf(expectedWord) === -1) {
+  if (expectedWord && summaryDesc.toLowerCase().indexOf(expectedWord.toLowerCase()) === -1) {
     issues.push("summary_desc says '" + summaryDesc + "' but LINE_ORDER has " + LINE_ORDER.length + " lines (expected word: '" + expectedWord + "')");
   }
 
-  // Also check the cards.js defaults
-  if (cardsSrc.indexOf("Five NJ Transit lines") === -1 && cardsSrc.indexOf(expectedWord + " NJ Transit lines") === -1) {
-    issues.push("cards.js defaults don't mention '" + expectedWord + " NJ Transit lines'");
+  // English export defaults must describe guide coverage, not the entire system.
+  if (cardsSrc.indexOf("Guide to five affected NJ Transit lines") === -1) {
+    issues.push("cards.js defaults must describe the five-line guide scope");
   }
 
   report(testName, issues.length === 0, issues.join("; "));
@@ -450,27 +450,27 @@ console.log("======================================================\n");
 })();
 
 // =========================================================================
-// TEST 11: "5 lines affected" stat in index translations matches LINE_ORDER.length
+// TEST 11: "5 lines in this guide" stat in index translations matches LINE_ORDER.length
 // =========================================================================
 (function test11() {
-  var testName = "11. '5 lines affected' stat in translations matches LINE_ORDER.length";
+  var testName = "11. '5 lines in this guide' stat in translations matches LINE_ORDER.length";
   var issues = [];
 
-  // index.html has <span class="stat-number">5</span> and label "lines affected"
-  // The translation key index.lines_affected = "lines affected"
+  // index.html has <span class="stat-number">5</span> and label "lines in this guide"
+  // The translation key index.lines_affected = "lines in this guide"
   if (LINE_ORDER.length !== 5) {
     issues.push("LINE_ORDER has " + LINE_ORDER.length + " lines but index.html shows 5");
   }
 
   // Check the "5" appears in index.html
-  var statMatch = indexHTML.match(/<span class="stat-number">(\d+)<\/span>\s*\n?\s*<span class="stat-label">lines affected<\/span>/);
+  var statMatch = indexHTML.match(/<span class="stat-number">(\d+)<\/span>\s*\n?\s*<span class="stat-label">lines in this guide<\/span>/);
   if (statMatch) {
     var statNum = parseInt(statMatch[1], 10);
     if (statNum !== LINE_ORDER.length) {
       issues.push("index.html stat shows " + statNum + " but LINE_ORDER has " + LINE_ORDER.length + " lines");
     }
   } else {
-    issues.push("Could not find 'lines affected' stat in index.html");
+    issues.push("Could not find 'lines in this guide' stat in index.html");
   }
 
   report(testName, issues.length === 0, issues.join("; "));
@@ -583,58 +583,16 @@ console.log("======================================================\n");
 })();
 
 // =========================================================================
-// TEST 15: "50% service reduction" claim is consistent with actual train
-//          count data (sum before vs sum after, for reduced-service lines)
+// TEST 15: Current cutover copy uses the verified operating constraint.
 // =========================================================================
 (function test15() {
-  var testName = "15. '50% service reduction' claim is consistent with train count data";
   var issues = [];
-
-  // Calculate total trains before and after for lines with numeric counts
-  var totalBefore = 0;
-  var totalAfter = 0;
-  var reducedServiceLines = [];
-
-  LINE_ORDER.forEach(function (lineId) {
-    var line = LINE_DATA[lineId];
-    if (typeof line.trainsBefore === "number" && typeof line.trainsAfter === "number") {
-      totalBefore += line.trainsBefore;
-      totalAfter += line.trainsAfter;
-      if (line.impactType === "reduced-service") {
-        reducedServiceLines.push(lineId);
-      }
-    }
+  [indexHTML, enJSON.index.alert_details, enJSON.index.secaucus_intro, enJSON.map.cutover_item3].forEach(function (copy) {
+    if (copy.indexOf("50%") !== -1) issues.push("Unsupported current percentage remains");
   });
-
-  var reductionPct = ((totalBefore - totalAfter) / totalBefore * 100).toFixed(1);
-
-  // The claim is "50% service reduction" — this is approximate (marketing language)
-  // The actual reduction across numeric lines is (455 - 405) / 455 = ~11%
-  // However, the 50% claim refers to the Newark-Secaucus corridor bottleneck specifically
-  // (single-track = half capacity), not the raw train counts.
-  // So we verify the claim appears consistently in the codebase.
-  var fiftyPctInIndex = indexHTML.indexOf("50%") !== -1;
-  var fiftyPctInTranslations = enJSON.index.alert_details.indexOf("50%") !== -1;
-
-  if (!fiftyPctInIndex) {
-    issues.push("'50%' claim not found in index.html");
-  }
-  if (!fiftyPctInTranslations) {
-    issues.push("'50%' claim not found in index.alert_details translation");
-  }
-
-  // The percentage should also appear in map translations
-  var mapCutoverItem3 = enJSON.map.cutover_item3;
-  if (mapCutoverItem3.indexOf("50%") === -1) {
-    issues.push("map.cutover_item3 does not mention '50%'");
-  }
-
-  // Verify actual reduction is non-trivial (the 50% is about corridor capacity, not train counts)
-  if (totalBefore <= totalAfter) {
-    issues.push("Total trains after (" + totalAfter + ") is not less than before (" + totalBefore + ")");
-  }
-
-  report(testName, issues.length === 0, issues.join("; "));
+  if (!/single.track/i.test(enJSON.map.cutover_item3)) issues.push("Map must describe single-track operation");
+  if (!/Newark/.test(enJSON.index.secaucus_intro) || !/Secaucus/.test(enJSON.index.secaucus_intro)) issues.push("Operating constraint must name both endpoints");
+  report("15. Current single-track claims remain accurate", issues.length === 0, issues.join("; "));
 })();
 
 // =========================================================================

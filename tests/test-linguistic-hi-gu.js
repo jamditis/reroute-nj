@@ -846,7 +846,6 @@ console.log("=".repeat(70));
 (function () {
   // Critical transit numbers that must be preserved
   var criticalNumbers = [
-    { num: "50", context: "50% service reduction", keys: ["index.alert_details", "index.secaucus_intro"] },
     { num: "133", context: "trains before NEC", keys: ["card.line_summary_northeast-corridor"] },
     { num: "113", context: "trains during NEC", keys: ["card.line_summary_northeast-corridor"] },
     { num: "99", context: "trains before NJC", keys: ["card.line_summary_north-jersey-coast"] },

@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026-10-11T16:03:20Z",
+  "updatedAt": "2026-10-11T14:32:57Z",
   "entries": [
     {
       "id": "official-cutover-portal-page",
       "claimArea": "cutover-policy",
-      "claim": "Portal cutover service policy, phase timing, and line-level advisories",
+      "claim": "Current Phase 2 dates, weekday/weekend ticket policy and October 12 schedule; not live train status",
       "sourceType": "official",
       "verificationMethod": "manual",
       "verificationWindowHours": 24,
-      "lastVerified": "2026-10-11T16:03:20Z",
+      "lastVerified": "2026-10-11T14:30:05Z",
       "urls": [
         "https://www.njtransit.com/portalcutover"
       ]
@@ -20,7 +20,7 @@
       "sourceType": "official",
       "verificationMethod": "manual",
       "verificationWindowHours": 24,
-      "lastVerified": "2026-09-20T00:00:00Z",
+      "lastVerified": "2026-10-11T14:32:57Z",
       "urls": [
         "https://www.njtransit.com/press-releases/portal-north-bridge-enters-final-phase-construction-work-begins-put-final-track"
       ]
@@ -28,11 +28,11 @@
     {
       "id": "official-phase2-briefing",
       "claimArea": "service-frequency",
-      "claim": "Phase 2 weekday train counts from the Sept 17 2026 briefing document",
+      "claim": "Phase 2 weekday train counts, weekend connection changes, labor estimates and concurrent Brielle work in the September 17 briefing",
       "sourceType": "official",
       "verificationMethod": "manual",
       "verificationWindowHours": 24,
-      "lastVerified": "2026-09-20T00:00:00Z",
+      "lastVerified": "2026-10-11T14:30:05Z",
       "urls": [
         "https://content.njtransit.com/sites/default/files/marketing/website/pdf/portal/Portal%20Cutover%20Briefing%20Document%20091726.pdf"
       ]
@@ -47,7 +47,9 @@
       "lastVerified": "2026-02-14T00:00:00Z",
       "urls": [
         "https://www.njtransit.com/rail-schedules"
-      ]
+      ],
+      "lastAttempted": "2026-10-11T14:32:43Z",
+      "verificationNote": "Generic rail-schedules page inaccessible through research tool. Current portal links and briefing checked, but every individual train timetable was not audited."
     },
     {
       "id": "official-alerts",
@@ -56,10 +58,12 @@
       "sourceType": "official",
       "verificationMethod": "manual",
       "verificationWindowHours": 12,
-      "lastVerified": "2026-10-11T16:03:20Z",
+      "lastVerified": "2026-10-09T22:03:08Z",
       "urls": [
         "https://www.njtransit.com/service-advisory"
-      ]
+      ],
+      "lastAttempted": "2026-10-11T14:32:43Z",
+      "verificationNote": "Generic service-advisory endpoint returned 404. Specific current Portal and Brielle advisories were checked separately; no blanket live-alert verification."
     },
     {
       "id": "secondary-news-coverage",
@@ -68,11 +72,63 @@
       "sourceType": "secondary",
       "verificationMethod": "scripted",
       "verificationWindowHours": 72,
-      "lastVerified": "2026-10-11T16:03:20Z",
+      "lastVerified": "2026-10-09T22:03:08Z",
       "urls": [
         "https://www.northjersey.com/",
         "https://www.nj.com/",
         "https://gothamist.com/"
+      ]
+    },
+    {
+      "id": "official-phase2-current-advisory",
+      "claimArea": "cutover-policy",
+      "claim": "Current Phase 2 service and ticket rules; Brielle accessible boarding and substitute bus connection",
+      "sourceType": "official",
+      "verificationMethod": "manual",
+      "verificationWindowHours": 12,
+      "lastVerified": "2026-10-11T14:30:05Z",
+      "urls": [
+        "https://www.njtransit.com/service-advisory/2170966",
+        "https://www.njtransit.com/service-advisory/2177824"
+      ]
+    },
+    {
+      "id": "official-path-phase2-advisory",
+      "claimArea": "service-frequency",
+      "claim": "October 6 PATH cutover reminder: scheduled peak headways and cross-honoring limits",
+      "sourceType": "official",
+      "verificationMethod": "manual",
+      "verificationWindowHours": 24,
+      "lastVerified": "2026-10-11T14:30:05Z",
+      "urls": [
+        "https://www.panynj.gov/port-authority/en/press-room/press-release-archives/2026-press-releases/path-travel-advisory-reminder.html"
+      ]
+    },
+    {
+      "id": "official-path-approved-fares",
+      "claimArea": "fare-policy",
+      "claim": "Current $3.25 standard PATH one-way fare, directly stated by the official TAPP Payments FAQ and supported by the approved fare sheet",
+      "sourceType": "official",
+      "verificationMethod": "manual",
+      "verificationWindowHours": 168,
+      "lastVerified": "2026-10-11T14:32:57Z",
+      "urls": [
+        "https://www.tappandride.com/faq/loading-value-and-passes",
+        "https://www.panynj.gov/content/dam/corporate/public-hearings-pdfs/Approved_Fare_Changes_PATH.pdf"
+      ]
+    },
+    {
+      "id": "official-nywaterway-bus-routes",
+      "claimArea": "service-frequency",
+      "claim": "Weekday commuter ferry service window and Manhattan bus route map; special cutover ferry departure times remain unverified",
+      "sourceType": "official",
+      "verificationMethod": "manual",
+      "verificationWindowHours": 24,
+      "lastVerified": "2026-10-11T14:32:57Z",
+      "urls": [
+        "https://www.nywaterway.com/BusStopsSchedules.aspx",
+        "https://www.nywaterway.com/UserFiles/Files/2026/BusRouteMaps/2026-09-13/NYWBus_Peak.pdf",
+        "https://www.nywaterway.com/Hoboken-NJTT-MidtownRoute.aspx"
       ]
     }
   ]

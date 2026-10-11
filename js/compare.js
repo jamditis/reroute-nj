@@ -107,6 +107,8 @@
   // STATION DATA WITH TRAVEL TIMES
   // timeToHub: estimated minutes from station to its line's hub during cutover
   // normalTimeToPenn: estimated minutes for normal service to Penn Station NY
+  // Selected stations only: do not invent estimates for missing stations.
+  // Station IDs must remain a subset of the shared LINE_DATA catalog.
   // =========================================================================
   var LINES = {
     "montclair-boonton": {
@@ -162,8 +164,6 @@
         { id: "convent-station", name: "Convent Station", branch: "morristown", timeToHub: 45, normalTimeToPenn: 58 },
         { id: "morristown", name: "Morristown", branch: "morristown", timeToHub: 50, normalTimeToPenn: 62 },
         { id: "morris-plains", name: "Morris Plains", branch: "morristown", timeToHub: 52, normalTimeToPenn: 65 },
-        { id: "hanover", name: "Hanover", branch: "morristown", timeToHub: 55, normalTimeToPenn: 68 },
-        { id: "whippany", name: "Whippany", branch: "morristown", timeToHub: 58, normalTimeToPenn: 70 },
         { id: "murray-hill", name: "Murray Hill", branch: "gladstone", timeToHub: 40, normalTimeToPenn: 55 },
         { id: "new-providence", name: "New Providence", branch: "gladstone", timeToHub: 42, normalTimeToPenn: 57 },
         { id: "berkeley-heights", name: "Berkeley Heights", branch: "gladstone", timeToHub: 45, normalTimeToPenn: 60 },
@@ -341,6 +341,13 @@
       btns[i].setAttribute("aria-pressed", isActive ? "true" : "false");
     }
 
+    // Clear the visible destination as well as state when changing lines.
+    var destinations = $destGrid.querySelectorAll(".dest-card");
+    for (var d = 0; d < destinations.length; d++) {
+      destinations[d].classList.remove("active");
+      destinations[d].setAttribute("aria-pressed", "false");
+    }
+
     populateStations();
     clearResults();
   }
@@ -419,6 +426,11 @@
     var line = LINES[currentLineId];
     var options = [];
 
+    if (hasBrielleReplacement(currentLineId, currentStation.id, new Date())) {
+      renderBrielleAdvisory(line);
+      return;
+    }
+
     if (line.impactType === "hoboken-diversion") {
       options = buildHobokenOptions(line);
     } else if (line.impactType === "reduced-service") {
@@ -434,6 +446,27 @@
     if (options.length > 0) options[0].recommended = true;
 
     renderResults(line, options);
+  }
+
+  // Closure dates are New Jersey service dates, independent of browser timezone.
+  function hasBrielleReplacement(lineId, stationId, now) {
+    return lineId === "north-jersey-coast" &&
+      (stationId === "bay-head" || stationId === "point-pleasant") &&
+      now >= new Date("2026-10-11T00:00:00-04:00") &&
+      now < new Date("2026-10-26T00:00:00-04:00");
+  }
+
+  function renderBrielleAdvisory(line) {
+    clearResults();
+    $results.classList.remove("hidden");
+    $resultsHeader.innerHTML = '<h2>' + esc(currentStation.name) + " \u2192 " + esc(currentDest.name) + '</h2>';
+    $resultsList.innerHTML = '<div class="weekend-note"><p>' + esc(t("js.extra_njcl_0")) + '</p><p>' +
+      esc(t("js.bus_estimates_paused")) + '</p>' +
+      '<a href="https://www.njtransit.com/service-advisory/2177824" target="_blank" rel="noopener">' +
+      esc(t("common.service_notice_link")) + '</a></div>';
+    $resultsShare.innerHTML = makeCompareSourceFooter(line);
+    $results.scrollIntoView({ behavior: "smooth", block: "start" });
+    $results.focus();
   }
 
   function buildHobokenOptions(line) {
@@ -454,7 +487,7 @@
         { label: lastMileLabel(currentDest, "PATH"), time: pathLastMile, mode: "walk" },
       ],
       totalTime: trainTime + pathTransfer + pathRide + pathLastMile,
-      cost: "Cross-honored",
+      cost: "Cross-honored weekdays only",
     });
 
     // Ferry
@@ -471,7 +504,7 @@
         { label: lastMileLabel(currentDest, "ferry"), time: ferryLastMile, mode: "walk" },
       ],
       totalTime: trainTime + ferryTransfer + ferryRide + ferryLastMile,
-      cost: "Cross-honored",
+      cost: "Cross-honored weekdays only",
     });
 
     // Bus 126
@@ -488,7 +521,7 @@
         { label: lastMileLabel(currentDest, "PABT"), time: busLastMile, mode: "walk" },
       ],
       totalTime: trainTime + busTransfer + busRide + busLastMile,
-      cost: "Cross-honored",
+      cost: "Cross-honored weekdays only",
     });
 
     return opts;
@@ -546,24 +579,7 @@
         { label: lastMileLabel(currentDest, "WTC"), time: pathLastMile, mode: "walk" },
       ],
       totalTime: trainTime + pathTransfer + pathRide + pathLastMile,
-      cost: "$2.75 PATH fare (separate)",
-    });
-
-    // Bus from Newark
-    var busTransfer = TRANSFERS.newarkToBus;
-    var busRide = 40;
-    var busLastMile = currentDest.fromPortAuth;
-    opts.push({
-      name: "Train \u2192 Bus \u2192 " + currentDest.name,
-      summary: "RVL to Newark Penn \u2192 Bus to Port Authority \u2192 " + esc(currentDest.name),
-      legs: [
-        { label: "Train to Newark", time: trainTime, mode: "train" },
-        { label: "Transfer to bus", time: busTransfer, mode: "transfer" },
-        { label: "Bus to PABT", time: busRide, mode: "bus" },
-        { label: lastMileLabel(currentDest, "PABT"), time: busLastMile, mode: "walk" },
-      ],
-      totalTime: trainTime + busTransfer + busRide + busLastMile,
-      cost: "Check fare",
+      cost: "$3.25 PATH fare (separate)",
     });
 
     return opts;
@@ -584,7 +600,8 @@
     // Header
     $resultsHeader.innerHTML =
       '<h2>' + esc(currentStation.name) + " \u2192 " + esc(currentDest.name) + "</h2>" +
-      '<p class="results-subtitle">' + esc(line.name) + ' &middot; Cutover options (Oct 11 \u2013 Nov 15)</p>';
+      '<p class="results-subtitle">' + esc(line.name) + ' &middot; ' + esc(t("compare.results_weekday_scope")) + '</p>' +
+      '<p class="results-subtitle">' + esc(t("compare.results_estimate_notice")) + '</p>';
 
     // Normal commute reference
     var normalTotal = currentStation.normalTimeToPenn + currentDest.fromPennNY;
@@ -673,13 +690,13 @@
       '<a href="https://www.njtransit.com/portalcutover" target="_blank" rel="noopener">NJ Transit cutover page</a>' +
       ' · <a href="' + esc(stationUrl) + '" target="_blank" rel="noopener">NJ Transit schedules</a>' +
       ' · <a href="https://www.panynj.gov/path/en/schedules-maps.html" target="_blank" rel="noopener">PATH schedules</a>' +
-      ' · <a href="https://www.nywaterway.com/HobokenMidtown.aspx" target="_blank" rel="noopener">NY Waterway</a>' +
+      ' · <a href="https://www.nywaterway.com/Hoboken-NJTT-MidtownRoute.aspx" target="_blank" rel="noopener">NY Waterway</a>' +
       "</p></div>"
     );
   }
 
   function buildShareText(line, options, normalTotal) {
-    var text = "My commute during the Portal Bridge cutover:\n";
+    var text = "Portal Bridge cutover weekday planning (Oct 11–Nov 14, 2026):\n";
     text += currentStation.name + " (" + line.shortName + ") \u2192 " + currentDest.name + "\n\n";
     text += "Normal: ~" + normalTotal + " min\n\n";
     text += "Cutover options:\n";
@@ -690,7 +707,9 @@
       text += opt.recommended ? " \u2b50 Fastest" : "";
       text += "\n";
     });
-    text += "\nPlan your commute: RerouteNJ";
+    text += "\nRough estimates for selected stations, not live schedules. Extra waiting and disruptions may add time. Weekend routes and cross-honoring differ.";
+    text += "\nVerify your trip: https://www.njtransit.com/portalcutover";
+    text += "\nPlan your commute: https://reroutenj.org/compare.html";
     return text;
   }
 

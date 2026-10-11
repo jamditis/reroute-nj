@@ -19,12 +19,12 @@ Phase 1 transferred the first track from the 115-year-old Portal Bridge to the n
 - Phase 1: February 15 to March 15, 2026 (complete)
 - Phase 2: October 11 to November 15, 2026 (current cutover)
 - Cause: Amtrak transferring the second track from the old Portal Bridge to Portal North Bridge and retiring the swing span
-- Corridor impact: About 50% fewer trains through the Portal corridor on weekdays
-- Affected lines: Montclair-Boonton Line, Morris & Essex Lines, Northeast Corridor, North Jersey Coast Line, Raritan Valley Line
-- Not affected: Atlantic City Rail Line
+- Corridor impact: Single-track operation between Newark and Secaucus, with weekday diversions and reduced service
+- Lines covered by this guide: Montclair-Boonton Line, Morris & Essex Lines, Northeast Corridor, North Jersey Coast Line, Raritan Valley Line
+- Wider schedule changes: all NJ Transit rail lines except Atlantic City; check official timetables
 - Hoboken diversions: Montclair-Boonton and Morris & Essex weekday trains rerouted to Hoboken Terminal. Weekend Midtown Direct trains still run to Penn Station NY
 - Weekday train counts (official briefing): Montclair-Boonton 64 to 60, Morris & Essex 148 to 139, Northeast Corridor 133 to 113, North Jersey Coast 99 to 87, Raritan Valley 51 to 50
-- Alternative transit from Hoboken: PATH train to 33rd St (~15 min, every 3-5 min rush hour), NY Waterway ferry to W. 39th St (~10 min), Bus 126 to Port Authority (~30-45 min)
+- Alternative transit from Hoboken: PATH train to 33rd St (~15 min, every 6 min weekdays 7–9:30am and 4–7pm), NY Waterway ferry to W. 39th St (~10 min), Bus 126 to Port Authority (~30-45 min)
 - Official source: https://www.njtransit.com/portalcutover
 
 ## Line-by-line impact summary
@@ -32,7 +32,7 @@ Phase 1 transferred the first track from the 115-year-old Portal Bridge to the n
 - **Montclair-Boonton Line**: Weekday trains divert to Hoboken Terminal (64 to 60). PATH, ferry, or bus to Manhattan. Weekends still run to Penn Station NY.
 - **Morris & Essex Lines (Morristown, Gladstone)**: Weekday trains divert to Hoboken Terminal (148 to 139). Same alternatives as Montclair-Boonton.
 - **Northeast Corridor**: Trains still run to New York Penn Station. Weekday trains 133 to 113 because of single-track operations between Newark and Secaucus.
-- **North Jersey Coast Line**: Same route. Weekday trains 99 to 87. Oct 11–25, buses replace trains at Bay Head and Point Pleasant for Brielle Bridge work.
+- **North Jersey Coast Line**: Weekday trains 99 to 87. Oct 11–25, buses replace trains at Bay Head and Point Pleasant for Brielle Bridge work, connecting at Manasquan. Accessible riders board at Point Pleasant Beach for an Asbury Park train connection.
 - **Raritan Valley Line**: One-seat rides to Penn Station NY remain suspended. Trains terminate at Newark Penn (51 to 50). Nov 7, buses between Cranford and Newark.
 
 ## Blog
@@ -62,7 +62,7 @@ All data on this site is traceable to official sources. Last verified: March 13,
 - **Cutover details, engineering scope, Phase 2 timeline**: [NJ Transit/Amtrak joint press release](https://www.njtransit.com/press-releases/portal-north-bridge-enters-final-phase-construction-work-begins-put-first-track)
 - **Amtrak operations, bridge history**: [Amtrak: Portal North Bridge press release](https://media.amtrak.com/2026/01/portal-north-bridge-enters-final-phase-of-construction-as-work-begins-to-put-first-track-into-service/)
 - **PATH schedules and fares**: [Port Authority of NY & NJ](https://www.panynj.gov/path/en/schedules-maps.html)
-- **Ferry schedules**: [NY Waterway: Hoboken / Midtown](https://www.nywaterway.com/HobokenMidtown.aspx)
+- **Ferry schedules**: [NY Waterway: Hoboken / Midtown](https://www.nywaterway.com/Hoboken-NJTT-MidtownRoute.aspx)
 - **NJ Transit fares**: [NJ Transit fares page](https://www.njtransit.com/fares)
 - **Gateway Program context**: [Gateway Development Commission](https://www.gatewayprogram.org/)
 - **Travel alerts**: [NJ Transit travel alerts](https://www.njtransit.com/travel-alerts-to)

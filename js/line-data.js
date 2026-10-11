@@ -19,7 +19,7 @@ var LINE_DATA = {
       "All weekday Midtown Direct trains diverted to Hoboken. Weekend service to Penn Station NY continues. Weekday trains: 64 to 60.",
     extraNotes: [
       "Monday, October 12 runs the weekday cutover schedule.",
-      "For October and November, buy Hoboken monthly, weekly, or FLEXPASS tickets via Newark Broad St. They are valid to Penn Station NY on Oct 1–10 and Nov 15–30, and cross-honored from Hoboken on weekdays Oct 11–Nov 14.",
+      "For October and November, buy Hoboken monthly, weekly, or FLEXPASS tickets via Newark Broad St. They are valid to Penn Station NY on Oct 1–10, Nov 15–30, and cutover weekends, and cross-honored from Hoboken on weekdays Oct 11–Nov 14.",
     ],
     sources: {
       trainCounts: "https://www.njtransit.com/portalcutover",
@@ -178,7 +178,7 @@ var LINE_DATA = {
     summary:
       "Trains still run to Penn Station NY, but weekday service is reduced from 99 to 87 trains. Perth Amboy and Woodbridge riders can use rail tickets on buses to Port Authority.",
     extraNotes: [
-      "Brielle Bridge work, Oct 11–25: No trains between Manasquan and Bay Head. Buses replace trains at Bay Head and Point Pleasant, with a rail connection at Manasquan.",
+      "Brielle Bridge work, Oct 11–25: No trains between Manasquan and Bay Head. Buses replace trains at Bay Head and Point Pleasant, with a rail connection at Manasquan. For accessible travel, board at Point Pleasant Beach and connect to trains at Asbury Park.",
     ],
     sources: {
       trainCounts: "https://www.njtransit.com/portalcutover",

@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-10-11T16:03:20Z",
+  "lastUpdated": "2026-10-11T16:19:00Z",
   "articles": [
     {
       "id": "gothamist-transit-riders-face-2026-10-11",
       "title": "NJ Transit riders face 5 weeks of schedule disruptions starting Sunday",
       "url": "https://gothamist.com/news/nj-transit-riders-face-5-weeks-of-schedule-disruptions-starting-sunday",
       "source": "Gothamist",
-      "author": null,
+      "author": "Giulia Heyward",
       "date": "2026-10-11",
       "category": "news",
       "excerpt": "NJ Transit and Amtrak riders should prepare for cancellations, schedule changes and longer commutes as work continues on the new Portal North Bridge.",
@@ -24,6 +24,105 @@
       "date": "2026-10-09",
       "category": "news",
       "excerpt": "NJ Transit and Amtrak schedules change Sunday reflecting service reductions needed to finish moving rail service to the new Portal North Bridge.",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "villagegreen-jitney-cutover-schedules-2026-10-08",
+      "title": "Maplewood and South Orange Announce Jitney Changes Effective Oct. 11-Nov. 14",
+      "url": "https://villagegreennj.com/transportation/maplewood-announces-jitney-changes-effective-oct-11-nov-14/",
+      "source": "The Village Green",
+      "author": "The Village Green",
+      "date": "2026-10-08",
+      "category": "community",
+      "excerpt": "Maplewood and South Orange have adjusted station jitneys to meet the temporary rail schedules. The article links the affected routes and schedules for October 11 through November 14.",
+      "lines": [
+        "morris-essex"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "cbsnews-final-portal-service-changes-2026-10-08",
+      "title": "NJ Transit service changes coming amid final phase of Portal Bridge North construction",
+      "url": "https://www.cbsnews.com/newyork/news/nj-transit-service-changes-amtrak-portal-bridge/",
+      "source": "CBS New York",
+      "author": "Alexa Herrera and Nick Caloway",
+      "date": "2026-10-08",
+      "category": "news",
+      "excerpt": "Construction-related timetable adjustments affect commuters.",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "rtands-portal-cutover-video-2026-10-08",
+      "title": "NJ Transit Shares Portal Bridge Cutover Video",
+      "url": "https://www.rtands.com/track-construction/track-structure/bridges-tunnels/nj-transit-shares-portal-bridge-cutover-video/",
+      "source": "Railway Track and Structures",
+      "author": "Jennifer McLawhorn",
+      "date": "2026-10-08",
+      "category": "news",
+      "excerpt": "A look at NJ Transit’s video explaining the second cutover phase, with footage of the railway and a summary of the remaining electrical and track work.",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "millburn-final-portal-cutover-update-2026-10-08",
+      "title": "NJ Transit Major Service Update: Portal North Bridge Cutover",
+      "url": "https://www.twp.millburn.nj.us/m/newsflash/home/detail/2836",
+      "source": "twp.millburn.nj.us",
+      "author": null,
+      "date": "2026-10-08",
+      "category": "official",
+      "excerpt": "Millburn Township advises Millburn and Short Hills commuters about weekday diversions to Hoboken, Manhattan connections and continued weekend service to New York Penn Station.",
+      "lines": [
+        "morris-essex"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "panynj-path-cutover-reminder-2026-10-06",
+      "title": "PATH Travel Advisory Reminder -- From Oct. 11 Through Nov. 15, PATH Riders to Be Impacted…",
+      "url": "https://www.panynj.gov/port-authority/en/press-room/press-release-archives/2026-press-releases/path-travel-advisory-reminder.html",
+      "source": "Port Authority of New York and New Jersey",
+      "author": null,
+      "date": "2026-10-06",
+      "category": "official",
+      "excerpt": "PATH plans extra weekday peak service for diverted rail riders. Hoboken–33 St trains will run every six minutes from 7 to 9:30 a.m.; the advisory also explains ticket cross-honoring and connections.",
+      "lines": [
+        "montclair-boonton",
+        "morris-essex"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "6sqft-final-portal-cutover-2026-10-06",
+      "title": "NJ Transit to cut service for five weeks as final Portal Bridge cutover begins",
+      "url": "https://www.6sqft.com/nj-transit-to-cut-service-for-five-weeks-as-final-portal-bridge-cutover-begins",
+      "source": "6sqft.com",
+      "author": "Aaron Ginsburg",
+      "date": "2026-10-06",
+      "category": "news",
+      "excerpt": "The report previews five weeks of schedule changes and weekday Hoboken diversions as the second track is connected to the new bridge, with background on the replacement project.",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "timeout-fall-amtrak-transit-cuts-2026-09-29",
+      "title": "Amtrak is reducing NYC train service for five whole weeks this fall—here’s the latest on the upcoming transit cancellations",
+      "url": "https://www.timeout.com/newyork/news/amtrak-is-reducing-nyc-train-service-for-five-whole-weeks-this-fallheres-the-latest-on-the-upcoming-transit-cancellations-092926",
+      "source": "Time Out Worldwide",
+      "author": "Laura Ratliff",
+      "date": "2026-09-29",
+      "category": "news",
+      "excerpt": "A guide to reduced Amtrak frequencies, NJ Transit’s temporary timetables and travel alternatives for Midtown Direct passengers during the final bridge connection.",
       "lines": [
         "all"
       ],
@@ -53,6 +152,20 @@
       "date": "2026-09-18",
       "category": "news",
       "excerpt": "The agencies will transfer the final track and electrical systems to the new bridge. Temporary NJ Transit schedules begin October 11 and regular schedules are expected November 15, subject to safety testing.",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "nj1015-final-portal-cutover-2026-09-18",
+      "title": "Five weeks of NJ Transit pain are coming — but the Portal Bridge nightmare is finally ending",
+      "url": "https://nj1015.com/portal-bridge-cutover-work-october/",
+      "source": "New Jersey 101.5",
+      "author": "Dan Alexander",
+      "date": "2026-09-18",
+      "category": "news",
+      "excerpt": "The report explains the single-track bottleneck, reduced rail service and weekday Hoboken diversions needed to connect the remaining track to the new bridge.",
       "lines": [
         "all"
       ],
@@ -91,7 +204,7 @@
       "title": "Portal North Bridge Enters Final Phase of Construction as Work Begins to Put Final Track Into Service",
       "url": "https://media.amtrak.com/2026/09/portal-north-bridge-enters-final-phase-of-construction-as-work-begins-to-put-final-track-into-service/",
       "source": "Amtrak Media",
-      "author": "Jason Abrams",
+      "author": null,
       "date": "2026-09-17",
       "category": "official",
       "excerpt": "Amtrak details the work needed to transfer the final track to the new bridge and the temporary service changes planned during the five-week construction period.",
