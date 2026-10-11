@@ -1,22 +1,23 @@
 {
-  "lastVerified": "2026-09-20T00:00:00Z",
+  "lastVerified": "2026-10-11T14:32:57Z",
   "sources": {
     "njtransit-portal-cutover": {
       "title": "Portal Bridge Cutover: What It Means For You",
       "url": "https://www.njtransit.com/portalcutover",
       "publisher": "NJ Transit",
       "type": "official",
-      "accessed": "2026-09-20",
+      "accessed": "2026-10-11",
       "supports": [
         "cutover-dates",
-        "train-counts",
         "hoboken-diversion",
         "cross-honoring",
         "temporary-schedules",
         "flexpass",
         "weekend-service",
-        "presidents-day-schedule",
-        "phase2-expected"
+        "phase2-expected",
+        "fare-data",
+        "october-12-schedule",
+        "weekend-ticket-validity"
       ]
     },
     "njtransit-press-release": {
@@ -31,7 +32,8 @@
         "single-track-operations",
         "40000-man-hours",
         "workers-per-shift"
-      ]
+      ],
+      "scope": "Historical Phase 1 source; not used to establish current Phase 2 service policy."
     },
     "amtrak-press-release": {
       "title": "Portal North Bridge Enters Final Phase of Construction as Work Begins to Put First Track into Service",
@@ -45,7 +47,8 @@
         "single-track-operations",
         "40000-man-hours",
         "workers-per-shift"
-      ]
+      ],
+      "scope": "Historical Phase 1 source; not used to establish current Phase 2 service policy."
     },
     "njtransit-travel-alerts": {
       "title": "NJ Transit travel alerts",
@@ -154,14 +157,14 @@
     },
     "nywaterway-schedules": {
       "title": "NY Waterway Hoboken / Midtown Ferry Schedule",
-      "url": "https://www.nywaterway.com/HobokenMidtown.aspx",
+      "url": "https://www.nywaterway.com/Hoboken-NJTT-MidtownRoute.aspx",
       "publisher": "NY Waterway",
       "type": "official",
-      "accessed": "2026-02-14",
+      "accessed": "2026-10-11",
       "supports": [
-        "ferry-travel-time",
-        "ferry-frequency"
-      ]
+        "ferry-service-window"
+      ],
+      "note": "Current route page confirms weekday commute-only service. Displayed baseline timetable is not independently verified as the enhanced Phase 2 timetable; duration remains an estimate."
     },
     "njtransit-bus-126": {
       "title": "NJ Transit Bus 126 Schedule",
@@ -214,11 +217,15 @@
       "url": "https://www.njtransit.com/press-releases/portal-north-bridge-enters-final-phase-construction-work-begins-put-final-track",
       "publisher": "NJ Transit",
       "type": "official",
-      "accessed": "2026-09-20",
+      "accessed": "2026-10-11",
       "supports": [
         "phase2-expected",
         "cutover-dates",
-        "hoboken-diversion"
+        "hoboken-diversion",
+        "cross-honoring",
+        "weekend-ticket-validity",
+        "rvl-one-seat-ride",
+        "all-lines-affected"
       ]
     },
     "njtransit-phase2-briefing": {
@@ -226,185 +233,436 @@
       "url": "https://content.njtransit.com/sites/default/files/marketing/website/pdf/portal/Portal%20Cutover%20Briefing%20Document%20091726.pdf",
       "publisher": "NJ Transit",
       "type": "official",
-      "accessed": "2026-09-20",
+      "accessed": "2026-10-11",
       "supports": [
         "train-counts",
         "cutover-dates",
-        "hoboken-diversion"
+        "hoboken-diversion",
+        "weekend-schedule-changes",
+        "brielle-replacement",
+        "40000-man-hours",
+        "workers-per-shift",
+        "single-track-operations"
+      ]
+    },
+    "njtransit-phase2-service-advisory": {
+      "title": "Temporary Rail Service Changes: October 11–November 14, 2026",
+      "url": "https://www.njtransit.com/service-advisory/2170966",
+      "publisher": "NJ Transit",
+      "type": "official",
+      "accessed": "2026-10-11",
+      "supports": [
+        "cutover-dates",
+        "hoboken-diversion",
+        "weekend-service",
+        "weekend-ticket-validity",
+        "cross-honoring",
+        "rvl-one-seat-ride",
+        "all-lines-affected",
+        "brielle-replacement"
+      ]
+    },
+    "njtransit-brielle-service-advisory": {
+      "title": "North Jersey Coast Line: Substitute Buses Bay Head–Manasquan, Beginning October 11, 2026",
+      "url": "https://www.njtransit.com/service-advisory/2177824",
+      "publisher": "NJ Transit",
+      "type": "official",
+      "accessed": "2026-10-11",
+      "supports": [
+        "brielle-replacement",
+        "brielle-accessibility"
+      ]
+    },
+    "path-phase2-advisory": {
+      "title": "PATH Travel Advisory Reminder: Portal North Bridge work (October 6, 2026)",
+      "url": "https://www.panynj.gov/port-authority/en/press-room/press-release-archives/2026-press-releases/path-travel-advisory-reminder.html",
+      "publisher": "Port Authority of NY & NJ",
+      "type": "official",
+      "accessed": "2026-10-11",
+      "supports": [
+        "path-frequency",
+        "path-cross-honoring",
+        "cross-honoring",
+        "october-12-schedule"
+      ]
+    },
+    "path-approved-fare-changes": {
+      "title": "Approved PATH Fare Changes for 2026",
+      "url": "https://www.panynj.gov/content/dam/corporate/public-hearings-pdfs/Approved_Fare_Changes_PATH.pdf",
+      "publisher": "Port Authority of NY & NJ",
+      "type": "official",
+      "accessed": "2026-10-11",
+      "supports": [
+        "path-fare"
+      ]
+    },
+    "amtrak-press-release-phase2": {
+      "title": "Portal North Bridge: Final Track Cutover (September 17, 2026)",
+      "url": "https://media.amtrak.com/2026/09/portal-north-bridge-enters-final-phase-of-construction-as-work-begins-to-put-final-track-into-service/",
+      "publisher": "Amtrak",
+      "type": "official",
+      "accessed": "2026-10-11",
+      "supports": [
+        "cutover-dates",
+        "phase2-expected",
+        "gateway-program"
+      ]
+    },
+    "nywaterway-bus-routes": {
+      "title": "NY Waterway Bus Routes and Schedules",
+      "url": "https://www.nywaterway.com/BusStopsSchedules.aspx",
+      "publisher": "NY Waterway",
+      "type": "official",
+      "accessed": "2026-10-11",
+      "supports": [
+        "ferry-bus-connections"
+      ]
+    },
+    "nywaterway-peak-bus-map": {
+      "title": "Weekday Peak Manhattan Bus Routes, effective September 13, 2026",
+      "url": "https://www.nywaterway.com/UserFiles/Files/2026/BusRouteMaps/2026-09-13/NYWBus_Peak.pdf",
+      "publisher": "NY Waterway",
+      "type": "official",
+      "accessed": "2026-10-11",
+      "supports": [
+        "ferry-bus-connections"
+      ]
+    },
+    "path-tapp-payments": {
+      "title": "TAPP Payments FAQ — Current PATH Fare",
+      "url": "https://www.tappandride.com/faq/loading-value-and-passes",
+      "publisher": "Port Authority of NY & NJ / TAPP",
+      "type": "official",
+      "accessed": "2026-10-11",
+      "supports": [
+        "path-fare"
       ]
     }
   },
   "claims": {
     "cutover-dates": {
-      "claim": "Phase 2 of the Portal Bridge cutover runs from October 11 to November 15, 2026 (schedules in effect Oct 11; regular service resumes Nov 15 subject to testing)",
-      "sources": ["njtransit-portal-cutover", "njtransit-press-release-phase2"],
+      "claim": "NJ TRANSIT temporary Phase 2 schedules apply October 11–November 14, 2026. Regular schedules are expected November 15, subject to safety testing.",
+      "sources": [
+        "njtransit-phase2-service-advisory",
+        "njtransit-portal-cutover"
+      ],
       "status": "verified",
-      "lastVerified": "2026-09-20"
+      "lastVerified": "2026-10-11"
     },
     "train-counts": {
-      "claim": "Phase 2 weekday train count reductions: M-B 64→60, M&E 148→139, NEC 133→113, NJCL 99→87, RVL 51→50",
-      "sources": ["njtransit-phase2-briefing", "njtransit-portal-cutover"],
+      "claim": "Phase 2 weekday train counts: M-B 64→60; M&E 148→139; NEC 133→113; NJCL 99→87; RVL 51→50.",
+      "sources": [
+        "njtransit-phase2-briefing"
+      ],
       "status": "verified",
-      "lastVerified": "2026-09-20"
+      "lastVerified": "2026-10-11",
+      "note": "Briefing page 14. These are weekday line totals, not Sunday counts or a systemwide reduction percentage."
     },
     "hoboken-diversion": {
-      "claim": "All weekday Midtown Direct trains on M-B and M&E lines diverted to Hoboken Terminal",
-      "sources": ["njtransit-portal-cutover", "njtransit-press-release"],
+      "claim": "Weekday Midtown Direct M&E, Gladstone and Montclair-Boonton trains divert to Hoboken during Phase 2.",
+      "sources": [
+        "njtransit-phase2-service-advisory"
+      ],
       "status": "verified",
-      "lastVerified": "2026-02-14"
+      "lastVerified": "2026-10-11"
     },
     "weekend-service": {
-      "claim": "Weekend Midtown Direct service to Penn Station NY continues for M-B and M&E",
-      "sources": ["njtransit-portal-cutover", "njtransit-press-release"],
+      "claim": "Weekend Midtown Direct trains continue to PSNY, on adjusted schedules.",
+      "sources": [
+        "njtransit-phase2-service-advisory",
+        "njtransit-phase2-briefing"
+      ],
       "status": "verified",
-      "lastVerified": "2026-02-14"
+      "lastVerified": "2026-10-11"
     },
     "cross-honoring": {
-      "claim": "NJ Transit passes/tickets cross-honored on PATH (Hoboken↔33rd St), NY Waterway ferry (Hoboken↔W 39th St), and Bus 126 (Hoboken↔Port Authority)",
-      "sources": ["njtransit-portal-cutover", "njtransit-press-release"],
+      "claim": "Eligible Midtown Direct Hoboken tickets/passes: PATH at Hoboken/33rd only; weekday NY Waterway Hoboken Terminal–W39th; NJ TRANSIT 126 to/from PABT, including Academy-operated 126 buses.",
+      "sources": [
+        "njtransit-phase2-service-advisory",
+        "path-phase2-advisory"
+      ],
       "status": "verified",
-      "lastVerified": "2026-02-14"
+      "lastVerified": "2026-10-11",
+      "note": "See path-cross-honoring for designated gates and peak-direction restrictions; do not imply all PATH/ferry routes or all NJ TRANSIT tickets qualify."
     },
     "single-track-operations": {
-      "claim": "Single-track operation between Newark Penn Station and Secaucus Junction during cutover",
-      "sources": ["njtransit-press-release", "amtrak-press-release"],
+      "claim": "Single-track operation between Newark and Secaucus during Phase 2.",
+      "sources": [
+        "njtransit-portal-cutover",
+        "njtransit-phase2-briefing"
+      ],
       "status": "verified",
-      "lastVerified": "2026-02-14"
+      "lastVerified": "2026-10-11"
     },
     "rvl-one-seat-ride": {
-      "claim": "All Raritan Valley Line one-seat rides to Penn Station NY are suspended during cutover",
-      "sources": ["njtransit-portal-cutover"],
+      "claim": "RVL one-seat PSNY trains originate/terminate at Newark Penn during the temporary schedule period.",
+      "sources": [
+        "njtransit-phase2-service-advisory"
+      ],
       "status": "verified",
-      "lastVerified": "2026-02-14"
+      "lastVerified": "2026-10-11"
     },
     "path-travel-time": {
       "claim": "PATH Hoboken to 33rd Street takes approximately 15 minutes",
-      "sources": ["path-schedules"],
-      "status": "verified",
-      "lastVerified": "2026-02-14"
+      "sources": [
+        "path-schedules"
+      ],
+      "status": "unverified",
+      "lastVerified": "2026-02-14",
+      "scope": "Planning estimate",
+      "note": "Previously recorded estimate; current cutover timetable and observed journey times were not verified on October 11. Do not label as a guaranteed or current verified duration."
     },
     "path-frequency": {
-      "claim": "PATH Hoboken–33rd St runs every 3–5 min during peak, 10–15 min off-peak",
-      "sources": ["path-schedules"],
+      "claim": "Phase 2 weekday Hoboken–33rd PATH: every 6 minutes 7–9:30am and 4–7pm. Hoboken–WTC also receives 6-minute evening service.",
+      "sources": [
+        "path-phase2-advisory"
+      ],
       "status": "verified",
-      "lastVerified": "2026-02-14"
+      "lastVerified": "2026-10-11",
+      "note": "Planned service, not live arrivals. Off-peak and Newark–WTC frequencies were not reverified."
     },
     "ferry-travel-time": {
       "claim": "NY Waterway ferry Hoboken to W. 39th St takes approximately 10–12 minutes",
-      "sources": ["nywaterway-schedules"],
-      "status": "verified",
-      "lastVerified": "2026-02-14"
+      "sources": [
+        "nywaterway-schedules"
+      ],
+      "status": "unverified",
+      "lastVerified": "2026-02-14",
+      "scope": "Planning estimate",
+      "note": "Previously recorded estimate; current cutover timetable and observed journey times were not verified on October 11. Do not label as a guaranteed or current verified duration."
     },
     "bus-126-travel-time": {
       "claim": "Bus 126 from Hoboken to Port Authority takes 20–40 minutes depending on traffic",
-      "sources": ["njtransit-bus-126"],
-      "status": "verified",
-      "lastVerified": "2026-02-14"
+      "sources": [
+        "njtransit-bus-126"
+      ],
+      "status": "unverified",
+      "lastVerified": "2026-02-14",
+      "scope": "Planning estimate",
+      "note": "Previously recorded estimate; current cutover timetable and observed journey times were not verified on October 11. Do not label as a guaranteed or current verified duration."
     },
     "bridge-age": {
       "claim": "The Portal Bridge opened November 27, 1910 (115 years old as of 2026)",
-      "sources": ["amtrak-press-release", "wikipedia-portal-bridge"],
+      "sources": [
+        "amtrak-press-release",
+        "wikipedia-portal-bridge"
+      ],
       "status": "verified",
       "lastVerified": "2026-02-14"
     },
     "50-percent-reduction": {
       "claim": "Approximately 50% service reduction between Newark and New York Penn Station",
-      "sources": ["njtransit-portal-cutover", "njtransit-press-release"],
-      "status": "verified",
+      "sources": [
+        "njtransit-portal-cutover",
+        "njtransit-press-release"
+      ],
+      "status": "unverified",
       "lastVerified": "2026-02-14",
-      "note": "Some sources report 53%; 50% is the NJ Transit-stated approximation"
+      "note": "Original evidence was February Phase 1. September 2026 secondary reports also describe roughly 50% fewer trains in the Newark–New York/Portal corridor, so this is not established as false or Phase 1-only. Current written primary sources checked do not establish the percentage; use the verified weekday line counts or clearly attribute a corridor-level news estimate. Do not generalize to systemwide cancellations.",
+      "scope": "Corridor-level percentage; not independently verified from current written primary sources"
     },
     "40000-man-hours": {
-      "claim": "The cutover engineering work requires 40,000 man-hours",
-      "sources": ["njtransit-press-release", "amtrak-press-release"],
+      "claim": "Phase 2 estimated labor: approximately 40,000 man-hours.",
+      "sources": [
+        "njtransit-phase2-briefing"
+      ],
       "status": "verified",
-      "lastVerified": "2026-02-14"
+      "lastVerified": "2026-10-11",
+      "note": "Briefing page 8; estimate, not completed work."
     },
     "workers-per-shift": {
-      "claim": "70–90 workers per shift across two daily shifts, seven days a week",
-      "sources": ["njtransit-press-release", "amtrak-press-release"],
+      "claim": "Phase 2 staffing estimate: 50–75 workers per shift, two shifts daily, seven days per week.",
+      "sources": [
+        "njtransit-phase2-briefing"
+      ],
       "status": "verified",
-      "lastVerified": "2026-02-14"
+      "lastVerified": "2026-10-11",
+      "note": "Briefing page 8; replaces the Phase 1 staffing figure."
     },
     "phase2-expected": {
-      "claim": "Phase 2 (second track cutover) runs Oct 11 – Nov 15, 2026",
-      "sources": ["njtransit-press-release-phase2", "njtransit-portal-cutover"],
+      "claim": "Final-track construction began October 9; NJ TRANSIT adjusted schedules start October 11, with regular schedules expected November 15 subject to safety testing.",
+      "sources": [
+        "amtrak-press-release-phase2",
+        "njtransit-portal-cutover"
+      ],
       "status": "verified",
-      "lastVerified": "2026-09-20"
+      "lastVerified": "2026-10-11"
     },
     "gateway-program": {
-      "claim": "Portal North Bridge is a milestone of the Gateway Program",
-      "sources": ["gateway-program", "amtrak-press-release"],
+      "claim": "Portal North Bridge is part of the Gateway Program.",
+      "sources": [
+        "njtransit-portal-cutover"
+      ],
       "status": "verified",
-      "lastVerified": "2026-02-14"
+      "lastVerified": "2026-10-11"
     },
     "all-lines-affected": {
-      "claim": "All NJ Transit rail lines except Atlantic City Rail Line are affected",
-      "sources": ["njtransit-portal-cutover", "njtransit-press-release"],
+      "claim": "All NJ TRANSIT rail lines except Atlantic City have temporary schedule adjustments.",
+      "sources": [
+        "njtransit-phase2-service-advisory"
+      ],
       "status": "verified",
-      "lastVerified": "2026-02-14"
+      "lastVerified": "2026-10-11"
     },
     "flexpass": {
-      "claim": "Special FLEXPASS (20-trip ticket, 15% discount) available starting February 15",
-      "sources": ["njtransit-portal-cutover"],
+      "claim": "FLEXPASS is on sale for Phase 2: 20 trips with a 15% discount.",
+      "sources": [
+        "njtransit-portal-cutover"
+      ],
       "status": "verified",
-      "lastVerified": "2026-02-14"
+      "lastVerified": "2026-10-11"
     },
     "presidents-day-schedule": {
       "claim": "Feb 16 (Presidents' Day) runs holiday/weekend schedule; weekday Hoboken diversions begin Feb 17",
-      "sources": ["njtransit-portal-cutover"],
+      "sources": [
+        "njtransit-portal-cutover"
+      ],
       "status": "verified",
-      "lastVerified": "2026-02-14"
+      "lastVerified": "2026-02-14",
+      "scope": "Historical Phase 1, February 2026 only",
+      "note": "Retained as historical metadata; not reverified October 11 and does not describe October 12, which uses the weekday cutover schedule. The mutable portal page now describes Phase 2."
     },
     "fare-data": {
-      "claim": "Hoboken monthly and one-way tickets cost less than Penn Station NY tickets. NJ Transit says riders can save up to 25% per trip, and PATH/ferry from Hoboken is cross-honored. Exact dollar fares must be checked at njtransit.com after the July 1, 2026 increase.",
-      "sources": ["njtransit-fares", "njtransit-portal-cutover"],
+      "claim": "NJT says eligible Midtown Direct riders buying Hoboken tickets and using cross-honored PATH/ferry can save up to 25% per trip, depending on origin.",
+      "sources": [
+        "njtransit-portal-cutover"
+      ],
       "status": "verified",
-      "lastVerified": "2026-09-20",
-      "note": "Dollar amounts are omitted from the impact card until post-July-1 official zone fares are recorded."
+      "lastVerified": "2026-10-11",
+      "note": "Exact station/zone dollar fares were not reverified and must not be presented as current verified fare data."
     },
     "station-list-montclair-boonton": {
       "claim": "24 stations on Montclair-Boonton Line (10 Montclair branch, 14 Boonton branch)",
-      "sources": ["njtransit-montclair-boonton"],
+      "sources": [
+        "njtransit-montclair-boonton"
+      ],
       "status": "verified",
       "lastVerified": "2026-02-14"
     },
     "station-list-morris-essex": {
       "claim": "28 stations on Morris & Essex Lines (16 Morristown, 12 Gladstone)",
-      "sources": ["njtransit-morristown", "njtransit-gladstone"],
+      "sources": [
+        "njtransit-morristown",
+        "njtransit-gladstone"
+      ],
       "status": "verified",
       "lastVerified": "2026-02-14"
     },
     "station-list-northeast-corridor": {
       "claim": "15 stations on Northeast Corridor (Trenton to Secaucus Junction)",
-      "sources": ["njtransit-nec"],
+      "sources": [
+        "njtransit-nec"
+      ],
       "status": "verified",
       "lastVerified": "2026-02-14"
     },
     "station-list-north-jersey-coast": {
       "claim": "19 stations on North Jersey Coast Line (Bay Head to Avenel)",
-      "sources": ["njtransit-njcl"],
+      "sources": [
+        "njtransit-njcl"
+      ],
       "status": "verified",
       "lastVerified": "2026-02-14"
     },
     "station-list-raritan-valley": {
       "claim": "16 stations on Raritan Valley Line (High Bridge to Union)",
-      "sources": ["njtransit-rvl"],
+      "sources": [
+        "njtransit-rvl"
+      ],
       "status": "verified",
       "lastVerified": "2026-02-14"
     },
     "path-fare": {
-      "claim": "PATH fare is $2.75 per ride",
-      "sources": ["path-fares"],
+      "claim": "Standard PATH single-ride fare is $3.25.",
+      "sources": [
+        "path-tapp-payments",
+        "path-approved-fare-changes"
+      ],
       "status": "verified",
-      "lastVerified": "2026-02-14"
+      "lastVerified": "2026-10-11",
+      "note": "Current TAPP Payments FAQ explicitly states a $3.25 one-way fare. Approved fare sheet retained as supporting background; no claim about exact May implementation date."
     },
     "project-cost": {
       "claim": "Portal North Bridge project cost approximately $1.8–2.3 billion",
-      "sources": ["wikipedia-portal-north", "gateway-program"],
+      "sources": [
+        "wikipedia-portal-north",
+        "gateway-program"
+      ],
       "status": "verified",
       "lastVerified": "2026-02-14",
       "note": "Cost varies by source and what is included. FFGA amount is $1.73B; total project cost reported up to $2.3B"
+    },
+    "weekend-schedule-changes": {
+      "claim": "Weekend hourly timings may shift up to 30 minutes; Montclair remains bi-hourly with changed connections. Last Montclair/Gladstone connecting trips run 30 minutes earlier. Morristown–Hoboken connections move to Secaucus.",
+      "sources": [
+        "njtransit-phase2-briefing"
+      ],
+      "status": "verified",
+      "lastVerified": "2026-10-11",
+      "note": "Briefing page 15. Check individual temporary timetables."
+    },
+    "weekend-ticket-validity": {
+      "claim": "Hoboken monthly/weekly passes and FLEXPASS are honored for weekend PSNY travel; one-way tickets must have a PSNY destination.",
+      "sources": [
+        "njtransit-phase2-service-advisory"
+      ],
+      "status": "verified",
+      "lastVerified": "2026-10-11"
+    },
+    "path-cross-honoring": {
+      "claim": "PATH accepts eligible Midtown Direct tickets at designated Hoboken turnstiles during morning peak and at 33rd Street in the peak travel direction. Newark and WTC are excluded.",
+      "sources": [
+        "path-phase2-advisory"
+      ],
+      "status": "verified",
+      "lastVerified": "2026-10-11",
+      "note": "NJT describes station eligibility more generally. Follow PATH staff guidance outside the explicitly described peak-direction arrangements; all-day acceptance was not independently established."
+    },
+    "october-12-schedule": {
+      "claim": "Monday October 12 uses NJ TRANSIT weekday cutover schedules; PATH operates regular weekday service with additional cutover trains.",
+      "sources": [
+        "njtransit-portal-cutover",
+        "path-phase2-advisory"
+      ],
+      "status": "verified",
+      "lastVerified": "2026-10-11"
+    },
+    "brielle-replacement": {
+      "claim": "Buses replace Bay Head–Manasquan trains during Brielle work October 11–25.",
+      "sources": [
+        "njtransit-phase2-service-advisory",
+        "njtransit-brielle-service-advisory"
+      ],
+      "status": "verified",
+      "lastVerified": "2026-10-11"
+    },
+    "brielle-accessibility": {
+      "claim": "Customers needing accessible boarding must board at Point Pleasant Beach; the bus continues to Asbury Park for train connections.",
+      "sources": [
+        "njtransit-brielle-service-advisory"
+      ],
+      "status": "verified",
+      "lastVerified": "2026-10-11"
+    },
+    "ferry-bus-connections": {
+      "claim": "NY Waterway publishes weekday peak routes on W34th/23rd, W42nd, W50th, W57th and a limited downtown route.",
+      "sources": [
+        "nywaterway-bus-routes",
+        "nywaterway-peak-bus-map"
+      ],
+      "status": "verified",
+      "lastVerified": "2026-10-11",
+      "note": "The September 13 map does not establish a Wall Street shuttle stop. Check current route-specific schedules."
+    },
+    "ferry-service-window": {
+      "claim": "Hoboken/NJT Terminal–Midtown W39th ferry operates weekdays during morning and evening commuting hours.",
+      "sources": [
+        "nywaterway-schedules"
+      ],
+      "status": "verified",
+      "lastVerified": "2026-10-11",
+      "note": "NJT promises enhanced Phase 2 peak service; exact special departure times were not established from the baseline NY Waterway route page."
     }
-  }
+  },
+  "verificationNote": "Partial authoritative-source review on October 11, 2026. Per-claim dates and statuses control freshness; this timestamp does not reverify every source or claim."
 }

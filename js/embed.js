@@ -146,13 +146,41 @@
     return BASE_URL;
   }
 
+  function getExtraNotes(lineId, line) {
+    var prefixes = {
+      "montclair-boonton": "mb", "morris-essex": "me",
+      "northeast-corridor": "nec", "north-jersey-coast": "njcl",
+      "raritan-valley": "rvl"
+    };
+    var translations = window._T && window._T.js || {};
+    var notes = line.extraNotes || [];
+    var translated = [];
+    for (var i = 0; i < notes.length; i++) {
+      translated.push(translations["extra_" + prefixes[lineId] + "_" + i] || notes[i]);
+    }
+    return translated;
+  }
+
+  // JSON inside a script element needs script-context escaping as well as
+  // esc() when its values are subsequently inserted into HTML.
+  function scriptJson(value) {
+    return JSON.stringify(value).replace(/</g, "\\u003c").replace(/\u2028/g, "\\u2028").replace(/\u2029/g, "\\u2029");
+  }
+
   // =========================================================================
   // IFRAME DIMENSIONS
   // =========================================================================
   function getDefaultDimensions() {
     var type = state.embedType;
     if (type === "card") {
-      var h = (state.cardType === "summary") ? "500" : "400";
+      var h = (state.cardType === "summary") ? 500 : 620;
+      if (state.cardType !== "summary" && LINE_DATA[state.lineId]) {
+        var notes = getExtraNotes(state.lineId, LINE_DATA[state.lineId]);
+        for (var i = 0; i < notes.length; i++) {
+          h += Math.ceil(notes[i].length / 42) * 24 + 12;
+        }
+      }
+      h = String(h);
       return { width: "480", height: h };
     }
     if (type === "widget") {
@@ -184,6 +212,7 @@
 
     if (state.embedType === "card") {
       attrs += ' data-card-type="' + esc(state.cardType) + '"';
+      attrs += ' data-height="' + esc(getDefaultDimensions().height) + 'px"';
       if (state.lineId) {
         attrs += ' data-line="' + esc(state.lineId) + '"';
       }
@@ -472,6 +501,15 @@
       }
     }
 
+    // Localize a private copy: the download must not change shared LINE_DATA.
+    for (var dataId in dataObj) {
+      if (dataObj.hasOwnProperty(dataId)) {
+        var originalLine = dataObj[dataId];
+        dataObj[dataId] = JSON.parse(JSON.stringify(originalLine));
+        dataObj[dataId].extraNotes = getExtraNotes(dataId, originalLine);
+      }
+    }
+
     var bodyClass = state.theme === "dark" ? ' class="theme-dark"' : "";
 
     // Build CT (card translations) from window._T.card if on a translated page
@@ -497,14 +535,14 @@
       plan_your_commute: "Plan your commute",
       full_details: "Full details",
       summary_title: "Portal Bridge cutover",
-      summary_desc: "Five NJ Transit lines affected from Oct 11 \u2013 Nov 15, 2026. Service reduced while the second track moves onto Portal North Bridge.",
+      summary_desc: "Guide to five affected NJ Transit lines during Oct 11 \u2013 Nov 15, 2026. Service is reduced while the second track moves onto Portal North Bridge.",
       suspended: "Suspended",
       zone: "Zone",
       powered_by: "Powered by Reroute NJ \u00B7 reroutenj.org"
     };
     if (window._T && window._T.card) {
       for (var ctKey in window._T.card) {
-        if (window._T.card.hasOwnProperty(ctKey) && ct.hasOwnProperty(ctKey)) {
+        if (window._T.card.hasOwnProperty(ctKey) && (ct.hasOwnProperty(ctKey) || ctKey.indexOf("line_summary_") === 0)) {
           ct[ctKey] = window._T.card[ctKey];
         }
       }
@@ -579,9 +617,9 @@
       '  <div id="card-root"></div>\n' +
       '  <div class="card-attribution">Powered by <a href="https://reroutenj.org" target="_blank" rel="noopener">Reroute NJ</a></div>\n' +
       '  <script>\n' +
-      '    var LINE_DATA = ' + JSON.stringify(dataObj) + ';\n' +
-      '    var LINE_ORDER = ' + JSON.stringify(orderArr) + ';\n' +
-      '    var CT = ' + JSON.stringify(ct) + ';\n' +
+      '    var LINE_DATA = ' + scriptJson(dataObj) + ';\n' +
+      '    var LINE_ORDER = ' + scriptJson(orderArr) + ';\n' +
+      '    var CT = ' + scriptJson(ct) + ';\n' +
       '\n' +
       '    function esc(str) {\n' +
       '      var div = document.createElement("div");\n' +
@@ -600,6 +638,15 @@
       '    function getLineSummary(id, line) {\n' +
       '      var k = "line_summary_" + id;\n' +
       '      return CT[k] || line.summary;\n' +
+      '    }\n' +
+      '\n' +
+      '    function renderExtraNotes(line) {\n' +
+      '      var notes = line.extraNotes || [];\n' +
+      '      var html = "";\n' +
+      '      for (var i = 0; i < notes.length; i++) {\n' +
+      '        html += \'<div class="card-summary card-notice">\' + esc(notes[i]) + "<\\/div>";\n' +
+      '      }\n' +
+      '      return html;\n' +
       '    }\n' +
       '\n' +
       '    function renderLineCard(lineId) {\n' +
@@ -630,6 +677,7 @@
       '          \'<div class="card-line-name">\' + esc(line.name) + "<\\/div>" +\n' +
       '          \'<span class="card-badge \' + badgeClass + \'">\' + esc(getImpactLabel(line.impactType)) + "<\\/span>" +\n' +
       '          \'<div class="card-summary">\' + esc(getLineSummary(lineId, line)) + "<\\/div>" +\n' +
+      '          renderExtraNotes(line) +\n' +
       '          statsHtml +\n' +
       '          \'<div class="card-alternatives"><h4>\' + esc(CT.your_alternatives) + \'<\\/h4>\' + altHtml + "<\\/div>" +\n' +
       '          \'<div class="card-dates">\' + esc(CT.date_range) + \'<\\/div>\' +\n' +
@@ -662,6 +710,7 @@
       '          \'<div class="card-line-context">\' + esc(line.name) + " \\u00B7 " + esc(CT.zone) + " " + esc(String(station.zone)) + "<\\/div>" +\n' +
       '          \'<span class="card-badge \' + badgeClass + \'">\' + esc(getImpactLabel(line.impactType)) + "<\\/span>" +\n' +
       '          \'<div class="card-summary">\' + esc(getLineSummary(lineId, line)) + "<\\/div>" +\n' +
+      '          renderExtraNotes(line) +\n' +
       '          \'<div class="card-alternatives"><h4>\' + esc(CT.your_alternatives) + \'<\\/h4>\' + altHtml + "<\\/div>" +\n' +
       '          \'<div class="card-dates">\' + esc(CT.date_range) + \'<\\/div>\' +\n' +
       '          \'<a class="card-cta" href="https://reroutenj.org/?line=\' + esc(lineId) + \'&station=\' + esc(stationId) + \'" target="_blank" rel="noopener">\' + esc(CT.full_details) + \'<\\/a>\' +\n' +
@@ -694,9 +743,9 @@
       '      return html;\n' +
       '    }\n' +
       '\n' +
-      '    var cardType = ' + JSON.stringify(state.cardType) + ';\n' +
-      '    var lineId = ' + JSON.stringify(state.lineId || null) + ';\n' +
-      '    var stationId = ' + JSON.stringify(state.stationId || null) + ';\n' +
+      '    var cardType = ' + scriptJson(state.cardType) + ';\n' +
+      '    var lineId = ' + scriptJson(state.lineId || null) + ';\n' +
+      '    var stationId = ' + scriptJson(state.stationId || null) + ';\n' +
       '    var root = document.getElementById("card-root");\n' +
       '    var rendered;\n' +
       '    if (cardType === "line" && lineId) {\n' +

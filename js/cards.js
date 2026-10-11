@@ -62,7 +62,7 @@
     plan_your_commute: "Plan your commute",
     full_details: "Full details",
     summary_title: "Portal Bridge cutover",
-    summary_desc: "Five NJ Transit lines affected from Oct 11 \u2013 Nov 15, 2026. Service reduced while the second track moves onto Portal North Bridge.",
+    summary_desc: "Guide to five affected NJ Transit lines during Oct 11 \u2013 Nov 15, 2026. Service is reduced while the second track moves onto Portal North Bridge.",
     suspended: "Suspended",
     zone: "Zone",
     powered_by: "Powered by Reroute NJ \u00B7 reroutenj.org",
@@ -79,6 +79,32 @@
   function getLineSummary(lineId, line) {
     var key = "line_summary_" + lineId;
     return CT[key] || line.summary;
+  }
+
+  // The line guide stores operational notices under js.extra_<line>_<index>.
+  // Cards load that same translation section so every export keeps the notices.
+  var noteTranslations = window._T && window._T.js || {};
+  function getExtraNotes(lineId, line) {
+    var prefixes = {
+      "montclair-boonton": "mb", "morris-essex": "me",
+      "northeast-corridor": "nec", "north-jersey-coast": "njcl",
+      "raritan-valley": "rvl"
+    };
+    var notes = line.extraNotes || [];
+    var translated = [];
+    for (var i = 0; i < notes.length; i++) {
+      translated.push(noteTranslations["extra_" + prefixes[lineId] + "_" + i] || notes[i]);
+    }
+    return translated;
+  }
+
+  function renderExtraNotes(lineId, line) {
+    var notes = getExtraNotes(lineId, line);
+    var html = "";
+    for (var i = 0; i < notes.length; i++) {
+      html += '<div class="card-summary card-notice">' + esc(notes[i]) + '</div>';
+    }
+    return html;
   }
 
   function getImpactLabel(impactType) {
@@ -116,6 +142,7 @@
       if (xhr.status === 200) {
         try {
           var data = JSON.parse(xhr.responseText);
+          noteTranslations = data.js || {};
           if (data.card) {
             for (var key in data.card) {
               if (data.card.hasOwnProperty(key) && CT.hasOwnProperty(key)) {
@@ -170,6 +197,7 @@
         '<div class="card-line-name">' + esc(line.name) + "</div>" +
         '<span class="card-badge ' + badgeClass + '">' + esc(getImpactLabel(line.impactType)) + "</span>" +
         '<div class="card-summary">' + esc(getLineSummary(lineId, line)) + "</div>" +
+        renderExtraNotes(lineId, line) +
         statsHtml +
         '<div class="card-alternatives"><h4>' + esc(CT.your_alternatives) + '</h4>' + altHtml + "</div>" +
         '<div class="card-dates">' + esc(CT.date_range) + '</div>' +
@@ -206,6 +234,7 @@
         '<div class="card-line-context">' + esc(line.name) + " \u00B7 " + esc(CT.zone) + " " + esc(String(station.zone)) + "</div>" +
         '<span class="card-badge ' + badgeClass + '">' + esc(getImpactLabel(line.impactType)) + "</span>" +
         '<div class="card-summary">' + esc(getLineSummary(lineId, line)) + "</div>" +
+        renderExtraNotes(lineId, line) +
         '<div class="card-alternatives"><h4>' + esc(CT.your_alternatives) + '</h4>' + altHtml + "</div>" +
         '<div class="card-dates">' + esc(CT.date_range) + '</div>' +
         '<a class="card-cta" href="https://reroutenj.org/?line=' + esc(lineId) + '&station=' + esc(stationId) + '" target="_blank" rel="noopener">' + esc(CT.full_details) + '</a>' +
@@ -257,16 +286,28 @@
   }
 
   function wrapText(ctx, text, x, y, maxWidth, lineHeight) {
-    var words = text.split(" ");
+    var words = text.split(/\s+/);
     var line = "";
     var lines = [];
     for (var i = 0; i < words.length; i++) {
-      var test = line ? line + " " + words[i] : words[i];
+      var word = words[i];
+      var test = line ? line + " " + word : word;
       if (ctx.measureText(test).width > maxWidth && line) {
         lines.push(line);
-        line = words[i];
+        line = "";
+      }
+      // Chinese notices and long unbroken tokens also need safe wrapping.
+      if (ctx.measureText(word).width > maxWidth) {
+        var chars = word.match(/[\uD800-\uDBFF][\uDC00-\uDFFF]|[\s\S]/g) || [];
+        for (var c = 0; c < chars.length; c++) {
+          if (line && ctx.measureText(line + chars[c]).width > maxWidth) {
+            lines.push(line);
+            line = "";
+          }
+          line += chars[c];
+        }
       } else {
-        line = test;
+        line = line ? line + " " + word : word;
       }
     }
     if (line) lines.push(line);
@@ -276,11 +317,11 @@
     return lines.length;
   }
 
-  function renderCardToCanvas(type, lineId, stationId, theme, accent) {
+  function renderCardToCanvas(type, lineId, stationId, theme, accent, contentHeight) {
     var isDark = theme === "dark";
     var isSummary = type === "summary" || (!lineId && type !== "station");
     var width = 600;
-    var height = isSummary ? 500 : 400;
+    var height = contentHeight || (isSummary ? 500 : 400);
     var pad = 24;
     var canvas = document.createElement("canvas");
     canvas.width = width;
@@ -365,6 +406,13 @@
     var summaryLines = wrapText(ctx, getLineSummary(lineId, line), pad, curY + 12, width - pad * 2, 20);
     curY += summaryLines * 20 + 18;
 
+    // Keep service exceptions beside the summary, before general alternatives.
+    var notes = getExtraNotes(lineId, line);
+    for (var ni = 0; ni < notes.length; ni++) {
+      var noteLines = wrapText(ctx, notes[ni], pad, curY + 12, width - pad * 2, 20);
+      curY += noteLines * 20 + 12;
+    }
+
     // Train stats
     if (typeof line.trainsBefore === "number") {
       var statBoxWidth = (width - pad * 2 - 16) / 2;
@@ -410,8 +458,8 @@
       ctx.font = "12px " + FONT_FAMILY;
       for (var ai = 0; ai < alts.length; ai++) {
         ctx.fillStyle = bodyColor;
-        ctx.fillText(alts[ai], pad, curY + 12);
-        curY += 20;
+        var altLines = wrapText(ctx, alts[ai], pad, curY + 12, width - pad * 2, 18);
+        curY += altLines * 18 + 8;
         if (ai < alts.length - 1) {
           ctx.strokeStyle = isDark ? "#2d3e54" : "#f0f2f5";
           ctx.beginPath();
@@ -427,6 +475,13 @@
     ctx.fillStyle = subtextColor;
     ctx.font = "12px " + FONT_FAMILY;
     ctx.fillText(CT.date_range, pad, curY + 10);
+
+    // The first pass measures real wrapped content. Redraw at its full height
+    // instead of clipping notices or painting the footer over the dates.
+    var requiredHeight = curY + 48;
+    if (requiredHeight > height) {
+      return renderCardToCanvas(type, lineId, stationId, theme, accent, requiredHeight);
+    }
 
     // Attribution at bottom
     ctx.fillStyle = "#9eaab8";

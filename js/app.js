@@ -272,7 +272,7 @@
       '<a href="' + esc(cutoverUrl) + '" target="_blank" rel="noopener">NJ Transit cutover page</a>' +
       ' · <a href="' + esc(pressUrl) + '" target="_blank" rel="noopener">NJ Transit/Amtrak press release</a>' +
       ' · <a href="https://www.panynj.gov/path/en/schedules-maps.html" target="_blank" rel="noopener">PATH schedules</a>' +
-      ' · <a href="https://www.nywaterway.com/HobokenMidtown.aspx" target="_blank" rel="noopener">NY Waterway</a>' +
+      ' · <a href="https://www.nywaterway.com/Hoboken-NJTT-MidtownRoute.aspx" target="_blank" rel="noopener">NY Waterway</a>' +
       "</p></div>"
     );
   }
@@ -413,11 +413,15 @@
   // --- Impact: Reduced service ---
   function renderReducedServiceImpact(line, station) {
     var isReverse = currentDirection === "nyc-to-nj";
+    var brielleBus = currentLineId === "north-jersey-coast" &&
+      (station.id === "bay-head" || station.id === "point-pleasant") &&
+      new Date() >= new Date("2026-10-11T00:00:00-04:00") &&
+      new Date() < new Date("2026-10-26T00:00:00-04:00");
     var changes = [
       isReverse
         ? "Your evening train from Penn Station New York to " + esc(station.name) + " still runs — but there are fewer of them. " + esc(line.name) + " is reduced from " + line.trainsBefore + " to " + line.trainsAfter + " weekday trains."
         : "Your train still goes to Penn Station New York — but there are fewer of them. " + esc(line.name) + " is reduced from " + line.trainsBefore + " to " + line.trainsAfter + " weekday trains.",
-      "Single-track operation between Newark and Secaucus means delays of 15–30+ minutes are common, especially during peak hours.",
+      "Single-track operation between Newark and Secaucus can lengthen trips. Check your specific departure and allow extra time.",
       "Check the temporary schedule carefully. Your specific train may be eliminated or retimed.",
       "No ticket changes needed — buy your normal Penn Station tickets.",
       isReverse
@@ -427,6 +431,10 @@
 
     if (currentLineId === "north-jersey-coast" && (station.id === "perth-amboy" || station.id === "woodbridge")) {
       changes.push("Perth Amboy and Woodbridge riders: Your rail pass or ticket is cross-honored on NJ Transit buses from Perth Amboy or Woodbridge to the Port Authority Bus Terminal.");
+    }
+
+    if (brielleBus) {
+      changes[0] = esc(t("js.extra_njcl_0"));
     }
 
     var beforeFlow, afterFlow;
@@ -458,6 +466,12 @@
         '<span class="station-tag highlight">Penn Station NY</span>';
     }
 
+    if (brielleBus) {
+      afterFlow = isReverse
+        ? '<span class="station-tag">Penn Station NY</span> &rarr; <span class="station-tag">Manasquan</span> &rarr; <span class="station-tag warning">Replacement bus</span> &rarr; ' + esc(station.name)
+        : esc(station.name) + ' &rarr; <span class="station-tag warning">Replacement bus</span> &rarr; <span class="station-tag">Manasquan</span> &rarr; <span class="station-tag">Penn Station NY</span>';
+    }
+
     return (
       '<div class="impact-card moderate">' +
       makeStationSign(station.name, isReverse ? "TO " + station.name.toUpperCase() : "TO NEW YORK", line) +
@@ -475,14 +489,14 @@
       '<div class="after">' +
       "<h3>" + t("js.during_cutover_short") + "</h3>" +
       '<div class="route-flow">' + afterFlow + "</div>" +
-      '<p class="route-note">Same ' + (isReverse ? "origin" : "destination") + ", fewer trains (" + line.trainsAfter + " weekday trains). Expect delays from single-track operations at the Portal Bridge.</p>" +
+      '<p class="route-note">' + (brielleBus ? esc(t("js.extra_njcl_0")) : "Same " + (isReverse ? "origin" : "destination") + ", fewer trains (" + line.trainsAfter + " weekday trains). Allow extra time for single-track operations at the Portal Bridge.") + "</p>" +
       "</div>" +
       "</div>" +
       '<div class="key-changes"><h3>' + t("js.what_you_need_to_know") + '</h3><ul>' +
       changes.map(function (c) { return "<li>" + c + "</li>"; }).join("") +
       "</ul></div>" +
       makeExtraNotes(line) +
-      '<div class="weekend-note"><strong>Tip:</strong> Your route doesn\'t change, but your schedule does. Download the temporary schedule PDF from <a href="https://www.njtransit.com/portalcutover" target="_blank" rel="noopener">njtransit.com/portalcutover</a> and find your specific trains.</div>' +
+      '<div class="weekend-note"><strong>Tip:</strong> Check all connections and any replacement buses before traveling. Download the temporary schedule PDF from <a href="https://www.njtransit.com/portalcutover" target="_blank" rel="noopener">njtransit.com/portalcutover</a> and find your specific trains.</div>' +
       makeSourceFooter(line) +
       "</div></div>"
     );
@@ -497,7 +511,7 @@
         "Your one-seat ride from Penn Station New York to " + esc(station.name) + " is suspended for the duration of the cutover.",
         "All Raritan Valley Line trains now originate and terminate at Newark Penn Station.",
         "To reach " + esc(station.name) + ", take a Northeast Corridor train from Penn Station NY to Newark Penn (~20 min), then transfer to a Raritan Valley Line train.",
-        "The transfer at Newark Penn adds 15–30 minutes to your commute depending on connection timing.",
+        "Allow extra transfer time at Newark Penn; waits depend on the temporary timetable and actual service.",
         "Check the temporary NEC evening schedule to find the best connection with RVL departures from Newark Penn.",
       ];
     } else {
@@ -505,7 +519,7 @@
         "Your one-seat ride to Penn Station New York is suspended for the duration of the cutover.",
         "All Raritan Valley Line trains now originate and terminate at Newark Penn Station.",
         "To reach Penn Station NY, transfer at Newark Penn to a Northeast Corridor train (reduced service, ~20 min to PSNY).",
-        "The transfer at Newark Penn adds 15–30 minutes to your commute depending on connection timing.",
+        "Allow extra transfer time at Newark Penn; waits depend on the temporary timetable and actual service.",
         "Consider shifting your schedule to off-peak hours to get better NEC connections at Newark Penn.",
       ];
     }
@@ -643,12 +657,12 @@
         [
           { label: "From", value: "Hoboken Terminal" },
           { label: "To", value: "33rd Street, Manhattan" },
-          { label: "Travel time", value: "12–15 min" },
-          { label: "Frequency", value: "Every 3–5 min (peak), 10–15 min (off-peak)" },
-          { label: "Cost", value: "Cross-honored (free with NJ Transit pass/ticket)" },
+          { label: "Estimated travel time", value: "12–15 min" },
+          { label: "Frequency", value: "Every 6 min weekdays 7–9:30am and 4–7pm; check PATH at other times" },
+          { label: "Cost", value: "Weekdays: eligible Midtown Direct Hoboken tickets cross-honored" },
         ],
-        "Fastest option. Direct ride to 33rd St & 6th Ave in Midtown.",
-        "Expect extreme crowding during peak hours (7–9am, 5–7pm). Board at front of train for fastest exit at 33rd St.",
+        "Direct ride to 33rd St & 6th Ave in Midtown.",
+        "Allow extra time for crowding. PATH uses designated cross-honoring turnstiles toward 33rd St in the morning and toward Hoboken in the evening; follow staff directions.",
         "Travel before 7am or after 9am to avoid the worst crowds."
       ) +
       makeRouteCard(
@@ -659,13 +673,13 @@
         [
           { label: "From", value: "Hoboken Terminal ferry dock" },
           { label: "To", value: "W. 39th St, Midtown Manhattan" },
-          { label: "Travel time", value: "10–12 min" },
+          { label: "Estimated travel time", value: "10–12 min" },
           { label: "Frequency", value: "Enhanced service during commute hours" },
-          { label: "Cost", value: "Cross-honored (free with NJ Transit pass/ticket)" },
+          { label: "Cost", value: "Weekdays: eligible Midtown Direct Hoboken tickets cross-honored" },
         ],
-        "Usually less crowded than PATH. Five free connecting bus routes from the Midtown ferry terminal to other parts of Manhattan.",
-        "Can be affected by weather. Limited evening/weekend frequency. Only serves W. 39th St area.",
-        "Check the NY Waterway app for real-time ferry departures. The free connecting buses go to Penn Station, Grand Central, and Wall Street area."
+        "Five free connecting bus routes from the Midtown ferry terminal to other parts of Manhattan.",
+        "Weekday Hoboken Terminal–Midtown service only. Weather and crowding can affect trips; check the ferry timetable.",
+        "Check the NY Waterway app for real-time ferry departures. Check the current Midtown shuttle map for your connecting bus and stop."
       ) +
       makeRouteCard(
         "&#x1F68C;",
@@ -675,9 +689,9 @@
         [
           { label: "From", value: "Hoboken Terminal bus area" },
           { label: "To", value: "Port Authority Bus Terminal (42nd St & 8th Ave)" },
-          { label: "Travel time", value: "20–40 min (traffic dependent)" },
+          { label: "Estimated travel time", value: "20–40 min (traffic dependent)" },
           { label: "Frequency", value: "Regular service throughout the day" },
-          { label: "Cost", value: "Cross-honored (free with NJ Transit pass/ticket)" },
+          { label: "Cost", value: "Weekdays: eligible Midtown Direct Hoboken tickets cross-honored" },
         ],
         "Drops you at Port Authority, useful for Times Square / west Midtown. No additional fare.",
         "Lincoln Tunnel traffic can double the travel time. Standing room likely during peak hours.",
@@ -713,19 +727,20 @@
     return (
       makeRouteCard(
         "&#x1F686;",
-        "Stay on the " + esc(line.shortName),
-        "Same route, new schedule",
+        esc(line.shortName) + " service",
+        "Check trains and connecting services",
         true,
         [
           { label: "Destination", value: "Penn Station New York (unchanged)" },
           { label: "Service level", value: line.trainsBefore + " → " + line.trainsAfter + " weekday trains" },
-          { label: "Extra time", value: "15–30+ min delays likely during peak" },
+          { label: "Extra time", value: "Allow extra time; check the current timetable" },
           { label: "Tickets", value: "No change — buy regular Penn Station tickets" },
         ],
-        "Your route doesn't change. Trains still run to Penn Station NY.",
+        "Trains continue to Penn Station NY. Some journeys require transfers; see any replacement-bus notices below.",
         "Fewer trains and single-track operations mean crowding and delays. Your specific train may be eliminated or retimed.",
         "Download the temporary schedule from njtransit.com/portalcutover. Find your specific trains and plan around them."
       ) +
+      makeExtraNotes(line) +
       busNote +
       makeOtherOptionsCard([
         "<strong>Check your specific trains:</strong> The temporary schedule eliminates or retimes many trains. Don't assume your usual train is running — verify before you leave.",
@@ -748,25 +763,11 @@
           { label: "Then take", value: "Northeast Corridor train to Penn Station NY" },
           { label: "NEC travel time", value: "~20 min (Newark Penn → Penn Station NY)" },
           { label: "NEC frequency", value: "Reduced — 113 weekday trains (down from 133)" },
-          { label: "Tickets", value: "Your existing ticket/pass should cover the transfer" },
+          { label: "Tickets", value: "Use a ticket/pass valid to Penn Station New York" },
         ],
-        "Most direct option. Cross-platform transfer at Newark Penn to an NEC train.",
-        "NEC trains are also reduced, so connections may not be immediate. Allow 15–30 min for transfer + wait time. Peak hours will be crowded.",
+        "Transfer at Newark Penn to an NEC train. Check departure screens and follow signs for the correct platform.",
+        "NEC trains are also reduced, so connections may not be immediate. Allow extra transfer time and check the actual departure schedule.",
         "Check both the Raritan Valley temporary schedule AND the NEC temporary schedule to find the best connection pairs."
-      ) +
-      makeRouteCard(
-        "&#x1F68C;",
-        "NJ Transit bus from Newark",
-        "Bypass rail entirely",
-        false,
-        [
-          { label: "From", value: "Newark Penn Station bus area" },
-          { label: "To", value: "Port Authority Bus Terminal" },
-          { label: "Travel time", value: "30–50 min (traffic dependent)" },
-        ],
-        "Several NJ Transit bus routes connect Newark to Port Authority / Manhattan. Skips the rail bottleneck entirely.",
-        "Subject to Lincoln Tunnel and Newark traffic, especially during peak hours.",
-        "Check NJ Transit bus routes from Newark for your best option."
       ) +
       makeRouteCard(
         "&#x1F687;",
@@ -776,9 +777,9 @@
         [
           { label: "From", value: "Newark Penn Station" },
           { label: "To", value: "World Trade Center, Manhattan" },
-          { label: "Travel time", value: "~25 min" },
-          { label: "Frequency", value: "Every 5–10 min" },
-          { label: "Cost", value: "$2.75 (separate fare)" },
+          { label: "Estimated travel time", value: "~25 min" },
+          { label: "Frequency", value: "Check current PATH schedule" },
+          { label: "Cost", value: "$3.25 (separate fare)" },
         ],
         "PATH runs from Newark Penn to World Trade Center in Lower Manhattan. Good option if your destination is downtown or the Financial District.",
         "This goes to Lower Manhattan, not Midtown. Separate fare required (not cross-honored on this route). Will also be more crowded during cutover.",
@@ -803,13 +804,13 @@
         [
           { label: "From", value: "33rd Street, Manhattan" },
           { label: "To", value: "Hoboken Terminal" },
-          { label: "Travel time", value: "12–15 min" },
-          { label: "Frequency", value: "Every 3–5 min (peak), 10–15 min (off-peak)" },
-          { label: "Cost", value: "Cross-honored (free with NJ Transit pass/ticket)" },
+          { label: "Estimated travel time", value: "12–15 min" },
+          { label: "Frequency", value: "Every 6 min weekdays 7–9:30am and 4–7pm; check PATH at other times" },
+          { label: "Cost", value: "Weekdays: eligible Midtown Direct Hoboken tickets cross-honored" },
         ],
-        "Fastest option. Direct ride from 33rd St & 6th Ave to Hoboken Terminal.",
+        "Direct ride from 33rd St & 6th Ave to Hoboken Terminal.",
         "Expect heavy crowding during evening peak (5–7pm). Trains fill up quickly at 33rd St.",
-        "Board at the front of the PATH train for the closest exit to NJ Transit platforms at Hoboken."
+        "Use the designated cross-honoring turnstiles toward Hoboken in the evening; follow PATH staff directions."
       ) +
       makeRouteCard(
         "&#x26F4;&#xFE0F;",
@@ -819,12 +820,12 @@
         [
           { label: "From", value: "W. 39th St, Midtown Manhattan" },
           { label: "To", value: "Hoboken Terminal ferry dock" },
-          { label: "Travel time", value: "10–12 min" },
+          { label: "Estimated travel time", value: "10–12 min" },
           { label: "Frequency", value: "Enhanced service during commute hours" },
-          { label: "Cost", value: "Cross-honored (free with NJ Transit pass/ticket)" },
+          { label: "Cost", value: "Weekdays: eligible Midtown Direct Hoboken tickets cross-honored" },
         ],
-        "Usually less crowded than PATH. Free connecting buses from Penn Station, Grand Central, and Wall St to the ferry terminal.",
-        "Can be affected by weather. Limited evening frequency. Only departs from W. 39th St.",
+        "Free connecting Midtown buses serve the ferry terminal. Check NY Waterway for current routes and stops.",
+        "Weekday service only. Can be affected by weather; check final departures. Departs from W. 39th St.",
         "Check the NY Waterway app for evening departure times. Free connecting buses depart from multiple Manhattan locations."
       ) +
       makeRouteCard(
@@ -835,18 +836,18 @@
         [
           { label: "From", value: "Port Authority Bus Terminal (42nd St & 8th Ave)" },
           { label: "To", value: "Hoboken Terminal bus area" },
-          { label: "Travel time", value: "20–40 min (traffic dependent)" },
+          { label: "Estimated travel time", value: "20–40 min (traffic dependent)" },
           { label: "Frequency", value: "Regular service throughout the day" },
-          { label: "Cost", value: "Cross-honored (free with NJ Transit pass/ticket)" },
+          { label: "Cost", value: "Weekdays: eligible Midtown Direct Hoboken tickets cross-honored" },
         ],
         "Convenient if you're already near Times Square / west Midtown. No additional fare.",
         "Lincoln Tunnel traffic can double the travel time, especially during evening rush.",
-        "Leave Port Authority by 5pm or after 7pm to avoid the worst tunnel traffic."
+        "NJ Transit recommends traveling before 4pm or after 7pm to reduce crowding."
       ) +
       makeOtherOptionsCard([
         "<strong>Time your connection:</strong> Check the temporary evening schedule for your " + esc(getCurrentLine().name) + " departure time from Hoboken, and plan your PATH/ferry arrival accordingly.",
         "<strong>Work from home:</strong> NJ Transit is asking employers to allow remote work. Even 1–2 days helps.",
-        "<strong>Leave early or late:</strong> The 5–7pm window will be the most crowded. Leaving before 5pm or after 7pm is much easier.",
+        "<strong>Leave early or late:</strong> NJ Transit recommends traveling before 4pm or after 7pm to reduce crowding.",
       ])
     );
   }
@@ -863,10 +864,10 @@
           { label: "To", value: "Newark Penn Station" },
           { label: "NEC travel time", value: "~20 min" },
           { label: "Then", value: "Transfer to Raritan Valley Line train home" },
-          { label: "Tickets", value: "Your existing ticket/pass should cover the transfer" },
+          { label: "Tickets", value: "Use a ticket/pass valid to Penn Station New York" },
         ],
         "Most direct option. Take an NEC train to Newark Penn, then transfer to your RVL train.",
-        "NEC evening trains are reduced, so plan around the temporary schedule. Allow 15–30 min for transfer + wait.",
+        "NEC evening trains are reduced. Plan around the temporary schedule and allow extra transfer time.",
         "Check both the NEC and Raritan Valley temporary schedules to find the best evening connection pairs."
       ) +
       makeRouteCard(
@@ -877,9 +878,9 @@
         [
           { label: "From", value: "World Trade Center, Manhattan" },
           { label: "To", value: "Newark Penn Station" },
-          { label: "Travel time", value: "~25 min" },
+          { label: "Estimated travel time", value: "~25 min" },
           { label: "Then", value: "Transfer to Raritan Valley Line train" },
-          { label: "Cost", value: "$2.75 PATH fare (separate)" },
+          { label: "Cost", value: "$3.25 PATH fare (separate)" },
         ],
         "Good option if you work in Lower Manhattan / Financial District. Avoids Penn Station entirely.",
         "Separate fare required. Rush-hour crowding is significant on the WTC–Newark PATH line.",
@@ -888,7 +889,7 @@
       makeOtherOptionsCard([
         "<strong>Time your NEC connection:</strong> Find an NEC departure from Penn Station that connects well with your RVL departure from Newark Penn.",
         "<strong>Consider bus alternatives:</strong> NJ Transit buses from Port Authority serve some Raritan Valley corridor towns.",
-        "<strong>Leave early:</strong> Evening peak NEC trains from Penn Station will be crowded. Leaving before 5pm gives you better options.",
+        "<strong>Leave early:</strong> Evening peak NEC trains from Penn Station will be crowded. NJ Transit recommends traveling before 4pm or after 7pm.",
       ])
     );
   }
@@ -1043,7 +1044,7 @@
         "If in doubt, ask a conductor or check the NJ Transit app.",
       ]) +
       makeScenarioCard("Alternative: PATH from Newark Penn", [
-        "PATH trains run from Newark Penn to <strong>World Trade Center</strong> in Lower Manhattan (~25 min, $2.75).",
+        "PATH trains run from Newark Penn to <strong>World Trade Center</strong> in Lower Manhattan (~25 min, $3.25).",
         "This is a <strong>separate fare</strong> — not included in your NJ Transit ticket.",
         "Best option if your final destination is downtown Manhattan / Financial District.",
       ]) +

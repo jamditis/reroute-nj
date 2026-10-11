@@ -452,11 +452,11 @@ if (commuteTranslated) {
   warn('"commute" may not have an appropriate Spanish equivalent -- review manually');
 }
 
-// 3c. "service reduction" -> "reduccion de servicio"
-if (/reducci[oó]n\s+(de\s+)?servicio/i.test(allEsTextStripped)) {
-  pass('"service reduction" -> "reduccion de servicio"');
+// 3c. The operating-constraint label now names the corridor, not a percentage.
+if (/Newark/.test(es.index.service_reduction) && /Secaucus/.test(es.index.service_reduction)) {
+  pass('Single-track label preserves Newark and Secaucus');
 } else {
-  fail('"service reduction" not found as "reduccion de servicio"');
+  fail('Single-track corridor label must preserve its endpoints');
 }
 
 // 3d. "diversion" / "diverted" -> "desvio" / "desviado" / "redirigido"

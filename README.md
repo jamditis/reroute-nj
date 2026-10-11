@@ -25,7 +25,7 @@
 
 - **[Line guide](https://reroutenj.org/)** — Select your NJ Transit line and station to see how the cutover affects your commute, get route alternatives, and figure out what ticket to buy
 - **[Commute comparison](https://reroutenj.org/compare.html)** — Pick your station and Manhattan destination, see every route option side by side with visual time breakdowns
-- **[News coverage](https://reroutenj.org/coverage.html)** — 111 articles from local and regional news sources covering the Portal Bridge cutover, with pagination, relevance sorting, and filters by source, category, line, and direction
+- **[News coverage](https://reroutenj.org/coverage.html)** — 311 articles from local and regional news sources covering the Portal Bridge cutover, with pagination, relevance sorting, and filters by source, category, line, and direction
 - **[About](https://reroutenj.org/about.html)** — Methodology, data sourcing, and verification process
 - **[Interactive map](https://reroutenj.org/map.html)** — Visualize the Portal Bridge location, affected stations, transfer hubs, and alternative routes
 - **[Embed & share](https://reroutenj.org/embed.html)** — Visual configurator with four embed formats: iframe, script tag, PNG image, and self-contained HTML download. Free for newsrooms and publishers
@@ -33,7 +33,7 @@
 
 ## Lines covered
 
-All NJ Transit rail lines affected by the Portal North Bridge cutover:
+This guide covers five major affected lines. NJ Transit has schedule changes on all rail lines except Atlantic City; consult the official timetables for the full system.
 
 | Line | Impact | What changes |
 |------|--------|--------------|
@@ -82,7 +82,7 @@ reroute-nj/
 │   ├── og-image.png        # Social preview image
 │   └── screenshot.png      # README screenshot
 ├── data/
-│   ├── coverage.json       # Article data for the coverage feed (111 articles)
+│   ├── coverage.json       # Article data for the coverage feed (311 articles)
 │   ├── sources.json        # Citation database (28 verified claims)
 │   └── source-registry.json # Source freshness tracking
 ├── translations/           # Translation JSON files
@@ -139,7 +139,7 @@ To add a new language, create `translations/{code}.json` following the structure
 | Phase | Dates | Status |
 |-------|-------|--------|
 | **Phase 1** | Feb 15 – Mar 15, 2026 | Complete |
-| **Phase 2** | Oct 11 – Nov 15, 2026 | Upcoming |
+| **Phase 2** | Oct 11 – Nov 14, 2026 | Cutover schedules in effect; regular schedules expected Nov 15, subject to testing |
 
 Phase 1 moved the first track onto Portal North Bridge. Regular NJ Transit schedules resumed March 15, 2026. Phase 2 moves the second track and retires the 1910 swing span. Official NJ Transit schedules start October 11. Regular schedules are expected November 15, subject to testing. Construction starts the evening of October 9.
 
@@ -243,7 +243,7 @@ The site is optimized for Google search, newsroom adoption, and AI search tools 
 - [x] Citation system with verifiable source links on all tools
 - [x] Automated test suite (948+ checks across 14 suites)
 - [x] Translated JSON-LD structured data across all 120 translated pages
-- [x] News coverage feed with 111 articles, pagination, and relevance sorting
+- [x] News coverage feed with 311 articles, pagination, and relevance sorting
 - [x] WCAG AA color contrast and heading hierarchy audit
 - [x] Phase 2 coverage for the Oct 11 – Nov 15, 2026 second-track cutover
 - [ ] Bus bridge and shuttle information

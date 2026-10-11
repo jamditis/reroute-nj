@@ -428,6 +428,13 @@ def replace_hamburger_label(html, translations, page_key):
 
 def replace_page_specific_content(html, translations, page_key):
     """Replace page-specific static content using translation keys."""
+    # Every full-page template has the same no-JavaScript service notice.
+    english = load_translations("en")
+    for key in ["service_notice_before", "service_notice_schedule", "service_notice_tickets", "service_notice_link"]:
+        source = get_translation(english, "common." + key)
+        translated = get_translation(translations, "common." + key)
+        if source and translated:
+            html = html.replace(">" + source + "<", ">" + translated + "<")
     if page_key == "index":
         # Phase banner injection
         phase_banner = get_translation(translations, "common.phase_banner")
@@ -443,17 +450,6 @@ def replace_page_specific_content(html, translations, page_key):
             html = html.replace(
                 "During the Phase 2 cutover (October 11 – November 15, 2026), NJ Transit operates on a single track between Newark and Secaucus while Amtrak connects the second track of Portal North Bridge. This tool shows how each line and station is affected. Station names stay in English, matching platform signs.",
                 seo_summary
-            )
-
-        # Alert banner
-        phase1 = get_translation(translations, "index.alert_phase1")
-        details = get_translation(translations, "index.alert_details")
-        if phase1:
-            html = html.replace('<strong>Phase 2 starts Oct 11.</strong>', f'<strong>{phase1}</strong>')
-        if details:
-            html = html.replace(
-                'Weekday Midtown Direct trains go to Hoboken through Nov 14 &middot; About 50% fewer trains through the Portal corridor &middot; Regular NJ Transit schedules expected Nov 15, subject to testing &middot; Verify at njtransit.com/portalcutover',
-                details.replace("&", "&amp;").replace("·", "&middot;")
             )
 
         # Station selector
@@ -509,6 +505,9 @@ def replace_page_specific_content(html, translations, page_key):
             )
 
         # Stat labels
+        single_track = get_translation(translations, "index.stat_single_track")
+        if single_track:
+            html = html.replace('>Single track<', f'>{single_track}<')
         lines_aff = get_translation(translations, "index.lines_affected")
         svc_red = get_translation(translations, "index.service_reduction")
         if lines_aff:
@@ -670,12 +669,12 @@ def replace_page_specific_content(html, translations, page_key):
         secaucus_intro = get_translation(translations, "index.secaucus_intro")
         if secaucus_intro:
             html = html.replace(
-                "During the cutover, only one track operates between Newark Penn Station and Secaucus Junction. This is the bottleneck that causes the 50% service reduction. Even if you don&#x27;t transfer at Secaucus, delays here ripple across the entire system.",
+                "During the cutover, only one track operates between Newark Penn Station and Secaucus Junction. This bottleneck reduces service and can delay connecting trains. Check temporary schedules and real-time alerts before traveling.",
                 secaucus_intro
             )
             # Also try without HTML entity
             html = html.replace(
-                "During the cutover, only one track operates between Newark Penn Station and Secaucus Junction. This is the bottleneck that causes the 50% service reduction. Even if you don't transfer at Secaucus, delays here ripple across the entire system.",
+                "During the cutover, only one track operates between Newark Penn Station and Secaucus Junction. This bottleneck reduces service and can delay connecting trains. Check temporary schedules and real-time alerts before traveling.",
                 secaucus_intro
             )
 
@@ -770,9 +769,12 @@ def replace_page_specific_content(html, translations, page_key):
             )
 
         # Hero section
+        seo_summary = get_translation(translations, "compare.seo_summary")
+        if seo_summary:
+            html = html.replace(get_translation(load_translations("en"), "compare.seo_summary"), seo_summary)
         for key, eng_text in [
             ("compare.hero_title", "How does your commute change?"),
-            ("compare.hero_desc", "Pick your station and Manhattan destination. We'll show you every option side by side with visual time breakdowns."),
+            ("compare.hero_desc", "Choose a supported station and Manhattan destination to compare estimated weekday journeys during Oct 11–Nov 14. Times are planning estimates; verify current schedules before traveling."),
         ]:
             translated = get_translation(translations, key)
             if translated:
@@ -944,7 +946,7 @@ def replace_page_specific_content(html, translations, page_key):
             "map.new_bridge_item4": 'Part of the larger Gateway Program to modernize the corridor',
             "map.cutover_item1": '<strong>Phase 1</strong> (Feb 15 &ndash; Mar 15, 2026): First track transferred to the new bridge',
             "map.cutover_item2": '<strong>Phase 2</strong> (Oct 11 &ndash; Nov 15, 2026): Second track transferred; old swing bridge retired after this work',
-            "map.cutover_item3": 'Single-track operations between Newark Penn and Secaucus during each cutover (about 50% fewer trains through the Portal corridor)',
+            "map.cutover_item3": 'Single-track operations between Newark Penn and Secaucus during each cutover',
             "map.cutover_item4": 'Weekday Midtown Direct trains diverted to Hoboken (Oct 11 – Nov 15, 2026); weekends still run to Penn Station NY',
         }
         for key, eng_text in bridge_items.items():
