@@ -1,6 +1,20 @@
 {
-  "lastUpdated": "2026-10-09T22:03:08Z",
+  "lastUpdated": "2026-10-11T16:03:20Z",
   "articles": [
+    {
+      "id": "gothamist-transit-riders-face-2026-10-11",
+      "title": "NJ Transit riders face 5 weeks of schedule disruptions starting Sunday",
+      "url": "https://gothamist.com/news/nj-transit-riders-face-5-weeks-of-schedule-disruptions-starting-sunday",
+      "source": "Gothamist",
+      "author": null,
+      "date": "2026-10-11",
+      "category": "news",
+      "excerpt": "NJ Transit and Amtrak riders should prepare for cancellations, schedule changes and longer commutes as work continues on the new Portal North Bridge.",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
     {
       "id": "njdotcom-transit-and-amtrak-2026-10-09",
       "title": "NJ Transit and Amtrak reducing service again because of work on this major bridge. What you need to know.",
