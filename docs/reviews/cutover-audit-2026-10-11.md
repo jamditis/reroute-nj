@@ -13,6 +13,8 @@ Reviewed the line guide, comparison model, shared date/status logic, information
 - Eight verified curated additions plus the latest main-branch Gothamist article bring the list to 311. CBS uses its October 8 original publication date, not its October 9 update date. An Amtrak media contact is no longer presented as an author.
 - A prominent rail-style notice replaces the tiny yellow strip. It opens expanded and can collapse to a visible headline, badge and official link. The active-phase numeral and rings pulse gently twice, then settle; reduced-motion and simplified view disable the animation. Native keyboard-accessible controls have translated labels and ARIA state, and printing restores all details. It distinguishes Sunday schedules, weekday diversions and weekend tickets, and links official guidance. Eastern date boundaries and daylight-saving calendar counts are tested. November 15 is an expected restoration date subject to testing, never automatic confirmation of completion.
 
+The NY Waterway route-link correction also addresses [issue #47](https://github.com/jamditis/reroute-nj/issues/47), including every translated homepage and the app/comparison citation links.
+
 ## Primary evidence
 
 - [NJT cutover overview and ticket rules](https://www.njtransit.com/portalcutover)
@@ -28,7 +30,9 @@ Specific claim status and access dates are recorded in `data/sources.json`. Hist
 
 ## Verification and limits
 
-The repository Node suites, Python data validator, research registry validator and scraper tests cover the changes. New runtime regressions cover Eastern midnight/DST, conditional completion wording, expanded/collapsed notice states, print restoration and reduced-motion styling, comparison routing, current fares, and localized card/download notices. Export tests cover 264 locale/type/theme combinations and long-token canvas wrapping. Generated pages are rebuilt from the dictionaries and templates.
+All 25 repository Node suites, Python data validator, research registry validator and scraper tests cover the changes. New runtime regressions cover Eastern midnight/DST, conditional completion wording, expanded/collapsed notice states, print restoration and reduced-motion styling, comparison routing, current fares, and localized card/download notices. Export tests cover 264 locale/type/theme combinations and long-token canvas wrapping. Generated pages are rebuilt from the dictionaries and templates.
+
+The automatic connector review on PR #48 identified five follow-up fixes: feature-detected Eastern-date fallback for older browsers, refresh of notices on open/restored pages across phase boundaries, sufficient default height for existing script-tag cards, notice theme color tokens, and translated comparison-result caveats. Regression tests cover missing/broken Intl, DST and phase transitions, retained disclosure/print state, 74 standalone loader dimension cases, and every locale’s comparison subtitles.
 
 Source and code review found and corrected initial translation replacement collisions, outdated English card defaults, an accessible-routing omission in comparison results, and ticket advice persisting past the planned cutover end.
 

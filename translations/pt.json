@@ -202,7 +202,9 @@
     "fastest": "Mais rápido",
     "copy_summary": "Copiar resumo do trajeto",
     "copied": "Copiado!",
-    "seo_summary": "Escolha uma estação disponível e um destino em Manhattan para comparar viagens estimadas em dias úteis de 11 de outubro a 14 de novembro. Os tempos são estimativas para planejamento; confira os horários atuais antes de viajar."
+    "seo_summary": "Escolha uma estação disponível e um destino em Manhattan para comparar viagens estimadas em dias úteis de 11 de outubro a 14 de novembro. Os tempos são estimativas para planejamento; confira os horários atuais antes de viajar.",
+    "results_weekday_scope": "Planejamento para dias úteis (11 de outubro – 14 de novembro)",
+    "results_estimate_notice": "Somente estações selecionadas. Os tempos são estimativas aproximadas, não horários em tempo real; esperas adicionais e interrupções podem aumentar o tempo de viagem. As rotas e as regras de aceitação de bilhetes em outros serviços são diferentes nos fins de semana."
   },
   "coverage": {
     "title": "Notícias — Reroute NJ",

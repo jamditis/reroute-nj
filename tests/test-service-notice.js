@@ -30,13 +30,15 @@ function run(time, translations, existing) {
   var oldBanner = existing ? body.appendChild(new Node("div")) : null;
   if (oldBanner) { oldBanner.className = "alert-banner"; oldBanner.appendChild(new Node("details")); }
   var ctx = {
-    Date: function () { return new Date(time); },
+    now: time,
+    Date: function () { return new Date(ctx.now); },
+    refreshServiceNotice: null,
     CUTOVER_START: new Date("2026-10-11T00:00:00-04:00"),
     CUTOVER_END: new Date("2026-11-15T00:00:00-05:00"),
     header: header, phase: phase,
-    window: { events: {}, addEventListener: function (name, handler) { this.events[name] = handler; } },
+    window: { events: {}, intervals: [], addEventListener: function (name, handler) { this.events[name] = handler; }, setInterval: function (handler, delay) { this.intervals.push({ handler: handler, delay: delay }); } },
     t: function (key) { return translations && translations[key] || key; },
-    document: { createElement: function (tag) { return new Node(tag); }, querySelector: function () { return find(body, function (node) { return node.className.indexOf("alert-banner") !== -1; }); } }
+    document: { getElementById: function () { return null; }, createElement: function (tag) { return new Node(tag); }, querySelector: function () { return find(body, function (node) { return node.className.indexOf("alert-banner") !== -1; }); } }
   };
   vm.runInNewContext(block, ctx);
   return { body: body, banner: ctx.banner, context: ctx, title: find(ctx.banner, function (node) { return node.id === "service-notice-title"; }) };
@@ -162,5 +164,53 @@ check("progressive enhancement does not duplicate controls and no-JS markup stay
   assert(!fallback.includes(" hidden"));
   assert(fallback.includes("service-notice-schedule"));
   assert(fallback.includes("service-notice-tickets"));
+});
+check("open page refresh crosses both phase boundaries without rebuilding controls", function () {
+  var result = run("2026-10-11T03:59:59Z");
+  var button = find(result.banner, function (node) { return node.tagName === "button"; });
+  var details = find(result.banner, function (node) { return node.className === "service-notice-details"; });
+  var schedule = find(result.banner, function (node) { return node.className === "service-notice-schedule"; });
+  var clickHandler = button.events.click;
+  var printHandler = result.context.window.events.beforeprint;
+  button.events.click();
+  assert.strictEqual(result.context.window.intervals.length, 1);
+  assert.strictEqual(result.context.window.intervals[0].delay, 3600000);
+  result.context.now = "2026-10-11T04:00:00Z";
+  result.context.window.intervals[0].handler();
+  assert.strictEqual(result.title.textContent, "Phase 2 is underway");
+  assert.strictEqual(result.banner.attributes["data-phase"], "active");
+  result.context.now = "2026-11-15T05:00:00Z";
+  // Existing countdown refresh must update notice even on pages without #countdown.
+  var countdownBlock = source.slice(source.indexOf("function updateCountdown()"), source.indexOf("// ACCESSIBILITY TOGGLE INITIALIZATION"));
+  vm.runInNewContext(countdownBlock, result.context);
+  result.context.updateCountdown();
+  assert.strictEqual(result.title.textContent, "Check current service before traveling");
+  assert.strictEqual(result.banner.attributes["data-phase"], "inactive");
+  assert(schedule.textContent.includes("depends on safety testing"));
+  assert(!find(result.banner, function (node) { return node.className === "service-notice-tickets"; }));
+  assert.strictEqual(find(result.banner, function (node) { return node.tagName === "button"; }), button);
+  assert.strictEqual(find(result.banner, function (node) { return node.className === "service-notice-details"; }), details);
+  assert.strictEqual(button.events.click, clickHandler);
+  assert.strictEqual(result.context.window.events.beforeprint, printHandler);
+  assert.strictEqual(details.hidden, true);
+  assert.strictEqual(button.attributes["aria-expanded"], "false");
+  result.context.window.events.beforeprint();
+  assert.strictEqual(details.hidden, false);
+  result.context.window.events.afterprint();
+  assert.strictEqual(details.hidden, true);
+  button.events.click();
+  assert.strictEqual(details.hidden, false);
+  result.context.updateCountdown();
+  assert.strictEqual(details.hidden, false);
+});
+check("pageshow refreshes restored pages and unchanged refreshes keep the same DOM", function () {
+  var result = run("2026-11-15T04:59:59Z");
+  var initialChildren = result.banner.children;
+  result.context.refreshServiceNotice();
+  assert.strictEqual(result.banner.children, initialChildren);
+  result.context.now = "2026-11-15T05:00:00Z";
+  result.context.window.events.pageshow();
+  assert.strictEqual(result.title.textContent, "Check current service before traveling");
+  assert.strictEqual(result.banner.children, initialChildren);
 });
 console.log("\n" + count + " service notice checks passed.");

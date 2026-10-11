@@ -600,8 +600,8 @@
     // Header
     $resultsHeader.innerHTML =
       '<h2>' + esc(currentStation.name) + " \u2192 " + esc(currentDest.name) + "</h2>" +
-      '<p class="results-subtitle">' + esc(line.name) + ' &middot; Weekday planning (Oct 11 \u2013 Nov 14)</p>' +
-      '<p class="results-subtitle">Selected stations only. Times are rough estimates, not live schedules; extra waiting and disruptions may add time. Weekend routes and cross-honoring differ.</p>';
+      '<p class="results-subtitle">' + esc(line.name) + ' &middot; ' + esc(t("compare.results_weekday_scope")) + '</p>' +
+      '<p class="results-subtitle">' + esc(t("compare.results_estimate_notice")) + '</p>';
 
     // Normal commute reference
     var normalTotal = currentStation.normalTimeToPenn + currentDest.fromPennNY;

@@ -202,7 +202,9 @@
     "fastest": "Più veloce",
     "copy_summary": "Copia il riepilogo",
     "copied": "Copiato!",
-    "seo_summary": "Scegli una stazione disponibile e una destinazione a Manhattan per confrontare i viaggi feriali stimati dall’11 ottobre al 14 novembre. I tempi sono stime per pianificare il viaggio; verifica gli orari attuali prima di partire."
+    "seo_summary": "Scegli una stazione disponibile e una destinazione a Manhattan per confrontare i viaggi feriali stimati dall’11 ottobre al 14 novembre. I tempi sono stime per pianificare il viaggio; verifica gli orari attuali prima di partire.",
+    "results_weekday_scope": "Pianificazione per i giorni feriali (11 ottobre – 14 novembre)",
+    "results_estimate_notice": "Solo stazioni selezionate. I tempi sono stime approssimative, non orari in tempo reale; attese aggiuntive e interruzioni possono allungare il viaggio. Nel weekend cambiano i percorsi e le regole di accettazione dei biglietti su altri servizi."
   },
   "coverage": {
     "title": "Notizie — Reroute NJ",

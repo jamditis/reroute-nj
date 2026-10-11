@@ -32,6 +32,14 @@
   --focus: #175c50;
   --brand-ink: #142b38;
   --brand-green: #175c50;
+  --notice-bg: #edf2ed;
+  --notice-border: #cad8cf;
+  --notice-ink: var(--brand-ink);
+  --notice-inverse: #fafaf7;
+  --notice-ring: #a8c0b1;
+  --notice-secondary: #465b50;
+  --notice-hover-bg: #244552;
+  --notice-hover-text: #ffffff;
 }
 
 /* Layout and typography: comfortable reading, compact working controls. */
@@ -68,12 +76,12 @@ main.container { padding-block: 40px 72px; }
 .lang-selector { grid-area: language; margin: 0; }
 .lang-selector select { min-height: 44px; background-color: var(--card-bg); color: var(--text); border: 1px solid var(--border); padding: 9px 30px 9px 12px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath fill='%23202c2b' d='M0 0l5 6 5-6z'/%3E%3C/svg%3E"); }
 /* Service notice: readable by default; a compact reminder remains when collapsed. */
-.alert-banner { background: #edf2ed; color: var(--brand-ink); border-block: 1px solid #cad8cf; padding: 22px 0; font-size: .88rem; text-align: start; }
+.alert-banner { background: var(--notice-bg); color: var(--notice-ink); border-block: 1px solid var(--notice-border); padding: 22px 0; font-size: .88rem; text-align: start; }
 .service-notice { display: grid; grid-template-columns: 36px minmax(0, 1fr); column-gap: 16px; row-gap: 16px; align-items: start; }
-.service-notice-marker { display: grid; place-items: center; width: 36px; height: 36px; background: var(--brand-ink); color: #fafaf7; border-radius: 50%; font-size: 1.15rem; font-weight: 750; line-height: 1; box-shadow: 0 0 0 5px #edf2ed, 0 0 0 6px #a8c0b1; margin-top: 4px; }
+.service-notice-marker { display: grid; place-items: center; width: 36px; height: 36px; background: var(--notice-ink); color: var(--notice-inverse); border-radius: 50%; font-size: 1.15rem; font-weight: 750; line-height: 1; box-shadow: 0 0 0 5px var(--notice-bg), 0 0 0 6px var(--notice-ring); margin-top: 4px; }
 .service-notice-copy { min-width: 0; }
 .service-notice-actions { grid-column: 2; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; min-width: 0; }
-.service-notice-toggle { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 44px; max-width: 100%; padding: 9px 2px; border: 0; background: transparent; color: var(--brand-ink); font: inherit; font-size: .78rem; line-height: 1.4; text-align: start; text-decoration: underline; text-underline-offset: .2em; cursor: pointer; }
+.service-notice-toggle { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 44px; max-width: 100%; padding: 9px 2px; border: 0; background: transparent; color: var(--notice-ink); font: inherit; font-size: .78rem; line-height: 1.4; text-align: start; text-decoration: underline; text-underline-offset: .2em; cursor: pointer; }
 .service-notice-toggle::after { content: ""; width: 6px; height: 6px; flex: 0 0 6px; border-inline-end: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(225deg); }
 .service-notice-toggle[aria-expanded="false"]::after { transform: rotate(45deg); }
 .service-update[data-expanded="false"] { padding-block: 14px; }
@@ -85,12 +93,12 @@ main.container { padding-block: 40px 72px; }
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.07); }
 }
-.service-notice h2 { color: var(--brand-ink); margin: 0 0 9px; font-size: clamp(1.2rem, 2vw, 1.5rem); font-weight: 750; letter-spacing: -.025em; line-height: 1.25; }
+.service-notice h2 { color: var(--notice-ink); margin: 0 0 9px; font-size: clamp(1.2rem, 2vw, 1.5rem); font-weight: 750; letter-spacing: -.025em; line-height: 1.25; }
 .service-notice p { margin: 0; max-width: 92ch; line-height: 1.6; }
-.service-notice .service-notice-tickets { margin-top: 8px; color: #465b50; font-size: .82rem; }
-.service-notice-link { grid-column: 2; display: inline-flex; align-items: center; justify-content: space-between; gap: 16px; justify-self: start; min-height: 44px; max-width: 100%; padding: 10px 15px; background: var(--brand-ink); color: #fafaf7; border: 1px solid var(--brand-ink); border-radius: 5px; font-size: .8rem; font-weight: 700; line-height: 1.4; text-decoration: none; }
-.service-notice-link:hover { background: #244552; color: #fff; text-decoration: underline; }
-.service-notice-link:focus-visible { outline-color: var(--brand-ink); }
+.service-notice .service-notice-tickets { margin-top: 8px; color: var(--notice-secondary); font-size: .82rem; }
+.service-notice-link { grid-column: 2; display: inline-flex; align-items: center; justify-content: space-between; gap: 16px; justify-self: start; min-height: 44px; max-width: 100%; padding: 10px 15px; background: var(--notice-ink); color: var(--notice-inverse); border: 1px solid var(--notice-ink); border-radius: 5px; font-size: .8rem; font-weight: 700; line-height: 1.4; text-decoration: none; }
+.service-notice-link:hover { background: var(--notice-hover-bg); color: var(--notice-hover-text); text-decoration: underline; }
+.service-notice-link:focus-visible { outline-color: var(--notice-ink); }
 @media (min-width: 1000px) {
   .service-notice { grid-template-columns: 40px minmax(0, 1fr) minmax(160px, 210px); column-gap: 24px; align-items: center; }
   .service-notice-link, .service-notice-actions { grid-column: 3; }
@@ -99,7 +107,7 @@ main.container { padding-block: 40px 72px; }
 @media (max-width: 480px) {
   .alert-banner { padding-block: 20px; }
   .service-notice { grid-template-columns: 26px minmax(0, 1fr); column-gap: 14px; }
-  .service-notice-marker { width: 26px; height: 26px; font-size: .9rem; box-shadow: 0 0 0 4px #edf2ed, 0 0 0 5px #a8c0b1; }
+  .service-notice-marker { width: 26px; height: 26px; font-size: .9rem; box-shadow: 0 0 0 4px var(--notice-bg), 0 0 0 5px var(--notice-ring); }
   .service-notice h2 { font-size: 1.2rem; }
 }
 .tool-nav { background: var(--bg); border-bottom: 1px solid var(--border); position: relative; z-index: 50; }

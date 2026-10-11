@@ -37,3 +37,36 @@ assert(!/Phase 2 complete/.test(output.innerHTML), "A calendar deadline cannot c
   assert(content.includes("$3.25"), file + " must use current PATH fare");
 });
 console.log("PASS current PATH fare in guide and comparison");
+
+// Run without Intl, without formatToParts, and with a throwing implementation.
+var intlVariants = [
+  { name: "Intl absent", value: undefined },
+  { name: "DateTimeFormat absent", value: {} },
+  { name: "formatToParts absent", value: { DateTimeFormat: function () { return {}; } } },
+  { name: "timezone rejected", value: { DateTimeFormat: function () { throw new Error("unsupported timezone"); } } },
+  { name: "formatToParts throws", value: { DateTimeFormat: function () { return { formatToParts: function () { throw new Error("incomplete implementation"); } }; } } },
+  { name: "formatToParts incomplete", value: { DateTimeFormat: function () { return { formatToParts: function () { return []; } }; } } }
+];
+var fallbackDates = [
+  "2026-01-01T04:59:59Z", "2026-01-01T05:00:00Z",
+  "2026-03-08T04:59:59Z", "2026-03-08T05:00:00Z",
+  "2026-03-08T06:59:59Z", "2026-03-08T07:00:00Z",
+  "2026-03-09T03:59:59Z", "2026-03-09T04:00:00Z",
+  "2026-10-11T03:59:59Z", "2026-10-11T04:00:00Z",
+  "2026-11-01T05:59:59Z", "2026-11-01T06:00:00Z",
+  "2026-11-02T04:59:59Z", "2026-11-02T05:00:00Z",
+  "2026-11-15T04:59:59Z", "2026-11-15T05:00:00Z",
+  "2027-03-14T07:00:00Z", "2027-11-07T06:00:00Z"
+];
+context.Intl = Intl;
+var expectedDays = fallbackDates.map(function (date) { return context.cutoverCalendarDay(new Date(date)); });
+intlVariants.forEach(function (variant) {
+  context.Intl = variant.value;
+  fallbackDates.forEach(function (date, index) {
+    assert.strictEqual(context.cutoverCalendarDay(new Date(date)), expectedDays[index], variant.name + " at " + date);
+  });
+  now = "2026-10-11T04:00:00Z";
+  context.updateCountdown();
+  assert(/35.*remaining/.test(output.innerHTML), variant.name + " must not interrupt page initialization");
+  console.log("PASS Eastern calendar fallback: " + variant.name);
+});

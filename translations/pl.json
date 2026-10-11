@@ -202,7 +202,9 @@
     "fastest": "Najszybszy",
     "copy_summary": "Kopiuj podsumowanie",
     "copied": "Skopiowano!",
-    "seo_summary": "Wybierz obsługiwaną stację i cel na Manhattan, aby porównać szacunkowe podróże w dni robocze od 11 października do 14 listopada. Czasy służą do planowania; przed podróżą sprawdź aktualne rozkłady."
+    "seo_summary": "Wybierz obsługiwaną stację i cel na Manhattan, aby porównać szacunkowe podróże w dni robocze od 11 października do 14 listopada. Czasy służą do planowania; przed podróżą sprawdź aktualne rozkłady.",
+    "results_weekday_scope": "Planowanie podróży w dni robocze (11 października – 14 listopada)",
+    "results_estimate_notice": "Tylko wybrane stacje. Czasy są przybliżonymi szacunkami, a nie rozkładami na żywo; dodatkowe oczekiwanie i zakłócenia mogą wydłużyć podróż. W weekendy trasy i zasady honorowania biletów w innych środkach transportu są inne."
   },
   "coverage": {
     "title": "Wiadomości — Reroute NJ",

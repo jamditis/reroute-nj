@@ -162,7 +162,9 @@
       "vs_normal": "vs normal",
       "fastest": "Fastest",
       "copy_summary": "Copy commute summary to clipboard",
-      "copied": "Copied!"
+      "copied": "Copied!",
+      "results_weekday_scope": "Weekday planning (Oct 11 \u2013 Nov 14)",
+      "results_estimate_notice": "Selected stations only. Times are rough estimates, not live schedules; extra waiting and disruptions may add time. Weekend routes and cross-honoring differ."
     },
     "coverage": {
       "all_sources": "All sources",

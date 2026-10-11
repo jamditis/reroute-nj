@@ -9,9 +9,12 @@
 
   var BASE_URL = "https://reroutenj.org/";
 
+  // Older hand-authored snippets have no data-height. Reserve room for the
+  // 620px card base plus notices (currently up to 932px in the configurator).
+  // The standalone loader does not load the shared line data or translations.
   var DEFAULTS = {
-    "line-card":    { width: "480px", height: "400px" },
-    "station-card": { width: "480px", height: "400px" },
+    "line-card":    { width: "480px", height: "960px" },
+    "station-card": { width: "480px", height: "960px" },
     "summary-card": { width: "480px", height: "500px" },
     "line-guide":   { width: "100%",  height: "600px" },
     "compare":      { width: "100%",  height: "600px" },

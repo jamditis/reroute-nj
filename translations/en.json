@@ -202,7 +202,9 @@
     "fastest": "Fastest",
     "copy_summary": "Copy commute summary to clipboard",
     "copied": "Copied!",
-    "seo_summary": "Choose a supported station and Manhattan destination to compare estimated weekday journeys during Oct 11–Nov 14. Times are planning estimates; verify current schedules before traveling."
+    "seo_summary": "Choose a supported station and Manhattan destination to compare estimated weekday journeys during Oct 11–Nov 14. Times are planning estimates; verify current schedules before traveling.",
+    "results_weekday_scope": "Weekday planning (Oct 11 – Nov 14)",
+    "results_estimate_notice": "Selected stations only. Times are rough estimates, not live schedules; extra waiting and disruptions may add time. Weekend routes and cross-honoring differ."
   },
   "coverage": {
     "title": "News coverage — Reroute NJ",

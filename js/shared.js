@@ -73,18 +73,43 @@ function esc(str) {
 // =========================================================================
 // Count New Jersey calendar days, independent of the rider's timezone and DST.
 function cutoverCalendarDay(date) {
-  var parts = new Intl.DateTimeFormat("en-US", {
-    timeZone: "America/New_York", year: "numeric", month: "2-digit", day: "2-digit"
-  }).formatToParts(date);
-  var values = {};
-  parts.forEach(function (part) { values[part.type] = part.value; });
-  return Date.UTC(Number(values.year), Number(values.month) - 1, Number(values.day)) / 86400000;
+  // Intl support varies independently of Date support in older browsers.
+  try {
+    if (typeof Intl !== "undefined" && typeof Intl.DateTimeFormat === "function") {
+      var formatter = new Intl.DateTimeFormat("en-US", {
+        timeZone: "America/New_York", year: "numeric", month: "2-digit", day: "2-digit"
+      });
+      if (typeof formatter.formatToParts === "function") {
+        var parts = formatter.formatToParts(date);
+        var values = {};
+        parts.forEach(function (part) { values[part.type] = part.value; });
+        if (Number(values.year) > 0 && Number(values.month) > 0 && Number(values.day) > 0) {
+          return Date.UTC(Number(values.year), Number(values.month) - 1, Number(values.day)) / 86400000;
+        }
+      }
+    }
+  } catch (e) { /* Missing timezone data or incomplete Intl: use modern US rules. */ }
+
+  // Dependency-free fallback for this contemporary (2026) service calendar.
+  // Since 2007, Eastern DST runs from the second Sunday in March at 07:00 UTC
+  // to the first Sunday in November at 06:00 UTC. Never use the viewer's zone.
+  var year = date.getUTCFullYear();
+  var marchSunday = 8 + (7 - new Date(Date.UTC(year, 2, 1)).getUTCDay()) % 7;
+  var novemberSunday = 1 + (7 - new Date(Date.UTC(year, 10, 1)).getUTCDay()) % 7;
+  var dstStart = Date.UTC(year, 2, marchSunday, 7);
+  var dstEnd = Date.UTC(year, 10, novemberSunday, 6);
+  var offsetHours = date.getTime() >= dstStart && date.getTime() < dstEnd ? -4 : -5;
+  return Math.floor((date.getTime() + offsetHours * 3600000) / 86400000);
 }
 
+// Assigned once when the full-page notice is initialized. Widgets may omit it.
+var refreshServiceNotice = null;
+
 function updateCountdown() {
+  var now = new Date();
+  if (typeof refreshServiceNotice === "function") refreshServiceNotice(now);
   var el = document.getElementById("countdown");
   if (!el) return;
-  var now = new Date();
   if (now < CUTOVER_START) {
     var days = cutoverCalendarDay(CUTOVER_START) - cutoverCalendarDay(now);
     el.innerHTML =
@@ -374,16 +399,6 @@ function exportCanvasPdf(canvas, filename) {
       var translated = typeof t === "function" ? t(key) : "";
       return translated && translated !== key ? translated : fallback;
     }
-    var now = new Date();
-    var afterCutover = now >= CUTOVER_END;
-    var noticeHeading = now < CUTOVER_START
-      ? noticeText("common.service_notice_before", "Phase 2 starts October 11")
-      : (afterCutover
-        ? noticeText("common.service_notice_after", "Check current service before traveling")
-        : noticeText("common.service_notice_active", "Phase 2 is underway"));
-    var noticeSchedule = afterCutover
-      ? noticeText("common.service_notice_after_details", "The published temporary schedule period has ended. Service restoration depends on safety testing. Check NJ Transit for current schedules before traveling.")
-      : noticeText("common.service_notice_schedule", "Temporary schedules begin Sunday, October 11. Weekday Midtown Direct trains divert to Hoboken from Monday, October 12 through November 13. Northeast Corridor and North Jersey Coast have fewer trains. Weekend trains still serve Penn Station NY, with adjusted times.");
     var banner = document.querySelector(".alert-banner");
     if (!banner) {
       banner = document.createElement("section");
@@ -391,7 +406,6 @@ function exportCanvasPdf(canvas, filename) {
     }
     banner.className = "alert-banner service-update";
     banner.id = "alert-banner";
-    banner.setAttribute("data-phase", now >= CUTOVER_START && !afterCutover ? "active" : "inactive");
     banner.setAttribute("role", "region");
     banner.setAttribute("aria-labelledby", "service-notice-title");
     function noticeElement(tag, className, text) {
@@ -406,13 +420,14 @@ function exportCanvasPdf(canvas, filename) {
     marker.setAttribute("aria-hidden", "true");
     notice.appendChild(marker);
     var noticeCopy = noticeElement("div", "service-notice-copy");
-    var noticeTitle = noticeElement("h2", "", noticeHeading);
+    var noticeTitle = noticeElement("h2", "");
     noticeTitle.id = "service-notice-title";
     noticeCopy.appendChild(noticeTitle);
     var noticeDetails = noticeElement("div", "service-notice-details");
     noticeDetails.id = "service-notice-details";
-    noticeDetails.appendChild(noticeElement("p", "service-notice-schedule", noticeSchedule));
-    if (!afterCutover) noticeDetails.appendChild(noticeElement("p", "service-notice-tickets", noticeText("common.service_notice_tickets", "Weekend tickets: Hoboken monthly/weekly passes and FLEXPASS are valid to Penn Station NY. One-way and round-trip riders need Penn Station NY tickets.")));
+    var noticeScheduleNode = noticeElement("p", "service-notice-schedule");
+    var noticeTickets = noticeElement("p", "service-notice-tickets", noticeText("common.service_notice_tickets", "Weekend tickets: Hoboken monthly/weekly passes and FLEXPASS are valid to Penn Station NY. One-way and round-trip riders need Penn Station NY tickets."));
+    noticeDetails.appendChild(noticeScheduleNode);
     noticeCopy.appendChild(noticeDetails);
     notice.appendChild(noticeCopy);
     var noticeLink = noticeElement("a", "service-notice-link", noticeText("common.service_notice_link", "Check schedules and ticket rules"));
@@ -442,6 +457,33 @@ function exportCanvasPdf(canvas, filename) {
     noticeActions.appendChild(noticeToggle);
     notice.appendChild(noticeActions);
     banner.appendChild(notice);
+    // Update only time-dependent text and ticket guidance. Keep the same button,
+    // detail region, focus, expansion state, and event listeners across midnight.
+    var noticePhase = "";
+    refreshServiceNotice = function (now) {
+      now = now || new Date();
+      var phaseNow = now < CUTOVER_START ? "before" : (now >= CUTOVER_END ? "after" : "active");
+      if (phaseNow === noticePhase) return;
+      noticePhase = phaseNow;
+      var afterCutover = phaseNow === "after";
+      noticeTitle.textContent = phaseNow === "before"
+        ? noticeText("common.service_notice_before", "Phase 2 starts October 11")
+        : (afterCutover
+          ? noticeText("common.service_notice_after", "Check current service before traveling")
+          : noticeText("common.service_notice_active", "Phase 2 is underway"));
+      noticeScheduleNode.textContent = afterCutover
+        ? noticeText("common.service_notice_after_details", "The published temporary schedule period has ended. Service restoration depends on safety testing. Check NJ Transit for current schedules before traveling.")
+        : noticeText("common.service_notice_schedule", "Temporary schedules begin Sunday, October 11. Weekday Midtown Direct trains divert to Hoboken from Monday, October 12 through November 13. Northeast Corridor and North Jersey Coast have fewer trains. Weekend trains still serve Penn Station NY, with adjusted times.");
+      if (afterCutover && noticeTickets.parentNode) noticeTickets.parentNode.removeChild(noticeTickets);
+      else if (!afterCutover && !noticeTickets.parentNode) noticeDetails.appendChild(noticeTickets);
+      banner.setAttribute("data-phase", phaseNow === "active" ? "active" : "inactive");
+    };
+    refreshServiceNotice();
+    // Some full pages have no page-specific countdown timer. Keep their notice
+    // current too; existing countdown timers also invoke this same guarded refresh.
+    window.setInterval(function () { refreshServiceNotice(); }, 3600000);
+    window.addEventListener("pageshow", function () { refreshServiceNotice(); });
+
     // Print all guidance, then restore the reader's chosen screen state.
     var noticeBeforePrint;
     window.addEventListener("beforeprint", function () {

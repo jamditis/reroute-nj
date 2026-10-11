@@ -117,6 +117,51 @@ check("visible and copied results disclose weekday and estimate limits", functio
   assert(text.includes("not live schedules"));
   assert(text.includes("https://www.njtransit.com/portalcutover"));
 });
+check("comparison safety subtitles render each locale instead of hardcoded English", function () {
+  var originalTranslate = context.t;
+  var languages = ["en", "es", "zh", "tl", "ko", "pt", "gu", "hi", "it", "ar", "pl"];
+  try {
+    languages.forEach(function (language) {
+      var data = JSON.parse(fs.readFileSync(path.join(root, "translations", language + ".json"), "utf8"));
+      context.t = function (key) { return key.split(".").reduce(function (value, part) { return value && value[part]; }, data) || key; };
+      api.set("montclair-boonton", "bay-street"); api.run();
+      var header = nodes["results-header"].innerHTML;
+      ["results_weekday_scope", "results_estimate_notice"].forEach(function (key) {
+        assert(data.compare[key], language + ": missing " + key);
+        assert(header.includes(context.esc(data.compare[key])), language + ": untranslated " + key);
+      });
+      if (language !== "en") {
+        assert(!header.includes("Weekday planning"), language + ": English weekday subtitle leaked");
+        assert(!header.includes("Selected stations only"), language + ": English estimate warning leaked");
+      }
+    });
+  } finally {
+    context.t = originalTranslate;
+  }
+});
+check("comparison subtitle translations are escaped before HTML insertion", function () {
+  var originalTranslate = context.t;
+  var probe = '<img src=x onerror="alert(1)"> & notice';
+  try {
+    context.t = function (key) {
+      return key === "compare.results_weekday_scope" || key === "compare.results_estimate_notice" ? probe : originalTranslate(key);
+    };
+    api.set("montclair-boonton", "bay-street"); api.run();
+    var header = nodes["results-header"].innerHTML;
+    assert.strictEqual(header.split(context.esc(probe)).length - 1, 2);
+    assert(!header.includes("<img"));
+  } finally {
+    context.t = originalTranslate;
+  }
+});
+check("English runtime fallback includes both comparison subtitle keys", function () {
+  var runtime = { window: {} };
+  vm.runInNewContext(fs.readFileSync(path.join(root, "js/i18n.js"), "utf8"), runtime);
+  var english = JSON.parse(fs.readFileSync(path.join(root, "translations/en.json"), "utf8"));
+  ["results_weekday_scope", "results_estimate_notice"].forEach(function (key) {
+    assert.strictEqual(runtime.window.t("compare." + key), english.compare[key]);
+  });
+});
 check("changing lines clears stale destination styling and ARIA state", function () {
   var destination = element(); destination.classList.add("active"); destination.setAttribute("aria-pressed", "true");
   nodes["dest-grid"].children = [destination];

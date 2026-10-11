@@ -202,7 +202,9 @@
     "fastest": "Pinakamabilis",
     "copy_summary": "Kopyahin ang buod ng biyahe",
     "copied": "Nakopya!",
-    "seo_summary": "Pumili ng suportadong istasyon at destinasyon sa Manhattan para ihambing ang tinatayang weekday na biyahe mula Okt 11 hanggang Nob 14. Tantya lamang ang mga oras para sa pagpaplano; tiyakin ang kasalukuyang iskedyul bago bumiyahe."
+    "seo_summary": "Pumili ng suportadong istasyon at destinasyon sa Manhattan para ihambing ang tinatayang weekday na biyahe mula Okt 11 hanggang Nob 14. Tantya lamang ang mga oras para sa pagpaplano; tiyakin ang kasalukuyang iskedyul bago bumiyahe.",
+    "results_weekday_scope": "Pagpaplano para sa weekday (Okt 11 – Nob 14)",
+    "results_estimate_notice": "Mga piling istasyon lamang. Tantya lamang ang mga oras, hindi live na iskedyul; maaaring humaba ang biyahe dahil sa dagdag na paghihintay at pagkaantala. Iba ang mga ruta at patakaran sa pagtanggap ng ticket sa ibang serbisyo tuwing weekend."
   },
   "coverage": {
     "title": "Mga balita — Reroute NJ",
