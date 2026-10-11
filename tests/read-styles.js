@@ -11,7 +11,7 @@ module.exports = function readStyles(filename, ancestors) {
     /@import\s+url\(["']([^"']+)["']\)\s*;/g,
     function (rule, imported) {
       if (/^(?:[a-z]+:|\/\/)/i.test(imported)) throw new Error("External CSS import: " + imported);
-      return module.exports(path.resolve(path.dirname(filename), imported), chain);
+      return module.exports(path.resolve(path.dirname(filename), imported.split(/[?#]/)[0]), chain);
     }
   );
 };

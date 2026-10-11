@@ -85,7 +85,7 @@ check("assistive and print modes do not need the illustration", function () {
 });
 check("zero-build and local CSS composition are retained", function () {
   assert.strictEqual((css.match(/@import/g) || []).length, 1);
-  assert(css.indexOf('@import url("foundation.css")') !== -1);
+  assert(/@import url\("foundation\.css(?:\?[^"\s]*)?"\)/.test(css));
   assert(!fs.existsSync(path.join(root, "package.json")));
 });
 console.log("\n" + count + " independent rail checks passed.");

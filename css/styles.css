@@ -1,6 +1,6 @@
 /* Reroute NJ — wayfinding design system.
    The foundation preserves the zero-build tool, embed, and print contracts. */
-@import url("foundation.css");
+@import url("foundation.css?v=20261011-post");
 
 :root {
   --primary: #175c50;

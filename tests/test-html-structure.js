@@ -72,7 +72,7 @@ function resolveHref(href, pageDir) {
   ) {
     return null; // external or special — skip
   }
-  return path.resolve(pageDir, href);
+  return path.resolve(pageDir, href.split(/[?#]/)[0]);
 }
 
 // ---- Load all pages ----
