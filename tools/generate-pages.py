@@ -527,10 +527,26 @@ def replace_page_specific_content(html, translations, page_key):
             ("index.secaucus_title", "Secaucus Junction: The choke point"),
             ("index.timeline_title", "Timeline"),
             ("index.resources_title", "Official resources"),
+            ("index.sources_title", "Sources and verification"),
         ]:
             translated = get_translation(translations, key)
             if translated:
                 html = html.replace(f">{eng_text}<", f">{translated}<")
+
+        # Scope the source-review note by element, so translated copy does not
+        # depend on matching a particular English date or freshness promise.
+        for element_id, key in [
+            ("source-review", "index.sources_review"),
+            ("source-review-limits", "index.sources_review_limits"),
+        ]:
+            translated = get_translation(translations, key)
+            if translated:
+                html = re.sub(
+                    rf'(<p\b[^>]*\bid="{element_id}"[^>]*>).*?(</p>)',
+                    lambda m: m.group(1) + translated + m.group(2),
+                    html,
+                    flags=re.DOTALL,
+                )
 
         # Section descriptions
         for key, eng_text in [

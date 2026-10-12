@@ -188,7 +188,10 @@
     "tl_p2_start_desc": "કામચલાઉ સમયપત્રક લાગુ થાય છે. કાર્યદિવસોમાં Midtown Direct ટ્રેનો Hoboken લઈ જવાય છે. Newark અને Secaucus વચ્ચે એક પાટો.",
     "tl_p2_end_title": "નિયમિત સમયપત્રક ફરી શરૂ",
     "tl_p2_end_desc": "NJ Transit નિયમિત સમયપત્રક ફરી શરૂ, સલામતી પરીક્ષણને આધીન. પૂર્ણ સામાન્ય સેવા 16 નવેમ્બરે અપેક્ષિત.",
-    "stat_single_track": "એક જ ટ્રેક"
+    "stat_single_track": "એક જ ટ્રેક",
+    "sources_title": "સ્રોતો અને ચકાસણી",
+    "sources_review": "તબક્કા 2ના મુખ્ય મુસાફરી માર્ગદર્શનની સત્તાવાર સ્રોતો સાથે સરખામણી કરીને <strong><time datetime=\"2026-10-11\">11 ઑક્ટોબર, 2026</time></strong>ના રોજ સમીક્ષા કરવામાં આવી હતી. <a href=\"https://github.com/jamditis/reroute-nj/blob/main/docs/reviews/cutover-audit-2026-10-11.md\">સમીક્ષા અને તેની મર્યાદાઓ વાંચો</a>.",
+    "sources_review_limits": "આ સેવાની રીઅલ-ટાઇમ માહિતી નથી અને દરેક ટ્રેનના પ્રસ્થાનની ચકાસણી પણ નથી. સત્તાવાર ફેરફારો અહીં દેખાવામાં સમય લાગી શકે છે. મુસાફરી પહેલાં <a href=\"https://www.njtransit.com/portalcutover\">NJ Transitની વર્તમાન સમયસારણીઓ</a> અને <a href=\"https://www.njtransit.com/travel-alerts-to\">મુસાફરીની ચેતવણીઓ</a> તપાસો."
   },
   "compare": {
     "title": "મુસાફરી વિકલ્પો સરખાવો — Reroute NJ",

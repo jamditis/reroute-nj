@@ -27,6 +27,12 @@ Use these roles for every refresh cycle:
 - `data/source-registry.json` maps claim areas to verification sources and freshness windows.
 - `data/coverage.json` is context-only media coverage; it must never override official advisories.
 
+## Public review note
+
+The homepage links to the dated review of core Phase 2 guidance in `docs/reviews/cutover-audit-2026-10-11.md`. This is a scoped historical review, not a claim that all departures or live conditions were verified. Do not advance that date because a page was regenerated, a news article was added, or one source was checked. A later review needs its own documented scope and evidence before updating the homepage and all eleven translation dictionaries.
+
+The verification windows below are research targets, not a guaranteed public update deadline. Keep the homepage's check-before-travel caveat and links to official schedules and alerts. `tests/test-source-review.js` checks the review evidence, localized copy, and generated homepages together.
+
 ## Hardened validation gates
 
 ### Gate 1 — Schema and freshness

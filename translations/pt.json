@@ -188,7 +188,10 @@
     "tl_p2_start_desc": "Entram em vigor os horários temporários. Trens Midtown Direct em dias úteis desviam para Hoboken. Operação de via única entre Newark e Secaucus.",
     "tl_p2_end_title": "Horários regulares retomam",
     "tl_p2_end_desc": "Os horários regulares da NJ Transit retomam, sujeitos a testes de segurança. O serviço normal completo é esperado em 16 de novembro.",
-    "stat_single_track": "Via única"
+    "stat_single_track": "Via única",
+    "sources_title": "Fontes e verificação",
+    "sources_review": "As principais orientações da Fase 2 foram revisadas com base em fontes oficiais em <strong><time datetime=\"2026-10-11\">11 de outubro de 2026</time></strong>. <a href=\"https://github.com/jamditis/reroute-nj/blob/main/docs/reviews/cutover-audit-2026-10-11.md\">Leia a revisão e suas limitações</a>.",
+    "sources_review_limits": "Estas não são informações de serviço em tempo real nem uma verificação de todas as partidas de trem. As mudanças oficiais podem levar algum tempo para aparecer aqui. Consulte <a href=\"https://www.njtransit.com/portalcutover\">os horários atuais da NJ Transit</a> e <a href=\"https://www.njtransit.com/travel-alerts-to\">os alertas de viagem</a> antes de viajar."
   },
   "compare": {
     "title": "Comparar opções de trajeto — Reroute NJ",
