@@ -188,7 +188,10 @@
     "tl_p2_start_desc": "Umepekto ang pansamantalang iskedyul. Ang weekday Midtown Direct ay inililihis sa Hoboken. Iisang riles sa pagitan ng Newark at Secaucus.",
     "tl_p2_end_title": "Babalik ang regular na iskedyul",
     "tl_p2_end_desc": "Bumabalik ang regular na iskedyul ng NJ Transit, subject sa safety testing. Inaasahan ang buong normal na serbisyo sa November 16.",
-    "stat_single_track": "Iisang riles"
+    "stat_single_track": "Iisang riles",
+    "sources_title": "Mga sanggunian at pagberipika",
+    "sources_review": "Sinuri ang pangunahing gabay para sa Phase 2 batay sa mga opisyal na sanggunian noong <strong><time datetime=\"2026-10-11\">Oktubre 11, 2026</time></strong>. <a href=\"https://github.com/jamditis/reroute-nj/blob/main/docs/reviews/cutover-audit-2026-10-11.md\">Basahin ang pagsusuri at mga limitasyon nito</a>.",
+    "sources_review_limits": "Hindi ito real-time na impormasyon sa serbisyo o pagberipika sa bawat pag-alis ng tren. Maaaring hindi agad lumabas dito ang mga opisyal na pagbabago. Tingnan ang <a href=\"https://www.njtransit.com/portalcutover\">kasalukuyang iskedyul ng NJ Transit</a> at <a href=\"https://www.njtransit.com/travel-alerts-to\">mga abiso sa biyahe</a> bago bumiyahe."
   },
   "compare": {
     "title": "Ihambing ang mga opsyon — Reroute NJ",

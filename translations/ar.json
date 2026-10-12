@@ -188,7 +188,10 @@
     "tl_p2_start_desc": "تدخل الجداول المؤقتة حيز التنفيذ. تُحوَّل قطارات Midtown Direct في أيام الأسبوع إلى Hoboken. تشغيل بمسار واحد بين Newark وSecaucus.",
     "tl_p2_end_title": "تعود الجداول العادية",
     "tl_p2_end_desc": "تعود الجداول العادية لـ NJ Transit رهناً باختبارات السلامة. الخدمة الطبيعية الكاملة متوقعة في 16 نوفمبر.",
-    "stat_single_track": "مسار واحد"
+    "stat_single_track": "مسار واحد",
+    "sources_title": "المصادر والتحقق",
+    "sources_review": "تمت مراجعة الإرشادات الأساسية للمرحلة الثانية بالرجوع إلى المصادر الرسمية في <strong><time datetime=\"2026-10-11\">11 أكتوبر 2026</time></strong>. <a href=\"https://github.com/jamditis/reroute-nj/blob/main/docs/reviews/cutover-audit-2026-10-11.md\">اقرأ المراجعة وحدودها</a>.",
+    "sources_review_limits": "هذه ليست معلومات مباشرة عن الخدمة ولا تحققًا من موعد مغادرة كل قطار. قد يستغرق ظهور التغييرات الرسمية هنا بعض الوقت. تحقّق من <a href=\"https://www.njtransit.com/portalcutover\">جداول NJ Transit الحالية</a> و<a href=\"https://www.njtransit.com/travel-alerts-to\">تنبيهات السفر</a> قبل السفر."
   },
   "compare": {
     "title": "مقارنة خيارات الرحلة — Reroute NJ",

@@ -188,7 +188,10 @@
     "tl_p2_start_desc": "临时时刻表生效。工作日Midtown Direct列车改至Hoboken。Newark与Secaucus之间单线运行。",
     "tl_p2_end_title": "恢复常规时刻表",
     "tl_p2_end_desc": "NJ Transit常规时刻表恢复，需完成安全测试。全面正常服务预计11月16日。",
-    "stat_single_track": "单线运行"
+    "stat_single_track": "单线运行",
+    "sources_title": "来源与核实",
+    "sources_review": "第二阶段的主要出行指引已于<strong><time datetime=\"2026-10-11\">2026年10月11日</time></strong>依据官方来源进行审核。<a href=\"https://github.com/jamditis/reroute-nj/blob/main/docs/reviews/cutover-audit-2026-10-11.md\">阅读审核记录及其局限</a>。",
+    "sources_review_limits": "这里不提供实时运营信息，也不代表每班列车的发车时间均已核实。官方变更可能需要一段时间才会在这里显示。出行前请查看<a href=\"https://www.njtransit.com/portalcutover\">NJ Transit最新时刻表</a>和<a href=\"https://www.njtransit.com/travel-alerts-to\">出行提醒</a>。"
   },
   "compare": {
     "title": "比较通勤选项 — Reroute NJ",

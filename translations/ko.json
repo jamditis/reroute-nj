@@ -188,7 +188,10 @@
     "tl_p2_start_desc": "임시 시각표가 시행됩니다. 평일 Midtown Direct 열차는 Hoboken으로 우회합니다. Newark와 Secaucus 사이는 단선 운행입니다.",
     "tl_p2_end_title": "정규 시각표 재개",
     "tl_p2_end_desc": "NJ Transit 정규 시각표가 재개됩니다(안전 시험 완료 시). 전면 정상 운행은 11월 16일로 예상됩니다.",
-    "stat_single_track": "단선 운행"
+    "stat_single_track": "단선 운행",
+    "sources_title": "출처 및 검증",
+    "sources_review": "2단계 주요 이용 안내를 <strong><time datetime=\"2026-10-11\">2026년 10월 11일</time></strong>에 공식 자료와 대조하여 검토했습니다. <a href=\"https://github.com/jamditis/reroute-nj/blob/main/docs/reviews/cutover-audit-2026-10-11.md\">검토 내용과 한계 확인</a>.",
+    "sources_review_limits": "이 정보는 실시간 운행 정보가 아니며, 모든 열차의 출발 시각을 확인한 것도 아닙니다. 공식 변경 사항이 여기에 반영되기까지 시간이 걸릴 수 있습니다. 이동 전에 <a href=\"https://www.njtransit.com/portalcutover\">NJ Transit 최신 시간표</a>와 <a href=\"https://www.njtransit.com/travel-alerts-to\">운행 알림</a>을 확인하세요."
   },
   "compare": {
     "title": "통근 옵션 비교 — Reroute NJ",

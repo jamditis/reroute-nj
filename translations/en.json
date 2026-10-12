@@ -188,7 +188,10 @@
     "tl_p2_start_desc": "Temporary schedules take effect. Weekday Midtown Direct trains diverted to Hoboken. Single-track operation between Newark and Secaucus.",
     "tl_p2_end_title": "Regular schedules resume",
     "tl_p2_end_desc": "NJ Transit regular schedules resume, subject to safety testing. Full normal service is expected November 16.",
-    "stat_single_track": "Single track"
+    "stat_single_track": "Single track",
+    "sources_title": "Sources and verification",
+    "sources_review": "Core Phase 2 guidance was reviewed against official sources on <strong><time datetime=\"2026-10-11\">October 11, 2026</time></strong>. <a href=\"https://github.com/jamditis/reroute-nj/blob/main/docs/reviews/cutover-audit-2026-10-11.md\">Read the review and its limits</a>.",
+    "sources_review_limits": "This is not live service information or verification of every train departure. Official changes may take time to appear here. Check <a href=\"https://www.njtransit.com/portalcutover\">current NJ Transit schedules</a> and <a href=\"https://www.njtransit.com/travel-alerts-to\">travel alerts</a> before traveling."
   },
   "compare": {
     "title": "Compare commute options — Reroute NJ",

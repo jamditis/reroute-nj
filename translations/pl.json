@@ -188,7 +188,10 @@
     "tl_p2_start_desc": "Wchodzą tymczasowe rozkłady. W dni powszednie pociągi Midtown Direct są kierowane do Hoboken. Jeden tor między Newark a Secaucus.",
     "tl_p2_end_title": "Wraca regularny rozkład",
     "tl_p2_end_desc": "Wracają regularne rozkłady NJ Transit, po testach bezpieczeństwa. Pełna normalna usługa spodziewana 16 listopada.",
-    "stat_single_track": "Jeden tor"
+    "stat_single_track": "Jeden tor",
+    "sources_title": "Źródła i weryfikacja",
+    "sources_review": "Najważniejsze wskazówki dotyczące Fazy 2 sprawdzono na podstawie oficjalnych źródeł <strong><time datetime=\"2026-10-11\">11 października 2026 r.</time></strong>. <a href=\"https://github.com/jamditis/reroute-nj/blob/main/docs/reviews/cutover-audit-2026-10-11.md\">Przeczytaj opis weryfikacji i jej ograniczeń</a>.",
+    "sources_review_limits": "Nie są to informacje o ruchu w czasie rzeczywistym ani potwierdzenie każdego odjazdu pociągu. Oficjalne zmiany mogą pojawiać się tutaj z opóźnieniem. Przed podróżą sprawdź <a href=\"https://www.njtransit.com/portalcutover\">aktualne rozkłady NJ Transit</a> i <a href=\"https://www.njtransit.com/travel-alerts-to\">komunikaty dla podróżnych</a>."
   },
   "compare": {
     "title": "Porównaj opcje dojazdu — Reroute NJ",
