@@ -1,6 +1,23 @@
 {
-  "lastUpdated": "2026-10-13T12:48:53Z",
+  "lastUpdated": "2026-10-13T21:15:51Z",
   "articles": [
+    {
+      "id": "abc7ny-longer-commutes-portal-2026-10-13",
+      "title": "NJ Transit riders face longer commutes during Portal Bridge work",
+      "url": "https://abc7ny.com/post/no-midtown-direct-service-portal-bridge-work-continues/19934408/",
+      "source": "ABC7 New York",
+      "author": "Jaysha Patel",
+      "date": "2026-10-13",
+      "category": "news",
+      "excerpt": "Reporting from Hoboken on added transfers and longer journeys during the final bridge connection.",
+      "lines": [
+        "montclair-boonton",
+        "morris-essex",
+        "northeast-corridor",
+        "north-jersey-coast"
+      ],
+      "direction": "nj-to-nyc"
+    },
     {
       "id": "cbsnews-hoboken-commuter-disruptions-2026-10-13",
       "title": "NJ Transit riders face disrupted commutes amid final construction of Portal Bridge",
