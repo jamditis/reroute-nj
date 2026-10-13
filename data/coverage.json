@@ -1,6 +1,21 @@
 {
-  "lastUpdated": "2026-10-11T16:19:00Z",
+  "lastUpdated": "2026-10-13T12:48:53Z",
   "articles": [
+    {
+      "id": "cbsnews-hoboken-commuter-disruptions-2026-10-13",
+      "title": "NJ Transit riders face disrupted commutes amid final construction of Portal Bridge",
+      "url": "https://www.cbsnews.com/newyork/news/nj-transit-penn-station-hoboken-service-changes-portal-bridge/",
+      "source": "CBS New York",
+      "author": "Aziza Shuler",
+      "date": "2026-10-13",
+      "category": "news",
+      "excerpt": "Commuters describe longer trips as weekday Midtown Direct trains divert to Hoboken.",
+      "lines": [
+        "montclair-boonton",
+        "morris-essex"
+      ],
+      "direction": "nj-to-nyc"
+    },
     {
       "id": "gothamist-transit-riders-face-2026-10-11",
       "title": "NJ Transit riders face 5 weeks of schedule disruptions starting Sunday",
