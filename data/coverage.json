@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-13T21:15:51Z",
+  "lastUpdated": "2026-10-15T21:15:00Z",
   "articles": [
     {
       "id": "abc7ny-longer-commutes-portal-2026-10-13",
@@ -27,6 +27,21 @@
       "date": "2026-10-13",
       "category": "news",
       "excerpt": "Commuters describe longer trips as weekday Midtown Direct trains divert to Hoboken.",
+      "lines": [
+        "montclair-boonton",
+        "morris-essex"
+      ],
+      "direction": "nj-to-nyc"
+    },
+    {
+      "id": "news12-commuter-disruptions-2026-10-12",
+      "title": "Five weeks of disruptions ahead as NJ Transit shifts trains off aging Portal Bridge",
+      "url": "https://newjersey.news12.com/five-weeks-of-disruptions-ahead-as-nj-transit-shifts-trains-off-aging-portal-bridge",
+      "source": "News12 | New Jersey",
+      "author": "Tony Caputo",
+      "date": "2026-10-12",
+      "category": "news",
+      "excerpt": "Bloomfield and Orange commuters describe disrupted journeys and choosing alternate connections as the final bridge cutover begins.",
       "lines": [
         "montclair-boonton",
         "morris-essex"
