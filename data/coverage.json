@@ -1,6 +1,34 @@
 {
-  "lastUpdated": "2026-10-15T21:15:00Z",
+  "lastUpdated": "2026-10-16T11:51:00Z",
   "articles": [
+    {
+      "id": "news12-terminal-construction-cutover-2026-10-15",
+      "title": "Heavy delays hit Lincoln Tunnel as $11 billion terminal project gets underway",
+      "url": "https://newjersey.news12.com/2026/10/15/heavy-delays-hit-lincoln-tunnel-as-11-billion-terminal-project-gets-underway/2Z7dp1Q3cOSM7BqKd46CbU",
+      "source": "News12 | New Jersey",
+      "author": "Tom Krosnowski",
+      "date": "2026-10-15",
+      "category": "news",
+      "excerpt": "Reporting on bus-terminal ramp construction and extra travel time for commuters using buses during the Portal Bridge cutover.",
+      "lines": [
+        "all"
+      ],
+      "direction": "nj-to-nyc"
+    },
+    {
+      "id": "news12-cutover-weather-preparations-2026-10-13",
+      "title": "First weekday commute since holiday sends NJ Transit riders back to buses, ferries and PATH trains",
+      "url": "https://newjersey.news12.com/first-weekday-commute-since-holiday-sends-nj-transit-riders-back-to-buses-ferries-and-path-trains",
+      "source": "News12 | New Jersey",
+      "author": "Tony Caputo",
+      "date": "2026-10-13",
+      "category": "news",
+      "excerpt": "NJ Transit’s president discusses weather risks and preparations as riders turn to alternate connections during the final cutover.",
+      "lines": [
+        "all"
+      ],
+      "direction": "nj-to-nyc"
+    },
     {
       "id": "abc7ny-longer-commutes-portal-2026-10-13",
       "title": "NJ Transit riders face longer commutes during Portal Bridge work",
