@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-16T11:51:00Z",
+  "lastUpdated": "2026-10-16T21:14:00Z",
   "articles": [
     {
       "id": "news12-terminal-construction-cutover-2026-10-15",
@@ -101,6 +101,20 @@
       "excerpt": "NJ Transit and Amtrak schedules change Sunday reflecting service reductions needed to finish moving rail service to the new Portal North Bridge.",
       "lines": [
         "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "westorange-jitney-cutover-schedules-2026-10-09",
+      "title": "Jitney Schedule Updates Begin Monday, 10/12",
+      "url": "https://www.westorange.org/CivicAlerts.aspx?AID=4629",
+      "source": "Township of West Orange",
+      "author": null,
+      "date": "2026-10-09",
+      "category": "official",
+      "excerpt": "West Orange’s weekday jitney schedules change October 12–November 13 for the Portal cutover. Routes 4, 6 and 7 skip Brick Church; Route 5 runs four morning and five evening trips. The township links temporary route schedules.",
+      "lines": [
+        "morris-essex"
       ],
       "direction": "both"
     },
