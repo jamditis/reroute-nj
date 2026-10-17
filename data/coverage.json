@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-16T21:14:00Z",
+  "lastUpdated": "2026-10-17T20:53:14Z",
   "articles": [
     {
       "id": "news12-terminal-construction-cutover-2026-10-15",
@@ -75,6 +75,20 @@
         "morris-essex"
       ],
       "direction": "nj-to-nyc"
+    },
+    {
+      "id": "montclairlocal-boxcar-gaslamp-cutover-2026-10-12",
+      "title": "Boxcar Launches New Bus Route from Glen Ridge, Montclair to Manhattan",
+      "url": "https://montclairlocal.news/2026/10/boxcar-launches-new-bus-route-from-glen-ridge-montclair-to-manhattan/",
+      "source": "Montclair Local News",
+      "author": "Montclair Local",
+      "date": "2026-10-12",
+      "category": "news",
+      "excerpt": "Montclair Local reported Boxcar’s planned Oct. 13 launch of the Gaslamp Branch, with three morning and three evening buses between Glen Ridge, Montclair and Midtown. The commercial service requires advance reservations and charges its own fares.",
+      "lines": [
+        "montclair-boonton"
+      ],
+      "direction": "both"
     },
     {
       "id": "gothamist-transit-riders-face-2026-10-11",
