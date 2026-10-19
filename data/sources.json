@@ -161,10 +161,8 @@
       "publisher": "NY Waterway",
       "type": "official",
       "accessed": "2026-10-11",
-      "supports": [
-        "ferry-service-window"
-      ],
-      "note": "Current route page confirms weekday commute-only service. Displayed baseline timetable is not independently verified as the enhanced Phase 2 timetable; duration remains an estimate."
+      "supports": [],
+      "note": "Historical baseline route page checked October 11 confirms weekday commute-only service. Retained as context for the unverified duration estimate, not as evidence for the special cutover timetable now tracked by nywaterway-special-njt-schedule."
     },
     "njtransit-bus-126": {
       "title": "NJ Transit Bus 126 Schedule",
@@ -337,6 +335,18 @@
       "supports": [
         "path-fare"
       ]
+    },
+    "nywaterway-special-njt-schedule": {
+      "title": "NY Waterway Special NJT Rail Customer Schedule",
+      "url": "https://www.nywaterway.com/AdvisoryDetails.aspx?aid=910",
+      "publisher": "NY Waterway",
+      "type": "official",
+      "published": "2026-10-13",
+      "accessed": "2026-10-19",
+      "supports": [
+        "ferry-service-window"
+      ],
+      "note": "The advisory and linked HNJTRailSch.jpg show an October 12–November 13 special Hoboken/NJT Terminal–Midtown W39th schedule, with separate Monday/Friday and Tuesday–Thursday morning/evening tables. The image marks some arrivals as drop-off only and has an apparent AM/PM typo in one Tuesday–Thursday morning cell. Individual departure times are not transcribed or independently verified."
     }
   },
   "claims": {
@@ -655,14 +665,14 @@
       "note": "The September 13 map does not establish a Wall Street shuttle stop. Check current route-specific schedules."
     },
     "ferry-service-window": {
-      "claim": "Hoboken/NJT Terminal–Midtown W39th ferry operates weekdays during morning and evening commuting hours.",
+      "claim": "NY Waterway publishes a special weekday Hoboken/NJT Terminal–Midtown W39th ferry schedule for October 12–November 13, with separate Monday/Friday and Tuesday–Thursday morning and evening tables.",
       "sources": [
-        "nywaterway-schedules"
+        "nywaterway-special-njt-schedule"
       ],
       "status": "verified",
-      "lastVerified": "2026-10-11",
-      "note": "NJT promises enhanced Phase 2 peak service; exact special departure times were not established from the baseline NY Waterway route page."
+      "lastVerified": "2026-10-19",
+      "note": "Verified the advisory publication date, effective window, terminals and weekday groupings against the linked schedule image. Consult the operator for individual trips and drop-off-only restrictions; an apparent AM/PM typo is not resolved here. This does not verify trip duration, fares, rail-ticket eligibility or real-time service."
     }
   },
-  "verificationNote": "Partial authoritative-source review on October 11, 2026. Per-claim dates and statuses control freshness; this timestamp does not reverify every source or claim."
+  "verificationNote": "Partial authoritative-source review on October 11, 2026, with a scoped ferry-schedule update on October 19. Per-claim dates and statuses control freshness; the top-level timestamp does not reverify every source or claim."
 }
