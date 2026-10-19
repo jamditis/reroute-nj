@@ -690,7 +690,7 @@
       '<a href="https://www.njtransit.com/portalcutover" target="_blank" rel="noopener">NJ Transit cutover page</a>' +
       ' · <a href="' + esc(stationUrl) + '" target="_blank" rel="noopener">NJ Transit schedules</a>' +
       ' · <a href="https://www.panynj.gov/path/en/schedules-maps.html" target="_blank" rel="noopener">PATH schedules</a>' +
-      ' · <a href="https://www.nywaterway.com/Hoboken-NJTT-MidtownRoute.aspx" target="_blank" rel="noopener">NY Waterway</a>' +
+      ' · <a href="https://www.nywaterway.com/AdvisoryDetails.aspx?aid=910" target="_blank" rel="noopener">NY Waterway</a>' +
       "</p></div>"
     );
   }

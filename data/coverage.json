@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-17T20:53:14Z",
+  "lastUpdated": "2026-10-19T12:21:53Z",
   "articles": [
     {
       "id": "news12-terminal-construction-cutover-2026-10-15",
@@ -60,6 +60,21 @@
         "morris-essex"
       ],
       "direction": "nj-to-nyc"
+    },
+    {
+      "id": "nywaterway-special-njt-schedule-2026-10-13",
+      "title": "Special NJT Rail Customer Schedule",
+      "url": "https://www.nywaterway.com/AdvisoryDetails.aspx?aid=910",
+      "source": "NY Waterway",
+      "author": null,
+      "date": "2026-10-13",
+      "category": "official",
+      "excerpt": "NY Waterway published a special Hoboken/NJT Terminal–Midtown W. 39th Street ferry timetable for October 12–November 13, with separate Monday/Friday and Tuesday–Thursday morning and evening schedules. Consult the operator’s schedule, including drop-off-only restrictions.",
+      "lines": [
+        "montclair-boonton",
+        "morris-essex"
+      ],
+      "direction": "both"
     },
     {
       "id": "news12-commuter-disruptions-2026-10-12",

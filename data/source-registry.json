@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-11T14:32:57Z",
+  "updatedAt": "2026-10-19T12:21:53Z",
   "entries": [
     {
       "id": "official-cutover-portal-page",
@@ -120,16 +120,29 @@
     {
       "id": "official-nywaterway-bus-routes",
       "claimArea": "service-frequency",
-      "claim": "Weekday commuter ferry service window and Manhattan bus route map; special cutover ferry departure times remain unverified",
+      "claim": "Manhattan bus route map; the special cutover ferry schedule is tracked separately",
       "sourceType": "official",
       "verificationMethod": "manual",
       "verificationWindowHours": 24,
       "lastVerified": "2026-10-11T14:32:57Z",
       "urls": [
         "https://www.nywaterway.com/BusStopsSchedules.aspx",
-        "https://www.nywaterway.com/UserFiles/Files/2026/BusRouteMaps/2026-09-13/NYWBus_Peak.pdf",
-        "https://www.nywaterway.com/Hoboken-NJTT-MidtownRoute.aspx"
+        "https://www.nywaterway.com/UserFiles/Files/2026/BusRouteMaps/2026-09-13/NYWBus_Peak.pdf"
       ]
+    },
+    {
+      "id": "official-nywaterway-cutover-schedule",
+      "claimArea": "service-frequency",
+      "claim": "October 13 advisory: special Hoboken/NJT Terminal–Midtown W39th ferry schedule, October 12–November 13, with Monday/Friday and Tuesday–Thursday tables; not individual trip times, fares or live service",
+      "sourceType": "official",
+      "verificationMethod": "manual",
+      "verificationWindowHours": 24,
+      "lastVerified": "2026-10-19T12:19:36Z",
+      "urls": [
+        "https://www.nywaterway.com/AdvisoryDetails.aspx?aid=910",
+        "https://www.nywaterway.com/UserFiles/Images/2026/HobokenNJT-Rail/HNJTRailSch.jpg"
+      ],
+      "verificationNote": "Advisory date, effective window, route and weekday groupings visually checked. One morning-table AM/PM label appears inconsistent, and some cells are drop-off only. No individual times transcribed; unrelated bus-map and core cutover verification dates are unchanged."
     }
   ]
 }
