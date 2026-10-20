@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-19T12:21:53Z",
+  "lastUpdated": "2026-10-20T12:56:00Z",
   "articles": [
     {
       "id": "news12-terminal-construction-cutover-2026-10-15",
@@ -144,6 +144,23 @@
       "excerpt": "West Orange’s weekday jitney schedules change October 12–November 13 for the Portal cutover. Routes 4, 6 and 7 skip Brick Church; Route 5 runs four morning and five evening trips. The township links temporary route schedules.",
       "lines": [
         "morris-essex"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "njpbs-kolluri-cutover-interview-2026-10-09",
+      "title": "NJ PBS News with Rob Nelson | October 8, 2026",
+      "url": "https://www.pbs.org/video/nj-pbs-news-with-rob-nelson-october-8-2026-ssphvs/",
+      "source": "NJ PBS",
+      "author": "Rob Nelson",
+      "date": "2026-10-09",
+      "category": "news",
+      "excerpt": "The October 8 newscast, published October 9, includes an original interview with NJ Transit CEO Kris Kolluri about cutover preparation, Hoboken capacity and weather-related completion risks. This links to the full episode; it is historical reporting, not a new service advisory.",
+      "lines": [
+        "montclair-boonton",
+        "morris-essex",
+        "northeast-corridor",
+        "north-jersey-coast"
       ],
       "direction": "both"
     },
