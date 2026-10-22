@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-19T12:21:53Z",
+  "updatedAt": "2026-10-22T20:50:07Z",
   "entries": [
     {
       "id": "official-cutover-portal-page",
@@ -143,6 +143,19 @@
         "https://www.nywaterway.com/UserFiles/Images/2026/HobokenNJT-Rail/HNJTRailSch.jpg"
       ],
       "verificationNote": "Advisory date, effective window, route and weekday groupings visually checked. One morning-table AM/PM label appears inconsistent, and some cells are drop-off only. No individual times transcribed; unrelated bus-map and core cutover verification dates are unchanged."
+    },
+    {
+      "id": "official-brielle-october26-announcement",
+      "claimArea": "customer-alerts",
+      "claim": "NJT announces Bay Head–Manasquan rail service resuming October 26; substitute-bus accessible boarding remains Point Pleasant Beach with train connection at Asbury Park.",
+      "sourceType": "official",
+      "verificationMethod": "manual",
+      "verificationWindowHours": 12,
+      "lastVerified": "2026-10-22T20:50:07Z",
+      "urls": [
+        "https://www.njtransit.com/service-advisory/2177824"
+      ],
+      "verificationNote": "Announced future local service change, not observed restoration. Does not end the separate Portal cutover or refresh unrelated source verification dates. The printable timetable page has conflicting date labels; use the specific advisory and recheck before travel."
     }
   ]
 }

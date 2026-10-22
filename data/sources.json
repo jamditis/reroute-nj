@@ -261,15 +261,16 @@
       ]
     },
     "njtransit-brielle-service-advisory": {
-      "title": "North Jersey Coast Line: Substitute Buses Bay Head–Manasquan, Beginning October 11, 2026",
+      "title": "North Jersey Coast Line: Substitute Buses Bay Head–Manasquan, Until Monday, October 26, 2026",
       "url": "https://www.njtransit.com/service-advisory/2177824",
       "publisher": "NJ Transit",
       "type": "official",
-      "accessed": "2026-10-11",
+      "accessed": "2026-10-22",
       "supports": [
         "brielle-replacement",
         "brielle-accessibility"
-      ]
+      ],
+      "note": "Advisory checked October 22 explicitly announces regular Bay Head–Manasquan train service resuming Monday, October 26. This is the announced local Brielle restoration date, not confirmation that service has resumed and not the end of the separate Portal cutover."
     },
     "path-phase2-advisory": {
       "title": "PATH Travel Advisory Reminder: Portal North Bridge work (October 6, 2026)",
@@ -638,13 +639,14 @@
       "lastVerified": "2026-10-11"
     },
     "brielle-replacement": {
-      "claim": "Buses replace Bay Head–Manasquan trains during Brielle work October 11–25.",
+      "claim": "Buses replace Bay Head–Manasquan trains through October 25; NJ TRANSIT announces regular service on this segment will resume Monday, October 26, 2026.",
       "sources": [
         "njtransit-phase2-service-advisory",
         "njtransit-brielle-service-advisory"
       ],
       "status": "verified",
-      "lastVerified": "2026-10-11"
+      "lastVerified": "2026-10-22",
+      "note": "October 22 advisory readback, not live restoration evidence. The comparison tool already uses October 26 as its exclusive substitute-bus end boundary. Portal temporary schedules remain separate, with November 15 restoration subject to safety testing."
     },
     "brielle-accessibility": {
       "claim": "Customers needing accessible boarding must board at Point Pleasant Beach; the bus continues to Asbury Park for train connections.",
@@ -652,7 +654,7 @@
         "njtransit-brielle-service-advisory"
       ],
       "status": "verified",
-      "lastVerified": "2026-10-11"
+      "lastVerified": "2026-10-22"
     },
     "ferry-bus-connections": {
       "claim": "NY Waterway publishes weekday peak routes on W34th/23rd, W42nd, W50th, W57th and a limited downtown route.",
