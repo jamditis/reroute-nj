@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-22T20:50:07Z",
+  "updatedAt": "2026-10-30T09:02:58Z",
   "entries": [
     {
       "id": "official-cutover-portal-page",
@@ -8,7 +8,7 @@
       "sourceType": "official",
       "verificationMethod": "manual",
       "verificationWindowHours": 24,
-      "lastVerified": "2026-10-11T14:30:05Z",
+      "lastVerified": "2026-10-30T09:02:58Z",
       "urls": [
         "https://www.njtransit.com/portalcutover"
       ]
@@ -58,7 +58,7 @@
       "sourceType": "official",
       "verificationMethod": "manual",
       "verificationWindowHours": 12,
-      "lastVerified": "2026-10-09T22:03:08Z",
+      "lastVerified": "2026-10-30T09:02:58Z",
       "urls": [
         "https://www.njtransit.com/service-advisory"
       ],
@@ -72,7 +72,7 @@
       "sourceType": "secondary",
       "verificationMethod": "scripted",
       "verificationWindowHours": 72,
-      "lastVerified": "2026-10-09T22:03:08Z",
+      "lastVerified": "2026-10-30T09:02:58Z",
       "urls": [
         "https://www.northjersey.com/",
         "https://www.nj.com/",

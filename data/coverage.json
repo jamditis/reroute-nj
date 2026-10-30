@@ -1,6 +1,20 @@
 {
-  "lastUpdated": "2026-10-20T12:56:00Z",
+  "lastUpdated": "2026-10-30T09:02:58Z",
   "articles": [
+    {
+      "id": "amtrak-portal-north-bridge-2nd-2026-10-29",
+      "title": "Portal North Bridge – 2nd Cutover in Action!",
+      "url": "https://media.amtrak.com/2026/10/portal-north-bridge-2nd-cutover-in-action/",
+      "source": "Amtrak Media",
+      "author": "Jason Abrams",
+      "date": "2026-10-29",
+      "category": "official",
+      "excerpt": "The future is taking shape at Portal North Bridge! The Fall Cutover is entering its third week, with Amtrak and NJ TRANSIT crews and their contractor working around the clock to transform the railroad infrastructure surrounding the new bridge. Over the past two weeks, crews have removed old track and overhead power infrastructure, installed new track on the west side of the new bridge, and set...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
     {
       "id": "news12-terminal-construction-cutover-2026-10-15",
       "title": "Heavy delays hit Lincoln Tunnel as $11 billion terminal project gets underway",
