@@ -1,6 +1,20 @@
 {
-  "lastUpdated": "2026-10-30T09:02:58Z",
+  "lastUpdated": "2026-11-02T23:03:12Z",
   "articles": [
+    {
+      "id": "njdotcom-will-the-portal-north-2026-11-02",
+      "title": "Will the Portal North bridge work that’s disrupted NJ Transit commuters finish on time?",
+      "url": "https://www.nj.com/news/2026/11/will-the-portal-north-bridge-work-thats-disrupted-nj-transit-commuters-finish-on-time.html",
+      "source": "NJ.com",
+      "author": null,
+      "date": "2026-11-02",
+      "category": "news",
+      "excerpt": "The final project to move the last Northeast Corridor Line track to the new Portal North bridge is on time and is scheduled for a Nov. 15 completion, officials said.",
+      "lines": [
+        "northeast-corridor"
+      ],
+      "direction": "both"
+    },
     {
       "id": "amtrak-portal-north-bridge-2nd-2026-10-29",
       "title": "Portal North Bridge – 2nd Cutover in Action!",
