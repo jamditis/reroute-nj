@@ -1,6 +1,23 @@
 {
-  "lastUpdated": "2026-11-02T23:03:12Z",
+  "lastUpdated": "2026-11-11T12:36:22Z",
   "articles": [
+    {
+      "id": "njtransit-november15-schedules-weekend-delays-2026-11-10",
+      "title": "NJ Transit announces November 15 schedules and warns of weekend delays through December",
+      "url": "https://www.njtransit.com/service-advisory/2063193",
+      "source": "NJ Transit",
+      "author": null,
+      "date": "2026-11-10",
+      "category": "official",
+      "excerpt": "NJ Transit announces November 15 schedules, including the return of weekday Midtown Direct trains to New York. NEC, North Jersey Coast and Morris & Essex riders may face delays up to 20 minutes beginning November 15 and on select weekends through December, from Friday 10 p.m. to Monday 5 a.m., for remaining Portal work and old-bridge removal. This is advance guidance, not confirmation that restoration has occurred.",
+      "lines": [
+        "montclair-boonton",
+        "morris-essex",
+        "northeast-corridor",
+        "north-jersey-coast"
+      ],
+      "direction": "both"
+    },
     {
       "id": "njdotcom-will-the-portal-north-2026-11-02",
       "title": "Will the Portal North bridge work that’s disrupted NJ Transit commuters finish on time?",

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-02T23:03:12Z",
+  "updatedAt": "2026-11-11T12:36:22Z",
   "entries": [
     {
       "id": "official-cutover-portal-page",
@@ -156,6 +156,21 @@
         "https://www.njtransit.com/service-advisory/2177824"
       ],
       "verificationNote": "Announced future local service change, not observed restoration. Does not end the separate Portal cutover or refresh unrelated source verification dates. The printable timetable page has conflicting date labels; use the specific advisory and recheck before travel."
+    },
+    {
+      "id": "official-november15-schedules-weekend-delays",
+      "claimArea": "customer-alerts",
+      "claim": "November 15 schedule announcement and planned weekend delay warning; not observed restoration.",
+      "sourceType": "official",
+      "verificationMethod": "manual",
+      "verificationWindowHours": 12,
+      "lastVerified": "2026-11-11T12:36:22Z",
+      "urls": [
+        "https://www.njtransit.com/service-advisory/2063193",
+        "https://www.njtransit.com/travel-alerts-to?line=NEC&tab=Rail",
+        "https://www.njtransit.com/schedules/printable"
+      ],
+      "verificationNote": "Advisory body, publication date in the NEC listing, and Effective 11/15 timetable labels checked. No individual timetable audit. Existing verification dates remain unchanged."
     }
   ]
 }
