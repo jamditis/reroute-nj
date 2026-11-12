@@ -24,4 +24,7 @@ if [[ -n "$(/usr/bin/git status --porcelain)" ]]; then
   exit 0
 fi
 
+# Start from the published main, so new data is built on the latest data files.
+/usr/bin/git pull --ff-only --quiet origin main
+
 exec "$python" tools/scrape-coverage.py
