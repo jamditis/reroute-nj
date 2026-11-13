@@ -110,7 +110,7 @@
       { id: "tl-phase2", date: new Date("2026-09-17") },
       { id: "tl-tickets", date: new Date("2026-10-01") },
       { id: "tl-p2-start", date: new Date("2026-10-11") },
-      { id: "tl-p2-end", date: new Date("2026-11-15") },
+      { id: "tl-p2-end", date: CUTOVER_END },
     ];
     var activeSet = false;
     for (var i = items.length - 1; i >= 0; i--) {

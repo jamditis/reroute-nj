@@ -460,28 +460,51 @@ function exportCanvasPdf(canvas, filename) {
     // Update only time-dependent text and ticket guidance. Keep the same button,
     // detail region, focus, expansion state, and event listeners across midnight.
     var noticePhase = "";
+    var lastDiversionWeekday = new Date("2026-11-13T00:00:00-05:00");
+    var finalCutoverWeekend = new Date("2026-11-14T00:00:00-05:00");
+    var novemberTicketEnd = new Date("2026-12-01T00:00:00-05:00");
     refreshServiceNotice = function (now) {
       now = now || new Date();
       var phaseNow = now < CUTOVER_START ? "before" : (now >= CUTOVER_END ? "after" : "active");
-      if (phaseNow === noticePhase) return;
-      noticePhase = phaseNow;
+      if (phaseNow === "active" && now >= finalCutoverWeekend) phaseNow = "weekend";
+      else if (phaseNow === "active" && now >= lastDiversionWeekday) phaseNow = "last_weekday";
       var afterCutover = phaseNow === "after";
-      noticeTitle.textContent = phaseNow === "before"
-        ? noticeText("common.service_notice_before", "Phase 2 starts October 11")
-        : (afterCutover
-          ? noticeText("common.service_notice_after", "Check current service before traveling")
-          : noticeText("common.service_notice_active", "Phase 2 is underway"));
-      noticeScheduleNode.textContent = afterCutover
-        ? noticeText("common.service_notice_after_details", "The published temporary schedule period has ended. Service restoration depends on safety testing. Check NJ Transit for current schedules before traveling.")
-        : noticeText("common.service_notice_schedule", "Temporary schedules begin Sunday, October 11. Weekday Midtown Direct trains divert to Hoboken from Monday, October 12 through November 13. Northeast Corridor and North Jersey Coast have fewer trains. Weekend trains still serve Penn Station NY, with adjusted times.");
-      if (afterCutover && noticeTickets.parentNode) noticeTickets.parentNode.removeChild(noticeTickets);
-      else if (!afterCutover && !noticeTickets.parentNode) noticeDetails.appendChild(noticeTickets);
-      banner.setAttribute("data-phase", phaseNow === "active" ? "active" : "inactive");
+      var showTickets = !afterCutover || now < novemberTicketEnd;
+      var state = phaseNow + (showTickets ? "-tickets" : "");
+      if (state === noticePhase) return;
+      noticePhase = state;
+      var titles = {
+        before: "Phase 2 starts October 11",
+        active: "Phase 2 is underway",
+        last_weekday: "Last weekday of Hoboken diversions",
+        weekend: "Weekend service to Penn Station NY",
+        after: "Check current service before traveling"
+      };
+      noticeTitle.textContent = noticeText("common.service_notice_" + phaseNow, titles[phaseNow]);
+      var scheduleKey = "common.service_notice_schedule";
+      var scheduleFallback = "Temporary schedules begin Sunday, October 11. Weekday Midtown Direct trains divert to Hoboken from Monday, October 12 through November 13. Northeast Corridor and North Jersey Coast have fewer trains. Weekend trains still serve Penn Station NY, with adjusted times.";
+      if (phaseNow === "last_weekday") {
+        scheduleKey = "common.service_notice_last_weekday_details";
+        scheduleFallback = "Today, Friday, November 13, is the last scheduled weekday of Midtown Direct diversions to Hoboken. Weekend trains serve Penn Station NY. New schedules are announced for Sunday, November 15, subject to safety testing.";
+      } else if (phaseNow === "weekend") {
+        scheduleKey = "common.service_notice_weekend_details";
+        scheduleFallback = "Today, Saturday, November 14, Midtown Direct trains serve Penn Station NY with adjusted times. New schedules are announced for tomorrow, Sunday, November 15. Weekday Midtown Direct restoration depends on safety testing.";
+      } else if (afterCutover) {
+        scheduleKey = "common.service_notice_after_details";
+        scheduleFallback = "The published Phase 2 schedule period has ended. NJ Transit announces new schedules from November 15; weekday Midtown Direct restoration depends on safety testing. NEC, North Jersey Coast and Morris & Essex may have delays up to 20 minutes on select weekends through December 2026 (Friday 10 p.m.–Monday 5 a.m.). Check current NJ Transit alerts before traveling.";
+      }
+      noticeScheduleNode.textContent = noticeText(scheduleKey, scheduleFallback);
+      noticeTickets.textContent = afterCutover
+        ? noticeText("common.service_notice_after_tickets", "November 15–30: valid Hoboken monthly/weekly passes and FLEXPASS via Newark Broad St. are accepted to/from Penn Station NY for Midtown Direct customers. Buy Penn Station NY tickets for one-way or round-trip travel. Do not assume PATH, ferry or bus cross-honoring continues.")
+        : noticeText("common.service_notice_tickets", "Weekend tickets: Hoboken monthly/weekly passes and FLEXPASS are valid to Penn Station NY. One-way and round-trip riders need Penn Station NY tickets.");
+      if (!showTickets && noticeTickets.parentNode) noticeTickets.parentNode.removeChild(noticeTickets);
+      else if (showTickets && !noticeTickets.parentNode) noticeDetails.appendChild(noticeTickets);
+      banner.setAttribute("data-phase", now >= CUTOVER_START && !afterCutover ? "active" : "inactive");
     };
     refreshServiceNotice();
     // Some full pages have no page-specific countdown timer. Keep their notice
     // current too; existing countdown timers also invoke this same guarded refresh.
-    window.setInterval(function () { refreshServiceNotice(); }, 3600000);
+    window.setInterval(function () { refreshServiceNotice(); }, 60000);
     window.addEventListener("pageshow", function () { refreshServiceNotice(); });
 
     // Print all guidance, then restore the reader's chosen screen state.

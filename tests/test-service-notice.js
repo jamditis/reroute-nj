@@ -31,7 +31,7 @@ function run(time, translations, existing) {
   if (oldBanner) { oldBanner.className = "alert-banner"; oldBanner.appendChild(new Node("details")); }
   var ctx = {
     now: time,
-    Date: function () { return new Date(ctx.now); },
+    Date: function (value) { return new Date(arguments.length ? value : ctx.now); },
     refreshServiceNotice: null,
     CUTOVER_START: new Date("2026-10-11T00:00:00-04:00"),
     CUTOVER_END: new Date("2026-11-15T00:00:00-05:00"),
@@ -46,7 +46,7 @@ function run(time, translations, existing) {
 check("headline changes at Eastern midnight, not UTC midnight", function () {
   assert.strictEqual(run("2026-10-11T03:59:59Z").title.textContent, "Phase 2 starts October 11");
   assert.strictEqual(run("2026-10-11T04:00:00Z").title.textContent, "Phase 2 is underway");
-  assert.strictEqual(run("2026-11-15T04:59:59Z").title.textContent, "Phase 2 is underway");
+  assert.strictEqual(run("2026-11-15T04:59:59Z").title.textContent, "Weekend service to Penn Station NY");
   assert.strictEqual(run("2026-11-15T05:00:00Z").title.textContent, "Check current service before traveling");
 });
 check("post-cutover text never automatically asserts completion", function () {
@@ -54,7 +54,40 @@ check("post-cutover text never automatically asserts completion", function () {
   var paragraph = find(result.banner, function (node) { return node.className === "service-notice-schedule"; });
   assert(paragraph.textContent.includes("depends on safety testing"));
   assert(!paragraph.textContent.includes("Temporary schedules begin"));
-  assert(!find(result.banner, function (node) { return node.className === "service-notice-tickets"; }), "Temporary ticket rules must expire");
+  var tickets = find(result.banner, function (node) { return node.className === "service-notice-tickets"; });
+  ["November 15–30", "via Newark Broad St.", "Penn Station NY", "Do not assume PATH"].forEach(function (text) { assert(tickets.textContent.includes(text)); });
+  var expired = run("2026-12-01T05:00:00Z");
+  assert(!find(expired.banner, function (node) { return node.className === "service-notice-tickets"; }), "November ticket rules must expire in Eastern time");
+});
+check("November 13, 14 and 16 show the correct notice in all eleven languages", function () {
+  ["en", "es", "zh", "tl", "ko", "pt", "gu", "hi", "it", "ar", "pl"].forEach(function (lang) {
+    var common = JSON.parse(fs.readFileSync(path.join(root, "translations", lang + ".json"), "utf8")).common;
+    var translated = {};
+    Object.keys(common).forEach(function (key) { translated["common." + key] = common[key]; });
+    [
+      ["2026-11-13T17:00:00Z", "last_weekday"],
+      ["2026-11-14T17:00:00Z", "weekend"],
+      ["2026-11-16T17:00:00Z", "after"]
+    ].forEach(function (entry) {
+      var result = run(entry[0], translated);
+      assert.strictEqual(result.title.textContent, common["service_notice_" + entry[1]], lang + " title " + entry[0]);
+      var schedule = find(result.banner, function (node) { return node.className === "service-notice-schedule"; });
+      assert.strictEqual(schedule.textContent, common["service_notice_" + entry[1] + "_details"], lang + " schedule " + entry[0]);
+      var tickets = find(result.banner, function (node) { return node.className === "service-notice-tickets"; });
+      assert.strictEqual(tickets.textContent, common[entry[1] === "after" ? "service_notice_after_tickets" : "service_notice_tickets"]);
+    });
+    ["index.html", "about.html", "blog.html"].forEach(function (file) {
+      var html = fs.readFileSync(path.join(root, lang === "en" ? "" : lang, file), "utf8");
+      var fallback = html.slice(html.indexOf('<section class="alert-banner'), html.indexOf("</section>", html.indexOf('<section class="alert-banner')));
+      assert(fallback.includes(common.service_notice_after), lang + " neutral static title");
+      assert(fallback.includes(common.service_notice_fallback_details), lang + " dated static schedule");
+      assert(fallback.includes(common.service_notice_after_tickets), lang + " dated static ticket rules");
+    });
+  });
+  assert.strictEqual(run("2026-11-13T04:59:59Z").title.textContent, "Phase 2 is underway");
+  assert.strictEqual(run("2026-11-13T05:00:00Z").title.textContent, "Last weekday of Hoboken diversions");
+  assert.strictEqual(run("2026-11-14T04:59:59Z").title.textContent, "Last weekday of Hoboken diversions");
+  assert.strictEqual(run("2026-11-14T05:00:00Z").title.textContent, "Weekend service to Penn Station NY");
 });
 check("notice starts expanded with accessible disclosure and visible reminder", function () {
   var result = run("2026-10-11T14:00:00Z", null, true);
@@ -174,7 +207,7 @@ check("open page refresh crosses both phase boundaries without rebuilding contro
   var printHandler = result.context.window.events.beforeprint;
   button.events.click();
   assert.strictEqual(result.context.window.intervals.length, 1);
-  assert.strictEqual(result.context.window.intervals[0].delay, 3600000);
+  assert.strictEqual(result.context.window.intervals[0].delay, 60000);
   result.context.now = "2026-10-11T04:00:00Z";
   result.context.window.intervals[0].handler();
   assert.strictEqual(result.title.textContent, "Phase 2 is underway");
@@ -187,7 +220,7 @@ check("open page refresh crosses both phase boundaries without rebuilding contro
   assert.strictEqual(result.title.textContent, "Check current service before traveling");
   assert.strictEqual(result.banner.attributes["data-phase"], "inactive");
   assert(schedule.textContent.includes("depends on safety testing"));
-  assert(!find(result.banner, function (node) { return node.className === "service-notice-tickets"; }));
+  assert(find(result.banner, function (node) { return node.className === "service-notice-tickets"; }).textContent.includes("November 15–30"));
   assert.strictEqual(find(result.banner, function (node) { return node.tagName === "button"; }), button);
   assert.strictEqual(find(result.banner, function (node) { return node.className === "service-notice-details"; }), details);
   assert.strictEqual(button.events.click, clickHandler);

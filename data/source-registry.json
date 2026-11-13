@@ -1,16 +1,17 @@
 {
-  "updatedAt": "2026-11-12T23:07:23Z",
+  "updatedAt": "2026-11-13T16:15:37Z",
   "entries": [
     {
       "id": "official-cutover-portal-page",
       "claimArea": "cutover-policy",
-      "claim": "Current Phase 2 dates, weekday/weekend ticket policy and October 12 schedule; not live train status",
+      "claim": "Phase 2 dates, conditional restoration, weekday/weekend policy and November 15–30 Midtown Direct ticket rules; not live train status",
       "sourceType": "official",
       "verificationMethod": "manual",
       "verificationWindowHours": 24,
-      "lastVerified": "2026-11-12T23:07:23Z",
+      "lastVerified": "2026-11-13T16:15:36Z",
       "urls": [
-        "https://www.njtransit.com/portalcutover"
+        "https://www.njtransit.com/portalcutover",
+        "https://www.njtransit.com/service-advisory/2170966"
       ]
     },
     {
@@ -164,13 +165,13 @@
       "sourceType": "official",
       "verificationMethod": "manual",
       "verificationWindowHours": 12,
-      "lastVerified": "2026-11-11T12:36:22Z",
+      "lastVerified": "2026-11-13T16:15:37Z",
       "urls": [
         "https://www.njtransit.com/service-advisory/2063193",
         "https://www.njtransit.com/travel-alerts-to?line=NEC&tab=Rail",
         "https://www.njtransit.com/schedules/printable"
       ],
-      "verificationNote": "Advisory body, publication date in the NEC listing, and Effective 11/15 timetable labels checked. No individual timetable audit. Existing verification dates remain unchanged."
+      "verificationNote": "November 13: advisory body, November 10 publication date in the NEC listing and Effective 11/15 timetable labels rechecked; no restoration confirmation found. No individual timetable audit. See docs/reviews/portal-advisory-2026-11-13.md. Unrelated verification dates remain unchanged."
     }
   ]
 }

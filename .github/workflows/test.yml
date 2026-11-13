@@ -9,6 +9,10 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: tests-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   test:
     name: Node tests and data validation
@@ -43,6 +47,12 @@ jobs:
 
       - name: Validate data
         run: python3 tools/validate-data.py
+
+      - name: Validate research schema and freshness
+        run: python3 tools/validate-research-pipeline.py
+
+      - name: Report source availability warnings (advisory)
+        run: python3 tools/validate-research-pipeline.py --check-urls
 
       - name: Test coverage relevance
         run: python3 tests/test-scraper-relevance.py

@@ -434,7 +434,7 @@ def replace_page_specific_content(html, translations, page_key):
     """Replace page-specific static content using translation keys."""
     # Every full-page template has the same no-JavaScript service notice.
     english = load_translations("en")
-    for key in ["service_notice_before", "service_notice_active", "service_notice_schedule", "service_notice_tickets", "service_notice_link"]:
+    for key in ["service_notice_after", "service_notice_fallback_details", "service_notice_after_tickets", "service_notice_link"]:
         source = get_translation(english, "common." + key)
         translated = get_translation(translations, "common." + key)
         if source and translated:
