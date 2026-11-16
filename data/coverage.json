@@ -1,6 +1,34 @@
 {
-  "lastUpdated": "2026-11-12T23:07:23Z",
+  "lastUpdated": "2026-11-16T23:03:15Z",
   "articles": [
+    {
+      "id": "amtrak-transit-and-amtrak-2026-11-16",
+      "title": "NJ TRANSIT and Amtrak Mark Historic Milestone as Portal North Bridge Enters Full Service",
+      "url": "https://media.amtrak.com/2026/11/nj-transit-and-amtrak-mark-historic-milestone-as-portal-north-bridge-enters-full-service/",
+      "source": "Amtrak Media",
+      "author": "Jason Abrams",
+      "date": "2026-11-16",
+      "category": "official",
+      "excerpt": "Both Tracks Are Now in Operation, Retiring the 116-Year-Old Swing Bridge and Delivering a Modern Crossing for the Nation’s Busiest Rail Corridor KEARNY, NJ — New Jersey Governor Mikie Sherrill joined NJ TRANSIT and Amtrak officials in Kearny to celebrate the historic milestone of the completion of the Portal North Bridge. Both tracks on the new bridge are now in full service following a...",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
+    {
+      "id": "njdotcom-last-the-116yearold-2026-11-16",
+      "title": "At last, the 116-year-old N.J. bridge that made commuting hellish has been replaced",
+      "url": "https://www.nj.com/news/2026/11/at-last-the-116-year-old-nj-bridge-that-made-commuting-hellish-has-been-replaced.html",
+      "source": "NJ.com",
+      "author": null,
+      "date": "2026-11-16",
+      "category": "news",
+      "excerpt": "The new two-track Portal Bridge is 50 feet above the Hackensack River, meaning it doesn’t have to open for boats the way the old bridge did.",
+      "lines": [
+        "all"
+      ],
+      "direction": "both"
+    },
     {
       "id": "amtrak-working-around-the-clock-2026-11-12",
       "title": "Working Around the Clock for the Portal North Bridge 2nd Cutover",
