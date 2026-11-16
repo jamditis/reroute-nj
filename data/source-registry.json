@@ -172,6 +172,40 @@
         "https://www.njtransit.com/schedules/printable"
       ],
       "verificationNote": "November 13: advisory body, November 10 publication date in the NEC listing and Effective 11/15 timetable labels rechecked; no restoration confirmation found. No individual timetable audit. See docs/reviews/portal-advisory-2026-11-13.md. Unrelated verification dates remain unchanged."
+    },
+    {
+      "id": "official-portal-full-service",
+      "claimArea": "cutover-policy",
+      "claim": "Both Portal North Bridge tracks are in service; the final cutover is complete.",
+      "sourceType": "official",
+      "verificationMethod": "manual",
+      "verificationWindowHours": 168,
+      "lastVerified": "2026-11-16T23:48:14Z",
+      "urls": [
+        "https://www.njtransit.com/portal",
+        "https://www.njtransit.com/press-releases/nj-transit-and-amtrak-mark-historic-milestone-portal-north-bridge-enters-full"
+      ],
+      "verificationNote": "NJ TRANSIT project page and November 16 release checked. Bridge status does not guarantee on-time operation."
+    },
+    {
+      "id": "official-november16-regular-weekdays",
+      "claimArea": "customer-alerts",
+      "claim": "Regular weekday schedules resumed November 16 for the five covered lines; current timetables show Midtown Direct, retained Hoboken trains, Coast connections, and selected RVL one-seat rides.",
+      "sourceType": "official",
+      "verificationMethod": "manual",
+      "verificationWindowHours": 24,
+      "lastVerified": "2026-11-16T23:48:14Z",
+      "urls": [
+        "https://www.njtransit.com/service-advisory/2199523",
+        "https://www.njtransit.com/travel-alerts-to",
+        "https://www.njtransit.com/portalcutover",
+        "https://content.njtransit.com/sites/default/files/MC-WKDY-111526.pdf",
+        "https://content.njtransit.com/sites/default/files/ME-WKDY-111526.pdf",
+        "https://content.njtransit.com/sites/default/files/NEC-WKDY-111526.pdf",
+        "https://content.njtransit.com/sites/default/files/NJCL-WKDY-111526.pdf",
+        "https://content.njtransit.com/sites/default/files/RVL-WKDY-111526.pdf"
+      ],
+      "verificationNote": "Advisory lists all five lines. November 15-effective weekday PDFs checked for route and transfer patterns, including RVL NY versus C legend. No individual train departure audit or all-trains-operated claim. Portalcutover confirms November 15–30 eligible pass acceptance. Old source timestamps are not refreshed."
     }
   ]
 }

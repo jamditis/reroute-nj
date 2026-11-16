@@ -360,6 +360,80 @@
         "november15-schedules-weekend-delays"
       ],
       "note": "Publication date comes from the NEC advisory listing. This is a future service announcement, not an observation of restored service."
+    },
+    "njtransit-portal-full-service": {
+      "title": "Portal North Bridge in service",
+      "url": "https://www.njtransit.com/portal",
+      "publisher": "NJ Transit",
+      "type": "official",
+      "accessed": "2026-11-16",
+      "supports": [
+        "portal-full-service"
+      ],
+      "note": "Project page and same-day full-service press release confirm bridge status."
+    },
+    "njtransit-november16-regular-weekdays": {
+      "title": "Regular weekday schedules resume November 16",
+      "url": "https://www.njtransit.com/service-advisory/2199523",
+      "publisher": "NJ Transit",
+      "type": "official",
+      "published": "2026-11-15",
+      "accessed": "2026-11-16",
+      "supports": [
+        "portal-full-service",
+        "regular-service-by-line"
+      ],
+      "note": "Updated November 16 at 9:12 a.m. per official alerts listing. Links weekday timetables effective November 15."
+    },
+    "njtransit-regular-montclair": {
+      "title": "Regular weekday timetable: montclair",
+      "url": "https://content.njtransit.com/sites/default/files/MC-WKDY-111526.pdf",
+      "publisher": "NJ Transit",
+      "type": "official",
+      "accessed": "2026-11-16",
+      "supports": [
+        "regular-service-by-line"
+      ]
+    },
+    "njtransit-regular-morris": {
+      "title": "Regular weekday timetable: morris",
+      "url": "https://content.njtransit.com/sites/default/files/ME-WKDY-111526.pdf",
+      "publisher": "NJ Transit",
+      "type": "official",
+      "accessed": "2026-11-16",
+      "supports": [
+        "regular-service-by-line"
+      ]
+    },
+    "njtransit-regular-nec": {
+      "title": "Regular weekday timetable: nec",
+      "url": "https://content.njtransit.com/sites/default/files/NEC-WKDY-111526.pdf",
+      "publisher": "NJ Transit",
+      "type": "official",
+      "accessed": "2026-11-16",
+      "supports": [
+        "regular-service-by-line"
+      ]
+    },
+    "njtransit-regular-coast": {
+      "title": "Regular weekday timetable: coast",
+      "url": "https://content.njtransit.com/sites/default/files/NJCL-WKDY-111526.pdf",
+      "publisher": "NJ Transit",
+      "type": "official",
+      "accessed": "2026-11-16",
+      "supports": [
+        "regular-service-by-line"
+      ]
+    },
+    "njtransit-regular-raritan": {
+      "title": "Regular weekday timetable: raritan",
+      "url": "https://content.njtransit.com/sites/default/files/RVL-WKDY-111526.pdf",
+      "publisher": "NJ Transit",
+      "type": "official",
+      "accessed": "2026-11-16",
+      "supports": [
+        "regular-service-by-line"
+      ]
     }
   },
   "claims": {
@@ -695,6 +769,30 @@
       "status": "verified",
       "lastVerified": "2026-11-11",
       "scope": "Published advance advisory; not live operating status or verification of individual train departures."
+    },
+    "portal-full-service": {
+      "claim": "Both tracks of Portal North Bridge are in service. NJ Transit resumed regular weekday schedules Nov. 16, 2026. The cutover phases are complete.",
+      "sources": [
+        "njtransit-portal-full-service",
+        "njtransit-november16-regular-weekdays"
+      ],
+      "status": "verified",
+      "lastVerified": "2026-11-16",
+      "scope": "Bridge opening and published service restoration; no guarantee of live operation."
+    },
+    "regular-service-by-line": {
+      "claim": "Weekday Midtown Direct service to Penn Station NY is back in the regular schedule. Hoboken trains remain; check your station and train. Morristown Line and Gladstone Branch weekday Midtown Direct service to Penn Station NY is back in the regular schedule. Hoboken trains remain. The regular weekday timetable replaces the cutover reductions. Trains serve Penn Station NY; check the current schedule and alerts. The regular weekday timetable replaces the cutover reductions. Check whether your train runs through to Penn Station NY or requires a Long Branch or Newark transfer. The regular weekday timetable includes selected one-seat rides to Penn Station NY. Other trips require a transfer at Newark Penn; check your train.",
+      "sources": [
+        "njtransit-november16-regular-weekdays",
+        "njtransit-regular-montclair",
+        "njtransit-regular-morris",
+        "njtransit-regular-nec",
+        "njtransit-regular-coast",
+        "njtransit-regular-raritan"
+      ],
+      "status": "verified",
+      "lastVerified": "2026-11-16",
+      "scope": "These are published schedules, not confirmation that every departure operated. Other work can still cause delays. Check NJ Transit alerts before each trip."
     }
   },
   "verificationNote": "Partial authoritative-source review on October 11, 2026, with a scoped ferry-schedule update on October 19. Per-claim dates and statuses control freshness; the top-level timestamp does not reverify every source or claim."

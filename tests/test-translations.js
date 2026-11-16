@@ -781,7 +781,7 @@ LANGUAGES.forEach(function (lang) {
   var html = fs.readFileSync(filePath, "utf8");
   var cardUrls = [];
   var cardNames = [];
-  var cardPattern = /<a href="([^"]+)" class="blog-card-link">\s*<h2>([^<]+)<\/h2>/g;
+  var cardPattern = /<a href="([^"]+)" class="blog-card-link">\s*<h2\b[^>]*>([^<]+)<\/h2>/g;
   var cardMatch;
   while ((cardMatch = cardPattern.exec(html)) !== null) {
     cardUrls.push(cardMatch[1].substring(cardMatch[1].indexOf("blog/")));

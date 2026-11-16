@@ -22,10 +22,11 @@ PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TRANSLATIONS_DIR = os.path.join(PROJECT_ROOT, "translations")
 
 # Pages to generate
-PAGES = ["index.html", "compare.html", "coverage.html", "map.html", "embed.html", "blog.html", "blog/phase-2-is-underway.html", "blog/phase-2-starts-october-11.html", "blog/bridge-opens.html", "blog/cutover-begins.html", "blog/why-we-built-reroute-nj.html", "blog/new-embed-system.html", "about.html"]
+PAGES = ["blog/portal-north-bridge-in-service.html", "index.html", "compare.html", "coverage.html", "map.html", "embed.html", "blog.html", "blog/phase-2-is-underway.html", "blog/phase-2-starts-october-11.html", "blog/bridge-opens.html", "blog/cutover-begins.html", "blog/why-we-built-reroute-nj.html", "blog/new-embed-system.html", "about.html"]
 
 # Map page filenames to translation key prefixes (when different from filename stem)
 PAGE_KEY_MAP = {
+    "blog/portal-north-bridge-in-service.html": "blog_post_service",
     "blog/phase-2-is-underway.html": "blog_post_underway",
     "blog/phase-2-starts-october-11.html": "blog_post_phase2",
     "blog/bridge-opens.html": "blog_post_bridge",
@@ -432,6 +433,17 @@ def replace_hamburger_label(html, translations, page_key):
 
 def replace_page_specific_content(html, translations, page_key):
     """Replace page-specific static content using translation keys."""
+    def service_copy(match):
+        key = match.group(2)
+        translated = get_translation(translations, "service." + key)
+        if not translated:
+            raise ValueError("Missing service translation: " + key)
+        return match.group(1) + translated + match.group(3)
+
+    html = re.sub(
+        r'(<[^>]+data-service="([^"]+)"[^>]*>)[^<]*(</[^>]+>)',
+        service_copy, html
+    )
     # Every full-page template has the same no-JavaScript service notice.
     english = load_translations("en")
     for key in ["service_notice_after", "service_notice_fallback_details", "service_notice_after_tickets", "service_notice_link"]:
@@ -452,7 +464,7 @@ def replace_page_specific_content(html, translations, page_key):
         seo_summary = get_translation(translations, "index.seo_summary")
         if seo_summary:
             html = html.replace(
-                "During the Phase 2 cutover (October 11 – November 15, 2026), NJ Transit operates on a single track between Newark and Secaucus while Amtrak connects the second track of Portal North Bridge. This tool shows how each line and station is affected. Station names stay in English, matching platform signs.",
+                load_translations("en")["index"]["seo_summary"],
                 seo_summary
             )
 
@@ -1790,6 +1802,10 @@ def replace_page_specific_content(html, translations, page_key):
                 f'>{cta.replace("→", "&rarr;")}</a>'
             )
 
+    elif page_key == "blog_post_service":
+        html = html.replace(">&larr; All posts</a>", ">&larr; " + translations["blog"]["all_posts"] + "</a>")
+        html = html.replace(">By Joe Amditis</span>", ">" + translations["blog_post_underway"]["by_prefix"] + " Joe Amditis</span>")
+
     elif page_key == "blog_post_underway":
         all_posts = get_translation(translations, "blog.all_posts")
         back_all = get_translation(translations, "blog.back_to_all_posts")
@@ -2246,6 +2262,8 @@ def translate_jsonld(html, translations, page_key, lang, page_name):
                 art_prefix = "article5"
             elif page_key == "blog_post_underway":
                 art_prefix = "article6"
+            elif page_key == "blog_post_service":
+                art_prefix = "article7"
             else:
                 art_prefix = None
 

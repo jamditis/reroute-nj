@@ -187,13 +187,13 @@ if (sitemapRaw) {
 
 if (sitemapRaw) {
   var totalUrls = locUrls.length;
-  var expectedMin = 145;
-  var expectedMax = 145;
+  var expectedMin = 156;
+  var expectedMax = 156;
 
   if (totalUrls >= expectedMin && totalUrls <= expectedMax) {
-    pass("4. Total URL count matches the 145 HTML pages", totalUrls + " URLs found");
+    pass("4. Total URL count matches the 156 HTML pages", totalUrls + " URLs found");
   } else {
-    fail("4. Total URL count matches the 145 HTML pages", totalUrls + " URLs found (expected 145)");
+    fail("4. Total URL count matches the 156 HTML pages", totalUrls + " URLs found (expected 156)");
   }
 }
 

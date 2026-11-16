@@ -1,8 +1,8 @@
 # Reroute NJ
 
-> Portal North Bridge cutover resources for NJ Transit riders. Phase 2 (Oct 11 – Nov 15, 2026) is the current cutover. Phase 1 (Feb 15 – Mar 15, 2026) is complete.
+> Both tracks of Portal North Bridge are in service. NJ Transit resumed regular weekday schedules Nov. 16, 2026. The cutover phases are complete. The tools and older posts below preserve the 2026 cutover. Their reductions, diversions, transfer estimates, and special fares are historical. Use NJ Transit for current trips.
 
-Reroute NJ helps NJ Transit rail commuters during Portal North Bridge construction. Phase 2 moves the second track onto the new bridge and retires the 1910 swing span. Official schedules start October 11, 2026. Regular schedules are expected November 15, subject to testing. Construction starts the evening of October 9. All rail lines except the Atlantic City Rail Line are affected.
+Reroute NJ provides current service guidance and an archive of the Portal North Bridge cutover. The bridge is in service, and the cutover phases are complete. The archived tools retain the temporary 2026 reductions and diversions for reference.
 
 Phase 1 transferred the first track from the 115-year-old Portal Bridge to the new Portal North Bridge over the Hackensack River in Kearny, NJ. Regular service resumed March 15, 2026.
 
@@ -14,30 +14,27 @@ Phase 1 transferred the first track from the 115-year-old Portal Bridge to the n
 - [Interactive map](https://reroutenj.org/map.html): OpenStreetMap-based map showing the Portal Bridge location, all affected stations, and key transfer hubs
 - [Embed and share](https://reroutenj.org/embed.html): Free embed codes for newsrooms and publishers to republish any Reroute NJ tool on their websites
 
-## Key facts
+## Current service
 
-- Phase 1: February 15 to March 15, 2026 (complete)
-- Phase 2: October 11 to November 15, 2026 (current cutover)
-- Cause: Amtrak transferring the second track from the old Portal Bridge to Portal North Bridge and retiring the swing span
-- Corridor impact: Single-track operation between Newark and Secaucus, with weekday diversions and reduced service
-- Lines covered by this guide: Montclair-Boonton Line, Morris & Essex Lines, Northeast Corridor, North Jersey Coast Line, Raritan Valley Line
-- Wider schedule changes: all NJ Transit rail lines except Atlantic City; check official timetables
-- Hoboken diversions: Montclair-Boonton and Morris & Essex weekday trains rerouted to Hoboken Terminal. Weekend Midtown Direct trains still run to Penn Station NY
-- Weekday train counts (official briefing): Montclair-Boonton 64 to 60, Morris & Essex 148 to 139, Northeast Corridor 133 to 113, North Jersey Coast 99 to 87, Raritan Valley 51 to 50
-- Alternative transit from Hoboken: PATH train to 33rd St (~15 min, every 6 min weekdays 7–9:30am and 4–7pm), NY Waterway ferry to W. 39th St (~10 min), Bus 126 to Port Authority (~30-45 min)
-- Official source: https://www.njtransit.com/portalcutover
+Both tracks of Portal North Bridge are in service. NJ Transit resumed regular weekday schedules Nov. 16, 2026. The cutover phases are complete.
 
-## Line-by-line impact summary
+- Weekday Midtown Direct service to Penn Station NY is back in the regular schedule. Hoboken trains remain; check your station and train.
+- Morristown Line and Gladstone Branch weekday Midtown Direct service to Penn Station NY is back in the regular schedule. Hoboken trains remain.
+- The regular weekday timetable replaces the cutover reductions. Trains serve Penn Station NY; check the current schedule and alerts.
+- The regular weekday timetable replaces the cutover reductions. Check whether your train runs through to Penn Station NY or requires a Long Branch or Newark transfer.
+- The regular weekday timetable includes selected one-seat rides to Penn Station NY. Other trips require a transfer at Newark Penn; check your train.
 
-- **Montclair-Boonton Line**: Weekday trains divert to Hoboken Terminal (64 to 60). PATH, ferry, or bus to Manhattan. Weekends still run to Penn Station NY.
-- **Morris & Essex Lines (Morristown, Gladstone)**: Weekday trains divert to Hoboken Terminal (148 to 139). Same alternatives as Montclair-Boonton.
-- **Northeast Corridor**: Trains still run to New York Penn Station. Weekday trains 133 to 113 because of single-track operations between Newark and Secaucus.
-- **North Jersey Coast Line**: Weekday trains 99 to 87. Oct 11–25, buses replace trains at Bay Head and Point Pleasant for Brielle Bridge work, connecting at Manasquan. Accessible riders board at Point Pleasant Beach for an Asbury Park train connection.
-- **Raritan Valley Line**: One-seat rides to Penn Station NY remain suspended. Trains terminate at Newark Penn (51 to 50). Nov 7, buses between Cranford and Newark.
+These are published schedules, not confirmation that every departure operated. Other work can still cause delays. Check NJ Transit alerts before each trip.
+
+Sources: https://www.njtransit.com/portal and https://www.njtransit.com/service-advisory/2199523. Five linked timetables effective November 15, 2026.
+
+## Cutover archive
+
+The tools and older posts below preserve the 2026 cutover. Their reductions, diversions, transfer estimates, and special fares are historical. Use NJ Transit for current trips.
 
 ## Blog
 
-The blog index is at [blog.html](https://reroutenj.org/blog.html). Individual posts live at `blog/{slug}.html`. Current posts: [Phase 2 has started: How Reroute NJ can help](https://reroutenj.org/blog/phase-2-is-underway.html), [Phase 2 starts October 11: What riders need to know](https://reroutenj.org/blog/phase-2-starts-october-11.html), [The new Portal North Bridge is open](https://reroutenj.org/blog/bridge-opens.html), [The cutover starts today](https://reroutenj.org/blog/cutover-begins.html), [The new embed system](https://reroutenj.org/blog/new-embed-system.html), [Why we built Reroute NJ](https://reroutenj.org/blog/why-we-built-reroute-nj.html). Both the index and posts are translated into all 11 languages.
+The blog index is at [blog.html](https://reroutenj.org/blog.html). Individual posts live at `blog/{slug}.html`. Latest: [Portal North Bridge is in service](https://reroutenj.org/blog/portal-north-bridge-in-service.html). Earlier posts: [Phase 2 has started: How Reroute NJ can help](https://reroutenj.org/blog/phase-2-is-underway.html), [Phase 2 starts October 11: What riders need to know](https://reroutenj.org/blog/phase-2-starts-october-11.html), [The new Portal North Bridge is open](https://reroutenj.org/blog/bridge-opens.html), [The cutover starts today](https://reroutenj.org/blog/cutover-begins.html), [The new embed system](https://reroutenj.org/blog/new-embed-system.html), [Why we built Reroute NJ](https://reroutenj.org/blog/why-we-built-reroute-nj.html). Both the index and posts are translated into all 11 languages.
 
 ## Embeds for publishers
 

@@ -20,10 +20,9 @@
 // =========================================================================
 // DATES
 // Phase 1: Feb 15 – Mar 15, 2026 (complete).
-// Phase 2: Oct 11 – Nov 15, 2026 (current cutover). Official NJ Transit
-// portalcutover page: new schedules Oct 11; regular schedules resume Nov 15
-// subject to safety testing. Briefing: construction starts the evening of
-// Oct 9; full normal service Nov 16.
+// Phase 2: Oct 11 – Nov 15, 2026 (archive). NJ Transit confirms the bridge
+// is in full service and regular weekday schedules resumed Nov 16.
+// https://www.njtransit.com/service-advisory/2199523
 // =========================================================================
 var PHASE1_START = new Date("2026-02-15T00:00:00");
 var PHASE1_END = new Date("2026-03-15T00:00:00");
@@ -478,7 +477,7 @@ function exportCanvasPdf(canvas, filename) {
         active: "Phase 2 is underway",
         last_weekday: "Last weekday of Hoboken diversions",
         weekend: "Weekend service to Penn Station NY",
-        after: "Check current service before traveling"
+        after: "Portal North Bridge is in service"
       };
       noticeTitle.textContent = noticeText("common.service_notice_" + phaseNow, titles[phaseNow]);
       var scheduleKey = "common.service_notice_schedule";
@@ -491,7 +490,7 @@ function exportCanvasPdf(canvas, filename) {
         scheduleFallback = "Today, Saturday, November 14, Midtown Direct trains serve Penn Station NY with adjusted times. New schedules are announced for tomorrow, Sunday, November 15. Weekday Midtown Direct restoration depends on safety testing.";
       } else if (afterCutover) {
         scheduleKey = "common.service_notice_after_details";
-        scheduleFallback = "The published Phase 2 schedule period has ended. NJ Transit announces new schedules from November 15; weekday Midtown Direct restoration depends on safety testing. NEC, North Jersey Coast and Morris & Essex may have delays up to 20 minutes on select weekends through December 2026 (Friday 10 p.m.–Monday 5 a.m.). Check current NJ Transit alerts before traveling.";
+        scheduleFallback = "Both tracks of Portal North Bridge are in service. NJ Transit resumed regular weekday schedules Nov. 16, 2026. The cutover phases are complete. These are published schedules, not confirmation that every departure operated. Other work can still cause delays. Check NJ Transit alerts before each trip. The tools and older posts below preserve the 2026 cutover. Their reductions, diversions, transfer estimates, and special fares are historical. Use NJ Transit for current trips.";
       }
       noticeScheduleNode.textContent = noticeText(scheduleKey, scheduleFallback);
       noticeTickets.textContent = afterCutover
@@ -677,7 +676,8 @@ function exportCanvasPdf(canvas, filename) {
 
     var hero = element("section", "trip-hero");
     var copy = element("div", "trip-hero-copy");
-    main.insertBefore(hero, main.firstChild);
+    var archive = document.getElementById("cutover-archive");
+    main.insertBefore(hero, archive ? archive.nextSibling : main.firstChild);
     hero.appendChild(copy);
     copy.appendChild(intro);
     copy.appendChild(controls);

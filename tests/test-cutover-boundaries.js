@@ -1,4 +1,4 @@
-// New Jersey dates must not depend on a reader's timezone or assert completion.
+// New Jersey dates must not depend on a reader's timezone.
 "use strict";
 var assert = require("assert");
 var fs = require("fs");
@@ -29,8 +29,8 @@ check("2026-11-01T03:59:59Z", /15.*remaining/);
 check("2026-11-01T04:00:00Z", /14.*remaining/);
 check("2026-11-01T06:30:00Z", /14.*remaining/);
 check("2026-11-15T04:59:59Z", /1.*remaining/);
-check("2026-11-15T05:00:00Z", /Planned cutover end/);
-assert(!/Phase 2 complete/.test(output.innerHTML), "A calendar deadline cannot confirm service restoration");
+check("2026-11-15T05:00:00Z", /Portal North Bridge is in service/);
+assert.strictEqual(output.innerHTML, translations.service.title, "Use the officially verified service status");
 ["app.js", "compare.js"].forEach(function (file) {
   var content = fs.readFileSync(path.join(root, "js", file), "utf8");
   assert(!content.includes("$2.75"), file + " must not retain outdated PATH fare");
