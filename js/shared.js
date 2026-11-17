@@ -795,6 +795,8 @@ function exportCanvasPdf(canvas, filename) {
     var currentService = document.getElementById("current-service");
     if (currentService && archive) {
       document.body.classList.add("home-page");
+      var tagline = document.querySelector(".header .tagline");
+      if (tagline) tagline.parentNode.removeChild(tagline);
       var currentHero = element("section", "home-hero");
       var currentCopy = element("div", "home-hero-copy");
       var currentTitle = currentService.querySelector("h1");
@@ -830,11 +832,8 @@ function exportCanvasPdf(canvas, filename) {
         currentLines[n].parentNode.removeChild(currentLines[n]);
       }
       var updateLink = currentService.querySelector('a[data-service="title"]');
-      var sourceLink = currentService.querySelector('a[data-service="sources"]');
-      if (updateLink && sourceLink) {
+      if (updateLink) {
         var updateParagraph = updateLink.parentNode;
-        sourceLink.parentNode.appendChild(document.createTextNode(" \u00b7 "));
-        sourceLink.parentNode.appendChild(updateLink);
         updateParagraph.parentNode.removeChild(updateParagraph);
       }
       var archiveBand = element("section", "home-archive");

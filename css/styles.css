@@ -570,8 +570,8 @@ body[data-contrast="high"] .impact-header { border: 1px solid #000; }
 .home-hero .service-notice-copy { width: 100%; }
 .home-hero .service-notice-schedule { font-size: 1rem; line-height: 1.65; color: var(--text-light); }
 .home-hero .service-notice .service-notice-tickets { margin-top: 20px; padding: 14px 18px; background: var(--warning-bg); border-inline-start: 3px solid var(--accent); font-size: .875rem; line-height: 1.65; color: var(--text); }
-.home-hero .rail-visual { min-height: 0; max-height: none; border-radius: 8px; }
-.home-hero .rail-visual img { object-position: center; }
+.home-hero .rail-visual { position: relative; min-height: 0; max-height: none; border-radius: 8px; }
+.home-hero .rail-visual img { position: absolute; inset: 0; object-position: center; }
 .home-page #current-service { margin: 0; padding: 0; border: 0; }
 .home-page #current-service > h2 { margin: 0 0 28px; font-size: 1.75rem; }
 .home-page #current-service > ul { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; margin: 0 0 28px; padding: 0; list-style: none; }
@@ -617,7 +617,6 @@ body[data-contrast="high"] .impact-header { border: 1px solid #000; }
 }
 @media (min-width: 1000px) {
   .home-hero { grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 64px; align-items: stretch; }
-  .home-hero .rail-visual { max-height: 680px; }
   .home-archive .trip-hero .control-panel { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .home-archive .trip-hero .direction-picker, .home-archive .trip-hero .plan-submit { grid-column: auto; }
   .home-archive .trip-hero .plan-submit { align-self: end; }
