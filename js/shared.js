@@ -789,6 +789,69 @@ function exportCanvasPdf(canvas, filename) {
       shortcuts.appendChild(link);
     });
     main.insertBefore(shortcuts, hero.nextSibling);
+
+    // Current schedules lead the homepage; the cutover tools keep their
+    // original nodes, listeners and translated copy inside a distinct archive.
+    var currentService = document.getElementById("current-service");
+    if (currentService && archive) {
+      document.body.classList.add("home-page");
+      var tagline = document.querySelector(".header .tagline");
+      if (tagline) tagline.parentNode.removeChild(tagline);
+      var currentHero = element("section", "home-hero");
+      var currentCopy = element("div", "home-hero-copy");
+      var currentTitle = currentService.querySelector("h1");
+      currentHero.setAttribute("aria-labelledby", currentTitle.id);
+      main.insertBefore(currentHero, main.firstChild);
+      currentHero.appendChild(currentCopy);
+      currentCopy.appendChild(currentTitle);
+      // The notice includes the complete summary plus the service caveats.
+      var summary = main.querySelector(".seo-summary");
+      var context = main.querySelector(".intro-context");
+      if (summary) {
+        summary.hidden = true;
+        currentCopy.appendChild(summary);
+      }
+      if (context) context.parentNode.removeChild(context);
+      var banner = document.getElementById("alert-banner");
+      if (banner) {
+        currentCopy.appendChild(banner);
+        var notice = banner.querySelector(".service-notice");
+        var actions = banner.querySelector(".service-notice-actions");
+        if (notice && actions) notice.insertBefore(actions, notice.firstChild);
+      }
+      currentHero.appendChild(visual);
+      var linesTitle = currentService.querySelector("h2");
+      linesTitle.id = "current-lines-title";
+      currentService.setAttribute("aria-labelledby", linesTitle.id);
+      var currentLines = currentService.querySelectorAll("li > strong");
+      currentService.querySelector("ul").setAttribute("role", "list");
+      for (var n = 0; n < currentLines.length; n++) {
+        var lineTitle = element("h3");
+        currentLines[n].parentNode.insertBefore(lineTitle, currentLines[n]);
+        lineTitle.appendChild(currentLines[n].querySelector("a"));
+        currentLines[n].parentNode.removeChild(currentLines[n]);
+      }
+      var updateLink = currentService.querySelector('a[data-service="title"]');
+      if (updateLink) {
+        var updateParagraph = updateLink.parentNode;
+        updateParagraph.parentNode.removeChild(updateParagraph);
+      }
+      var archiveBand = element("section", "home-archive");
+      var archiveTitle = archive.querySelector("h2");
+      archiveTitle.id = "archive-title";
+      archiveBand.setAttribute("aria-labelledby", archiveTitle.id);
+      main.insertBefore(archiveBand, archive);
+      var archiveNode = archive;
+      while (archiveNode && archiveNode.id !== "sources") {
+        var nextArchiveNode = archiveNode.nextSibling;
+        archiveBand.appendChild(archiveNode);
+        archiveNode = nextArchiveNode;
+      }
+      // General tool shortcuts remain immediately before the historical band.
+      main.insertBefore(shortcuts, archiveBand);
+      var pageJumps = archiveBand.querySelector(".page-jumps");
+      if (pageJumps) main.insertBefore(pageJumps, archiveBand);
+    }
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", initQuietRail);
   else initQuietRail();
