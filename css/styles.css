@@ -554,3 +554,112 @@ body[data-contrast="high"] .impact-header { border: 1px solid #000; }
   .hidden, [hidden] { display: none !important; }
   .impact-card, .route-card, .ticket-scenario, .result-card, .coverage-card { break-inside: avoid; box-shadow: none; }
 }
+
+/* Homepage: published service first, historical tools in a separate band. */
+.home-page main.container { max-width: 1236px; padding-block: 48px 72px; }
+.home-hero { display: grid; gap: 32px; margin-bottom: 56px; }
+.home-hero-copy { min-width: 0; }
+.home-hero h1 { max-width: 18ch; margin: 0 0 24px; font-size: clamp(2.25rem, 5vw, 3.5rem); font-weight: 750; line-height: 1.06; letter-spacing: -.035em; }
+.home-hero .alert-banner { padding: 0; border: 0; background: transparent; }
+.home-hero .service-notice { display: flex; flex-direction: column; gap: 24px; padding: 0; }
+.home-hero .service-notice-marker { display: none; }
+.home-hero .service-notice h2 { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.home-hero .service-notice-actions { width: 100%; flex-direction: row; align-items: center; gap: 8px 20px; }
+.home-hero .service-notice-link { min-height: 48px; padding: 13px 20px; font-size: .9375rem; border-radius: 6px; }
+.home-hero .service-notice-toggle { font-size: .875rem; }
+.home-hero .service-notice-copy { width: 100%; }
+.home-hero .service-notice-schedule { font-size: 1rem; line-height: 1.65; color: var(--text-light); }
+.home-hero .service-notice .service-notice-tickets { margin-top: 20px; padding: 14px 18px; background: var(--warning-bg); border-inline-start: 3px solid var(--accent); font-size: .875rem; line-height: 1.65; color: var(--text); }
+.home-hero .rail-visual { min-height: 0; max-height: none; border-radius: 8px; }
+.home-hero .rail-visual img { object-position: center; }
+.home-page #current-service { margin: 0; padding: 0; border: 0; }
+.home-page #current-service > h2 { margin: 0 0 28px; font-size: 1.75rem; }
+.home-page #current-service > ul { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; margin: 0 0 28px; padding: 0; list-style: none; }
+.home-page #current-service > ul > li { min-width: 0; padding: 22px 24px; background: var(--card-bg); border: 1px solid var(--border); border-top: 5px solid var(--route-color, var(--primary)); border-radius: 6px; font-size: 1rem; line-height: 1.65; }
+.home-page #current-service li:nth-child(1) { --route-color: var(--line-montclair-boonton); }
+.home-page #current-service li:nth-child(2) { --route-color: var(--line-morris-essex); }
+.home-page #current-service li:nth-child(3) { --route-color: var(--line-northeast-corridor); }
+.home-page #current-service li:nth-child(4) { --route-color: var(--line-north-jersey-coast); }
+.home-page #current-service li:nth-child(5) { --route-color: var(--line-raritan-valley); }
+.home-page #current-service h3 { margin: 0 0 12px; font-size: 1.125rem; line-height: 1.4; }
+.home-page #current-service h3 a { display: inline-flex; align-items: center; min-height: 44px; color: var(--text); }
+.home-page #current-service h3 a:hover { color: var(--primary); }
+.home-page #current-service > p { max-width: 78ch; margin: 16px 0; font-size: .9375rem; }
+.home-page #current-service a:not(h3 a) { display: inline-block; min-height: 44px; padding-block: 9px; }
+.home-page .quick-tools { margin-block: 36px 48px; }
+.home-archive { margin-inline: -16px; padding: 32px 16px; border: 1px solid var(--border); border-inline-start-width: 3px; background: var(--surface-quiet); border-radius: 10px; }
+.home-archive h2, .home-archive .stat-number { color: var(--text-light); }
+.home-page #cutover-archive { margin-bottom: 32px; }
+.home-page #cutover-archive h2 { margin: 0 0 8px; font-size: 1.75rem; color: var(--text-light); }
+.home-page #cutover-archive > p { max-width: 70ch; margin: 12px 0 0; color: var(--text-light); font-size: 1rem; }
+.home-page #cutover-archive [data-service="archive_period"] { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .875rem; letter-spacing: .03em; color: var(--accent); }
+.home-archive .trip-hero { display: block; margin-bottom: 24px; }
+.home-archive .trip-hero .site-intro { display: none; }
+.home-archive .trip-hero-copy { display: block; }
+.home-archive .trip-hero .control-panel { padding: 24px; }
+.home-archive .plan-submit { background: var(--card-bg); color: var(--primary); }
+.home-archive .plan-submit:hover { background: var(--primary); color: var(--card-bg); }
+.home-archive .callout-btn { background: var(--card-bg); color: var(--primary); border: 1px solid var(--primary); }
+.home-archive .callout-btn:hover { background: var(--primary); color: var(--card-bg); }
+.home-archive .journey-workspace { max-width: none; }
+.home-archive .stat-number { font-size: 1.5rem; }
+.home-archive .info-section { margin-top: 40px; padding-top: 32px; }
+.home-archive .info-section > h2 { font-size: 1.75rem; }
+.home-page .page-jumps { margin-block: 0 32px; }
+.home-page #sources { margin-top: 56px; }
+.home-page:lang(ar) h1, .home-page:lang(hi) h1, .home-page:lang(gu) h1, .home-page:lang(zh) h1, .home-page:lang(ko) h1 { letter-spacing: 0; }
+.home-page:lang(ar) h1, .home-page:lang(hi) h1, .home-page:lang(gu) h1 { line-height: 1.25; }
+.home-page:lang(zh) h1, .home-page:lang(ko) h1 { max-width: 12em; line-height: 1.2; }
+.home-page:lang(ar) #cutover-archive [data-service="archive_period"] { font-family: inherit; letter-spacing: 0; }
+@media (min-width: 768px) {
+  .home-page #current-service > ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .home-archive { margin-inline: -24px; padding: 40px 24px; }
+}
+@media (min-width: 1000px) {
+  .home-hero { grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 64px; align-items: stretch; }
+  .home-hero .rail-visual { max-height: 680px; }
+  .home-archive .trip-hero .control-panel { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .home-archive .trip-hero .direction-picker, .home-archive .trip-hero .plan-submit { grid-column: auto; }
+  .home-archive .trip-hero .plan-submit { align-self: end; }
+}
+@media (min-width: 1100px) {
+  .home-page #current-service > ul { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .home-page #current-service li { grid-column: span 2; }
+  .home-page #current-service li:nth-child(n+4) { grid-column: span 3; }
+}
+@media (max-width: 999px) {
+  .home-hero .rail-visual { display: none; }
+}
+@media (max-width: 480px) {
+  .home-page main.container { padding-block: 32px 48px; }
+  .home-hero { margin-bottom: 40px; }
+  .home-hero h1 { margin-bottom: 20px; }
+  .home-hero .service-notice-link { width: 100%; }
+  .home-hero .service-notice-actions { width: 100%; }
+  .home-page #current-service > ul > li { padding: 18px 20px; }
+  .home-page .tool-tabs { gap: 12px; }
+  .home-page .tab { font-size: .75rem; }
+}
+body.home-page[data-view="simplified"] .home-hero, body.home-page[data-view="simplified"] #current-service > ul { display: block; }
+body.home-page[data-view="simplified"] #current-service li { margin-bottom: 16px; }
+body.home-page[data-contrast="high"] .home-archive, body.home-page[data-contrast="high"] .service-notice-tickets { background: #fff; color: #000; }
+body.home-page[data-contrast="high"] #current-service li { border-color: #000; }
+body.home-page[data-contrast="high"] .home-archive .plan-submit { background: #fff; color: #000; border-color: #000; }
+@media (forced-colors: active) {
+  .home-page #current-service li { border-color: CanvasText; }
+  .home-hero .service-notice-tickets { border-color: CanvasText; }
+}
+@media print {
+  .home-page main.container { padding: 0; }
+  .home-hero { display: block; margin-bottom: 24px; }
+  .home-hero h1 { font-size: 24pt; }
+  .home-hero .service-notice-actions { display: block; }
+  .home-hero .service-notice-link { background: #fff; color: #000; }
+  .home-hero .service-notice-link::after { content: " (" attr(href) ")"; overflow-wrap: anywhere; font-size: 9pt; }
+  .home-hero .service-notice .service-notice-tickets { background: #fff; border-color: #000; }
+  .home-page #current-service > ul { display: block; }
+  .home-page #current-service li { break-inside: avoid; margin-bottom: 12px; }
+  .home-archive { break-before: page; margin: 0; padding: 0; background: #fff; border: 0; }
+  .home-archive .control-panel, .home-archive .tool-tabs { display: none !important; }
+  .home-page #cutover-archive h2, .home-page #cutover-archive > p { color: #000; }
+}
