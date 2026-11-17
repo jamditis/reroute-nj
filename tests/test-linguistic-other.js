@@ -127,14 +127,15 @@ function isAllowedEnglishWord(word) {
     "Kearny", "Hackensack", "Hudson", "Lincoln", "Perth", "Amboy",
     "Woodbridge", "Montclair", "Boonton", "Morris", "Essex", "Gladstone",
     "Morristown", "Atlantic", "City", "Raritan", "Valley",
-    "Brielle", "Manasquan", "Pleasant", "Cranford", "Conrail",
+    "Brielle", "Manasquan", "Pleasant", "Cranford", "Conrail", "Long",
     "Helvetica", "GTFS", "FLEXPASS", "Head", "Point", "Old",
     "Broad", "Main", "Bergen", "Pascack", "Jervis", "LIRR",
     "Rail", "Branch", "server", "python", "http", "portalcutover",
     "reroutenj", "ARIA", "route", "color", "Lines", "Mikie", "Sherrill",
     // Brand names
     "Reroute", "Transit", "Waterway", "Portal", "Bridge", "North",
-    "Gateway", "Program", "Corridor", "Northeast",
+    "Gateway", "Program", "Corridor", "Northeast", "Esri", "HERE", "Garmin",
+    "OpenStreetMap", "User", "Community",
     // Technical terms
     "GitHub", "MIT", "WordPress", "Ghost", "Squarespace", "Substack",
     "Netlify", "Vercel", "HTML", "CSS", "JavaScript", "JSON", "API",

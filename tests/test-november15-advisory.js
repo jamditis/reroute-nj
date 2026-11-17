@@ -38,5 +38,5 @@ assert(entry && entry.urls.includes(url), "Register the exact advisory");
 assert(entry.urls.includes("https://www.njtransit.com/schedules/printable"));
 assert(entry.urls.includes("https://www.njtransit.com/travel-alerts-to?line=NEC&tab=Rail"), "Retain the publication-date evidence");
 assert(entry.verificationNote.includes("No individual timetable audit"));
-assert(readJson("translations/en.json").common.service_notice_after_details.includes("safety testing"), "Keep the post-cutover safety caveat");
+assert(readJson("translations/en.json").common.service_notice_after_details.includes("not confirmation that every departure operated"), "Published restoration must not guarantee live departures");
 console.log("PASS November 15 advance advisory, provenance and restoration limits");

@@ -2,10 +2,10 @@
 
 # Reroute NJ
 
-**Free tools to help NJ Transit riders navigate the Portal North Bridge cutover**
+**Portal North Bridge service information and the 2026 cutover archive**
 
 [![Live site](https://img.shields.io/badge/live_site-reroutenj.org-1a3a5c?style=for-the-badge)](https://reroutenj.org)
-[![Phase 2](https://img.shields.io/badge/phase_2-Oct_11–Nov_15_2026-c0392b?style=for-the-badge)](#timeline)
+[![In service](https://img.shields.io/badge/bridge-in_service-0a8f4f?style=for-the-badge)](#timeline)
 [![Lines covered](https://img.shields.io/badge/lines_covered-5-0a8f4f?style=for-the-badge)](#lines-covered)
 [![Languages](https://img.shields.io/badge/languages-11-6b4fbb?style=for-the-badge)](#translations)
 
@@ -33,7 +33,9 @@
 
 ## Lines covered
 
-This guide covers five major affected lines. NJ Transit has schedule changes on all rail lines except Atlantic City; consult the official timetables for the full system.
+Both bridge tracks are in service. NJ Transit confirms regular weekday schedules from Nov. 16, 2026. The homepage explains current service on all five lines and links their official timetables. [Read the source review and limits](docs/reviews/bridge-service-2026-11-16.md).
+
+The table and interactive tools below describe the archived cutover. Their temporary reductions and diversions do not describe today's service.
 
 | Line | Impact | What changes |
 |------|--------|--------------|
@@ -62,7 +64,7 @@ reroute-nj/
 ├── card.html               # Info card renderer (URL params → card)
 ├── widget.html             # Mini-widget renderer (URL params → tool)
 ├── robots.txt              # Crawler guidance + AI bot allowances
-├── sitemap.xml             # All 145 HTML pages with hreflang cross-references
+├── sitemap.xml             # All 156 HTML pages with hreflang cross-references
 ├── llms.txt                # AI search engine discoverability
 ├── js/
 │   ├── i18n.js             # Translation loader with t() function
@@ -139,11 +141,9 @@ To add a new language, create `translations/{code}.json` following the structure
 | Phase | Dates | Status |
 |-------|-------|--------|
 | **Phase 1** | Feb 15 – Mar 15, 2026 | Complete |
-| **Phase 2** | Oct 11 – Nov 14, 2026 | Cutover schedules in effect; regular schedules expected Nov 15, subject to testing |
+| **Phase 2** | Oct. 11 – Nov. 14, 2026 | Complete; regular weekday schedules resumed Nov. 16 |
 
-Phase 1 moved the first track onto Portal North Bridge. Regular NJ Transit schedules resumed March 15, 2026. Phase 2 moves the second track and retires the 1910 swing span. Official NJ Transit schedules start October 11. Regular schedules are expected November 15, subject to testing. Construction starts the evening of October 9.
-
-The live site computes this status from the current date (`js/shared.js`). Before October 11 it shows days until Phase 2. Sources: [njtransit.com/portalcutover](https://www.njtransit.com/portalcutover) and the September 17, 2026 briefing.
+Both cutover phases are complete. NJ Transit's [project page](https://www.njtransit.com/portal) confirms that the bridge is in service. Its [restoration advisory](https://www.njtransit.com/service-advisory/2199523) lists regular weekday schedules from Nov. 16. The homepage, notices, metadata, and FAQ use this verified status in all 11 languages. Earlier tools and blog posts remain a labeled archive.
 
 ## Running locally
 
@@ -226,7 +226,7 @@ python3 tools/validate-research-pipeline.py --check-urls
 The site is optimized for Google search, newsroom adoption, and AI search tools (ChatGPT, Gemini, Perplexity, Claude):
 
 - **`robots.txt`** — Allows all crawlers with explicit AI bot allowances (GPTBot, ClaudeBot, PerplexityBot, Google-Extended)
-- **`sitemap.xml`** — All 145 HTML pages with `xhtml:link` hreflang cross-references for all 11 languages
+- **`sitemap.xml`** — All 156 HTML pages with `xhtml:link` hreflang cross-references for all 11 languages
 - **`llms.txt`** — Structured overview for AI search tools following the [llms.txt standard](https://llmstxt.org)
 - **JSON-LD structured data** — WebSite, FAQPage (7 questions), Article, BreadcrumbList, and CollectionPage schemas on all pages, translated per-language with localized URLs
 - **Canonical tags** — Self-referencing canonical on every page (English and translated)

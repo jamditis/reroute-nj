@@ -47,12 +47,12 @@ check("headline changes at Eastern midnight, not UTC midnight", function () {
   assert.strictEqual(run("2026-10-11T03:59:59Z").title.textContent, "Phase 2 starts October 11");
   assert.strictEqual(run("2026-10-11T04:00:00Z").title.textContent, "Phase 2 is underway");
   assert.strictEqual(run("2026-11-15T04:59:59Z").title.textContent, "Weekend service to Penn Station NY");
-  assert.strictEqual(run("2026-11-15T05:00:00Z").title.textContent, "Check current service before traveling");
+  assert.strictEqual(run("2026-11-15T05:00:00Z").title.textContent, "Portal North Bridge is in service");
 });
 check("post-cutover text never automatically asserts completion", function () {
   var result = run("2026-11-15T05:00:00Z");
   var paragraph = find(result.banner, function (node) { return node.className === "service-notice-schedule"; });
-  assert(paragraph.textContent.includes("depends on safety testing"));
+  assert(paragraph.textContent.includes("resumed regular weekday schedules Nov. 16"));
   assert(!paragraph.textContent.includes("Temporary schedules begin"));
   var tickets = find(result.banner, function (node) { return node.className === "service-notice-tickets"; });
   ["November 15–30", "via Newark Broad St.", "Penn Station NY", "Do not assume PATH"].forEach(function (text) { assert(tickets.textContent.includes(text)); });
@@ -217,9 +217,9 @@ check("open page refresh crosses both phase boundaries without rebuilding contro
   var countdownBlock = source.slice(source.indexOf("function updateCountdown()"), source.indexOf("// ACCESSIBILITY TOGGLE INITIALIZATION"));
   vm.runInNewContext(countdownBlock, result.context);
   result.context.updateCountdown();
-  assert.strictEqual(result.title.textContent, "Check current service before traveling");
+  assert.strictEqual(result.title.textContent, "Portal North Bridge is in service");
   assert.strictEqual(result.banner.attributes["data-phase"], "inactive");
-  assert(schedule.textContent.includes("depends on safety testing"));
+  assert(schedule.textContent.includes("resumed regular weekday schedules Nov. 16"));
   assert(find(result.banner, function (node) { return node.className === "service-notice-tickets"; }).textContent.includes("November 15–30"));
   assert.strictEqual(find(result.banner, function (node) { return node.tagName === "button"; }), button);
   assert.strictEqual(find(result.banner, function (node) { return node.className === "service-notice-details"; }), details);
@@ -243,7 +243,7 @@ check("pageshow refreshes restored pages and unchanged refreshes keep the same D
   assert.strictEqual(result.banner.children, initialChildren);
   result.context.now = "2026-11-15T05:00:00Z";
   result.context.window.events.pageshow();
-  assert.strictEqual(result.title.textContent, "Check current service before traveling");
+  assert.strictEqual(result.title.textContent, "Portal North Bridge is in service");
   assert.strictEqual(result.banner.children, initialChildren);
 });
 console.log("\n" + count + " service notice checks passed.");
